@@ -7,9 +7,11 @@ import type { LinkValue, Media } from '@/lib/types'
 interface Props {
   heading?: string
   intro?: string
+  display?: 'grid' | 'carousel'
   columns?: '2' | '3' | '4'
   features: {
     id?: string
+    iconName?: string
     icon?: Media | string
     title: string
     description?: string
@@ -17,55 +19,215 @@ interface Props {
   }[]
 }
 
-const { heading, intro, columns = '3', features = [] } = Astro.props
+const { heading, intro, display = 'grid', columns = '3', features = [] } = Astro.props
+const carousel = display === 'carousel'
 
 const gridCols: Record<string, string> = {
   '2': 'sm:grid-cols-2',
   '3': 'sm:grid-cols-2 lg:grid-cols-3',
   '4': 'sm:grid-cols-2 lg:grid-cols-4',
 }
+
+/**
+ * Line icons drawn inline so they inherit the card's hover colour and stay
+ * crisp at any size — an uploaded raster icon could do neither.
+ */
+const ICONS: Record<string, string> = {
+  cpu: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/>',
+  dashboard:
+    '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/><path d="M13 13h4"/><path d="M13 17h4"/>',
+  screen:
+    '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 8h4"/><circle cx="16" cy="8" r="1.5"/><path d="M7 12h10"/>',
+  network:
+    '<rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4"/><path d="M5 16v-2h14v2"/>',
+  signal:
+    '<path d="M5 12.55a11 11 0 0 1 14 0"/><path d="M2 8.82a16 16 0 0 1 20 0"/><path d="M8.5 16.43a6 6 0 0 1 7 0"/><circle cx="12" cy="20" r="1"/>',
+  cabinet:
+    '<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 2v20"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M7 6h2"/><path d="M15 6h2"/>',
+  cog: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+  refresh: '<path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 21v-5h5"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>',
+  gauge: '<path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M13.4 10.6 19 5"/><path d="M20.5 17a10 10 0 1 0-17 0"/>',
+}
 ---
 
-<section class="pt-20 lg:pt-32 pb-32 lg:pb-40 bg-white relative border-t border-gray-100 px-6 md:px-12">
+<section class="pt-20 lg:pt-28 pb-28 lg:pb-36 bg-white relative border-t border-gray-100 px-6 md:px-12">
   <div class="max-w-7xl mx-auto relative z-10">
     {(heading || intro) && <SectionHeader heading={heading} intro={intro} align="split" sticky />}
 
-    <div class:list={['grid gap-8', gridCols[columns] ?? gridCols['3']]}>
+    {
+      carousel && (
+        <div class="mb-8 flex items-center justify-between gap-6">
+          <div class="hidden flex-1 sm:block">
+            {/* Progress rail — fills as the track scrolls. */}
+            <div class="h-[2px] w-full max-w-xs bg-gray-100">
+              <div class="h-full w-0 origin-left bg-general-red transition-[width] duration-200" data-carousel-progress />
+            </div>
+          </div>
+
+          <div class="ml-auto flex items-center gap-3">
+            <button
+              type="button"
+              class="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-200 text-gray-500 transition-all duration-300 hover:border-general-red hover:bg-general-red hover:text-white disabled:pointer-events-none disabled:opacity-30"
+              data-carousel-prev
+              aria-label="Previous services"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button
+              type="button"
+              class="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-200 text-gray-500 transition-all duration-300 hover:border-general-red hover:bg-general-red hover:text-white disabled:pointer-events-none disabled:opacity-30"
+              data-carousel-next
+              aria-label="Next services"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      )
+    }
+
+    <div
+      class:list={[
+        carousel
+          ? // Bleeds off the right edge so the next card is always half-visible.
+            'feature-track flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 -mr-6 pr-6 md:-mr-12 md:pr-12'
+          : 'grid gap-6 lg:gap-8',
+        !carousel && (gridCols[columns] ?? gridCols['3']),
+      ]}
+      data-carousel-track={carousel ? '' : undefined}
+      role={carousel ? 'region' : undefined}
+      aria-label={carousel ? heading?.replace(/\*/g, '') : undefined}
+      tabindex={carousel ? 0 : undefined}
+    >
       {
-        features.map((feature, index) => (
-          <div
-            class="group relative flex flex-col rounded-2xl border border-gray-100 bg-white p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 reveal-item"
-            style={`transition-delay: ${index * 50}ms`}
-          >
-            {feature.icon && typeof feature.icon === 'object' ? (
-              <div class="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center mb-8 border border-gray-50 group-hover:border-general-red/20 group-hover:bg-general-red/5 transition-all duration-700">
-                <Picture media={feature.icon} class="h-8 w-8 object-contain" />
-              </div>
-            ) : (
-              <span class="text-[11px] font-bold tracking-[0.4em] uppercase text-gray-400 mb-6 group-hover:text-general-red transition-colors">
+        features.map((feature, index) => {
+          const icon = feature.iconName ? ICONS[feature.iconName] : undefined
+          const uploaded = !icon && feature.icon && typeof feature.icon === 'object'
+
+          return (
+            <div
+              class:list={[
+                'group relative flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-8 md:p-10 opacity-0 translate-y-8 reveal-item transition-all duration-500 hover:-translate-y-2 hover:border-gray-200 hover:shadow-[0_30px_60px_rgba(0,0,0,0.10)]',
+                carousel && 'w-[300px] shrink-0 snap-start sm:w-[360px] lg:w-[400px]',
+              ]}
+              style={`transition-delay: ${index * 60}ms`}
+            >
+              {/* Ghost index — a quiet watermark that gives each card a place in
+                  the sequence without competing with the title. */}
+              <span
+                class="pointer-events-none absolute -top-3 right-5 select-none text-[86px] font-black leading-none tracking-tighter text-gray-50 transition-colors duration-500 group-hover:text-general-red/5 md:text-[110px]"
+                aria-hidden="true"
+              >
                 {String(index + 1).padStart(2, '0')}
               </span>
-            )}
 
-            <div class="w-12 h-[2px] bg-general-red mb-6 group-hover:w-full transition-all duration-700 origin-left" />
+              <div class="relative z-10 flex flex-1 flex-col">
+                <div class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 text-gray-400 transition-all duration-500 group-hover:border-general-red/20 group-hover:bg-general-red/5 group-hover:text-general-red">
+                  {icon ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="26"
+                      height="26"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                      set:html={icon}
+                    />
+                  ) : uploaded ? (
+                    <Picture media={feature.icon!} raw class="h-7 w-7 object-contain" />
+                  ) : (
+                    <span class="text-[13px] font-black">{index + 1}</span>
+                  )}
+                </div>
 
-            <h3 class="text-2xl lg:text-[26px] font-bold tracking-tight text-general-black leading-[1.1] mb-3">
-              {feature.title}
-            </h3>
+                <h3 class="mb-4 text-2xl font-bold leading-[1.15] tracking-tight text-general-black lg:text-[26px]">
+                  {feature.title}
+                </h3>
 
-            {feature.description && (
-              <p class="text-[15px] text-gray-700 leading-relaxed">{feature.description}</p>
-            )}
+                {feature.description && (
+                  <p class="text-[15px] leading-[1.8] text-gray-700">{feature.description}</p>
+                )}
 
-            {feature.link?.label && (
-              <Link
-                link={feature.link}
-                class="mt-8 inline-flex items-center gap-2 text-[12px] font-bold tracking-[0.1em] uppercase text-general-red hover:text-general-black transition-colors"
+                {feature.link?.label && (
+                  <Link
+                    link={feature.link}
+                    class="mt-8 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.15em] text-general-red transition-colors hover:text-general-black"
+                  />
+                )}
+              </div>
+
+              {/* Red rule sweeps across the foot of the card on hover. */}
+              <span
+                class="absolute bottom-0 left-0 h-[3px] w-full origin-left scale-x-0 bg-general-red transition-transform duration-700 group-hover:scale-x-100"
+                aria-hidden="true"
               />
-            )}
-          </div>
-        ))
+            </div>
+          )
+        })
       }
     </div>
   </div>
 </section>
+
+<style>
+  /* The track scrolls natively — touch, trackpad and keyboard all work. The
+     scrollbar is hidden because the arrows and the progress rail already say
+     where you are. */
+  .feature-track {
+    scrollbar-width: none;
+  }
+  .feature-track::-webkit-scrollbar {
+    display: none;
+  }
+  .feature-track:focus-visible {
+    outline: 2px solid #ed1c25;
+    outline-offset: 6px;
+    border-radius: 1rem;
+  }
+</style>
+
+<script>
+  function initCarousels() {
+    document.querySelectorAll<HTMLElement>('[data-carousel-track]').forEach((track) => {
+      // Guard: this runs on both DOMContentLoaded and astro:page-load.
+      if (track.dataset.carouselReady) return
+      track.dataset.carouselReady = 'true'
+
+      const section = track.closest('section')
+      const prev = section?.querySelector<HTMLButtonElement>('[data-carousel-prev]')
+      const next = section?.querySelector<HTMLButtonElement>('[data-carousel-next]')
+      const progress = section?.querySelector<HTMLElement>('[data-carousel-progress]')
+
+      // One card plus the gap, so a click always lands on a snap point.
+      const step = () => {
+        const card = track.firstElementChild as HTMLElement | null
+        return card ? card.offsetWidth + 24 : track.clientWidth * 0.8
+      }
+
+      const sync = () => {
+        const max = track.scrollWidth - track.clientWidth
+        const atStart = track.scrollLeft <= 1
+        const atEnd = track.scrollLeft >= max - 1
+
+        if (prev) prev.disabled = atStart
+        if (next) next.disabled = atEnd
+        if (progress) progress.style.width = `${max > 0 ? (track.scrollLeft / max) * 100 : 100}%`
+      }
+
+      prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }))
+      next?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }))
+      track.addEventListener('scroll', sync, { passive: true })
+      window.addEventListener('resize', sync)
+
+      sync()
+    })
+  }
+
+  document.addEventListener('astro:page-load', initCarousels)
+  document.addEventListener('DOMContentLoaded', initCarousels)
+</script>

@@ -1,0 +1,248 @@
+---
+import { splitAccent } from '@/lib/accent'
+
+interface Props {
+  eyebrow?: string
+  heading?: string
+  intro?: string
+  steps: { id?: string; title: string; description?: string; meta?: string }[]
+  footnote?: string
+}
+
+const { eyebrow, heading, intro, steps = [], footnote } = Astro.props
+const { lead, accent } = splitAccent(heading)
+
+const total = String(steps.length).padStart(2, '0')
+const pad = (value: number) => String(value).padStart(2, '0')
+---
+
+<section
+  class="relative border-t border-gray-100 bg-white px-6 py-24 md:px-12 lg:py-32"
+  data-process
+>
+  <div class="mx-auto grid max-w-7xl gap-x-16 gap-y-14 lg:grid-cols-12">
+    {/* Left column: the header, plus a live read-out of where the reader is in
+        the sequence. It sticks so the stage counter stays with the steps. */}
+    <div class="lg:col-span-5">
+      <div class="lg:sticky lg:top-[120px]">
+        {
+          eyebrow && (
+            <div class="mb-6 flex items-center gap-3 opacity-0 translate-y-4 reveal-item">
+              <div class="h-[2px] w-8 bg-general-red" />
+              <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+                {eyebrow}
+              </span>
+            </div>
+          )
+        }
+
+        {
+          heading && (
+            <h2 class="text-4xl font-black leading-[0.95] tracking-tight text-general-black opacity-0 translate-y-8 reveal-item sm:text-5xl lg:text-[64px]">
+              {lead}
+              {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
+            </h2>
+          )
+        }
+
+        {
+          intro && (
+            <p class="mt-8 border-l-2 border-general-red/10 pl-8 text-lg leading-relaxed text-gray-700 opacity-0 translate-y-8 reveal-item">
+              {intro}
+            </p>
+          )
+        }
+
+        <div class="mt-12 hidden opacity-0 translate-y-8 reveal-item lg:block">
+          <div class="flex items-baseline gap-3">
+            <span
+              class="text-[56px] font-black leading-none tracking-tighter text-general-black tabular-nums"
+              data-process-current>01</span
+            >
+            <span class="text-[12px] font-bold uppercase tracking-[0.25em] text-gray-400">
+              / {total} stages
+            </span>
+          </div>
+
+          <div class="mt-6 h-[2px] w-full max-w-xs bg-gray-100">
+            <div
+              class="h-full w-0 bg-general-red transition-[width] duration-300 ease-out"
+              data-process-progress
+            >
+            </div>
+          </div>
+
+          <p
+            class="mt-5 min-h-[1.5rem] text-[15px] font-bold tracking-tight text-gray-500 transition-opacity duration-300"
+            data-process-label
+          >
+            {steps[0]?.title}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Right column: the stages themselves, threaded onto a single rail that
+        fills red as the reader scrolls past each node. */}
+    <div class="lg:col-span-7">
+      <ol class="relative" data-process-list>
+        {
+          steps.map((step, index) => (
+            <li
+              class="process-step group relative flex gap-6 md:gap-8"
+              data-process-step
+              data-process-title={step.title}
+            >
+              {index < steps.length - 1 && (
+                <>
+                  <span
+                    class="absolute left-6 top-12 bottom-0 w-px bg-gray-200 md:left-7 md:top-14"
+                    aria-hidden="true"
+                  />
+                  <span
+                    class="process-rail absolute left-6 top-12 bottom-0 w-px bg-general-red md:left-7 md:top-14"
+                    aria-hidden="true"
+                  />
+                </>
+              )}
+
+              <span class="process-node relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-[13px] font-black tabular-nums text-gray-400 transition-all duration-500 md:h-14 md:w-14">
+                {pad(index + 1)}
+              </span>
+
+              <div
+                class="flex-1 border-b border-gray-100 pb-10 pt-3 opacity-0 translate-y-8 reveal-item group-last:border-0 group-last:pb-0 md:pt-4"
+                style={`transition-delay: ${Math.min(index, 8) * 60}ms`}
+              >
+                {step.meta && (
+                  <span class="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-general-red">
+                    {step.meta}
+                  </span>
+                )}
+
+                <h3 class="text-2xl font-bold leading-[1.15] tracking-tight text-general-black lg:text-[28px]">
+                  {step.title}
+                </h3>
+
+                {step.description && (
+                  <p class="mt-4 text-[15px] leading-[1.8] text-gray-700">{step.description}</p>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+
+      {
+        footnote && (
+          <p class="mt-12 border-l-2 border-general-red/20 pl-6 text-[15px] leading-relaxed text-gray-500 opacity-0 translate-y-8 reveal-item md:ml-[calc(3.5rem+2rem)]">
+            {footnote}
+          </p>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  /* The red connector grows from the node above once the reader passes the
+     node below it, so the rail reads as progress rather than decoration.
+     Written longhand: Tailwind's scale utilities set the `scale` property,
+     which a `transform` override here would not win against. */
+  .process-rail {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.7s ease-out;
+  }
+  .process-step.is-done .process-rail {
+    transform: scaleY(1);
+  }
+
+  /* Nodes the reader has passed stay marked. The current stage is the solid
+     red one. */
+  .process-step.is-done .process-node {
+    border-color: #ed1c25;
+    color: #ed1c25;
+  }
+  .process-step.is-active .process-node {
+    border-color: #ed1c25;
+    background: #ed1c25;
+    color: #fff;
+    box-shadow: 0 12px 28px rgba(237, 28, 37, 0.28);
+  }
+  .process-step:hover .process-node {
+    border-color: #ed1c25;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .process-node,
+    .process-rail,
+    [data-process-progress] {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+  // Drives the rail fill, the node states and the stage counter from scroll
+  // position. Everything degrades to a plain grey rail without JS.
+  function initProcess() {
+    document.querySelectorAll<HTMLElement>('[data-process]').forEach((section) => {
+      // Guard: this runs on both DOMContentLoaded and astro:page-load.
+      if (section.dataset.processReady) return
+      section.dataset.processReady = 'true'
+
+      const list = section.querySelector<HTMLElement>('[data-process-list]')
+      const steps = Array.from(section.querySelectorAll<HTMLElement>('[data-process-step]'))
+      const progress = section.querySelector<HTMLElement>('[data-process-progress]')
+      const counter = section.querySelector<HTMLElement>('[data-process-current]')
+      const label = section.querySelector<HTMLElement>('[data-process-label]')
+
+      if (!list || !steps.length) return
+
+      let frame = 0
+      let last = -2
+
+      const sync = () => {
+        frame = 0
+
+        // The reader is "at" whatever sits just above the middle of the screen.
+        const anchor = window.innerHeight * 0.55
+        const listBox = list.getBoundingClientRect()
+        const span = Math.max(listBox.height - 48, 1)
+        const filled = Math.min(Math.max(anchor - listBox.top - 24, 0), span)
+
+        if (progress) progress.style.width = `${(filled / span) * 100}%`
+
+        let active = -1
+        steps.forEach((step, index) => {
+          const node = step.querySelector<HTMLElement>('.process-node')
+          if (node && node.getBoundingClientRect().top <= anchor) active = index
+        })
+
+        if (active === last) return
+        last = active
+
+        steps.forEach((step, index) => {
+          step.classList.toggle('is-active', index === active)
+          step.classList.toggle('is-done', index < active)
+        })
+
+        const shown = Math.max(active, 0)
+        if (counter) counter.textContent = String(shown + 1).padStart(2, '0')
+        if (label) label.textContent = steps[shown]?.dataset.processTitle ?? ''
+      }
+
+      const request = () => {
+        if (!frame) frame = window.requestAnimationFrame(sync)
+      }
+
+      window.addEventListener('scroll', request, { passive: true })
+      window.addEventListener('resize', request)
+      sync()
+    })
+  }
+
+  document.addEventListener('astro:page-load', initProcess)
+  document.addEventListener('DOMContentLoaded', initProcess)
+</script>

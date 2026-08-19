@@ -94,6 +94,7 @@ pnpm typecheck        # every workspace
 pnpm generate:types   # regenerate payload-types.ts after schema changes
 pnpm --filter cms seed        # re-seed demo content (idempotent)
 pnpm --filter cms seed:home   # reload the approved homepage copy (idempotent)
+pnpm --filter cms seed:chrome # reload logo, photography, brand wall, nav + footer
 pnpm --filter cms migrate     # apply pending migrations
 pnpm --filter cms migrate:fresh --force-accept-warning   # drop + rebuild
 ```
@@ -193,6 +194,76 @@ second, conflicting copy.
 
 An SEO `meta.title` is used as the complete `<title>` (no site-name suffix) via
 `exactTitle` on `Base.astro`.
+
+### The home banner
+
+The Hero block has a `banner` variant: a full-screen section with crossfading
+background photography (`images`), the eyebrow rule, the headline with its red
+italic accent, a strapline, up to three buttons, slide dots, and a scrolling
+marquee of partner marks (`marqueeLogos`). The crossfade and dots are driven by
+the script in `components/blocks/Hero.astro`; the marquee animation and the
+mark treatment that drops each logo's white field out live in `global.css`.
+
+The other variants are unchanged: `centered` and `minimal` are the dark page
+headers, `split` is the light two-column hero.
+
+### Service cards
+
+A Feature Grid renders as a `grid` or as a `carousel` that scrolls left to
+right. The carousel track uses native overflow scrolling with CSS snap points,
+so touch, trackpad and keyboard all work without a library; the arrows scroll by
+exactly one card, a red rail fills to show position, and the track bleeds off the
+right edge so the next card is always half-visible. The scrollbar itself is
+hidden — the arrows and rail already say where you are.
+
+Feature Grid entries take an `iconName` from a curated set (controller, SCADA
+dashboard, HMI screen, network, connected, cabinet, machine, retrofit, shield,
+gauge). The icons are inline SVG drawn by `components/blocks/FeatureGrid.astro`,
+so they inherit the card's hover colour and stay sharp at any size — an uploaded
+raster icon could do neither. A card falls back to an uploaded `icon`, then to
+its index. Each card also carries a ghost index watermark and a red rule that
+sweeps across its foot on hover.
+
+### Long-form sections
+
+The Rich Text block has an `editorial` layout: the copy sits beside a photo
+collage (one or two images, either side, sticky on desktop) with a red crop-mark
+outline behind the primary image. Two switches shape the copy itself:
+
+- **`lede`** sets the opening paragraph as a standfirst — larger and near-black,
+  so a long passage has an entry point instead of reading as flat grey.
+- **`layout: split`** puts a sticky display heading (with its own `eyebrow` and
+  `heading` fields, `*accent*` markers included) in a left column and the copy in
+  a right one, on a light grey ground.
+- **`numbered`** counts each paragraph, printing an `01`-style red index in the
+  gutter with a hairline between beats — a CSS counter, so the copy itself is
+  never touched.
+- **`collapsible`** clamps the copy to ~260px behind a "Read more" toggle, with
+  a fade at the cut. The clamp is applied in JavaScript, not CSS, so a reader
+  without it still gets the whole passage; the toggle stays hidden when the copy
+  is already short enough.
+
+### Brand assets and chrome
+
+`apps/cms/src/scripts/seed-chrome.ts` loads the identity taken from the live
+generaltechautomation.ae site — logo (light and dark), homepage photography, the
+65 partner logos, the seven-item nav with its 16-service dropdown, and the
+footer's Quick Links / Services columns. It touches no body copy. Assets are read
+from `ASSET_DIR` (defaults to the scratch directory they were staged in), and
+media is matched by filename so re-running does not duplicate uploads.
+
+Nav and footer links point at the live site's paths (`/about_us`, `/products`,
+`/service/<slug>`, …). Those pages do not exist in this build yet, so they render
+the 404 page until they are created.
+
+Payload's `imageSizes` are width-only, so sharp scales each variant and keeps
+the source aspect ratio — a 2:1 site photograph is never centre-cropped into a
+square. `Picture` also takes a `raw` prop that skips the srcset entirely and
+renders the original; the header, footer and logo wall use it, since logos must
+not be resampled at all.
+
+> Media uploaded before this change still carries its old cropped variants.
+> Delete the file in the admin panel and re-run the seed to regenerate it.
 
 ## Adding a block
 

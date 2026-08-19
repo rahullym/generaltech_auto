@@ -22,7 +22,7 @@ const base =
 const styles: Record<string, string> = {
   primary: `${base} bg-general-red text-white shadow-lg shadow-general-red/20 hover:bg-white hover:text-general-black`,
   secondary: dark
-    ? `${base} bg-white/5 border border-white/10 text-white hover:bg-white/10`
+    ? `${base} bg-white/5 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-general-black`
     : `${base} bg-white border border-gray-200 text-general-black hover:border-general-red hover:text-general-red`,
   link: dark
     ? 'inline-flex items-center gap-2 text-[13px] font-bold tracking-[0.1em] uppercase text-white hover:text-general-red transition-colors duration-300 group'

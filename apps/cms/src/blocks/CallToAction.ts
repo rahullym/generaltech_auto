@@ -7,6 +7,8 @@ export const CallToAction: Block = {
   interfaceName: 'CallToActionBlock',
   labels: { singular: 'Call to Action', plural: 'Calls to Action' },
   fields: [
+    // Small red kicker above the heading. Falls back to "Get in touch".
+    { name: 'eyebrow', type: 'text' },
     { name: 'heading', type: 'text', required: true },
     { name: 'body', type: 'textarea' },
     {

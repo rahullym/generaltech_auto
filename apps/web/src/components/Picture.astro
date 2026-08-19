@@ -6,6 +6,11 @@ interface Props {
   class?: string
   id?: string
   sizes?: string
+  /**
+   * Skip the srcset. Payload's resize presets crop to a fixed aspect ratio, so
+   * logos and other art that must not be cropped render from the original.
+   */
+  raw?: boolean
   loading?: 'lazy' | 'eager'
   fetchpriority?: 'high' | 'low' | 'auto'
 }
@@ -15,6 +20,7 @@ const {
   class: className,
   id,
   sizes = '100vw',
+  raw = false,
   loading = 'lazy',
   fetchpriority = 'auto',
 } = Astro.props
@@ -23,7 +29,9 @@ const {
 const image = media && typeof media === 'object' ? media : null
 
 /** Builds a srcset from the resize variants Payload generated. */
-const srcset = image?.sizes
+const srcset = raw
+  ? undefined
+  : image?.sizes
   ? Object.values(image.sizes)
       .filter((size): size is { url: string; width: number } =>
         Boolean(size?.url && size?.width),

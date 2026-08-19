@@ -1,17 +1,243 @@
 ---
+import Picture from '../Picture.astro'
 import RichText from '../RichText.astro'
-import type { RichTextValue } from '@/lib/types'
+import { splitAccent } from '@/lib/accent'
+import type { Media, RichTextValue } from '@/lib/types'
 
 interface Props {
+  layout?: 'default' | 'editorial' | 'split'
+  eyebrow?: string
+  heading?: string
+  numbered?: boolean
   width?: 'prose' | 'full'
+  media?: { id?: string; image: Media | string }[]
+  mediaPosition?: 'left' | 'right'
+  lede?: boolean
+  /** Clamp the copy and reveal the rest behind a Read more toggle. */
+  collapsible?: boolean
   content: RichTextValue
 }
 
-const { width = 'prose', content } = Astro.props
+const {
+  layout = 'default',
+  eyebrow,
+  heading,
+  numbered = false,
+  width = 'prose',
+  media = [],
+  mediaPosition = 'left',
+  lede = false,
+  collapsible = false,
+  content,
+} = Astro.props
+
+const images = media
+  .map((entry) => entry.image)
+  .filter((image): image is Media => Boolean(image) && typeof image === 'object')
+
+const editorial = layout === 'editorial'
+const imageFirst = mediaPosition === 'left'
+const { lead, accent } = splitAccent(heading)
+
+const copyClass = [lede && 'prose-lede', numbered && 'prose-beats'].filter(Boolean).join(' ')
 ---
 
-<section class="bg-white px-6 md:px-12 py-20 lg:py-24">
-  <div class:list={['mx-auto opacity-0 translate-y-8 reveal-item', width === 'prose' ? 'max-w-3xl' : 'max-w-7xl']}>
-    <RichText value={content} />
-  </div>
-</section>
+{
+  layout === 'split' ? (
+    <section class="border-t border-gray-100 bg-[#FAFAFA] px-6 md:px-12 py-20 lg:py-28">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-12 xl:gap-24">
+        <div class="lg:col-span-5">
+          <div class="opacity-0 translate-y-8 reveal-item lg:sticky lg:top-40">
+            <div class="mb-8 flex items-center gap-3">
+              <div class="h-[2px] w-8 bg-general-red" aria-hidden="true" />
+              {eyebrow && (
+                <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-500">
+                  {eyebrow}
+                </span>
+              )}
+            </div>
+
+            {heading && (
+              <h2 class="text-5xl font-black leading-[0.95] tracking-tight text-general-black lg:text-[64px]">
+                {lead}
+                {accent && (
+                  <>
+                    {' '}
+                    <span class="font-medium italic text-general-red">{accent}</span>
+                  </>
+                )}
+              </h2>
+            )}
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="opacity-0 translate-y-8 reveal-item">
+            <RichText value={content} class={copyClass || undefined} />
+          </div>
+        </div>
+      </div>
+    </section>
+  ) : editorial ? (
+    <section class="bg-white px-6 md:px-12 py-16 lg:py-24">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 lg:grid-cols-12 xl:gap-20">
+        {/* Imagery — sticky on desktop so the copy scrolls against it. */}
+        {images.length > 0 && (
+          <div class:list={['lg:col-span-5', imageFirst ? 'lg:order-1' : 'lg:order-2']}>
+            <div class="lg:sticky lg:top-40">
+              <div class="relative opacity-0 translate-y-8 reveal-item">
+                {/* Offset red outline, like a print crop mark behind the photo. */}
+                <div
+                  class:list={[
+                    'pointer-events-none absolute h-full w-full rounded-2xl border-2 border-general-red/30',
+                    imageFirst ? '-left-5 -top-5' : '-right-5 -top-5',
+                  ]}
+                  aria-hidden="true"
+                />
+
+                <Picture
+                  media={images[0]!}
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  class="w-full rounded-2xl object-cover shadow-[0_30px_80px_rgba(0,0,0,0.14)]"
+                />
+
+                {images[1] && (
+                  <div
+                    class:list={[
+                      'absolute w-1/2 overflow-hidden rounded-2xl border-4 border-white shadow-[0_20px_50px_rgba(0,0,0,0.18)]',
+                      '-bottom-8 lg:-bottom-10',
+                      imageFirst ? '-right-4 lg:-right-8' : '-left-4 lg:-left-8',
+                    ]}
+                  >
+                    <Picture
+                      media={images[1]}
+                      sizes="(min-width: 1024px) 20vw, 50vw"
+                      class="aspect-[3/2] w-full object-cover"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Copy */}
+        <div
+          class:list={[
+            images.length > 0 ? 'lg:col-span-7' : 'lg:col-span-12',
+            imageFirst ? 'lg:order-2' : 'lg:order-1',
+            images[1] && 'mt-14 lg:mt-0',
+          ]}
+        >
+          <div class="opacity-0 translate-y-8 reveal-item">
+            <div class="mb-8 h-[2px] w-16 bg-general-red" aria-hidden="true" />
+
+            <div class="copy-collapse" data-collapsible={collapsible ? '' : undefined}>
+              <div class="copy-collapse-body" data-collapse-body>
+                <RichText value={content} class={copyClass || undefined} />
+              </div>
+
+              {collapsible && (
+                <button
+                  type="button"
+                  class="mt-6 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.15em] text-general-red transition-colors hover:text-general-black"
+                  data-collapse-toggle
+                  aria-expanded="false"
+                  hidden
+                >
+                  <span data-collapse-label>Read more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300" data-collapse-chevron aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="bg-white px-6 md:px-12 py-16 lg:py-20">
+      <div
+        class:list={[
+          'mx-auto opacity-0 translate-y-8 reveal-item',
+          width === 'prose' ? 'max-w-3xl' : 'max-w-7xl',
+        ]}
+      >
+        <div class="copy-collapse" data-collapsible={collapsible ? '' : undefined}>
+          <div class="copy-collapse-body" data-collapse-body>
+            <RichText value={content} class={copyClass || undefined} />
+          </div>
+
+          {collapsible && (
+            <button
+              type="button"
+              class="mt-6 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.15em] text-general-red transition-colors hover:text-general-black"
+              data-collapse-toggle
+              aria-expanded="false"
+              hidden
+            >
+              <span data-collapse-label>Read more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300" data-collapse-chevron aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<script>
+  // Long copy is clamped to a few lines with a fade, and the rest is revealed by
+  // the toggle. The clamp is applied here rather than in CSS so that with no
+  // JavaScript the reader still gets the whole passage.
+  const COLLAPSED = 260
+
+  function initCollapse() {
+    document.querySelectorAll<HTMLElement>('.copy-collapse[data-collapsible]').forEach((root) => {
+      // Guard: this runs on both DOMContentLoaded and astro:page-load.
+      if (root.dataset.collapseReady) return
+      root.dataset.collapseReady = 'true'
+
+      const body = root.querySelector<HTMLElement>('[data-collapse-body]')
+      const toggle = root.querySelector<HTMLButtonElement>('[data-collapse-toggle]')
+      const label = root.querySelector<HTMLElement>('[data-collapse-label]')
+      const chevron = root.querySelector<HTMLElement>('[data-collapse-chevron]')
+      if (!body || !toggle) return
+
+      // Already short enough — leave it alone and keep the toggle hidden.
+      if (body.scrollHeight <= COLLAPSED + 80) return
+
+      body.style.overflow = 'hidden'
+      body.style.transition = 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
+      body.style.maxHeight = `${COLLAPSED}px`
+      root.classList.add('is-collapsed')
+      toggle.hidden = false
+
+      toggle.addEventListener('click', () => {
+        const collapsed = root.classList.contains('is-collapsed')
+
+        if (collapsed) {
+          body.style.maxHeight = `${body.scrollHeight}px`
+        } else {
+          // Coming back from `none`, give the transition a starting value.
+          body.style.maxHeight = `${body.scrollHeight}px`
+          void body.offsetHeight
+          body.style.maxHeight = `${COLLAPSED}px`
+        }
+        root.classList.toggle('is-collapsed', !collapsed)
+        toggle.setAttribute('aria-expanded', String(collapsed))
+        if (label) label.textContent = collapsed ? 'Read less' : 'Read more'
+        chevron?.classList.toggle('rotate-180', collapsed)
+
+        // Once open, drop the cap so later reflows (fonts, images) are not clipped.
+        if (collapsed) {
+          window.setTimeout(() => {
+            if (!root.classList.contains('is-collapsed')) body.style.maxHeight = 'none'
+          }, 550)
+        }
+      })
+    })
+  }
+
+  document.addEventListener('astro:page-load', initCollapse)
+  document.addEventListener('DOMContentLoaded', initCollapse)
+</script>

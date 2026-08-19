@@ -18,7 +18,7 @@ export const Header: GlobalConfig = {
           name: 'children',
           type: 'array',
           label: 'Dropdown items',
-          maxRows: 8,
+          maxRows: 20,
           fields: [linkField(), { name: 'description', type: 'text' }],
         },
       ],

@@ -150,6 +150,7 @@ export type SiteSettings = Global & {
   tagline?: string
   defaultSeo?: SeoMeta
   logo?: Media | string
+  logoInverse?: Media | string
   favicon?: Media | string
   contact?: { email?: string; phone?: string; address?: string }
 }

@@ -21,6 +21,13 @@ export const SiteSettings: GlobalConfig = {
       ],
     },
     { name: 'logo', type: 'upload', relationTo: 'media' },
+    {
+      name: 'logoInverse',
+      type: 'upload',
+      relationTo: 'media',
+      label: 'Logo (light, for dark backgrounds)',
+      admin: { description: 'Used in the footer. Falls back to the main logo.' },
+    },
     { name: 'favicon', type: 'upload', relationTo: 'media' },
     {
       name: 'contact',

@@ -41,26 +41,6 @@ const heading = (value: string, tag: 'h2' | 'h3' = 'h2') => ({
   children: [text({ text: value })],
 })
 
-const orderedList = (items: (string | TextNode)[][]) => ({
-  type: 'list',
-  listType: 'number',
-  tag: 'ol',
-  start: 1,
-  format: '',
-  indent: 0,
-  version: 1,
-  direction: 'ltr' as const,
-  children: items.map((runs, index) => ({
-    type: 'listitem',
-    value: index + 1,
-    format: '',
-    indent: 0,
-    version: 1,
-    direction: 'ltr' as const,
-    children: runs.map((run) => text(typeof run === 'string' ? { text: run } : run)),
-  })),
-})
-
 const doc = (...children: unknown[]) => ({
   root: {
     type: 'root',
@@ -71,6 +51,31 @@ const doc = (...children: unknown[]) => ({
     children,
   },
 })
+
+// --- Process ------------------------------------------------------------
+const PROCESS_STEPS: [string, string][] = [
+  [
+    'Site Audit',
+    'We assess your existing control systems, hardware condition, and operational goals on-site.',
+  ],
+  [
+    'Engineering Design',
+    'A control philosophy, panel layout, and system architecture tailored to your process.',
+  ],
+  [
+    'Programming and Panel Build',
+    'Logic is written and tested; panels are fabricated in-house to specification.',
+  ],
+  [
+    'Factory and Site Acceptance Testing',
+    'Every system is validated before and after installation.',
+  ],
+  ['Commissioning', 'Brought live with minimal disruption to your ongoing operations.'],
+  [
+    'Ongoing Support',
+    'Optional AMC coverage keeps systems maintained long after go-live, with full as-built documentation handed over.',
+  ],
+]
 
 const PHONE = '+971 6 543 6933'
 const TEL = 'tel:+97165436933'
@@ -83,41 +88,49 @@ const callAction = (label: string) => ({
 const SERVICES = [
   {
     title: 'PLC Programming and Control Logic Design',
+    iconName: 'cpu',
     description:
       'New installations, logic redesign, and troubleshooting across Siemens, Allen-Bradley, Schneider, and Mitsubishi platforms. Every program is documented clearly enough for your own maintenance team to read and modify it later.',
   },
   {
     title: 'Supervisory Control Architecture and SCADA Development',
+    iconName: 'dashboard',
     description:
       'Real-time dashboards for production, energy use, alarms, and equipment health, built for remote monitoring so decision-makers can track operations from anywhere in the UAE.',
   },
   {
     title: 'HMI Development',
+    iconName: 'screen',
     description:
       'Operator interfaces designed around how a shift actually runs, with clear screen hierarchy and fast fault diagnosis to cut downtime and training time.',
   },
   {
     title: 'DCS Engineering',
+    iconName: 'network',
     description:
       'Configuration, migration, and optimization of distributed control systems for continuous process industries, including legacy platform migration without extended shutdowns.',
   },
   {
     title: 'Connected Automation and Industry 4.0 Engineering',
+    iconName: 'signal',
     description:
       'Practical, phased steps toward smart manufacturing: predictive maintenance, energy tracking, and unified data visibility across the plant floor.',
   },
   {
     title: 'Control Panel Design and Manufacturing',
+    iconName: 'cabinet',
     description:
       'In-house panel design and build to UAE and international electrical standards, tested before it ever reaches site to shorten commissioning time.',
   },
   {
     title: 'Process and Machine Automation Engineering',
+    iconName: 'cog',
     description:
       "From packaging lines and conveyor systems to water treatment and utility automation, engineered around your plant's actual throughput and layout.",
   },
   {
     title: 'Automation Retrofit and Annual Maintenance Contracts (AMC)',
+    iconName: 'refresh',
     description:
       'Modernize existing control systems at a fraction of replacement cost, or keep them running reliably with scheduled inspections and priority engineering support.',
   },
@@ -196,11 +209,15 @@ const run = async () => {
     },
 
     // --- Who We Are -----------------------------------------------------
+    // Sticky heading beside the copy, with each paragraph numbered — four dense
+    // paragraphs read as four points rather than one block of text.
     {
       blockType: 'richText',
-      width: 'prose',
+      layout: 'split',
+      eyebrow: 'Company overview',
+      heading: 'Who We *Are*',
+      numbered: true,
       content: doc(
-        heading('Who We Are'),
         paragraph(
           'General Tech Automation is the specialist automation engineering arm of General Tech, a UAE company established in 1998 with a long-standing reputation in industrial calibration, testing, and equipment supply. That heritage means our engineers work alongside instrumentation specialists who understand sensors, drives, and measurement accuracy at a component level, not just at the software layer — a combination few automation providers in the region can offer.',
         ),
@@ -222,7 +239,7 @@ const run = async () => {
       heading: 'Our Automation Engineering *Services*',
       intro:
         'Our engineers are trained across the major automation platforms used in UAE industry — Siemens SIMATIC and TIA Portal, Allen-Bradley ControlLogix and CompactLogix, Schneider Electric Modicon, Mitsubishi FX and iQ-series controllers, ABB drives and control systems, and Emerson DeltaV for distributed control environments. Working across this range means we can support a plant exactly as it exists today, rather than requiring a client to standardize on one vendor before we can help.',
-      columns: '2',
+      display: 'carousel',
       features: SERVICES,
     },
 
@@ -258,37 +275,10 @@ const run = async () => {
 
     // --- Process --------------------------------------------------------
     {
-      blockType: 'richText',
-      width: 'prose',
-      content: doc(
-        heading('Our Automation Engineering Process'),
-        orderedList([
-          [
-            { text: 'Site Audit', bold: true },
-            ' – We assess your existing control systems, hardware condition, and operational goals on-site.',
-          ],
-          [
-            { text: 'Engineering Design', bold: true },
-            ' – A control philosophy, panel layout, and system architecture tailored to your process.',
-          ],
-          [
-            { text: 'Programming and Panel Build', bold: true },
-            ' – Logic is written and tested; panels are fabricated in-house to specification.',
-          ],
-          [
-            { text: 'Factory and Site Acceptance Testing', bold: true },
-            ' – Every system is validated before and after installation.',
-          ],
-          [
-            { text: 'Commissioning', bold: true },
-            ' – Brought live with minimal disruption to your ongoing operations.',
-          ],
-          [
-            { text: 'Ongoing Support', bold: true },
-            ' – Optional AMC coverage keeps systems maintained long after go-live, with full as-built documentation handed over.',
-          ],
-        ]),
-      ),
+      blockType: 'processSteps',
+      eyebrow: 'How we work',
+      heading: 'Our Automation Engineering *Process*',
+      steps: PROCESS_STEPS.map(([title, description]) => ({ title, description })),
     },
 
     // --- CTA 2 ----------------------------------------------------------
@@ -326,22 +316,14 @@ const run = async () => {
       })),
     },
 
-    // --- Closing --------------------------------------------------------
-    {
-      blockType: 'richText',
-      width: 'prose',
-      content: doc(
-        heading('Get an Automation Engineering Assessment'),
-        paragraph(
-          "If your current control systems are holding back production, visibility, or reliability, General Tech Automation can assess your plant and recommend a practical path forward, whether that's a new control system build, a retrofit, or an ongoing maintenance contract. A short site visit is usually enough to tell you which option makes sense, and what it will cost, before any commitment is made.",
-        ),
-      ),
-    },
-
-    // --- CTA 3 ----------------------------------------------------------
+    // --- Closing CTA ----------------------------------------------------
+    // The assessment pitch and the closing call sit in one dark section so the
+    // page ends on a single ask rather than two stacked ones.
     {
       blockType: 'cta',
+      eyebrow: 'Get an automation engineering assessment',
       heading: 'Speak with an automation engineer *today*',
+      body: "If your current control systems are holding back production, visibility, or reliability, General Tech Automation can assess your plant and recommend a practical path forward, whether that's a new control system build, a retrofit, or an ongoing maintenance contract. A short site visit is usually enough to tell you which option makes sense, and what it will cost, before any commitment is made.",
       actions: [callAction(`Call ${PHONE}`)],
     },
   ]

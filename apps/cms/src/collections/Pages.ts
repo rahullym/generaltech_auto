@@ -1,7 +1,16 @@
 import type { CollectionConfig } from 'payload'
 
 import { editors, publishedOrAuthenticated } from '../access'
-import { CallToAction, Faq, FeatureGrid, Hero, MediaBlock, RichTextBlock } from '../blocks'
+import {
+  CallToAction,
+  Faq,
+  FeatureGrid,
+  Hero,
+  LogoWall,
+  MediaBlock,
+  ProcessSteps,
+  RichTextBlock,
+} from '../blocks'
 import { slugField } from '../fields/slug'
 import { previewUrl } from '../lib/preview'
 
@@ -37,7 +46,16 @@ export const Pages: CollectionConfig = {
               name: 'layout',
               type: 'blocks',
               required: true,
-              blocks: [Hero, RichTextBlock, MediaBlock, FeatureGrid, CallToAction, Faq],
+              blocks: [
+                Hero,
+                RichTextBlock,
+                MediaBlock,
+                FeatureGrid,
+                ProcessSteps,
+                LogoWall,
+                CallToAction,
+                Faq,
+              ],
             },
           ],
         },

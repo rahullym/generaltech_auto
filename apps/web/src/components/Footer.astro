@@ -13,6 +13,11 @@ const year = new Date().getFullYear()
 const columns = footer.columns ?? []
 const socials = footer.socials ?? []
 
+// The footer sits on black, so prefer the light logo; only fall back to
+// inverting the main mark when no light version has been uploaded.
+const footerLogo = settings.logoInverse ?? settings.logo
+const invertLogo = !settings.logoInverse
+
 const phone = settings.contact?.phone
 const email = settings.contact?.email
 const address = settings.contact?.address
@@ -46,8 +51,12 @@ const socialIcons: Record<string, { path: string; color: string }> = {
     <div class="flex flex-col">
       <div class="mb-8">
         {
-          settings.logo && typeof settings.logo === 'object' ? (
-            <Picture media={settings.logo} class="h-16 w-auto brightness-0 invert" />
+          footerLogo && typeof footerLogo === 'object' ? (
+            <Picture
+              media={footerLogo}
+              raw
+              class:list={['h-16 w-auto', invertLogo && 'brightness-0 invert']}
+            />
           ) : (
             <span class="text-2xl font-black tracking-tight text-white">{settings.siteName}</span>
           )

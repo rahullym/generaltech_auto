@@ -1,0 +1,45 @@
+---
+import SectionHeader from '../SectionHeader.astro'
+import Picture from '../Picture.astro'
+import type { Media } from '@/lib/types'
+
+interface Props {
+  eyebrow?: string
+  heading?: string
+  intro?: string
+  logos: { id?: string; image: Media | string; name?: string; url?: string }[]
+}
+
+const { eyebrow, heading, intro, logos = [] } = Astro.props
+---
+
+<section class="bg-white px-6 md:px-12 py-24 lg:py-32 border-t border-gray-100">
+  <div class="mx-auto max-w-7xl">
+    {(eyebrow || heading || intro) && <SectionHeader eyebrow={eyebrow} heading={heading} intro={intro} />}
+
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px bg-gray-100 border border-gray-100 rounded-2xl overflow-hidden"
+    >
+      {
+        logos.map((logo, index) => {
+          const Tag = logo.url ? 'a' : 'div'
+
+          return (
+            <Tag
+              {...logo.url ? { href: logo.url, target: '_blank', rel: 'noopener noreferrer' } : {}}
+              title={logo.name}
+              class="group flex aspect-[3/2] items-center justify-center bg-white p-6 opacity-0 translate-y-4 reveal-item transition-colors duration-500 hover:bg-gray-50"
+              style={`transition-delay: ${Math.min(index, 24) * 25}ms`}
+            >
+              <Picture
+                media={logo.image}
+                raw
+                class="max-h-12 w-auto max-w-full object-contain grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100"
+              />
+            </Tag>
+          )
+        })
+      }
+    </div>
+  </div>
+</section>

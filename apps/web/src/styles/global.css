@@ -84,6 +84,120 @@
   transform: scale(1.05);
 }
 
+/* Banner hero: partner marks scroll along the bottom edge. Three copies of the
+   list are rendered, so translating -50% lands on an identical frame. */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  display: flex;
+  animation: marquee 45s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* The marks are dark-on-white artwork sitting on a black hero. grayscale+invert
+   turns each mark light and its white field black; contrast crushes the JPEG
+   halo to true black so `screen` drops the field out entirely. */
+.hero-logo {
+  filter: grayscale(1) invert(1) contrast(1.35) brightness(1.35);
+  mix-blend-mode: screen;
+  opacity: 0.75;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+.hero-logo:hover {
+  opacity: 1;
+  filter: grayscale(1) invert(1) contrast(1.4) brightness(1.65);
+  transform: scale(1.08);
+}
+
+/* A standfirst: the opening paragraph of a section set larger and darker, so
+   long-form copy has an entry point instead of a wall of even grey. */
+.prose-lede > p:first-child {
+  color: #000;
+  font-size: clamp(1.15rem, 1.5vw, 1.375rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+
+/* Numbered beats: a long passage broken into counted paragraphs with a red
+   index in the gutter and a hairline between each, so four dense paragraphs
+   read as four distinct points rather than one block. */
+.prose-beats {
+  counter-reset: beat;
+}
+.prose-beats > p {
+  counter-increment: beat;
+  position: relative;
+  padding-left: 3.75rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #e9e9e9;
+}
+.prose-beats > p:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
+}
+.prose-beats > p::before {
+  content: counter(beat, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 2.35rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #ed1c25;
+}
+.prose-beats > p:first-child::before {
+  top: 0.35rem;
+}
+@media (max-width: 640px) {
+  .prose-beats > p {
+    padding-left: 0;
+    padding-top: 2.75rem;
+  }
+  .prose-beats > p::before {
+    top: 1.5rem;
+  }
+  .prose-beats > p:first-child {
+    padding-top: 1.75rem;
+  }
+  .prose-beats > p:first-child::before {
+    top: 0;
+  }
+}
+
+/* Collapsed copy fades out at the cut so it reads as "there is more", rather
+   than as a paragraph that stops mid-sentence. */
+.copy-collapse {
+  position: relative;
+}
+.copy-collapse.is-collapsed .copy-collapse-body::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 6rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+  pointer-events: none;
+}
+.copy-collapse.is-collapsed .copy-collapse-body {
+  position: relative;
+}
+
 /* Rich text output from lib/lexical.ts */
 .prose-content {
   line-height: 1.75;

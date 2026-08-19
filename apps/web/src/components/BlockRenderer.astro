@@ -3,7 +3,9 @@ import CallToAction from './blocks/CallToAction.astro'
 import Faq from './blocks/Faq.astro'
 import FeatureGrid from './blocks/FeatureGrid.astro'
 import Hero from './blocks/Hero.astro'
+import LogoWall from './blocks/LogoWall.astro'
 import MediaBlock from './blocks/MediaBlock.astro'
+import ProcessSteps from './blocks/ProcessSteps.astro'
 import RichTextBlock from './blocks/RichTextBlock.astro'
 import type { Block } from '@/lib/types'
 
@@ -24,6 +26,8 @@ const registry: Record<string, any> = {
   richText: RichTextBlock,
   media: MediaBlock,
   featureGrid: FeatureGrid,
+  processSteps: ProcessSteps,
+  logoWall: LogoWall,
   cta: CallToAction,
   faq: Faq,
 }

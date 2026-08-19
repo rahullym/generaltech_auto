@@ -12,6 +12,7 @@ export const Hero: Block = {
       type: 'select',
       defaultValue: 'centered',
       options: [
+        { label: 'Banner (full-screen, image slideshow)', value: 'banner' },
         { label: 'Centered', value: 'centered' },
         { label: 'Split with media', value: 'split' },
         { label: 'Minimal', value: 'minimal' },
@@ -24,12 +25,37 @@ export const Hero: Block = {
       name: 'image',
       type: 'upload',
       relationTo: 'media',
-      admin: { condition: (_, siblingData) => siblingData?.variant === 'split' },
+      admin: {
+        condition: (_, siblingData) =>
+          siblingData?.variant === 'split' ||
+          siblingData?.variant === 'centered' ||
+          siblingData?.variant === 'minimal',
+      },
+    },
+    {
+      name: 'images',
+      type: 'array',
+      label: 'Background slideshow',
+      admin: {
+        description: 'Crossfades behind the banner. One image is fine.',
+        condition: (_, siblingData) => siblingData?.variant === 'banner',
+      },
+      fields: [{ name: 'image', type: 'upload', relationTo: 'media', required: true }],
+    },
+    {
+      name: 'marqueeLogos',
+      type: 'array',
+      label: 'Brand marquee',
+      admin: {
+        description: 'Partner marks that scroll along the bottom of the banner.',
+        condition: (_, siblingData) => siblingData?.variant === 'banner',
+      },
+      fields: [{ name: 'image', type: 'upload', relationTo: 'media', required: true }],
     },
     {
       name: 'actions',
       type: 'array',
-      maxRows: 2,
+      maxRows: 3,
       fields: [linkField({ appearances: true })],
     },
   ],

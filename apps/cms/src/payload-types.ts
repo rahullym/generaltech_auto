@@ -144,7 +144,16 @@ export interface Page {
    * Leave blank to generate from the title.
    */
   slug: string;
-  layout: (HeroBlock | RichTextBlock | MediaBlock | FeatureGridBlock | CallToActionBlock | FaqBlock)[];
+  layout: (
+    | HeroBlock
+    | RichTextBlock
+    | MediaBlock
+    | FeatureGridBlock
+    | ProcessStepsBlock
+    | LogoWallBlock
+    | CallToActionBlock
+    | FaqBlock
+  )[];
   meta?: {
     title?: string | null;
     description?: string | null;
@@ -162,11 +171,29 @@ export interface Page {
  * via the `definition` "HeroBlock".
  */
 export interface HeroBlock {
-  variant?: ('centered' | 'split' | 'minimal') | null;
+  variant?: ('banner' | 'centered' | 'split' | 'minimal') | null;
   eyebrow?: string | null;
   heading: string;
   subheading?: string | null;
   image?: (number | null) | Media;
+  /**
+   * Crossfades behind the banner. One image is fine.
+   */
+  images?:
+    | {
+        image: number | Media;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Partner marks that scroll along the bottom of the banner.
+   */
+  marqueeLogos?:
+    | {
+        image: number | Media;
+        id?: string | null;
+      }[]
+    | null;
   actions?:
     | {
         link: {
@@ -399,7 +426,35 @@ export interface Doc {
  * via the `definition` "RichTextBlock".
  */
 export interface RichTextBlock {
+  layout?: ('default' | 'editorial' | 'split') | null;
   width?: ('prose' | 'full') | null;
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in red italics.
+   */
+  heading?: string | null;
+  /**
+   * Turns a long passage into numbered beats separated by hairlines.
+   */
+  numbered?: boolean | null;
+  /**
+   * One image fills the column; two are offset into a collage.
+   */
+  media?:
+    | {
+        image: number | Media;
+        id?: string | null;
+      }[]
+    | null;
+  mediaPosition?: ('left' | 'right') | null;
+  /**
+   * Renders the opening paragraph larger and darker.
+   */
+  lede?: boolean | null;
+  /**
+   * Shows the opening of the copy and lets the reader expand the rest, keeping the section short.
+   */
+  collapsible?: boolean | null;
   content: {
     root: {
       type: string;
@@ -438,8 +493,15 @@ export interface MediaBlock {
 export interface FeatureGridBlock {
   heading?: string | null;
   intro?: string | null;
+  display?: ('grid' | 'carousel') | null;
   columns?: ('2' | '3' | '4') | null;
   features: {
+    /**
+     * Line icon drawn by the frontend. Overrides an uploaded icon.
+     */
+    iconName?:
+      | ('cpu' | 'dashboard' | 'screen' | 'network' | 'signal' | 'cabinet' | 'cog' | 'refresh' | 'shield' | 'gauge')
+      | null;
     icon?: (number | null) | Media;
     title: string;
     description?: string | null;
@@ -470,9 +532,56 @@ export interface FeatureGridBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ProcessStepsBlock".
+ */
+export interface ProcessStepsBlock {
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  intro?: string | null;
+  steps: {
+    title: string;
+    description?: string | null;
+    /**
+     * Optional short line above the title — e.g. "On-site" or "1–2 days".
+     */
+    meta?: string | null;
+    id?: string | null;
+  }[];
+  /**
+   * Optional line under the stages, for a caveat or a handover promise.
+   */
+  footnote?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'processSteps';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LogoWallBlock".
+ */
+export interface LogoWallBlock {
+  eyebrow?: string | null;
+  heading?: string | null;
+  intro?: string | null;
+  logos: {
+    image: number | Media;
+    name?: string | null;
+    url?: string | null;
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'logoWall';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "CallToActionBlock".
  */
 export interface CallToActionBlock {
+  eyebrow?: string | null;
   heading: string;
   body?: string | null;
   actions?:
@@ -637,6 +746,8 @@ export interface PagesSelect<T extends boolean = true> {
         richText?: T | RichTextBlockSelect<T>;
         media?: T | MediaBlockSelect<T>;
         featureGrid?: T | FeatureGridBlockSelect<T>;
+        processSteps?: T | ProcessStepsBlockSelect<T>;
+        logoWall?: T | LogoWallBlockSelect<T>;
         cta?: T | CallToActionBlockSelect<T>;
         faq?: T | FaqBlockSelect<T>;
       };
@@ -661,6 +772,18 @@ export interface HeroBlockSelect<T extends boolean = true> {
   heading?: T;
   subheading?: T;
   image?: T;
+  images?:
+    | T
+    | {
+        image?: T;
+        id?: T;
+      };
+  marqueeLogos?:
+    | T
+    | {
+        image?: T;
+        id?: T;
+      };
   actions?:
     | T
     | {
@@ -684,7 +807,20 @@ export interface HeroBlockSelect<T extends boolean = true> {
  * via the `definition` "RichTextBlock_select".
  */
 export interface RichTextBlockSelect<T extends boolean = true> {
+  layout?: T;
   width?: T;
+  eyebrow?: T;
+  heading?: T;
+  numbered?: T;
+  media?:
+    | T
+    | {
+        image?: T;
+        id?: T;
+      };
+  mediaPosition?: T;
+  lede?: T;
+  collapsible?: T;
   content?: T;
   id?: T;
   blockName?: T;
@@ -707,10 +843,12 @@ export interface MediaBlockSelect<T extends boolean = true> {
 export interface FeatureGridBlockSelect<T extends boolean = true> {
   heading?: T;
   intro?: T;
+  display?: T;
   columns?: T;
   features?:
     | T
     | {
+        iconName?: T;
         icon?: T;
         title?: T;
         description?: T;
@@ -730,9 +868,49 @@ export interface FeatureGridBlockSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ProcessStepsBlock_select".
+ */
+export interface ProcessStepsBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  steps?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        meta?: T;
+        id?: T;
+      };
+  footnote?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LogoWallBlock_select".
+ */
+export interface LogoWallBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  logos?:
+    | T
+    | {
+        image?: T;
+        name?: T;
+        url?: T;
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "CallToActionBlock_select".
  */
 export interface CallToActionBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
   heading?: T;
   body?: T;
   actions?:
@@ -1098,6 +1276,10 @@ export interface SiteSetting {
     image?: (number | null) | Media;
   };
   logo?: (number | null) | Media;
+  /**
+   * Used in the footer. Falls back to the main logo.
+   */
+  logoInverse?: (number | null) | Media;
   favicon?: (number | null) | Media;
   contact?: {
     email?: string | null;
@@ -1212,6 +1394,7 @@ export interface SiteSettingsSelect<T extends boolean = true> {
         image?: T;
       };
   logo?: T;
+  logoInverse?: T;
   favicon?: T;
   contact?:
     | T

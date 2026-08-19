@@ -5,21 +5,154 @@ import { splitAccent } from '@/lib/accent'
 import type { LinkValue, Media } from '@/lib/types'
 
 interface Props {
-  variant?: 'centered' | 'split' | 'minimal'
+  variant?: 'banner' | 'centered' | 'split' | 'minimal'
   eyebrow?: string
   heading: string
   subheading?: string
   image?: Media | string
+  /** Banner only: crossfading background photography. */
+  images?: { id?: string; image: Media | string }[]
+  /** Banner only: partner marks scrolling along the bottom edge. */
+  marqueeLogos?: { id?: string; image: Media | string }[]
   actions?: { id?: string; link: LinkValue }[]
 }
 
-const { variant = 'centered', eyebrow, heading, subheading, image, actions = [] } = Astro.props
+const {
+  variant = 'centered',
+  eyebrow,
+  heading,
+  subheading,
+  image,
+  images = [],
+  marqueeLogos = [],
+  actions = [],
+} = Astro.props
+
 const { lead, accent } = splitAccent(heading)
 const hasImage = Boolean(image && typeof image === 'object')
+
+// The banner falls back to the single `image` when no slideshow was set.
+const slides = (images.length ? images.map((entry) => entry.image) : hasImage ? [image!] : []).filter(
+  (media): media is Media => Boolean(media) && typeof media === 'object',
+)
+
+const logos = marqueeLogos
+  .map((entry) => entry.image)
+  .filter((media): media is Media => Boolean(media) && typeof media === 'object')
+
+// Three passes so the -50% keyframe lands on an identical frame.
+const marquee = logos.length ? [...logos, ...logos, ...logos] : []
 ---
 
 {
-  variant === 'split' ? (
+  variant === 'banner' ? (
+    <section
+      class="hero-banner relative flex min-h-screen flex-col overflow-hidden bg-general-black"
+      data-slides={slides.length}
+    >
+      {/* Background slideshow */}
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        {slides.map((slide, index) => (
+          <div
+            class:list={[
+              'absolute inset-0 transition-all duration-[1500ms] ease-in-out',
+              index === 0 ? 'opacity-100 scale-100' : 'opacity-0 scale-105',
+            ]}
+            data-slide-bg={index}
+          >
+            <Picture
+              media={slide}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              fetchpriority={index === 0 ? 'high' : 'auto'}
+              sizes="100vw"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+
+        {/* Scrims: dark from the left for the copy, dark from the bottom for the
+            marquee, plus a faint red wash so the photo carries the brand. */}
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/30" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        <div class="absolute inset-0 bg-general-red/5 mix-blend-overlay" />
+      </div>
+
+      {/* Copy */}
+      <div
+        class="relative z-10 flex min-h-0 w-full flex-1 flex-col justify-center pt-40 pb-10 md:pt-48 lg:pt-52"
+        id="hero-content"
+      >
+        <div class="mx-auto w-full max-w-7xl px-6 md:px-12">
+          <div class="max-w-4xl">
+            {eyebrow && (
+              <div class="hero-reveal mb-6 flex items-center gap-3 opacity-0 translate-y-4 transition-all duration-1000 delay-100">
+                <div class="h-[2px] w-10 bg-general-red" />
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white">
+                  {eyebrow}
+                </span>
+              </div>
+            )}
+
+            <h1 class="hero-reveal hero-heading mb-6 text-4xl font-black leading-[1.02] tracking-tighter text-white opacity-0 translate-y-8 transition-all duration-1000 delay-300 sm:text-5xl md:text-6xl lg:text-7xl">
+              {lead}
+              {accent && (
+                <>
+                  <br />
+                  <span class="font-medium italic tracking-normal text-general-red">{accent}</span>
+                </>
+              )}
+            </h1>
+
+            {subheading && (
+              <p class="hero-reveal mb-10 max-w-2xl border-l-2 border-general-red/40 pl-6 text-base leading-relaxed text-white/70 opacity-0 translate-y-8 transition-all duration-1000 delay-500 md:text-lg">
+                {subheading}
+              </p>
+            )}
+
+            {actions.length > 0 && (
+              <div class="hero-reveal flex flex-col gap-4 opacity-0 translate-y-8 transition-all duration-1000 delay-700 sm:flex-row sm:flex-wrap">
+                {actions.map((action) => (
+                  <Button link={action.link} tone="dark" class="w-full sm:w-auto" />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Slide dots */}
+      {slides.length > 1 && (
+        <div class="absolute right-6 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-center gap-3 md:right-12 lg:flex">
+          {slides.map((_, index) => (
+            <button
+              type="button"
+              aria-label={`Show slide ${index + 1}`}
+              class:list={[
+                'h-2 w-2 rounded-full transition-all duration-300',
+                index === 0 ? 'bg-general-red scale-125' : 'bg-white/40 hover:bg-white/80',
+              ]}
+              data-slide-dot={index}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Partner marquee */}
+      {marquee.length > 0 && (
+        <div class="relative z-20 w-full shrink-0 overflow-hidden border-t border-white/10 py-6">
+          <div class="flex animate-marquee items-center whitespace-nowrap">
+            {marquee.map((logo) => (
+              <Picture
+                media={logo}
+                raw
+                class="hero-logo mx-6 h-8 w-auto max-w-[150px] shrink-0 object-contain md:mx-8 md:h-9 md:max-w-[170px]"
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+  ) : variant === 'split' ? (
     /* Split hero — light, two-column, red eyebrow rule on the left. */
     <section class="relative bg-white pt-32 pb-24 lg:pt-40 lg:pb-32 px-6 md:px-12 border-b border-gray-100">
       <div class="max-w-7xl mx-auto grid items-center gap-12 lg:gap-20 lg:grid-cols-2">
@@ -67,8 +200,7 @@ const hasImage = Boolean(image && typeof image === 'object')
       </div>
     </section>
   ) : (
-    /* Centered / minimal hero — black, full-bleed, image as background wash.
-       Mirrors PageHero on the generaltech site. */
+    /* Centered / minimal hero — black, full-bleed, image as background wash. */
     <section
       class:list={[
         'page-hero-section relative w-full flex items-center justify-center overflow-hidden bg-general-black',
@@ -139,3 +271,58 @@ const hasImage = Boolean(image && typeof image === 'object')
     </section>
   )
 }
+
+<script>
+  // Banner: crossfade the background photography, with dots to jump between
+  // slides. Re-queried on every view-transition navigation.
+  function initHeroBanner() {
+    const banner = document.querySelector<HTMLElement>('.hero-banner')
+    if (!banner) return
+
+    banner.classList.add('hero-active')
+
+    // Guard: this runs on both DOMContentLoaded and astro:page-load, and a
+    // second pass would stack a duplicate autoplay timer on the slideshow.
+    if (banner.dataset.bannerReady) return
+    banner.dataset.bannerReady = 'true'
+
+    const backgrounds = banner.querySelectorAll<HTMLElement>('[data-slide-bg]')
+    const dots = banner.querySelectorAll<HTMLElement>('[data-slide-dot]')
+    if (backgrounds.length < 2) return
+
+    let index = 0
+    let timer: ReturnType<typeof setInterval>
+
+    const show = (next: number) => {
+      index = (next + backgrounds.length) % backgrounds.length
+      backgrounds.forEach((bg, i) => {
+        bg.classList.toggle('opacity-100', i === index)
+        bg.classList.toggle('scale-100', i === index)
+        bg.classList.toggle('opacity-0', i !== index)
+        bg.classList.toggle('scale-105', i !== index)
+      })
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-general-red', i === index)
+        dot.classList.toggle('scale-125', i === index)
+        dot.classList.toggle('bg-white/40', i !== index)
+      })
+    }
+
+    const play = () => {
+      clearInterval(timer)
+      timer = setInterval(() => show(index + 1), 6000)
+    }
+
+    dots.forEach((dot, i) =>
+      dot.addEventListener('click', () => {
+        show(i)
+        play()
+      }),
+    )
+
+    play()
+  }
+
+  document.addEventListener('astro:page-load', initHeroBanner)
+  document.addEventListener('DOMContentLoaded', initHeroBanner)
+</script>

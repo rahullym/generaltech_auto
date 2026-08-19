@@ -74,6 +74,7 @@ const telHref = phone ? `tel:${phone.replace(/\s+/g, '')}` : null
           settings.logo && typeof settings.logo === 'object' ? (
             <Picture
               media={settings.logo}
+              raw
               loading="eager"
               class="transition-all duration-500 w-auto h-[60px]"
               id="header-logo"
@@ -186,7 +187,7 @@ const telHref = phone ? `tel:${phone.replace(/\s+/g, '')}` : null
     <a href="/" aria-label={settings.siteName}>
       {
         settings.logo && typeof settings.logo === 'object' ? (
-          <Picture media={settings.logo} class="h-12 w-auto" />
+          <Picture media={settings.logo} raw class="h-12 w-auto" />
         ) : (
           <span class="text-[19px] font-black tracking-tight text-general-black">{settings.siteName}</span>
         )

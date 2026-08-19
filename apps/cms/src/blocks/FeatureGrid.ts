@@ -10,7 +10,17 @@ export const FeatureGrid: Block = {
     { name: 'heading', type: 'text' },
     { name: 'intro', type: 'textarea' },
     {
+      name: 'display',
+      type: 'select',
+      defaultValue: 'grid',
+      options: [
+        { label: 'Grid', value: 'grid' },
+        { label: 'Carousel (scrolls left to right)', value: 'carousel' },
+      ],
+    },
+    {
       name: 'columns',
+      admin: { condition: (_, siblingData) => siblingData?.display !== 'carousel' },
       type: 'select',
       defaultValue: '3',
       options: [
@@ -25,6 +35,24 @@ export const FeatureGrid: Block = {
       minRows: 1,
       required: true,
       fields: [
+        {
+          name: 'iconName',
+          type: 'select',
+          label: 'Icon',
+          admin: { description: 'Line icon drawn by the frontend. Overrides an uploaded icon.' },
+          options: [
+            { label: 'Controller / PLC', value: 'cpu' },
+            { label: 'Dashboard / SCADA', value: 'dashboard' },
+            { label: 'Screen / HMI', value: 'screen' },
+            { label: 'Network / DCS', value: 'network' },
+            { label: 'Connected / IoT', value: 'signal' },
+            { label: 'Cabinet / panel', value: 'cabinet' },
+            { label: 'Machine / process', value: 'cog' },
+            { label: 'Retrofit / maintenance', value: 'refresh' },
+            { label: 'Shield / safety', value: 'shield' },
+            { label: 'Gauge / measurement', value: 'gauge' },
+          ],
+        },
         { name: 'icon', type: 'upload', relationTo: 'media' },
         { name: 'title', type: 'text', required: true },
         { name: 'description', type: 'textarea' },

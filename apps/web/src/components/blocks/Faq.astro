@@ -104,6 +104,10 @@ const faqSchema = {
     const items = document.querySelectorAll<HTMLElement>('.faq-item')
 
     items.forEach((item) => {
+      // Guard: this runs on both DOMContentLoaded and astro:page-load.
+      if (item.dataset.faqReady) return
+      item.dataset.faqReady = 'true'
+
       const trigger = item.querySelector<HTMLButtonElement>('.faq-trigger')
       const content = item.querySelector<HTMLElement>('.faq-content')
       if (!trigger || !content) return
