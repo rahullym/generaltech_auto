@@ -1,0 +1,141 @@
+---
+import Button from '../Button.astro'
+import Picture from '../Picture.astro'
+import { splitAccent } from '@/lib/accent'
+import type { LinkValue, Media } from '@/lib/types'
+
+interface Props {
+  variant?: 'centered' | 'split' | 'minimal'
+  eyebrow?: string
+  heading: string
+  subheading?: string
+  image?: Media | string
+  actions?: { id?: string; link: LinkValue }[]
+}
+
+const { variant = 'centered', eyebrow, heading, subheading, image, actions = [] } = Astro.props
+const { lead, accent } = splitAccent(heading)
+const hasImage = Boolean(image && typeof image === 'object')
+---
+
+{
+  variant === 'split' ? (
+    /* Split hero — light, two-column, red eyebrow rule on the left. */
+    <section class="relative bg-white pt-32 pb-24 lg:pt-40 lg:pb-32 px-6 md:px-12 border-b border-gray-100">
+      <div class="max-w-7xl mx-auto grid items-center gap-12 lg:gap-20 lg:grid-cols-2">
+        <div>
+          {eyebrow && (
+            <div class="flex items-center gap-3 mb-6 opacity-0 translate-y-4 reveal-item">
+              <div class="w-8 h-[2px] bg-general-red" />
+              <span class="text-[11px] font-bold tracking-[0.25em] uppercase text-general-red">
+                {eyebrow}
+              </span>
+            </div>
+          )}
+
+          <h1 class="text-4xl sm:text-5xl lg:text-[72px] font-black tracking-tight text-general-black leading-[0.95] opacity-0 translate-y-8 reveal-item">
+            {lead}
+            {accent && <span class="text-general-red italic font-medium"> {accent}</span>}
+          </h1>
+
+          {subheading && (
+            <p class="mt-10 text-xl text-gray-700 leading-relaxed border-l-2 border-general-red/10 pl-8 opacity-0 translate-y-8 reveal-item">
+              {subheading}
+            </p>
+          )}
+
+          {actions.length > 0 && (
+            <div class="mt-10 flex flex-col sm:flex-row flex-wrap gap-4 opacity-0 translate-y-8 reveal-item">
+              {actions.map((action) => (
+                <Button link={action.link} />
+              ))}
+            </div>
+          )}
+        </div>
+
+        {hasImage && (
+          <div class="opacity-0 translate-y-8 reveal-item">
+            <Picture
+              media={image!}
+              loading="eager"
+              fetchpriority="high"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              class="w-full rounded-2xl object-cover shadow-[0_30px_80px_rgba(0,0,0,0.12)]"
+            />
+          </div>
+        )}
+      </div>
+    </section>
+  ) : (
+    /* Centered / minimal hero — black, full-bleed, image as background wash.
+       Mirrors PageHero on the generaltech site. */
+    <section
+      class:list={[
+        'page-hero-section relative w-full flex items-center justify-center overflow-hidden bg-general-black',
+        variant === 'minimal' ? 'min-h-[460px]' : 'min-h-[700px]',
+      ]}
+    >
+      {hasImage && (
+        <div class="absolute inset-0 z-0">
+          <Picture
+            media={image!}
+            loading="eager"
+            fetchpriority="high"
+            sizes="100vw"
+            class="w-full h-full object-cover opacity-90 hero-image"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/85" />
+          <div class="absolute inset-0 bg-black/25" />
+        </div>
+      )}
+
+      <div
+        class:list={[
+          'relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full',
+          variant === 'minimal' ? 'pt-40 pb-16' : 'pt-48 pb-20',
+        ]}
+      >
+        <div class="flex flex-col items-center text-center">
+          {eyebrow && (
+            <div class="hero-reveal opacity-0 translate-y-4 transition-all duration-1000 delay-100">
+              <div class="inline-flex items-center gap-3 mb-6">
+                <div class="w-6 h-[1px] bg-general-red" />
+                <span class="text-[10px] md:text-[12px] font-bold tracking-[0.4em] uppercase text-white/60">
+                  {eyebrow}
+                </span>
+                <div class="w-6 h-[1px] bg-general-red" />
+              </div>
+            </div>
+          )}
+
+          <h1 class="hero-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-300 hero-heading">
+            <span class="block text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-none mb-4">
+              {lead}
+            </span>
+            {accent && (
+              <span class="block text-2xl md:text-4xl lg:text-5xl font-semibold text-[#ff4b52] tracking-tight italic">
+                {accent}
+              </span>
+            )}
+          </h1>
+
+          {subheading && (
+            <div class="hero-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-500 mt-10">
+              <p class="text-[16px] md:text-[18px] text-gray-300 font-light max-w-2xl mx-auto leading-relaxed border-t border-white/10 pt-10">
+                {subheading}
+              </p>
+            </div>
+          )}
+
+          {actions.length > 0 && (
+            <div class="hero-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-700 mt-12 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
+              {actions.map((action) => (
+                <Button link={action.link} tone="dark" />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,6 @@
+export { CallToAction } from './CallToAction'
+export { Faq } from './Faq'
+export { FeatureGrid } from './FeatureGrid'
+export { Hero } from './Hero'
+export { MediaBlock } from './MediaBlock'
+export { RichTextBlock } from './RichTextBlock'

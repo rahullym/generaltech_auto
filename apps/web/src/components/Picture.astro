@@ -1,0 +1,52 @@
+---
+import type { Media } from '@/lib/types'
+
+interface Props {
+  media?: Media | string | null
+  class?: string
+  id?: string
+  sizes?: string
+  loading?: 'lazy' | 'eager'
+  fetchpriority?: 'high' | 'low' | 'auto'
+}
+
+const {
+  media,
+  class: className,
+  id,
+  sizes = '100vw',
+  loading = 'lazy',
+  fetchpriority = 'auto',
+} = Astro.props
+
+// Depth-0 queries return the id only; there is nothing to render then.
+const image = media && typeof media === 'object' ? media : null
+
+/** Builds a srcset from the resize variants Payload generated. */
+const srcset = image?.sizes
+  ? Object.values(image.sizes)
+      .filter((size): size is { url: string; width: number } =>
+        Boolean(size?.url && size?.width),
+      )
+      .map((size) => `${size.url} ${size.width}w`)
+      .join(', ')
+  : undefined
+---
+
+{
+  image?.url && (
+    <img
+      src={image.url}
+      srcset={srcset}
+      sizes={srcset ? sizes : undefined}
+      alt={image.alt ?? ''}
+      width={image.width}
+      height={image.height}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      decoding="async"
+      class={className}
+      id={id}
+    />
+  )
+}

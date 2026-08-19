@@ -1,0 +1,17 @@
+---
+import RichText from '../RichText.astro'
+import type { RichTextValue } from '@/lib/types'
+
+interface Props {
+  width?: 'prose' | 'full'
+  content: RichTextValue
+}
+
+const { width = 'prose', content } = Astro.props
+---
+
+<section class="bg-white px-6 md:px-12 py-20 lg:py-24">
+  <div class:list={['mx-auto opacity-0 translate-y-8 reveal-item', width === 'prose' ? 'max-w-3xl' : 'max-w-7xl']}>
+    <RichText value={content} />
+  </div>
+</section>

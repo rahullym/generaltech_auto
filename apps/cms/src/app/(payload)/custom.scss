@@ -1,0 +1,22 @@
+/* Admin panel style overrides. Payload exposes its design tokens as CSS vars,
+   so the panel can carry the website's brand: Manrope everywhere and General
+   Tech red on the primary actions. Status colours are left alone — a red
+   "success" toast would read as a failure. */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap');
+
+:root {
+  --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --theme-elevation-0: #ffffff;
+  --color-general-red: #ed1c25;
+}
+
+.btn--style-primary:not(.btn--disabled) {
+  background-color: var(--color-general-red);
+  border-color: var(--color-general-red);
+  color: #fff;
+}
+
+.btn--style-primary:not(.btn--disabled):hover {
+  background-color: #d90000;
+  border-color: #d90000;
+}

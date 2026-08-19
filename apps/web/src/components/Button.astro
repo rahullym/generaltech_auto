@@ -1,0 +1,55 @@
+---
+import { resolveHref } from '@/lib/urls'
+import type { LinkValue } from '@/lib/types'
+
+interface Props {
+  link?: LinkValue | null
+  /** Dark sections need the secondary/link variants inverted. */
+  tone?: 'light' | 'dark'
+  class?: string
+}
+
+const { link, tone = 'light', class: className } = Astro.props
+const href = resolveHref(link)
+const appearance = link?.appearance ?? 'primary'
+const external = link?.newTab === true
+const dark = tone === 'dark'
+
+// Uppercase, letter-spaced, rounded-xl — the General Tech button set.
+const base =
+  'inline-flex items-center justify-center gap-3 rounded-xl px-8 py-5 text-[13px] font-bold tracking-[0.1em] uppercase transition-all duration-500 group'
+
+const styles: Record<string, string> = {
+  primary: `${base} bg-general-red text-white shadow-lg shadow-general-red/20 hover:bg-white hover:text-general-black`,
+  secondary: dark
+    ? `${base} bg-white/5 border border-white/10 text-white hover:bg-white/10`
+    : `${base} bg-white border border-gray-200 text-general-black hover:border-general-red hover:text-general-red`,
+  link: dark
+    ? 'inline-flex items-center gap-2 text-[13px] font-bold tracking-[0.1em] uppercase text-white hover:text-general-red transition-colors duration-300 group'
+    : 'inline-flex items-center gap-2 text-[13px] font-bold tracking-[0.1em] uppercase text-general-red hover:text-general-black transition-colors duration-300 group',
+}
+---
+
+<a
+  href={href}
+  class:list={[styles[appearance] ?? styles.primary, className]}
+  {...external ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
+>
+  {link?.label}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+    aria-hidden="true"
+  >
+    <path d="M7 7h10v10" />
+    <path d="M7 17 17 7" />
+  </svg>
+</a>

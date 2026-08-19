@@ -1,0 +1,42 @@
+---
+import { isActive } from '@/lib/urls'
+import type { DocNode } from '@/lib/urls'
+
+interface Props {
+  tree: DocNode[]
+  pathname: string
+  depth?: number
+}
+
+const { tree, pathname, depth = 0 } = Astro.props
+---
+
+<ul class:list={[depth > 0 && 'ml-3 border-l border-gray-100 pl-3']}>
+  {
+    tree.map((node) => {
+      const href = `/docs/${node.slug}`
+      const active = isActive(href, pathname)
+
+      return (
+        <li class="py-0.5">
+          <a
+            href={href}
+            aria-current={pathname === href ? 'page' : undefined}
+            class:list={[
+              'block rounded-xl px-3 py-2 text-[14px] transition-colors duration-300',
+              active
+                ? 'bg-red-50 font-bold tracking-tight text-general-red'
+                : 'font-light text-gray-600 hover:bg-gray-50 hover:text-general-black',
+            ]}
+          >
+            {node.title}
+          </a>
+
+          {node.children.length > 0 && (
+            <Astro.self tree={node.children} pathname={pathname} depth={depth + 1} />
+          )}
+        </li>
+      )
+    })
+  }
+</ul>

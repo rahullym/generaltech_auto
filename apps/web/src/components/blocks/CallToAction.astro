@@ -1,0 +1,51 @@
+---
+import Button from '../Button.astro'
+import { splitAccent } from '@/lib/accent'
+import type { LinkValue } from '@/lib/types'
+
+interface Props {
+  heading: string
+  body?: string
+  actions?: { id?: string; link: LinkValue }[]
+}
+
+const { heading, body, actions = [] } = Astro.props
+const { lead, accent } = splitAccent(heading)
+---
+
+<section class="py-32 px-6 md:px-12 bg-general-black text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col items-center text-center mb-16 max-w-4xl mx-auto">
+      <div class="flex items-center gap-4 mb-8 opacity-0 translate-y-4 reveal-item">
+        <div class="w-12 h-[2px] bg-general-red"></div>
+        <span class="text-[12px] font-bold tracking-[0.2em] uppercase text-general-red">
+          Get in touch
+        </span>
+        <div class="w-12 h-[2px] bg-general-red"></div>
+      </div>
+
+      <h2 class="text-4xl lg:text-[64px] leading-[0.95] font-black tracking-tight mb-10 opacity-0 translate-y-8 reveal-item">
+        {lead}
+        {accent && <span class="text-general-red italic font-medium"> {accent}</span>}
+      </h2>
+
+      {
+        body && (
+          <div class="w-full max-w-2xl mx-auto border-t border-white/10 pt-8 opacity-0 translate-y-8 reveal-item">
+            <p class="text-lg text-white/50 font-light leading-relaxed">{body}</p>
+          </div>
+        )
+      }
+    </div>
+
+    {
+      actions.length > 0 && (
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-6 opacity-0 translate-y-8 reveal-item">
+          {actions.map((action) => (
+            <Button link={action.link} tone="dark" class="w-full md:w-auto" />
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>

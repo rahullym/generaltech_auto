@@ -1,0 +1,12 @@
+node_modules/
+.pnpm-store/
+dist/
+.next/
+.astro/
+build/
+media/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store

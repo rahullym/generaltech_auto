@@ -1,0 +1,161 @@
+---
+import DocsSidebar from '@/components/DocsSidebar.astro'
+import RichText from '@/components/RichText.astro'
+import Base from '@/layouts/Base.astro'
+import { extractHeadings } from '@/lib/lexical'
+import { getDoc, listDocs } from '@/lib/payload'
+import { isPreview } from '@/lib/preview'
+import { buildDocsTree, flattenDocsTree, formatDate } from '@/lib/urls'
+
+export const prerender = false
+
+const { slug } = Astro.params
+const draft = isPreview(Astro.cookies)
+
+if (!slug) return Astro.redirect('/docs', 301)
+
+// The sidebar needs every doc, and the page needs this one; fetch in parallel.
+const [doc, all] = await Promise.all([getDoc(slug, { draft }), listDocs({ draft })])
+
+if (!doc) {
+  return new Response(null, { status: 404, statusText: 'Not found' })
+}
+
+const tree = buildDocsTree(all.docs)
+const ordered = flattenDocsTree(tree)
+const index = ordered.findIndex((entry) => entry.slug === slug)
+const prev = index > 0 ? ordered[index - 1] : null
+const next = index >= 0 && index < ordered.length - 1 ? ordered[index + 1] : null
+
+const headings = extractHeadings(doc.content)
+
+// Ancestor chain, for breadcrumbs.
+const byId = new Map(all.docs.map((entry) => [String(entry.id), entry]))
+const breadcrumbs: { title: string; slug: string }[] = []
+let cursor = doc.parent
+while (cursor) {
+  const parentId = typeof cursor === 'string' ? cursor : String(cursor.id)
+  const parent = byId.get(parentId)
+  if (!parent) break
+  breadcrumbs.unshift({ title: parent.title, slug: parent.slug })
+  cursor = parent.parent
+}
+---
+
+<Base
+  title={doc.meta?.title ?? doc.title}
+  description={doc.meta?.description ?? doc.description}
+  isDraft={draft && doc._status === 'draft'}
+>
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 md:px-12 py-16 lg:grid-cols-[16rem_minmax(0,1fr)_14rem]">
+    <aside class="lg:sticky lg:top-[150px] lg:max-h-[calc(100vh-11rem)] lg:self-start lg:overflow-y-auto">
+      <p class="mb-6 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+        <span class="h-[2px] w-6 bg-general-red" aria-hidden="true"></span>
+        Documentation
+      </p>
+      <nav aria-label="Documentation">
+        <DocsSidebar tree={tree} pathname={Astro.url.pathname} />
+      </nav>
+    </aside>
+
+    <article class="min-w-0">
+      {
+        breadcrumbs.length > 0 && (
+          <nav aria-label="Breadcrumb" class="mb-6 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">
+            <ol class="flex flex-wrap items-center gap-2">
+              <li>
+                <a href="/docs" class="transition-colors hover:text-general-red">Docs</a>
+              </li>
+              {breadcrumbs.map((crumb) => (
+                <li class="flex items-center gap-2">
+                  <span aria-hidden="true">/</span>
+                  <a href={`/docs/${crumb.slug}`} class="transition-colors hover:text-general-red">
+                    {crumb.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )
+      }
+
+      <h1 class="text-4xl font-black leading-[0.95] tracking-tight text-general-black lg:text-[56px]">
+        {doc.title}
+      </h1>
+      {
+        doc.description && (
+          <p class="mt-8 border-l-2 border-general-red/10 pl-8 text-xl leading-relaxed text-gray-700">
+            {doc.description}
+          </p>
+        )
+      }
+
+      <RichText value={doc.content} class="mt-12" />
+
+      <footer class="mt-20 border-t border-gray-100 pt-8">
+        <p class="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
+          Last updated {formatDate(doc.updatedAt)}
+        </p>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-between">
+          {
+            prev ? (
+              <a
+                href={`/docs/${prev.slug}`}
+                rel="prev"
+                class="group rounded-2xl border border-gray-100 px-6 py-5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <span class="block text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">
+                  Previous
+                </span>
+                <span class="mt-2 block font-bold tracking-tight text-general-black transition-colors group-hover:text-general-red">
+                  {prev.title}
+                </span>
+              </a>
+            ) : (
+              <span />
+            )
+          }
+          {
+            next && (
+              <a
+                href={`/docs/${next.slug}`}
+                rel="next"
+                class="group rounded-2xl border border-gray-100 px-6 py-5 text-right transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <span class="block text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">
+                  Next
+                </span>
+                <span class="mt-2 block font-bold tracking-tight text-general-black transition-colors group-hover:text-general-red">
+                  {next.title}
+                </span>
+              </a>
+            )
+          }
+        </div>
+      </footer>
+    </article>
+
+    {
+      headings.length > 1 && (
+        <aside class="hidden lg:sticky lg:top-[150px] lg:block lg:self-start">
+          <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
+            On this page
+          </p>
+          <ul class="space-y-1.5 border-l border-gray-100">
+            {headings.map((heading) => (
+              <li style={`padding-left:${(heading.level - 2) * 0.75 + 0.75}rem`}>
+                <a
+                  href={`#${heading.id}`}
+                  class="block py-1 text-[14px] font-light text-gray-500 transition-colors hover:text-general-red"
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )
+    }
+  </div>
+</Base>

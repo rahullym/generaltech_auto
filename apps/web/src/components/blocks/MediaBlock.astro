@@ -1,0 +1,32 @@
+---
+import Picture from '../Picture.astro'
+import type { Media } from '@/lib/types'
+
+interface Props {
+  media: Media | string
+  caption?: string
+  size?: 'contained' | 'full'
+}
+
+const { media, caption, size = 'contained' } = Astro.props
+const full = size === 'full'
+---
+
+<section class:list={['bg-white', full ? 'py-20' : 'px-6 md:px-12 py-20']}>
+  <figure class:list={['mx-auto opacity-0 translate-y-8 reveal-item', full ? 'max-w-none' : 'max-w-7xl']}>
+    <Picture
+      media={media}
+      sizes={full ? '100vw' : '(min-width: 1280px) 1280px, 100vw'}
+      class:list={['w-full object-cover', full ? '' : 'rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.10)]']}
+    />
+    {
+      caption && (
+        <figcaption class="mt-6 flex items-center justify-center gap-3 text-[11px] font-bold tracking-[0.25em] uppercase text-gray-400">
+          <span class="w-6 h-[1px] bg-general-red" />
+          {caption}
+          <span class="w-6 h-[1px] bg-general-red" />
+        </figcaption>
+      )
+    }
+  </figure>
+</section>

@@ -1,0 +1,106 @@
+---
+import { splitAccent } from '@/lib/accent'
+
+interface Props {
+  eyebrow?: string
+  heading?: string
+  intro?: string
+  /** `center` stacks eyebrow/heading/intro; `split` puts the intro alongside. */
+  align?: 'center' | 'split'
+  /** Desktop-only: the header sticks under the nav and shrinks once passed. */
+  sticky?: boolean
+  /** Dark sections invert the copy colours. */
+  tone?: 'light' | 'dark'
+  class?: string
+}
+
+const {
+  eyebrow,
+  heading,
+  intro,
+  align = 'center',
+  sticky = false,
+  tone = 'light',
+  class: className,
+} = Astro.props
+
+const { lead, accent } = splitAccent(heading)
+const dark = tone === 'dark'
+const centered = align === 'center'
+---
+
+{sticky && <div class="sticky-sentinel" aria-hidden="true"></div>}
+
+<div
+  class:list={[
+    centered ? 'mb-20' : 'mb-8 lg:mb-10',
+    sticky && 'section-sticky-header md:sticky md:top-[72px] z-30 bg-white pt-2 -mt-2',
+    className,
+  ]}
+  style={sticky
+    ? 'transition: padding 0.5s cubic-bezier(0.4,0,0.2,1), margin 0.5s cubic-bezier(0.4,0,0.2,1), border-bottom 0.5s cubic-bezier(0.4,0,0.2,1)'
+    : undefined}
+>
+  <div
+    class:list={[
+      centered
+        ? 'flex flex-col items-center text-center max-w-4xl mx-auto'
+        : 'flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-12',
+    ]}
+  >
+    <div class={centered ? 'contents' : 'max-w-2xl opacity-0 translate-y-8 reveal-item'}>
+      {
+        eyebrow && (
+          <div
+            class:list={[
+              'sticky-accent flex items-center gap-3 mb-6',
+              centered && 'justify-center mb-8 opacity-0 translate-y-8 reveal-item',
+            ]}
+            style="transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), margin 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease; overflow: hidden; max-height: 40px"
+          >
+            <div class="w-8 h-[2px] bg-general-red" />
+            <span class="text-[11px] font-bold tracking-[0.25em] uppercase text-general-red">
+              {eyebrow}
+            </span>
+            {centered && <div class="w-8 h-[2px] bg-general-red" />}
+          </div>
+        )
+      }
+
+      {
+        heading && (
+          <h2
+            class:list={[
+              'sticky-title text-4xl sm:text-5xl lg:text-[72px] font-black tracking-tight leading-[0.95]',
+              dark ? 'text-white' : 'text-general-black',
+              centered && 'mb-8 opacity-0 translate-y-8 reveal-item',
+            ]}
+            style="transition: font-size 0.5s cubic-bezier(0.4,0,0.2,1)"
+          >
+            {lead}
+            {accent && <span class="text-general-red italic font-medium"> {accent}</span>}
+          </h2>
+        )
+      }
+    </div>
+
+    {
+      intro && (
+        <div class={centered ? 'contents' : 'flex-1 max-w-xl opacity-0 translate-y-8 reveal-item'}>
+          <p
+            class:list={[
+              'sticky-desc text-xl leading-relaxed',
+              dark ? 'text-white/50 font-light' : 'text-gray-700',
+              centered
+                ? 'max-w-2xl mx-auto border-t border-general-red/10 pt-8 opacity-0 translate-y-8 reveal-item'
+                : 'border-l-2 border-general-red/10 pl-8',
+            ]}
+            style="transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease, margin 0.5s cubic-bezier(0.4,0,0.2,1); overflow: hidden; max-height: 32rem"
+          >
+            {intro}
+          </p>
+        </div>
+      )
+    }
+  </div>
+</div>

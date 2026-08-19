@@ -1,0 +1,49 @@
+---
+import CallToAction from './blocks/CallToAction.astro'
+import Faq from './blocks/Faq.astro'
+import FeatureGrid from './blocks/FeatureGrid.astro'
+import Hero from './blocks/Hero.astro'
+import MediaBlock from './blocks/MediaBlock.astro'
+import RichTextBlock from './blocks/RichTextBlock.astro'
+import type { Block } from '@/lib/types'
+
+interface Props {
+  blocks?: Block[]
+  /**
+   * Pages that emit their own FAQPage structured data pass false, so the FAQ
+   * block does not publish a second, conflicting copy.
+   */
+  faqSchema?: boolean
+}
+
+const { blocks = [], faqSchema = true } = Astro.props
+
+/** blockType from Payload -> Astro component. */
+const registry: Record<string, any> = {
+  hero: Hero,
+  richText: RichTextBlock,
+  media: MediaBlock,
+  featureGrid: FeatureGrid,
+  cta: CallToAction,
+  faq: Faq,
+}
+---
+
+{
+  blocks.map((block) => {
+    const Component = registry[block.blockType]
+
+    if (!Component) {
+      // An unmapped block means the CMS has a block the frontend has not
+      // implemented yet. Fail loudly in dev, silently in production.
+      if (import.meta.env.DEV) {
+        console.warn(`[BlockRenderer] No component for blockType "${block.blockType}"`)
+      }
+      return null
+    }
+
+    const extra = block.blockType === 'faq' ? { emitSchema: faqSchema } : {}
+
+    return <Component {...block} {...extra} />
+  })
+}

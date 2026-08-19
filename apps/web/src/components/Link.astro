@@ -1,0 +1,21 @@
+---
+import { resolveHref } from '@/lib/urls'
+import type { LinkValue } from '@/lib/types'
+
+interface Props {
+  link?: LinkValue | null
+  class?: string
+}
+
+const { link, class: className } = Astro.props
+const href = resolveHref(link)
+const external = link?.newTab === true
+---
+
+<a
+  href={href}
+  class={className}
+  {...external ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
+>
+  {link?.label ?? <slot />}
+</a>

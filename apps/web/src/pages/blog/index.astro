@@ -1,0 +1,162 @@
+---
+import PageHero from '@/components/PageHero.astro'
+import Picture from '@/components/Picture.astro'
+import Base from '@/layouts/Base.astro'
+import { listCategories, listPosts } from '@/lib/payload'
+import { formatDate } from '@/lib/urls'
+import type { Category } from '@/lib/types'
+
+export const prerender = false
+
+const PAGE_SIZE = 12
+
+const page = Math.max(1, Number(Astro.url.searchParams.get('page') ?? '1') || 1)
+const category = Astro.url.searchParams.get('category')
+
+const [posts, categories] = await Promise.all([
+  listPosts({
+    page,
+    limit: PAGE_SIZE,
+    where: category ? { 'categories.slug': { equals: category } } : undefined,
+  }),
+  listCategories(),
+])
+
+const buildPageHref = (target: number) => {
+  const params = new URLSearchParams()
+  if (category) params.set('category', category)
+  if (target > 1) params.set('page', String(target))
+  const qs = params.toString()
+  return qs ? `/blog?${qs}` : '/blog'
+}
+
+const activeCategory = categories.docs.find((c: Category) => c.slug === category)
+const description = activeCategory?.description ?? 'Articles, updates and technical notes.'
+---
+
+<Base
+  title={activeCategory ? `${activeCategory.title} posts` : 'Blog'}
+  description={description}
+  heroFirst
+>
+  <PageHero
+    eyebrow="Insights"
+    title={activeCategory ? activeCategory.title : 'From the'}
+    accent={activeCategory ? 'Articles.' : 'Blog.'}
+    description={description}
+  />
+
+  <section class="bg-white px-6 md:px-12 py-24 lg:py-32">
+    <div class="mx-auto max-w-7xl">
+      {
+        categories.docs.length > 0 && (
+          <nav
+            class="mb-16 flex flex-wrap items-center gap-3 border-b border-gray-100 pb-10 opacity-0 translate-y-4 reveal-item"
+            aria-label="Categories"
+          >
+            <span class="mr-2 text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+              Filter
+            </span>
+            <a
+              href="/blog"
+              class:list={[
+                'rounded-xl px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] transition-all duration-300',
+                !category
+                  ? 'bg-general-red text-white shadow-lg shadow-general-red/20'
+                  : 'border border-gray-200 text-gray-600 hover:border-general-red hover:text-general-red',
+              ]}
+            >
+              All
+            </a>
+            {categories.docs.map((c: Category) => (
+              <a
+                href={`/blog?category=${c.slug}`}
+                class:list={[
+                  'rounded-xl px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] transition-all duration-300',
+                  category === c.slug
+                    ? 'bg-general-red text-white shadow-lg shadow-general-red/20'
+                    : 'border border-gray-200 text-gray-600 hover:border-general-red hover:text-general-red',
+                ]}
+              >
+                {c.title}
+              </a>
+            ))}
+          </nav>
+        )
+      }
+
+      {
+        posts.docs.length === 0 ? (
+          <p class="py-24 text-center text-xl font-light text-gray-500">No posts published yet.</p>
+        ) : (
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {posts.docs.map((post, index) => (
+              <a
+                href={`/blog/${post.slug}`}
+                class="group relative flex h-[400px] flex-col justify-end overflow-hidden rounded-2xl border border-gray-100 bg-general-black p-10 opacity-0 translate-y-8 reveal-item transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                style={`transition-delay: ${index * 50}ms`}
+              >
+                <div class="absolute inset-0 z-0">
+                  {post.heroImage && (
+                    <Picture
+                      media={post.heroImage}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                  )}
+                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-85" />
+                </div>
+
+                <div class="relative z-10 w-full">
+                  <time
+                    datetime={post.publishedAt}
+                    class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60"
+                  >
+                    {formatDate(post.publishedAt)}
+                  </time>
+                  <div class="mt-5 mb-6 h-[2px] w-12 origin-left bg-general-red transition-all duration-700 group-hover:w-full" />
+                  <h2 class="mb-3 text-2xl font-bold leading-[1.1] tracking-tight text-white lg:text-[26px]">
+                    {post.title}
+                  </h2>
+                  {post.excerpt && (
+                    <p class="line-clamp-2 text-[15px] font-light leading-relaxed text-white/70">
+                      {post.excerpt}
+                    </p>
+                  )}
+                </div>
+              </a>
+            ))}
+          </div>
+        )
+      }
+
+      {
+        posts.totalPages > 1 && (
+          <nav class="mt-20 flex items-center justify-center gap-6 border-t border-gray-100 pt-10" aria-label="Pagination">
+            {posts.hasPrevPage && (
+              <a
+                href={buildPageHref(page - 1)}
+                rel="prev"
+                class="rounded-xl border border-gray-200 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-gray-600 transition-all duration-300 hover:border-general-red hover:text-general-red"
+              >
+                Previous
+              </a>
+            )}
+            <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
+              Page {posts.page} of {posts.totalPages}
+            </span>
+            {posts.hasNextPage && (
+              <a
+                href={buildPageHref(page + 1)}
+                rel="next"
+                class="rounded-xl border border-gray-200 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-gray-600 transition-all duration-300 hover:border-general-red hover:text-general-red"
+              >
+                Next
+              </a>
+            )}
+          </nav>
+        )
+      }
+    </div>
+  </section>
+</Base>

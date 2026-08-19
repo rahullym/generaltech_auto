@@ -1,0 +1,208 @@
+@import 'tailwindcss';
+
+/* Design tokens are the General Tech brand set, identical to the generaltech
+   marketing site: red #ed1c25 on black/white, Manrope for everything, DM Sans
+   only for true italics (Manrope ships no italic face). */
+@theme {
+  --color-general-red: #ed1c25;
+  --color-general-black: #000000;
+  --color-general-white: #ffffff;
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+    /* Disable browser scroll anchoring. The sticky section headers animate
+       their height when they stick/un-stick; on scroll-up the re-expand made
+       the browser shift scrollTop to keep content anchored, which re-crossed
+       the sticky IntersectionObserver trigger and oscillated the heading
+       ("shaking"). Turning anchoring off breaks that feedback loop. */
+    overflow-anchor: none;
+  }
+  body {
+    @apply bg-white text-[#1a1a1a] font-sans antialiased overflow-x-hidden;
+    overflow-anchor: none;
+  }
+
+  /* Improve default contrast for light text */
+  .text-gray-400 {
+    @apply text-gray-500;
+  }
+  .text-gray-500 {
+    @apply text-gray-600;
+  }
+  .font-light {
+    @apply font-normal;
+  }
+}
+
+/* Italic accent words use DM Sans — Manrope (the body font) has no true
+   italic, so its italics would be synthetic/slanted. Unlayered so it wins. */
+.italic {
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Top loading bar shown while a View Transition navigation fetches the next
+   page. width/opacity are driven by the script in Base.astro. */
+#nav-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  opacity: 0;
+  background: linear-gradient(90deg, #ed1c25, #ff5a5f);
+  box-shadow: 0 0 8px rgba(237, 28, 37, 0.6);
+  z-index: 9999;
+  pointer-events: none;
+  will-change: width, opacity;
+}
+
+/* Dark full-bleed hero — shared by the Hero block and PageHero. The reveal is
+   driven by the `.hero-active` class Base.astro adds just after load, so the
+   heading lands with the slow background zoom rather than on scroll. */
+.hero-reveal {
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-image {
+  transition: transform 15s ease-out;
+}
+/* Keep the title + red subtitle legible over busy background photos. */
+.hero-heading {
+  text-shadow:
+    0 2px 24px rgba(0, 0, 0, 0.55),
+    0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-active .hero-reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.hero-active .hero-image {
+  transform: scale(1.05);
+}
+
+/* Rich text output from lib/lexical.ts */
+.prose-content {
+  line-height: 1.75;
+  color: #374151;
+  font-size: 1.0625rem;
+}
+.prose-content > * + * {
+  margin-top: 1.25em;
+}
+.prose-content h2,
+.prose-content h3,
+.prose-content h4 {
+  color: #000;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-top: 2em;
+  scroll-margin-top: 150px;
+}
+.prose-content h2 {
+  /* Section titles inside long-form copy carry the display scale the rest of
+     the site uses, one step down from a block heading. */
+  font-size: clamp(2.25rem, 3.4vw, 3.25rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-top: 0;
+}
+.prose-content > h2 + * {
+  margin-top: 2rem;
+}
+.prose-content h3 {
+  font-size: 1.45rem;
+}
+.prose-content h4 {
+  font-size: 1.15rem;
+}
+.prose-content a {
+  color: #ed1c25;
+  text-underline-offset: 3px;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.prose-content a:hover {
+  color: #000;
+}
+.prose-content strong {
+  color: #000;
+  font-weight: 700;
+}
+.prose-content ul,
+.prose-content ol {
+  padding-left: 1.5em;
+}
+.prose-content ul {
+  list-style: disc;
+}
+.prose-content ol {
+  list-style: decimal;
+}
+.prose-content li + li {
+  margin-top: 0.4em;
+}
+.prose-content li::marker {
+  color: #ed1c25;
+}
+.prose-content ul.list-check {
+  list-style: none;
+  padding-left: 0;
+}
+.prose-content blockquote {
+  border-left: 2px solid #ed1c25;
+  padding-left: 1.75em;
+  color: #4b5563;
+  font-style: italic;
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+.prose-content code {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.25rem;
+  padding: 0.1em 0.35em;
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: #000;
+}
+.prose-content pre {
+  background: #0a0a0a;
+  color: #f3f4f6;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+.prose-content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.prose-content hr {
+  border: 0;
+  border-top: 1px solid #f3f4f6;
+}
+.prose-content figure img {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+.prose-content figcaption {
+  margin-top: 0.6em;
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+}
+.prose-content .text-center {
+  text-align: center;
+}
+.prose-content .text-right {
+  text-align: right;
+}
+.prose-content .text-justify {
+  text-align: justify;
+}

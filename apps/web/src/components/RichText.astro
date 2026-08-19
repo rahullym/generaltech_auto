@@ -1,0 +1,14 @@
+---
+import { lexicalToHtml } from '@/lib/lexical'
+import type { RichTextValue } from '@/lib/types'
+
+interface Props {
+  value?: RichTextValue | null
+  class?: string
+}
+
+const { value, class: className = '' } = Astro.props
+const html = lexicalToHtml(value)
+---
+
+{html && <div class:list={['prose-content', className]} set:html={html} />}

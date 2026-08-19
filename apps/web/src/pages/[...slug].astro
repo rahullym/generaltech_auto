@@ -1,0 +1,38 @@
+---
+import BlockRenderer from '@/components/BlockRenderer.astro'
+import Base from '@/layouts/Base.astro'
+import { getPage } from '@/lib/payload'
+import { isPreview } from '@/lib/preview'
+
+export const prerender = false
+
+const { slug } = Astro.params
+const draft = isPreview(Astro.cookies)
+
+// `home` is served at `/`; refuse to also serve it at `/home`.
+if (!slug || slug === 'home') {
+  return Astro.redirect('/', 301)
+}
+
+const page = await getPage(slug, { draft })
+
+if (!page) {
+  return new Response(null, { status: 404, statusText: 'Not found' })
+}
+
+// The nav is fixed; a page that opens with a dark hero paints underneath it and
+// pads itself, so only the other layouts need a spacer.
+const first = page.layout?.[0]
+const heroFirst = first?.blockType === 'hero' && first?.variant !== 'split'
+---
+
+<Base
+  title={page.meta?.title ?? page.title}
+  exactTitle={Boolean(page.meta?.title)}
+  description={page.meta?.description}
+  image={page.meta?.image}
+  isDraft={draft && page._status === 'draft'}
+  heroFirst={heroFirst}
+>
+  <BlockRenderer blocks={page.layout} />
+</Base>

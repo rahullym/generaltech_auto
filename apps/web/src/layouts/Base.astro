@@ -1,0 +1,314 @@
+---
+import { ClientRouter } from 'astro:transitions'
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
+import SEO from '@/components/SEO.astro'
+import { getSiteChrome } from '@/lib/site'
+import type { Media } from '@/lib/types'
+import '@/styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+  image?: Media | string | null
+  type?: 'website' | 'article'
+  publishedAt?: string
+  noindex?: boolean
+  /** Draft previews must never be indexed and skip the shared cache. */
+  isDraft?: boolean
+  /**
+   * The nav is fixed, so pages whose first section is a dark full-bleed hero
+   * paint underneath it and pad themselves. Every other page needs a spacer.
+   */
+  heroFirst?: boolean
+  /**
+   * An SEO meta title written by an editor is the complete <title>; appending
+   * the site name would change the approved copy. Set this when `title` came
+   * from a document's `meta.title`.
+   */
+  exactTitle?: boolean
+}
+
+const {
+  title,
+  description,
+  image,
+  type = 'website',
+  publishedAt,
+  noindex,
+  isDraft = false,
+  heroFirst = false,
+  exactTitle = false,
+} = Astro.props
+
+const { header, footer, settings } = await getSiteChrome()
+
+const pageTitle = title
+  ? exactTitle
+    ? title
+    : `${title} | ${settings.siteName}`
+  : settings.siteName
+const pageDescription = description || settings.defaultSeo?.description || settings.tagline
+const pageImage = image ?? settings.defaultSeo?.image ?? null
+
+// wa.me needs a bare international number — strip spaces, plus and punctuation.
+const whatsapp = settings.contact?.phone?.replace(/\D/g, '')
+
+// SSR: let the CDN serve published pages while keeping drafts private.
+Astro.response.headers.set(
+  'Cache-Control',
+  isDraft ? 'private, no-store' : 'public, max-age=0, s-maxage=60, stale-while-revalidate=600',
+)
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={settings.siteName} href="/rss.xml" />
+    {
+      settings.favicon && typeof settings.favicon === 'object' && (
+        <link rel="icon" href={settings.favicon.url} />
+      )
+    }
+    <SEO
+      title={pageTitle}
+      description={pageDescription}
+      image={pageImage}
+      type={type}
+      publishedAt={publishedAt}
+      noindex={noindex || isDraft}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Sans:ital,wght@1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <ClientRouter />
+    <slot name="head" />
+  </head>
+
+  <body
+    class="flex min-h-screen flex-col bg-white text-general-black selection:bg-general-red selection:text-white"
+  >
+    {/* Top loading bar for view-transition navigations. ClientRouter fetches the
+        destination page before swapping with no built-in feedback, so on slow
+        mobile connections a tapped link looked dead for seconds. transition:persist
+        keeps this same node across swaps so its fill animation isn't interrupted. */}
+    <div id="nav-progress" transition:persist aria-hidden="true"></div>
+
+    {
+      isDraft && (
+        <div class="bg-general-red px-6 py-2 text-center text-[12px] font-bold uppercase tracking-[0.2em] text-white">
+          Draft preview &mdash; this content is not published.
+        </div>
+      )
+    }
+
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-xl focus:bg-general-red focus:px-4 focus:py-2 focus:text-[13px] focus:font-bold focus:uppercase focus:tracking-[0.1em] focus:text-white"
+    >
+      Skip to content
+    </a>
+
+    <Header header={header} settings={settings} />
+
+    <main id="main" class:list={['flex-1', !heroFirst && 'pt-[84px] md:pt-[128px]']}>
+      <slot />
+    </main>
+
+    <Footer footer={footer} settings={settings} />
+
+    {
+      whatsapp && (
+        <a
+          href={`https://wa.me/${whatsapp}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with us on WhatsApp"
+          class="fixed bottom-5 right-5 z-40 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_8px_24px_rgba(37,211,102,0.45)] hover:scale-110 active:scale-95 transition-transform duration-300"
+        >
+          <span class="absolute inline-flex w-full h-full rounded-full bg-[#25D366] opacity-60 animate-ping" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="relative"
+            aria-hidden="true"
+          >
+            <path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.512 5.26l-.999 3.648 3.736-.999zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+          </svg>
+        </a>
+      )
+    }
+
+    {/* Global scroll-reveal — runs on first load and after every View Transition
+        navigation, so component scripts that only run once never leave content
+        stuck at opacity:0. */}
+    <script>
+      const REVEAL_SELECTOR = '.reveal-item'
+
+      function initReveal() {
+        const items = document.querySelectorAll(REVEAL_SELECTOR)
+        if (!items.length) return
+
+        const show = (el: Element) => {
+          el.classList.remove('opacity-0', 'translate-y-4', 'translate-y-8', 'translate-y-12', '-translate-x-12', 'translate-x-12')
+          el.classList.add('opacity-100', 'translate-y-0', 'translate-x-0')
+        }
+
+        if (!('IntersectionObserver' in window)) {
+          items.forEach(show)
+          return
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                show(entry.target)
+                observer.unobserve(entry.target)
+              }
+            })
+          },
+          { threshold: 0.08, rootMargin: '0px 0px -5% 0px' },
+        )
+
+        items.forEach((el) => {
+          const item = el as HTMLElement
+          if (!item.style.transition) {
+            item.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out'
+          }
+          observer.observe(item)
+        })
+
+        // Safety net: reveal anything still hidden after 2.5s.
+        window.setTimeout(() => {
+          document.querySelectorAll(REVEAL_SELECTOR).forEach((el) => {
+            if (el.classList.contains('opacity-0')) show(el)
+          })
+        }, 2500)
+      }
+
+      // Desktop-only sticky section headers: once the sentinel scrolls past, the
+      // header pins under the nav, goes full-bleed and collapses to its title.
+      function initStickyHeaders() {
+        if (!window.matchMedia('(min-width: 768px)').matches) return
+
+        document.querySelectorAll('.sticky-sentinel').forEach((sentinel) => {
+          const section = sentinel.closest('section') || sentinel.parentElement
+          const header = section?.querySelector<HTMLElement>('.section-sticky-header')
+          if (!header) return
+
+          const title = section?.querySelector<HTMLElement>('.sticky-title')
+          const accent = section?.querySelector<HTMLElement>('.sticky-accent')
+          const desc = section?.querySelector<HTMLElement>('.sticky-desc')
+
+          const stickyObs = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                  header.style.paddingTop = '12px'
+                  header.style.paddingBottom = '12px'
+                  header.style.marginLeft = 'calc(-50vw + 50%)'
+                  header.style.marginRight = 'calc(-50vw + 50%)'
+                  header.style.paddingLeft = 'calc(50vw - 50% + 24px)'
+                  header.style.paddingRight = 'calc(50vw - 50% + 24px)'
+                  header.style.borderBottom = '1px solid rgba(0,0,0,0.06)'
+                  if (title) title.style.fontSize = '28px'
+                  if (accent) {
+                    accent.style.maxHeight = '0px'
+                    accent.style.marginBottom = '0'
+                    accent.style.opacity = '0'
+                  }
+                  if (desc) {
+                    desc.style.maxHeight = '0px'
+                    desc.style.opacity = '0'
+                    desc.style.marginTop = '0'
+                  }
+                } else {
+                  header.style.paddingTop = ''
+                  header.style.paddingBottom = ''
+                  header.style.marginLeft = ''
+                  header.style.marginRight = ''
+                  header.style.paddingLeft = ''
+                  header.style.paddingRight = ''
+                  header.style.borderBottom = ''
+                  if (title) title.style.fontSize = ''
+                  if (accent) {
+                    accent.style.maxHeight = '40px'
+                    accent.style.marginBottom = ''
+                    accent.style.opacity = ''
+                  }
+                  if (desc) {
+                    desc.style.maxHeight = '32rem'
+                    desc.style.opacity = ''
+                    desc.style.marginTop = ''
+                  }
+                }
+              })
+            },
+            { threshold: 0, rootMargin: '-73px 0px 0px 0px' },
+          )
+
+          stickyObs.observe(sentinel)
+        })
+      }
+
+      function init() {
+        initReveal()
+        initStickyHeaders()
+        // Let the hero paint first, then trigger its entrance + background zoom.
+        setTimeout(() => {
+          document
+            .querySelectorAll('.page-hero-section')
+            .forEach((el) => el.classList.add('hero-active'))
+        }, 100)
+      }
+
+      document.addEventListener('astro:page-load', init)
+      document.addEventListener('DOMContentLoaded', init)
+    </script>
+
+    {/* Drive the #nav-progress bar off the View Transition lifecycle. This module
+        runs once; its listeners live on `document`, which survives navigations. */}
+    <script>
+      const bar = () => document.getElementById('nav-progress')
+      let resetTimer: ReturnType<typeof setTimeout>
+
+      function startBar() {
+        const el = bar()
+        if (!el) return
+        clearTimeout(resetTimer)
+        // Snap to the start with no transition, then creep toward 90% so the user
+        // sees instant motion on tap. It never reaches 100% until the page loads.
+        el.style.transition = 'none'
+        el.style.opacity = '1'
+        el.style.width = '0%'
+        void el.offsetWidth // force reflow so the next change animates
+        el.style.transition = 'width 8s cubic-bezier(0.1, 0.85, 0.25, 1)'
+        el.style.width = '90%'
+      }
+
+      function finishBar() {
+        const el = bar()
+        if (!el) return
+        el.style.transition = 'width 0.2s ease-out, opacity 0.35s ease-out 0.2s'
+        el.style.width = '100%'
+        el.style.opacity = '0'
+        resetTimer = setTimeout(() => {
+          el.style.width = '0%'
+        }, 600)
+      }
+
+      document.addEventListener('astro:before-preparation', startBar)
+      document.addEventListener('astro:page-load', finishBar)
+    </script>
+  </body>
+</html>
