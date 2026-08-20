@@ -44,7 +44,7 @@ const copyClass = [lede && 'prose-lede', numbered && 'prose-beats'].filter(Boole
 
 {
   layout === 'split' ? (
-    <section class="border-t border-gray-100 bg-[#FAFAFA] px-6 md:px-12 py-20 lg:py-28">
+    <section class="border-t border-gray-100 bg-[#FAFAFA] px-6 md:px-12 py-24 lg:py-32">
       <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-12 xl:gap-24">
         <div class="lg:col-span-5">
           <div class="opacity-0 translate-y-8 reveal-item lg:sticky lg:top-40">
@@ -79,7 +79,7 @@ const copyClass = [lede && 'prose-lede', numbered && 'prose-beats'].filter(Boole
       </div>
     </section>
   ) : editorial ? (
-    <section class="bg-white px-6 md:px-12 py-16 lg:py-24">
+    <section class="bg-white px-6 md:px-12 py-24 lg:py-32">
       <div class="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 lg:grid-cols-12 xl:gap-20">
         {/* Imagery — sticky on desktop so the copy scrolls against it. */}
         {images.length > 0 && (

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T02:48:38.324Z",
+  "generatedAt": "2026-08-20T06:09:46.540Z",
   "collections": {
     "pages": [
       {
@@ -97,7 +97,7 @@
         "slug": "home",
         "layout": [
           {
-            "id": "6a8664ab91cf273067bc0497",
+            "id": "6a869a27aebaed7b27aec246",
             "variant": "banner",
             "eyebrow": "Industrial Automation Engineering",
             "heading": "Industrial Automation Engineering Company *in UAE*",
@@ -147,7 +147,7 @@
             "blockName": null,
             "images": [
               {
-                "id": "6a8664ad02e62b307e53bc87",
+                "id": "6a869a2ad7c4b97b5b968cf5",
                 "image": {
                   "id": 3,
                   "alt": "Industrial plant floor with automated production line",
@@ -192,7 +192,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc88",
+                "id": "6a869a2ad7c4b97b5b968cf6",
                 "image": {
                   "id": 71,
                   "alt": "Connected plant data visualised over a factory floor",
@@ -237,7 +237,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc89",
+                "id": "6a869a2ad7c4b97b5b968cf7",
                 "image": {
                   "id": 5,
                   "alt": "Distributed control system operator workstation",
@@ -284,7 +284,7 @@
             ],
             "marqueeLogos": [
               {
-                "id": "6a8664ad02e62b307e53bc8a",
+                "id": "6a869a2ad7c4b97b5b968cf8",
                 "image": {
                   "id": 6,
                   "alt": "3M logo",
@@ -329,7 +329,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc8b",
+                "id": "6a869a2ad7c4b97b5b968cf9",
                 "image": {
                   "id": 7,
                   "alt": "Anybus logo",
@@ -374,7 +374,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc8c",
+                "id": "6a869a2ad7c4b97b5b968cfa",
                 "image": {
                   "id": 8,
                   "alt": "ASO Safety logo",
@@ -419,7 +419,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc8d",
+                "id": "6a869a2ad7c4b97b5b968cfb",
                 "image": {
                   "id": 9,
                   "alt": "BIT logo",
@@ -464,7 +464,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc8e",
+                "id": "6a869a2ad7c4b97b5b968cfc",
                 "image": {
                   "id": 10,
                   "alt": "Contaclip logo",
@@ -509,7 +509,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc8f",
+                "id": "6a869a2ad7c4b97b5b968cfd",
                 "image": {
                   "id": 11,
                   "alt": "Control Techniques logo",
@@ -554,7 +554,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc90",
+                "id": "6a869a2ad7c4b97b5b968cfe",
                 "image": {
                   "id": 12,
                   "alt": "Datalogic logo",
@@ -599,7 +599,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc91",
+                "id": "6a869a2ad7c4b97b5b968cff",
                 "image": {
                   "id": 13,
                   "alt": "Deflesko logo",
@@ -644,7 +644,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc92",
+                "id": "6a869a2ad7c4b97b5b968d00",
                 "image": {
                   "id": 14,
                   "alt": "Dremel logo",
@@ -689,7 +689,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc93",
+                "id": "6a869a2ad7c4b97b5b968d01",
                 "image": {
                   "id": 15,
                   "alt": "Eaton logo",
@@ -734,7 +734,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc94",
+                "id": "6a869a2ad7c4b97b5b968d02",
                 "image": {
                   "id": 16,
                   "alt": "EH logo",
@@ -779,7 +779,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc95",
+                "id": "6a869a2ad7c4b97b5b968d03",
                 "image": {
                   "id": 17,
                   "alt": "Eickmann logo",
@@ -824,7 +824,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc96",
+                "id": "6a869a2ad7c4b97b5b968d04",
                 "image": {
                   "id": 18,
                   "alt": "Electro Task logo",
@@ -869,7 +869,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc97",
+                "id": "6a869a2ad7c4b97b5b968d05",
                 "image": {
                   "id": 19,
                   "alt": "Equflow logo",
@@ -914,7 +914,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc98",
+                "id": "6a869a2ad7c4b97b5b968d06",
                 "image": {
                   "id": 20,
                   "alt": "ETA logo",
@@ -959,7 +959,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc99",
+                "id": "6a869a2ad7c4b97b5b968d07",
                 "image": {
                   "id": 21,
                   "alt": "Fibox logo",
@@ -1004,7 +1004,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc9a",
+                "id": "6a869a2ad7c4b97b5b968d08",
                 "image": {
                   "id": 22,
                   "alt": "GF logo",
@@ -1049,7 +1049,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc9b",
+                "id": "6a869a2ad7c4b97b5b968d09",
                 "image": {
                   "id": 23,
                   "alt": "Harting logo",
@@ -1094,7 +1094,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc9c",
+                "id": "6a869a2ad7c4b97b5b968d0a",
                 "image": {
                   "id": 24,
                   "alt": "Helmholz logo",
@@ -1139,7 +1139,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc9d",
+                "id": "6a869a2ad7c4b97b5b968d0b",
                 "image": {
                   "id": 25,
                   "alt": "Hongfa logo",
@@ -1184,7 +1184,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc9e",
+                "id": "6a869a2ad7c4b97b5b968d0c",
                 "image": {
                   "id": 26,
                   "alt": "Honsberg logo",
@@ -1229,7 +1229,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bc9f",
+                "id": "6a869a2ad7c4b97b5b968d0d",
                 "image": {
                   "id": 27,
                   "alt": "IFM logo",
@@ -1274,7 +1274,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca0",
+                "id": "6a869a2ad7c4b97b5b968d0e",
                 "image": {
                   "id": 28,
                   "alt": "Isotech logo",
@@ -1319,7 +1319,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca1",
+                "id": "6a869a2ad7c4b97b5b968d0f",
                 "image": {
                   "id": 29,
                   "alt": "Ixon logo",
@@ -1364,7 +1364,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca2",
+                "id": "6a869a2ad7c4b97b5b968d10",
                 "image": {
                   "id": 30,
                   "alt": "Karlengoffer logo",
@@ -1409,7 +1409,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca3",
+                "id": "6a869a2ad7c4b97b5b968d11",
                 "image": {
                   "id": 31,
                   "alt": "Knipex logo",
@@ -1454,7 +1454,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca4",
+                "id": "6a869a2ad7c4b97b5b968d12",
                 "image": {
                   "id": 32,
                   "alt": "Lapp logo",
@@ -1499,7 +1499,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca5",
+                "id": "6a869a2ad7c4b97b5b968d13",
                 "image": {
                   "id": 33,
                   "alt": "Lascar logo",
@@ -1544,7 +1544,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca6",
+                "id": "6a869a2ad7c4b97b5b968d14",
                 "image": {
                   "id": 34,
                   "alt": "Ledwork logo",
@@ -1589,7 +1589,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca7",
+                "id": "6a869a2ad7c4b97b5b968d15",
                 "image": {
                   "id": 35,
                   "alt": "Leuze logo",
@@ -1634,7 +1634,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca8",
+                "id": "6a869a2ad7c4b97b5b968d16",
                 "image": {
                   "id": 36,
                   "alt": "Lovato logo",
@@ -1679,7 +1679,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bca9",
+                "id": "6a869a2ad7c4b97b5b968d17",
                 "image": {
                   "id": 37,
                   "alt": "Makita logo",
@@ -1724,7 +1724,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcaa",
+                "id": "6a869a2ad7c4b97b5b968d18",
                 "image": {
                   "id": 38,
                   "alt": "Martens logo",
@@ -1769,7 +1769,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcab",
+                "id": "6a869a2ad7c4b97b5b968d19",
                 "image": {
                   "id": 39,
                   "alt": "Metri logo",
@@ -1814,7 +1814,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcac",
+                "id": "6a869a2ad7c4b97b5b968d1a",
                 "image": {
                   "id": 40,
                   "alt": "Micro Detectors logo",
@@ -1859,7 +1859,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcad",
+                "id": "6a869a2ad7c4b97b5b968d1b",
                 "image": {
                   "id": 41,
                   "alt": "Microsonic logo",
@@ -1904,7 +1904,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcae",
+                "id": "6a869a2ad7c4b97b5b968d1c",
                 "image": {
                   "id": 42,
                   "alt": "Murplastic logo",
@@ -1949,7 +1949,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcaf",
+                "id": "6a869a2ad7c4b97b5b968d1d",
                 "image": {
                   "id": 43,
                   "alt": "Murr logo",
@@ -1994,7 +1994,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb0",
+                "id": "6a869a2ad7c4b97b5b968d1e",
                 "image": {
                   "id": 44,
                   "alt": "Novus logo",
@@ -2039,7 +2039,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb1",
+                "id": "6a869a2ad7c4b97b5b968d1f",
                 "image": {
                   "id": 45,
                   "alt": "Patlite logo",
@@ -2084,7 +2084,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb2",
+                "id": "6a869a2ad7c4b97b5b968d20",
                 "image": {
                   "id": 46,
                   "alt": "Pflish logo",
@@ -2129,7 +2129,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb3",
+                "id": "6a869a2ad7c4b97b5b968d21",
                 "image": {
                   "id": 47,
                   "alt": "Phoenix logo",
@@ -2174,7 +2174,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb4",
+                "id": "6a869a2ad7c4b97b5b968d22",
                 "image": {
                   "id": 48,
                   "alt": "Pilz logo",
@@ -2219,7 +2219,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb5",
+                "id": "6a869a2ad7c4b97b5b968d23",
                 "image": {
                   "id": 49,
                   "alt": "PMD logo",
@@ -2264,7 +2264,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb6",
+                "id": "6a869a2ad7c4b97b5b968d24",
                 "image": {
                   "id": 50,
                   "alt": "Procom logo",
@@ -2309,7 +2309,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb7",
+                "id": "6a869a2ad7c4b97b5b968d25",
                 "image": {
                   "id": 51,
                   "alt": "Raychem logo",
@@ -2354,7 +2354,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb8",
+                "id": "6a869a2ad7c4b97b5b968d26",
                 "image": {
                   "id": 52,
                   "alt": "Reltech logo",
@@ -2399,7 +2399,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcb9",
+                "id": "6a869a2ad7c4b97b5b968d27",
                 "image": {
                   "id": 53,
                   "alt": "Rittal logo",
@@ -2444,7 +2444,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcba",
+                "id": "6a869a2ad7c4b97b5b968d28",
                 "image": {
                   "id": 54,
                   "alt": "Sceider logo",
@@ -2489,7 +2489,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcbb",
+                "id": "6a869a2ad7c4b97b5b968d29",
                 "image": {
                   "id": 55,
                   "alt": "Seimens logo",
@@ -2534,7 +2534,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcbc",
+                "id": "6a869a2ad7c4b97b5b968d2a",
                 "image": {
                   "id": 56,
                   "alt": "Selec logo",
@@ -2579,7 +2579,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcbd",
+                "id": "6a869a2ad7c4b97b5b968d2b",
                 "image": {
                   "id": 57,
                   "alt": "SSP logo",
@@ -2624,7 +2624,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcbe",
+                "id": "6a869a2ad7c4b97b5b968d2c",
                 "image": {
                   "id": 58,
                   "alt": "Stall Instruments logo",
@@ -2669,7 +2669,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcbf",
+                "id": "6a869a2ad7c4b97b5b968d2d",
                 "image": {
                   "id": 59,
                   "alt": "Tele logo",
@@ -2714,7 +2714,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc0",
+                "id": "6a869a2ad7c4b97b5b968d2e",
                 "image": {
                   "id": 60,
                   "alt": "Terz logo",
@@ -2759,7 +2759,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc1",
+                "id": "6a869a2ad7c4b97b5b968d2f",
                 "image": {
                   "id": 61,
                   "alt": "Titec logo",
@@ -2804,7 +2804,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc2",
+                "id": "6a869a2ad7c4b97b5b968d30",
                 "image": {
                   "id": 62,
                   "alt": "Trellerborg logo",
@@ -2849,7 +2849,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc3",
+                "id": "6a869a2ad7c4b97b5b968d31",
                 "image": {
                   "id": 63,
                   "alt": "Vega logo",
@@ -2894,7 +2894,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc4",
+                "id": "6a869a2ad7c4b97b5b968d32",
                 "image": {
                   "id": 64,
                   "alt": "Wago logo",
@@ -2939,7 +2939,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc5",
+                "id": "6a869a2ad7c4b97b5b968d33",
                 "image": {
                   "id": 65,
                   "alt": "Weidmuller logo",
@@ -2984,7 +2984,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc6",
+                "id": "6a869a2ad7c4b97b5b968d34",
                 "image": {
                   "id": 66,
                   "alt": "Wera logo",
@@ -3029,7 +3029,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc7",
+                "id": "6a869a2ad7c4b97b5b968d35",
                 "image": {
                   "id": 67,
                   "alt": "Wieland logo",
@@ -3074,7 +3074,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc8",
+                "id": "6a869a2ad7c4b97b5b968d36",
                 "image": {
                   "id": 68,
                   "alt": "Wika logo",
@@ -3119,7 +3119,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcc9",
+                "id": "6a869a2ad7c4b97b5b968d37",
                 "image": {
                   "id": 69,
                   "alt": "Yamato logo",
@@ -3164,7 +3164,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcca",
+                "id": "6a869a2ad7c4b97b5b968d38",
                 "image": {
                   "id": 70,
                   "alt": "Realwear logo",
@@ -3211,7 +3211,7 @@
             ],
             "actions": [
               {
-                "id": "6a8664ad02e62b307e53bccb",
+                "id": "6a869a2ad7c4b97b5b968d39",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
@@ -3221,7 +3221,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bccc",
+                "id": "6a869a2ad7c4b97b5b968d3a",
                 "link": {
                   "type": "custom",
                   "label": "Get A Free Quote",
@@ -3234,7 +3234,7 @@
             "blockType": "hero"
           },
           {
-            "id": "6a8664ab91cf273067bc0498",
+            "id": "6a869a27aebaed7b27aec247",
             "layout": "editorial",
             "width": "prose",
             "eyebrow": null,
@@ -3293,7 +3293,7 @@
             "blockName": null,
             "media": [
               {
-                "id": "6a8664ad02e62b307e53bccd",
+                "id": "6a869a2ad7c4b97b5b968d3b",
                 "image": {
                   "id": 76,
                   "alt": "Engineer thermal-imaging a live control panel on site",
@@ -3338,7 +3338,7 @@
                 }
               },
               {
-                "id": "6a8664ad02e62b307e53bcce",
+                "id": "6a869a2ad7c4b97b5b968d3c",
                 "image": {
                   "id": 77,
                   "alt": "Technician soldering a component onto an industrial drive control board",
@@ -3386,15 +3386,15 @@
             "blockType": "richText"
           },
           {
-            "id": "6a8664ab91cf273067bc049a",
+            "id": "6a869a27aebaed7b27aec249",
             "variant": "dark",
-            "eyebrow": null,
+            "eyebrow": "Free site assessment",
             "heading": "Talk to an automation engineer about *your plant*",
             "body": null,
             "blockName": null,
             "actions": [
               {
-                "id": "6a8664ab91cf273067bc0499",
+                "id": "6a869a27aebaed7b27aec248",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
@@ -3407,7 +3407,7 @@
             "blockType": "cta"
           },
           {
-            "id": "6a8664ab91cf273067bc049b",
+            "id": "6a869a27aebaed7b27aec24a",
             "layout": "split",
             "width": "prose",
             "eyebrow": "Company overview",
@@ -3504,7 +3504,7 @@
             "blockType": "richText"
           },
           {
-            "id": "6a8664ab91cf273067bc04a4",
+            "id": "6a869a27aebaed7b27aec253",
             "heading": "Our Automation Engineering *Services*",
             "intro": "Our engineers are trained across the major automation platforms used in UAE industry — Siemens SIMATIC and TIA Portal, Allen-Bradley ControlLogix and CompactLogix, Schneider Electric Modicon, Mitsubishi FX and iQ-series controllers, ABB drives and control systems, and Emerson DeltaV for distributed control environments. Working across this range means we can support a plant exactly as it exists today, rather than requiring a client to standardize on one vendor before we can help.",
             "display": "carousel",
@@ -3512,7 +3512,7 @@
             "blockName": null,
             "features": [
               {
-                "id": "6a8664ab91cf273067bc049c",
+                "id": "6a869a27aebaed7b27aec24b",
                 "iconName": "cpu",
                 "icon": null,
                 "title": "PLC Programming and Control Logic Design",
@@ -3525,7 +3525,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc049d",
+                "id": "6a869a27aebaed7b27aec24c",
                 "iconName": "dashboard",
                 "icon": null,
                 "title": "Supervisory Control Architecture and SCADA Development",
@@ -3538,7 +3538,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc049e",
+                "id": "6a869a27aebaed7b27aec24d",
                 "iconName": "screen",
                 "icon": null,
                 "title": "HMI Development",
@@ -3551,7 +3551,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc049f",
+                "id": "6a869a27aebaed7b27aec24e",
                 "iconName": "network",
                 "icon": null,
                 "title": "DCS Engineering",
@@ -3564,7 +3564,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04a0",
+                "id": "6a869a27aebaed7b27aec24f",
                 "iconName": "signal",
                 "icon": null,
                 "title": "Connected Automation and Industry 4.0 Engineering",
@@ -3577,7 +3577,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04a1",
+                "id": "6a869a27aebaed7b27aec250",
                 "iconName": "cabinet",
                 "icon": null,
                 "title": "Control Panel Design and Manufacturing",
@@ -3590,7 +3590,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04a2",
+                "id": "6a869a27aebaed7b27aec251",
                 "iconName": "cog",
                 "icon": null,
                 "title": "Process and Machine Automation Engineering",
@@ -3603,7 +3603,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04a3",
+                "id": "6a869a27aebaed7b27aec252",
                 "iconName": "refresh",
                 "icon": null,
                 "title": "Automation Retrofit and Annual Maintenance Contracts (AMC)",
@@ -3619,7 +3619,7 @@
             "blockType": "featureGrid"
           },
           {
-            "id": "6a8664ab91cf273067bc04ab",
+            "id": "6a869a27aebaed7b27aec25a",
             "eyebrow": "Who we work with",
             "heading": "Industries We *Serve*",
             "intro": "We support automation engineering projects across oil and gas, water and wastewater treatment, food and beverage manufacturing, pharmaceuticals, power generation, and general industrial manufacturing throughout the UAE.",
@@ -3627,37 +3627,37 @@
             "blockName": null,
             "sectors": [
               {
-                "id": "6a8664ab91cf273067bc04a5",
+                "id": "6a869a27aebaed7b27aec254",
                 "name": "Oil and Gas",
                 "iconName": "oil",
                 "description": "Oil and gas projects typically involve control panel upgrades and safety-documented instrumentation work for upstream and downstream facilities, where reliability documentation matters as much as the engineering itself."
               },
               {
-                "id": "6a8664ab91cf273067bc04a6",
+                "id": "6a869a27aebaed7b27aec255",
                 "name": "Water and Wastewater Treatment",
                 "iconName": "water",
                 "description": "Water and wastewater clients need SCADA-linked pump and process control systems that run unattended for long stretches but alert operators the moment something needs attention."
               },
               {
-                "id": "6a8664ab91cf273067bc04a7",
+                "id": "6a869a27aebaed7b27aec256",
                 "name": "Food and Beverage Manufacturing",
                 "iconName": "beverage",
                 "description": "Food and beverage clients need fast changeover logic and hygienic panel builds with traceability data built into the control system from day one."
               },
               {
-                "id": "6a8664ab91cf273067bc04a8",
+                "id": "6a869a27aebaed7b27aec257",
                 "name": "Pharmaceuticals",
                 "iconName": "pharma",
                 "description": "Pharmaceutical facilities require validated, audit-ready automation that can stand up to inspection, where our instrumentation-calibration background becomes a genuine advantage rather than a nice-to-have."
               },
               {
-                "id": "6a8664ab91cf273067bc04a9",
+                "id": "6a869a27aebaed7b27aec258",
                 "name": "Power Generation and Utilities",
                 "iconName": "power",
                 "description": "Power and utility clients rely on us for panel design, retrofit of aging switchgear-linked automation, and remote monitoring that reduces truck rolls to distant sites across the Emirates."
               },
               {
-                "id": "6a8664ab91cf273067bc04aa",
+                "id": "6a869a27aebaed7b27aec259",
                 "name": "General Industrial Manufacturing",
                 "iconName": "factory",
                 "description": "General manufacturers come to us for logic rewrites, line integration, and panel work that brings equipment from different eras back under one coherent, documented control system."
@@ -3666,7 +3666,7 @@
             "blockType": "industries"
           },
           {
-            "id": "6a8664ab91cf273067bc04b0",
+            "id": "6a869a27aebaed7b27aec25f",
             "eyebrow": "Where we work",
             "heading": "Service Coverage Across the *UAE*",
             "tone": "dark",
@@ -3721,22 +3721,22 @@
             "blockName": null,
             "areas": [
               {
-                "id": "6a8664ab91cf273067bc04ac",
+                "id": "6a869a27aebaed7b27aec25b",
                 "name": "Dubai",
                 "note": "Jebel Ali, Al Quoz and Dubai Investment Park industrial areas."
               },
               {
-                "id": "6a8664ab91cf273067bc04ad",
+                "id": "6a869a27aebaed7b27aec25c",
                 "name": "Sharjah",
                 "note": "The industrial areas and the Hamriyah free zone."
               },
               {
-                "id": "6a8664ab91cf273067bc04ae",
+                "id": "6a869a27aebaed7b27aec25d",
                 "name": "Abu Dhabi",
                 "note": "Capital-region plants and Western Region facilities."
               },
               {
-                "id": "6a8664ab91cf273067bc04af",
+                "id": "6a869a27aebaed7b27aec25e",
                 "name": "Northern Emirates",
                 "note": "Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah."
               }
@@ -3744,7 +3744,7 @@
             "blockType": "coverage"
           },
           {
-            "id": "6a8664ab91cf273067bc04b7",
+            "id": "6a869a27aebaed7b27aec266",
             "eyebrow": "How we work",
             "heading": "Our Automation Engineering *Process*",
             "intro": null,
@@ -3752,37 +3752,37 @@
             "blockName": null,
             "steps": [
               {
-                "id": "6a8664ab91cf273067bc04b1",
+                "id": "6a869a27aebaed7b27aec260",
                 "title": "Site Audit",
                 "description": "We assess your existing control systems, hardware condition, and operational goals on-site.",
                 "meta": null
               },
               {
-                "id": "6a8664ab91cf273067bc04b2",
+                "id": "6a869a27aebaed7b27aec261",
                 "title": "Engineering Design",
                 "description": "A control philosophy, panel layout, and system architecture tailored to your process.",
                 "meta": null
               },
               {
-                "id": "6a8664ab91cf273067bc04b3",
+                "id": "6a869a27aebaed7b27aec262",
                 "title": "Programming and Panel Build",
                 "description": "Logic is written and tested; panels are fabricated in-house to specification.",
                 "meta": null
               },
               {
-                "id": "6a8664ab91cf273067bc04b4",
+                "id": "6a869a27aebaed7b27aec263",
                 "title": "Factory and Site Acceptance Testing",
                 "description": "Every system is validated before and after installation.",
                 "meta": null
               },
               {
-                "id": "6a8664ab91cf273067bc04b5",
+                "id": "6a869a27aebaed7b27aec264",
                 "title": "Commissioning",
                 "description": "Brought live with minimal disruption to your ongoing operations.",
                 "meta": null
               },
               {
-                "id": "6a8664ab91cf273067bc04b6",
+                "id": "6a869a27aebaed7b27aec265",
                 "title": "Ongoing Support",
                 "description": "Optional AMC coverage keeps systems maintained long after go-live, with full as-built documentation handed over.",
                 "meta": null
@@ -3791,7 +3791,7 @@
             "blockType": "processSteps"
           },
           {
-            "id": "6a8664ab91cf273067bc04b9",
+            "id": "6a869a27aebaed7b27aec268",
             "variant": "compact",
             "eyebrow": "Retrofit or rebuild",
             "heading": "Not sure whether you need a retrofit or a *full rebuild?*",
@@ -3799,7 +3799,7 @@
             "blockName": null,
             "actions": [
               {
-                "id": "6a8664ab91cf273067bc04b8",
+                "id": "6a869a27aebaed7b27aec267",
                 "link": {
                   "type": "custom",
                   "label": "Get a free site assessment — Call +971 6 543 6933",
@@ -3812,7 +3812,7 @@
             "blockType": "cta"
           },
           {
-            "id": "6a8664ab91cf273067bc04c1",
+            "id": "6a869a27aebaed7b27aec270",
             "eyebrow": "Why choose us",
             "heading": "Why Choose *General Tech Automation*",
             "intro": "One specialist team, one point of accountability, and a control system your own engineers can still read years after commissioning.",
@@ -3820,39 +3820,39 @@
             "blockName": null,
             "proofs": [
               {
-                "id": "6a8664ab91cf273067bc04ba",
+                "id": "6a869a27aebaed7b27aec269",
                 "value": "28+",
                 "label": "Years of UAE industrial heritage"
               },
               {
-                "id": "6a8664ab91cf273067bc04bb",
+                "id": "6a869a27aebaed7b27aec26a",
                 "value": "6",
                 "label": "Control platforms supported in-house"
               },
               {
-                "id": "6a8664ab91cf273067bc04bc",
+                "id": "6a869a27aebaed7b27aec26b",
                 "value": "1",
                 "label": "Engineer from site visit to handover"
               },
               {
-                "id": "6a8664ab91cf273067bc04bd",
+                "id": "6a869a27aebaed7b27aec26c",
                 "value": "0",
                 "label": "Vendor lock-in — the drawings are yours"
               }
             ],
             "pillars": [
               {
-                "id": "6a8664ab91cf273067bc04be",
+                "id": "6a869a27aebaed7b27aec26d",
                 "title": "Automation engineering is all we do",
                 "body": "Most automation providers in the UAE split their attention across product distribution, general engineering, and one-off projects. General Tech Automation exists purely as an automation engineering specialist, backed by General Tech's 28-year track record of industrial credibility in the region. That focus means faster response times, engineers who understand both the control logic and the physical equipment behind it, and a single point of accountability from design through commissioning to long-term support. Safety documentation is treated with the same discipline: emergency stop circuits are tested as part of every commissioning checklist, which matters most in regulated industries such as pharmaceuticals and oil and gas, where a system needs to be defensible during an audit, not just functional on the day it's switched on."
               },
               {
-                "id": "6a8664ab91cf273067bc04bf",
+                "id": "6a869a27aebaed7b27aec26e",
                 "title": "Multi-vendor by design, documented for your team",
                 "body": "We also work as a true multi-vendor integrator. Rather than pushing one brand, we recommend and build on the platform that genuinely fits your plant — Siemens, Allen-Bradley, Schneider Electric, Mitsubishi, ABB, or an existing DeltaV environment — so you're never locked into hardware that doesn't suit your process or your existing spares inventory. Every project leaves you with as-built drawings, tag lists, and program backups, so the system stays maintainable by your own team, or by us, long after commissioning — a small detail that saves real time and money the next time something needs to change."
               },
               {
-                "id": "6a8664ab91cf273067bc04c0",
+                "id": "6a869a27aebaed7b27aec26f",
                 "title": "An honest assessment before a quotation",
                 "body": "Clients typically come to us at one of two points: either a system has already failed and production is stopped, or a plant manager is planning ahead and wants to avoid reaching that point. Both conversations start the same way — with a site visit and an honest assessment of what's actually needed, not a pitch for the most expensive option available. If a smaller retrofit will solve the problem, that's what we'll recommend; if the underlying hardware genuinely needs replacing, we'll explain why before any quotation is issued. Throughout a project, you'll have one engineer who understands your system from the first visit through to final handover, rather than being passed between departments — which matters most during commissioning, when questions need fast answers."
               }
@@ -3860,7 +3860,7 @@
             "blockType": "whyUs"
           },
           {
-            "id": "6a8664ad02e62b307e53bd10",
+            "id": "6a869a2ad7c4b97b5b968d7e",
             "eyebrow": "Authorized Partners",
             "heading": "Our *Brands*",
             "intro": null,
@@ -3868,7 +3868,7 @@
             "blockName": null,
             "logos": [
               {
-                "id": "6a8664ad02e62b307e53bccf",
+                "id": "6a869a2ad7c4b97b5b968d3d",
                 "image": {
                   "id": 6,
                   "alt": "3M logo",
@@ -3915,7 +3915,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd0",
+                "id": "6a869a2ad7c4b97b5b968d3e",
                 "image": {
                   "id": 7,
                   "alt": "Anybus logo",
@@ -3962,7 +3962,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd1",
+                "id": "6a869a2ad7c4b97b5b968d3f",
                 "image": {
                   "id": 8,
                   "alt": "ASO Safety logo",
@@ -4009,7 +4009,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd2",
+                "id": "6a869a2ad7c4b97b5b968d40",
                 "image": {
                   "id": 9,
                   "alt": "BIT logo",
@@ -4056,7 +4056,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd3",
+                "id": "6a869a2ad7c4b97b5b968d41",
                 "image": {
                   "id": 10,
                   "alt": "Contaclip logo",
@@ -4103,7 +4103,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd4",
+                "id": "6a869a2ad7c4b97b5b968d42",
                 "image": {
                   "id": 11,
                   "alt": "Control Techniques logo",
@@ -4150,7 +4150,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd5",
+                "id": "6a869a2ad7c4b97b5b968d43",
                 "image": {
                   "id": 12,
                   "alt": "Datalogic logo",
@@ -4197,7 +4197,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd6",
+                "id": "6a869a2ad7c4b97b5b968d44",
                 "image": {
                   "id": 13,
                   "alt": "Deflesko logo",
@@ -4244,7 +4244,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd7",
+                "id": "6a869a2ad7c4b97b5b968d45",
                 "image": {
                   "id": 14,
                   "alt": "Dremel logo",
@@ -4291,7 +4291,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd8",
+                "id": "6a869a2ad7c4b97b5b968d46",
                 "image": {
                   "id": 15,
                   "alt": "Eaton logo",
@@ -4338,7 +4338,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcd9",
+                "id": "6a869a2ad7c4b97b5b968d47",
                 "image": {
                   "id": 16,
                   "alt": "EH logo",
@@ -4385,7 +4385,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcda",
+                "id": "6a869a2ad7c4b97b5b968d48",
                 "image": {
                   "id": 17,
                   "alt": "Eickmann logo",
@@ -4432,7 +4432,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcdb",
+                "id": "6a869a2ad7c4b97b5b968d49",
                 "image": {
                   "id": 18,
                   "alt": "Electro Task logo",
@@ -4479,7 +4479,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcdc",
+                "id": "6a869a2ad7c4b97b5b968d4a",
                 "image": {
                   "id": 19,
                   "alt": "Equflow logo",
@@ -4526,7 +4526,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcdd",
+                "id": "6a869a2ad7c4b97b5b968d4b",
                 "image": {
                   "id": 20,
                   "alt": "ETA logo",
@@ -4573,7 +4573,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcde",
+                "id": "6a869a2ad7c4b97b5b968d4c",
                 "image": {
                   "id": 21,
                   "alt": "Fibox logo",
@@ -4620,7 +4620,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcdf",
+                "id": "6a869a2ad7c4b97b5b968d4d",
                 "image": {
                   "id": 22,
                   "alt": "GF logo",
@@ -4667,7 +4667,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce0",
+                "id": "6a869a2ad7c4b97b5b968d4e",
                 "image": {
                   "id": 23,
                   "alt": "Harting logo",
@@ -4714,7 +4714,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce1",
+                "id": "6a869a2ad7c4b97b5b968d4f",
                 "image": {
                   "id": 24,
                   "alt": "Helmholz logo",
@@ -4761,7 +4761,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce2",
+                "id": "6a869a2ad7c4b97b5b968d50",
                 "image": {
                   "id": 25,
                   "alt": "Hongfa logo",
@@ -4808,7 +4808,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce3",
+                "id": "6a869a2ad7c4b97b5b968d51",
                 "image": {
                   "id": 26,
                   "alt": "Honsberg logo",
@@ -4855,7 +4855,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce4",
+                "id": "6a869a2ad7c4b97b5b968d52",
                 "image": {
                   "id": 27,
                   "alt": "IFM logo",
@@ -4902,7 +4902,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce5",
+                "id": "6a869a2ad7c4b97b5b968d53",
                 "image": {
                   "id": 28,
                   "alt": "Isotech logo",
@@ -4949,7 +4949,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce6",
+                "id": "6a869a2ad7c4b97b5b968d54",
                 "image": {
                   "id": 29,
                   "alt": "Ixon logo",
@@ -4996,7 +4996,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce7",
+                "id": "6a869a2ad7c4b97b5b968d55",
                 "image": {
                   "id": 30,
                   "alt": "Karlengoffer logo",
@@ -5043,7 +5043,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce8",
+                "id": "6a869a2ad7c4b97b5b968d56",
                 "image": {
                   "id": 31,
                   "alt": "Knipex logo",
@@ -5090,7 +5090,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bce9",
+                "id": "6a869a2ad7c4b97b5b968d57",
                 "image": {
                   "id": 32,
                   "alt": "Lapp logo",
@@ -5137,7 +5137,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcea",
+                "id": "6a869a2ad7c4b97b5b968d58",
                 "image": {
                   "id": 33,
                   "alt": "Lascar logo",
@@ -5184,7 +5184,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bceb",
+                "id": "6a869a2ad7c4b97b5b968d59",
                 "image": {
                   "id": 34,
                   "alt": "Ledwork logo",
@@ -5231,7 +5231,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcec",
+                "id": "6a869a2ad7c4b97b5b968d5a",
                 "image": {
                   "id": 35,
                   "alt": "Leuze logo",
@@ -5278,7 +5278,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bced",
+                "id": "6a869a2ad7c4b97b5b968d5b",
                 "image": {
                   "id": 36,
                   "alt": "Lovato logo",
@@ -5325,7 +5325,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcee",
+                "id": "6a869a2ad7c4b97b5b968d5c",
                 "image": {
                   "id": 37,
                   "alt": "Makita logo",
@@ -5372,7 +5372,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcef",
+                "id": "6a869a2ad7c4b97b5b968d5d",
                 "image": {
                   "id": 38,
                   "alt": "Martens logo",
@@ -5419,7 +5419,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf0",
+                "id": "6a869a2ad7c4b97b5b968d5e",
                 "image": {
                   "id": 39,
                   "alt": "Metri logo",
@@ -5466,7 +5466,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf1",
+                "id": "6a869a2ad7c4b97b5b968d5f",
                 "image": {
                   "id": 40,
                   "alt": "Micro Detectors logo",
@@ -5513,7 +5513,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf2",
+                "id": "6a869a2ad7c4b97b5b968d60",
                 "image": {
                   "id": 41,
                   "alt": "Microsonic logo",
@@ -5560,7 +5560,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf3",
+                "id": "6a869a2ad7c4b97b5b968d61",
                 "image": {
                   "id": 42,
                   "alt": "Murplastic logo",
@@ -5607,7 +5607,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf4",
+                "id": "6a869a2ad7c4b97b5b968d62",
                 "image": {
                   "id": 43,
                   "alt": "Murr logo",
@@ -5654,7 +5654,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf5",
+                "id": "6a869a2ad7c4b97b5b968d63",
                 "image": {
                   "id": 44,
                   "alt": "Novus logo",
@@ -5701,7 +5701,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf6",
+                "id": "6a869a2ad7c4b97b5b968d64",
                 "image": {
                   "id": 45,
                   "alt": "Patlite logo",
@@ -5748,7 +5748,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf7",
+                "id": "6a869a2ad7c4b97b5b968d65",
                 "image": {
                   "id": 46,
                   "alt": "Pflish logo",
@@ -5795,7 +5795,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf8",
+                "id": "6a869a2ad7c4b97b5b968d66",
                 "image": {
                   "id": 47,
                   "alt": "Phoenix logo",
@@ -5842,7 +5842,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcf9",
+                "id": "6a869a2ad7c4b97b5b968d67",
                 "image": {
                   "id": 48,
                   "alt": "Pilz logo",
@@ -5889,7 +5889,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcfa",
+                "id": "6a869a2ad7c4b97b5b968d68",
                 "image": {
                   "id": 49,
                   "alt": "PMD logo",
@@ -5936,7 +5936,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcfb",
+                "id": "6a869a2ad7c4b97b5b968d69",
                 "image": {
                   "id": 50,
                   "alt": "Procom logo",
@@ -5983,7 +5983,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcfc",
+                "id": "6a869a2ad7c4b97b5b968d6a",
                 "image": {
                   "id": 51,
                   "alt": "Raychem logo",
@@ -6030,7 +6030,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcfd",
+                "id": "6a869a2ad7c4b97b5b968d6b",
                 "image": {
                   "id": 52,
                   "alt": "Reltech logo",
@@ -6077,7 +6077,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcfe",
+                "id": "6a869a2ad7c4b97b5b968d6c",
                 "image": {
                   "id": 53,
                   "alt": "Rittal logo",
@@ -6124,7 +6124,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bcff",
+                "id": "6a869a2ad7c4b97b5b968d6d",
                 "image": {
                   "id": 54,
                   "alt": "Sceider logo",
@@ -6171,7 +6171,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd00",
+                "id": "6a869a2ad7c4b97b5b968d6e",
                 "image": {
                   "id": 55,
                   "alt": "Seimens logo",
@@ -6218,7 +6218,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd01",
+                "id": "6a869a2ad7c4b97b5b968d6f",
                 "image": {
                   "id": 56,
                   "alt": "Selec logo",
@@ -6265,7 +6265,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd02",
+                "id": "6a869a2ad7c4b97b5b968d70",
                 "image": {
                   "id": 57,
                   "alt": "SSP logo",
@@ -6312,7 +6312,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd03",
+                "id": "6a869a2ad7c4b97b5b968d71",
                 "image": {
                   "id": 58,
                   "alt": "Stall Instruments logo",
@@ -6359,7 +6359,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd04",
+                "id": "6a869a2ad7c4b97b5b968d72",
                 "image": {
                   "id": 59,
                   "alt": "Tele logo",
@@ -6406,7 +6406,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd05",
+                "id": "6a869a2ad7c4b97b5b968d73",
                 "image": {
                   "id": 60,
                   "alt": "Terz logo",
@@ -6453,7 +6453,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd06",
+                "id": "6a869a2ad7c4b97b5b968d74",
                 "image": {
                   "id": 61,
                   "alt": "Titec logo",
@@ -6500,7 +6500,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd07",
+                "id": "6a869a2ad7c4b97b5b968d75",
                 "image": {
                   "id": 62,
                   "alt": "Trellerborg logo",
@@ -6547,7 +6547,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd08",
+                "id": "6a869a2ad7c4b97b5b968d76",
                 "image": {
                   "id": 63,
                   "alt": "Vega logo",
@@ -6594,7 +6594,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd09",
+                "id": "6a869a2ad7c4b97b5b968d77",
                 "image": {
                   "id": 64,
                   "alt": "Wago logo",
@@ -6641,7 +6641,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd0a",
+                "id": "6a869a2ad7c4b97b5b968d78",
                 "image": {
                   "id": 65,
                   "alt": "Weidmuller logo",
@@ -6688,7 +6688,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd0b",
+                "id": "6a869a2ad7c4b97b5b968d79",
                 "image": {
                   "id": 66,
                   "alt": "Wera logo",
@@ -6735,7 +6735,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd0c",
+                "id": "6a869a2ad7c4b97b5b968d7a",
                 "image": {
                   "id": 67,
                   "alt": "Wieland logo",
@@ -6782,7 +6782,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd0d",
+                "id": "6a869a2ad7c4b97b5b968d7b",
                 "image": {
                   "id": 68,
                   "alt": "Wika logo",
@@ -6829,7 +6829,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd0e",
+                "id": "6a869a2ad7c4b97b5b968d7c",
                 "image": {
                   "id": 69,
                   "alt": "Yamato logo",
@@ -6876,7 +6876,7 @@
                 "url": null
               },
               {
-                "id": "6a8664ad02e62b307e53bd0f",
+                "id": "6a869a2ad7c4b97b5b968d7d",
                 "image": {
                   "id": 70,
                   "alt": "Realwear logo",
@@ -6926,14 +6926,14 @@
             "blockType": "logoWall"
           },
           {
-            "id": "6a8664ab91cf273067bc04cb",
+            "id": "6a869a27aebaed7b27aec27a",
             "eyebrow": null,
             "heading": "Frequently Asked *Questions*",
             "intro": null,
             "blockName": null,
             "items": [
               {
-                "id": "6a8664ab91cf273067bc04c2",
+                "id": "6a869a27aebaed7b27aec271",
                 "question": "What does this kind of automation engineering company actually do?",
                 "answer": {
                   "root": {
@@ -6966,7 +6966,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04c3",
+                "id": "6a869a27aebaed7b27aec272",
                 "question": "Which control platforms does General Tech Automation support?",
                 "answer": {
                   "root": {
@@ -6999,7 +6999,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04c4",
+                "id": "6a869a27aebaed7b27aec273",
                 "question": "Can you upgrade an old control system instead of replacing it entirely?",
                 "answer": {
                   "root": {
@@ -7032,7 +7032,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04c5",
+                "id": "6a869a27aebaed7b27aec274",
                 "question": "Do you offer ongoing maintenance after a project is commissioned?",
                 "answer": {
                   "root": {
@@ -7065,7 +7065,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04c6",
+                "id": "6a869a27aebaed7b27aec275",
                 "question": "How is General Tech Automation different from a general automation supplier?",
                 "answer": {
                   "root": {
@@ -7098,7 +7098,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04c7",
+                "id": "6a869a27aebaed7b27aec276",
                 "question": "Do you provide documentation after the project is complete?",
                 "answer": {
                   "root": {
@@ -7131,7 +7131,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04c8",
+                "id": "6a869a27aebaed7b27aec277",
                 "question": "How long does a typical automation engineering project take?",
                 "answer": {
                   "root": {
@@ -7164,7 +7164,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04c9",
+                "id": "6a869a27aebaed7b27aec278",
                 "question": "Which industries in the UAE do you work with?",
                 "answer": {
                   "root": {
@@ -7197,7 +7197,7 @@
                 }
               },
               {
-                "id": "6a8664ab91cf273067bc04ca",
+                "id": "6a869a27aebaed7b27aec279",
                 "question": "How do you decide between a retrofit and a full system replacement?",
                 "answer": {
                   "root": {
@@ -7233,7 +7233,7 @@
             "blockType": "faq"
           },
           {
-            "id": "6a8664ab91cf273067bc04cd",
+            "id": "6a869a27aebaed7b27aec27c",
             "variant": "dark",
             "eyebrow": "Get an automation engineering assessment",
             "heading": "Speak with an automation engineer *today*",
@@ -7241,7 +7241,7 @@
             "blockName": null,
             "actions": [
               {
-                "id": "6a8664ab91cf273067bc04cc",
+                "id": "6a869a27aebaed7b27aec27b",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
@@ -7259,7 +7259,7 @@
           "description": "General Tech Automation delivers PLC logic design, control architecture, HMI development and Industry 4.0 engineering across the UAE. Call +971 6 543 6933.",
           "image": null
         },
-        "updatedAt": "2026-08-20T02:21:33.189Z",
+        "updatedAt": "2026-08-20T06:09:46.224Z",
         "createdAt": "2026-08-18T08:53:50.868Z",
         "_status": "published"
       }
@@ -7832,7 +7832,7 @@
       "id": 1,
       "navItems": [
         {
-          "id": "6a8664ad02e62b307e53bc56",
+          "id": "6a869a2ad7c4b97b5b968cc4",
           "children": [],
           "link": {
             "type": "custom",
@@ -7842,7 +7842,7 @@
           }
         },
         {
-          "id": "6a8664ad02e62b307e53bc57",
+          "id": "6a869a2ad7c4b97b5b968cc5",
           "children": [],
           "link": {
             "type": "custom",
@@ -7852,7 +7852,7 @@
           }
         },
         {
-          "id": "6a8664ad02e62b307e53bc58",
+          "id": "6a869a2ad7c4b97b5b968cc6",
           "children": [],
           "link": {
             "type": "custom",
@@ -7862,7 +7862,7 @@
           }
         },
         {
-          "id": "6a8664ad02e62b307e53bc59",
+          "id": "6a869a2ad7c4b97b5b968cc7",
           "children": [],
           "link": {
             "type": "custom",
@@ -7872,10 +7872,10 @@
           }
         },
         {
-          "id": "6a8664ad02e62b307e53bc6a",
+          "id": "6a869a2ad7c4b97b5b968cd8",
           "children": [
             {
-              "id": "6a8664ad02e62b307e53bc5a",
+              "id": "6a869a2ad7c4b97b5b968cc8",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7885,7 +7885,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc5b",
+              "id": "6a869a2ad7c4b97b5b968cc9",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7895,7 +7895,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc5c",
+              "id": "6a869a2ad7c4b97b5b968cca",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7905,7 +7905,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc5d",
+              "id": "6a869a2ad7c4b97b5b968ccb",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7915,7 +7915,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc5e",
+              "id": "6a869a2ad7c4b97b5b968ccc",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7925,7 +7925,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc5f",
+              "id": "6a869a2ad7c4b97b5b968ccd",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7935,7 +7935,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc60",
+              "id": "6a869a2ad7c4b97b5b968cce",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7945,7 +7945,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc61",
+              "id": "6a869a2ad7c4b97b5b968ccf",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7955,7 +7955,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc62",
+              "id": "6a869a2ad7c4b97b5b968cd0",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7965,7 +7965,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc63",
+              "id": "6a869a2ad7c4b97b5b968cd1",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7975,7 +7975,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc64",
+              "id": "6a869a2ad7c4b97b5b968cd2",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7985,7 +7985,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc65",
+              "id": "6a869a2ad7c4b97b5b968cd3",
               "description": null,
               "link": {
                 "type": "custom",
@@ -7995,7 +7995,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc66",
+              "id": "6a869a2ad7c4b97b5b968cd4",
               "description": null,
               "link": {
                 "type": "custom",
@@ -8005,7 +8005,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc67",
+              "id": "6a869a2ad7c4b97b5b968cd5",
               "description": null,
               "link": {
                 "type": "custom",
@@ -8015,7 +8015,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc68",
+              "id": "6a869a2ad7c4b97b5b968cd6",
               "description": null,
               "link": {
                 "type": "custom",
@@ -8025,7 +8025,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc69",
+              "id": "6a869a2ad7c4b97b5b968cd7",
               "description": null,
               "link": {
                 "type": "custom",
@@ -8043,7 +8043,7 @@
           }
         },
         {
-          "id": "6a8664ad02e62b307e53bc6b",
+          "id": "6a869a2ad7c4b97b5b968cd9",
           "children": [],
           "link": {
             "type": "custom",
@@ -8053,7 +8053,7 @@
           }
         },
         {
-          "id": "6a8664ad02e62b307e53bc6c",
+          "id": "6a869a2ad7c4b97b5b968cda",
           "children": [],
           "link": {
             "type": "custom",
@@ -8065,7 +8065,7 @@
       ],
       "ctas": [
         {
-          "id": "6a8664ad02e62b307e53bc6d",
+          "id": "6a869a2ad7c4b97b5b968cdb",
           "link": {
             "type": "custom",
             "label": "Get A Free Quote",
@@ -8083,11 +8083,11 @@
       "id": 1,
       "columns": [
         {
-          "id": "6a8664ad02e62b307e53bc74",
+          "id": "6a869a2ad7c4b97b5b968ce2",
           "title": "Quick Links",
           "links": [
             {
-              "id": "6a8664ad02e62b307e53bc6e",
+              "id": "6a869a2ad7c4b97b5b968cdc",
               "link": {
                 "type": "custom",
                 "label": "About Us",
@@ -8096,7 +8096,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc6f",
+              "id": "6a869a2ad7c4b97b5b968cdd",
               "link": {
                 "type": "custom",
                 "label": "Products",
@@ -8105,7 +8105,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc70",
+              "id": "6a869a2ad7c4b97b5b968cde",
               "link": {
                 "type": "custom",
                 "label": "Brands",
@@ -8114,7 +8114,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc71",
+              "id": "6a869a2ad7c4b97b5b968cdf",
               "link": {
                 "type": "custom",
                 "label": "Services",
@@ -8123,7 +8123,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc72",
+              "id": "6a869a2ad7c4b97b5b968ce0",
               "link": {
                 "type": "custom",
                 "label": "Applications",
@@ -8132,7 +8132,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc73",
+              "id": "6a869a2ad7c4b97b5b968ce1",
               "link": {
                 "type": "custom",
                 "label": "Contact Us",
@@ -8143,11 +8143,11 @@
           ]
         },
         {
-          "id": "6a8664ad02e62b307e53bc7d",
+          "id": "6a869a2ad7c4b97b5b968ceb",
           "title": "Services",
           "links": [
             {
-              "id": "6a8664ad02e62b307e53bc75",
+              "id": "6a869a2ad7c4b97b5b968ce3",
               "link": {
                 "type": "custom",
                 "label": "Annual Maintenance Contracts (AMC Services )for Panels, VFD, UPS & Servo Drives",
@@ -8156,7 +8156,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc76",
+              "id": "6a869a2ad7c4b97b5b968ce4",
               "link": {
                 "type": "custom",
                 "label": "Asset Data Management",
@@ -8165,7 +8165,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc77",
+              "id": "6a869a2ad7c4b97b5b968ce5",
               "link": {
                 "type": "custom",
                 "label": "Automation Solutions",
@@ -8174,7 +8174,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc78",
+              "id": "6a869a2ad7c4b97b5b968ce6",
               "link": {
                 "type": "custom",
                 "label": "CNC Machine Repair Services",
@@ -8183,7 +8183,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc79",
+              "id": "6a869a2ad7c4b97b5b968ce7",
               "link": {
                 "type": "custom",
                 "label": "Commissioning & Start Up - Measurement",
@@ -8192,7 +8192,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc7a",
+              "id": "6a869a2ad7c4b97b5b968ce8",
               "link": {
                 "type": "custom",
                 "label": "Custom Panel Design & Manufacturing",
@@ -8201,7 +8201,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc7b",
+              "id": "6a869a2ad7c4b97b5b968ce9",
               "link": {
                 "type": "custom",
                 "label": "Digital Transformation",
@@ -8210,7 +8210,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc7c",
+              "id": "6a869a2ad7c4b97b5b968cea",
               "link": {
                 "type": "custom",
                 "label": "Field Instrumentation Services and Support",
@@ -8221,11 +8221,11 @@
           ]
         },
         {
-          "id": "6a8664ad02e62b307e53bc86",
+          "id": "6a869a2ad7c4b97b5b968cf4",
           "title": "More Services",
           "links": [
             {
-              "id": "6a8664ad02e62b307e53bc7e",
+              "id": "6a869a2ad7c4b97b5b968cec",
               "link": {
                 "type": "custom",
                 "label": "IoT Services",
@@ -8234,7 +8234,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc7f",
+              "id": "6a869a2ad7c4b97b5b968ced",
               "link": {
                 "type": "custom",
                 "label": "Main Instrument Supplier",
@@ -8243,7 +8243,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc80",
+              "id": "6a869a2ad7c4b97b5b968cee",
               "link": {
                 "type": "custom",
                 "label": "Measurement Preventative Services",
@@ -8252,7 +8252,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc81",
+              "id": "6a869a2ad7c4b97b5b968cef",
               "link": {
                 "type": "custom",
                 "label": "PLC Maintenance Troubleshooting",
@@ -8261,7 +8261,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc82",
+              "id": "6a869a2ad7c4b97b5b968cf0",
               "link": {
                 "type": "custom",
                 "label": "PLC Programming",
@@ -8270,7 +8270,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc83",
+              "id": "6a869a2ad7c4b97b5b968cf1",
               "link": {
                 "type": "custom",
                 "label": "Repair Services",
@@ -8279,7 +8279,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc84",
+              "id": "6a869a2ad7c4b97b5b968cf2",
               "link": {
                 "type": "custom",
                 "label": "Retrofit Solutions",
@@ -8288,7 +8288,7 @@
               }
             },
             {
-              "id": "6a8664ad02e62b307e53bc85",
+              "id": "6a869a2ad7c4b97b5b968cf3",
               "link": {
                 "type": "custom",
                 "label": "Wireless Plant Network Support",
@@ -8301,7 +8301,7 @@
       ],
       "copyright": "© 2024 Copyright ® All Rights Reserved. General Tech Services LLC.",
       "socials": [],
-      "updatedAt": "2026-08-20T02:21:33.149Z",
+      "updatedAt": "2026-08-20T06:09:46.172Z",
       "createdAt": "2026-08-18T08:53:51.107Z",
       "globalType": "footer"
     },
@@ -8404,7 +8404,7 @@
         "phone": "+971 6 543 6933",
         "address": "P.O. Box: 25898\nSharjah, U A E"
       },
-      "updatedAt": "2026-08-20T02:21:33.120Z",
+      "updatedAt": "2026-08-20T06:09:46.138Z",
       "createdAt": "2026-08-18T08:53:51.023Z",
       "globalType": "site-settings"
     }

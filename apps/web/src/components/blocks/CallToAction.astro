@@ -11,21 +11,22 @@ interface Props {
   actions?: { id?: string; link: LinkValue }[]
 }
 
-const {
-  variant = 'dark',
-  eyebrow = 'Get in touch',
-  heading,
-  body,
-  actions = [],
-} = Astro.props
+const { variant = 'dark', eyebrow, heading, body, actions = [] } = Astro.props
 const { lead, accent } = splitAccent(heading)
+
+/**
+ * Payload sends an omitted field as null rather than undefined, so a prop
+ * default never applies and the eyebrow rendered as two red rules with nothing
+ * between them. The label is resolved here and the rules follow it.
+ */
+const label = (eyebrow ?? 'Get in touch').trim()
 ---
 
 {
   /* Dark slab: the page's closing statement. Centred, full-bleed black, with a
      faint red bloom so it reads as a destination rather than another band. */
   variant === 'dark' && (
-    <section class="relative overflow-hidden border-t border-white/10 bg-general-black px-6 py-32 text-white md:px-12">
+    <section class="relative overflow-hidden border-t border-white/10 bg-general-black px-6 py-24 text-white md:px-12 lg:py-28">
       <div
         class="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[820px] max-w-none -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 blur-[120px]"
         style="background: radial-gradient(circle, rgba(237,28,37,0.35) 0%, rgba(237,28,37,0) 70%)"
@@ -33,14 +34,16 @@ const { lead, accent } = splitAccent(heading)
       />
 
       <div class="relative mx-auto max-w-7xl">
-        <div class="mx-auto mb-16 flex max-w-4xl flex-col items-center text-center">
-          <div class="reveal-item mb-8 flex translate-y-4 items-center gap-4 opacity-0">
-            <div class="h-[2px] w-12 bg-general-red" />
-            <span class="text-[12px] font-bold uppercase tracking-[0.2em] text-general-red">
-              {eyebrow}
-            </span>
-            <div class="h-[2px] w-12 bg-general-red" />
-          </div>
+        <div class="mx-auto mb-12 flex max-w-4xl flex-col items-center text-center">
+          {label && (
+            <div class="reveal-item mb-8 flex translate-y-4 items-center gap-4 opacity-0">
+              <div class="h-[2px] w-12 bg-general-red" />
+              <span class="text-[12px] font-bold uppercase tracking-[0.2em] text-general-red">
+                {label}
+              </span>
+              <div class="h-[2px] w-12 bg-general-red" />
+            </div>
+          )}
 
           <h2 class="reveal-item mb-10 translate-y-8 text-4xl font-black leading-[0.95] tracking-tight opacity-0 lg:text-[64px]">
             {lead}
@@ -82,11 +85,11 @@ const { lead, accent } = splitAccent(heading)
           />
 
           <div class="relative mx-auto flex max-w-3xl flex-col items-center">
-            {eyebrow && (
+            {label && (
               <div class="mb-6 flex items-center gap-3">
                 <div class="h-[2px] w-8 bg-general-red" />
                 <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
-                  {eyebrow}
+                  {label}
                 </span>
                 <div class="h-[2px] w-8 bg-general-red" />
               </div>
@@ -127,9 +130,11 @@ const { lead, accent } = splitAccent(heading)
           <div class="flex items-start gap-5 md:items-center">
             <span class="mt-1 h-10 w-[3px] shrink-0 bg-general-red md:mt-0" aria-hidden="true" />
             <div>
-              <span class="mb-1 block text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
-                {eyebrow}
-              </span>
+              {label && (
+                <span class="mb-1 block text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+                  {label}
+                </span>
+              )}
               <p class="text-xl font-bold leading-[1.25] tracking-tight text-general-black lg:text-2xl">
                 {lead}
                 {accent && <span class="font-medium italic text-general-red"> {accent}</span>}

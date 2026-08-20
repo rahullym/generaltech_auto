@@ -254,6 +254,9 @@ const run = async () => {
     // --- CTA 1 ----------------------------------------------------------
     {
       blockType: 'cta',
+      // Not in the approved copy: without an eyebrow the block falls back to a
+      // generic "Get in touch", which only repeats the heading.
+      eyebrow: 'Free site assessment',
       heading: 'Talk to an automation engineer about *your plant*',
       actions: [callAction(`Call ${PHONE}`)],
     },
