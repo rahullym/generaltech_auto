@@ -15,11 +15,11 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 150px;
-    /* Disable browser scroll anchoring. The sticky section headers animate
-       their height when they stick/un-stick; on scroll-up the re-expand made
-       the browser shift scrollTop to keep content anchored, which re-crossed
-       the sticky IntersectionObserver trigger and oscillated the heading
-       ("shaking"). Turning anchoring off breaks that feedback loop. */
+    /* Disable browser scroll anchoring. Kept as a safety net for anything that
+       changes height mid-scroll: anchoring shifts scrollTop to compensate, which
+       can re-cross an IntersectionObserver trigger and oscillate. The sticky
+       section header used to do exactly that; it no longer changes height at
+       all — see SectionHeader.astro. */
     overflow-anchor: none;
   }
   body {
@@ -319,4 +319,35 @@
 }
 .prose-content .text-justify {
   text-align: justify;
+}
+
+/* The same prose rhythm on a dark band. Only the colours change; every other
+   rule above still applies. */
+.prose-invert {
+  color: rgba(255, 255, 255, 0.6);
+}
+.prose-invert h2,
+.prose-invert h3,
+.prose-invert h4,
+.prose-invert strong {
+  color: #fff;
+}
+.prose-invert a {
+  color: #ff5a45;
+}
+.prose-invert a:hover {
+  color: #fff;
+}
+.prose-invert blockquote {
+  color: rgba(255, 255, 255, 0.55);
+}
+.prose-invert code {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.prose-invert hr,
+.prose-invert figcaption {
+  border-top-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.5);
 }

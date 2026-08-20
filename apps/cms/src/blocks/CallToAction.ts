@@ -16,7 +16,7 @@ export const CallToAction: Block = {
       defaultValue: 'dark',
       options: [
         { label: 'Dark slab (full-width statement)', value: 'dark' },
-        { label: 'Light editorial (heading left, actions right)', value: 'light' },
+        { label: 'Dark panel (rounded slab inset in a light page)', value: 'light' },
         { label: 'Compact bar (single line, low emphasis)', value: 'compact' },
       ],
       admin: {

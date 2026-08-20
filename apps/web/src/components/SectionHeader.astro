@@ -7,7 +7,11 @@ interface Props {
   intro?: string
   /** `center` stacks eyebrow/heading/intro; `split` puts the intro alongside. */
   align?: 'center' | 'split'
-  /** Desktop-only: the header sticks under the nav and shrinks once passed. */
+  /**
+   * Desktop-only: once the header scrolls past the nav, a compact title bar
+   * fades in under it. The bar is an overlay on a zero-height mount, not the
+   * header shrinking — see the note in the style block below.
+   */
   sticky?: boolean
   /** Dark sections invert the copy colours. */
   tone?: 'light' | 'dark'
@@ -31,16 +35,22 @@ const centered = align === 'center'
 
 {sticky && <div class="sticky-sentinel" aria-hidden="true"></div>}
 
-<div
-  class:list={[
-    centered ? 'mb-20' : 'mb-8 lg:mb-10',
-    sticky && 'section-sticky-header md:sticky md:top-[72px] z-30 bg-white pt-2 -mt-2',
-    className,
-  ]}
-  style={sticky
-    ? 'transition: padding 0.5s cubic-bezier(0.4,0,0.2,1), margin 0.5s cubic-bezier(0.4,0,0.2,1), border-bottom 0.5s cubic-bezier(0.4,0,0.2,1)'
-    : undefined}
->
+{
+  sticky && heading && (
+    <div class="section-sticky-bar hidden md:block" aria-hidden="true">
+      <div class="section-sticky-bar__inner">
+        <div class="mx-auto max-w-7xl px-6 md:px-12">
+          <span class="text-[28px] font-black leading-tight tracking-tight text-general-black">
+            {lead}
+            {accent && <span class="text-general-red italic font-medium"> {accent}</span>}
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+<div class:list={[centered ? 'mb-20' : 'mb-8 lg:mb-10', className]}>
   <div
     class:list={[
       centered
@@ -53,10 +63,9 @@ const centered = align === 'center'
         eyebrow && (
           <div
             class:list={[
-              'sticky-accent flex items-center gap-3 mb-6',
+              'flex items-center gap-3 mb-6',
               centered && 'justify-center mb-8 opacity-0 translate-y-8 reveal-item',
             ]}
-            style="transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), margin 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease; overflow: hidden; max-height: 40px"
           >
             <div class="w-8 h-[2px] bg-general-red" />
             <span class="text-[11px] font-bold tracking-[0.25em] uppercase text-general-red">
@@ -71,11 +80,10 @@ const centered = align === 'center'
         heading && (
           <h2
             class:list={[
-              'sticky-title text-4xl sm:text-5xl lg:text-[72px] font-black tracking-tight leading-[0.95]',
+              'text-4xl sm:text-5xl lg:text-[72px] font-black tracking-tight leading-[0.95]',
               dark ? 'text-white' : 'text-general-black',
               centered && 'mb-8 opacity-0 translate-y-8 reveal-item',
             ]}
-            style="transition: font-size 0.5s cubic-bezier(0.4,0,0.2,1)"
           >
             {lead}
             {accent && <span class="text-general-red italic font-medium"> {accent}</span>}
@@ -89,13 +97,12 @@ const centered = align === 'center'
         <div class={centered ? 'contents' : 'flex-1 max-w-xl opacity-0 translate-y-8 reveal-item'}>
           <p
             class:list={[
-              'sticky-desc text-xl leading-relaxed',
+              'text-xl leading-relaxed',
               dark ? 'text-white/50 font-light' : 'text-gray-700',
               centered
                 ? 'max-w-2xl mx-auto border-t border-general-red/10 pt-8 opacity-0 translate-y-8 reveal-item'
                 : 'border-l-2 border-general-red/10 pl-8',
             ]}
-            style="transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease, margin 0.5s cubic-bezier(0.4,0,0.2,1); overflow: hidden; max-height: 32rem"
           >
             {intro}
           </p>
@@ -104,3 +111,48 @@ const centered = align === 'center'
     }
   </div>
 </div>
+
+<style>
+  /* The mount is sticky but zero-height, so pinning it can never change the
+     document height. The previous version pinned the header itself and shrank
+     it — collapsing the intro removed ~250px of page mid-scroll, which yanked
+     everything below out from under the reader (and was what `overflow-anchor:
+     none` in global.css was papering over). The bar it reveals is a full-bleed
+     overlay: it costs no layout, so scrolling stays perfectly smooth. */
+  .section-sticky-bar {
+    position: sticky;
+    top: 72px;
+    z-index: 30;
+    height: 0;
+  }
+
+  .section-sticky-bar__inner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    padding: 14px 0;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-8px);
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0.35s;
+  }
+
+  .section-sticky-bar.is-stuck .section-sticky-bar__inner {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .section-sticky-bar__inner {
+      transition: none;
+    }
+  }
+</style>
+

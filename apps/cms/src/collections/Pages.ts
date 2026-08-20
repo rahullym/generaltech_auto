@@ -3,13 +3,16 @@ import type { CollectionConfig } from 'payload'
 import { editors, publishedOrAuthenticated } from '../access'
 import {
   CallToAction,
+  Coverage,
   Faq,
   FeatureGrid,
   Hero,
+  Industries,
   LogoWall,
   MediaBlock,
   ProcessSteps,
   RichTextBlock,
+  WhyUs,
 } from '../blocks'
 import { slugField } from '../fields/slug'
 import { previewUrl } from '../lib/preview'
@@ -51,8 +54,11 @@ export const Pages: CollectionConfig = {
                 RichTextBlock,
                 MediaBlock,
                 FeatureGrid,
+                Industries,
                 ProcessSteps,
+                Coverage,
                 LogoWall,
+                WhyUs,
                 CallToAction,
                 Faq,
               ],

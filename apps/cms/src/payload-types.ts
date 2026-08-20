@@ -149,8 +149,11 @@ export interface Page {
     | RichTextBlock
     | MediaBlock
     | FeatureGridBlock
+    | IndustriesBlock
     | ProcessStepsBlock
+    | CoverageBlock
     | LogoWallBlock
+    | WhyUsBlock
     | CallToActionBlock
     | FaqBlock
   )[];
@@ -537,6 +540,40 @@ export interface FeatureGridBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "IndustriesBlock".
+ */
+export interface IndustriesBlock {
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  /**
+   * Sits beside the heading — one or two sentences reads best.
+   */
+  intro?: string | null;
+  /**
+   * One card each. Six to eight sectors keep the track readable.
+   */
+  sectors: {
+    name: string;
+    iconName?: ('oil' | 'water' | 'beverage' | 'pharma' | 'power' | 'factory' | 'chemical' | 'logistics') | null;
+    /**
+     * What the work looks like in this sector — one or two sentences.
+     */
+    description?: string | null;
+    id?: string | null;
+  }[];
+  /**
+   * Optional closing line under the index.
+   */
+  footnote?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'industries';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "ProcessStepsBlock".
  */
 export interface ProcessStepsBlock {
@@ -565,6 +602,51 @@ export interface ProcessStepsBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CoverageBlock".
+ */
+export interface CoverageBlock {
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  tone?: ('dark' | 'light') | null;
+  /**
+   * Short response-time claim, set in a panel beside the heading.
+   */
+  note?: string | null;
+  /**
+   * Four areas fill the rail on desktop; more wrap onto a second row.
+   */
+  areas: {
+    name: string;
+    /**
+     * One line naming the zones or towns the area covers.
+     */
+    note?: string | null;
+    id?: string | null;
+  }[];
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'coverage';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "LogoWallBlock".
  */
 export interface LogoWallBlock {
@@ -581,6 +663,46 @@ export interface LogoWallBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'logoWall';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "WhyUsBlock".
+ */
+export interface WhyUsBlock {
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  /**
+   * Sits beside the heading — one or two sentences reads best.
+   */
+  intro?: string | null;
+  /**
+   * The number strip under the heading. Keep each value to a few characters — "28+", "6", "1".
+   */
+  proofs?:
+    | {
+        value: string;
+        label: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Three columns read best on desktop; more wrap onto a second row.
+   */
+  pillars: {
+    title: string;
+    body: string;
+    id?: string | null;
+  }[];
+  /**
+   * Optional closing line under the columns.
+   */
+  footnote?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'whyUs';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -761,8 +883,11 @@ export interface PagesSelect<T extends boolean = true> {
         richText?: T | RichTextBlockSelect<T>;
         media?: T | MediaBlockSelect<T>;
         featureGrid?: T | FeatureGridBlockSelect<T>;
+        industries?: T | IndustriesBlockSelect<T>;
         processSteps?: T | ProcessStepsBlockSelect<T>;
+        coverage?: T | CoverageBlockSelect<T>;
         logoWall?: T | LogoWallBlockSelect<T>;
+        whyUs?: T | WhyUsBlockSelect<T>;
         cta?: T | CallToActionBlockSelect<T>;
         faq?: T | FaqBlockSelect<T>;
       };
@@ -885,6 +1010,26 @@ export interface FeatureGridBlockSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "IndustriesBlock_select".
+ */
+export interface IndustriesBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  sectors?:
+    | T
+    | {
+        name?: T;
+        iconName?: T;
+        description?: T;
+        id?: T;
+      };
+  footnote?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "ProcessStepsBlock_select".
  */
 export interface ProcessStepsBlockSelect<T extends boolean = true> {
@@ -905,6 +1050,26 @@ export interface ProcessStepsBlockSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CoverageBlock_select".
+ */
+export interface CoverageBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  tone?: T;
+  note?: T;
+  areas?:
+    | T
+    | {
+        name?: T;
+        note?: T;
+        id?: T;
+      };
+  content?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "LogoWallBlock_select".
  */
 export interface LogoWallBlockSelect<T extends boolean = true> {
@@ -920,6 +1085,32 @@ export interface LogoWallBlockSelect<T extends boolean = true> {
         url?: T;
         id?: T;
       };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "WhyUsBlock_select".
+ */
+export interface WhyUsBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  proofs?:
+    | T
+    | {
+        value?: T;
+        label?: T;
+        id?: T;
+      };
+  pillars?:
+    | T
+    | {
+        title?: T;
+        body?: T;
+        id?: T;
+      };
+  footnote?: T;
   id?: T;
   blockName?: T;
 }

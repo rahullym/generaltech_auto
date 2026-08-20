@@ -196,62 +196,30 @@ Astro.response.headers.set(
         }, 2500)
       }
 
-      // Desktop-only sticky section headers: once the sentinel scrolls past, the
-      // header pins under the nav, goes full-bleed and collapses to its title.
+      // Desktop-only sticky section headers: once the sentinel scrolls past the
+      // nav, a compact title bar fades in. The bar sits on a zero-height sticky
+      // mount, so this only toggles a class — no geometry is written, and the
+      // document height never changes mid-scroll.
       function initStickyHeaders() {
         if (!window.matchMedia('(min-width: 768px)').matches) return
 
         document.querySelectorAll('.sticky-sentinel').forEach((sentinel) => {
           const section = sentinel.closest('section') || sentinel.parentElement
-          const header = section?.querySelector<HTMLElement>('.section-sticky-header')
-          if (!header) return
-
-          const title = section?.querySelector<HTMLElement>('.sticky-title')
-          const accent = section?.querySelector<HTMLElement>('.sticky-accent')
-          const desc = section?.querySelector<HTMLElement>('.sticky-desc')
+          const bar = section?.querySelector<HTMLElement>('.section-sticky-bar')
+          if (!bar) return
 
           const stickyObs = new IntersectionObserver(
             (entries) => {
               entries.forEach((entry) => {
-                if (!entry.isIntersecting) {
-                  header.style.paddingTop = '12px'
-                  header.style.paddingBottom = '12px'
-                  header.style.marginLeft = 'calc(-50vw + 50%)'
-                  header.style.marginRight = 'calc(-50vw + 50%)'
-                  header.style.paddingLeft = 'calc(50vw - 50% + 24px)'
-                  header.style.paddingRight = 'calc(50vw - 50% + 24px)'
-                  header.style.borderBottom = '1px solid rgba(0,0,0,0.06)'
-                  if (title) title.style.fontSize = '28px'
-                  if (accent) {
-                    accent.style.maxHeight = '0px'
-                    accent.style.marginBottom = '0'
-                    accent.style.opacity = '0'
-                  }
-                  if (desc) {
-                    desc.style.maxHeight = '0px'
-                    desc.style.opacity = '0'
-                    desc.style.marginTop = '0'
-                  }
-                } else {
-                  header.style.paddingTop = ''
-                  header.style.paddingBottom = ''
-                  header.style.marginLeft = ''
-                  header.style.marginRight = ''
-                  header.style.paddingLeft = ''
-                  header.style.paddingRight = ''
-                  header.style.borderBottom = ''
-                  if (title) title.style.fontSize = ''
-                  if (accent) {
-                    accent.style.maxHeight = '40px'
-                    accent.style.marginBottom = ''
-                    accent.style.opacity = ''
-                  }
-                  if (desc) {
-                    desc.style.maxHeight = '32rem'
-                    desc.style.opacity = ''
-                    desc.style.marginTop = ''
-                  }
-                }
+                // Only when the sentinel is above the root — "not intersecting"
+                // is also true while the section is still below the fold, which
+                // would show the bar as a duplicate title on the way down.
+                // Compare against rootBounds (which includes the rootMargin), not
+                // 0: the callback fires as the sentinel crosses that edge, and it
+                // will not fire again on the way to 0.
+                const rootTop = entry.rootBounds ? entry.rootBounds.top : 0
+                const passed = !entry.isIntersecting && entry.boundingClientRect.top <= rootTop
+                bar.classList.toggle('is-stuck', passed)
               })
             },
             { threshold: 0, rootMargin: '-73px 0px 0px 0px' },

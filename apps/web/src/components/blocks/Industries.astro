@@ -1,0 +1,413 @@
+---
+import { splitAccent } from '@/lib/accent'
+
+interface Props {
+  eyebrow?: string
+  heading?: string
+  intro?: string
+  sectors: { id?: string; name: string; iconName?: string; description?: string }[]
+  footnote?: string
+}
+
+const { eyebrow, heading, intro, sectors = [], footnote } = Astro.props
+const { lead, accent } = splitAccent(heading)
+
+const total = String(sectors.length).padStart(2, '0')
+const pad = (value: number) => String(value).padStart(2, '0')
+
+/**
+ * Line icons drawn inline, on the same 24px grid as the service icons, so a
+ * sector picks up the accent as it becomes the active one.
+ */
+const ICONS: Record<string, string> = {
+  oil: '<path d="M12 2.5s6.5 6.6 6.5 10.8a6.5 6.5 0 0 1-13 0C5.5 9.1 12 2.5 12 2.5z"/><path d="M9.2 13.8a2.8 2.8 0 0 0 2.8 2.8"/>',
+  water:
+    '<path d="M2 7.5c2.2-2 4.4-2 6.6 0s4.4 2 6.6 0 4.4-2 6.6 0"/><path d="M2 13c2.2-2 4.4-2 6.6 0s4.4 2 6.6 0 4.4-2 6.6 0"/><path d="M2 18.5c2.2-2 4.4-2 6.6 0s4.4 2 6.6 0 4.4-2 6.6 0"/>',
+  beverage:
+    '<path d="M9.5 2h5v3.4a4 4 0 0 0 .7 2.3l.8 1.1a4 4 0 0 1 .7 2.3V20a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-8.9a4 4 0 0 1 .7-2.3l.8-1.1a4 4 0 0 0 .7-2.3z"/><path d="M7.7 14h8.6"/>',
+  pharma:
+    '<path d="M9 2h6"/><path d="M10 2v6.4L4.9 17.9A2 2 0 0 0 6.6 21h10.8a2 2 0 0 0 1.7-3.1L14 8.4V2"/><path d="M7.4 15h9.2"/>',
+  power: '<path d="M13.5 2 5 13.5h5.8L9.8 22l8.7-11.5H12.5z"/>',
+  factory:
+    '<path d="M2 21h20"/><path d="M4.5 21V11l5 3.3V11l5 3.3V5h5v16"/><path d="M17 9.5h2"/><path d="M17 13.5h2"/>',
+  chemical:
+    '<path d="M7 3v6.2L3.6 17A2.6 2.6 0 0 0 6 21h12a2.6 2.6 0 0 0 2.4-4L17 9.2V3"/><path d="M5.5 3h13"/><circle cx="10" cy="16" r="1"/><circle cx="14.5" cy="17.5" r="1"/>',
+  logistics:
+    '<path d="M2 7.5 12 3l10 4.5-10 4.5z"/><path d="M2 7.5V17l10 4.5V12"/><path d="M22 7.5V17l-10 4.5"/>',
+}
+
+const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
+---
+
+{/* The sectors run left to right off the side of the screen: on desktop the
+    section pins and the reader's own downward scroll walks the track sideways,
+    so six industries are read in one pass without six screens of page. Without
+    JS — and on touch, where hijacking the scroll is worse than useless — the
+    same track is a plain horizontal swipe. */}
+<section class="relative border-t border-gray-100 bg-[#FAFAFA]" data-industries>
+  {/* The glow is clipped by its own layer: `overflow-hidden` on the section
+      would make it the pinned panel's scroll container and nothing would pin. */}
+  <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div
+      class="absolute -right-40 top-0 h-[560px] w-[560px] rounded-full opacity-60 blur-[130px]"
+      style="background: radial-gradient(circle, rgba(237,28,37,0.10) 0%, rgba(237,28,37,0) 70%)"
+    >
+    </div>
+  </div>
+
+  {/* Its height is what the pinned panel scrolls through — set by JS to the
+      exact distance the track has to travel, and left alone otherwise. */}
+  <div class="relative" data-industries-scroll>
+    <div
+      class="industry-panel relative flex flex-col justify-center py-24 lg:h-screen lg:min-h-[700px] lg:overflow-hidden lg:py-0 lg:sticky lg:top-0"
+      data-industries-panel
+    >
+      {/* Cards run off both edges of a pinned panel; the fades stop them being
+          sliced off against a hard border. Only drawn once the panel pins. */}
+      <div
+        class="industry-fade pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-16 bg-gradient-to-r from-[#FAFAFA] to-transparent lg:block"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="industry-fade pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-16 bg-gradient-to-l from-[#FAFAFA] to-transparent lg:block"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="mx-auto w-full max-w-7xl px-6 md:px-12">
+        {/* Header — heading left, the sentence that names all six beside it. */}
+        <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-16">
+          <div class="lg:col-span-7">
+            {
+              eyebrow && (
+                <div class="mb-6 flex translate-y-4 items-center gap-3 opacity-0 reveal-item">
+                  <div class="h-[2px] w-8 bg-general-red" />
+                  <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+                    {eyebrow}
+                  </span>
+                </div>
+              )
+            }
+
+            {
+              heading && (
+                <h2 class="translate-y-8 text-4xl font-black leading-[0.95] tracking-tight text-general-black opacity-0 reveal-item sm:text-5xl lg:text-[56px]">
+                  {lead}
+                  {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
+                </h2>
+              )
+            }
+          </div>
+
+          {
+            intro && (
+              <div class="lg:col-span-5">
+                <p class="translate-y-8 border-l-2 border-general-red/20 pl-8 text-[17px] leading-relaxed text-gray-700 opacity-0 reveal-item">
+                  {intro}
+                </p>
+              </div>
+            )
+          }
+        </div>
+      </div>
+
+      {/* The track. Padded to the container gutter on the left so the first
+          sector lines up under the heading, and running off the right edge. */}
+      <div
+        class="industry-rail mt-12 overflow-x-auto pb-4 lg:mt-16 lg:pb-0"
+        data-industries-rail
+      >
+        <div
+          class="flex gap-5 px-6 md:px-12 lg:gap-6 lg:px-[max(3rem,calc((100vw-80rem)/2+3rem))]"
+          data-industries-track
+        >
+          {
+            sectors.map((sector, index) => (
+              <article
+                class="industry-card group relative flex w-[80vw] max-w-[380px] shrink-0 snap-start flex-col rounded-2xl border border-gray-200 bg-white p-8 opacity-0 reveal-item lg:h-[380px] lg:w-[400px] lg:p-9"
+                style={`transition-delay: ${Math.min(index, 8) * 60}ms`}
+                data-industry
+                data-industry-name={sector.name}
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="industry-mark flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-500 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="26"
+                      height="26"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      set:html={icon(sector.iconName)}
+                    />
+                  </span>
+
+                  <span
+                    class="industry-index text-[13px] font-black tabular-nums tracking-[0.1em] text-gray-300"
+                    aria-hidden="true"
+                  >
+                    {pad(index + 1)} / {total}
+                  </span>
+                </div>
+
+                <h3 class="mt-8 text-[26px] font-bold leading-[1.15] tracking-tight text-general-black">
+                  {sector.name}
+                </h3>
+
+                {sector.description && (
+                  <p class="mt-4 text-[15px] leading-[1.8] text-gray-600">{sector.description}</p>
+                )}
+
+                {/* Foot tick: the cards are a fixed height, so each one is
+                    given a defined end rather than trailing off. */}
+                <span
+                  class="industry-tick mt-auto block h-px w-10 shrink-0 bg-gray-200"
+                  aria-hidden="true"
+                />
+              </article>
+            ))
+          }
+        </div>
+      </div>
+
+      {/* Read-out: which sector is under the eye, and how far the track has
+          travelled. Desktop only — on touch the swipe is its own indicator. */}
+      <div class="mx-auto hidden w-full max-w-7xl px-6 md:px-12 lg:mt-14 lg:block">
+        <div class="flex items-center gap-8">
+          <div class="flex shrink-0 items-baseline gap-3">
+            <span
+              class="text-[40px] font-black leading-none tracking-tighter tabular-nums text-general-black"
+              data-industries-current>01</span
+            >
+            <span class="text-[12px] font-bold uppercase tracking-[0.25em] text-gray-400">
+              / {total} sectors
+            </span>
+          </div>
+
+          <p
+            class="min-w-0 flex-1 truncate text-[15px] font-bold tracking-tight text-gray-500"
+            data-industries-label
+          >
+            {sectors[0]?.name}
+          </p>
+
+          <div class="h-[2px] w-full max-w-sm shrink-0 bg-gray-200">
+            <div
+              class="h-full w-0 bg-general-red transition-[width] duration-150 ease-out"
+              data-industries-progress
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {
+    footnote && (
+      <div class="mx-auto w-full max-w-7xl px-6 pb-24 md:px-12 lg:pb-32">
+        <p class="max-w-3xl translate-y-8 border-l-2 border-general-red/20 pl-6 text-[15px] leading-relaxed text-gray-500 opacity-0 reveal-item">
+          {footnote}
+        </p>
+      </div>
+    )
+  }
+</section>
+
+<style>
+  /* Touch: a plain horizontal swipe, snapped, with the scrollbar out of the
+     way. Desktop takes the same markup over once JS pins the panel. */
+  .industry-rail {
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .industry-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Pinned: the track is driven by transform, so the rail must stop being a
+     scroller and stop clipping what runs off the right edge. */
+  .industry-rail.is-pinned {
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  .industry-rail.is-pinned [data-industries-track] {
+    will-change: transform;
+  }
+
+  .industry-fade {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .industry-panel.is-pinned .industry-fade {
+    opacity: 1;
+  }
+
+  .industry-card,
+  .industry-mark,
+  .industry-index,
+  .industry-tick {
+    transition:
+      border-color 0.5s ease,
+      background-color 0.5s ease,
+      color 0.5s ease,
+      box-shadow 0.5s ease,
+      opacity 0.5s ease;
+  }
+
+  .industry-card.is-active {
+    border-color: rgba(237, 28, 37, 0.25);
+    box-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.25);
+  }
+  .industry-card.is-active .industry-mark,
+  .industry-card:hover .industry-mark {
+    border-color: rgba(237, 28, 37, 0.35);
+    background: #ed1c25;
+    color: #fff;
+    box-shadow: 0 12px 28px rgba(237, 28, 37, 0.22);
+  }
+  .industry-card.is-active .industry-index {
+    color: #ed1c25;
+  }
+  .industry-card.is-active .industry-tick {
+    background: #ed1c25;
+    width: 4rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .industry-card,
+    .industry-mark,
+    .industry-index,
+    .industry-tick,
+    [data-industries-progress] {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+  // Pins the panel and walks the track sideways as the page scrolls down.
+  // The section's own height is set to exactly the distance the track has to
+  // travel, so the page never scrolls further than the content it is moving.
+  // Touch, narrow viewports and reduced-motion keep the native swipe instead.
+  function initIndustries() {
+    document.querySelectorAll<HTMLElement>('[data-industries]').forEach((section) => {
+      // Guard: this runs on both DOMContentLoaded and astro:page-load.
+      if (section.dataset.industriesReady) return
+      section.dataset.industriesReady = 'true'
+
+      const scroller = section.querySelector<HTMLElement>('[data-industries-scroll]')
+      const panel = section.querySelector<HTMLElement>('[data-industries-panel]')
+      const rail = section.querySelector<HTMLElement>('[data-industries-rail]')
+      const track = section.querySelector<HTMLElement>('[data-industries-track]')
+      const cards = Array.from(section.querySelectorAll<HTMLElement>('[data-industry]'))
+      const counter = section.querySelector<HTMLElement>('[data-industries-current]')
+      const label = section.querySelector<HTMLElement>('[data-industries-label]')
+      const progress = section.querySelector<HTMLElement>('[data-industries-progress]')
+
+      if (!scroller || !panel || !rail || !track || !cards.length) return
+
+      const desktop = window.matchMedia('(min-width: 1024px)')
+      const fine = window.matchMedia('(hover: hover) and (pointer: fine)')
+      const motion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+      let pinned = false
+      let travel = 0
+      let frame = 0
+      let active = -1
+
+      const canPin = () => desktop.matches && fine.matches && !motion.matches
+
+      /** The last card comes to rest inside the right gutter, not on it, so
+          the distance is measured off the card rather than off scrollWidth —
+          which drops the track's trailing padding. */
+      const overflow = () => {
+        const previous = track.style.transform
+        track.style.transform = 'none'
+        const gutter = parseFloat(window.getComputedStyle(track).paddingLeft) || 0
+        const last = cards[cards.length - 1].getBoundingClientRect()
+        const distance = last.right - panel.getBoundingClientRect().left + gutter - panel.clientWidth
+        track.style.transform = previous
+        return distance
+      }
+
+      const measure = () => {
+        if (!canPin()) {
+          if (pinned) {
+            pinned = false
+            rail.classList.remove('is-pinned')
+            panel.classList.remove('is-pinned')
+            scroller.style.height = ''
+            track.style.transform = ''
+          }
+          return
+        }
+
+        pinned = true
+        rail.classList.add('is-pinned')
+        panel.classList.add('is-pinned')
+        travel = Math.max(overflow(), 0)
+        scroller.style.height = `${panel.offsetHeight + travel}px`
+      }
+
+      const paint = () => {
+        frame = 0
+
+        let ratio = 0
+        if (pinned && travel > 0) {
+          const top = scroller.getBoundingClientRect().top
+          ratio = Math.min(Math.max(-top / travel, 0), 1)
+          track.style.transform = `translate3d(${-(ratio * travel)}px, 0, 0)`
+        } else if (!pinned) {
+          const span = rail.scrollWidth - rail.clientWidth
+          ratio = span > 0 ? rail.scrollLeft / span : 0
+        }
+
+        if (progress) progress.style.width = `${ratio * 100}%`
+
+        // The lit card is read off the travel rather than off a fixed line on
+        // screen: that way the track opens on the first sector and closes on
+        // the last one, and the highlight itself walks left to right.
+        const nearest = Math.round(ratio * (cards.length - 1))
+
+        if (nearest === active) return
+        active = nearest
+
+        cards.forEach((card, index) => card.classList.toggle('is-active', index === active))
+        if (counter) counter.textContent = String(active + 1).padStart(2, '0')
+        if (label) label.textContent = cards[active]?.dataset.industryName ?? ''
+      }
+
+      const request = () => {
+        if (!frame) frame = window.requestAnimationFrame(paint)
+      }
+
+      const remeasure = () => {
+        measure()
+        request()
+      }
+
+      window.addEventListener('scroll', request, { passive: true })
+      window.addEventListener('resize', remeasure)
+      rail.addEventListener('scroll', request, { passive: true })
+      desktop.addEventListener('change', remeasure)
+      motion.addEventListener('change', remeasure)
+
+      // Web fonts land after first paint and change the track's width.
+      if ('fonts' in document) (document as any).fonts.ready.then(remeasure)
+
+      remeasure()
+    })
+  }
+
+  document.addEventListener('astro:page-load', initIndustries)
+  document.addEventListener('DOMContentLoaded', initIndustries)
+</script>

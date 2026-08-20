@@ -67,37 +67,46 @@ const { lead, accent } = splitAccent(heading)
 }
 
 {
-  /* Light editorial: mid-page. Heading sits left against the actions on the
-     right, so it breaks the centred rhythm of the dark slabs entirely. */
+  /* Dark panel: a contained slab inside the white page. Rounded, red-edged and
+     lit from the top so it reads as an inset destination between two light
+     bands, rather than breaking the page open the way the full-bleed dark
+     variant does. */
   variant === 'light' && (
-    <section class="border-t border-gray-100 bg-white px-6 py-24 md:px-12 lg:py-28">
+    <section class="bg-white px-6 py-20 md:px-12 lg:py-24">
       <div class="mx-auto max-w-7xl">
-        <div class="grid items-end gap-10 lg:grid-cols-12 lg:gap-16">
-          <div class="lg:col-span-7">
-            <div class="reveal-item mb-6 flex translate-y-4 items-center gap-3 opacity-0">
-              <div class="h-[2px] w-8 bg-general-red" />
-              <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
-                {eyebrow}
-              </span>
-            </div>
+        <div class="reveal-item relative translate-y-8 overflow-hidden rounded-[28px] border border-general-red/25 bg-[#0e0e11] px-6 py-20 text-center text-white opacity-0 md:px-16 md:py-24">
+          <div
+            class="pointer-events-none absolute inset-x-0 top-0 h-[360px]"
+            style="background: radial-gradient(ellipse 60% 100% at 50% 0%, rgba(237,28,37,0.18) 0%, rgba(237,28,37,0) 70%)"
+            aria-hidden="true"
+          />
 
-            <h2 class="reveal-item translate-y-8 text-4xl font-black leading-[0.95] tracking-tight text-general-black opacity-0 sm:text-5xl lg:text-[56px]">
+          <div class="relative mx-auto flex max-w-3xl flex-col items-center">
+            {eyebrow && (
+              <div class="mb-6 flex items-center gap-3">
+                <div class="h-[2px] w-8 bg-general-red" />
+                <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+                  {eyebrow}
+                </span>
+                <div class="h-[2px] w-8 bg-general-red" />
+              </div>
+            )}
+
+            <h2 class="bg-linear-to-b from-white to-white/60 bg-clip-text text-3xl font-black leading-[1.05] tracking-tight text-transparent sm:text-4xl lg:text-[44px]">
               {lead}
               {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
             </h2>
-          </div>
 
-          <div class="lg:col-span-5">
-            {body && (
-              <p class="reveal-item translate-y-8 border-l-2 border-general-red/10 pl-8 text-lg leading-relaxed text-gray-700 opacity-0">
-                {body}
-              </p>
-            )}
+            {body && <p class="mt-6 text-lg leading-relaxed text-white/60">{body}</p>}
 
             {actions.length > 0 && (
-              <div class="reveal-item mt-8 flex translate-y-8 flex-col gap-4 opacity-0 sm:flex-row lg:pl-8">
+              <div class="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
                 {actions.map((action) => (
-                  <Button link={action.link} class="w-full sm:w-auto" />
+                  <Button
+                    link={action.link}
+                    tone="dark"
+                    class="w-full bg-linear-to-r! from-general-red! to-[#ff5a45]! text-white! shadow-[0_14px_44px_-10px_rgba(237,28,37,0.65)] hover:brightness-110 sm:w-auto"
+                  />
                 ))}
               </div>
             )}

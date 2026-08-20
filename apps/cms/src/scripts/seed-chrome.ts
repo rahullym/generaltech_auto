@@ -261,27 +261,14 @@ const run = async () => {
     intro.media = [{ image: panelInspection.id }, { image: boardRepair.id }]
   }
 
-  // The full-bleed banner between the intro and the first CTA was dropped: with
-  // the intro's photo collage right above it, the page carried two large
-  // photographs back to back before a single service was named.
+  // The homepage carries no standalone photography any more. The full-bleed
+  // banner went first (it stacked a second large photograph right under the
+  // intro collage), and the contained DeltaV shot above Service Coverage went
+  // with it — the coverage section now holds the screen on its own, and a
+  // photograph directly above it only pushed it off. The photo still appears
+  // in the hero rotation.
   for (let i = layout.length - 1; i >= 0; i -= 1) {
-    if (layout[i]?.blockType === 'media' && layout[i]?.size === 'full') layout.splice(i, 1)
-  }
-
-  // One contained image remains, between Industries and Service Coverage.
-  if (!layout.some((block) => block.blockType === 'media')) {
-    const coverage = indexOf(
-      (block) =>
-        block.blockType === 'richText' &&
-        JSON.stringify(block.content).includes('Service Coverage Across the UAE'),
-    )
-    if (coverage > 0) {
-      layout.splice(coverage, 0, {
-        blockType: 'media',
-        media: deltaVImage.id,
-        size: 'contained',
-      })
-    }
+    if (layout[i]?.blockType === 'media') layout.splice(i, 1)
   }
 
   // The brand wall sits before the FAQ, as "Our Brands" does on the live site.
