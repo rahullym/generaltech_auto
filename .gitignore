@@ -10,3 +10,4 @@ media/
 .env.*
 !.env.example
 .DS_Store
+.vercel/

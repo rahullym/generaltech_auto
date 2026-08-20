@@ -1,6 +1,7 @@
 // @ts-check
 import node from '@astrojs/node'
 import sitemap from '@astrojs/sitemap'
+import vercel from '@astrojs/vercel'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
 
@@ -10,7 +11,11 @@ export default defineConfig({
   // SSR: content is read from Payload on each request, so edits go live
   // immediately. Individual routes can still opt into `prerender = true`.
   output: 'server',
-  adapter: node({ mode: 'standalone' }),
+
+  // Vercel sets VERCEL=1 in its build container. Everywhere else — local
+  // `pnpm start`, Docker, a plain VPS — the standalone Node server is what
+  // runs, so the adapter is chosen rather than swapped.
+  adapter: process.env.VERCEL ? vercel() : node({ mode: 'standalone' }),
 
   integrations: [sitemap()],
 
