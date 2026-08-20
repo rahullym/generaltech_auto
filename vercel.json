@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "pnpm --filter web build && ([ -d .vercel/output ] || (mkdir -p .vercel && cp -R apps/web/.vercel/output .vercel/output))"
+  "buildCommand": "sh scripts/vercel-build.sh"
 }
