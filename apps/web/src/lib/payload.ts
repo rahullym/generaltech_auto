@@ -1,5 +1,6 @@
 import { PAYLOAD_API_KEY, PAYLOAD_URL } from 'astro:env/server'
 
+import { findInSnapshot, generatedAt, globalFromSnapshot, hasCollection } from './snapshot'
 import type { Doc, Global, Page, PaginatedDocs, Post, Category } from './types'
 
 export type FindArgs = {
@@ -89,9 +90,40 @@ const request = async <T>(path: string, draft = false): Promise<T> => {
   return (await res.json()) as T
 }
 
+/**
+ * True when the CMS could not be reached at all, or answered with a server
+ * error — as opposed to answering "no such document", which is a real answer.
+ *
+ * A deployed site has no CMS to reach until one is hosted, so this is the
+ * normal path in production rather than an exceptional one.
+ */
+const unreachable = (error: unknown): boolean =>
+  error instanceof PayloadError ? error.status >= 500 : true
+
+let warned = false
+
+const fallback = <T>(collection: string, error: unknown, read: () => T): T => {
+  if (!warned) {
+    warned = true
+    console.warn(
+      `[payload] ${PAYLOAD_URL} is unreachable — serving the snapshot taken ${generatedAt}. ` +
+        'Run `pnpm --filter web snapshot` after content edits, or point PAYLOAD_URL at a live CMS.',
+    )
+  }
+  if (collection && !hasCollection(collection)) throw error
+  return read()
+}
+
 /** Fetch a page of documents from a collection. */
-export const find = async <T>(collection: string, args: FindArgs = {}): Promise<PaginatedDocs<T>> =>
-  request<PaginatedDocs<T>>(`/${collection}${buildQuery(args)}`, args.draft)
+export const find = async <T>(collection: string, args: FindArgs = {}): Promise<PaginatedDocs<T>> => {
+  try {
+    return await request<PaginatedDocs<T>>(`/${collection}${buildQuery(args)}`, args.draft)
+  } catch (error) {
+    // Drafts are only ever readable from the CMS itself, so preview fails loudly.
+    if (args.draft || !unreachable(error)) throw error
+    return fallback(collection, error, () => findInSnapshot<T>(collection, args))
+  }
+}
 
 /** Fetch a single document by slug, or null when it does not exist. */
 export const findBySlug = async <T>(
@@ -112,7 +144,14 @@ export const findBySlug = async <T>(
 export const findGlobal = async <T extends Global>(
   slug: string,
   args: Pick<FindArgs, 'depth' | 'draft'> = {},
-): Promise<T> => request<T>(`/globals/${slug}${buildQuery(args)}`, args.draft)
+): Promise<T> => {
+  try {
+    return await request<T>(`/globals/${slug}${buildQuery(args)}`, args.draft)
+  } catch (error) {
+    if (args.draft || !unreachable(error)) throw error
+    return fallback('', error, () => globalFromSnapshot<T>(slug))
+  }
+}
 
 // -- Convenience wrappers used across routes ------------------------------
 
