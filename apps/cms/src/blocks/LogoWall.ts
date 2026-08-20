@@ -10,6 +10,17 @@ export const LogoWall: Block = {
     { name: 'heading', type: 'text' },
     { name: 'intro', type: 'textarea' },
     {
+      // A long roster in a six-column grid runs to eleven rows of near-empty
+      // space; the marquee shows the same marks in two scrolling bands.
+      name: 'layout',
+      type: 'select',
+      defaultValue: 'grid',
+      options: [
+        { label: 'Grid', value: 'grid' },
+        { label: 'Scrolling bands (best for long rosters)', value: 'marquee' },
+      ],
+    },
+    {
       name: 'logos',
       type: 'array',
       minRows: 1,

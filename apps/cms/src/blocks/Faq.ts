@@ -5,7 +5,13 @@ export const Faq: Block = {
   interfaceName: 'FaqBlock',
   labels: { singular: 'FAQ', plural: 'FAQs' },
   fields: [
+    {
+      name: 'eyebrow',
+      type: 'text',
+      admin: { description: 'Red kicker above the heading. Defaults to "Knowledge Base".' },
+    },
     { name: 'heading', type: 'text' },
+    { name: 'intro', type: 'textarea' },
     {
       name: 'items',
       type: 'array',

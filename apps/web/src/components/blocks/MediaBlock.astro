@@ -5,26 +5,79 @@ import type { Media } from '@/lib/types'
 interface Props {
   media: Media | string
   caption?: string
+  overline?: string
   size?: 'contained' | 'full'
+  aspect?: 'natural' | 'wide' | 'cinematic'
 }
 
-const { media, caption, size = 'contained' } = Astro.props
+const { media, caption, overline, size = 'contained', aspect = 'natural' } = Astro.props
+
 const full = size === 'full'
+
+// A cropped band keeps the page rhythm predictable regardless of how the
+// source photograph was shot; `natural` leaves the image untouched.
+const ratio: Record<string, string> = {
+  natural: '',
+  wide: 'aspect-[16/9]',
+  cinematic: 'aspect-[21/9]',
+}
+const cropped = aspect !== 'natural'
 ---
 
-<section class:list={['bg-white', full ? 'py-20' : 'px-6 md:px-12 py-20']}>
-  <figure class:list={['mx-auto opacity-0 translate-y-8 reveal-item', full ? 'max-w-none' : 'max-w-7xl']}>
-    <Picture
-      media={media}
-      sizes={full ? '100vw' : '(min-width: 1280px) 1280px, 100vw'}
-      class:list={['w-full object-cover', full ? '' : 'rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.10)]']}
-    />
+<section
+  class:list={[
+    'relative bg-white',
+    full ? 'py-20 lg:py-24' : 'px-6 py-20 md:px-12 lg:py-24',
+  ]}
+>
+  <figure class:list={['reveal-item mx-auto translate-y-8 opacity-0', full ? 'max-w-none' : 'max-w-7xl']}>
+    <div
+      class:list={[
+        'group relative overflow-hidden',
+        ratio[aspect],
+        !full && 'rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.10)]',
+      ]}
+    >
+      <Picture
+        media={media}
+        sizes={full ? '100vw' : '(min-width: 1280px) 1280px, 100vw'}
+        class:list={[
+          'w-full transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]',
+          cropped ? 'h-full object-cover' : 'h-auto',
+        ]}
+      />
+
+      {
+        overline && (
+          <>
+            {/* Scrim only where the label sits, so the photograph stays clean. */}
+            <div
+              class="pointer-events-none absolute inset-x-0 bottom-0 h-2/5"
+              style="background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%)"
+              aria-hidden="true"
+            />
+            <div class="absolute bottom-0 left-0 flex items-center gap-3 p-6 md:p-10">
+              <span class="h-[2px] w-8 shrink-0 bg-general-red" aria-hidden="true" />
+              <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-white">
+                {overline}
+              </span>
+            </div>
+          </>
+        )
+      }
+    </div>
+
     {
       caption && (
-        <figcaption class="mt-6 flex items-center justify-center gap-3 text-[11px] font-bold tracking-[0.25em] uppercase text-gray-400">
-          <span class="w-6 h-[1px] bg-general-red" />
+        <figcaption
+          class:list={[
+            'mt-6 flex items-center justify-center gap-3 text-[11px] font-bold uppercase tracking-[0.25em] text-gray-500',
+            full && 'px-6 md:px-12',
+          ]}
+        >
+          <span class="h-[1px] w-6 bg-general-red" aria-hidden="true" />
           {caption}
-          <span class="w-6 h-[1px] bg-general-red" />
+          <span class="h-[1px] w-6 bg-general-red" aria-hidden="true" />
         </figcaption>
       )
     }

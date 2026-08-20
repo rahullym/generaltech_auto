@@ -482,6 +482,11 @@ export interface MediaBlock {
   media: number | Media;
   caption?: string | null;
   size?: ('contained' | 'full') | null;
+  aspect?: ('natural' | 'wide' | 'cinematic') | null;
+  /**
+   * Optional label set over the image, e.g. a site or project name.
+   */
+  overline?: string | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'media';
@@ -566,6 +571,7 @@ export interface LogoWallBlock {
   eyebrow?: string | null;
   heading?: string | null;
   intro?: string | null;
+  layout?: ('grid' | 'marquee') | null;
   logos: {
     image: number | Media;
     name?: string | null;
@@ -581,6 +587,10 @@ export interface LogoWallBlock {
  * via the `definition` "CallToActionBlock".
  */
 export interface CallToActionBlock {
+  /**
+   * Vary this between CTAs on the same page so they do not read as repeats.
+   */
+  variant?: ('dark' | 'light' | 'compact') | null;
   eyebrow?: string | null;
   heading: string;
   body?: string | null;
@@ -618,7 +628,12 @@ export interface CallToActionBlock {
  * via the `definition` "FaqBlock".
  */
 export interface FaqBlock {
+  /**
+   * Red kicker above the heading. Defaults to "Knowledge Base".
+   */
+  eyebrow?: string | null;
   heading?: string | null;
+  intro?: string | null;
   items: {
     question: string;
     answer: {
@@ -833,6 +848,8 @@ export interface MediaBlockSelect<T extends boolean = true> {
   media?: T;
   caption?: T;
   size?: T;
+  aspect?: T;
+  overline?: T;
   id?: T;
   blockName?: T;
 }
@@ -894,6 +911,7 @@ export interface LogoWallBlockSelect<T extends boolean = true> {
   eyebrow?: T;
   heading?: T;
   intro?: T;
+  layout?: T;
   logos?:
     | T
     | {
@@ -910,6 +928,7 @@ export interface LogoWallBlockSelect<T extends boolean = true> {
  * via the `definition` "CallToActionBlock_select".
  */
 export interface CallToActionBlockSelect<T extends boolean = true> {
+  variant?: T;
   eyebrow?: T;
   heading?: T;
   body?: T;
@@ -936,7 +955,9 @@ export interface CallToActionBlockSelect<T extends boolean = true> {
  * via the `definition` "FaqBlock_select".
  */
 export interface FaqBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
   heading?: T;
+  intro?: T;
   items?:
     | T
     | {

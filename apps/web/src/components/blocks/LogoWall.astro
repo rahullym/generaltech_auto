@@ -1,45 +1,137 @@
 ---
-import SectionHeader from '../SectionHeader.astro'
 import Picture from '../Picture.astro'
+import SectionHeader from '../SectionHeader.astro'
 import type { Media } from '@/lib/types'
 
 interface Props {
   eyebrow?: string
   heading?: string
   intro?: string
+  layout?: 'grid' | 'marquee'
   logos: { id?: string; image: Media | string; name?: string; url?: string }[]
 }
 
-const { eyebrow, heading, intro, logos = [] } = Astro.props
+const { eyebrow, heading, intro, layout = 'grid', logos = [] } = Astro.props
+
+// Two bands running opposite directions read as motion rather than a loop.
+// Each band is duplicated so translating -50% lands on an identical frame.
+const half = Math.ceil(logos.length / 2)
+const bands = layout === 'marquee' ? [logos.slice(0, half), logos.slice(half)] : []
 ---
 
-<section class="bg-white px-6 md:px-12 py-24 lg:py-32 border-t border-gray-100">
+<section class="border-t border-gray-100 bg-white px-6 py-24 md:px-12 lg:py-32">
   <div class="mx-auto max-w-7xl">
-    {(eyebrow || heading || intro) && <SectionHeader eyebrow={eyebrow} heading={heading} intro={intro} />}
-
-    <div
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px bg-gray-100 border border-gray-100 rounded-2xl overflow-hidden"
-    >
-      {
-        logos.map((logo, index) => {
-          const Tag = logo.url ? 'a' : 'div'
-
-          return (
-            <Tag
-              {...logo.url ? { href: logo.url, target: '_blank', rel: 'noopener noreferrer' } : {}}
-              title={logo.name}
-              class="group flex aspect-[3/2] items-center justify-center bg-white p-6 opacity-0 translate-y-4 reveal-item transition-colors duration-500 hover:bg-gray-50"
-              style={`transition-delay: ${Math.min(index, 24) * 25}ms`}
-            >
-              <Picture
-                media={logo.image}
-                raw
-                class="max-h-12 w-auto max-w-full object-contain grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100"
-              />
-            </Tag>
-          )
-        })
-      }
-    </div>
+    {(eyebrow || heading || intro) && (
+      <SectionHeader eyebrow={eyebrow} heading={heading} intro={intro} />
+    )}
   </div>
+
+  {
+    layout === 'grid' && (
+      <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-gray-100 bg-gray-100 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {logos.map((logo, index) => {
+            const Tag = logo.url ? 'a' : 'div'
+
+            return (
+              <Tag
+                {...(logo.url
+                  ? { href: logo.url, target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
+                title={logo.name}
+                class="reveal-item group flex aspect-[3/2] translate-y-4 items-center justify-center bg-white p-6 opacity-0 transition-colors duration-500 hover:bg-gray-50"
+                style={`transition-delay: ${Math.min(index, 24) * 25}ms`}
+              >
+                <Picture
+                  media={logo.image}
+                  raw
+                  class="max-h-12 w-auto max-w-full object-contain opacity-60 grayscale transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0"
+                />
+              </Tag>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+
+  {
+    layout === 'marquee' && (
+      <div class="logo-marquee relative">
+        {/* Faded edges so marks enter and leave rather than being cut off. */}
+        <div
+          class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 md:w-32"
+          style="background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%)"
+          aria-hidden="true"
+        />
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 md:w-32"
+          style="background: linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%)"
+          aria-hidden="true"
+        />
+
+        {bands.map((band, bandIndex) => (
+          <div class="overflow-hidden py-3">
+            <div
+              class:list={['logo-track flex w-max items-center', bandIndex === 1 && 'is-reverse']}
+            >
+              {/* Rendered twice; the second copy is hidden from assistive tech. */}
+              {[0, 1].map((copy) =>
+                band.map((logo) => {
+                  const Tag = logo.url && copy === 0 ? 'a' : 'div'
+
+                  return (
+                    <Tag
+                      {...(logo.url && copy === 0
+                        ? { href: logo.url, target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                      {...(copy === 1 ? { 'aria-hidden': 'true' } : {})}
+                      title={copy === 0 ? logo.name : undefined}
+                      class="group flex h-24 w-[168px] shrink-0 items-center justify-center px-6 md:w-[200px]"
+                    >
+                      <Picture
+                        media={logo.image}
+                        raw
+                        class="max-h-11 w-auto max-w-full object-contain opacity-55 grayscale transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0"
+                      />
+                    </Tag>
+                  )
+                }),
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    )
+  }
 </section>
+
+<style>
+  @keyframes logo-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .logo-track {
+    animation: logo-scroll 60s linear infinite;
+  }
+  .logo-track.is-reverse {
+    animation-direction: reverse;
+  }
+  /* Pausing on hover lets a reader actually look at a mark they recognise. */
+  .logo-marquee:hover .logo-track {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo-track {
+      animation: none;
+      /* Without motion the duplicated copy is redundant, so scroll instead. */
+      overflow-x: auto;
+    }
+  }
+</style>
