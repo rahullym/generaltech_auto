@@ -16,6 +16,12 @@ interface Props {
   sticky?: boolean
   /** Dark sections invert the copy colours. */
   tone?: 'light' | 'dark'
+  /**
+   * Collapsed height of the intro, in pixels. ReadMore only grows a toggle
+   * when the copy exceeds this by a clear margin, so a section with a long
+   * intro needs a lower value than the default to clamp at all.
+   */
+  introCollapseHeight?: number
   class?: string
 }
 
@@ -26,6 +32,7 @@ const {
   align = 'center',
   sticky = false,
   tone = 'light',
+  introCollapseHeight = 210,
   class: className,
 } = Astro.props
 
@@ -98,7 +105,7 @@ const centered = align === 'center'
         <div class={centered ? 'contents' : 'flex-1 max-w-xl opacity-0 translate-y-8 reveal-item'}>
           <ReadMore
             tone={dark ? 'dark' : 'white'}
-            height={210}
+            height={introCollapseHeight}
             class={
               centered
                 ? 'max-w-2xl mx-auto border-t border-general-red/10 pt-8 opacity-0 translate-y-8 reveal-item'

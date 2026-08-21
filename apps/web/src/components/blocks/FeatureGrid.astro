@@ -53,7 +53,15 @@ const ICONS: Record<string, string> = {
 
 <section class="relative border-t border-gray-100 bg-white px-6 py-24 md:px-12 lg:py-32">
   <div class="max-w-7xl mx-auto relative z-10">
-    {(heading || intro) && <SectionHeader heading={heading} intro={intro} align="split" sticky />}
+    {(heading || intro) && (
+      <SectionHeader
+        heading={heading}
+        intro={intro}
+        align="split"
+        sticky
+        introCollapseHeight={140}
+      />
+    )}
 
     {
       carousel && (
