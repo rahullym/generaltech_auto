@@ -11,3 +11,6 @@ media/
 !.env.example
 .DS_Store
 .vercel/
+
+# Throwaway theme-comparison route; keep it local, never deploy it.
+apps/web/src/pages/style-lab.astro
