@@ -455,7 +455,7 @@ export interface RichTextBlock {
    */
   lede?: boolean | null;
   /**
-   * Shows the opening of the copy and lets the reader expand the rest, keeping the section short.
+   * On by default: a long passage shows its opening and the reader expands the rest. Copy that already fits is never clamped, whatever this says. Untick to publish the passage open.
    */
   collapsible?: boolean | null;
   content: {

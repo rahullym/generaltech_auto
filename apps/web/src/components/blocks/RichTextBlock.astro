@@ -1,5 +1,6 @@
 ---
 import Picture from '../Picture.astro'
+import ReadMore from '../ReadMore.astro'
 import RichText from '../RichText.astro'
 import { splitAccent } from '@/lib/accent'
 import type { Media, RichTextValue } from '@/lib/types'
@@ -40,6 +41,11 @@ const imageFirst = mediaPosition === 'left'
 const { lead, accent } = splitAccent(heading)
 
 const copyClass = [lede && 'prose-lede', numbered && 'prose-beats'].filter(Boolean).join(' ')
+
+// Long passages clamp behind a "Read more" by default; an editor can untick
+// the field to publish one open. Payload sends an unset checkbox as null, so
+// only an explicit false counts as off.
+const clamp = collapsible ?? true
 ---
 
 {
@@ -73,7 +79,9 @@ const copyClass = [lede && 'prose-lede', numbered && 'prose-beats'].filter(Boole
 
         <div class="lg:col-span-7">
           <div class="opacity-0 translate-y-8 reveal-item">
-            <RichText value={content} class={copyClass || undefined} />
+            <ReadMore enabled={clamp} tone="light" height={320}>
+              <RichText value={content} class={copyClass || undefined} />
+            </ReadMore>
           </div>
         </div>
       </div>
@@ -132,24 +140,9 @@ const copyClass = [lede && 'prose-lede', numbered && 'prose-beats'].filter(Boole
           <div class="opacity-0 translate-y-8 reveal-item">
             <div class="mb-8 h-[2px] w-16 bg-general-red" aria-hidden="true" />
 
-            <div class="copy-collapse" data-collapsible={collapsible ? '' : undefined}>
-              <div class="copy-collapse-body" data-collapse-body>
-                <RichText value={content} class={copyClass || undefined} />
-              </div>
-
-              {collapsible && (
-                <button
-                  type="button"
-                  class="mt-6 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.15em] text-general-red transition-colors hover:text-general-black"
-                  data-collapse-toggle
-                  aria-expanded="false"
-                  hidden
-                >
-                  <span data-collapse-label>Read more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300" data-collapse-chevron aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-                </button>
-              )}
-            </div>
+            <ReadMore enabled={clamp}>
+              <RichText value={content} class={copyClass || undefined} />
+            </ReadMore>
           </div>
         </div>
       </div>
@@ -162,82 +155,11 @@ const copyClass = [lede && 'prose-lede', numbered && 'prose-beats'].filter(Boole
           width === 'prose' ? 'max-w-3xl' : 'max-w-7xl',
         ]}
       >
-        <div class="copy-collapse" data-collapsible={collapsible ? '' : undefined}>
-          <div class="copy-collapse-body" data-collapse-body>
-            <RichText value={content} class={copyClass || undefined} />
-          </div>
-
-          {collapsible && (
-            <button
-              type="button"
-              class="mt-6 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.15em] text-general-red transition-colors hover:text-general-black"
-              data-collapse-toggle
-              aria-expanded="false"
-              hidden
-            >
-              <span data-collapse-label>Read more</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300" data-collapse-chevron aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-          )}
-        </div>
+        <ReadMore enabled={clamp}>
+          <RichText value={content} class={copyClass || undefined} />
+        </ReadMore>
       </div>
     </section>
   )
 }
 
-<script>
-  // Long copy is clamped to a few lines with a fade, and the rest is revealed by
-  // the toggle. The clamp is applied here rather than in CSS so that with no
-  // JavaScript the reader still gets the whole passage.
-  const COLLAPSED = 260
-
-  function initCollapse() {
-    document.querySelectorAll<HTMLElement>('.copy-collapse[data-collapsible]').forEach((root) => {
-      // Guard: this runs on both DOMContentLoaded and astro:page-load.
-      if (root.dataset.collapseReady) return
-      root.dataset.collapseReady = 'true'
-
-      const body = root.querySelector<HTMLElement>('[data-collapse-body]')
-      const toggle = root.querySelector<HTMLButtonElement>('[data-collapse-toggle]')
-      const label = root.querySelector<HTMLElement>('[data-collapse-label]')
-      const chevron = root.querySelector<HTMLElement>('[data-collapse-chevron]')
-      if (!body || !toggle) return
-
-      // Already short enough — leave it alone and keep the toggle hidden.
-      if (body.scrollHeight <= COLLAPSED + 80) return
-
-      body.style.overflow = 'hidden'
-      body.style.transition = 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
-      body.style.maxHeight = `${COLLAPSED}px`
-      root.classList.add('is-collapsed')
-      toggle.hidden = false
-
-      toggle.addEventListener('click', () => {
-        const collapsed = root.classList.contains('is-collapsed')
-
-        if (collapsed) {
-          body.style.maxHeight = `${body.scrollHeight}px`
-        } else {
-          // Coming back from `none`, give the transition a starting value.
-          body.style.maxHeight = `${body.scrollHeight}px`
-          void body.offsetHeight
-          body.style.maxHeight = `${COLLAPSED}px`
-        }
-        root.classList.toggle('is-collapsed', !collapsed)
-        toggle.setAttribute('aria-expanded', String(collapsed))
-        if (label) label.textContent = collapsed ? 'Read less' : 'Read more'
-        chevron?.classList.toggle('rotate-180', collapsed)
-
-        // Once open, drop the cap so later reflows (fonts, images) are not clipped.
-        if (collapsed) {
-          window.setTimeout(() => {
-            if (!root.classList.contains('is-collapsed')) body.style.maxHeight = 'none'
-          }, 550)
-        }
-      })
-    })
-  }
-
-  document.addEventListener('astro:page-load', initCollapse)
-  document.addEventListener('DOMContentLoaded', initCollapse)
-</script>

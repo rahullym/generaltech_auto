@@ -77,10 +77,11 @@ export const RichTextBlock: Block = {
     {
       name: 'collapsible',
       type: 'checkbox',
+      defaultValue: true,
       label: 'Collapse behind a "Read more" toggle',
       admin: {
         description:
-          'Shows the opening of the copy and lets the reader expand the rest, keeping the section short.',
+          'On by default: a long passage shows its opening and the reader expands the rest. Copy that already fits is never clamped, whatever this says. Untick to publish the passage open.',
       },
     },
     { name: 'content', type: 'richText', required: true },

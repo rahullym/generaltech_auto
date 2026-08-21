@@ -194,6 +194,13 @@
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
   pointer-events: none;
 }
+/* The fade has to resolve into the band it sits on, or it reads as a smear. */
+.copy-collapse--light.is-collapsed .copy-collapse-body::after {
+  background: linear-gradient(to bottom, rgba(250, 250, 250, 0), #fafafa);
+}
+.copy-collapse--dark.is-collapsed .copy-collapse-body::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+}
 .copy-collapse.is-collapsed .copy-collapse-body {
   position: relative;
 }

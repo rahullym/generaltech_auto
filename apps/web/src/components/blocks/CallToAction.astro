@@ -1,5 +1,6 @@
 ---
 import Button from '../Button.astro'
+import ReadMore from '../ReadMore.astro'
 import { splitAccent } from '@/lib/accent'
 import type { LinkValue } from '@/lib/types'
 
@@ -52,7 +53,9 @@ const label = (eyebrow ?? 'Get in touch').trim()
 
           {body && (
             <div class="reveal-item mx-auto w-full max-w-2xl translate-y-8 border-t border-white/10 pt-8 opacity-0">
-              <p class="text-lg leading-relaxed text-white/60">{body}</p>
+              <ReadMore tone="dark" height={200}>
+                <p class="text-lg leading-relaxed text-white/60">{body}</p>
+              </ReadMore>
             </div>
           )}
         </div>

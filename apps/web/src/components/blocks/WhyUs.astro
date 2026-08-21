@@ -1,4 +1,5 @@
 ---
+import ReadMore from '../ReadMore.astro'
 import { splitAccent } from '@/lib/accent'
 
 interface Props {
@@ -127,9 +128,11 @@ const fillers = (count: number, columns: number) =>
               {pillar.title}
             </h3>
 
-            <p class="mt-5 text-[15px] leading-[1.85] text-white/55 transition-colors duration-500 group-hover:text-white/70">
-              {pillar.body}
-            </p>
+            <ReadMore tone="dark" height={190} class="mt-5">
+              <p class="text-[15px] leading-[1.85] text-white/55 transition-colors duration-500 group-hover:text-white/70">
+                {pillar.body}
+              </p>
+            </ReadMore>
 
             {/* Foot tick: the columns are unequal by nature — the bodies are the
                 approved copy — so each one is given a defined end. */}
