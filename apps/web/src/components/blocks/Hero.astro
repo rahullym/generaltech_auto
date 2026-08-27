@@ -46,12 +46,16 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
 
 {
   variant === 'banner' ? (
+    /* Centred dark banner: the photography runs full bleed behind the copy,
+       which is centred in a single measure. Scrims are layered so the type
+       stays legible over any slide, and the partner marks close the section
+       along the bottom edge. */
     <section
       class="hero-banner relative flex min-h-screen flex-col overflow-hidden bg-general-black"
       data-slides={slides.length}
     >
       {/* Background slideshow */}
-      <div class="absolute inset-0 z-0 overflow-hidden">
+      <div class="absolute inset-0 z-0">
         {slides.map((slide, index) => (
           <div
             class:list={[
@@ -70,74 +74,76 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
           </div>
         ))}
 
-        {/* Scrims: dark from the left for the copy, dark from the bottom for the
-            marquee, plus a faint red wash so the photo carries the brand. */}
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/30" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-        <div class="absolute inset-0 bg-general-red/5 mix-blend-overlay" />
+        {/* Centre-weighted scrim: darkest behind the copy, easing out to the
+            edges so the photograph still reads at the corners. */}
+        <div
+          class="absolute inset-0"
+          style="background: radial-gradient(ellipse 90% 75% at 50% 45%, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.72) 100%)"
+          aria-hidden="true"
+        />
+        <div
+          class="absolute inset-0"
+          style="background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 45%)"
+          aria-hidden="true"
+        />
+        <div class="absolute inset-0 bg-general-red/5 mix-blend-overlay" aria-hidden="true" />
       </div>
 
-      {/* Copy */}
-      <div
-        class="relative z-10 flex min-h-0 w-full flex-1 flex-col justify-center pt-40 pb-10 md:pt-48 lg:pt-52"
-        id="hero-content"
-      >
-        <div class="mx-auto w-full max-w-7xl px-6 md:px-12">
-          <div class="max-w-4xl">
-            {eyebrow && (
-              <div class="hero-reveal mb-6 flex items-center gap-3 opacity-0 translate-y-4 transition-all duration-1000 delay-100">
-                <div class="h-[2px] w-10 bg-general-red" />
-                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white">
-                  {eyebrow}
-                </span>
-              </div>
-            )}
+      {/* Copy — centred in one measure. */}
+      <div class="relative z-10 flex flex-1 items-center justify-center px-6 pb-20 pt-[124px] md:px-12 md:pb-24 md:pt-[172px]">
+        <div class="mx-auto w-full max-w-4xl text-center">
+          {eyebrow && (
+            <div class="hero-reveal mb-10 inline-flex max-w-full items-center gap-3 border border-general-red/40 bg-general-red/10 px-4 py-2 opacity-0 translate-y-4 transition-all duration-1000 delay-100">
+              <span class="h-1.5 w-1.5 rounded-full bg-general-red" aria-hidden="true" />
+              <span class="text-balance text-[10px] font-bold uppercase leading-[1.6] tracking-[0.18em] text-general-red sm:tracking-[0.22em]">
+                {eyebrow}
+              </span>
+            </div>
+          )}
 
-            <h1 class="hero-reveal hero-heading mb-6 text-4xl font-black leading-[1.02] tracking-tighter text-white opacity-0 translate-y-8 transition-all duration-1000 delay-300 sm:text-5xl md:text-6xl lg:text-7xl">
-              {lead}
-              {accent && (
-                <>
-                  <br />
-                  <span class="font-medium italic tracking-normal text-general-red">{accent}</span>
-                </>
-              )}
-            </h1>
+          <h1 class="hero-reveal hero-heading text-balance text-[2.6rem] font-extrabold leading-[1.03] tracking-[-0.035em] text-white opacity-0 translate-y-8 transition-all duration-1000 delay-300 sm:text-[3.25rem] lg:text-[4rem] xl:text-[4.5rem]">
+            {lead}
+            {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
+          </h1>
 
-            {subheading && (
-              <p class="hero-reveal mb-10 max-w-2xl border-l-2 border-general-red/40 pl-6 text-base leading-relaxed text-white/70 opacity-0 translate-y-8 transition-all duration-1000 delay-500 md:text-lg">
-                {subheading}
-              </p>
-            )}
+          {subheading && (
+            <p class="hero-reveal mx-auto mt-10 max-w-2xl text-pretty text-[17px] leading-[1.8] text-white/65 opacity-0 translate-y-8 transition-all duration-1000 delay-500 md:text-lg">
+              {subheading}
+            </p>
+          )}
 
-            {actions.length > 0 && (
-              <div class="hero-reveal flex flex-col gap-4 opacity-0 translate-y-8 transition-all duration-1000 delay-700 sm:flex-row sm:flex-wrap">
-                {actions.map((action) => (
-                  <Button link={action.link} tone="dark" class="w-full sm:w-auto" />
-                ))}
-              </div>
-            )}
-          </div>
+          {actions.length > 0 && (
+            <div class="hero-reveal mt-11 flex flex-col items-center justify-center gap-4 opacity-0 translate-y-8 transition-all duration-1000 delay-700 sm:flex-row">
+              {actions.map((action, i) => (
+                <Button
+                  link={i === 0 ? action.link : { ...action.link, appearance: 'secondary' }}
+                  tone="dark"
+                  class="w-full sm:w-auto"
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Slide dots, centred under the copy. */}
+          {slides.length > 1 && (
+            <div class="mt-18 flex items-center justify-center gap-2.5">
+              {slides.map((_, index) => (
+                <button
+                  type="button"
+                  aria-label={`Show slide ${index + 1}`}
+                  class:list={[
+                    'h-1.5 rounded-full transition-all duration-300',
+                    index === 0 ? 'w-8 bg-general-red' : 'w-3 bg-white/40 hover:bg-white/70',
+                  ]}
+                  data-slide-dot={index}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Slide dots */}
-      {slides.length > 1 && (
-        <div class="absolute right-6 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-center gap-3 md:right-12 lg:flex">
-          {slides.map((_, index) => (
-            <button
-              type="button"
-              aria-label={`Show slide ${index + 1}`}
-              class:list={[
-                'h-2 w-2 rounded-full transition-all duration-300',
-                index === 0 ? 'bg-general-red scale-125' : 'bg-white/40 hover:bg-white/80',
-              ]}
-              data-slide-dot={index}
-            />
-          ))}
-        </div>
-      )}
-
-      {/* Partner marquee */}
+      {/* Partner marks close the banner along the bottom edge. */}
       {marquee.length > 0 && (
         <div class="relative z-20 w-full shrink-0 overflow-hidden border-t border-white/10 py-6">
           <div class="flex animate-marquee items-center whitespace-nowrap">
@@ -155,10 +161,10 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
   ) : variant === 'split' ? (
     /* Split hero — light, two-column, red eyebrow rule on the left. */
     <section class="relative bg-white pt-32 pb-24 lg:pt-40 lg:pb-32 px-6 md:px-12 border-b border-gray-100">
-      <div class="max-w-7xl mx-auto grid items-center gap-12 lg:gap-20 lg:grid-cols-2">
+      <div class="max-w-7xl mx-auto grid items-center gap-16 lg:gap-24 lg:grid-cols-2">
         <div>
           {eyebrow && (
-            <div class="flex items-center gap-3 mb-6 opacity-0 translate-y-4 reveal-item">
+            <div class="flex items-center gap-3 mb-8 opacity-0 translate-y-4 reveal-item">
               <div class="w-8 h-[2px] bg-general-red" />
               <span class="text-[11px] font-bold tracking-[0.25em] uppercase text-general-red">
                 {eyebrow}
@@ -166,19 +172,19 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
             </div>
           )}
 
-          <h1 class="text-4xl sm:text-5xl lg:text-[72px] font-black tracking-tight text-general-black leading-[0.95] opacity-0 translate-y-8 reveal-item">
+          <h1 class="text-4xl sm:text-5xl lg:text-[72px] font-black tracking-tight text-general-black leading-[1.02] opacity-0 translate-y-8 reveal-item">
             {lead}
             {accent && <span class="text-general-red italic font-medium"> {accent}</span>}
           </h1>
 
           {subheading && (
-            <p class="mt-10 text-xl text-gray-700 leading-relaxed border-l-2 border-general-red/10 pl-8 opacity-0 translate-y-8 reveal-item">
+            <p class="mt-12 text-xl text-gray-700 leading-relaxed border-l-2 border-general-red/10 pl-8 opacity-0 translate-y-8 reveal-item">
               {subheading}
             </p>
           )}
 
           {actions.length > 0 && (
-            <div class="mt-10 flex flex-col sm:flex-row flex-wrap gap-4 opacity-0 translate-y-8 reveal-item">
+            <div class="mt-12 flex flex-col sm:flex-row flex-wrap gap-4 opacity-0 translate-y-8 reveal-item">
               {actions.map((action) => (
                 <Button link={action.link} />
               ))}
@@ -230,7 +236,7 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
         <div class="flex flex-col items-center text-center">
           {eyebrow && (
             <div class="hero-reveal opacity-0 translate-y-4 transition-all duration-1000 delay-100">
-              <div class="inline-flex items-center gap-3 mb-6">
+              <div class="inline-flex items-center gap-3 mb-8">
                 <div class="w-6 h-[1px] bg-general-red" />
                 <span class="text-[10px] md:text-[12px] font-bold tracking-[0.4em] uppercase text-white/60">
                   {eyebrow}
@@ -252,7 +258,7 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
           </h1>
 
           {subheading && (
-            <div class="hero-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-500 mt-10">
+            <div class="hero-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-500 mt-12">
               <p class="text-[16px] md:text-[18px] text-gray-300 font-light max-w-2xl mx-auto leading-relaxed border-t border-white/10 pt-10">
                 {subheading}
               </p>
@@ -260,7 +266,7 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
           )}
 
           {actions.length > 0 && (
-            <div class="hero-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-700 mt-12 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
+            <div class="hero-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-700 mt-16 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
               {actions.map((action) => (
                 <Button link={action.link} tone="dark" />
               ))}

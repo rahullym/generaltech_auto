@@ -32,7 +32,7 @@ const fade = 'radial-gradient(ellipse 75% 65% at 50% 45%, #000 0%, transparent 7
     visible. Below lg it is a normal padded band. */}
 <section
   class:list={[
-    'coverage-band relative overflow-hidden px-6 py-14 md:px-12 lg:flex lg:min-h-screen lg:items-center',
+    'coverage-band relative overflow-hidden px-6 py-20 md:px-12 lg:flex lg:min-h-screen lg:items-center',
     dark ? 'bg-general-black text-white' : 'border-t border-gray-100 bg-[#FAFAFA] text-general-black',
   ]}
 >
@@ -54,12 +54,12 @@ const fade = 'radial-gradient(ellipse 75% 65% at 50% 45%, #000 0%, transparent 7
   }
 
   <div class="relative mx-auto w-full max-w-7xl">
-    <div class="grid gap-x-14 gap-y-10 lg:grid-cols-12 xl:gap-x-20">
+    <div class="grid gap-x-18 gap-y-12 lg:grid-cols-12 xl:gap-x-24">
       {/* Heading and the response-time claim. */}
       <div class="lg:col-span-5">
         {
           eyebrow && (
-            <div class="reveal-item mb-5 flex translate-y-4 items-center gap-3 opacity-0">
+            <div class="reveal-item mb-7 flex translate-y-4 items-center gap-3 opacity-0">
               <div class="h-[2px] w-8 bg-general-red" />
               <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
                 {eyebrow}
@@ -70,7 +70,7 @@ const fade = 'radial-gradient(ellipse 75% 65% at 50% 45%, #000 0%, transparent 7
 
         {
           heading && (
-            <h2 class="reveal-item translate-y-8 text-4xl font-black leading-[0.95] tracking-tight opacity-0 sm:text-5xl lg:text-[64px]">
+            <h2 class="reveal-item translate-y-8 text-4xl font-black leading-[1.02] tracking-tight opacity-0 sm:text-5xl lg:text-[64px]">
               {lead}
               {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
             </h2>
@@ -81,7 +81,7 @@ const fade = 'radial-gradient(ellipse 75% 65% at 50% 45%, #000 0%, transparent 7
           note && (
             <div
               class:list={[
-                'reveal-item mt-6 flex translate-y-8 items-start gap-4 rounded-2xl border p-5 opacity-0',
+                'reveal-item mt-8 flex translate-y-8 items-start gap-4 rounded-2xl border p-7 opacity-0',
                 dark ? 'border-white/10 bg-white/[0.03]' : 'border-gray-200 bg-white',
               ]}
             >
@@ -133,7 +133,7 @@ const fade = 'radial-gradient(ellipse 75% 65% at 50% 45%, #000 0%, transparent 7
         once the row fits, with a marker where each one sits on the line. */}
     {
       areas.length > 0 && (
-        <div class="mt-12 grid gap-x-10 sm:grid-cols-2 lg:mt-10 lg:grid-cols-4 lg:gap-x-0">
+        <div class="mt-16 grid gap-x-12 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4 lg:gap-x-0">
           {areas.map((area, index) => (
             <div
               class:list={[

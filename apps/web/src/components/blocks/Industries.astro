@@ -59,7 +59,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
       exact distance the track has to travel, and left alone otherwise. */}
   <div class="relative" data-industries-scroll>
     <div
-      class="industry-panel relative flex flex-col justify-center py-24 lg:h-screen lg:min-h-[700px] lg:overflow-hidden lg:py-0 lg:sticky lg:top-0"
+      class="industry-panel relative flex flex-col justify-center py-28 lg:h-screen lg:min-h-[700px] lg:overflow-hidden lg:py-0 lg:sticky lg:top-0"
       data-industries-panel
     >
       {/* Cards run off both edges of a pinned panel; the fades stop them being
@@ -77,11 +77,11 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
 
       <div class="mx-auto w-full max-w-7xl px-6 md:px-12">
         {/* Header — heading left, the sentence that names all six beside it. */}
-        <div class="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-16">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-20">
           <div class="lg:col-span-7">
             {
               eyebrow && (
-                <div class="mb-6 flex translate-y-4 items-center gap-3 opacity-0 reveal-item">
+                <div class="mb-8 flex translate-y-4 items-center gap-3 opacity-0 reveal-item">
                   <div class="h-[2px] w-8 bg-general-red" />
                   <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
                     {eyebrow}
@@ -92,7 +92,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
 
             {
               heading && (
-                <h2 class="translate-y-8 text-4xl font-black leading-[0.95] tracking-tight text-general-black opacity-0 reveal-item sm:text-5xl lg:text-[64px]">
+                <h2 class="translate-y-8 text-4xl font-black leading-[1.02] tracking-tight text-general-black opacity-0 reveal-item sm:text-5xl lg:text-[64px]">
                   {lead}
                   {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
                 </h2>
@@ -115,17 +115,17 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
       {/* The track. Padded to the container gutter on the left so the first
           sector lines up under the heading, and running off the right edge. */}
       <div
-        class="industry-rail mt-12 overflow-x-auto pb-4 lg:mt-16 lg:pb-0"
+        class="industry-rail mt-16 overflow-x-auto pb-4 lg:mt-20 lg:pb-0"
         data-industries-rail
       >
         <div
-          class="flex gap-5 px-6 md:px-12 lg:gap-6 lg:px-[max(3rem,calc((100vw-80rem)/2+3rem))]"
+          class="flex gap-7 px-6 md:px-12 lg:gap-8 lg:px-[max(3rem,calc((100vw-80rem)/2+3rem))]"
           data-industries-track
         >
           {
             sectors.map((sector, index) => (
               <article
-                class="industry-card group relative flex w-[80vw] max-w-[380px] shrink-0 snap-start flex-col rounded-2xl border border-gray-200 bg-white p-8 opacity-0 reveal-item lg:h-[380px] lg:w-[400px] lg:p-9"
+                class="industry-card group relative flex w-[80vw] max-w-[380px] shrink-0 snap-start flex-col rounded-2xl border border-gray-200 bg-white p-12 opacity-0 reveal-item lg:h-[380px] lg:w-[400px] lg:p-12"
                 style={`transition-delay: ${Math.min(index, 8) * 60}ms`}
                 data-industry
                 data-industry-name={sector.name}
@@ -157,7 +157,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
                   </span>
                 </div>
 
-                <h3 class="mt-8 text-[26px] font-bold leading-[1.15] tracking-tight text-general-black">
+                <h3 class="mt-10 text-[26px] font-bold leading-[1.15] tracking-tight text-general-black">
                   {sector.name}
                 </h3>
 
@@ -179,8 +179,8 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
 
       {/* Read-out: which sector is under the eye, and how far the track has
           travelled. Desktop only — on touch the swipe is its own indicator. */}
-      <div class="mx-auto hidden w-full max-w-7xl px-6 md:px-12 lg:mt-14 lg:block">
-        <div class="flex items-center gap-8">
+      <div class="mx-auto hidden w-full max-w-7xl px-6 md:px-12 lg:mt-18 lg:block">
+        <div class="flex items-center gap-10">
           <div class="flex shrink-0 items-baseline gap-3">
             <span
               class="text-[40px] font-black leading-none tracking-tighter tabular-nums text-general-black"

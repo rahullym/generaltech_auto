@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T06:16:00.848Z",
+  "generatedAt": "2026-08-27T01:02:44.479Z",
   "collections": {
     "pages": [
       {
@@ -3386,27 +3386,6 @@
             "blockType": "richText"
           },
           {
-            "id": "6a869a27aebaed7b27aec249",
-            "variant": "dark",
-            "eyebrow": "Free site assessment",
-            "heading": "Talk to an automation engineer about *your plant*",
-            "body": null,
-            "blockName": null,
-            "actions": [
-              {
-                "id": "6a869a27aebaed7b27aec248",
-                "link": {
-                  "type": "custom",
-                  "label": "Call +971 6 543 6933",
-                  "url": "tel:+97165436933",
-                  "newTab": null,
-                  "appearance": "primary"
-                }
-              }
-            ],
-            "blockType": "cta"
-          },
-          {
             "id": "6a869a27aebaed7b27aec24a",
             "layout": "split",
             "width": "prose",
@@ -3500,7 +3479,53 @@
               }
             },
             "blockName": null,
-            "media": [],
+            "media": [
+              {
+                "id": "6a8f0875a82e3180432b523d",
+                "image": {
+                  "id": 78,
+                  "alt": "Automation engineer in helmet and safety glasses reviewing plant data on a tablet",
+                  "caption": null,
+                  "updatedAt": "2026-08-26T15:38:14.095Z",
+                  "createdAt": "2026-08-26T15:38:14.093Z",
+                  "url": "/cms/engineer-tablet-plant.jpg",
+                  "thumbnailURL": "/cms/engineer-tablet-plant-400x266.jpg",
+                  "filename": "engineer-tablet-plant.jpg",
+                  "mimeType": "image/jpeg",
+                  "filesize": 231495,
+                  "width": 1920,
+                  "height": 1277,
+                  "focalX": 50,
+                  "focalY": 50,
+                  "sizes": {
+                    "thumbnail": {
+                      "url": "/cms/engineer-tablet-plant-400x266.jpg",
+                      "width": 400,
+                      "height": 266,
+                      "mimeType": "image/jpeg",
+                      "filesize": 19592,
+                      "filename": "engineer-tablet-plant-400x266.jpg"
+                    },
+                    "card": {
+                      "url": "/cms/engineer-tablet-plant-768x511.jpg",
+                      "width": 768,
+                      "height": 511,
+                      "mimeType": "image/jpeg",
+                      "filesize": 50580,
+                      "filename": "engineer-tablet-plant-768x511.jpg"
+                    },
+                    "wide": {
+                      "url": "/cms/engineer-tablet-plant-1440x958.jpg",
+                      "width": 1440,
+                      "height": 958,
+                      "mimeType": "image/jpeg",
+                      "filesize": 138867,
+                      "filename": "engineer-tablet-plant-1440x958.jpg"
+                    }
+                  }
+                }
+              }
+            ],
             "blockType": "richText"
           },
           {
@@ -7259,7 +7284,7 @@
           "description": "General Tech Automation delivers PLC logic design, control architecture, HMI development and Industry 4.0 engineering across the UAE. Call +971 6 543 6933.",
           "image": null
         },
-        "updatedAt": "2026-08-21T03:34:35.451Z",
+        "updatedAt": "2026-08-26T15:38:29.922Z",
         "createdAt": "2026-08-18T08:53:50.868Z",
         "_status": "published"
       }

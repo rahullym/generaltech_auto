@@ -3,7 +3,8 @@ import Picture from '../Picture.astro'
 import ReadMore from '../ReadMore.astro'
 import RichText from '../RichText.astro'
 import { splitAccent } from '@/lib/accent'
-import type { Media, RichTextValue } from '@/lib/types'
+import { lexicalToText } from '@/lib/lexical'
+import type { LexicalNode, Media, RichTextValue } from '@/lib/types'
 
 interface Props {
   layout?: 'default' | 'editorial' | 'split'
@@ -46,85 +47,154 @@ const copyClass = [lede && 'prose-lede', numbered && 'prose-beats'].filter(Boole
 // the field to publish one open. Payload sends an unset checkbox as null, so
 // only an explicit false counts as off.
 const clamp = collapsible ?? true
+
+/**
+ * The split layout renders a long passage as separate points rather than one
+ * column of prose: the opening paragraph becomes a standfirst and the rest are
+ * laid out as a scannable grid. Nothing is dropped — every paragraph in the
+ * field is rendered, just arranged instead of stacked.
+ */
+const paragraphs: LexicalNode[] = (content?.root?.children ?? []).filter(
+  (node) => lexicalToText({ root: { ...content.root, children: [node] } }).trim().length > 0,
+)
+
+/** Wraps one node back into a value RichText can render. */
+const asValue = (node: LexicalNode): RichTextValue => ({
+  root: { ...content.root, children: [node] },
+})
+
+const [standfirst, ...points] = paragraphs
 ---
 
 {
   layout === 'split' ? (
-    <section class="border-t border-gray-100 bg-[#FAFAFA] px-6 md:px-12 py-24 lg:py-32">
-      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-12 xl:gap-24">
-        <div class="lg:col-span-5">
-          <div class="opacity-0 translate-y-8 reveal-item lg:sticky lg:top-40">
-            <div class="mb-8 flex items-center gap-3">
-              <div class="h-[2px] w-8 bg-general-red" aria-hidden="true" />
+    /* Dark panel. The sections either side of this one are white, so an
+       inverted band gives the page a change of pace and lets a text-only
+       section carry weight without needing imagery it does not have. */
+    <section class="relative overflow-hidden bg-general-black px-6 py-28 text-white md:px-12 lg:py-40">
+      {/* One soft red bloom, top-right, so the black is not flat. */}
+      <div
+        class="pointer-events-none absolute -right-32 -top-32 h-[560px] w-[560px] rounded-full opacity-60 blur-[130px]"
+        style="background: radial-gradient(circle, rgba(237,28,37,0.30) 0%, rgba(237,28,37,0) 70%)"
+        aria-hidden="true"
+      />
+
+      <div class="relative mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16 xl:gap-24">
+          <div class="lg:col-span-5">
+            <div class="reveal-item translate-y-8 opacity-0 lg:sticky lg:top-36">
               {eyebrow && (
-                <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-500">
+                <span class="mb-6 block text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
                   {eyebrow}
                 </span>
               )}
+
+              {heading && (
+                <h2
+                  data-reveal="mask"
+                  class="text-[2.75rem] font-extrabold leading-[1.05] tracking-[-0.035em] text-white lg:text-[3.5rem]"
+                >
+                  {lead}
+                  {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
+                </h2>
+              )}
+
+              {/* Photography fills what was an empty column below the heading. */}
+              {images.length > 0 && (
+                <div
+                  data-reveal="wipe"
+                  class="mt-12 overflow-hidden rounded-2xl border border-white/10"
+                >
+                  <Picture
+                    media={images[0]!}
+                    sizes="(min-width: 1024px) 40vw, 100vw"
+                    class="aspect-[4/3] w-full object-cover"
+                  />
+                </div>
+              )}
             </div>
-
-            {heading && (
-              <h2 class="text-5xl font-black leading-[0.95] tracking-tight text-general-black lg:text-[64px]">
-                {lead}
-                {accent && (
-                  <>
-                    {' '}
-                    <span class="font-medium italic text-general-red">{accent}</span>
-                  </>
-                )}
-              </h2>
-            )}
           </div>
+
+          {standfirst && (
+            <div class="lg:col-span-7">
+              <div class="reveal-item translate-y-8 opacity-0">
+                <RichText
+                  value={asValue(standfirst)}
+                  class="prose-content prose-full prose-invert text-[1.15rem] leading-[1.8]"
+                />
+              </div>
+            </div>
+          )}
         </div>
 
-        <div class="lg:col-span-7">
-          <div class="opacity-0 translate-y-8 reveal-item">
-            <ReadMore enabled={clamp} tone="light" height={320}>
-              <RichText value={content} class={copyClass || undefined} />
-            </ReadMore>
+        {/* Points as full-width rows: number in its own gutter, copy in a
+            readable measure, a hairline between each. Rows give a dense
+            passage more air than a two-up grid can at this width. */}
+        {points.length > 0 && (
+          <div class="mt-20">
+            {points.map((node, index) => (
+              <div
+                class="reveal-item grid translate-y-8 grid-cols-1 gap-x-10 gap-y-4 border-t border-white/12 py-10 opacity-0 lg:grid-cols-12 lg:py-12"
+                style={`transition-delay: ${Math.min(index, 6) * 80}ms`}
+              >
+                <div class="lg:col-span-2">
+                  <span class="text-[2.5rem] font-extrabold leading-none tracking-[-0.04em] text-general-red tabular-nums lg:text-[3rem]">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+
+                <div class="lg:col-span-9 xl:col-span-8">
+                  <RichText value={asValue(node)} class="prose-content prose-full prose-invert" />
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
+        )}
       </div>
     </section>
   ) : editorial ? (
-    <section class="bg-white px-6 md:px-12 py-24 lg:py-32">
-      <div class="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 lg:grid-cols-12 xl:gap-20">
-        {/* Imagery — sticky on desktop so the copy scrolls against it. */}
+    <section class="bg-white px-6 py-28 md:px-12 lg:py-40">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-18 lg:grid-cols-12 lg:gap-20 xl:gap-24">
+        {/* Imagery. Both photographs sit in normal flow and overlap by a fixed
+            amount, so the pair reads as one composed block. The previous version
+            pinned the second one into the gutter with absolute positioning,
+            which left a large dead corner and floated a red outline behind
+            nothing. */}
         {images.length > 0 && (
           <div class:list={['lg:col-span-5', imageFirst ? 'lg:order-1' : 'lg:order-2']}>
-            <div class="lg:sticky lg:top-40">
-              <div class="relative opacity-0 translate-y-8 reveal-item">
-                {/* Offset red outline, like a print crop mark behind the photo. */}
-                <div
-                  class:list={[
-                    'pointer-events-none absolute h-full w-full rounded-2xl border-2 border-general-red/30',
-                    imageFirst ? '-left-5 -top-5' : '-right-5 -top-5',
-                  ]}
-                  aria-hidden="true"
-                />
+            <div class="reveal-item relative translate-y-8 opacity-0">
+              {/* Red plate anchored to the corner of the primary image, touching
+                  it rather than hovering apart from it. */}
+              <div
+                class:list={[
+                  'absolute -z-10 hidden h-28 w-28 bg-general-red lg:block',
+                  imageFirst ? '-left-6 -top-6' : '-right-6 -top-6',
+                ]}
+                aria-hidden="true"
+              />
 
+              <div data-reveal="wipe" class="relative overflow-hidden rounded-2xl">
                 <Picture
                   media={images[0]!}
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                  class="w-full rounded-2xl object-cover shadow-[0_30px_80px_rgba(0,0,0,0.14)]"
+                  class="aspect-[4/3] w-full object-cover"
                 />
-
-                {images[1] && (
-                  <div
-                    class:list={[
-                      'absolute w-1/2 overflow-hidden rounded-2xl border-4 border-white shadow-[0_20px_50px_rgba(0,0,0,0.18)]',
-                      '-bottom-8 lg:-bottom-10',
-                      imageFirst ? '-right-4 lg:-right-8' : '-left-4 lg:-left-8',
-                    ]}
-                  >
-                    <Picture
-                      media={images[1]}
-                      sizes="(min-width: 1024px) 20vw, 50vw"
-                      class="aspect-[3/2] w-full object-cover"
-                    />
-                  </div>
-                )}
               </div>
+
+              {images[1] && (
+                <div
+                  class:list={[
+                    'relative -mt-18 w-2/3 overflow-hidden rounded-2xl ring-1 ring-black/5 lg:-mt-20',
+                    imageFirst ? 'mr-auto' : 'ml-auto',
+                  ]}
+                >
+                  <Picture
+                    media={images[1]}
+                    sizes="(min-width: 1024px) 26vw, 60vw"
+                    class="aspect-[3/2] w-full object-cover"
+                  />
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -134,21 +204,38 @@ const clamp = collapsible ?? true
           class:list={[
             images.length > 0 ? 'lg:col-span-7' : 'lg:col-span-12',
             imageFirst ? 'lg:order-2' : 'lg:order-1',
-            images[1] && 'mt-14 lg:mt-0',
           ]}
         >
-          <div class="opacity-0 translate-y-8 reveal-item">
-            <div class="mb-8 h-[2px] w-16 bg-general-red" aria-hidden="true" />
+          <div class="reveal-item translate-y-8 opacity-0">
+            {eyebrow && (
+              <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+                {eyebrow}
+              </span>
+            )}
 
-            <ReadMore enabled={clamp}>
-              <RichText value={content} class={copyClass || undefined} />
+            {heading ? (
+              <h2 class="mb-9 text-4xl font-black leading-[0.98] tracking-tight text-general-black lg:text-[52px]">
+                {lead}
+                {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
+              </h2>
+            ) : (
+              /* No heading on this block, so the copy carries its own entry:
+                 a short red rule plus a larger opening paragraph. */
+              <div class="mb-10 h-[3px] w-14 bg-general-red" aria-hidden="true" />
+            )}
+
+            <ReadMore enabled={clamp} height={300}>
+              <RichText
+                value={content}
+                class={[copyClass, !heading && 'prose-lede'].filter(Boolean).join(' ') || undefined}
+              />
             </ReadMore>
           </div>
         </div>
       </div>
     </section>
   ) : (
-    <section class="bg-white px-6 md:px-12 py-16 lg:py-20">
+    <section class="bg-white px-6 md:px-12 py-20 lg:py-20">
       <div
         class:list={[
           'mx-auto opacity-0 translate-y-8 reveal-item',

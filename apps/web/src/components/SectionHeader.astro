@@ -58,12 +58,12 @@ const centered = align === 'center'
   )
 }
 
-<div class:list={[centered ? 'mb-14 lg:mb-16' : 'mb-8 lg:mb-10', className]}>
+<div class:list={[centered ? 'mb-20 lg:mb-24' : 'mb-16 lg:mb-18', className]}>
   <div
     class:list={[
       centered
         ? 'flex flex-col items-center text-center max-w-4xl mx-auto'
-        : 'flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-12',
+        : 'flex flex-col md:flex-row md:items-end justify-between gap-10 md:gap-16',
     ]}
   >
     <div class={centered ? 'contents' : 'max-w-2xl opacity-0 translate-y-8 reveal-item'}>
@@ -71,8 +71,8 @@ const centered = align === 'center'
         eyebrow && (
           <div
             class:list={[
-              'flex items-center gap-3 mb-6',
-              centered && 'justify-center mb-8 opacity-0 translate-y-8 reveal-item',
+              'flex items-center gap-3 mb-8',
+              centered && 'justify-center mb-10 opacity-0 translate-y-8 reveal-item',
             ]}
           >
             <div class="w-8 h-[2px] bg-general-red" />
@@ -87,10 +87,11 @@ const centered = align === 'center'
       {
         heading && (
           <h2
+            data-reveal="mask"
             class:list={[
-              'text-4xl sm:text-5xl lg:text-[64px] font-black tracking-tight leading-[0.95]',
+              'text-4xl sm:text-5xl lg:text-[64px] font-black tracking-tight leading-[1.02]',
               dark ? 'text-white' : 'text-general-black',
-              centered && 'mb-8 opacity-0 translate-y-8 reveal-item',
+              centered && 'mb-10 opacity-0 translate-y-8 reveal-item',
             ]}
           >
             {lead}

@@ -132,19 +132,22 @@
   letter-spacing: -0.015em;
 }
 
-/* Numbered beats: a long passage broken into counted paragraphs with a red
-   index in the gutter and a hairline between each, so four dense paragraphs
-   read as four distinct points rather than one block. */
+/* Numbered beats: a long passage broken into counted points. The index used
+   to be an 11px red tick in the gutter, which read as a footnote marker rather
+   than as structure. It is now a display numeral sitting in its own ruled
+   column, so four dense paragraphs scan as four distinct points. */
 .prose-beats {
   counter-reset: beat;
+  max-width: none;
 }
 .prose-beats > p {
   counter-increment: beat;
   position: relative;
-  padding-left: 3.75rem;
-  padding-top: 2rem;
-  margin-top: 2rem;
+  padding-left: 5.25rem;
+  padding-top: 2.6rem;
+  margin-top: 2.6rem;
   border-top: 1px solid #e9e9e9;
+  max-width: 62ch;
 }
 .prose-beats > p:first-child {
   padding-top: 0;
@@ -156,27 +159,48 @@
   position: absolute;
   left: 0;
   top: 2.35rem;
-  font-size: 0.75rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  letter-spacing: 0.2em;
-  color: #ed1c25;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--color-general-red);
+  font-variant-numeric: tabular-nums;
+}
+/* A hairline under each numeral, tying it to its paragraph. */
+.prose-beats > p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4.35rem;
+  width: 2.25rem;
+  height: 1px;
+  background: rgba(237, 28, 37, 0.35);
 }
 .prose-beats > p:first-child::before {
-  top: 0.35rem;
+  top: 0.1rem;
+}
+.prose-beats > p:first-child::after {
+  top: 2.1rem;
 }
 @media (max-width: 640px) {
   .prose-beats > p {
     padding-left: 0;
-    padding-top: 2.75rem;
+    padding-top: 3.5rem;
   }
   .prose-beats > p::before {
-    top: 1.5rem;
+    top: 2rem;
+  }
+  .prose-beats > p::after {
+    top: 4rem;
   }
   .prose-beats > p:first-child {
-    padding-top: 1.75rem;
+    padding-top: 2.25rem;
   }
   .prose-beats > p:first-child::before {
     top: 0;
+  }
+  .prose-beats > p:first-child::after {
+    top: 2rem;
   }
 }
 
@@ -207,12 +231,20 @@
 
 /* Rich text output from lib/lexical.ts */
 .prose-content {
-  line-height: 1.75;
+  line-height: 1.85;
   color: #374151;
   font-size: 1.0625rem;
+  /* Cap the measure. Without this, body copy ran the full width of its
+     column — around 95 characters in the wider blocks — which is the single
+     biggest reason the page read as crowded. Nothing is removed; the same
+     words simply wrap sooner. Add `prose-full` to opt a block out. */
+  max-width: 68ch;
+}
+.prose-content.prose-full {
+  max-width: none;
 }
 .prose-content > * + * {
-  margin-top: 1.25em;
+  margin-top: 1.6em;
 }
 .prose-content h2,
 .prose-content h3,
@@ -221,7 +253,7 @@
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.025em;
-  margin-top: 2em;
+  margin-top: 2.4em;
   scroll-margin-top: 150px;
 }
 .prose-content h2 {
@@ -265,7 +297,7 @@
   list-style: decimal;
 }
 .prose-content li + li {
-  margin-top: 0.4em;
+  margin-top: 0.7em;
 }
 .prose-content li::marker {
   color: #ed1c25;
@@ -357,4 +389,132 @@
 .prose-invert figcaption {
   border-top-color: rgba(255, 255, 255, 0.12);
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Rich text on a dark field. Only colours change — spacing and measure are
+   inherited from .prose-content so light and dark blocks stay in step. */
+.prose-content.prose-invert {
+  color: rgba(255, 255, 255, 0.62);
+}
+.prose-content.prose-invert strong,
+.prose-content.prose-invert h2,
+.prose-content.prose-invert h3,
+.prose-content.prose-invert h4 {
+  color: #fff;
+}
+.prose-content.prose-invert a:hover {
+  color: #fff;
+}
+.prose-content.prose-invert blockquote {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================================
+   Motion layer
+   ------------------------------------------------------------
+   `reveal-item` gives everything the same fade-and-rise. These
+   add distinct entrances that suit what is entering: copy rises
+   from behind a mask, photography wipes open, panels build in
+   sequence. Driven by `.is-revealed`, which the observer in
+   Base.astro adds. All of it is transform/opacity/clip-path, so
+   it composites on the GPU and never triggers layout.
+   ============================================================ */
+
+[data-reveal] {
+  --reveal-delay: 0ms;
+  --reveal-duration: 900ms;
+  --reveal-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Rise — the workhorse. */
+[data-reveal='up'] {
+  opacity: 0;
+  transform: translate3d(0, 34px, 0);
+  transition:
+    opacity var(--reveal-duration) var(--reveal-ease) var(--reveal-delay),
+    transform var(--reveal-duration) var(--reveal-ease) var(--reveal-delay);
+}
+
+/* Mask — the line rises out from behind its own edge. Best on headings:
+   the text appears to be uncovered rather than to move. */
+[data-reveal='mask'] {
+  clip-path: inset(0 0 100% 0);
+  transform: translate3d(0, 22px, 0);
+  transition:
+    clip-path calc(var(--reveal-duration) * 1.1) var(--reveal-ease) var(--reveal-delay),
+    transform calc(var(--reveal-duration) * 1.1) var(--reveal-ease) var(--reveal-delay);
+}
+
+/* Wipe — photography opens from the left, with a slow settle out of scale. */
+[data-reveal='wipe'] {
+  clip-path: inset(0 100% 0 0);
+  transform: scale(1.08);
+  transition:
+    clip-path calc(var(--reveal-duration) * 1.25) var(--reveal-ease) var(--reveal-delay),
+    transform 1800ms var(--reveal-ease) var(--reveal-delay);
+}
+
+/* Lift — panels arrive with a touch of depth. */
+[data-reveal='lift'] {
+  opacity: 0;
+  transform: translate3d(0, 40px, 0) scale(0.97);
+  transition:
+    opacity var(--reveal-duration) var(--reveal-ease) var(--reveal-delay),
+    transform var(--reveal-duration) var(--reveal-ease) var(--reveal-delay);
+}
+
+/* Draw — rules and dividers grow from their leading edge. */
+[data-reveal='draw'] {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1100ms var(--reveal-ease) var(--reveal-delay);
+}
+
+/* Slide from either side. */
+[data-reveal='left'],
+[data-reveal='right'] {
+  opacity: 0;
+  transition:
+    opacity var(--reveal-duration) var(--reveal-ease) var(--reveal-delay),
+    transform var(--reveal-duration) var(--reveal-ease) var(--reveal-delay);
+}
+[data-reveal='left'] {
+  transform: translate3d(-42px, 0, 0);
+}
+[data-reveal='right'] {
+  transform: translate3d(42px, 0, 0);
+}
+
+/* Resolved state — one rule for every variant. */
+[data-reveal].is-revealed {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+[data-reveal='draw'].is-revealed {
+  transform: scaleX(1);
+}
+
+/* Sequence children of a container without hand-writing a delay on each. */
+[data-reveal-stagger] > * {
+  --reveal-delay: calc(var(--stagger-step, 90ms) * var(--i, 0));
+}
+[data-reveal-stagger] > *:nth-child(1) { --i: 0; }
+[data-reveal-stagger] > *:nth-child(2) { --i: 1; }
+[data-reveal-stagger] > *:nth-child(3) { --i: 2; }
+[data-reveal-stagger] > *:nth-child(4) { --i: 3; }
+[data-reveal-stagger] > *:nth-child(5) { --i: 4; }
+[data-reveal-stagger] > *:nth-child(6) { --i: 5; }
+[data-reveal-stagger] > *:nth-child(7) { --i: 6; }
+[data-reveal-stagger] > *:nth-child(8) { --i: 7; }
+[data-reveal-stagger] > *:nth-child(n + 9) { --i: 8; }
+
+/* Motion is decoration here: without it every element is simply present. */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    clip-path: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
