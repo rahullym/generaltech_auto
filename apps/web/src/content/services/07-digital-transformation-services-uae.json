@@ -4,6 +4,11 @@
   "slug": "service/digital-transformation-services-uae",
   "aliases": ["service/digital-transformation"],
   "navLabel": "Digital Transformation",
+  "menu": {
+    "label": "Digital",
+    "blurb": "Plant Data & Analytics",
+    "icon": "chart"
+  },
   "summary": "Digital Transformation Services UAE from General Tech Automation. IT-OT integration, IoT, analytics & cyber security with Emerson. Get a roadmap today.",
   "meta": {
     "title": "Digital Transformation Services UAE | GTA",

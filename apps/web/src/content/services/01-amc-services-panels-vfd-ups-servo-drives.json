@@ -4,6 +4,11 @@
   "slug": "amc-services-panels-vfd-ups-servo-drives-uae",
   "aliases": ["service/annual-maintenance-contracts-(amc-services-)for-panels,-vfd,-ups-&-servo-drives"],
   "navLabel": "Annual Maintenance Contracts (AMC Services )for Panels, VFD, UPS & Servo Drives",
+  "menu": {
+    "label": "AMC Contracts",
+    "blurb": "Panels, VFD, UPS & Servo",
+    "icon": "shield"
+  },
   "summary": "AMC Services for Panels, VFD, UPS & Servo Drives in UAE — planned, proactive maintenance across Dubai, Abu Dhabi & Sharjah. Get a quote today.",
   "meta": {
     "title": "AMC Services for Panels, VFD, UPS & Servo Drives UAE",

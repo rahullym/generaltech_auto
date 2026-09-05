@@ -4,6 +4,11 @@
   "slug": "industrial-automation-solutions-uae",
   "aliases": ["service/automation-solutions"],
   "navLabel": "Automation Solutions",
+  "menu": {
+    "label": "Automation",
+    "blurb": "PLC, DCS & SCADA",
+    "icon": "cpu"
+  },
   "summary": "Industrial Automation Solutions UAE for DeltaV DCS, PLC and SCADA, and process control. Serving Dubai, Sharjah & Abu Dhabi.",
   "meta": {
     "title": "Industrial Automation Solutions UAE | GTA",

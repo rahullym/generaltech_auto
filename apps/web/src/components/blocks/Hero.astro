@@ -169,15 +169,15 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
       <div class="max-w-7xl mx-auto grid items-center gap-16 lg:gap-24 lg:grid-cols-2">
         <div>
           {eyebrow && (
-            <div class="flex items-center gap-3 mb-8 opacity-0 translate-y-4 reveal-item">
-              <div class="w-8 h-[2px] bg-general-red" />
-              <span class="text-[11px] font-bold tracking-[0.25em] uppercase text-general-red">
+            <div class="flex items-start gap-3 mb-8 opacity-0 translate-y-4 reveal-item">
+              <div class="mt-2 h-[2px] w-8 shrink-0 bg-general-red" />
+              <span class="min-w-0 text-balance text-[11px] font-bold uppercase leading-[1.7] tracking-[0.18em] text-general-red sm:tracking-[0.25em]">
                 {eyebrow}
               </span>
             </div>
           )}
 
-          <h1 class="text-4xl sm:text-5xl lg:text-[72px] font-black tracking-tight text-general-black leading-[1.02] opacity-0 translate-y-8 reveal-item">
+          <h1 class="text-[2rem] text-balance break-words sm:text-5xl lg:text-[72px] font-black tracking-tight text-general-black leading-[1.02] opacity-0 translate-y-8 reveal-item">
             {lead}
             {accent && <span class="text-general-red italic font-medium"> {accent}</span>}
           </h1>

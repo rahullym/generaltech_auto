@@ -9,7 +9,7 @@ export const GET: APIRoute = ({ site, url }) => {
 Allow: /
 Disallow: /api/
 
-Sitemap: ${origin}/sitemap-index.xml
+Sitemap: ${origin}/sitemap.xml
 `
 
   return new Response(body, {

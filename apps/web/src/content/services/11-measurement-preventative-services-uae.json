@@ -4,6 +4,11 @@
   "slug": "service/measurement-preventative-services-uae",
   "aliases": ["service/measurement-preventative-services"],
   "navLabel": "Measurement Preventative Services",
+  "menu": {
+    "label": "Preventive Care",
+    "blurb": "Scheduled Measurement Checks",
+    "icon": "refresh"
+  },
   "summary": "Measurement Preventative Services in UAE: gas analyzer, custody transfer & metering maintenance with fast response across Dubai, Sharjah, Abu Dhabi.",
   "meta": {
     "title": "Measurement Preventative Services in UAE | General Tech",

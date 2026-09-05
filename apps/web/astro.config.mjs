@@ -1,6 +1,5 @@
 // @ts-check
 import node from '@astrojs/node'
-import sitemap from '@astrojs/sitemap'
 import vercel from '@astrojs/vercel'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
@@ -16,8 +15,6 @@ export default defineConfig({
   // `pnpm start`, Docker, a plain VPS — the standalone Node server is what
   // runs, so the adapter is chosen rather than swapped.
   adapter: process.env.VERCEL ? vercel() : node({ mode: 'standalone' }),
-
-  integrations: [sitemap()],
 
   env: {
     schema: {

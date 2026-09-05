@@ -55,10 +55,21 @@ const pageImage = image ?? settings.defaultSeo?.image ?? null
 const whatsapp = settings.contact?.phone?.replace(/\D/g, '')
 
 // SSR: let the CDN serve published pages while keeping drafts private.
+//
+// A published page is identical between deploys — its content comes from the
+// snapshot committed with the build — and Vercel keys its cache per deployment,
+// so a deploy publishes immediately rather than waiting out the TTL. An hour on
+// the CDN with a day of stale-while-revalidate therefore costs nothing in
+// freshness and takes the render off the path for repeat visitors and for a
+// crawler walking all twenty-nine URLs in the sitemap.
 Astro.response.headers.set(
   'Cache-Control',
-  isDraft ? 'private, no-store' : 'public, max-age=0, s-maxage=60, stale-while-revalidate=600',
+  isDraft ? 'private, no-store' : 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
 )
+
+/** One place for the font request, used by both the async link and the noscript fallback. */
+const FONT_CSS =
+  'https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Sans:ital,wght@1,400..700&display=swap'
 ---
 
 <!doctype html>
@@ -81,12 +92,25 @@ Astro.response.headers.set(
       publishedAt={publishedAt}
       noindex={noindex || isDraft}
     />
+    {/* Fonts come from Google, which means a DNS lookup, a TLS handshake and a
+        stylesheet before the first paint. The preconnects start the first two
+        during head parsing; loading the stylesheet as `print` and promoting it
+        on load keeps it off the critical path, so the page paints in the
+        fallback face and swaps when Manrope arrives. The <noscript> copy keeps
+        it working with scripting off. */}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=DM+Sans:ital,wght@1,400..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href={FONT_CSS} media="print" data-font-css />
+    <script is:inline>
+      // Promote the font stylesheet from `print` to `all` once it has arrived,
+      // so fetching it never blocked the first paint.
+      document.querySelector('link[data-font-css]')?.addEventListener('load', function () {
+        this.media = 'all'
+      })
+    </script>
+    <noscript>
+      <link rel="stylesheet" href={FONT_CSS} />
+    </noscript>
     <ClientRouter />
     <slot name="head" />
   </head>

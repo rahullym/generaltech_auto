@@ -39,6 +39,23 @@ export const serviceSummaries: ServiceSummary[] = authored.map((service) => ({
   summary: service.summary,
 }))
 
+export type ServiceMenuMeta = { label: string; blurb: string; icon: string }
+
+/**
+ * Menu presentation, keyed by the path the service is linked at. The header's
+ * mega menu reads it so a nav item that points at a service page gets its short
+ * label, its one-line blurb and its icon without the CMS having to restate any
+ * of them — anything the CMS *does* say still wins.
+ */
+const menuMeta = new Map<string, ServiceMenuMeta>(
+  authored.flatMap((service) =>
+    service.menu ? [[`/${service.slug}`, service.menu] as const] : [],
+  ),
+)
+
+export const serviceMenuMeta = (href: string): ServiceMenuMeta | null =>
+  menuMeta.get(href) ?? null
+
 export const getServicePage = (slug: string): Page | null => pages.get(slug) ?? null
 
 /** Retired path -> the permalink it now lives at. */

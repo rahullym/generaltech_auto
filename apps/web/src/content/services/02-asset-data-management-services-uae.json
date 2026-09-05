@@ -4,6 +4,11 @@
   "slug": "asset-data-management-services-uae",
   "aliases": ["service/asset-data-management"],
   "navLabel": "Asset Data Management",
+  "menu": {
+    "label": "Asset Data",
+    "blurb": "Records & Tag History",
+    "icon": "database"
+  },
   "summary": "Asset Data Management Services in UAE for calibration records, tag tracking and maintenance history. Serving Dubai, Sharjah & Abu Dhabi.",
   "meta": {
     "title": "Asset Data Management Services in UAE | GTA",

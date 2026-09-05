@@ -4,6 +4,11 @@
   "slug": "service/measurement-commissioning-start-up-services-uae",
   "aliases": ["service/commissioning--start-up---measurement"],
   "navLabel": "Commissioning & Start Up - Measurement",
+  "menu": {
+    "label": "Commissioning",
+    "blurb": "Loop Checks & Start-Up",
+    "icon": "clipboard"
+  },
   "summary": "Measurement Commissioning and Start-Up Services UAE from General Tech Automation — accurate installation, testing & operator training, on schedule.",
   "meta": {
     "title": "Measurement Commissioning and Start-Up Services UAE",

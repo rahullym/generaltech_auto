@@ -4,6 +4,11 @@
   "slug": "service/custom-control-panel-design-manufacturing-uae",
   "aliases": ["service/custom-panel-design--manufacturing"],
   "navLabel": "Custom Panel Design & Manufacturing",
+  "menu": {
+    "label": "Control Panels",
+    "blurb": "Design & Manufacturing",
+    "icon": "cabinet"
+  },
   "summary": "Custom Control Panel Design & Manufacturing UAE by General Tech Automation. VFD, PLC, MCC & switchgear panels built in 10-15 days. Get a fixed quote today.",
   "meta": {
     "title": "Custom Control Panel Design & Manufacturing UAE | GTA",

@@ -4,6 +4,11 @@
   "slug": "industrial-retrofit-solutions-uae",
   "aliases": ["service/retrofit-solutions"],
   "navLabel": "Retrofit Solutions",
+  "menu": {
+    "label": "Retrofits",
+    "blurb": "Legacy System Upgrades",
+    "icon": "upgrade"
+  },
   "summary": "Industrial Retrofit Solutions in UAE for VFDs, PLCs and control panels. Modernize aging equipment across Dubai, Sharjah & Abu Dhabi.",
   "meta": {
     "title": "Industrial Retrofit Solutions in UAE | GTA",

@@ -97,9 +97,9 @@ const labelClass =
               return (
                 <div
                   data-reveal="up"
-                  class="group flex items-start gap-6 border-b border-gray-200 py-7"
+                  class="group flex items-start gap-4 border-b border-gray-200 py-7 sm:gap-6"
                 >
-                  <span class="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 text-gray-400 transition-all duration-500 group-hover:border-general-red/20 group-hover:bg-general-red/5 group-hover:text-general-red">
+                  <span class="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 sm:h-12 sm:w-12 text-gray-400 transition-all duration-500 group-hover:border-general-red/20 group-hover:bg-general-red/5 group-hover:text-general-red">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="22"
@@ -123,12 +123,12 @@ const labelClass =
                     {detail.href ? (
                       <a
                         href={detail.href}
-                        class="mt-2 block text-[19px] font-bold leading-[1.35] tracking-[-0.02em] text-general-black transition-colors duration-300 hover:text-general-red"
+                        class="mt-2 block text-[17px] font-bold leading-[1.35] tracking-[-0.02em] text-general-black transition-colors duration-300 [overflow-wrap:anywhere] hover:text-general-red sm:text-[19px]"
                       >
                         {detail.value}
                       </a>
                     ) : (
-                      <span class="mt-2 block whitespace-pre-line text-[19px] font-bold leading-[1.35] tracking-[-0.02em] text-general-black">
+                      <span class="mt-2 block whitespace-pre-line text-[17px] font-bold leading-[1.35] tracking-[-0.02em] text-general-black [overflow-wrap:anywhere] sm:text-[19px]">
                         {detail.value}
                       </span>
                     )}

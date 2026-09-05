@@ -4,6 +4,11 @@
   "slug": "wireless-plant-network-support-uae",
   "aliases": ["service/wireless-plant-network-support"],
   "navLabel": "Wireless Plant Network Support",
+  "menu": {
+    "label": "Wireless Networks",
+    "blurb": "WirelessHART & Surveys",
+    "icon": "signal"
+  },
   "summary": "Wireless Plant Network Support UAE from General Tech Automation. WirelessHART gateway integration, secure plant-wide wireless networks, 24/7 support.",
   "meta": {
     "title": "Wireless Plant Network Support UAE Services",

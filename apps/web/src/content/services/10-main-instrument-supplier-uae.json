@@ -4,6 +4,11 @@
   "slug": "service/main-instrument-supplier-uae",
   "aliases": ["service/main-instrument-supplier"],
   "navLabel": "Main Instrument Supplier",
+  "menu": {
+    "label": "Instrument Supply",
+    "blurb": "Emerson & Partner Brands",
+    "icon": "package"
+  },
   "summary": "Main Instrument Supplier in UAE: capital project instrumentation, control valves & bulk supply with cost certainty across Dubai, Sharjah, Abu Dhabi.",
   "meta": {
     "title": "Main Instrument Supplier in UAE | General Tech Automation",

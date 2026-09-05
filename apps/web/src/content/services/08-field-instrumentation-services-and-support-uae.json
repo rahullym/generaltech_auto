@@ -4,6 +4,11 @@
   "slug": "service/field-instrumentation-services-and-support-uae",
   "aliases": ["service/field-instrumentation-services-and-support"],
   "navLabel": "Field Instrumentation Services and Support",
+  "menu": {
+    "label": "Instrumentation",
+    "blurb": "Field Install & Support",
+    "icon": "gauge"
+  },
   "summary": "Field Instrumentation Services and Support UAE by General Tech Automation. Commissioning, calibration & loop testing in 1-2 days. Get a quote today.",
   "meta": {
     "title": "Field Instrumentation Services and Support UAE | GTA",

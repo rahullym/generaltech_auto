@@ -4,6 +4,11 @@
   "slug": "industrial-repair-services-uae",
   "aliases": ["service/repair-services"],
   "navLabel": "Repair Services",
+  "menu": {
+    "label": "Repairs",
+    "blurb": "Drives, Boards & Servos",
+    "icon": "board"
+  },
   "summary": "Industrial Repair Services in UAE for VFDs, servo drives, PLCs and CNC electronics. Serving Dubai, Sharjah & Abu Dhabi. Get a quote.",
   "meta": {
     "title": "Industrial Repair Services in UAE | GTA",

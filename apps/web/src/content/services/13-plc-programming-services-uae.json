@@ -4,6 +4,11 @@
   "slug": "plc-programming-services-uae",
   "aliases": ["service/plc-programming"],
   "navLabel": "PLC Programming",
+  "menu": {
+    "label": "PLC Programming",
+    "blurb": "Logic, HMI & Migration",
+    "icon": "code"
+  },
   "summary": "PLC Programming Services in UAE for ladder logic, structured text and new machine builds. Serving Dubai, Sharjah & Abu Dhabi. Get a quote.",
   "meta": {
     "title": "PLC Programming Services in UAE | General Tech",

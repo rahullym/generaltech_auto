@@ -114,6 +114,12 @@ export type AuthoredService = {
    */
   aliases?: string[]
   navLabel: string
+  /**
+   * How the service reads in the header's mega menu: a short label (the full
+   * `navLabel` is a page title and will not fit a tile), the line under it,
+   * and the icon key from the nav icon set.
+   */
+  menu?: { label: string; blurb: string; icon: string }
   summary: string
   meta: { title: string; description: string }
   /** Optional `serviceType` for the Service JSON-LD. Defaults to the title. */
