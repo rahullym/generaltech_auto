@@ -132,7 +132,7 @@ export const buildMegaMenu = (
           },
     promo: {
       title: config.promoTitle || `Need help with ${parentLabel.toLowerCase()}?`,
-      body: config.promoBody || settings.tagline || undefined,
+      body: config.promoBody || settings.tagline || settings.defaultSeo?.description || undefined,
       cta: ctaLink ? { href: resolveHref(ctaLink), label: ctaLink.label ?? 'Get in touch' } : null,
     },
     strip:
