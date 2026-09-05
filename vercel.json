@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "sh \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)/scripts/vercel-build.sh\""
+  "buildCommand": "sh \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)/scripts/vercel-build.sh\"",
+  "ignoreCommand": "exit 1"
 }

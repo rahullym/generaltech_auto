@@ -10,6 +10,13 @@
 #
 # Pointing the project's Root Directory at apps/web makes all of this
 # unnecessary: the adapter would write straight to the right place.
+#
+# That mismatch also breaks Vercel's automatic monorepo skip, which only
+# triggers a build when files under the Root Directory change: a commit
+# touching apps/web alone was reported "Skipped - Not affected" and never
+# deployed, even though apps/web is what this script builds. vercel.json sets
+# `ignoreCommand` to `exit 1` so every commit builds. Fixing the Root
+# Directory would let the skip work correctly again and that line could go.
 set -e
 
 # Where Vercel will look for the output: the directory it invoked us in.
