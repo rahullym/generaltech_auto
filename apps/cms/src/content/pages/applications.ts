@@ -129,6 +129,7 @@ export const applicationsPage = (media: MediaResolver): SeededPage => ({
     {
       blockType: 'richText',
       layout: 'split',
+      media: [{ image: media('panel-inspection.jpg') }].filter((entry) => entry.image),
       eyebrow: 'One engineering team',
       heading: 'Sector Experience *and Support*',
       collapsible: false,
@@ -151,11 +152,11 @@ export const applicationsPage = (media: MediaResolver): SeededPage => ({
       content: doc(
         paragraph(
           'Each industry above connects to a specific service: automotive and manufacturing sectors are best served by ',
-          link('CNC Machine Repair Services', '/service/cnc-machine-repair-services'),
+          link('CNC Machine Repair Services', '/service/cnc-machine-repair-services-uae'),
           ', oil and gas and petrochemical sites by ',
-          link('Commissioning & Start-Up – Measurement', '/service/commissioning--start-up---measurement'),
+          link('Commissioning & Start-Up – Measurement', '/service/measurement-commissioning-start-up-services-uae'),
           ', and cross-sector control work by ',
-          link('PLC Maintenance & Troubleshooting', '/service/plc-maintenance--troubleshooting'),
+          link('PLC Maintenance & Troubleshooting', '/plc-maintenance-and-troubleshooting-services-uae'),
           '.',
         ),
       ),

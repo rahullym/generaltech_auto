@@ -21,7 +21,8 @@ export const productsPage = (media: MediaResolver): SeededPage => ({
   layout: [
     {
       blockType: 'hero',
-      variant: 'centered',
+      // The page runs long; a compact opener brings the first section up.
+      variant: 'minimal',
       eyebrow: 'General Tech Automation · Sharjah, UAE',
       heading: 'Products',
       subheading: 'Industrial Automation Spare Parts Supplier in UAE',
@@ -67,7 +68,7 @@ export const productsPage = (media: MediaResolver): SeededPage => ({
         ),
         paragraph(
           'When a part is obsolete or hard to source, our Repair Services team can often supply a tested surplus or refurbished replacement as part of a repair job rather than as a separate purchase — see ',
-          link('Repair Services', '/service/repair-services'),
+          link('Repair Services', '/industrial-repair-services-uae'),
           " for that path if you're sending equipment in rather than buying a standalone part.",
         ),
       ),

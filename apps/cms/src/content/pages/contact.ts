@@ -27,7 +27,8 @@ export const contactPage = (media: MediaResolver): SeededPage => ({
   layout: [
     {
       blockType: 'hero',
-      variant: 'centered',
+      // The form is the point of this page, so the hero gets out of its way.
+      variant: 'minimal',
       eyebrow: 'General Tech Automation · Sharjah, UAE',
       heading: 'Contact *General Tech Automation UAE*',
       image: media('digital-bg.jpg'),

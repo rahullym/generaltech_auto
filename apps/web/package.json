@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "start": "node ./dist/server/entry.mjs",
     "typecheck": "astro check",
-    "snapshot": "node scripts/snapshot.mjs"
+    "snapshot": "node scripts/snapshot.mjs",
+    "sync:pages": "tsx scripts/sync-cms-pages.mts"
   },
   "dependencies": {
     "@astrojs/node": "11.1.2",

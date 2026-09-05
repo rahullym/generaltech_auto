@@ -55,6 +55,9 @@ export const servicesPage = (media: MediaResolver): SeededPage => ({
       eyebrow: 'Why choose us',
       heading: 'Why *General Tech Automation*',
       collapsible: false,
+      // Without imagery the column under the heading is empty for the height
+      // of the band; the split layout drops a photograph in beneath it.
+      media: [{ image: media('engineer-tablet-plant.jpg') }].filter((entry) => entry.image),
       content: doc(
         paragraph(
           "Downtime on a production line or process skid costs more than the repair itself. That's why our industrial automation services are built around fast turnaround and traceable, genuine parts. We hold factory authorization from multiple global automation brands, so our technicians are trained directly by the manufacturers whose equipment they repair, and our replacement components come with full warranty backing.",
@@ -74,14 +77,14 @@ export const servicesPage = (media: MediaResolver): SeededPage => ({
           description:
             'Our core repair services cover industrial electronics repair, servo motor repair, and AC and DC motor repair for facilities across Dubai, Sharjah, and Abu Dhabi. We handle HMI and display repair, PLC repair and maintenance, and VFD and AC drive repair, along with soft starter repair, CNC machine repair services, and hydraulic and pneumatic repair. As a factory authorized repair center, we replace failed components rather than the whole unit wherever possible, keeping turnaround time and cost down.',
           services: [
-            service('Industrial Electronics Repair', '/service/repair-services'),
-            service('Servo Motor Repair', '/service/repair-services'),
-            service('AC & DC Motor Repair', '/service/repair-services'),
-            service('HMI & Display Repair', '/service/repair-services'),
-            service('VFD / AC Drive Repair', '/service/repair-services'),
-            service('Soft Starter Repair', '/service/repair-services'),
-            service('CNC Machine Repair', '/service/cnc-machine-repair-services'),
-            service('Hydraulic & Pneumatic Repair', '/service/repair-services'),
+            service('Industrial Electronics Repair', '/industrial-repair-services-uae'),
+            service('Servo Motor Repair', '/industrial-repair-services-uae'),
+            service('AC & DC Motor Repair', '/industrial-repair-services-uae'),
+            service('HMI & Display Repair', '/industrial-repair-services-uae'),
+            service('VFD / AC Drive Repair', '/industrial-repair-services-uae'),
+            service('Soft Starter Repair', '/industrial-repair-services-uae'),
+            service('CNC Machine Repair', '/service/cnc-machine-repair-services-uae'),
+            service('Hydraulic & Pneumatic Repair', '/industrial-repair-services-uae'),
           ],
         },
         {
@@ -90,12 +93,12 @@ export const servicesPage = (media: MediaResolver): SeededPage => ({
           description:
             'Beyond repair, we provide PLC maintenance and troubleshooting, PLC programming, and complete automation solutions for new and legacy control systems. Our retrofit solutions modernize aging equipment for Industry 4.0 without a full system replacement, and our digital transformation and industrial IoT services help plants move toward real-time monitoring and predictive maintenance.',
           services: [
-            service('PLC Maintenance & Troubleshooting', '/service/plc-maintenance--troubleshooting'),
-            service('PLC Programming', '/service/plc-programming'),
-            service('Automation Solutions', '/service/automation-solutions'),
-            service('Retrofit Solutions', '/service/retrofit-solutions'),
-            service('Digital Transformation', '/service/digital-transformation'),
-            service('Industrial IoT Services', '/service/iot-services'),
+            service('PLC Maintenance & Troubleshooting', '/plc-maintenance-and-troubleshooting-services-uae'),
+            service('PLC Programming', '/plc-programming-services-uae'),
+            service('Automation Solutions', '/industrial-automation-solutions-uae'),
+            service('Retrofit Solutions', '/industrial-retrofit-solutions-uae'),
+            service('Digital Transformation', '/service/digital-transformation-services-uae'),
+            service('Industrial IoT Services', '/service/industrial-iot-services-uae'),
           ],
         },
         {
@@ -104,12 +107,12 @@ export const servicesPage = (media: MediaResolver): SeededPage => ({
           description:
             'General Tech Automation acts as a main instrument supplier and provides field instrumentation services and support, measurement preventative services, and commissioning and start-up support. We also offer weighing scale repair services and asset data management to keep your instrumentation records accurate and audit-ready.',
           services: [
-            service('Main Instrument Supplier', '/service/main-instrument-supplier'),
-            service('Field Instrumentation Services', '/service/field-instrumentation-services-and-support'),
-            service('Measurement Preventative Services', '/service/measurement-preventative-services'),
-            service('Commissioning & Start-Up', '/service/commissioning--start-up---measurement'),
-            service('Weighing Scale Repair', '/service/measurement-preventative-services'),
-            service('Asset Data Management', '/service/asset-data-management'),
+            service('Main Instrument Supplier', '/service/main-instrument-supplier-uae'),
+            service('Field Instrumentation Services', '/service/field-instrumentation-services-and-support-uae'),
+            service('Measurement Preventative Services', '/service/measurement-preventative-services-uae'),
+            service('Commissioning & Start-Up', '/service/measurement-commissioning-start-up-services-uae'),
+            service('Weighing Scale Repair', '/service/measurement-preventative-services-uae'),
+            service('Asset Data Management', '/asset-data-management-services-uae'),
           ],
         },
         {
@@ -118,11 +121,11 @@ export const servicesPage = (media: MediaResolver): SeededPage => ({
           description:
             'Our workshop designs and manufactures custom control panels engineered around your process, and our wireless plant network support extends reliable connectivity across your site. For ongoing coverage, we offer Annual Maintenance Contracts (AMC) for panels, VFDs, UPS, and servo drives, giving facilities predictable, scheduled maintenance instead of reactive callouts.',
           services: [
-            service('Custom Panel Design & Manufacturing', '/service/custom-panel-design--manufacturing'),
-            service('Wireless Plant Network Support', '/service/wireless-plant-network-support'),
+            service('Custom Panel Design & Manufacturing', '/service/custom-control-panel-design-manufacturing-uae'),
+            service('Wireless Plant Network Support', '/wireless-plant-network-support-uae'),
             service(
               'AMC for Panels, VFD, UPS & Servo Drives',
-              '/service/annual-maintenance-contracts-(amc-services-)for-panels,-vfd,-ups-&-servo-drives',
+              '/amc-services-panels-vfd-ups-servo-drives-uae',
             ),
           ],
         },

@@ -19,23 +19,31 @@ const ASSETS =
   process.env.ASSET_DIR ??
   '/private/tmp/claude-501/-Users-rahul-generaltechautomation/621c0732-f02a-42f3-b123-1add64a6331d/scratchpad/live-assets'
 
+/**
+ * The Services menu: the approved label, and the permalink the page actually
+ * lives at. The paths are not uniform — each service page uses the permalink
+ * its own source document specifies, so some sit at the root and some under
+ * /service/ — which is why the whole path is written out rather than built
+ * from a slug. The old paths still resolve, but they redirect, and the menu
+ * should not spend a hop on every click.
+ */
 const SERVICES = [
-  ['Annual Maintenance Contracts (AMC Services )for Panels, VFD, UPS & Servo Drives', 'annual-maintenance-contracts-(amc-services-)for-panels,-vfd,-ups-&-servo-drives'],
-  ['Asset Data Management', 'asset-data-management'],
-  ['Automation Solutions', 'automation-solutions'],
-  ['CNC Machine Repair Services', 'cnc-machine-repair-services'],
-  ['Commissioning & Start Up - Measurement', 'commissioning--start-up---measurement'],
-  ['Custom Panel Design & Manufacturing', 'custom-panel-design--manufacturing'],
-  ['Digital Transformation', 'digital-transformation'],
-  ['Field Instrumentation Services and Support', 'field-instrumentation-services-and-support'],
-  ['IoT Services', 'iot-services'],
-  ['Main Instrument Supplier', 'main-instrument-supplier'],
-  ['Measurement Preventative Services', 'measurement-preventative-services'],
-  ['PLC Maintenance Troubleshooting', 'plc-maintenance--troubleshooting'],
-  ['PLC Programming', 'plc-programming'],
-  ['Repair Services', 'repair-services'],
-  ['Retrofit Solutions', 'retrofit-solutions'],
-  ['Wireless Plant Network Support', 'wireless-plant-network-support'],
+  ['Annual Maintenance Contracts (AMC Services )for Panels, VFD, UPS & Servo Drives', '/amc-services-panels-vfd-ups-servo-drives-uae'],
+  ['Asset Data Management', '/asset-data-management-services-uae'],
+  ['Automation Solutions', '/industrial-automation-solutions-uae'],
+  ['CNC Machine Repair Services', '/service/cnc-machine-repair-services-uae'],
+  ['Commissioning & Start Up - Measurement', '/service/measurement-commissioning-start-up-services-uae'],
+  ['Custom Panel Design & Manufacturing', '/service/custom-control-panel-design-manufacturing-uae'],
+  ['Digital Transformation', '/service/digital-transformation-services-uae'],
+  ['Field Instrumentation Services and Support', '/service/field-instrumentation-services-and-support-uae'],
+  ['IoT Services', '/service/industrial-iot-services-uae'],
+  ['Main Instrument Supplier', '/service/main-instrument-supplier-uae'],
+  ['Measurement Preventative Services', '/service/measurement-preventative-services-uae'],
+  ['PLC Maintenance Troubleshooting', '/plc-maintenance-and-troubleshooting-services-uae'],
+  ['PLC Programming', '/plc-programming-services-uae'],
+  ['Repair Services', '/industrial-repair-services-uae'],
+  ['Retrofit Solutions', '/industrial-retrofit-solutions-uae'],
+  ['Wireless Plant Network Support', '/wireless-plant-network-support-uae'],
 ] as const
 
 const QUICK_LINKS = [
@@ -155,7 +163,7 @@ const run = async () => {
         custom('Brands', '/brands'),
         {
           ...custom('Services', '/services'),
-          children: SERVICES.map(([label, slug]) => custom(label, `/service/${slug}`)),
+          children: SERVICES.map(([label, url]) => custom(label, url)),
         },
         custom('Applications', '/applications'),
         custom('Contact us', '/contact_us'),
@@ -184,11 +192,11 @@ const run = async () => {
         },
         {
           title: 'Services',
-          links: SERVICES.slice(0, 8).map(([label, slug]) => custom(label, `/service/${slug}`)),
+          links: SERVICES.slice(0, 8).map(([label, url]) => custom(label, url)),
         },
         {
           title: 'More Services',
-          links: SERVICES.slice(8).map(([label, slug]) => custom(label, `/service/${slug}`)),
+          links: SERVICES.slice(8).map(([label, url]) => custom(label, url)),
         },
       ],
       copyright: '© 2024 Copyright ® All Rights Reserved. General Tech Services LLC.',

@@ -141,6 +141,7 @@ export const brandsPage = (media: MediaResolver, logos: { image: number }[]): Se
     {
       blockType: 'richText',
       layout: 'split',
+      media: [{ image: media('industrial-slider.jpg') }].filter((entry) => entry.image),
       eyebrow: 'Straight about status',
       heading: "Why We Don't Chase *Every Authorization*",
       numbered: true,

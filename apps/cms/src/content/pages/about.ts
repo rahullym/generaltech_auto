@@ -17,9 +17,12 @@ export const aboutPage = (media: MediaResolver): SeededPage => ({
   },
   layout: [
     // --- Hero -------------------------------------------------------------
+    // The split hero is light and two-column. Every other page opens on the
+    // dark centred banner, so About Us arrives differently by design rather
+    // than repeating the same black slab a seventh time.
     {
       blockType: 'hero',
-      variant: 'centered',
+      variant: 'split',
       eyebrow: 'General Tech Automation · Sharjah, UAE',
       heading: 'About *General Tech Automation*',
       subheading: 'Industrial Electronics Repair Company in UAE',
@@ -65,7 +68,10 @@ export const aboutPage = (media: MediaResolver): SeededPage => ({
       mediaPosition: 'right',
       heading: 'Repair Guarantees & *Service Standards*',
       collapsible: false,
-      media: [{ image: media('board-repair.jpg') }].filter((entry) => entry.image),
+      media: [
+        { image: media('board-repair.jpg') },
+        { image: media('operator-control-panel.jpg') },
+      ].filter((entry) => entry.image),
       content: doc(
         paragraph(
           'As an industrial electronics repair company in UAE, General Tech Automation is a factory-authorized repair partner for a wide range of AC and DC drive manufacturers, so a faulty drive is often restored to spec rather than replaced outright.',
@@ -101,25 +107,37 @@ export const aboutPage = (media: MediaResolver): SeededPage => ({
     },
 
     // --- What We Do --------------------------------------------------------
+    // The second paragraph names three divisions in three complete sentences,
+    // which as one block of prose read as a list the eye has to unpick. Each
+    // sentence becomes a card instead, carrying its own words unaltered; every
+    // card title is the division's name as the sentence already gives it. The
+    // opening paragraph stays whole, as the intro that frames all three.
     {
-      blockType: 'richText',
-      layout: 'editorial',
-      mediaPosition: 'left',
+      blockType: 'featureGrid',
       heading: 'What We *Do*',
-      lede: true,
-      collapsible: false,
-      media: [
-        { image: media('automation-machine.jpg') },
-        { image: media('operator-control-panel.jpg') },
-      ].filter((entry) => entry.image),
-      content: doc(
-        paragraph(
-          'General Tech Automation covers the two things plants need on a recurring basis: keeping industrial electronics running, and building or integrating the control systems around them.',
-        ),
-        paragraph(
-          'Our Repair Services division tests and restores inverters, VFDs, servo drives, HMIs, and controllers — in our Sharjah workshop and in the field. Our Automation Solutions team handles PLC programming, SCADA architecture, and custom control panel design for new lines and retrofits. Between projects, our Annual Maintenance Contracts keep panels and drives on a preventative schedule so faults get caught before they cause downtime, not after.',
-        ),
-      ),
+      intro:
+        'General Tech Automation covers the two things plants need on a recurring basis: keeping industrial electronics running, and building or integrating the control systems around them.',
+      columns: '3',
+      features: [
+        {
+          iconName: 'refresh',
+          title: 'Repair Services',
+          description:
+            'Our Repair Services division tests and restores inverters, VFDs, servo drives, HMIs, and controllers — in our Sharjah workshop and in the field.',
+        },
+        {
+          iconName: 'cpu',
+          title: 'Automation Solutions',
+          description:
+            'Our Automation Solutions team handles PLC programming, SCADA architecture, and custom control panel design for new lines and retrofits.',
+        },
+        {
+          iconName: 'shield',
+          title: 'Annual Maintenance Contracts',
+          description:
+            'Between projects, our Annual Maintenance Contracts keep panels and drives on a preventative schedule so faults get caught before they cause downtime, not after.',
+        },
+      ],
     },
 
     // --- Why Plants Choose Us ----------------------------------------------
@@ -132,7 +150,10 @@ export const aboutPage = (media: MediaResolver): SeededPage => ({
       mediaPosition: 'right',
       numbered: true,
       collapsible: false,
-      media: [{ image: media('oil-refinery.jpg') }].filter((entry) => entry.image),
+      media: [
+        { image: media('oil-refinery.jpg') },
+        { image: media('automation-machine.jpg') },
+      ].filter((entry) => entry.image),
       content: doc(
         paragraph(
           "We stock a significant inventory of valves, actuators, and process measurement instrumentation in Sharjah, letting us respond immediately rather than waiting on an overseas order — often delivering a repaired or automated assembly the same day it's requested.",
