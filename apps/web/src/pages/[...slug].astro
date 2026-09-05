@@ -16,8 +16,22 @@ if (!slug || slug === 'home') {
   return Astro.redirect('/', 301)
 }
 
+/**
+ * One legacy service path carries commas, brackets and an ampersand, and a
+ * client is free to send those percent-encoded or raw. Decoding first means
+ * both spellings resolve to the same document; a malformed escape is left as
+ * written rather than throwing.
+ */
+const decode = (value: string): string => {
+  try {
+    return decodeURIComponent(value)
+  } catch {
+    return value
+  }
+}
+
 // Trailing slashes are cosmetic; `/a/b/` and `/a/b` are the same document.
-const path = slug.replace(/\/+$/, '')
+const path = decode(slug).replace(/\/+$/, '')
 
 // A service page that moved to the permalink its source document specifies
 // still answers on its old path, permanently.
