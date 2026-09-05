@@ -17,9 +17,21 @@ interface Props {
     description?: string
     link?: LinkValue
   }[]
+  footnote?: string
 }
 
-const { heading, intro, display = 'grid', columns = '3', features = [] } = Astro.props
+const { heading, intro, display = 'grid', columns = '3', features = [], footnote } = Astro.props
+
+/**
+ * A card description may carry more than one paragraph — the source documents
+ * often give a sub-section two. A blank line separates them, so the break is
+ * kept rather than collapsed into one run-on paragraph.
+ */
+const paragraphs = (value: string): string[] =>
+  value
+    .split(/\n\s*\n/)
+    .map((part) => part.trim())
+    .filter(Boolean)
 const carousel = display === 'carousel'
 
 const gridCols: Record<string, string> = {
@@ -162,9 +174,12 @@ const ICONS: Record<string, string> = {
                   {feature.title}
                 </h3>
 
-                {feature.description && (
-                  <p class="text-[15px] leading-[1.8] text-gray-700">{feature.description}</p>
-                )}
+                {feature.description &&
+                  paragraphs(feature.description).map((text, i) => (
+                    <p class:list={['text-[15px] leading-[1.8] text-gray-700', i > 0 && 'mt-5']}>
+                      {text}
+                    </p>
+                  ))}
 
                 {feature.link?.label && (
                   <Link
@@ -184,6 +199,17 @@ const ICONS: Record<string, string> = {
         })
       }
     </div>
+
+    {
+      footnote && (
+        <p
+          data-reveal="up"
+          class="mt-16 max-w-3xl border-l-2 border-general-red/20 pl-8 text-[15px] leading-[1.8] text-gray-600"
+        >
+          {footnote}
+        </p>
+      )
+    }
   </div>
 </section>
 

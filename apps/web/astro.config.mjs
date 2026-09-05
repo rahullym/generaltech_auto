@@ -41,6 +41,14 @@ export default defineConfig({
         access: 'public',
         default: 'http://localhost:4331',
       }),
+      // Where a contact-form submission is delivered. Anything that accepts a
+      // JSON POST works; with this unset the form falls back to composing the
+      // enquiry in the sender's own mail client. See pages/api/contact.ts.
+      CONTACT_WEBHOOK_URL: envField.string({
+        context: 'server',
+        access: 'secret',
+        optional: true,
+      }),
     },
   },
 

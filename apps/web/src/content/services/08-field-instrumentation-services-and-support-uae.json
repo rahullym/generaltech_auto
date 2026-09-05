@@ -1,0 +1,192 @@
+{
+  "order": 8,
+  "title": "Field Instrumentation Services and Support UAE",
+  "slug": "service/field-instrumentation-services-and-support-uae",
+  "aliases": ["service/field-instrumentation-services-and-support"],
+  "navLabel": "Field Instrumentation Services and Support",
+  "summary": "Field Instrumentation Services and Support UAE by General Tech Automation. Commissioning, calibration & loop testing in 1-2 days. Get a quote today.",
+  "meta": {
+    "title": "Field Instrumentation Services and Support UAE | GTA",
+    "description": "Field Instrumentation Services and Support UAE by General Tech Automation. Commissioning, calibration & loop testing in 1-2 days. Get a quote today."
+  },
+  "serviceType": "Field instrumentation services and support",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "Field Instrumentation Services and Support *UAE*",
+      "subheading": "Field Instrumentation Services and Support UAE by General Tech Automation. Commissioning, calibration & loop testing in 1-2 days. Get a quote today.",
+      "image": "engineer-tablet-plant.jpg",
+      "actions": [
+        { "label": "Arrange your project", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Field Instrumentation Services and Support UAE from General Tech Automation cover the installation, commissioning, calibration, and start-up support of process instruments across industrial plants, so every transmitter, valve, and control loop is verified before your process goes live. As a provider of instrument commissioning services UAE relies on for both new installations and plant expansions, our technicians work directly on site rather than diagnosing remotely. A standard single-loop commissioning task is typically completed within 1 to 2 working days per instrument, with full system field commissioning services UAE scheduled around your shutdown or start-up window."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "What Is Field Instrumentation *Services and Support*",
+      "body": [
+        "If you are asking what is instrument commissioning, the short answer is this: it is the process of installing a field instrument, configuring it to the correct range and output signal, then testing it against the control system before it is trusted to run unattended. It is not just physically mounting a device — it is proving the entire signal path works correctly from the field to the control room.",
+        "This is best understood as field service and commissioning explained end to end: install, calibrate, loop-check, and verify, with each step documented before moving to the next instrument. This falls under the wider category of industrial instrumentation support services, which also includes ongoing troubleshooting and support once the plant is running, not only the initial start-up phase. Plants that treat Field Instrumentation Services and Support UAE as a one-time project often see instruments drift out of calibration within months, while those that build it into a recurring schedule maintain accuracy across the full instrument lifecycle."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "Instrument Types We *Commission and Support*",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "gauge",
+          "title": "Pressure Transmitter Commissioning UAE",
+          "description": "Pressure transmitter commissioning UAE covers range configuration, zero and span calibration, and loop verification for transmitters used across process, utility, and safety applications. Each unit is tested against a certified reference standard before being signed off as ready for service."
+        },
+        {
+          "icon": "cog",
+          "title": "Temperature Sensor Installation and Commissioning",
+          "description": "Temperature sensor installation and commissioning includes RTDs, thermocouples, and transmitters, checked for correct wiring, cold junction compensation where required, and accurate output across the full operating range before handover to the process team."
+        },
+        {
+          "icon": "signal",
+          "title": "Flow Meter Commissioning Services",
+          "description": "Flow meter commissioning services cover electromagnetic, vortex, and differential pressure flow meters, verified for correct orientation, upstream and downstream straight-run requirements, and signal accuracy under actual process flow conditions."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Level Indicator Commissioning UAE",
+          "description": "Level indicator commissioning UAE applies to radar, ultrasonic, and displacer-type level instruments, configured and tested against tank or vessel geometry so readings remain accurate across the full measurement range, not only at mid-level."
+        },
+        {
+          "icon": "refresh",
+          "title": "Control Valve and Actuator Commissioning",
+          "description": "Control valve and actuator commissioning verifies stroke time, fail-safe position, and positioner calibration, confirming the valve responds correctly to the control signal before it is placed into automatic control."
+        },
+        {
+          "icon": "cpu",
+          "title": "PLC and DCS Commissioning Services",
+          "description": "PLC and DCS commissioning services cover programming verification, I/O point testing, and full loop checks between the controller and every connected field instrument, ensuring the logic and the physical signals agree before start-up."
+        },
+        {
+          "icon": "shield",
+          "title": "Safety Instrumented System Commissioning",
+          "description": "Safety instrumented system commissioning covers emergency shutdown logic, trip testing, and functional safety verification for instruments protecting personnel and equipment, tested independently from the standard process control loops."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Flame and Gas Detector Commissioning",
+          "description": "Flame and gas detector commissioning includes sensor placement verification, calibration against certified test gas, and alarm and trip point confirmation, since these devices have zero tolerance for a missed or delayed signal."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "On site",
+      "heading": "How Our Field Instrumentation *Support Works*",
+      "body": [
+        "Every job begins with instrument calibration and configuration services carried out against manufacturer specifications and, where applicable, a certified reference standard, so results are traceable rather than assumed. Field instrument installation UAE work follows manufacturer mounting and wiring guidelines exactly, since incorrect installation is one of the most common causes of instrument drift later in operation.",
+        "We provide on-site instrument commissioning support rather than remote-only troubleshooting, because physical access to the device is often required to confirm wiring, grounding, and process connection issues that cannot be diagnosed from a control room screen alone. Loop checking and instrument testing is carried out end to end, from the field device through to the marshalling cabinet and into the control system, with instrument start-up and verification services completed before the loop is released to operations. Every step in this Field Instrumentation Services and Support UAE workflow is logged, so any later question about why a reading looks off can be traced back to a specific calibration or test record instead of guesswork."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Field Commissioning *Process*",
+      "image": "board-repair.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Our field commissioning process UAE follows a structured sequence so nothing is missed before a loop is handed over.",
+        "Stage 1, instrument pre-commissioning checklist services: wiring, grounding, and physical installation are checked, typically within half a day per instrument. Stage 2, calibration and configuration: each device is set to the correct range and output, usually completed within 1 to 2 hours per instrument depending on type. Stage 3, loop check: the signal is traced and confirmed end to end between field and control system, generally 1 to 2 hours per loop. Stage 4, system verification and sign-off: readings are confirmed against the process condition or a known reference, completed the same day as the loop check in most cases.",
+        "Commissioning to start-up handover includes full instrument documentation and test records for every device, so your maintenance team has a complete calibration and commissioning history from day one."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Credentials, Documentation, *and Proof*",
+      "body": [
+        "Our field work is carried out by certified instrumentation technicians UAE trained on the specific instrument brands and safety systems involved in your project, not generalist electricians assigned to unfamiliar equipment. As process control instrument specialists, our team commissions pressure, temperature, flow, level, valve, and safety devices as a core part of daily work, not as an occasional task.",
+        "Rather than relying on generic claims, our proven field commissioning expertise is demonstrated through the documentation each project produces — calibration certificates, loop test records, and sign-off sheets that your team can review and file for audit purposes. Industrial safety instrumentation compliance is treated as a distinct discipline from standard process instrumentation, since safety systems such as ESD logic and gas detection require independent trip testing rather than standard loop verification alone. Please confirm your exact certification or standards requirement at enquiry stage, since not every instrument or industry needs the same compliance level, and we would rather ask than assume."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Turnaround Time, Pricing, *and Coverage Area*",
+      "body": [
+        "Instrument commissioning turnaround time UAE for a single instrument typically runs half a day to 1 full day, including installation checks, calibration, and loop testing, while a multi-instrument system commissioning project is scheduled around your shutdown window and confirmed in advance.",
+        "Field instrumentation service cost UAE pricing depends on instrument count, complexity — such as safety-critical versus standard process instruments — and whether work is scheduled during a planned shutdown or as urgent call-out support, so a fixed quote is provided after reviewing your instrument list rather than a flat day-rate that ignores project complexity. This keeps Field Instrumentation Services and Support UAE pricing predictable, since you know the scope before work begins rather than receiving a variable invoice after the fact.",
+        "We provide field instrumentation support Dubai Sharjah Abu Dhabi and across the wider UAE, with technicians available for on-site dispatch to any facility in the country."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Beyond Commissioning *Alone*",
+      "body": [
+        "Field instrumentation and automation solutions are handled by the same team, so instruments commissioned during start-up connect directly into the PLC, DCS, or automation platform without a handover gap between separate vendors. This also means commissioning and preventative maintenance combined can be scheduled together, so instruments are calibrated on a recurring basis rather than only checked once at initial start-up.",
+        "Where an existing instrument is unreliable or obsolete, instrumentation support and retrofit solutions allow it to be replaced and recommissioned without redesigning the surrounding process loop from scratch, which keeps both cost and schedule disruption to a minimum."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Why Choose *General Tech Automation*",
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "As a trusted field instrumentation provider UAE facilities call for both planned commissioning and urgent field support, General Tech Automation keeps commissioning, calibration, and safety verification under one team rather than splitting the work across multiple contractors.",
+        "Based in Sharjah and working as a reliable instrument commissioning partner Sharjah and wider UAE facilities depend on, every commissioned instrument leaves with full documentation, so your Field Instrumentation Services and Support UAE project is backed by records your team can rely on for years, not just a signature at handover. This same documentation-first approach applies whether the work is a single transmitter swap or a full plant commissioning schedule."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Here are direct answers to the questions plant engineers and maintenance managers ask most often before scheduling field instrumentation work.",
+      "items": [
+        {
+          "q": "How long does field instrumentation commissioning take?",
+          "a": ["A single instrument typically takes half a day to 1 full day to install, calibrate, and loop-check, while a multi-instrument system is scheduled in stages around your shutdown or start-up window, usually confirmed in advance based on the full instrument list."]
+        },
+        {
+          "q": "What instruments can you commission and support?",
+          "a": ["Pressure transmitters, temperature sensors, flow meters, level indicators, control valves, PLC and DCS systems, and safety instrumented systems including flame and gas detectors are all covered, each tested against manufacturer specifications before handover."]
+        },
+        {
+          "q": "Do you provide documentation after commissioning?",
+          "a": ["Yes. Every instrument commissioned receives calibration certificates, loop test records, and sign-off documentation, giving your maintenance team a complete history from day one rather than starting with no baseline data."]
+        },
+        {
+          "q": "Is safety instrumentation commissioned differently from standard process instruments?",
+          "a": ["Yes. Safety instrumented system commissioning, including emergency shutdown logic and gas detection, requires independent trip testing separate from standard loop checks, since these systems have zero tolerance for a missed or delayed signal."]
+        },
+        {
+          "q": "Can you support urgent instrument failures outside a planned project?",
+          "a": ["Yes. On-site instrument commissioning support is available for urgent call-outs as well as planned shutdowns, with technicians dispatched to diagnose and resolve field instrument issues without waiting for the next scheduled maintenance window."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Arrange your project",
+      "heading": "Arrange your Field Instrumentation Services and Support UAE *project today.*",
+      "body": "If you need instruments installed, calibrated, and commissioned correctly the first time, our team can review your instrument list and confirm a schedule that fits your shutdown or start-up window.",
+      "actions": [
+        { "label": "+971 6 543 6933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

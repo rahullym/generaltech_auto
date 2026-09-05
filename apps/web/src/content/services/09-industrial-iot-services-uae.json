@@ -1,0 +1,179 @@
+{
+  "order": 9,
+  "title": "Industrial IoT Services in UAE",
+  "slug": "service/industrial-iot-services-uae",
+  "aliases": ["service/iot-services"],
+  "navLabel": "IoT Services",
+  "summary": "Get expert Industrial IoT Services in UAE: smart sensors, predictive maintenance & real-time monitoring across Dubai, Sharjah, Abu Dhabi & Fujairah.",
+  "meta": {
+    "title": "Industrial IoT Services in UAE | General Tech Automation",
+    "description": "Get expert Industrial IoT Services in UAE: smart sensors, predictive maintenance & real-time monitoring across Dubai, Sharjah, Abu Dhabi & Fujairah."
+  },
+  "serviceType": "Industrial IoT services",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "Industrial IoT Services *in UAE*",
+      "subheading": "Smart Sensors • Predictive Maintenance • Real-Time Monitoring • Dubai • Sharjah • Abu Dhabi • Fujairah",
+      "image": "digital-bg.jpg",
+      "actions": [
+        { "label": "Book a free site assessment", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "General Tech Automation provides Industrial IoT Services in UAE for manufacturing plants, oil and gas facilities, and process industries across Dubai, Sharjah, Abu Dhabi, and Fujairah. Our Industrial IoT Services in UAE combine smart sensors for industrial monitoring, a real-time equipment monitoring system, and IoT predictive maintenance UAE tools to reduce unplanned downtime and lower repair costs. As a certified IoT solution provider UAE, we design, install, and support connected systems that give plant managers live visibility into machine health, energy use, and asset location. Most installations go live within 2 to 6 weeks. These are Industrial IoT solutions UAE built for real plant floors, not consumer gadgets."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "What Is Industrial IoT (IIoT) *& How It Works*",
+      "body": [
+        "Industrial IoT Services in UAE use connected sensors, wireless networks, and cloud-based analytics to monitor machinery, utilities, and plant infrastructure without constant manual inspection rounds. This is different from consumer smart-home devices: industrial automation and IoT integration links directly into PLCs, VFDs, and SCADA systems already running on your plant floor, turning raw operational data into decisions a maintenance team can act on the same shift. At General Tech Automation, our IIoT company Sharjah team blends field instrumentation with edge computing and secure cloud dashboards. Data from motors, pumps, tanks, and conveyors is captured, transmitted, and displayed in real time, so reliability engineers can track asset health, energy consumption, and production output from one screen. Whether your team is on-site in Sharjah or reviewing dashboards remotely from Dubai or Abu Dhabi, the same live data is available around the clock."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "Service Types *We Cover*",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "signal",
+          "title": "Smart Sensors and Real-Time Equipment Monitoring",
+          "description": "We install smart sensors for industrial monitoring on rotating equipment, pumps, and tanks to build a real-time equipment monitoring system that flags abnormal vibration, temperature, or pressure before failure occurs. Combined with industrial process optimization IoT dashboards, plant teams see live trends instead of relying on manual log sheets. This is typically the first phase clients deploy, since it delivers visible results — often a 15 to 20 percent drop in unplanned stoppages — within the first quarter of use."
+        },
+        {
+          "icon": "gauge",
+          "title": "Remote Monitoring and Predictive Maintenance",
+          "description": "Through connected sensors and analytics software, remote monitoring and predictive maintenance lets engineers review equipment condition from anywhere, cutting the need for routine physical inspections. Our IoT predictive maintenance UAE service analyses vibration, temperature, and runtime data to flag machine downtime reduction technology opportunities weeks before a breakdown, giving maintenance teams time to schedule repairs during planned shutdowns rather than emergency call-outs."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Asset Tracking and Management",
+          "description": "An IoT enabled asset tracking system gives real-time location and usage data for tools, vehicles, and mobile equipment across a site or between multiple facilities. Our asset tracking and management UAE solution reduces loss, theft, and idle-equipment costs, while generating utilisation reports that help plant managers plan replacements more accurately, instead of relying on paper logs updated once a week."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Smart Building and Energy Automation",
+          "description": "For facilities teams, our smart building automation solutions automate lighting, access control, and climate systems from one platform. HVAC and energy management automation reduces energy waste by matching output to real occupancy and production schedules, often cutting utility bills by 10 to 25 percent within the first year, while extending equipment life through more consistent operation."
+        },
+        {
+          "icon": "network",
+          "title": "Smart City and Infrastructure Solutions",
+          "description": "Beyond single facilities, our smart city IoT solutions UAE support municipal and infrastructure clients with connected street lighting, water metering, and monitoring networks. Traffic and waste management IoT systems use the same sensor and dashboard architecture as our industrial projects, adapted for public infrastructure, helping operators reduce operating costs and respond to faults faster than manual inspection schedules allow."
+        },
+        {
+          "icon": "cpu",
+          "title": "Digital Transformation and System Integration",
+          "description": "Many clients start with a single use case and expand. Digital transformation and IoT UAE projects at General Tech Automation combine PLC and IoT integration services with existing automation assets, so new sensors and dashboards work alongside legacy panels and drives rather than replacing them, protecting your prior investment in plant hardware."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "Delivery",
+      "heading": "How It Works */ Delivery Options*",
+      "body": [
+        "We offer scalable IoT infrastructure solutions in two delivery modes: standard packages for single-site monitoring, and custom IoT solutions for industrial plants with multi-site, multi-vendor equipment. IoT deployment for factories typically starts with a site survey lasting 1 to 3 days, followed by wireless sensor network installation, gateway configuration, and dashboard setup, completed on-site within 5 to 10 working days for a standard facility. Larger or multi-building sites are phased over 4 to 8 weeks. Every deployment includes both onsite commissioning and remote configuration support, so teams in Dubai, Sharjah, Abu Dhabi, or Fujairah receive the same standard of service, regardless of location. We also support hybrid rollouts, mixing standard sensor kits with custom-built monitoring for non-standard machinery."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How we work",
+      "heading": "Our *Process*",
+      "intro": "Our deployment follows a fixed five-step process, each stage self-contained so clients always know what happens next.",
+      "steps": [
+        { "meta": "1–2 days", "title": "Enquiry & Site Assessment", "description": "we review your equipment list and current automation setup." },
+        { "meta": "2–3 days", "title": "Site Survey & Network Design", "description": "engineers map sensor points, wireless coverage, and gateway locations." },
+        { "meta": "5–10 days", "title": "Installation & Wireless Sensor Network Setup", "description": "hardware is mounted, wired, or wirelessly connected without halting production." },
+        { "meta": "2–4 days", "title": "Dashboard Configuration & Testing", "description": "alerts, thresholds, and reporting are calibrated to your process." },
+        { "meta": "1 day", "title": "Commissioning & Handover", "description": "the system goes live, with staff training included." }
+      ],
+      "footnote": "Most standard projects move from enquiry to live dashboard within 3 to 4 weeks. As a certified IoT solution provider UAE, we document every stage so the finished system can be audited or expanded without gaps in knowledge."
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Credentials *and Proof*",
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "General Tech Automation has operated as an industrial automation distributor and integrator from our Sharjah base since our founding, supplying and servicing PLCs, VFDs, servo drives, and instrumentation across the UAE. As a trusted industrial automation distributor, we represent multiple established international automation and sensor brands, giving clients access to genuine hardware, manufacturer warranties, and factory-backed spare parts. As a global brand IoT distributor UAE clients can verify, every project includes documented commissioning reports, wiring diagrams, and a handover pack, so the customer owns a complete technical record rather than a black-box installation.",
+        "Data security is built into every Industrial IoT Services in UAE deployment we handle: sensor networks use encrypted transmission, dashboards sit behind role-based access controls, and no production data leaves the client's chosen cloud region without written approval. This matters because industrial data — throughput figures, maintenance logs, energy use — is commercially sensitive, and a monitoring system that exposes it is a liability rather than an asset. Every configuration is reviewed with the client's IT team before go-live, not after."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Turnaround, Pricing Range *& Coverage Area*",
+      "body": [
+        "Coverage for our Industrial IoT Services in UAE extends across Dubai, Sharjah, Abu Dhabi, and Fujairah, with site visits generally scheduled within 24 to 48 hours of enquiry. We run dedicated response teams for IoT services Dubai, IoT services Sharjah, IoT services Abu Dhabi, and IoT services Fujairah, coordinated from our Sharjah head office for consistent response times across the emirates. Standard single-site sensor packages are typically commissioned in 1 to 2 weeks; multi-site or custom builds run 4 to 8 weeks. Pricing depends on sensor count, network complexity, and whether monitoring is retrofitted onto existing panels or built into a new installation. Most clients request a free site assessment before receiving a fixed quote, since the cost of IoT services in UAE varies significantly between a five-sensor pilot and a plant-wide rollout. Emergency support requests are typically acknowledged within 4 working hours."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Cross-Sell */ Differentiator*",
+      "body": [
+        "Few providers in the region offer automation and IoT services combined under one team: most either sell sensors with no automation background, or offer PLC programming without connected monitoring. General Tech Automation does both. Our PLC and IoT integration services mean the same engineers who commission your VFDs and control panels also configure your monitoring dashboards, so data and hardware stay aligned. For clients already using our PLC Maintenance and Automation Solutions services, adding IoT monitoring extends the same panels and infrastructure rather than duplicating it."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Why Choose *General Tech Automation*",
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Why choose General Tech Automation for IoT services engineering companies across the UAE rely on? We are a certified IoT solution provider UAE and IoT system integrator UAE, offering both hardware distribution and hands-on engineering support from a single Sharjah-based team, with site-visit response times as fast as 24 hours. We do not use generic superlatives without backing them up. Our credentials are the automation brands we distribute, the commissioning documentation provided on every job, and the number of plants across Dubai, Sharjah, Abu Dhabi, and Fujairah we currently support. That combination of stock, engineering skill, and documented delivery is what differentiates a genuine IIoT company Sharjah clients can rely on long-term."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked *Questions*",
+      "items": [
+        {
+          "q": "What is industrial IoT (IIoT)?",
+          "a": ["Industrial IoT (IIoT) uses connected sensors, gateways, and software to collect real-time data from plant machinery, then turns that data into alerts, reports, and trends. Unlike traditional manual inspection, IIoT continuously tracks temperature, vibration, and runtime, helping teams catch problems early. Our Industrial IoT Services in UAE apply this directly to pumps, motors, panels, and conveyors already running on your site."]
+        },
+        {
+          "q": "How does IoT improve plant efficiency?",
+          "a": ["IoT improves plant efficiency by replacing scheduled manual checks with continuous monitoring, so maintenance happens based on actual equipment condition instead of a fixed calendar. This reduces unnecessary servicing, catches faults before breakdowns, and gives managers accurate energy and output data to identify where a process is running below capacity."]
+        },
+        {
+          "q": "What are the benefits of predictive maintenance IoT?",
+          "a": ["Benefits of predictive maintenance IoT include fewer unplanned stoppages, lower emergency repair costs, longer equipment life, and better spare-parts planning. Because sensors flag early warning signs, such as unusual vibration or heat, teams can schedule repairs during planned downtime rather than reacting to sudden failures that halt production."]
+        },
+        {
+          "q": "What is the cost of IoT services in UAE?",
+          "a": ["The cost of IoT services in UAE depends on sensor count, network type, and whether the project is a small pilot or a full plant rollout. General Tech Automation offers a free site assessment before quoting, so clients receive a fixed price based on actual equipment and coverage needs rather than a generic package rate."]
+        },
+        {
+          "q": "How do I find the best IoT company for industrial plants UAE?",
+          "a": ["The best IoT company for industrial plants UAE combines automation engineering experience with genuine hardware distribution, documented commissioning, and fast local response times. Look for a provider that already services PLCs, VFDs, and panels in your region, since that background carries directly into reliable IoT sensor and dashboard integration."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get started today",
+      "heading": "Ready to reduce downtime with *Industrial IoT Services in UAE?*",
+      "body": "Contact General Tech Automation for a free site assessment — visits scheduled within 24 to 48 hours across Dubai, Sharjah, Abu Dhabi, and Fujairah. Call +971 6 543 6933 or email mathews@generaltechuae.com to get started today.",
+      "actions": [
+        { "label": "Call +971 6 543 6933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

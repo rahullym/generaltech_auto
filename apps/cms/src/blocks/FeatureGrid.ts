@@ -59,5 +59,13 @@ export const FeatureGrid: Block = {
         linkField({ required: false }),
       ],
     },
+    {
+      name: 'footnote',
+      type: 'textarea',
+      admin: {
+        description:
+          'Optional closing line under the cards — for a passage that qualifies the set rather than belonging to any one card.',
+      },
+    },
   ],
 }

@@ -70,14 +70,14 @@ const socialIcons: Record<string, { path: string; color: string }> = {
         {phone && (
           <p class="pt-3">
             Tel:
-            <a href={`tel:${phone.replace(/\s+/g, '')}`} class="hover:text-general-red transition-colors">
+            <a href={`tel:${phone.replace(/\s+/g, '')}`} class="inline-block py-1 hover:text-general-red transition-colors">
               {' '}{phone}
             </a>
           </p>
         )}
         {email && (
           <p>
-            <a href={`mailto:${email}`} class="hover:text-general-red transition-colors">Email Us</a>
+            <a href={`mailto:${email}`} class="inline-block py-1 hover:text-general-red transition-colors">Email Us</a>
           </p>
         )}
       </div>
@@ -123,7 +123,7 @@ const socialIcons: Record<string, { path: string; color: string }> = {
               <li>
                 <a
                   href={resolveHref(entry.link)}
-                  class="hover:text-general-red transition-colors"
+                  class="inline-block py-1 hover:text-general-red transition-colors"
                   {...entry.link?.newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
                 >
                   {entry.link?.label}
@@ -142,9 +142,9 @@ const socialIcons: Record<string, { path: string; color: string }> = {
   >
     <p>{footer.copyright ?? `© ${year} ${settings.siteName}. All rights reserved.`}</p>
     <div class="flex flex-wrap justify-center gap-x-8 gap-y-3">
-      <a href="/blog" class="hover:text-white transition-colors">Blog</a>
-      <a href="/docs" class="hover:text-white transition-colors">Docs</a>
-      <a href="/rss.xml" class="hover:text-white transition-colors">RSS</a>
+      <a href="/blog" class="inline-block py-1 hover:text-white transition-colors">Blog</a>
+      <a href="/docs" class="inline-block py-1 hover:text-white transition-colors">Docs</a>
+      <a href="/rss.xml" class="inline-block py-1 hover:text-white transition-colors">RSS</a>
     </div>
   </div>
 </footer>

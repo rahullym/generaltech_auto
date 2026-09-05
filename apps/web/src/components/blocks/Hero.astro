@@ -131,12 +131,17 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
                 <button
                   type="button"
                   aria-label={`Show slide ${index + 1}`}
-                  class:list={[
-                    'h-1.5 rounded-full transition-all duration-300',
-                    index === 0 ? 'w-8 bg-general-red' : 'w-3 bg-white/40 hover:bg-white/70',
-                  ]}
+                  class="group/dot flex h-11 w-11 items-center justify-center"
                   data-slide-dot={index}
-                />
+                >
+                  <span
+                    class:list={[
+                      'block h-1.5 rounded-full transition-all duration-300',
+                      index === 0 ? 'w-8 bg-general-red' : 'w-3 bg-white/40 group-hover/dot:bg-white/70',
+                    ]}
+                    aria-hidden="true"
+                  />
+                </button>
               ))}
             </div>
           )}
@@ -308,9 +313,14 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
         bg.classList.toggle('scale-105', i !== index)
       })
       dots.forEach((dot, i) => {
-        dot.classList.toggle('bg-general-red', i === index)
-        dot.classList.toggle('scale-125', i === index)
-        dot.classList.toggle('bg-white/40', i !== index)
+        const bar = dot.firstElementChild as HTMLElement | null
+        if (!bar) return
+        const current = i === index
+        bar.classList.toggle('w-8', current)
+        bar.classList.toggle('bg-general-red', current)
+        bar.classList.toggle('w-3', !current)
+        bar.classList.toggle('bg-white/40', !current)
+        dot.setAttribute('aria-current', current ? 'true' : 'false')
       })
     }
 

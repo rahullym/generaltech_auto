@@ -1,0 +1,193 @@
+{
+  "order": 7,
+  "title": "Digital Transformation Services UAE",
+  "slug": "service/digital-transformation-services-uae",
+  "aliases": ["service/digital-transformation"],
+  "navLabel": "Digital Transformation",
+  "summary": "Digital Transformation Services UAE from General Tech Automation. IT-OT integration, IoT, analytics & cyber security with Emerson. Get a roadmap today.",
+  "meta": {
+    "title": "Digital Transformation Services UAE | GTA",
+    "description": "Digital Transformation Services UAE from General Tech Automation. IT-OT integration, IoT, analytics & cyber security with Emerson. Get a roadmap today."
+  },
+  "serviceType": "Industrial digital transformation",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "Digital Transformation Services *UAE*",
+      "subheading": "Digital Transformation Services UAE from General Tech Automation. IT-OT integration, IoT, analytics & cyber security with Emerson. Get a roadmap today.",
+      "image": "digital-bg.jpg",
+      "actions": [
+        { "label": "Get a roadmap", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Digital Transformation Services UAE from General Tech Automation help industrial plants connect operational technology and information technology into one data-driven system, without disrupting production or safety. As an industrial digital transformation UAE partner working alongside Emerson, we start every engagement with IT OT convergence services UAE designed around your existing plant floor, not a generic software rollout. A typical assessment-to-roadmap phase takes 2 to 4 weeks, giving you a clear, phased plan before any system changes begin."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "What Is Digital Transformation *for Industrial Plants*",
+      "body": [
+        "If you are asking what is digital transformation in manufacturing, the short answer is this: it is the shift from isolated, plant-floor data trapped in individual machines to a connected system where sensor data, process history, and business systems all inform the same decisions. It is not simply installing new software — it is changing how information flows from the plant floor to the boardroom.",
+        "At its core, this requires IT and OT integration explained in practical terms. OT systems, such as PLCs, sensors, and control systems, generate the real-time data. IT systems, such as ERP, analytics platforms, and cloud infrastructure, turn that data into reports, forecasts, and decisions. Digital Transformation Services UAE bridge these two worlds, which is also the foundation of any genuine Industry 4.0 transformation services engagement — connected sensors, edge computing, and analytics working together rather than in silos. Plants that treat this as a technology purchase alone tend to stall after installation, while those that treat Digital Transformation Services UAE as an ongoing operating model tend to see sustained, compounding value from the same data over time."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "Digital Transformation Capabilities *We Deliver*",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "signal",
+          "title": "Industrial IoT Digital Transformation",
+          "description": "Industrial IoT digital transformation connects field sensors, meters, and equipment to a central data platform, so operators see real-time conditions instead of relying on manual rounds. This is usually the first phase of any broader Digital Transformation Services UAE engagement, since it creates the data foundation everything else depends on."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Plant Data Analytics Services UAE",
+          "description": "Plant data analytics services UAE turn raw sensor and process data into usable insight — trend analysis, predictive maintenance alerts, and production performance dashboards that plant managers can act on daily rather than reviewing after the fact."
+        },
+        {
+          "icon": "shield",
+          "title": "Industrial Cyber Security Solutions UAE",
+          "description": "Industrial cyber security solutions UAE protect the OT network as it becomes more connected to IT systems, since every new sensor or gateway is also a potential entry point. Security is built into the architecture from day one, not added afterward."
+        },
+        {
+          "icon": "screen",
+          "title": "Mobile Worker Technology Solutions",
+          "description": "Mobile worker technology solutions put real-time plant data, work orders, and alarms directly into the hands of field technicians, reducing the time spent walking back to a control room to check status or log readings."
+        },
+        {
+          "icon": "network",
+          "title": "Industrial Networking Solutions UAE",
+          "description": "Industrial networking solutions UAE provide the reliable, segmented network backbone that connects sensors, controllers, and IT systems without creating a single point of failure across the plant. Networks are designed with redundancy built in, so a single switch or cable fault does not take down critical production data."
+        },
+        {
+          "icon": "gauge",
+          "title": "Advanced Process Reliability Solutions",
+          "description": "Advanced process reliability solutions use continuous monitoring and analytics to catch equipment degradation early, shifting maintenance from a fixed calendar schedule to one based on actual asset condition. This typically reduces unplanned downtime once historical baseline data has been collected over the first few months."
+        },
+        {
+          "icon": "refresh",
+          "title": "Control System Modernization UAE",
+          "description": "Control system modernization UAE upgrades aging PLCs, DCS, and SCADA platforms to systems that can share data with IT and analytics tools, without requiring a full plant shutdown to implement. Migrations are typically phased across planned maintenance windows rather than done in one disruptive event."
+        },
+        {
+          "icon": "cpu",
+          "title": "Data Visualization for Industrial Plants",
+          "description": "Data visualization for industrial plants turns dashboards and reports into a format operators and executives can both use — the same underlying data, presented at the right level of detail for each audience, from a shift-level trend chart to a monthly board report."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "Delivery",
+      "heading": "How Our Digital Transformation *Delivery Works*",
+      "body": [
+        "Every engagement runs on the Plantweb Digital Ecosystem UAE, an integrated stack of sensing, networking, analytics, and visualization tools rather than a collection of disconnected point products. As an Emerson digital transformation partner UAE, we combine this technology stack with hands-on plant experience, so the systems fit how your operators actually work.",
+        "Our approach centers on OT data liberation services — extracting data safely from existing PLCs and historians without disrupting live production — mapped against a Level 1 to Level 4 automation architecture so every system knows exactly where it sits in the plant hierarchy. This structure follows the ISA 95 Purdue Model implementation standard, which keeps IT and OT systems properly segmented for both security and clarity."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Digital Transformation *Roadmap Process*",
+      "image": "digital-bg.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Our digital transformation roadmap services follow a phased structure so plants can see measurable results at each stage rather than waiting for one large go-live.",
+        "Stage 1, digital maturity assessment industrial: current systems, data flows, and gaps are reviewed, typically completed within 2 to 3 working weeks. Stage 2, roadmap design: a phased plan is built around your highest-value use case first, usually finalized within 1 to 2 weeks after the assessment. Stage 3, pilot deployment: a contained rollout, often one production line or unit, proves the approach in real conditions over 4 to 8 weeks. Stage 4, scaled digital transformation implementation process: successful pilots are extended plant-wide in planned phases, typically over 3 to 6 months depending on site complexity.",
+        "Throughout every stage, operational excellence consulting UAE keeps the focus on data driven decision making for plants — measurable outcomes, not just new dashboards."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Credentials, Partnerships, *and Proof*",
+      "body": [
+        "General Tech Automation works as an Emerson certified automation partner UAE plants can verify directly, combining vendor-backed technology with an in-house engineering team.",
+        "Rather than presenting invented industrial digital transformation case studies, we review your specific plant conditions and reference comparable, verifiable deployments only where a direct parallel genuinely applies — ask us for relevant examples during your assessment call.",
+        "Our approach follows a proven digital transformation framework built on the ISA-95 Purdue Model rather than a proprietary, unverifiable methodology, which means your team can independently validate the architecture against an established industrial standard. This is also why plants across the UAE treat us as a trusted OT technology integrator UAE for multi-year digital programs, not a single-project vendor. Reference checks and site visits to existing installations can be arranged on request, so you can see the architecture running in a live plant environment before committing to your own rollout."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Timelines, Cost Factors, *and Coverage Area*",
+      "body": [
+        "A Digital Transformation Services UAE engagement follows a clear digital transformation project timeline UAE: 2 to 3 weeks for assessment, 1 to 2 weeks for roadmap design, 4 to 8 weeks for a pilot, and 3 to 6 months for a full scaled rollout, depending on plant size and how many systems need integration.",
+        "Digital transformation cost UAE pricing depends heavily on scope — a single-line IoT pilot costs far less than a plant-wide Level 1 to Level 4 rollout — so a fixed proposal is provided after the initial assessment rather than a flat rate that ignores your actual system complexity.",
+        "We deliver digital transformation services Dubai Sharjah Abu Dhabi and across the wider UAE, with our engineering team based in Sharjah and available for on-site assessment at any facility in the country."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Beyond Digital Transformation *Alone*",
+      "body": [
+        "Digital transformation and automation solutions combined give plants a single point of accountability — the same team designing your data architecture can also handle the automation and control work driving it, rather than splitting the project across separate vendors.",
+        "We also pair IoT services and digital transformation UAE work directly, since the sensor layer feeding your analytics platform is often the first gap in an existing plant. Where asset history matters, digital transformation and asset data management are handled together, so equipment records, maintenance history, and live sensor data all sit inside the same system instead of three disconnected spreadsheets. This is one of the most requested add-ons to a standard Digital Transformation Services UAE engagement, since asset history is often the missing link between raw sensor data and a genuinely predictive maintenance program."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Why Choose *General Tech Automation*",
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "As an industrial digital transformation partner UAE facilities choose for multi-phase programs, General Tech Automation combines Emerson's technology stack with an in-house engineering team that stays with your project from assessment through scaled rollout.",
+        "Based in Sharjah and working as a trusted digital transformation provider Sharjah and wider UAE facilities rely on, every roadmap is built around your existing systems first — not a forced replacement of equipment that already works — so your Digital Transformation Services UAE investment builds on what you have rather than discarding it."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Here are direct answers to the questions plant managers and operations directors ask most often before starting a digital transformation program.",
+      "items": [
+        {
+          "q": "What does a Digital Transformation Services UAE engagement actually involve?",
+          "a": ["It typically starts with a 2 to 3 week assessment of your current IT and OT systems, followed by a phased roadmap, a contained pilot, and a scaled rollout — not a single large software installation."]
+        },
+        {
+          "q": "How long does a typical digital transformation project take?",
+          "a": ["A pilot phase usually takes 4 to 8 weeks, while a full plant-wide rollout typically runs 3 to 6 months, depending on how many systems and production lines are involved."]
+        },
+        {
+          "q": "Do we need to replace our existing PLCs and control systems?",
+          "a": ["Not necessarily. Many projects start by connecting existing PLCs and historians to a new data layer, with control system modernization UAE only recommended where equipment is at end of life."]
+        },
+        {
+          "q": "How is plant data kept secure during digital transformation?",
+          "a": ["Industrial cyber security solutions UAE are built into the network architecture from the assessment phase, with OT and IT systems properly segmented following the ISA-95 Purdue Model rather than bolted on after connectivity is added."]
+        },
+        {
+          "q": "What makes General Tech's approach different from a generic IT consultancy?",
+          "a": ["Our team combines an Emerson technology partnership with hands-on plant automation experience, so the roadmap is built by people who understand both the IT side and the OT floor, not just one or the other."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Begin your assessment",
+      "heading": "Begin your Digital Transformation Services UAE *assessment today.*",
+      "body": "If you want a roadmap built around your actual plant systems, not a generic transformation package, our team can review your current setup and outline a phased plan with realistic timelines.",
+      "actions": [
+        { "label": "+971 6 543 6933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

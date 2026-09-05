@@ -59,7 +59,9 @@ in the admin panel and reload the site to see changes immediately (SSR).
 ## Content model
 
 **Collections**
-- `pages` — block-based page builder (Hero, Rich Text, Media, Feature Grid, CTA, FAQ)
+- `pages` — block-based page builder (Hero, Rich Text, Media, Feature Grid,
+  Service Index, Industries, Process Steps, Stats, Coverage, Logo Wall, Why Us,
+  CTA, Contact, FAQ)
 - `posts` — blog, with categories, tags, authors and `publishedAt`
 - `docs` — self-nesting documentation tree via `parent` + `order`
 - `categories`, `media`, `users`
@@ -82,6 +84,39 @@ To enable it:
 
 Exit preview at `/api/exit-preview`.
 
+## Page copy
+
+The site's pages carry client-approved copy, which is treated as immutable —
+headings, sentences and terminology are the source documents', and only their
+arrangement into blocks belongs to this repo.
+
+| Page | Slug | Seeded by |
+|---|---|---|
+| Home | `home` | `apps/cms/src/scripts/seed-homepage.ts` |
+| About Us, Products, Brands, Services, Applications, Contact Us | `about_us`, `products`, `brands`, `services`, `applications`, `contact_us` | `apps/cms/src/scripts/seed-pages.ts` |
+
+The copy for the six pages lives in `apps/cms/src/content/pages/*.ts`, one module
+each, so a module can be read against its source document without reading past
+any plumbing. Re-run `pnpm --filter cms seed:pages` after editing one, then
+`pnpm --filter web snapshot` so the deployed site picks it up.
+
+Slugs are not normalised beyond a tidy-up: `about_us` and `contact_us` keep
+their underscores because the live navigation points at them.
+
+## Contact form
+
+The contact page posts to `/api/contact` (`apps/web/src/pages/api/contact.ts`).
+There is no mail server in this project, so delivery is one pluggable step:
+
+- Set `CONTACT_WEBHOOK_URL` to anything that accepts a JSON POST — a form
+  service, an automation hook, an inbox relay — and submissions are forwarded to
+  it as `{ name, company, email, phone, message, source, receivedAt }`.
+- With it unset, the route answers 501 and the page composes the enquiry into
+  the sender's own mail client instead, so the form is never a dead end.
+
+Submissions are validated server-side and carry a honeypot field; a filled
+honeypot is answered 200 and discarded.
+
 ## Common tasks
 
 ```bash
@@ -94,6 +129,7 @@ pnpm typecheck        # every workspace
 pnpm generate:types   # regenerate payload-types.ts after schema changes
 pnpm --filter cms seed        # re-seed demo content (idempotent)
 pnpm --filter cms seed:home   # reload the approved homepage copy (idempotent)
+pnpm --filter cms seed:pages  # reload About/Products/Brands/Services/Applications/Contact (idempotent)
 pnpm --filter cms seed:chrome # reload logo, photography, brand wall, nav + footer
 pnpm --filter cms migrate     # apply pending migrations
 pnpm --filter cms migrate:fresh --force-accept-warning   # drop + rebuild

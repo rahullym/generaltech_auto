@@ -64,6 +64,17 @@ const asValue = (node: LexicalNode): RichTextValue => ({
 })
 
 const [standfirst, ...points] = paragraphs
+
+/**
+ * An editorial section with no imagery and a heading sets the title in its own
+ * column beside the copy, rather than stacking it over a measure that leaves
+ * most of the row blank.
+ */
+const titleColumn = editorial && images.length === 0 && Boolean(heading)
+
+// A single trailing paragraph is a continuation, not point one of a list, so it
+// is ruled off like the others but carries no numeral.
+const numberPoints = points.length > 1
 ---
 
 {
@@ -138,9 +149,13 @@ const [standfirst, ...points] = paragraphs
                 style={`transition-delay: ${Math.min(index, 6) * 80}ms`}
               >
                 <div class="lg:col-span-2">
-                  <span class="text-[2.5rem] font-extrabold leading-none tracking-[-0.04em] text-general-red tabular-nums lg:text-[3rem]">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
+                  {numberPoints ? (
+                    <span class="text-[2.5rem] font-extrabold leading-none tracking-[-0.04em] text-general-red tabular-nums lg:text-[3rem]">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  ) : (
+                    <span class="mt-4 block h-[3px] w-12 bg-general-red" aria-hidden="true" />
+                  )}
                 </div>
 
                 <div class="lg:col-span-9 xl:col-span-8">
@@ -206,30 +221,50 @@ const [standfirst, ...points] = paragraphs
             imageFirst ? 'lg:order-2' : 'lg:order-1',
           ]}
         >
-          <div class="reveal-item translate-y-8 opacity-0">
-            {eyebrow && (
-              <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
-                {eyebrow}
-              </span>
-            )}
+          {/* With no imagery there is no second column, and a heading over a
+              capped measure left two thirds of the row empty. The title takes
+              its own column instead, so a text-only section fills the grid the
+              same way an illustrated one does. */}
+          <div
+            class:list={[
+              'reveal-item translate-y-8 opacity-0',
+              titleColumn && 'lg:grid lg:grid-cols-12 lg:gap-x-16 xl:gap-x-24',
+            ]}
+          >
+            <div class:list={[titleColumn && 'lg:col-span-4 lg:sticky lg:top-36 lg:self-start']}>
+              {eyebrow && (
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+                  {eyebrow}
+                </span>
+              )}
 
-            {heading ? (
-              <h2 class="mb-9 text-4xl font-black leading-[0.98] tracking-tight text-general-black lg:text-[52px]">
-                {lead}
-                {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
-              </h2>
-            ) : (
-              /* No heading on this block, so the copy carries its own entry:
-                 a short red rule plus a larger opening paragraph. */
-              <div class="mb-10 h-[3px] w-14 bg-general-red" aria-hidden="true" />
-            )}
+              {heading ? (
+                <h2
+                  class:list={[
+                    'text-4xl font-black leading-[0.98] tracking-tight text-general-black lg:text-[52px]',
+                    titleColumn ? 'mb-9 lg:mb-0' : 'mb-9',
+                  ]}
+                >
+                  {lead}
+                  {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
+                </h2>
+              ) : (
+                /* No heading on this block, so the copy carries its own entry:
+                   a short red rule plus a larger opening paragraph. */
+                <div class="mb-10 h-[3px] w-14 bg-general-red" aria-hidden="true" />
+              )}
+            </div>
 
+            <div class:list={[titleColumn && 'lg:col-span-8']}>
             <ReadMore enabled={clamp} height={300}>
               <RichText
                 value={content}
-                class={[copyClass, !heading && 'prose-lede'].filter(Boolean).join(' ') || undefined}
+                class={[copyClass, !heading && 'prose-lede', titleColumn && 'prose-full']
+                  .filter(Boolean)
+                  .join(' ') || undefined}
               />
             </ReadMore>
+            </div>
           </div>
         </div>
       </div>

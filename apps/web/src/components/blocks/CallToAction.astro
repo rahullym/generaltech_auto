@@ -13,6 +13,16 @@ interface Props {
 }
 
 const { variant = 'dark', eyebrow, heading, body, actions = [] } = Astro.props
+
+/**
+ * A closing section sometimes runs to two paragraphs. A blank line separates
+ * them, so the break survives instead of collapsing into one long run.
+ */
+const paragraphs = (value: string): string[] =>
+  value
+    .split(/\n\s*\n/)
+    .map((part) => part.trim())
+    .filter(Boolean)
 const { lead, accent } = splitAccent(heading)
 
 /**
@@ -54,7 +64,11 @@ const label = (eyebrow ?? 'Get in touch').trim()
           {body && (
             <div class="reveal-item mx-auto w-full max-w-2xl translate-y-8 border-t border-white/10 pt-8 opacity-0">
               <ReadMore tone="dark" height={200}>
-                <p class="text-lg leading-relaxed text-white/60">{body}</p>
+                {paragraphs(body).map((text, i) => (
+                  <p class:list={['text-lg leading-relaxed text-white/60', i > 0 && 'mt-6']}>
+                    {text}
+                  </p>
+                ))}
               </ReadMore>
             </div>
           )}
@@ -103,7 +117,12 @@ const label = (eyebrow ?? 'Get in touch').trim()
               {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
             </h2>
 
-            {body && <p class="mt-8 text-lg leading-relaxed text-white/60">{body}</p>}
+            {body &&
+              paragraphs(body).map((text, i) => (
+                <p class:list={['text-lg leading-relaxed text-white/60', i === 0 ? 'mt-8' : 'mt-6']}>
+                  {text}
+                </p>
+              ))}
 
             {actions.length > 0 && (
               <div class="mt-12 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">

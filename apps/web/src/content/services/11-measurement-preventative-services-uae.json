@@ -1,0 +1,179 @@
+{
+  "order": 11,
+  "title": "Measurement Preventative Services in UAE",
+  "slug": "service/measurement-preventative-services-uae",
+  "aliases": ["service/measurement-preventative-services"],
+  "navLabel": "Measurement Preventative Services",
+  "summary": "Measurement Preventative Services in UAE: gas analyzer, custody transfer & metering maintenance with fast response across Dubai, Sharjah, Abu Dhabi.",
+  "meta": {
+    "title": "Measurement Preventative Services in UAE | General Tech",
+    "description": "Measurement Preventative Services in UAE: gas analyzer, custody transfer & metering maintenance with fast response across Dubai, Sharjah, Abu Dhabi."
+  },
+  "serviceType": "Measurement preventative maintenance",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "Measurement Preventative Services *in UAE*",
+      "subheading": "Gas Analyzer Maintenance • Custody Transfer Metering • Net Oil Computers • Dubai • Sharjah • Abu Dhabi • Fujairah",
+      "image": "panel-inspection.jpg",
+      "actions": [
+        { "label": "Get a free baseline audit", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "General Tech Automation delivers Measurement Preventative Services in UAE for oil and gas, process, and terminal facilities across Dubai, Sharjah, Abu Dhabi, and Fujairah. This metering system preventative maintenance service covers scheduled gas analyzer maintenance UAE, custody transfer metering maintenance, and net oil computer maintenance, protecting facilities from missed regulatory emissions compliance metering and inaccurate custody transfer readings. As a certified measurement maintenance provider UAE, we run preventative maintenance measurement systems UAE programs on fixed schedules, typically quarterly or semi-annual depending on system criticality, with emergency call-outs acknowledged within 4 hours."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "What Is Measurement Preventative Maintenance *& How It Works*",
+      "body": [
+        "Measurement Preventative Services in UAE are scheduled inspection, calibration, and software maintenance activities performed on measurement and metering equipment before a fault causes lost revenue or a compliance breach. Unlike reactive repair, this scheduled maintenance oil and gas instrumentation approach catches drift, wear, and outdated firmware while the system is still within tolerance, avoiding the unplanned shutdowns that come with equipment failure discovered too late. At General Tech Automation, our team manages an instrumentation reliability program covering truck loading system maintenance, rail loading system maintenance, satellite well testing system maintenance, and flow measurement system maintenance. Each visit includes measurement system audit and inspection against manufacturer tolerances and site-specific accuracy requirements, so custody transfer accuracy verification is documented at every interval, not assumed between visits."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "Service Types *We Cover*",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "gauge",
+          "title": "Gas Analyzer Maintenance and Calibration",
+          "description": "Our gas analyzer calibration services cover process and emissions-monitoring analyzers, verifying accuracy against certified reference gases and correcting drift before it triggers a compliance flag. Process gas analyzer support includes sensor replacement, filter changes, and software checks, keeping analyzers within regulatory emissions compliance metering tolerances between full recalibration cycles, typically every 3 to 6 months depending on service duty."
+        },
+        {
+          "icon": "network",
+          "title": "Custody Transfer Metering Maintenance",
+          "description": "Custody transfer metering maintenance protects the accuracy that both buyer and seller rely on for billing, since even small metering drift translates directly into lost or disputed revenue. Our metering skid calibration and measurement system calibration UAE service verifies flow computers, provers, and transmitters against traceable standards, with results documented for audit and regulatory review."
+        },
+        {
+          "icon": "cpu",
+          "title": "Net Oil Computer and Wellhead Systems",
+          "description": "We provide net oil computer maintenance and wellhead measurement system maintenance for satellite well-testing installations, checking calculation accuracy, sensor calibration, and communication links between field devices and the control room. Skid mounted metering maintenance at remote wellsites is scheduled around production windows to avoid unnecessary well downtime."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Truck and Rail Loading System Maintenance",
+          "description": "Our truck loading system maintenance and rail loading system maintenance cover meters, loading arm system maintenance, and interlocks used for tanker and railcar filling, verifying flow accuracy and safety shutdown functions on a scheduled basis so terminals avoid unplanned stoppages during loading operations."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Flow Computer and Software Support",
+          "description": "Flow computer preventative maintenance includes firmware checks and configuration verification, paired with our software update service measurement systems package. Under an annual software agreement instrumentation contract, we install the latest software upgrade compliance instrumentation releases as manufacturers issue them, so systems stay supported and audit-ready rather than running outdated code."
+        },
+        {
+          "icon": "refresh",
+          "title": "Preventative Maintenance Contracts",
+          "description": "A preventative maintenance contract instrumentation agreement bundles all of the above into one scheduled programme with a fixed visit calendar, so facility teams are not chasing individual service requests across multiple vendors. This is typically the most cost-effective way to keep oil and gas metering maintenance UAE requirements current year-round."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "Delivery",
+      "heading": "How It Works */ Delivery Options*",
+      "body": [
+        "We deliver Measurement Preventative Services in UAE through fixed-interval contracts or single scheduled visits, depending on facility needs. A standard preventative maintenance visit is scheduled 1 to 2 weeks in advance, with on-site work typically completed within 1 to 2 days per system, depending on the number of analyzers, meters, or loading points covered. Software updates under an annual software agreement are pushed within 5 to 10 working days of manufacturer release. For multi-site contracts across Dubai, Sharjah, Abu Dhabi, and Fujairah, visits are batched by region to keep response times consistent. Emergency measurement failures affecting custody transfer or compliance readings are prioritised, with technicians typically dispatched within 4 to 8 hours of the call."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How we work",
+      "heading": "Our *Process*",
+      "intro": "Our Measurement Preventative Services in UAE process follows five fixed stages, documented at every step.",
+      "steps": [
+        { "meta": "1–2 days", "title": "Site Survey & Baseline Audit", "description": "we record existing equipment condition and calibration history." },
+        { "meta": "2–3 days", "title": "Maintenance Schedule Design", "description": "visit frequency is set against manufacturer recommendations and regulatory requirements." },
+        { "meta": "1–2 days per visit", "title": "Scheduled Inspection & Calibration", "description": "instruments are checked, calibrated, and drift corrected against traceable standards." },
+        { "meta": "same visit", "title": "Software & Firmware Verification", "description": "systems are checked against the latest compliant release under the software agreement." },
+        { "meta": "1–2 days after visit", "title": "Reporting & Certification", "description": "calibration certificates and audit reports are issued for the compliance record." }
+      ],
+      "footnote": "Most contracts run on a quarterly or semi-annual cycle, with the first full baseline completed within 2 to 3 weeks of contract start. As a certified measurement maintenance provider UAE, every visit is logged so the facility always has an audit-ready history."
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Credentials *and Proof*",
+      "image": "board-repair.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "General Tech Automation has serviced measurement and metering equipment from our Sharjah base for oil and gas, process, and terminal clients across the UAE. As a trusted metering maintenance company UAE, we work on multiple manufacturer platforms, giving facilities access to genuine calibration standards, manufacturer-approved procedures, and traceable documentation rather than generic third-party servicing. Every scheduled visit produces a calibration certificate and inspection report, so the customer holds a complete audit trail for regulatory review, not just a signed job sheet.",
+        "Quality control is built into every visit under our metering system preventative maintenance programme: results are checked against manufacturer tolerance before the technician leaves site, and any reading outside acceptable range is flagged to the client immediately rather than buried in a report sent days later. This matters because a metering error left unreported can quietly cost a facility revenue or trigger a compliance breach long before anyone notices. Every calibration is reviewed by a second engineer before the certificate is issued, so the client is never relying on a single person's sign-off."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Turnaround, Pricing Range *& Coverage Area*",
+      "body": [
+        "Coverage for our Measurement Preventative Services in UAE extends across Dubai, Sharjah, Abu Dhabi, and Fujairah, with standard visits scheduled 1 to 2 weeks in advance and emergency response typically within 4 to 8 hours. We maintain dedicated teams for Measurement Preventative Services Dubai, Measurement Preventative Services Sharjah, Measurement Preventative Services Abu Dhabi, and Measurement Preventative Services Fujairah contracts, coordinated from our Sharjah head office. Pricing depends on the number of instruments covered, visit frequency, and whether the contract includes an annual software agreement instrumentation package. Most clients start with a free baseline audit before committing to a fixed-price maintenance contract, since costs differ significantly between a small single-analyzer programme and a multi-site custody transfer metering maintenance contract. Urgent compliance-related call-outs are prioritised over routine scheduling."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Cross-Sell */ Differentiator*",
+      "body": [
+        "Few providers combine measurement preventative maintenance with genuine automation and instrumentation engineering under one team: most either offer calibration with no software or controls background, or automation support without measurement-specific expertise. General Tech Automation does both. The same engineers who maintain your gas analyzers and flow computers also support your PLCs and control panels, so data integrity between field instruments and the control system stays intact. Clients already using our Field Instrumentation Services can extend that relationship into a full preventative maintenance contract instrumentation programme without re-tendering. This matters most at multi-discipline sites, where a calibration finding on a flow computer often traces back to a wiring or power-supply issue best diagnosed by an automation engineer rather than a calibration technician working alone."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Why Choose *General Tech Automation*",
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Why choose General Tech Automation for Measurement Preventative Services in UAE? We combine a certified measurement maintenance provider UAE track record with hands-on engineering support from a single Sharjah-based team, with emergency response as fast as 4 hours. We do not rely on generic superlatives. Our credentials are the manufacturer platforms we support, the calibration certificates issued on every visit, and the number of custody transfer and gas analyzer contracts we currently run across Dubai, Sharjah, Abu Dhabi, and Fujairah. That combination of documented calibration, software currency, and fast response is what makes us a trusted metering maintenance company UAE facilities keep re-appointing."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked *Questions*",
+      "items": [
+        {
+          "q": "What is measurement preventative maintenance?",
+          "a": ["Measurement preventative maintenance is scheduled inspection, calibration, and software servicing of metering and measurement equipment, performed on a fixed interval to catch drift or wear before it causes inaccurate readings or a compliance failure. It replaces reactive repair, which only responds after a fault has already affected billing or emissions reporting."]
+        },
+        {
+          "q": "How often should metering systems be calibrated?",
+          "a": ["Most custody transfer and gas analyzer systems are calibrated every 3 to 6 months, though the exact interval depends on manufacturer recommendation, regulatory requirement, and how critical the measurement point is to billing or compliance. High-value custody transfer points are often calibrated more frequently than general process monitoring instruments."]
+        },
+        {
+          "q": "What does a preventative maintenance contract for instrumentation include?",
+          "a": ["A preventative maintenance contract instrumentation agreement typically includes scheduled inspection, calibration against traceable standards, software and firmware updates, and documented reporting for every visit. Contracts can be scoped to cover a single analyzer or an entire site's measurement and metering infrastructure under one fixed schedule."]
+        },
+        {
+          "q": "Why is custody transfer accuracy verification important?",
+          "a": ["Custody transfer accuracy verification confirms that a meter is reading within agreed tolerance for billing purposes between two parties, such as a buyer and seller of oil or gas. Even small drift can translate into significant financial disputes over time, so regular verification protects both parties and supports regulatory compliance."]
+        },
+        {
+          "q": "How quickly can a technician respond to a measurement system failure?",
+          "a": ["For contracted clients, emergency measurement failures affecting custody transfer or compliance readings are typically prioritised, with technicians dispatched within 4 to 8 hours across Dubai, Sharjah, Abu Dhabi, and Fujairah. Non-critical issues are scheduled into the next available preventative maintenance visit, and clients on a fixed contract typically receive priority slotting ahead of ad-hoc callers."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get started today",
+      "heading": "Need Measurement Preventative Services in UAE *for your facility?*",
+      "body": "Contact General Tech Automation for a free baseline audit — standard visits scheduled within 1 to 2 weeks across Dubai, Sharjah, Abu Dhabi, and Fujairah. Call +971 6 543 6933 or email mathews@generaltechuae.com to get started today.",
+      "actions": [
+        { "label": "Call +971 6 543 6933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

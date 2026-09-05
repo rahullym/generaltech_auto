@@ -509,6 +509,16 @@
 [data-reveal-stagger] > *:nth-child(8) { --i: 7; }
 [data-reveal-stagger] > *:nth-child(n + 9) { --i: 8; }
 
+/* Below the large breakpoint there is no horizontal room to slide into: the
+   pre-reveal offset pushed elements past the viewport and gave the whole page
+   a sideways scroll. Narrow screens rise instead of sliding. */
+@media (max-width: 1023px) {
+  [data-reveal='left'],
+  [data-reveal='right'] {
+    transform: translate3d(0, 28px, 0);
+  }
+}
+
 /* Motion is decoration here: without it every element is simply present. */
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] {

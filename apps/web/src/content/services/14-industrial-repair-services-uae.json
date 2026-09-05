@@ -1,0 +1,170 @@
+{
+  "order": 14,
+  "title": "Industrial Repair Services in UAE",
+  "slug": "industrial-repair-services-uae",
+  "aliases": ["service/repair-services"],
+  "navLabel": "Repair Services",
+  "summary": "Industrial Repair Services in UAE for VFDs, servo drives, PLCs and CNC electronics. Serving Dubai, Sharjah & Abu Dhabi. Get a quote.",
+  "meta": {
+    "title": "Industrial Repair Services in UAE | GTA",
+    "description": "Industrial Repair Services in UAE for VFDs, servo drives, PLCs and CNC electronics. Serving Dubai, Sharjah & Abu Dhabi. Get a quote."
+  },
+  "serviceType": "Industrial electronics repair",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "Industrial Repair Services *in UAE*",
+      "subheading": "Industrial Repair Services in UAE for VFDs, servo drives, PLCs and CNC electronics. Serving Dubai, Sharjah & Abu Dhabi. Get a quote.",
+      "image": "board-repair.jpg",
+      "actions": [
+        { "label": "Arrange an assessment", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Industrial Repair Services in UAE cover the drives, controllers, and electronic systems that keep production lines and process plants running, repaired by technicians who work on this equipment every day rather than treating it as a side specialty. General Tech Automation diagnoses and repairs industrial electronics across Dubai, Sharjah, Abu Dhabi, and the wider UAE, backed by warranty on completed repairs.",
+        "Clients requesting industrial electronics repair Sharjah and industrial electronics repair Abu Dhabi services receive the same diagnostic standard and warranty terms as our Dubai clients, with our Sharjah-based repair facility positioned to serve the northern emirates without the delays of relying on a distant regional office."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "What Falls Under *Industrial Electronics Repair*",
+      "body": [
+        "Industrial electronics repair Dubai clients bring us spans several distinct equipment categories, each with its own failure patterns and diagnostic approach. VFD repair services UAE and AC drive repair UAE cover variable frequency and AC drives, which typically fail due to capacitor aging, overheating, or input power quality issues rather than a single obvious cause.",
+        "DC drive repair UAE addresses older but still common DC drive systems, particularly in facilities that haven't yet migrated to AC drive technology. Servo drive repair UAE covers the motion-control side, where encoder faults and drive-to-motor communication errors are the most frequent culprits behind an axis that suddenly stops responding correctly.",
+        "Grouping these categories under one Industrial Repair Services in UAE relationship means a facility running a mix of AC drives, servo systems, and older DC equipment doesn't need three separate vendor relationships to keep everything running — one team, one point of contact, and one consistent diagnostic standard across all of it."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Controller and Logic *System Repairs*",
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "PLC module repair UAE handles CPU, power supply, and communication module failures within programmable controllers, while industrial controller repair UAE extends the same diagnostic approach to other control hardware beyond PLCs specifically. CNC electronics repair UAE focuses on the controllers, drives, and feedback systems inside CNC machining centers, where a single faulty board can bring an entire multi-axis machine to a standstill.",
+        "HMI repair services UAE cover operator interface panels and touchscreens, which see heavy daily use and often fail at the display or touch layer well before the underlying electronics do. Encoder repair UAE addresses the feedback devices that both servo drives and CNC systems depend on for accurate position and speed data.",
+        "A failed encoder is a good example of why proper diagnosis matters before any repair decision: the symptom often looks identical to a drive fault, with an axis that won't move correctly or reports a position error, yet the actual cause and the fix are completely different depending on which component is really at fault."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "Bench work",
+      "heading": "Component-Level Diagnostics *and Repair*",
+      "body": [
+        "Amplifier repair services UAE and circuit board repair industrial UAE both rely on component-level diagnostics rather than simply swapping the entire assembly. Power supply repair UAE follows the same principle: identifying which specific component failed, whether a capacitor, a rectifier, or a switching transistor, rather than replacing a working unit alongside the failed one.",
+        "Industrial electronics troubleshooting UAE at this level requires proper test equipment and documented fault patterns for each equipment type, which is why component-level repair UAE work is carried out in a dedicated repair facility rather than attempted on-site under time pressure."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Turnaround Times *and Emergency Repairs*",
+      "body": [
+        "Most drive and controller repairs are assessed within 24 to 48 hours of arrival, with a written diagnostic report and repair quote provided before any work begins. Industrial repair turnaround time UAE for straightforward component-level repairs typically runs three to five working days once approved, while more involved rebuilds or units requiring imported parts can extend to two to three weeks.",
+        "Same-day electronics repair UAE is available for select common faults on frequently serviced drive and controller models, where the failure pattern and required parts are already well understood from prior repairs. Emergency industrial repair UAE call-outs are prioritized for active production stoppages, with technicians dispatched to assess whether an on-site fix is possible or whether the unit needs to come into the workshop."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Repair Versus *Replacement*",
+      "body": [
+        "Repair versus replacement UAE decisions are made on genuine cost comparison, not a default push toward whichever option is more profitable to sell. A drive or controller with isolated component damage is usually far cheaper to repair than replace, while a unit with widespread damage from a power surge may genuinely cost more to repair than to swap for new.",
+        "Obsolete drive repair UAE and legacy electronics repair UAE often make this comparison more favorable toward repair, since replacement units for discontinued models can be expensive to source or unavailable altogether, making skilled repair the only realistic option for keeping older equipment running."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Multi-Brand *Coverage*",
+      "body": [
+        "Multi-brand electronics repair UAE work spans the major manufacturers found across UAE industrial sites rather than supporting only one brand exclusively. This matters because most facilities accumulate equipment from several vendors over the years, and a repair provider limited to a single brand leaves gaps that eventually become a real operational problem.",
+        "Our warranty-backed electronics repair UAE terms apply consistently across brands, so the coverage a client receives doesn't depend on which manufacturer's equipment happens to be on the bench.",
+        "This consistency matters more than it might seem. Facilities that source repairs from whichever vendor happens to support a particular brand often end up with different warranty periods, different documentation standards, and different turnaround expectations for equipment sitting in the very same panel. Standardizing on one Industrial Repair Services in UAE provider removes that inconsistency entirely."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Inside the *Repair Facility*",
+      "image": "board-repair.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Our industrial repair facility UAE houses in-house repair lab UAE test rigs built for specific drive and controller families, allowing repair diagnostics testing UAE to simulate real operating loads rather than relying on static bench tests alone. This catches intermittent faults that only appear under actual working conditions, which static testing alone often misses.",
+        "Field service electronics repair UAE complements the in-house facility for situations where a unit can't easily be removed from its installation, such as embedded drives wired directly into large panel assemblies. In these cases, initial diagnostics happen on-site, with the affected module removed for bench repair only if necessary.",
+        "Deciding between an on-site fix and a workshop repair usually comes down to accessibility and downtime cost. A drive that can be safely isolated and swapped in under an hour is often better handled on-site, while a deeply embedded system may need the full diagnostic capability of the workshop to resolve properly the first time."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Industries We *Serve*",
+      "body": [
+        "Manufacturing equipment repair UAE and process industry electronics repair UAE make up the bulk of our repair workload, spanning oil and gas, chemical processing, food and beverage, and general manufacturing facilities across the UAE and wider GCC. Industrial electronics repair GCC coverage extends beyond the UAE for clients operating multi-country facilities under one maintenance relationship.",
+        "Whatever the industry, the underlying need is the same: minimize the time between a failure and a working repair, since every hour a drive, controller, or CNC system sits down usually means lost production rather than just an inconvenience.",
+        "For clients running critical processes around the clock, a repair provider that understands this urgency without cutting corners on diagnosis is the real differentiator. Rushing a repair without proper root-cause analysis often means the same fault returns within weeks, costing more in repeated downtime than a thorough first-time fix would have. This is the standard every Industrial Repair Services in UAE engagement is measured against internally, regardless of how small or large the job is."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Explore Our *Repair Services*",
+      "body": [
+        "This page covers the breadth of what industrial electronics repair includes. For equipment-specific detail, our dedicated pages go deeper: AC and DC drive repair, servo motor repair, CNC machine repair services, and PLC maintenance and troubleshooting each cover their own diagnostic process, common fault patterns, and typical repair timelines in more depth than a single overview page can.",
+        "Starting here gives a full picture of what we cover before narrowing in on the specific equipment type giving you trouble — useful if you're not yet certain whether a fault sits with the drive, the controller, or the feedback system feeding both of them."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked *Questions*",
+      "items": [
+        {
+          "q": "Who repairs industrial electronics in UAE?",
+          "a": ["General Tech Automation repairs VFDs, servo drives, PLCs, CNC electronics, and related industrial control equipment across Dubai, Sharjah, and Abu Dhabi, working across multiple manufacturer brands rather than a single one."]
+        },
+        {
+          "q": "What is the best industrial repair company Dubai has available?",
+          "a": ["The right provider supports multiple equipment types and brands under one relationship, backs completed repairs with a warranty, and provides a written diagnostic report before work begins rather than an unexplained quote."]
+        },
+        {
+          "q": "How long does industrial electronics repair take?",
+          "a": ["Most repairs are diagnosed within 24 to 48 hours of arrival, with straightforward component-level repairs completed in three to five working days once approved. More complex rebuilds or repairs needing imported parts can take two to three weeks."]
+        },
+        {
+          "q": "Is it better to repair or replace a failed drive?",
+          "a": ["It depends on the extent of the damage. Isolated component failures are usually cheaper to repair, while widespread damage from a power surge may cost more to repair than replace. A proper diagnostic assessment settles this before any decision is made."]
+        },
+        {
+          "q": "Do you repair equipment that's no longer manufactured?",
+          "a": ["Yes. Obsolete and legacy drives and controllers are often better candidates for repair than replacement, since new units for discontinued models can be difficult or expensive to source."]
+        },
+        {
+          "q": "What information should I have ready when requesting a repair quote?",
+          "a": ["The equipment's make, model, and serial number speed up the initial assessment considerably, along with a description of the fault symptoms and, if known, what conditions preceded the failure — a power outage, a control fault, or unusual noise beforehand, for example."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get a repair quote",
+      "heading": "Get a Repair *Quote*",
+      "body": "Have a drive, controller, or CNC system that needs diagnosing? Call General Tech Automation at +971 6 5436933 or email mathews@generaltechuae.com to arrange an assessment and a quote for Industrial Repair Services in UAE.\n\nWhether it's a single failed drive holding up a production line or a full facility audit of aging control equipment, the same standard applies: proper diagnosis, honest repair-versus-replace advice, and a warranty that means something. That's what keeps Industrial Repair Services in UAE worth calling on, not just once, but every time equipment fails.",
+      "actions": [
+        { "label": "Call +971 6 5436933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,8 @@ import BlockRenderer from '@/components/BlockRenderer.astro'
 import Base from '@/layouts/Base.astro'
 import { getPage } from '@/lib/payload'
 import { isPreview } from '@/lib/preview'
+import { getServicePage, serviceRedirect } from '@/lib/service-pages'
+import { serviceSchema } from '@/lib/service-schema'
 
 export const prerender = false
 
@@ -14,7 +16,22 @@ if (!slug || slug === 'home') {
   return Astro.redirect('/', 301)
 }
 
-const page = await getPage(slug, { draft })
+// Trailing slashes are cosmetic; `/a/b/` and `/a/b` are the same document.
+const path = slug.replace(/\/+$/, '')
+
+// A service page that moved to the permalink its source document specifies
+// still answers on its old path, permanently.
+const moved = serviceRedirect(path)
+if (moved) {
+  return Astro.redirect(moved, 301)
+}
+
+// The CMS is authoritative. The service inner pages ship with the build and
+// answer only for slugs the CMS does not already hold, so moving one into
+// Payload later takes precedence without a code change.
+const cmsPage = await getPage(path, { draft })
+const service = cmsPage ? null : getServicePage(path)
+const page = cmsPage ?? service
 
 if (!page) {
   return new Response(null, { status: 404, statusText: 'Not found' })
@@ -34,5 +51,17 @@ const heroFirst = first?.blockType === 'hero' && first?.variant !== 'split'
   isDraft={draft && page._status === 'draft'}
   heroFirst={heroFirst}
 >
-  <BlockRenderer blocks={page.layout} />
+  {
+    service && (
+      <script
+        is:inline
+        slot="head"
+        type="application/ld+json"
+        set:html={JSON.stringify(serviceSchema(service))}
+      />
+    )
+  }
+
+  {/* A service page publishes FAQPage inside its own graph above. */}
+  <BlockRenderer blocks={page.layout} faqSchema={!service} />
 </Base>

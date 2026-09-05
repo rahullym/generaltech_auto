@@ -1,0 +1,209 @@
+---
+import { splitAccent } from '@/lib/accent'
+
+interface Props {
+  eyebrow?: string
+  heading?: string
+  intro?: string
+  tone?: 'light' | 'dark'
+  items?: { id?: string; lead?: string; value: string; label?: string }[]
+  footnote?: string
+}
+
+const { eyebrow, heading, intro, tone = 'light', items = [], footnote } = Astro.props
+const { lead, accent } = splitAccent(heading)
+const dark = tone === 'dark'
+
+// One figure carrying a leading word would otherwise sit a line lower than the
+// rest of the row, so the line is reserved across every cell once any cell
+// needs it.
+const anyLead = items.some((item) => Boolean(item.lead))
+
+// Three short figures fit a row on a tablet, so they take three columns rather
+// than wrapping the third onto a row of its own. Four wrap to two-up first.
+const columns = Math.min(items.length, 4)
+
+// The same survey grid the coverage band uses, so a figures strip reads as
+// part of the same instrument panel rather than as a stray band.
+const dot = dark ? 'rgba(255,255,255,0.075)' : 'rgba(0,0,0,0.05)'
+const fade = 'radial-gradient(ellipse 80% 70% at 50% 50%, #000 0%, transparent 80%)'
+---
+
+{/* A short band: the figures carry it, so it is deliberately shallower than a
+    full section and sits directly under the passage it evidences. */}
+<section
+  class:list={[
+    'relative overflow-hidden px-6 py-20 md:px-12 lg:py-24',
+    dark
+      ? 'border-t border-white/10 bg-general-black text-white'
+      : 'border-y border-gray-100 bg-[#FAFAFA] text-general-black',
+  ]}
+>
+  <div
+    class="pointer-events-none absolute inset-0"
+    style={`background-image: radial-gradient(${dot} 1px, transparent 1px); background-size: 30px 30px; -webkit-mask-image: ${fade}; mask-image: ${fade}`}
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-7xl">
+    {
+      (eyebrow || heading || intro) && (
+        <div class="mb-14 grid gap-x-16 gap-y-8 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            {eyebrow && (
+              <div data-reveal="up" class="mb-6 flex items-center gap-3">
+                <span class="h-[2px] w-8 bg-general-red" aria-hidden="true" />
+                <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+                  {eyebrow}
+                </span>
+              </div>
+            )}
+
+            {heading && (
+              <h2
+                data-reveal="mask"
+                class:list={[
+                  'text-4xl font-black leading-[1.02] tracking-tight sm:text-5xl',
+                  dark ? 'text-white' : 'text-general-black',
+                ]}
+              >
+                {lead}
+                {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
+              </h2>
+            )}
+          </div>
+
+          {intro && (
+            <div class="lg:col-span-5">
+              <p
+                data-reveal="up"
+                class:list={[
+                  'border-t-2 border-general-red pt-6 text-[17px] leading-[1.8]',
+                  dark ? 'text-white/60' : 'text-gray-700',
+                ]}
+              >
+                {intro}
+              </p>
+            </div>
+          )}
+        </div>
+      )
+    }
+
+    {/* The figures themselves. Each cell is a column on a ruled grid: the
+        value at display scale, the words that qualify it set small and
+        letter-spaced beneath, exactly as on the home page proof strip.
+
+        The rules are drawn from the stylesheet below rather than from a class
+        on each cell: which cell opens a row depends on the column count, which
+        changes at every breakpoint, and a per-cell class cannot express that —
+        it left the third of three figures indented against a rule that was not
+        there. */}
+    {
+      items.length > 0 && (
+        <div
+          data-reveal-stagger
+          class:list={['stat-grid grid border-t', dark ? 'border-white/15' : 'border-gray-200']}
+          style={`--stat-columns: ${columns}`}
+        >
+          {items.map((item) => (
+            <div
+              data-reveal="lift"
+              class:list={[
+                'stat-cell group border-b py-10 sm:border-b-0 sm:py-12',
+                dark ? 'border-white/15' : 'border-gray-200',
+              ]}
+            >
+              {/* A phrase that opens on a word rather than the figure — "Est.
+                  1998" — keeps that word above it, so the row still reads in
+                  the order it was written. */}
+              {anyLead && (
+                <div
+                  class:list={[
+                    'mb-3 text-[13px] font-bold uppercase leading-none tracking-[0.22em]',
+                    dark ? 'text-white/45' : 'text-gray-500',
+                  ]}
+                  aria-hidden={item.lead ? undefined : 'true'}
+                >
+                  {item.lead ?? '\u00a0'}
+                </div>
+              )}
+
+              <div class="text-[3rem] font-extrabold leading-none tracking-[-0.04em] text-general-red tabular-nums lg:text-[4rem]">
+                {item.value}
+              </div>
+
+              {item.label && (
+                <div
+                  class:list={[
+                    'mt-5 max-w-[24ch] text-[13px] font-bold uppercase leading-[1.6] tracking-[0.12em]',
+                    dark ? 'text-white/50' : 'text-gray-500',
+                  ]}
+                >
+                  {item.label}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )
+    }
+
+    {
+      footnote && (
+        <p
+          data-reveal="up"
+          class:list={[
+            'mt-14 max-w-3xl border-l-2 border-general-red/30 pl-8 text-[15px] leading-[1.8]',
+            dark ? 'text-white/50' : 'text-gray-600',
+          ]}
+        >
+          {footnote}
+        </p>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  /* One column stacked, then the full row once there is width for it. The rule
+     between cells is drawn on every cell but the one that opens a row, which
+     is what `--stat-columns` is for: `nth-child(n + 2)` alone would rule the
+     first cell of the second row against the section edge. */
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .stat-grid {
+      grid-template-columns: repeat(var(--stat-columns, 3), minmax(0, 1fr));
+    }
+
+    .stat-cell + .stat-cell {
+      border-left: 1px solid;
+      padding-left: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .stat-cell + .stat-cell {
+      padding-left: 2.5rem;
+    }
+  }
+
+  /* Four figures wrap two-up before they take a single row, so the third cell
+     opens a row there and must not carry a rule. */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .stat-grid[style*='--stat-columns: 4'] {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .stat-grid[style*='--stat-columns: 4'] .stat-cell:nth-child(2n + 1) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .stat-grid[style*='--stat-columns: 4'] .stat-cell:nth-child(-n + 2) {
+      border-bottom: 1px solid;
+    }
+  }
+</style>

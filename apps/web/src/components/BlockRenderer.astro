@@ -1,5 +1,6 @@
 ---
 import CallToAction from './blocks/CallToAction.astro'
+import Contact from './blocks/Contact.astro'
 import Coverage from './blocks/Coverage.astro'
 import Faq from './blocks/Faq.astro'
 import FeatureGrid from './blocks/FeatureGrid.astro'
@@ -9,6 +10,8 @@ import LogoWall from './blocks/LogoWall.astro'
 import MediaBlock from './blocks/MediaBlock.astro'
 import ProcessSteps from './blocks/ProcessSteps.astro'
 import RichTextBlock from './blocks/RichTextBlock.astro'
+import ServiceIndex from './blocks/ServiceIndex.astro'
+import Stats from './blocks/Stats.astro'
 import WhyUs from './blocks/WhyUs.astro'
 import type { Block } from '@/lib/types'
 
@@ -29,12 +32,15 @@ const registry: Record<string, any> = {
   richText: RichTextBlock,
   media: MediaBlock,
   featureGrid: FeatureGrid,
+  serviceIndex: ServiceIndex,
   industries: Industries,
   processSteps: ProcessSteps,
+  stats: Stats,
   coverage: Coverage,
   logoWall: LogoWall,
   whyUs: WhyUs,
   cta: CallToAction,
+  contact: Contact,
   faq: Faq,
 }
 ---

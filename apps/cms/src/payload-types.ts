@@ -149,12 +149,15 @@ export interface Page {
     | RichTextBlock
     | MediaBlock
     | FeatureGridBlock
+    | ServiceIndexBlock
     | IndustriesBlock
     | ProcessStepsBlock
+    | StatsBlock
     | CoverageBlock
     | LogoWallBlock
     | WhyUsBlock
     | CallToActionBlock
+    | ContactBlock
     | FaqBlock
   )[];
   meta?: {
@@ -534,9 +537,57 @@ export interface FeatureGridBlock {
     };
     id?: string | null;
   }[];
+  /**
+   * Optional closing line under the cards — for a passage that qualifies the set rather than belonging to any one card.
+   */
+  footnote?: string | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'featureGrid';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ServiceIndexBlock".
+ */
+export interface ServiceIndexBlock {
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  intro?: string | null;
+  groups: {
+    title: string;
+    description?: string | null;
+    iconName?: ('refresh' | 'cpu' | 'gauge' | 'cabinet' | 'cog' | 'network' | 'signal' | 'shield') | null;
+    services: {
+      link: {
+        type?: ('reference' | 'custom') | null;
+        label: string;
+        reference?:
+          | ({
+              relationTo: 'pages';
+              value: number | Page;
+            } | null)
+          | ({
+              relationTo: 'posts';
+              value: number | Post;
+            } | null)
+          | ({
+              relationTo: 'docs';
+              value: number | Doc;
+            } | null);
+        url?: string | null;
+        newTab?: boolean | null;
+      };
+      id?: string | null;
+    }[];
+    id?: string | null;
+  }[];
+  footnote?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'serviceIndex';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -552,12 +603,26 @@ export interface IndustriesBlock {
    * Sits beside the heading — one or two sentences reads best.
    */
   intro?: string | null;
+  display?: ('track' | 'grid') | null;
   /**
    * One card each. Six to eight sectors keep the track readable.
    */
   sectors: {
     name: string;
-    iconName?: ('oil' | 'water' | 'beverage' | 'pharma' | 'power' | 'factory' | 'chemical' | 'logistics') | null;
+    iconName?:
+      | (
+          | 'oil'
+          | 'water'
+          | 'beverage'
+          | 'pharma'
+          | 'power'
+          | 'factory'
+          | 'chemical'
+          | 'logistics'
+          | 'automotive'
+          | 'construction'
+        )
+      | null;
     /**
      * What the work looks like in this sector — one or two sentences.
      */
@@ -599,6 +664,35 @@ export interface ProcessStepsBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'processSteps';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "StatsBlock".
+ */
+export interface StatsBlock {
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  intro?: string | null;
+  tone?: ('light' | 'dark') | null;
+  /**
+   * Keep the value to a few characters — "1998", "28+", "60+". The label carries the rest of the phrase.
+   */
+  items: {
+    /**
+     * Optional word or two that reads before the figure — "Est." in "Est. 1998". Set above it so the phrase reads in its written order.
+     */
+    lead?: string | null;
+    value: string;
+    label?: string | null;
+    id?: string | null;
+  }[];
+  footnote?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'stats';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -747,6 +841,58 @@ export interface CallToActionBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactBlock".
+ */
+export interface ContactBlock {
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  intro?: string | null;
+  details: {
+    iconName?: ('phone' | 'email' | 'location' | 'clock') | null;
+    label: string;
+    value: string;
+    /**
+     * Optional — a tel: or mailto: link for the value.
+     */
+    href?: string | null;
+    /**
+     * Optional line under the value.
+     */
+    note?: string | null;
+    id?: string | null;
+  }[];
+  footnote?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  formHeading?: string | null;
+  formIntro?: string | null;
+  /**
+   * Reassurance line under the submit button.
+   */
+  formNote?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  mapHeading?: string | null;
+  mapIntro?: string | null;
+  /**
+   * Google Maps embed URL. The map is only rendered when this is set.
+   */
+  mapEmbedUrl?: string | null;
+  /**
+   * Where the "open in Maps" link goes.
+   */
+  mapLinkUrl?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'contact';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "FaqBlock".
  */
 export interface FaqBlock {
@@ -883,12 +1029,15 @@ export interface PagesSelect<T extends boolean = true> {
         richText?: T | RichTextBlockSelect<T>;
         media?: T | MediaBlockSelect<T>;
         featureGrid?: T | FeatureGridBlockSelect<T>;
+        serviceIndex?: T | ServiceIndexBlockSelect<T>;
         industries?: T | IndustriesBlockSelect<T>;
         processSteps?: T | ProcessStepsBlockSelect<T>;
+        stats?: T | StatsBlockSelect<T>;
         coverage?: T | CoverageBlockSelect<T>;
         logoWall?: T | LogoWallBlockSelect<T>;
         whyUs?: T | WhyUsBlockSelect<T>;
         cta?: T | CallToActionBlockSelect<T>;
+        contact?: T | ContactBlockSelect<T>;
         faq?: T | FaqBlockSelect<T>;
       };
   meta?:
@@ -1005,6 +1154,41 @@ export interface FeatureGridBlockSelect<T extends boolean = true> {
             };
         id?: T;
       };
+  footnote?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ServiceIndexBlock_select".
+ */
+export interface ServiceIndexBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  groups?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        iconName?: T;
+        services?:
+          | T
+          | {
+              link?:
+                | T
+                | {
+                    type?: T;
+                    label?: T;
+                    reference?: T;
+                    url?: T;
+                    newTab?: T;
+                  };
+              id?: T;
+            };
+        id?: T;
+      };
+  footnote?: T;
   id?: T;
   blockName?: T;
 }
@@ -1016,6 +1200,7 @@ export interface IndustriesBlockSelect<T extends boolean = true> {
   eyebrow?: T;
   heading?: T;
   intro?: T;
+  display?: T;
   sectors?:
     | T
     | {
@@ -1042,6 +1227,27 @@ export interface ProcessStepsBlockSelect<T extends boolean = true> {
         title?: T;
         description?: T;
         meta?: T;
+        id?: T;
+      };
+  footnote?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "StatsBlock_select".
+ */
+export interface StatsBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  tone?: T;
+  items?:
+    | T
+    | {
+        lead?: T;
+        value?: T;
+        label?: T;
         id?: T;
       };
   footnote?: T;
@@ -1138,6 +1344,35 @@ export interface CallToActionBlockSelect<T extends boolean = true> {
             };
         id?: T;
       };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ContactBlock_select".
+ */
+export interface ContactBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  details?:
+    | T
+    | {
+        iconName?: T;
+        label?: T;
+        value?: T;
+        href?: T;
+        note?: T;
+        id?: T;
+      };
+  footnote?: T;
+  formHeading?: T;
+  formIntro?: T;
+  formNote?: T;
+  mapHeading?: T;
+  mapIntro?: T;
+  mapEmbedUrl?: T;
+  mapLinkUrl?: T;
   id?: T;
   blockName?: T;
 }

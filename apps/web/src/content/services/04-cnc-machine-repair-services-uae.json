@@ -1,0 +1,172 @@
+{
+  "order": 4,
+  "title": "CNC Machine Repair Services UAE",
+  "slug": "service/cnc-machine-repair-services-uae",
+  "aliases": ["service/cnc-machine-repair-services"],
+  "navLabel": "CNC Machine Repair Services",
+  "summary": "CNC Machine Repair Services UAE from General Tech Automation — expert control, servo, spindle & PLC repair with fast turnaround across the GCC.",
+  "meta": {
+    "title": "CNC Machine Repair Services UAE | General Tech Automation",
+    "description": "CNC Machine Repair Services UAE from General Tech Automation — expert control, servo, spindle & PLC repair with fast turnaround across the GCC."
+  },
+  "serviceType": "CNC machine repair",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "CNC Machine Repair Services *UAE*",
+      "subheading": "CNC Machine Repair Services UAE from General Tech Automation — expert control, servo, spindle & PLC repair with fast turnaround across the GCC.",
+      "image": "board-repair.jpg",
+      "actions": [
+        { "label": "Get a same-day diagnosis", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 1 — Direct Answer",
+      "lede": true,
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "CNC Machine Repair Services UAE from General Tech Automation cover fault diagnosis, servo and spindle repair, control board replacement, and preventive maintenance for milling, turning, and multi-axis machines. Engineers respond within hours, most electrical and control faults are resolved within 24–48 hours, and every repair is backed by tested parts and documented fault reports. Businesses across Dubai, Sharjah, and Abu Dhabi rely on this service to reduce downtime and restore production quickly."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 2 — What Is CNC Machine Repair",
+      "body": [
+        "CNC machine repair restores the electrical, electronic, and control systems that keep a computer-numerical-control machine running accurately. Unlike general mechanical servicing, this work focuses on controllers, drives, servo motors, encoders, wiring, and circuit boards — the components that translate a program into precise machine movement. A fault in any one of these can stop an entire production line, so diagnosis needs to be fast and specific rather than a generic once-over. Technicians trained on multiple CNC platforms can isolate whether a fault sits in the control unit, the drive, the wiring, or the feedback loop, then repair or replace only what is actually broken."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "Section 3 — CNC Repair Services We Cover",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "cpu",
+          "title": "CNC Control System Repair & Troubleshooting",
+          "description": "CNC control system repair covers fault diagnosis across leading brands including Fanuc CNC repair UAE, Siemens CNC control repair, Mitsubishi CNC repair services, Haas machine repair UAE, Heidenhain control repair, and Fagor CNC repair services. This includes replacing damaged control boards, reloading software and firmware, backing up parameters, and repairing display units and operator panels so the machine reads and executes programs correctly again."
+        },
+        {
+          "icon": "cog",
+          "title": "Servo Motor & Drive Repair",
+          "description": "CNC servo motor repair and servo drive repair Sharjah address one of the most common causes of positioning errors and unexpected stoppages. Work includes motor inspection and rewinding, drive unit repair and tuning, and CNC encoder repair and testing to restore accurate feedback control — critical for aerospace machining, mold manufacturing, and automotive production lines where tolerances leave no room for drift."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Electrical Wiring & Power System Repair",
+          "description": "CNC electrical fault diagnosis covers faulty wiring, connectors, and harnesses, along with replacement of damaged power supplies and distribution boards. Grounding and safety checks are carried out alongside every repair to prevent repeat breakdowns on heavy-duty machining equipment and high-speed CNC mills."
+        },
+        {
+          "icon": "network",
+          "title": "PCB & Electronic Component Repair",
+          "description": "CNC PCB repair services and CNC control board replacement are carried out at ESD-safe repair stations, with damaged capacitors, resistors, and relays replaced under inspection rather than swapped as a full assembly wherever the board can be economically repaired."
+        },
+        {
+          "icon": "gauge",
+          "title": "Preventive Electrical Maintenance",
+          "description": "CNC preventive maintenance UAE uses thermal imaging to catch overheating components before they fail, along with scheduled inspection of control cabinets. This is the step most facilities skip — and the one that prevents most emergency call-outs."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 4 — How It Works: Delivery Options",
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Support is available as scheduled maintenance visits or as emergency CNC repair UAE for unplanned CNC machine breakdown repair. Onsite diagnosis is standard for control, wiring, and panel faults; smaller components such as servo drives, PCBs, and encoders can be removed for bench-level repair and returned once tested. CNC spindle repair UAE is handled case by case, with a same-day assessment on whether the spindle can be repaired onsite or needs workshop attention. Both routes are covered by the same documented fault-reporting process, so there is a clear record of what failed and what was replaced."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How we work",
+      "heading": "Section 5 — Our Process",
+      "steps": [
+        { "title": "Call logged and triaged", "description": "most calls receive an initial response within 1–2 hours." },
+        { "title": "Onsite or remote diagnosis", "description": "typically completed within 4–6 hours of arrival for control and electrical faults." },
+        { "title": "Repair or replacement", "description": "control, servo, and wiring faults are usually resolved within 24–48 hours; PCB and spindle work may take 3–5 days depending on parts availability." },
+        { "title": "Testing and parameter verification", "description": "the machine is run through its full axis range before handover." },
+        { "title": "Fault report delivered", "description": "documenting what was found, what was repaired, and any preventive recommendation." }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "Proof",
+      "heading": "Section 6 — Credentials and Proof",
+      "body": [
+        "Repairs are carried out by factory-trained CNC repair engineers UAE working across multiple control platforms, which is why this operates as a certified CNC electrical repair company rather than a single-brand workshop. Every repair includes a written fault report and parameter backup, and ESD-safe stations are used for all board-level work — documentation the customer keeps on file for audit or warranty purposes."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 7 — Turnaround, Coverage Area",
+      "body": [
+        "Coverage spans CNC machine repair Dubai, CNC machine repair Sharjah, CNC machine repair Abu Dhabi, and wider UAE sites as an industrial CNC repair Sharjah-based CNC repair company in UAE. Standard turnaround is 24–48 hours for control and electrical faults, same-day response for emergency breakdowns in Sharjah and neighbouring emirates, and 3–5 days for board-level or spindle rebuilds. CNC retrofit services UAE are scoped separately, with project timelines confirmed after an onsite survey since retrofit scope varies by machine age and control platform."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 8 — Cross-Sell / Differentiator",
+      "body": [
+        "Machine coverage extends across milling machine repair UAE, turning center repair services, 5-axis CNC machine repair, and multi-axis CNC servicing, so one engineer visit can address more than one machine type on the same production floor. This service also connects directly with PLC Maintenance & Troubleshooting and Retrofit Solutions for facilities running integrated automation lines, rather than treating the CNC unit as an isolated system."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 9 — Why Choose General Tech Automation",
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Engineers are trained across multiple CNC control platforms rather than certified on one brand, which shortens diagnosis time on mixed-fleet workshops. The service supports CNC repair for aerospace machining, CNC repair automotive production, precision mold manufacturing CNC repair, and broader industrial automation repair UAE needs, with every repair backed by a documented fault report rather than a verbal sign-off."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Section 10 — Frequently Asked Questions",
+      "items": [
+        {
+          "q": "How fast can a CNC machine repair engineer reach my site in the UAE?",
+          "a": ["Most call-outs across Dubai, Sharjah, and Abu Dhabi receive an initial response within 1–2 hours, with onsite diagnosis typically completed the same day for control and electrical faults."]
+        },
+        {
+          "q": "How long does a typical CNC control or servo repair take?",
+          "a": ["Control board, wiring, and servo drive repairs are usually completed within 24–48 hours. PCB-level repairs or spindle rebuilds can take 3–5 days depending on parts availability."]
+        },
+        {
+          "q": "Which CNC control brands are supported?",
+          "a": ["Fanuc, Siemens, Mitsubishi, Haas, Heidenhain, and Fagor control systems are all supported, covering milling, turning, and multi-axis machining centers."]
+        },
+        {
+          "q": "Is emergency CNC breakdown repair available outside scheduled hours?",
+          "a": ["Yes, emergency CNC repair is available for unplanned breakdowns, with priority triage so production downtime is kept as short as possible."]
+        },
+        {
+          "q": "Does the service include preventive maintenance, not just repairs?",
+          "a": ["Yes, preventive electrical maintenance — including thermal imaging and control cabinet inspection — is offered on a scheduled basis to reduce the chance of an emergency breakdown."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Section 11 — Get Your CNC Machine Repaired",
+      "heading": "Facing a CNC control, servo, or spindle fault? Get a same-day diagnosis from *General Tech Automation.*",
+      "body": "Call +971 6 543 6933 or email mathews@generaltechuae.com",
+      "actions": [
+        { "label": "Call +971 6 543 6933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

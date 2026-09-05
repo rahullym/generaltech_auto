@@ -1,0 +1,480 @@
+---
+import SectionHeader from '../SectionHeader.astro'
+import { splitAccent } from '@/lib/accent'
+
+interface Props {
+  eyebrow?: string
+  heading?: string
+  intro?: string
+  details?: {
+    id?: string
+    iconName?: string
+    label: string
+    value: string
+    href?: string
+    note?: string
+  }[]
+  footnote?: string
+  formHeading?: string
+  formIntro?: string
+  formNote?: string
+  mapHeading?: string
+  mapIntro?: string
+  mapEmbedUrl?: string
+  mapLinkUrl?: string
+}
+
+const {
+  eyebrow,
+  heading,
+  intro,
+  details = [],
+  footnote,
+  formHeading,
+  formIntro,
+  formNote,
+  mapHeading,
+  mapIntro,
+  mapEmbedUrl,
+  mapLinkUrl,
+} = Astro.props
+
+const form = splitAccent(formHeading)
+const map = splitAccent(mapHeading)
+
+const ICONS: Record<string, string> = {
+  phone:
+    '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.35 1.8.7 2.6a2 2 0 0 1-.45 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.45c.83.35 1.7.6 2.6.7a2 2 0 0 1 1.7 2z"/>',
+  email:
+    '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2.5 6.5 8.4 5.6a2 2 0 0 0 2.2 0l8.4-5.6"/>',
+  location: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/>',
+}
+
+// The no-JavaScript fallback for the form, and the address the client-side
+// fallback composes into. Read from the details rather than restated, so the
+// page has one source for the address.
+const emailDetail = details.find((detail) => detail.iconName === 'email')
+const mailTo = emailDetail?.href?.replace(/^mailto:/, '') ?? emailDetail?.value ?? ''
+
+const FIELDS = [
+  { name: 'name', label: 'Your name', type: 'text', autocomplete: 'name', required: true },
+  { name: 'company', label: 'Company', type: 'text', autocomplete: 'organization', required: false },
+  { name: 'email', label: 'Email', type: 'email', autocomplete: 'email', required: true },
+  { name: 'phone', label: 'Phone', type: 'tel', autocomplete: 'tel', required: false },
+] as const
+
+const inputClass =
+  'peer w-full rounded-xl border border-white/12 bg-white/[0.04] px-4 pb-3 pt-7 text-[15px] text-white outline-none transition-colors duration-300 placeholder:text-transparent focus:border-general-red focus:bg-white/[0.06]'
+const labelClass =
+  'pointer-events-none absolute left-4 top-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white/40 transition-all duration-300 peer-placeholder-shown:top-[22px] peer-placeholder-shown:text-[14px] peer-placeholder-shown:tracking-normal peer-placeholder-shown:normal-case peer-placeholder-shown:text-white/35 peer-focus:top-2 peer-focus:text-[11px] peer-focus:font-bold peer-focus:uppercase peer-focus:tracking-[0.18em] peer-focus:text-general-red'
+---
+
+<section class="relative border-t border-gray-100 bg-white px-6 py-28 md:px-12 lg:py-36">
+  <div class="relative mx-auto max-w-7xl">
+    {
+      (heading || intro) && (
+        <SectionHeader
+          eyebrow={eyebrow}
+          heading={heading}
+          intro={intro}
+          align="split"
+          introCollapseHeight={200}
+        />
+      )
+    }
+
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+      {/* The ways to reach the company, as a ruled rail rather than a list —
+          each row is the thing you act on, so the value is the largest type in
+          it and is a link wherever it can be one. */}
+      <div class="lg:col-span-5">
+        <div data-reveal-stagger class="border-t border-gray-200">
+          {
+            details.map((detail) => {
+              const icon = ICONS[detail.iconName ?? 'phone'] ?? ICONS.phone
+
+              return (
+                <div
+                  data-reveal="up"
+                  class="group flex items-start gap-6 border-b border-gray-200 py-7"
+                >
+                  <span class="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 text-gray-400 transition-all duration-500 group-hover:border-general-red/20 group-hover:bg-general-red/5 group-hover:text-general-red">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                      set:html={icon}
+                    />
+                  </span>
+
+                  <div class="min-w-0">
+                    <span class="block text-[11px] font-bold uppercase tracking-[0.22em] text-general-red">
+                      {detail.label}
+                    </span>
+
+                    {detail.href ? (
+                      <a
+                        href={detail.href}
+                        class="mt-2 block text-[19px] font-bold leading-[1.35] tracking-[-0.02em] text-general-black transition-colors duration-300 hover:text-general-red"
+                      >
+                        {detail.value}
+                      </a>
+                    ) : (
+                      <span class="mt-2 block whitespace-pre-line text-[19px] font-bold leading-[1.35] tracking-[-0.02em] text-general-black">
+                        {detail.value}
+                      </span>
+                    )}
+
+                    {detail.note && (
+                      <p class="mt-2 text-[14px] leading-[1.7] text-gray-600">{detail.note}</p>
+                    )}
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
+
+        {
+          footnote && (
+            <p
+              data-reveal="up"
+              class="mt-10 border-l-2 border-general-red/20 pl-7 text-[15px] leading-[1.8] text-gray-600"
+            >
+              {footnote}
+            </p>
+          )
+        }
+      </div>
+
+      {/* The enquiry form, on the inset dark slab the site uses when a block is
+          the thing being asked for rather than read. */}
+      <div class="lg:col-span-7">
+        <div
+          data-reveal="lift"
+          class="relative overflow-hidden rounded-[28px] border border-general-red/20 bg-[#0e0e11] p-8 text-white md:p-12"
+        >
+          <div
+            class="pointer-events-none absolute inset-x-0 top-0 h-[320px]"
+            style="background: radial-gradient(ellipse 65% 100% at 50% 0%, rgba(237,28,37,0.20) 0%, rgba(237,28,37,0) 70%)"
+            aria-hidden="true"
+          >
+          </div>
+
+          <div class="relative">
+            {
+              formHeading && (
+                <h3 class="text-[28px] font-black leading-[1.08] tracking-[-0.03em] text-white md:text-[34px]">
+                  {form.lead}
+                  {form.accent && (
+                    <span class="font-medium italic text-general-red"> {form.accent}</span>
+                  )}
+                </h3>
+              )
+            }
+
+            {
+              formIntro && (
+                <p class="mt-6 max-w-xl text-[15px] leading-[1.85] text-white/60">{formIntro}</p>
+              )
+            }
+
+            <form
+              class="mt-10"
+              method="post"
+              action="/api/contact"
+              data-contact-form
+              data-mailto={mailTo}
+            >
+              {/* Spam trap: a real person never sees it, so anything that fills
+                  it in is discarded server-side. */}
+              <div class="absolute left-[-9999px] top-0" aria-hidden="true">
+                <label for="contact-website">Leave this field empty</label>
+                <input
+                  id="contact-website"
+                  type="text"
+                  name="website"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                {
+                  FIELDS.map((field) => (
+                    <div class="relative">
+                      <input
+                        id={`contact-${field.name}`}
+                        class={inputClass}
+                        type={field.type}
+                        name={field.name}
+                        placeholder={field.label}
+                        autocomplete={field.autocomplete}
+                        required={field.required}
+                      />
+                      <label class={labelClass} for={`contact-${field.name}`}>
+                        {field.label}
+                        {field.required && <span class="text-general-red"> *</span>}
+                      </label>
+                    </div>
+                  ))
+                }
+
+                <div class="relative sm:col-span-2">
+                  <textarea
+                    id="contact-message"
+                    class:list={[inputClass, 'min-h-[150px] resize-y']}
+                    name="message"
+                    placeholder="Your message"
+                    required></textarea>
+                  <label class={labelClass} for="contact-message">
+                    Your message<span class="text-general-red"> *</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="mt-9 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                <button
+                  type="submit"
+                  class="group inline-flex w-full shrink-0 items-center justify-center gap-3 whitespace-nowrap rounded-xl bg-linear-to-r from-general-red to-[#ff5a45] px-8 py-5 text-[13px] font-bold uppercase tracking-[0.1em] text-white shadow-[0_14px_44px_-10px_rgba(237,28,37,0.65)] transition-all duration-500 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                >
+                  <span data-contact-label>Send enquiry</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </button>
+
+                {formNote && <p class="text-[13px] leading-[1.7] text-white/45">{formNote}</p>}
+              </div>
+
+              {/* Status is announced as well as shown: a submission that fails
+                  silently is worse than no form at all. */}
+              <p
+                class="mt-7 hidden rounded-xl border border-white/12 bg-white/[0.04] px-5 py-4 text-[14px] leading-[1.7] text-white/75"
+                data-contact-status
+                role="status"
+                aria-live="polite"
+              >
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* The office, on the map. Loaded lazily and only once it is scrolled to,
+        so a third-party iframe never delays the page it sits at the foot of. */}
+    {
+      mapEmbedUrl && (
+        <div class="mt-24 lg:mt-32">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end lg:gap-16">
+            <div class="lg:col-span-6">
+              {mapHeading && (
+                <h3
+                  data-reveal="mask"
+                  class="text-4xl font-black leading-[1.02] tracking-tight text-general-black sm:text-5xl"
+                >
+                  {map.lead}
+                  {map.accent && (
+                    <span class="font-medium italic text-general-red"> {map.accent}</span>
+                  )}
+                </h3>
+              )}
+            </div>
+
+            {mapIntro && (
+              <div class="lg:col-span-6">
+                <p
+                  data-reveal="up"
+                  class="border-t-2 border-general-red pt-6 text-[17px] leading-[1.8] text-gray-700"
+                >
+                  {mapIntro}
+                </p>
+              </div>
+            )}
+          </div>
+
+          <div
+            data-reveal="lift"
+            class="contact-map relative mt-12 overflow-hidden rounded-[28px] border border-gray-200 bg-gray-50"
+          >
+            <iframe
+              src={mapEmbedUrl}
+              title="General Tech Automation on Google Maps"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="block h-[380px] w-full border-0 md:h-[460px]"
+            />
+          </div>
+
+          {mapLinkUrl && (
+            <a
+              href={mapLinkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group mt-8 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.15em] text-general-red transition-colors hover:text-general-black"
+            >
+              Open in Google Maps
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                aria-hidden="true"
+              >
+                <path d="M7 7h10v10" />
+                <path d="M7 17 17 7" />
+              </svg>
+            </a>
+          )}
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  /* The map is a colour photograph in the middle of a red-and-black page, so
+     it is desaturated to sit inside the palette and comes back to full colour
+     when the reader actually engages with it. */
+  .contact-map iframe {
+    filter: grayscale(1) contrast(1.05);
+    transition: filter 0.6s ease;
+  }
+  .contact-map:hover iframe,
+  .contact-map:focus-within iframe {
+    filter: grayscale(0) contrast(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-map iframe {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  /**
+   * Submits the enquiry without leaving the page. `/api/contact` delivers the
+   * message when a channel is configured for it; when none is, it answers with
+   * a `mailto` fallback and the browser's own mail client finishes the job, so
+   * the form is never a dead end.
+   */
+  function initContactForm() {
+    document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach((form) => {
+      if (form.dataset.contactReady) return
+      form.dataset.contactReady = 'true'
+
+      const status = form.querySelector<HTMLElement>('[data-contact-status]')
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')
+      const label = form.querySelector<HTMLElement>('[data-contact-label]')
+      const original = label?.textContent ?? 'Send enquiry'
+
+      const say = (message: string, tone: 'ok' | 'error' = 'ok') => {
+        if (!status) return
+        status.textContent = message
+        status.classList.remove('hidden')
+        status.classList.toggle('border-general-red/40', tone === 'error')
+        status.classList.toggle('text-white/75', tone === 'ok')
+      }
+
+      /** Composes the enquiry into the reader's own mail client. */
+      const openMailClient = (data: FormData) => {
+        const to = form.dataset.mailto
+        if (!to) return false
+
+        const lines = ['name', 'company', 'email', 'phone', 'message']
+          .map((key) => {
+            const value = String(data.get(key) ?? '').trim()
+            return value ? `${key[0]!.toUpperCase()}${key.slice(1)}: ${value}` : ''
+          })
+          .filter(Boolean)
+
+        const href =
+          `mailto:${to}?subject=${encodeURIComponent('Website enquiry')}` +
+          `&body=${encodeURIComponent(lines.join('\n'))}`
+
+        window.location.href = href
+        return true
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault()
+        if (!form.reportValidity()) return
+
+        const data = new FormData(form)
+
+        if (button) button.disabled = true
+        if (label) label.textContent = 'Sending…'
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: data,
+          })
+          const body = (await res.json().catch(() => ({}))) as {
+            message?: string
+            fallback?: 'mailto'
+          }
+
+          if (res.ok) {
+            form.reset()
+            say(body.message ?? 'Thank you — your enquiry has been sent.')
+          } else if (body.fallback === 'mailto' && openMailClient(data)) {
+            say(
+              body.message ??
+                'Opening your email app with the message ready to send. If nothing happens, email or call us directly.',
+            )
+          } else {
+            say(
+              body.message ??
+                'Something went wrong sending that. Please call or email us directly and we will pick it up.',
+              'error',
+            )
+          }
+        } catch {
+          if (!openMailClient(data)) {
+            say(
+              'Something went wrong sending that. Please call or email us directly and we will pick it up.',
+              'error',
+            )
+          }
+        } finally {
+          if (button) button.disabled = false
+          if (label) label.textContent = original
+        }
+      })
+    })
+  }
+
+  document.addEventListener('astro:page-load', initContactForm)
+  document.addEventListener('DOMContentLoaded', initContactForm)
+</script>

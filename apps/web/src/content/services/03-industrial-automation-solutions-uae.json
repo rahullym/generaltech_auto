@@ -1,0 +1,168 @@
+{
+  "order": 3,
+  "title": "Industrial Automation Solutions UAE",
+  "slug": "industrial-automation-solutions-uae",
+  "aliases": ["service/automation-solutions"],
+  "navLabel": "Automation Solutions",
+  "summary": "Industrial Automation Solutions UAE for DeltaV DCS, PLC and SCADA, and process control. Serving Dubai, Sharjah & Abu Dhabi.",
+  "meta": {
+    "title": "Industrial Automation Solutions UAE | GTA",
+    "description": "Industrial Automation Solutions UAE for DeltaV DCS, PLC and SCADA, and process control. Serving Dubai, Sharjah & Abu Dhabi."
+  },
+  "serviceType": "Industrial automation solutions",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "Industrial Automation Solutions *UAE*",
+      "subheading": "Industrial Automation Solutions UAE for DeltaV DCS, PLC and SCADA, and process control. Serving Dubai, Sharjah & Abu Dhabi.",
+      "image": "DeltaV.jpg",
+      "actions": [
+        { "label": "Arrange a site assessment", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Industrial Automation Solutions UAE keep your plant's control systems, panels, and process equipment running on one coordinated platform instead of a patchwork of disconnected fixes. General Tech Automation designs, builds, and supports process automation solutions UAE-wide for industrial instruments, control panels, and rotating equipment across Dubai, Sharjah, Abu Dhabi, and the wider UAE, so your team gets a system engineered around the actual plant rather than a generic package."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "What Our Automation Solutions *Cover*",
+      "body": [
+        "Industrial Automation Solutions UAE work starts with a full review of your existing control setup, safety requirements, and process history before a single panel is built. Every DeltaV automation system, PLC panel, or SCADA layer gets engineered against the plant it will actually run in, not a template pulled off the shelf.",
+        "This isn't automation for its own sake. When a line goes down at 2 a.m., the operator on shift needs a control system that responds predictably and a support team that already knows the plant's history, not a black box nobody on-site fully understands.",
+        "A distributed control system DCS UAE facilities can rely on also supports long-term planning: knowing not just how the process runs today, but how the platform scales as production grows. Facilities that treat Industrial Automation Solutions UAE as ongoing infrastructure, rather than a one-off installation, are the ones that catch process issues before they become an unplanned shutdown.",
+        "This matters because industrial control systems UAE plants install today often stay in service for ten to fifteen years, so a rushed or generic setup becomes an expensive problem long after the installer has moved on. Engineers evaluate the plant's power quality, existing wiring, and process history before recommending a control architecture, which is why data collected during the assessment phase carries directly into the design stage rather than being treated as a formality."
+      ]
+    },
+    {
+      "type": "features",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "network",
+          "title": "DeltaV Distributed Control System",
+          "description": "Emerson DeltaV UAE is the backbone of many continuous-process plants, and General Tech Automation is a regional specialist in deploying and supporting it. The DeltaV distributed control system unifies process control, safety, and asset management under one platform, cutting the complexity of running separate systems for each function.\n\nProcess control automation UAE plants depend on benefits directly from this single-platform approach: fewer unplanned stops and faster fault diagnosis when something does go wrong on the line. Because DeltaV scales from a single skid to a full plant-wide deployment, it also suits facilities planning phased expansion rather than a one-time build."
+        },
+        {
+          "icon": "cpu",
+          "title": "PLC and SCADA Automation",
+          "description": "PLC automation services UAE plants use most are paired with SCADA automation solutions for plant-wide visibility. General Tech Automation configures and programs controllers for automation for manufacturing plants and automation for oil and gas plants alike, with HMI automation systems that give operators clear, real-time visibility without needing specialist training on every shift.\n\nAutomation system integration UAE work here connects new controllers with existing equipment, so upgrades don't force a full replacement of instrumentation that still works well. Programming is done to match existing plant standards wherever possible, so new panels don't force operators to relearn a system they already know."
+        },
+        {
+          "icon": "refresh",
+          "title": "Retrofit and System Upgrades",
+          "description": "Older facilities rarely need a full rebuild. System upgrades automation and system migration automation projects modernize aging panels and controllers while keeping existing equipment running, which is usually the fastest route to reduce downtime industrial automation teams can achieve without a full shutdown.\n\nThis is also where automation project risk reduction matters most. Retrofits are typically scoped one process area at a time, so production in the rest of the facility continues while a single line is upgraded, and spare-parts compatibility stays in mind so existing sensors and actuators aren't discarded unnecessarily."
+        },
+        {
+          "icon": "signal",
+          "title": "Industrial IoT and Digital Automation",
+          "description": "Digital transformation industrial plants are adopting now extends automation beyond the control room. Paired with the company's IoT services, a facility automation solutions build can add remote monitoring and predictive maintenance, supporting Industry 4.0 automation UAE plants are moving toward and giving management real-time data instead of end-of-shift reports.\n\nThis matters most for facilities running multiple sites, where a single dashboard replaces phone calls and manual logs as the way plant managers track performance across locations."
+        },
+        {
+          "icon": "shield",
+          "title": "Automation Support for Emergency Repairs and Downtime",
+          "description": "When a controller or panel fails unexpectedly, real-time process automation UAE monitoring means a technician isn't starting from zero. Pulling up an asset's control history and last configuration brings the fix into minutes rather than hours of guesswork on-site.\n\nFacilities running custom industrial automation also lean on this during audits and insurance renewals, when documented commissioning and maintenance records turn a scramble through old files into a quick export instead. An exportable commissioning history also shortens insurance renewals and third-party inspections, since the full configuration and repair record for any panel is available on request rather than pieced together from memory."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "How we work",
+      "heading": "How the Process *Works*",
+      "body": [
+        "Every project begins with a site assessment where engineers review the existing panels, wiring, and safety requirements, typically completed within one to two business days depending on facility size. From there, automation design and engineering runs one to two weeks depending on scope, covering control logic, panel layout, and safety sign-off before anything is built.",
+        "Panel build and PLC or DCS programming generally takes two to four weeks, checked against the design at each stage, followed by two to three days of factory acceptance testing before anything ships to site. Onsite installation and commissioning typically runs three to seven days, timed to minimize the production downtime industrial automation clients cannot afford to lose during changeover.",
+        "Once live, systems are supported on an ongoing basis rather than left after handover: operator training happens on day one, and scheduled maintenance visits keep the platform running as designed rather than drifting out of tune over the following months. This full-cycle approach is what keeps Industrial Automation Solutions UAE genuinely reliable rather than a system that works on day one and degrades by month six."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Why Choose *General Tech Automation*",
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "General Tech Automation is part of General Tech Services, a regional automation partner UAE with more than 30 years of combined group experience across oil and gas, manufacturing, life sciences, pulp and paper, and chemical industries. The company operates as an official and authorised distributor for global brands including Mitutoyo, ASCO, Control Techniques, SMC, and IFM, so parts and support come from the same team designing the system rather than a third-party reseller.",
+        "[CERTIFICATION/CREDENTIAL — insert relevant ISO or accreditation here.]",
+        "Industrial Automation Solutions UAE built this way stays accurate because the same engineers commissioning the panel are the ones supporting it afterward, closing the usual gap between what was installed and what gets serviced. This approach also supports operational efficiency automation delivers in practice, where maintenance intervals are set from actual plant behavior rather than manufacturer defaults alone.",
+        "For larger operators, this becomes facility automation solutions at scale: one consistent control platform across every process area, rather than separate systems installed by different vendors that were never designed to talk to each other."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Industries We *Serve*",
+      "body": [
+        "Our Industrial Automation Solutions UAE clients include oil and gas operators, manufacturing plants, life sciences plant automation facilities, pulp and paper automation solutions sites, and chemical plant automation operations running instrumentation, control panels, and rotating equipment that all need consistent, well-documented systems. Automation for oil and gas plants and automation for manufacturing plants matter most in these sectors, where downtime carries a direct production cost and a missed safety interlock can carry a compliance one."
+      ]
+    },
+    {
+      "type": "coverage",
+      "eyebrow": "Where we work",
+      "heading": "Service Areas Across the *UAE*",
+      "tone": "dark",
+      "areas": [
+        { "name": "Automation solutions Dubai" },
+        { "name": "Automation solutions Sharjah" },
+        { "name": "Automation solutions Abu Dhabi" },
+        { "name": "The northern emirates" }
+      ],
+      "body": [
+        "We provide automation solutions Dubai, automation solutions Sharjah, and automation solutions Abu Dhabi coverage from our base of operations, with engineers able to reach sites across the northern emirates for both new builds and ongoing support, as well as the wider GCC through the group's Saudi Arabia branch. Plant automation services UAE-wide are dispatched from the same team handling design and commissioning, so there's no handoff delay between office and site.",
+        "Multi-site operators can run consistent automation control panel services across several locations, with shared design standards so head-office teams can compare system status location by location rather than reconciling different vendor documentation from each site. The aim throughout is straightforward: increase productivity automation systems bring without adding operational complexity for the plant's own staff to manage."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked *Questions*",
+      "items": [
+        {
+          "q": "Who provides industrial automation solutions in UAE?",
+          "a": ["General Tech Automation delivers Industrial Automation Solutions UAE, including DeltaV DCS, PLC, and SCADA systems, for facilities across Dubai, Sharjah, and Abu Dhabi, working from the same fieldwork that generates the control history in the first place."]
+        },
+        {
+          "q": "Is DeltaV the only automation platform supported?",
+          "a": ["No. While Emerson DeltaV UAE projects are a specialty, the team also delivers PLC automation services UAE and SCADA automation solutions on other major platforms, so plants aren't locked into one vendor's ecosystem."]
+        },
+        {
+          "q": "How long does a typical automation upgrade take?",
+          "a": ["Most system upgrades automation projects run four to six weeks from design to commissioning, though panel repairs and smaller system migration automation jobs can be completed in days rather than weeks."]
+        },
+        {
+          "q": "Can automation solutions reduce plant downtime?",
+          "a": ["Yes. Predictive maintenance, phased retrofits, and real-time process automation UAE monitoring are all built to reduce downtime industrial automation teams would otherwise lose to unplanned stops on the line."]
+        },
+        {
+          "q": "Does General Tech Automation support future expansion?",
+          "a": ["Yes. Systems are engineered with future-proof automation technology in mind, so plants can scale control, add IoT monitoring, or expand capacity without rebuilding the platform from scratch later on."]
+        },
+        {
+          "q": "Does this replace our existing control systems?",
+          "a": ["It depends on the setup. In many cases, automation system integration UAE work happens alongside existing PLCs or DCS platforms, adding accurate, field-verified control rather than replacing everything outright."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get started",
+      "heading": "Get Started With *Industrial Automation Solutions*",
+      "body": "Ready to bring your control systems, panel design, and process automation into one reliable platform? Call General Tech Automation at +971 6 5436933 or email mathews@generaltechuae.com to arrange a site assessment and a proposal for Industrial Automation Solutions UAE.",
+      "actions": [
+        { "label": "Call +971 6 5436933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

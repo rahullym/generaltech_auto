@@ -1,0 +1,195 @@
+{
+  "order": 6,
+  "title": "Custom Control Panel Design & Manufacturing UAE",
+  "slug": "service/custom-control-panel-design-manufacturing-uae",
+  "aliases": ["service/custom-panel-design--manufacturing"],
+  "navLabel": "Custom Panel Design & Manufacturing",
+  "summary": "Custom Control Panel Design & Manufacturing UAE by General Tech Automation. VFD, PLC, MCC & switchgear panels built in 10-15 days. Get a fixed quote today.",
+  "meta": {
+    "title": "Custom Control Panel Design & Manufacturing UAE | GTA",
+    "description": "Custom Control Panel Design & Manufacturing UAE by General Tech Automation. VFD, PLC, MCC & switchgear panels built in 10-15 days. Get a fixed quote today."
+  },
+  "serviceType": "Custom control panel design and manufacturing",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "Custom Control Panel Design & Manufacturing *UAE*",
+      "subheading": "Custom Control Panel Design & Manufacturing UAE by General Tech Automation. VFD, PLC, MCC & switchgear panels built in 10-15 days. Get a fixed quote today.",
+      "image": "panel-inspection.jpg",
+      "actions": [
+        { "label": "Get a fixed quote", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Custom Control Panel Design & Manufacturing UAE services from General Tech Automation give industrial and process facilities panels engineered around their exact equipment, layout, and compliance needs, not a generic off-the-shelf enclosure. As a custom electrical control panel manufacturer UAE plants rely on for both single-unit and multi-site rollouts, our in-house drafting and assembly team delivers industrial panel design and build services on a timeline that fits real shutdown windows — typically 10 to 15 working days for a standard panel, with faster turnaround available for urgent projects."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "What Is Custom Control Panel *Design & Manufacturing*",
+      "body": [
+        "A custom control panel is an electrical enclosure engineered, wired, and tested to match one specific application, rather than assembled from a fixed catalog design. If you are asking what is a custom control panel in practical terms, think of it as the electrical panel engineering services process that starts with your equipment list, voltage requirements, and physical space, and ends with a panel that needs no rework on site.",
+        "This is different from stock panels in one key way. Every component — breakers, contactors, drives, and terminals — is selected and positioned for your process, not for a generic use case. That is industrial control panel design explained simply: match the panel to the plant, not the plant to the panel. Related entities in this space include VFDs, PLCs, motor starters, and switchgear, all addressed as part of one complete design package. Facilities across manufacturing, oil and gas, water treatment, and food processing all rely on this same approach, since the underlying engineering discipline stays consistent even when the equipment inside each panel changes."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "Control Panel Types We *Design and Manufacture*",
+      "intro": "Below is how our Custom Control Panel Design & Manufacturing UAE workshop breaks down panel types by application.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "cog",
+          "title": "Custom VFD Panel Design UAE",
+          "description": "Our custom VFD panel design UAE service covers variable frequency drive panels built for pumps, fans, and compressors that need precise speed control. Each VFD panel is sized to the motor load, ventilated for the UAE's ambient heat, and wired with clear loop documentation so plant electricians can maintain it without guesswork."
+        },
+        {
+          "icon": "cpu",
+          "title": "PLC Control Panel Manufacturing",
+          "description": "PLC control panel manufacturing integrates your programmable logic controller, I/O modules, and HMI into one enclosure, pre-wired and function-tested before it leaves our workshop. This reduces commissioning time significantly, since the logic and wiring are validated before installation begins."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Motor Control Center (MCC) Panel Design",
+          "description": "A motor control center (MCC) panel design groups multiple motor starters into a single, centrally managed enclosure — ideal for facilities running several pumps, conveyors, or fans from one electrical room. We design MCC line-ups with clear compartment separation for safe maintenance access."
+        },
+        {
+          "icon": "network",
+          "title": "Power Distribution Panel Manufacturing",
+          "description": "Power distribution panel manufacturing covers the panels that split incoming supply into properly protected circuits for downstream equipment. These are built with correct breaker coordination and clearly labeled circuits — one of the most common gaps found when auditing existing installations."
+        },
+        {
+          "icon": "gauge",
+          "title": "Soft Starter Panel Design UAE",
+          "description": "Soft starter panel design UAE projects are common for large motors where a direct-on-line start would cause excessive mechanical or electrical stress. We size the soft starter to the motor and load profile so equipment ramps up smoothly instead of stressing bearings and couplings."
+        },
+        {
+          "icon": "screen",
+          "title": "HMI Integrated Control Panel",
+          "description": "An HMI integrated control panel combines the operator display directly into the enclosure, giving plant staff real-time status, alarms, and controls at the panel itself rather than through a separate station. This suits standalone skids and remote equipment areas well."
+        },
+        {
+          "icon": "refresh",
+          "title": "Servo Drive Panel Manufacturing",
+          "description": "Servo drive panel manufacturing supports high-precision motion applications — packaging lines, robotics, and CNC-adjacent equipment — where standard VFDs are not accurate enough. These panels are built with the shielding and cable separation servo systems need to avoid signal interference."
+        },
+        {
+          "icon": "shield",
+          "title": "Low Voltage Switchgear Panel Design",
+          "description": "Low voltage switchgear panel design covers the main distribution and protection panels sitting closest to the incoming supply. Because these panels carry the highest fault current in a facility, extra attention goes into bus bar spacing, arc-flash considerations, and access safety."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "Delivery",
+      "heading": "How Custom Panel *Delivery Works*",
+      "body": [
+        "Every project starts with in-house drafting for control panels, so the drawings you receive match exactly what gets built — no third-party drafting delays or version mismatches. From there, custom panel design to field installation follows one continuous process: design, build, factory test, then deliver with full documentation for site electricians.",
+        "We also offer modular panel design services, meaning large installations can be broken into sections that are easier to transport, install, and later modify without rebuilding the whole enclosure. All panel design and drafting UAE work is done locally, so revisions during the design phase happen in days, not weeks.",
+        "Delivery options include standard factory-built panels, or panel wiring and field layout design support if your team prefers to handle final assembly on site."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Control Panel *Design Process*",
+      "image": "board-repair.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Our control panel design process follows five clear stages, each self-contained and documented:",
+        "Enquiry and requirements review is typically completed within 1 to 2 working days of receiving your specification. Drafting and approval, including loop drawing documentation services and layout drawings, is issued for sign-off within 3 to 5 working days. Manufacturing and wiring, including I/O points documentation panel drawings for every terminal, generally takes 5 to 7 working days depending on panel complexity. Factory acceptance testing sees every panel power-tested and function-checked before dispatch, usually completed within 1 working day. Delivery and handover follows, with full documentation provided alongside the panel itself.",
+        "This industrial panel manufacturing workflow means a standard custom panel enquiry to delivery timeline runs 10 to 15 working days in total, with expedited scheduling available for time-critical shutdowns."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Credentials, Documentation, *and Proof*",
+      "body": [
+        "As a certified control panel manufacturer UAE clients can verify, panels are built to recognized international wiring and safety practices, and can be constructed to UL listed panel design or IEC standards where a project specifically requires it. Please confirm your exact standard requirement at enquiry stage, since not every panel needs the same certification level.",
+        "Panel compliance and certification UAE requirements vary by industry. Oil and gas, food processing, and manufacturing sites often specify different standards, so the applicable code is confirmed with you before drafting begins rather than assuming one standard fits all projects.",
+        "Every panel ships with industrial panel documentation standards met as a baseline: as-built drawings, loop diagrams, and a bill of materials, so your maintenance team has everything needed for future servicing."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Turnaround Time, Pricing, *and Coverage Area*",
+      "body": [
+        "Control panel manufacturing lead time UAE for a standard panel is 10 to 15 working days from approved drawings. Simple single-drive panels can be ready in as little as 7 working days, while large MCC line-ups may take 3 to 4 weeks depending on component availability. Custom Control Panel Design & Manufacturing UAE timelines are always quoted after reviewing your drawings, not estimated upfront.",
+        "Custom panel design cost UAE pricing depends on panel size, component brands specified, enclosure rating such as IP54 versus IP65, and certification requirements. A fixed quote is provided after reviewing your specification rather than a generic price list, since two panels of the same size can differ significantly in cost based on internal components.",
+        "Our panel manufacturing coverage Dubai Sharjah Abu Dhabi extends across the wider UAE, with our workshop based in Sharjah and delivery arranged to site across all seven emirates."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Beyond Panel *Manufacturing*",
+      "body": [
+        "Unlike suppliers who only build enclosures, we pair custom panel design and automation solutions under one roof, so the same team that designs your panel can also handle the PLC logic that runs inside it. This panel manufacturing and PLC programming combined approach removes the coordination gap that happens when panel building and programming are outsourced to separate vendors.",
+        "We also provide panel design and retrofit solutions UAE facilities need when replacing an aging panel without a full shutdown rebuild, reusing existing enclosures and field wiring wherever it is safe to do so, which keeps both cost and downtime lower than a full replacement."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Why Choose *General Tech Automation*",
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "As a full-service Custom Control Panel Design & Manufacturing UAE partner, General Tech Automation operates as an industrial automation panel supplier UAE facilities return to for repeat projects, because panel design, drafting, manufacturing, and programming are handled by one in-house team rather than passed between subcontractors.",
+        "Based in Sharjah and working as a trusted control panel manufacturer Sharjah facilities and wider UAE clients rely on, every panel is documented with loop drawings and I/O schedules as standard — not as an add-on — so your maintenance team is never left without the information needed to service the panel years after installation."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Here are direct answers to the questions we hear most often from plant engineers and procurement teams evaluating a custom panel project.",
+      "items": [
+        {
+          "q": "How long does custom control panel manufacturing take in the UAE?",
+          "a": ["Most standard panels are completed in 10 to 15 working days from drawing approval. Simple single-drive panels can be faster, around 7 working days, while large multi-section MCC panels typically need 3 to 4 weeks due to component lead times."]
+        },
+        {
+          "q": "What types of panels can be custom designed?",
+          "a": ["VFD, PLC, MCC, soft starter, servo drive, HMI-integrated, power distribution, and low voltage switchgear panels are all covered. Each is engineered around your specific load, space, and process requirements rather than built from a fixed template."]
+        },
+        {
+          "q": "Do you provide documentation for future maintenance?",
+          "a": ["Yes. Every panel ships with as-built drawings, loop diagrams, and I/O point documentation, so your electricians can troubleshoot or expand the panel later without needing to reverse-engineer the wiring."]
+        },
+        {
+          "q": "What is the difference between a VFD panel and a PLC panel?",
+          "a": ["A VFD panel controls motor speed for a single piece of equipment, while a PLC panel runs the logic coordinating multiple devices, sensors, and outputs across a process. Many installations use both together."]
+        },
+        {
+          "q": "Can an existing control panel be retrofitted instead of replaced?",
+          "a": ["In many cases, yes. If the enclosure and field wiring are in good condition, internal components such as drives, PLCs, and breakers can be upgraded without a full panel replacement, reducing both cost and downtime."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Start your project",
+      "heading": "Start your Custom Control Panel Design & Manufacturing UAE *project today.*",
+      "body": "If you need a panel built around your exact process — not a generic enclosure — our team can review your specification and confirm a fixed quote and delivery timeline.",
+      "actions": [
+        { "label": "+971 6 543 6933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+---
+import Link from '../Link.astro'
+import SectionHeader from '../SectionHeader.astro'
+import type { LinkValue } from '@/lib/types'
+
+interface Props {
+  eyebrow?: string
+  heading?: string
+  intro?: string
+  groups: {
+    id?: string
+    title: string
+    description?: string
+    iconName?: string
+    services: { id?: string; link: LinkValue }[]
+  }[]
+  footnote?: string
+}
+
+const { eyebrow, heading, intro, groups = [], footnote } = Astro.props
+
+/** The same line-icon set the feature grid draws from, on the same 24px grid. */
+const ICONS: Record<string, string> = {
+  cpu: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/>',
+  network:
+    '<rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4"/><path d="M5 16v-2h14v2"/>',
+  signal:
+    '<path d="M5 12.55a11 11 0 0 1 14 0"/><path d="M2 8.82a16 16 0 0 1 20 0"/><path d="M8.5 16.43a6 6 0 0 1 7 0"/><circle cx="12" cy="20" r="1"/>',
+  cabinet:
+    '<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 2v20"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M7 6h2"/><path d="M15 6h2"/>',
+  cog: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+  refresh: '<path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 21v-5h5"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>',
+  gauge: '<path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M13.4 10.6 19 5"/><path d="M20.5 17a10 10 0 1 0-17 0"/>',
+}
+
+const pad = (value: number) => String(value).padStart(2, '0')
+---
+
+{/* Each family gets a panel: the approved paragraph stays whole at the head of
+    it, and the named services run underneath as a linked index. Two panels a
+    row on desktop, one on anything narrower — the service names are long, so
+    they are rows rather than chips and never truncate. */}
+<section class="relative border-t border-gray-100 bg-white px-6 py-28 md:px-12 lg:py-40">
+  <div class="relative mx-auto max-w-7xl">
+    {
+      (heading || intro) && (
+        <SectionHeader
+          eyebrow={eyebrow}
+          heading={heading}
+          intro={intro}
+          align="split"
+          sticky
+          introCollapseHeight={160}
+        />
+      )
+    }
+
+    <div data-reveal-stagger class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
+      {
+        groups.map((group, index) => {
+          const icon = ICONS[group.iconName ?? 'cog'] ?? ICONS.cog
+
+          return (
+            <article
+              data-reveal="lift"
+              class="group/panel relative flex flex-col overflow-hidden rounded-[26px] border border-gray-100 bg-white p-9 transition-all duration-500 hover:border-general-red/25 hover:shadow-[0_28px_60px_-24px_rgba(237,28,37,0.28)] md:p-12"
+            >
+              {/* Quiet index watermark, as on the service cards. */}
+              <span
+                class="pointer-events-none absolute -top-4 right-6 select-none text-[92px] font-black leading-none tracking-tighter text-gray-50 transition-colors duration-500 group-hover/panel:text-general-red/5 md:text-[116px]"
+                aria-hidden="true"
+              >
+                {pad(index + 1)}
+              </span>
+
+              <div class="relative z-10 flex flex-1 flex-col">
+                <div class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 text-gray-400 transition-all duration-500 group-hover/panel:border-general-red/20 group-hover/panel:bg-general-red/5 group-hover/panel:text-general-red">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    set:html={icon}
+                  />
+                </div>
+
+                <h3 class="text-[26px] font-black leading-[1.12] tracking-[-0.03em] text-general-black lg:text-[30px]">
+                  {group.title}
+                </h3>
+
+                {group.description && (
+                  <p class="mt-6 text-[15px] leading-[1.85] text-gray-700">{group.description}</p>
+                )}
+
+                {group.services.length > 0 && (
+                  <ul class="mt-9 border-t border-gray-100">
+                    {group.services.map((service) => (
+                      <li class="border-b border-gray-100 last:border-b-0">
+                        <Link
+                          link={service.link}
+                          class="service-row group/row flex items-center justify-between gap-5 py-4 text-[15px] font-semibold leading-[1.45] tracking-[-0.01em] text-general-black transition-colors duration-300 hover:text-general-red"
+                        >
+                          <span class="flex min-w-0 items-start gap-4">
+                            <span
+                              class="mt-[9px] h-[6px] w-[6px] shrink-0 rounded-full bg-general-red/30 transition-all duration-300 group-hover/row:bg-general-red"
+                              aria-hidden="true"
+                            />
+                            <span>{service.link?.label}</span>
+                          </span>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="shrink-0 -translate-x-1 opacity-0 transition-all duration-300 group-hover/row:translate-x-0 group-hover/row:opacity-100"
+                            aria-hidden="true"
+                          >
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                          </svg>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              <span
+                class="absolute bottom-0 left-0 h-[3px] w-full origin-left scale-x-0 bg-general-red transition-transform duration-700 group-hover/panel:scale-x-100"
+                aria-hidden="true"
+              />
+            </article>
+          )
+        })
+      }
+    </div>
+
+    {
+      footnote && (
+        <p
+          data-reveal="up"
+          class="mt-16 max-w-3xl border-l-2 border-general-red/20 pl-8 text-[15px] leading-[1.8] text-gray-600"
+        >
+          {footnote}
+        </p>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  /* Touch has no hover, so the arrow that signals "this is a link" would never
+     appear. It is simply always shown there. */
+  @media (hover: none) {
+    .service-row svg {
+      opacity: 0.35;
+      transform: none;
+    }
+  }
+</style>

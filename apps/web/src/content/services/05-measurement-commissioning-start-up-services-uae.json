@@ -1,0 +1,172 @@
+{
+  "order": 5,
+  "title": "Measurement Commissioning and Start-Up Services UAE",
+  "slug": "service/measurement-commissioning-start-up-services-uae",
+  "aliases": ["service/commissioning--start-up---measurement"],
+  "navLabel": "Commissioning & Start Up - Measurement",
+  "summary": "Measurement Commissioning and Start-Up Services UAE from General Tech Automation — accurate installation, testing & operator training, on schedule.",
+  "meta": {
+    "title": "Measurement Commissioning and Start-Up Services UAE",
+    "description": "Measurement Commissioning and Start-Up Services UAE from General Tech Automation — accurate installation, testing & operator training, on schedule."
+  },
+  "serviceType": "Measurement commissioning and start-up",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "Measurement Commissioning and Start-Up Services *UAE*",
+      "subheading": "Measurement Commissioning and Start-Up Services UAE from General Tech Automation — accurate installation, testing & operator training, on schedule.",
+      "image": "engineer-tablet-plant.jpg",
+      "actions": [
+        { "label": "Book your commissioning", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 1 — Direct Answer",
+      "lede": true,
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Measurement Commissioning and Start-Up Services UAE from General Tech Automation cover the installation verification, loop checking, calibration, and start-up of measurement and instrumentation packages once equipment reaches site. A field service technician typically completes loop checks within 24 hours of arrival, full commissioning within 3–5 days depending on system size, and finishes with hands-on training for field operations personnel. This closes the gap between a specified, procured measurement package and one that is actually accurate, compliant, and ready to operate."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 2 — What Is Measurement Commissioning",
+      "body": [
+        "Specifying, selecting, and procuring an advanced measurement package is only part of the process — correct installation, commissioning, and start-up are what actually determine whether the system performs to specification. Measurement commissioning verifies that every instrument, cable, and calculation in the system works together correctly before it is handed over for production use. As regulatory standards tighten, measurement systems have become more complex, which makes structured commissioning — not a quick switch-on — essential for accuracy and long-term reliability."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "Section 3 — Commissioning Services We Cover",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "gauge",
+          "title": "Flow & Custody Transfer Measurement Commissioning",
+          "description": "Flow meter commissioning services and custody transfer measurement commissioning confirm that metering skids and flow computers calculate volumes correctly before any transaction relies on them. This includes custody transfer skid start-up and metering skid commissioning UAE, both carried out against the original design specification rather than a generic checklist."
+        },
+        {
+          "icon": "network",
+          "title": "Installation Verification & Loop Checking",
+          "description": "Instrument loop checking services confirm every signal path from field instrument to control system reads correctly, catching wiring or configuration errors before start-up. Measurement package installation UAE support covers physical mounting, cabling, and grounding checks ahead of the electrical commissioning stage."
+        },
+        {
+          "icon": "cog",
+          "title": "Start-Up, Testing & Calibration",
+          "description": "Instrument start-up and testing and calibration and commissioning services bring each device to its working state and confirm it reads within tolerance. Measurement accuracy verification is carried out against reference standards before the system is released for operational use."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Gas & Tank Measurement Systems",
+          "description": "Gas measurement skid commissioning and tank gauging system commissioning apply the same structured approach to gas metering skids and tank inventory systems, where process instrumentation start-up must account for both the mechanical installation and the calculation logic behind it."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Control & SCADA Integration",
+          "description": "SCADA measurement integration support and flow computer commissioning confirm that measurement data reaches the control room correctly, so operators see live, accurate readings from the first day of operation rather than discovering gaps weeks later."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 4 — How It Works: Delivery Options",
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Commissioning support is available as a scheduled site visit tied to a project timeline, or as standalone field instrumentation commissioning UAE support for a specific package. General Tech Automation's team collaborates directly with the installation contractor, so plant instrumentation commissioning proceeds in step with mechanical and electrical works rather than waiting for a separate mobilisation. For multi-site rollouts, technicians can commission one measurement system installation at a time or coordinate parallel teams across locations to meet a fixed go-live date."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How we work",
+      "heading": "Section 5 — Our Process",
+      "steps": [
+        { "title": "Pre-commissioning review", "description": "design documents and instrument datasheets are checked within 1–2 days of mobilisation." },
+        { "title": "Installation verification and loop checking", "description": "completed within 24 hours per measurement point once site access is confirmed." },
+        { "title": "Calibration and start-up", "description": "each instrument is brought online and checked against reference standards, typically over 2–3 days for a standard metering package." },
+        { "title": "Full system commissioning", "description": "end-to-end testing under live or simulated flow conditions, usually completed within 3–5 days total." },
+        { "title": "Operator training and handover", "description": "field operations personnel are trained on the system before technicians leave site, with handover documentation provided the same day." }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "split",
+      "eyebrow": "Proof",
+      "heading": "Section 6 — Credentials and Proof",
+      "body": [
+        "Commissioning is carried out by field service technicians experienced in certified instrumentation commissioning UAE work, following API measurement commissioning standards and OIML compliant measurement systems practice where the application calls for it. Every commissioning job closes out with instrumentation handover documentation — calibration certificates, loop check records, and a signed acceptance report — rather than a verbal confirmation that the system is ready."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 7 — Turnaround, Coverage Area",
+      "body": [
+        "Coverage spans instrument commissioning Dubai, measurement start-up services Sharjah, commissioning services Abu Dhabi, and wider UAE sites through an industrial commissioning company Sharjah base. Standard turnaround is 24 hours for loop checking, 3–5 days for full package commissioning, and same-day mobilisation for urgent start-up support tied to a production deadline. Measurement standards compliance UAE reviews can be scheduled alongside commissioning or requested separately for systems already in service."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 8 — Cross-Sell / Differentiator",
+      "body": [
+        "Commissioning work connects directly with Measurement Preventative Services for ongoing accuracy checks after start-up, and with Field Instrumentation Services and Support for day-to-day instrument maintenance once the system is live — so the same team that commissions a measurement package can also keep it running, rather than handing it off to a separate provider."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Section 9 — Why Choose General Tech Automation",
+      "image": "digital-bg.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Field technicians work alongside the installation team rather than arriving only at switch-on, which shortens the path from measurement package installation UAE to a system that is actually ready for production. This makes the service well suited to oil and gas measurement commissioning, industrial plant instrumentation start-up, measurement commissioning for refineries, and broader process plant instrument commissioning UAE needs, with field operations training instrumentation and operator training measurement systems included as standard rather than billed as an add-on. Post-commissioning support services remain available once the system is in operation."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Section 10 — Frequently Asked Questions",
+      "items": [
+        {
+          "q": "How long does measurement system commissioning usually take?",
+          "a": ["A standard metering package is commissioned in 3–5 days, covering loop checking, calibration, live testing, and operator handover. Larger or multi-skid systems may take longer depending on scope."]
+        },
+        {
+          "q": "Is operator training included in the commissioning service?",
+          "a": ["Yes, field operations personnel are trained on the commissioned system before the technician leaves site, so the handover includes both a working system and a trained team."]
+        },
+        {
+          "q": "Can commissioning start before installation is fully complete?",
+          "a": ["Pre-commissioning checks such as documentation review and loop verification can begin as installation progresses, which shortens the overall timeline once the system is mechanically complete."]
+        },
+        {
+          "q": "What documentation is provided after commissioning?",
+          "a": ["Calibration certificates, loop check records, and a signed acceptance report are issued at handover, giving a complete audit trail for regulatory or client review."]
+        },
+        {
+          "q": "Does the service cover custody transfer and regulatory-grade measurement systems?",
+          "a": ["Yes, commissioning follows recognised measurement standards for custody transfer and other regulatory-grade applications, with verification carried out against reference standards before sign-off."]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Section 11 — Book Your Commissioning Support",
+      "heading": "Planning a measurement system start-up in the UAE? Get your commissioning scheduled with *General Tech Automation.*",
+      "body": "Call +971 6 543 6933 or email mathews@generaltechuae.com",
+      "actions": [
+        { "label": "Call +971 6 543 6933", "url": "tel:+97165436933", "appearance": "primary" },
+        { "label": "Email mathews@generaltechuae.com", "url": "mailto:mathews@generaltechuae.com", "appearance": "secondary" }
+      ]
+    }
+  ]
+}

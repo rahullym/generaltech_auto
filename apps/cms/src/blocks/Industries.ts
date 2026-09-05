@@ -25,6 +25,19 @@ export const Industries: Block = {
       admin: { description: 'Sits beside the heading — one or two sentences reads best.' },
     },
     {
+      // The pinned track walks six short cards past the reader in one screen.
+      // A roster that is longer than that, or whose entries carry a paragraph
+      // each, does not fit a fixed-height card and reads better as a grid —
+      // the same choice the logo wall offers between a grid and a marquee.
+      name: 'display',
+      type: 'select',
+      defaultValue: 'track',
+      options: [
+        { label: 'Track (scrolls sideways as the page scrolls)', value: 'track' },
+        { label: 'Grid (best for long rosters or long descriptions)', value: 'grid' },
+      ],
+    },
+    {
       name: 'sectors',
       type: 'array',
       minRows: 1,
@@ -46,6 +59,8 @@ export const Industries: Block = {
             { label: 'Manufacturing', value: 'factory' },
             { label: 'Chemicals', value: 'chemical' },
             { label: 'Logistics', value: 'logistics' },
+            { label: 'Automotive', value: 'automotive' },
+            { label: 'Construction', value: 'construction' },
           ],
         },
         {

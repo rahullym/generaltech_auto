@@ -3,6 +3,7 @@ import type { CollectionConfig } from 'payload'
 import { editors, publishedOrAuthenticated } from '../access'
 import {
   CallToAction,
+  ContactBlock,
   Coverage,
   Faq,
   FeatureGrid,
@@ -12,6 +13,8 @@ import {
   MediaBlock,
   ProcessSteps,
   RichTextBlock,
+  ServiceIndex,
+  Stats,
   WhyUs,
 } from '../blocks'
 import { slugField } from '../fields/slug'
@@ -54,12 +57,15 @@ export const Pages: CollectionConfig = {
                 RichTextBlock,
                 MediaBlock,
                 FeatureGrid,
+                ServiceIndex,
                 Industries,
                 ProcessSteps,
+                Stats,
                 Coverage,
                 LogoWall,
                 WhyUs,
                 CallToAction,
+                ContactBlock,
                 Faq,
               ],
             },

@@ -15,6 +15,7 @@
     "payload": "payload",
     "seed": "NODE_ENV=development payload run src/seed.ts",
     "seed:home": "NODE_ENV=development payload run src/scripts/seed-homepage.ts",
+    "seed:pages": "NODE_ENV=development payload run src/scripts/seed-pages.ts",
     "seed:chrome": "NODE_ENV=development payload run src/scripts/seed-chrome.ts",
     "deploy": "payload migrate && next start --port 3010"
   },
