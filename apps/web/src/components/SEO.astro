@@ -1,4 +1,6 @@
 ---
+import { publicOrigin } from '@/lib/origin'
+
 import type { Media } from '@/lib/types'
 
 interface Props {
@@ -12,12 +14,14 @@ interface Props {
 
 const { title, description, image, type = 'website', publishedAt, noindex } = Astro.props
 
-const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).toString()
+const origin = publicOrigin(Astro.site, Astro.url)
+
+const canonical = new URL(Astro.url.pathname, origin).toString()
 
 // Media may arrive as a bare id when the query used depth 0.
 const imageUrl =
   image && typeof image === 'object' && image.url
-    ? new URL(image.url, Astro.site ?? Astro.url.origin).toString()
+    ? new URL(image.url, origin).toString()
     : undefined
 ---
 

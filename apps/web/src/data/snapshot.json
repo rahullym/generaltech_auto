@@ -8,11 +8,10 @@
         "slug": "contact_us",
         "layout": [
           {
-            "id": "6a9be521cddd2dae426bf3e5",
+            "blockType": "hero",
             "variant": "minimal",
             "eyebrow": "General Tech Automation · Sharjah, UAE",
             "heading": "Contact *General Tech Automation UAE*",
-            "subheading": null,
             "image": {
               "id": 71,
               "alt": "Connected plant data visualised over a factory floor",
@@ -55,41 +54,29 @@
                 }
               }
             },
-            "blockName": null,
-            "images": [],
-            "marqueeLogos": [],
             "actions": [
               {
-                "id": "6a9be521cddd2dae426bf3e3",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf3e4",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "hero"
+            ]
           },
           {
-            "id": "6a9be521cddd2dae426bf3e6",
+            "blockType": "richText",
             "layout": "default",
             "width": "prose",
-            "eyebrow": null,
-            "heading": null,
-            "numbered": null,
-            "mediaPosition": "left",
             "lede": true,
             "collapsible": false,
             "content": {
@@ -98,50 +85,37 @@
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Contact General Tech Automation UAE by phone, email, or the form below to request an automation service quote or ask a question. Every enquiry is routed to the right department, with a response within one business day. The team is Sharjah-based and covers Dubai, Abu Dhabi, and the wider UAE for industrial automation enquiry needs.",
                         "type": "text",
+                        "text": "Contact General Tech Automation UAE by phone, email, or the form below to request an automation service quote or ask a question. Every enquiry is routed to the right department, with a response within one business day. The team is Sharjah-based and covers Dubai, Abu Dhabi, and the wider UAE for industrial automation enquiry needs.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
-            "media": [],
-            "blockType": "richText"
+            }
           },
           {
-            "id": "6a9be521cddd2dae426bf3eb",
+            "blockType": "contact",
             "eyebrow": "Get in touch",
             "heading": "Get In *Touch*",
             "intro": "If you're looking to get in touch automation services UAE wide, our team of experienced professionals is ready to assess your requirements and provide a comprehensive quote tailored to your specific needs and budget. Reach out through any of the channels below for a free quote industrial automation UAE teams can act on, or just a quick question:",
-            "footnote": "The same number and email cover the entire service area, so there's no separate line to look up no matter which emirate you're calling from — one call reaches the right people either way.",
-            "formHeading": "Request a Quote *or Callback*",
-            "formIntro": "Complete the form with your requirement and it goes straight to the right representative. Use it to request automation service quote UAE pricing for a new project, or simply request a callback automation UAE if you'd rather talk it through first — just note your preference in the message field.",
-            "formNote": "Every automation service enquiry form UAE submission gets a reply within one business day.",
-            "mapHeading": "Find *Us*",
-            "mapIntro": "Our General Tech Automation office Sharjah is shown on the map below, and it also serves as the base for site visits across the Emirates. If you'd rather stop by than call, this automation company location UAE address is the one to use.",
-            "mapEmbedUrl": "https://www.google.com/maps?q=General%20Tech%20Services%20LLC%2C%20Sharjah%2C%20United%20Arab%20Emirates&output=embed",
-            "mapLinkUrl": "https://www.google.com/maps/search/?api=1&query=General%20Tech%20Services%20LLC%2C%20Sharjah%2C%20United%20Arab%20Emirates",
-            "blockName": null,
             "details": [
               {
-                "id": "6a9be521cddd2dae426bf3e7",
                 "iconName": "phone",
                 "label": "Phone",
                 "value": "+971 6 543 6933",
@@ -149,62 +123,53 @@
                 "note": "The fastest way to reach General Tech Automation directly, and our main General Tech Automation phone number for all enquiries"
               },
               {
-                "id": "6a9be521cddd2dae426bf3e8",
                 "iconName": "email",
                 "label": "Email",
                 "value": "mathews@generaltechuae.com",
-                "href": "mailto:mathews@generaltechuae.com",
-                "note": null
+                "href": "mailto:mathews@generaltechuae.com"
               },
               {
-                "id": "6a9be521cddd2dae426bf3e9",
                 "iconName": "location",
                 "label": "Address",
-                "value": "P.O. Box 25898, Sharjah, UAE",
-                "href": null,
-                "note": null
+                "value": "P.O. Box 25898, Sharjah, UAE"
               },
               {
-                "id": "6a9be521cddd2dae426bf3ea",
                 "iconName": "clock",
                 "label": "Business hours",
-                "value": "Mon–Fri, 8:00 am – 5:30 pm",
-                "href": null,
-                "note": null
+                "value": "Mon–Fri, 8:00 am – 5:30 pm"
               }
             ],
-            "blockType": "contact"
+            "footnote": "The same number and email cover the entire service area, so there's no separate line to look up no matter which emirate you're calling from — one call reaches the right people either way.",
+            "formHeading": "Request a Quote *or Callback*",
+            "formIntro": "Complete the form with your requirement and it goes straight to the right representative. Use it to request automation service quote UAE pricing for a new project, or simply request a callback automation UAE if you'd rather talk it through first — just note your preference in the message field.",
+            "formNote": "Every automation service enquiry form UAE submission gets a reply within one business day.",
+            "mapHeading": "Find *Us*",
+            "mapIntro": "Our General Tech Automation office Sharjah is shown on the map below, and it also serves as the base for site visits across the Emirates. If you'd rather stop by than call, this automation company location UAE address is the one to use.",
+            "mapEmbedUrl": "https://www.google.com/maps?q=General%20Tech%20Services%20LLC%2C%20Sharjah%2C%20United%20Arab%20Emirates&output=embed",
+            "mapLinkUrl": "https://www.google.com/maps/search/?api=1&query=General%20Tech%20Services%20LLC%2C%20Sharjah%2C%20United%20Arab%20Emirates"
           },
           {
-            "id": "6a9be521cddd2dae426bf3ee",
+            "blockType": "cta",
             "variant": "dark",
-            "eyebrow": null,
             "heading": "Have a project in mind? *Get in touch today.*",
-            "body": null,
-            "blockName": null,
             "actions": [
               {
-                "id": "6a9be521cddd2dae426bf3ec",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf3ed",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "cta"
+            ]
           }
         ],
         "meta": {
@@ -212,7 +177,7 @@
           "description": "Contact General Tech Automation UAE by phone, email, or the form below to request an automation service quote or ask a question. Response within one business day.",
           "image": null
         },
-        "updatedAt": "2026-09-05T09:47:13.327Z",
+        "updatedAt": "2026-09-05T11:55:01.930Z",
         "createdAt": "2026-09-05T07:22:38.845Z",
         "_status": "published"
       },
@@ -222,7 +187,7 @@
         "slug": "about_us",
         "layout": [
           {
-            "id": "6a9be520cddd2dae426bf301",
+            "blockType": "hero",
             "variant": "split",
             "eyebrow": "General Tech Automation · Sharjah, UAE",
             "heading": "About *General Tech Automation*",
@@ -269,76 +234,33 @@
                 }
               }
             },
-            "blockName": null,
-            "images": [],
-            "marqueeLogos": [],
             "actions": [
               {
-                "id": "6a9be520cddd2dae426bf2ff",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be520cddd2dae426bf300",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "hero"
+            ]
           },
           {
-            "id": "6a9be520cddd2dae426bf303",
+            "blockType": "richText",
             "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": null,
-            "numbered": null,
             "mediaPosition": "left",
             "lede": true,
             "collapsible": false,
-            "content": {
-              "root": {
-                "type": "root",
-                "format": "",
-                "indent": 0,
-                "version": 1,
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "General Tech Automation is an industrial electronics repair company in UAE, headquartered in Sharjah, restoring drives, servo motors, PLCs, and control system electronics for Oil & Gas, manufacturing, life sciences, and chemical plants across the UAE and GCC.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  }
-                ],
-                "direction": "ltr"
-              }
-            },
-            "blockName": null,
             "media": [
               {
-                "id": "6a9be520cddd2dae426bf302",
                 "image": {
                   "id": 76,
                   "alt": "Engineer thermal-imaging a live control panel on site",
@@ -383,99 +305,62 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf307",
-            "eyebrow": null,
-            "heading": null,
-            "intro": null,
-            "tone": "light",
-            "footnote": null,
-            "blockName": null,
-            "items": [
-              {
-                "id": "6a9be520cddd2dae426bf304",
-                "lead": "Est.",
-                "value": "1998",
-                "label": null
-              },
-              {
-                "id": "6a9be520cddd2dae426bf305",
-                "lead": null,
-                "value": "28+",
-                "label": "Years Combined Experience"
-              },
-              {
-                "id": "6a9be520cddd2dae426bf306",
-                "lead": null,
-                "value": "Sharjah",
-                "label": "HQ"
-              }
-            ],
-            "blockType": "stats"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf30a",
-            "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": "Repair Guarantees & *Service Standards*",
-            "numbered": null,
-            "mediaPosition": "right",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "As an industrial electronics repair company in UAE, General Tech Automation is a factory-authorized repair partner for a wide range of AC and DC drive manufacturers, so a faulty drive is often restored to spec rather than replaced outright.",
                         "type": "text",
+                        "text": "General Tech Automation is an industrial electronics repair company in UAE, headquartered in Sharjah, restoring drives, servo motors, PLCs, and control system electronics for Oil & Gas, manufacturing, life sciences, and chemical plants across the UAE and GCC.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  },
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
                         "mode": "normal",
-                        "text": "Every repair carries our own service guarantee, and our workmanship follows the same calibration and quality discipline our sister company, General Tech Services, applies across its Sharjah lab. Equipment we touch comes back with a documented, traceable service record, which matters most to clients who choose an industrial electronics repair company in UAE for regulated or safety-critical work.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "stats",
+            "tone": "light",
+            "items": [
+              {
+                "lead": "Est.",
+                "value": "1998"
+              },
+              {
+                "value": "28+",
+                "label": "Years Combined Experience"
+              },
+              {
+                "value": "Sharjah",
+                "label": "HQ"
+              }
+            ]
+          },
+          {
+            "blockType": "richText",
+            "layout": "editorial",
+            "mediaPosition": "right",
+            "heading": "Repair Guarantees & *Service Standards*",
+            "collapsible": false,
             "media": [
               {
-                "id": "6a9be520cddd2dae426bf308",
                 "image": {
                   "id": 77,
                   "alt": "Technician soldering a component onto an industrial drive control board",
@@ -520,7 +405,6 @@
                 }
               },
               {
-                "id": "6a9be520cddd2dae426bf309",
                 "image": {
                   "id": 80,
                   "alt": "Operator at a machine HMI panel while a technician works inside an open control cabinet",
@@ -565,87 +449,63 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf30c",
-            "layout": "split",
-            "width": "prose",
-            "eyebrow": "Company overview",
-            "heading": "Who We *Are*",
-            "numbered": true,
-            "mediaPosition": "left",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "General Tech Automation is the automation and electronics repair arm of General Tech Services, a Sharjah calibration and instrumentation company operating since 1998 — 28+ years of combined engineering experience behind every job we take on, whether it's a new control panel build or a same-day servo drive repair.",
                         "type": "text",
+                        "text": "As an industrial electronics repair company in UAE, General Tech Automation is a factory-authorized repair partner for a wide range of AC and DC drive manufacturers, so a faulty drive is often restored to spec rather than replaced outright.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   },
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "As an industrial electronics repair company in UAE, we work from the same Sharjah facility as our sister company's calibration lab and technical workforce, so a client bringing us a faulty drive or a plant automation problem gets repair technicians, control engineers, and instrumentation specialists in one place, not three separate vendors.",
                         "type": "text",
+                        "text": "Every repair carries our own service guarantee, and our workmanship follows the same calibration and quality discipline our sister company, General Tech Services, applies across its Sharjah lab. Equipment we touch comes back with a documented, traceable service record, which matters most to clients who choose an industrial electronics repair company in UAE for regulated or safety-critical work.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  },
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
                         "mode": "normal",
-                        "text": "Our team's average tenure runs well past a decade in the industry, and that experience shows up in how fast we can diagnose a fault, source a replacement part, or bring a legacy control panel back online without a full re-engineer.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "richText",
+            "layout": "split",
+            "eyebrow": "Company overview",
+            "heading": "Who We *Are*",
+            "numbered": true,
+            "collapsible": false,
             "media": [
               {
-                "id": "6a9be520cddd2dae426bf30b",
                 "image": {
                   "id": 78,
                   "alt": "Automation engineer in helmet and safety glasses reviewing plant data on a tablet",
@@ -690,120 +550,104 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf310",
-            "heading": "What We *Do*",
-            "intro": "General Tech Automation covers the two things plants need on a recurring basis: keeping industrial electronics running, and building or integrating the control systems around them.",
-            "display": "grid",
-            "columns": "3",
-            "footnote": null,
-            "blockName": null,
-            "features": [
-              {
-                "id": "6a9be520cddd2dae426bf30d",
-                "iconName": "refresh",
-                "icon": null,
-                "title": "Repair Services",
-                "description": "Our Repair Services division tests and restores inverters, VFDs, servo drives, HMIs, and controllers — in our Sharjah workshop and in the field.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
-              },
-              {
-                "id": "6a9be520cddd2dae426bf30e",
-                "iconName": "cpu",
-                "icon": null,
-                "title": "Automation Solutions",
-                "description": "Our Automation Solutions team handles PLC programming, SCADA architecture, and custom control panel design for new lines and retrofits.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
-              },
-              {
-                "id": "6a9be520cddd2dae426bf30f",
-                "iconName": "shield",
-                "icon": null,
-                "title": "Annual Maintenance Contracts",
-                "description": "Between projects, our Annual Maintenance Contracts keep panels and drives on a preventative schedule so faults get caught before they cause downtime, not after.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
-              }
-            ],
-            "blockType": "featureGrid"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf313",
-            "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": "Why Plants Choose This *Industrial Electronics Repair Company in UAE*",
-            "numbered": true,
-            "mediaPosition": "right",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "We stock a significant inventory of valves, actuators, and process measurement instrumentation in Sharjah, letting us respond immediately rather than waiting on an overseas order — often delivering a repaired or automated assembly the same day it's requested.",
                         "type": "text",
+                        "text": "General Tech Automation is the automation and electronics repair arm of General Tech Services, a Sharjah calibration and instrumentation company operating since 1998 — 28+ years of combined engineering experience behind every job we take on, whether it's a new control panel build or a same-day servo drive repair.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   },
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "We offer 24/7 monitoring options for clients who want ongoing plant visibility rather than a one-off repair, and it's this combination of stock, speed, and follow-through that plants come back to this industrial electronics repair company in UAE for, project after project.",
                         "type": "text",
+                        "text": "As an industrial electronics repair company in UAE, we work from the same Sharjah facility as our sister company's calibration lab and technical workforce, so a client bringing us a faulty drive or a plant automation problem gets repair technicians, control engineers, and instrumentation specialists in one place, not three separate vendors.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Our team's average tenure runs well past a decade in the industry, and that experience shows up in how fast we can diagnose a fault, source a replacement part, or bring a legacy control panel back online without a full re-engineer.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "featureGrid",
+            "heading": "What We *Do*",
+            "intro": "General Tech Automation covers the two things plants need on a recurring basis: keeping industrial electronics running, and building or integrating the control systems around them.",
+            "columns": "3",
+            "features": [
+              {
+                "iconName": "refresh",
+                "title": "Repair Services",
+                "description": "Our Repair Services division tests and restores inverters, VFDs, servo drives, HMIs, and controllers — in our Sharjah workshop and in the field."
+              },
+              {
+                "iconName": "cpu",
+                "title": "Automation Solutions",
+                "description": "Our Automation Solutions team handles PLC programming, SCADA architecture, and custom control panel design for new lines and retrofits."
+              },
+              {
+                "iconName": "shield",
+                "title": "Annual Maintenance Contracts",
+                "description": "Between projects, our Annual Maintenance Contracts keep panels and drives on a preventative schedule so faults get caught before they cause downtime, not after."
+              }
+            ]
+          },
+          {
+            "blockType": "richText",
+            "layout": "editorial",
+            "heading": "Why Plants Choose This *Industrial Electronics Repair Company in UAE*",
+            "mediaPosition": "right",
+            "numbered": true,
+            "collapsible": false,
             "media": [
               {
-                "id": "6a9be520cddd2dae426bf311",
                 "image": {
                   "id": 79,
                   "alt": "Refinery process towers and pipework against a clear sky",
@@ -848,7 +692,6 @@
                 }
               },
               {
-                "id": "6a9be520cddd2dae426bf312",
                 "image": {
                   "id": 73,
                   "alt": "Close-up of automated machinery on a production line",
@@ -893,134 +736,155 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf318",
-            "eyebrow": "Who we work with",
-            "heading": "Industries We *Serve*",
-            "intro": "As an industrial electronics repair company in UAE, our client base sits in industries where downtime is expensive and repairs have to be right the first time.",
-            "display": "grid",
-            "footnote": null,
-            "blockName": null,
-            "sectors": [
-              {
-                "id": "6a9be520cddd2dae426bf314",
-                "name": "Oil & Gas",
-                "iconName": "oil",
-                "description": "Oil & Gas operators rely on us for field instrumentation and hazardous-area repair."
-              },
-              {
-                "id": "6a9be520cddd2dae426bf315",
-                "name": "Manufacturing",
-                "iconName": "factory",
-                "description": "Manufacturers bring us PLC programming, retrofit, and CNC machine repair work."
-              },
-              {
-                "id": "6a9be520cddd2dae426bf316",
-                "name": "Life Sciences",
-                "iconName": "pharma",
-                "description": "Life sciences facilities need calibrated, documented measurement systems."
-              },
-              {
-                "id": "6a9be520cddd2dae426bf317",
-                "name": "Chemical and Pulp & Paper",
-                "iconName": "chemical",
-                "description": "Chemical and pulp & paper plants use our control integration to keep continuous processes running within tight tolerances."
-              }
-            ],
-            "blockType": "industries"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf31d",
-            "eyebrow": "Where we work",
-            "heading": "Where We *Work*",
-            "tone": "dark",
-            "note": null,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Based in Sharjah, this industrial electronics repair company in UAE serves clients across Dubai and Abu Dhabi and the wider GCC. Field service teams travel to client sites for commissioning and repair, while workshop-based electronics repair runs out of our Sharjah facility.",
                         "type": "text",
+                        "text": "We stock a significant inventory of valves, actuators, and process measurement instrumentation in Sharjah, letting us respond immediately rather than waiting on an overseas order — often delivering a repaired or automated assembly the same day it's requested.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "We offer 24/7 monitoring options for clients who want ongoing plant visibility rather than a one-off repair, and it's this combination of stock, speed, and follow-through that plants come back to this industrial electronics repair company in UAE for, project after project.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
-            "areas": [
-              {
-                "id": "6a9be520cddd2dae426bf319",
-                "name": "Sharjah",
-                "note": null
-              },
-              {
-                "id": "6a9be520cddd2dae426bf31a",
-                "name": "Dubai",
-                "note": null
-              },
-              {
-                "id": "6a9be520cddd2dae426bf31b",
-                "name": "Abu Dhabi",
-                "note": null
-              },
-              {
-                "id": "6a9be520cddd2dae426bf31c",
-                "name": "Wider GCC",
-                "note": null
-              }
-            ],
-            "blockType": "coverage"
+            }
           },
           {
-            "id": "6a9be520cddd2dae426bf320",
+            "blockType": "industries",
+            "eyebrow": "Who we work with",
+            "heading": "Industries We *Serve*",
+            "display": "grid",
+            "intro": "As an industrial electronics repair company in UAE, our client base sits in industries where downtime is expensive and repairs have to be right the first time.",
+            "sectors": [
+              {
+                "name": "Oil & Gas",
+                "iconName": "oil",
+                "description": "Oil & Gas operators rely on us for field instrumentation and hazardous-area repair."
+              },
+              {
+                "name": "Manufacturing",
+                "iconName": "factory",
+                "description": "Manufacturers bring us PLC programming, retrofit, and CNC machine repair work."
+              },
+              {
+                "name": "Life Sciences",
+                "iconName": "pharma",
+                "description": "Life sciences facilities need calibrated, documented measurement systems."
+              },
+              {
+                "name": "Chemical and Pulp & Paper",
+                "iconName": "chemical",
+                "description": "Chemical and pulp & paper plants use our control integration to keep continuous processes running within tight tolerances."
+              }
+            ]
+          },
+          {
+            "blockType": "coverage",
+            "eyebrow": "Where we work",
+            "heading": "Where We *Work*",
+            "tone": "dark",
+            "areas": [
+              {
+                "name": "Sharjah"
+              },
+              {
+                "name": "Dubai"
+              },
+              {
+                "name": "Abu Dhabi"
+              },
+              {
+                "name": "Wider GCC"
+              }
+            ],
+            "content": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "direction": "ltr",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Based in Sharjah, this industrial electronics repair company in UAE serves clients across Dubai and Abu Dhabi and the wider GCC. Field service teams travel to client sites for commissioning and repair, while workshop-based electronics repair runs out of our Sharjah facility.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "blockType": "cta",
             "variant": "dark",
-            "eyebrow": null,
             "heading": "Work With an Industrial Electronics Repair Company in UAE *That Knows Your Plant*",
             "body": "If your plant has a drive down, a control system that needs building, or a maintenance plan to put in place, General Tech Automation's Sharjah-based team can help.",
-            "blockName": null,
             "actions": [
               {
-                "id": "6a9be520cddd2dae426bf31e",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be520cddd2dae426bf31f",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "cta"
+            ]
           }
         ],
         "meta": {
@@ -1028,7 +892,7 @@
           "description": "General Tech Automation is an industrial electronics repair company in UAE, headquartered in Sharjah, restoring drives, servo motors, PLCs, and control system electronics.",
           "image": null
         },
-        "updatedAt": "2026-09-05T09:47:12.886Z",
+        "updatedAt": "2026-09-05T11:55:01.930Z",
         "createdAt": "2026-09-05T07:22:38.506Z",
         "_status": "published"
       },
@@ -1038,11 +902,10 @@
         "slug": "applications",
         "layout": [
           {
-            "id": "6a9be521cddd2dae426bf3cd",
+            "blockType": "hero",
             "variant": "centered",
             "eyebrow": "Applications",
             "heading": "Industrial Automation Applications *by Industry UAE*",
-            "subheading": null,
             "image": {
               "id": 79,
               "alt": "Refinery process towers and pipework against a clear sky",
@@ -1085,66 +948,26 @@
                 }
               }
             },
-            "blockName": null,
-            "images": [],
-            "marqueeLogos": [],
             "actions": [
               {
-                "id": "6a9be521cddd2dae426bf3cc",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               }
-            ],
-            "blockType": "hero"
+            ]
           },
           {
-            "id": "6a9be521cddd2dae426bf3d0",
+            "blockType": "richText",
             "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": "Direct *Answer*",
-            "numbered": null,
             "mediaPosition": "left",
+            "heading": "Direct *Answer*",
             "lede": true,
             "collapsible": false,
-            "content": {
-              "root": {
-                "type": "root",
-                "format": "",
-                "indent": 0,
-                "version": 1,
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "Industrial Automation Applications by Industry UAE covers the control, instrumentation, and repair work General Tech Automation carries out across oil and gas, automotive, pharmaceutical, food and beverage, water treatment, power generation, logistics, construction, petrochemical, and manufacturing sites. Each sector has different accuracy, uptime, and compliance needs, so the automation approach — from PLC programming to CNC repair to measurement commissioning — is matched to the plant it's built for, not applied as a generic template.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  }
-                ],
-                "direction": "ltr"
-              }
-            },
-            "blockName": null,
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf3ce",
                 "image": {
                   "id": 71,
                   "alt": "Connected plant data visualised over a factory floor",
@@ -1189,7 +1012,6 @@
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf3cf",
                 "image": {
                   "id": 5,
                   "alt": "Distributed control system operator workstation",
@@ -1234,123 +1056,99 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be521cddd2dae426bf3db",
-            "eyebrow": "By sector",
-            "heading": "Applications *by Industry*",
-            "intro": null,
-            "display": "grid",
-            "footnote": null,
-            "blockName": null,
-            "sectors": [
-              {
-                "id": "6a9be521cddd2dae426bf3d1",
-                "name": "Oil and Gas Automation Applications UAE",
-                "iconName": "oil",
-                "description": "Oil and gas sites depend on accurate, compliant measurement and control systems, from custody transfer metering to SCADA integration. Oil and gas automation applications UAE here cover instrumentation commissioning, control panel work, and measurement accuracy — areas where a fault can shut down production for hours rather than minutes."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3d2",
-                "name": "Automotive Manufacturing Automation Applications",
-                "iconName": "automotive",
-                "description": "Automotive production lines run on CNC machining, servo-driven robotics, and PLC-controlled assembly stations. Automotive manufacturing automation applications supported here include CNC control repair, servo motor and drive maintenance, and panel troubleshooting to keep tight production tolerances intact."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3d3",
-                "name": "Pharmaceutical Industry Automation Applications",
-                "iconName": "pharma",
-                "description": "Pharmaceutical industry automation applications require documented, repeatable control processes. Support covers instrumentation calibration, PLC programming, and control system repair, with the fault-reporting and documentation practices pharmaceutical compliance requires."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3d4",
-                "name": "Food and Beverage Automation Applications UAE",
-                "iconName": "beverage",
-                "description": "Hygiene-rated equipment and continuous-run production lines define this sector. Food and beverage automation applications UAE covered here include VFD and servo drive maintenance, PLC troubleshooting, and panel design suited to washdown environments."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3d5",
-                "name": "Water Treatment Automation Applications",
-                "iconName": "water",
-                "description": "Water treatment automation applications rely on accurate flow measurement and dependable control logic. Work here includes measurement commissioning, SCADA integration, and instrumentation support for treatment plant operations."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3d6",
-                "name": "Power Generation Automation Applications",
-                "iconName": "power",
-                "description": "Power plants need control systems that fail safely and recover fast. Power generation automation applications supported include control panel repair, PLC maintenance, and preventive electrical maintenance to reduce unplanned outages."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3d7",
-                "name": "Logistics and Warehousing Automation Applications",
-                "iconName": "logistics",
-                "description": "Conveyor systems, sorting equipment, and automated storage rely on synchronized drives and controls. Logistics and warehousing automation applications covered include VFD repair, PLC programming, and control panel troubleshooting for continuous-run facilities."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3d8",
-                "name": "Construction Industry Automation Applications",
-                "iconName": "construction",
-                "description": "Construction industry automation applications include automated batching plants and site power distribution panels, supported through custom panel design, electrical fault diagnosis, and field commissioning."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3d9",
-                "name": "Petrochemical Automation Applications UAE",
-                "iconName": "chemical",
-                "description": "Petrochemical facilities combine high-precision measurement with strict safety requirements. Petrochemical automation applications UAE supported include gas measurement skid commissioning, control system repair, and instrumentation compliance checks."
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3da",
-                "name": "Manufacturing Plant Automation Applications",
-                "iconName": "factory",
-                "description": "General manufacturing plant automation applications span CNC machine repair, PLC troubleshooting, servo and drive maintenance, and automation solutions tailored to each production line's specific machinery mix."
-              }
-            ],
-            "blockType": "industries"
-          },
-          {
-            "id": "6a9be521cddd2dae426bf3dd",
-            "layout": "split",
-            "width": "prose",
-            "eyebrow": "One engineering team",
-            "heading": "Sector Experience *and Support*",
-            "numbered": null,
-            "mediaPosition": "left",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Work across these sectors draws on the same core engineering team — factory-trained on multiple control platforms — rather than separate teams per industry, which keeps response consistent regardless of sector. Site assessments for a new sector application are typically scheduled within 24–48 hours of enquiry, with a scoped proposal following the same visit wherever possible. These are real service capabilities, not case studies with invented client names or figures.",
                         "type": "text",
+                        "text": "Industrial Automation Applications by Industry UAE covers the control, instrumentation, and repair work General Tech Automation carries out across oil and gas, automotive, pharmaceutical, food and beverage, water treatment, power generation, logistics, construction, petrochemical, and manufacturing sites. Each sector has different accuracy, uptime, and compliance needs, so the automation approach — from PLC programming to CNC repair to measurement commissioning — is matched to the plant it's built for, not applied as a generic template.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "industries",
+            "eyebrow": "By sector",
+            "heading": "Applications *by Industry*",
+            "display": "grid",
+            "sectors": [
+              {
+                "name": "Oil and Gas Automation Applications UAE",
+                "iconName": "oil",
+                "description": "Oil and gas sites depend on accurate, compliant measurement and control systems, from custody transfer metering to SCADA integration. Oil and gas automation applications UAE here cover instrumentation commissioning, control panel work, and measurement accuracy — areas where a fault can shut down production for hours rather than minutes."
+              },
+              {
+                "name": "Automotive Manufacturing Automation Applications",
+                "iconName": "automotive",
+                "description": "Automotive production lines run on CNC machining, servo-driven robotics, and PLC-controlled assembly stations. Automotive manufacturing automation applications supported here include CNC control repair, servo motor and drive maintenance, and panel troubleshooting to keep tight production tolerances intact."
+              },
+              {
+                "name": "Pharmaceutical Industry Automation Applications",
+                "iconName": "pharma",
+                "description": "Pharmaceutical industry automation applications require documented, repeatable control processes. Support covers instrumentation calibration, PLC programming, and control system repair, with the fault-reporting and documentation practices pharmaceutical compliance requires."
+              },
+              {
+                "name": "Food and Beverage Automation Applications UAE",
+                "iconName": "beverage",
+                "description": "Hygiene-rated equipment and continuous-run production lines define this sector. Food and beverage automation applications UAE covered here include VFD and servo drive maintenance, PLC troubleshooting, and panel design suited to washdown environments."
+              },
+              {
+                "name": "Water Treatment Automation Applications",
+                "iconName": "water",
+                "description": "Water treatment automation applications rely on accurate flow measurement and dependable control logic. Work here includes measurement commissioning, SCADA integration, and instrumentation support for treatment plant operations."
+              },
+              {
+                "name": "Power Generation Automation Applications",
+                "iconName": "power",
+                "description": "Power plants need control systems that fail safely and recover fast. Power generation automation applications supported include control panel repair, PLC maintenance, and preventive electrical maintenance to reduce unplanned outages."
+              },
+              {
+                "name": "Logistics and Warehousing Automation Applications",
+                "iconName": "logistics",
+                "description": "Conveyor systems, sorting equipment, and automated storage rely on synchronized drives and controls. Logistics and warehousing automation applications covered include VFD repair, PLC programming, and control panel troubleshooting for continuous-run facilities."
+              },
+              {
+                "name": "Construction Industry Automation Applications",
+                "iconName": "construction",
+                "description": "Construction industry automation applications include automated batching plants and site power distribution panels, supported through custom panel design, electrical fault diagnosis, and field commissioning."
+              },
+              {
+                "name": "Petrochemical Automation Applications UAE",
+                "iconName": "chemical",
+                "description": "Petrochemical facilities combine high-precision measurement with strict safety requirements. Petrochemical automation applications UAE supported include gas measurement skid commissioning, control system repair, and instrumentation compliance checks."
+              },
+              {
+                "name": "Manufacturing Plant Automation Applications",
+                "iconName": "factory",
+                "description": "General manufacturing plant automation applications span CNC machine repair, PLC troubleshooting, servo and drive maintenance, and automation solutions tailored to each production line's specific machinery mix."
+              }
+            ]
+          },
+          {
+            "blockType": "richText",
+            "layout": "split",
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf3dc",
                 "image": {
                   "id": 76,
                   "alt": "Engineer thermal-imaging a live control panel on site",
@@ -1395,17 +1193,8 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be521cddd2dae426bf3df",
-            "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": "Explore *by Service*",
-            "numbered": null,
-            "mediaPosition": "right",
-            "lede": true,
+            "eyebrow": "One engineering team",
+            "heading": "Sector Experience *and Support*",
             "collapsible": false,
             "content": {
               "root": {
@@ -1413,129 +1202,39 @@
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Each industry above connects to a specific service: automotive and manufacturing sectors are best served by ",
                         "type": "text",
+                        "text": "Work across these sectors draws on the same core engineering team — factory-trained on multiple control platforms — rather than separate teams per industry, which keeps response consistent regardless of sector. Site assessments for a new sector application are typically scheduled within 24–48 hours of enquiry, with a scoped proposal following the same visit wherever possible. These are real service capabilities, not case studies with invented client names or figures.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      },
-                      {
-                        "type": "link",
-                        "fields": {
-                          "url": "/service/cnc-machine-repair-services-uae",
-                          "newTab": false,
-                          "linkType": "custom"
-                        },
-                        "format": "",
-                        "indent": 0,
-                        "version": 3,
-                        "children": [
-                          {
-                            "mode": "normal",
-                            "text": "CNC Machine Repair Services",
-                            "type": "text",
-                            "style": "",
-                            "detail": 0,
-                            "format": 0,
-                            "version": 1
-                          }
-                        ],
-                        "direction": "ltr"
-                      },
-                      {
                         "mode": "normal",
-                        "text": ", oil and gas and petrochemical sites by ",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      },
-                      {
-                        "type": "link",
-                        "fields": {
-                          "url": "/service/measurement-commissioning-start-up-services-uae",
-                          "newTab": false,
-                          "linkType": "custom"
-                        },
-                        "format": "",
-                        "indent": 0,
-                        "version": 3,
-                        "children": [
-                          {
-                            "mode": "normal",
-                            "text": "Commissioning & Start-Up – Measurement",
-                            "type": "text",
-                            "style": "",
-                            "detail": 0,
-                            "format": 0,
-                            "version": 1
-                          }
-                        ],
-                        "direction": "ltr"
-                      },
-                      {
-                        "mode": "normal",
-                        "text": ", and cross-sector control work by ",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      },
-                      {
-                        "type": "link",
-                        "fields": {
-                          "url": "/plc-maintenance-and-troubleshooting-services-uae",
-                          "newTab": false,
-                          "linkType": "custom"
-                        },
-                        "format": "",
-                        "indent": 0,
-                        "version": 3,
-                        "children": [
-                          {
-                            "mode": "normal",
-                            "text": "PLC Maintenance & Troubleshooting",
-                            "type": "text",
-                            "style": "",
-                            "detail": 0,
-                            "format": 0,
-                            "version": 1
-                          }
-                        ],
-                        "direction": "ltr"
-                      },
-                      {
-                        "mode": "normal",
-                        "text": ".",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "richText",
+            "layout": "editorial",
+            "heading": "Explore *by Service*",
+            "mediaPosition": "right",
+            "lede": true,
+            "collapsible": false,
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf3de",
                 "image": {
                   "id": 73,
                   "alt": "Close-up of automated machinery on a production line",
@@ -1580,38 +1279,154 @@
                 }
               }
             ],
-            "blockType": "richText"
+            "content": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "direction": "ltr",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Each industry above connects to a specific service: automotive and manufacturing sectors are best served by ",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      },
+                      {
+                        "type": "link",
+                        "format": "",
+                        "indent": 0,
+                        "version": 3,
+                        "direction": "ltr",
+                        "fields": {
+                          "linkType": "custom",
+                          "url": "/service/cnc-machine-repair-services-uae",
+                          "newTab": false
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "CNC Machine Repair Services",
+                            "format": 0,
+                            "style": "",
+                            "detail": 0,
+                            "mode": "normal",
+                            "version": 1
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": ", oil and gas and petrochemical sites by ",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      },
+                      {
+                        "type": "link",
+                        "format": "",
+                        "indent": 0,
+                        "version": 3,
+                        "direction": "ltr",
+                        "fields": {
+                          "linkType": "custom",
+                          "url": "/service/measurement-commissioning-start-up-services-uae",
+                          "newTab": false
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Commissioning & Start-Up – Measurement",
+                            "format": 0,
+                            "style": "",
+                            "detail": 0,
+                            "mode": "normal",
+                            "version": 1
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": ", and cross-sector control work by ",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      },
+                      {
+                        "type": "link",
+                        "format": "",
+                        "indent": 0,
+                        "version": 3,
+                        "direction": "ltr",
+                        "fields": {
+                          "linkType": "custom",
+                          "url": "/plc-maintenance-and-troubleshooting-services-uae",
+                          "newTab": false
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "PLC Maintenance & Troubleshooting",
+                            "format": 0,
+                            "style": "",
+                            "detail": 0,
+                            "mode": "normal",
+                            "version": 1
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": ".",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
           },
           {
-            "id": "6a9be521cddd2dae426bf3e2",
+            "blockType": "cta",
             "variant": "dark",
-            "eyebrow": null,
             "heading": "Not sure which service fits your sector? Tell us about your plant and *we'll match the right support.*",
-            "body": null,
-            "blockName": null,
             "actions": [
               {
-                "id": "6a9be521cddd2dae426bf3e0",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf3e1",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "cta"
+            ]
           }
         ],
         "meta": {
@@ -1619,7 +1434,7 @@
           "description": "Industrial Automation Applications by Industry UAE — control, instrumentation & automation support for oil & gas, automotive, pharma & more.",
           "image": null
         },
-        "updatedAt": "2026-09-05T09:47:13.253Z",
+        "updatedAt": "2026-09-05T11:55:01.930Z",
         "createdAt": "2026-09-05T07:21:52.345Z",
         "_status": "published"
       },
@@ -1629,7 +1444,7 @@
         "slug": "services",
         "layout": [
           {
-            "id": "6a9be521cddd2dae426bf3a2",
+            "blockType": "hero",
             "variant": "centered",
             "eyebrow": "Services",
             "heading": "Industrial Automation Services *in the UAE*",
@@ -1676,76 +1491,33 @@
                 }
               }
             },
-            "blockName": null,
-            "images": [],
-            "marqueeLogos": [],
             "actions": [
               {
-                "id": "6a9be521cddd2dae426bf3a0",
                 "link": {
                   "type": "custom",
                   "label": "Get A Free Quote",
                   "url": "/contact_us",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf3a1",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "hero"
+            ]
           },
           {
-            "id": "6a9be521cddd2dae426bf3a5",
+            "blockType": "richText",
             "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": null,
-            "numbered": null,
             "mediaPosition": "left",
             "lede": true,
             "collapsible": false,
-            "content": {
-              "root": {
-                "type": "root",
-                "format": "",
-                "indent": 0,
-                "version": 1,
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "General Tech Automation delivers industrial automation services and factory-authorized electronics repair across the United Arab Emirates, from our Sharjah workshop to job sites in Dubai and Abu Dhabi. Our engineers repair, maintain, and program the equipment that keeps production lines, process plants, and utilities running: PLCs, servo motors, HMIs, VFDs, and the panels that house them. Every unit we handle is load tested and function tested before it leaves our facility, so you get equipment you can trust the moment it goes back into service.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  }
-                ],
-                "direction": "ltr"
-              }
-            },
-            "blockName": null,
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf3a3",
                 "image": {
                   "id": 76,
                   "alt": "Engineer thermal-imaging a live control panel on site",
@@ -1790,7 +1562,6 @@
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf3a4",
                 "image": {
                   "id": 77,
                   "alt": "Technician soldering a component onto an industrial drive control board",
@@ -1835,51 +1606,44 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be521cddd2dae426bf3a7",
-            "layout": "split",
-            "width": "prose",
-            "eyebrow": "Why choose us",
-            "heading": "Why *General Tech Automation*",
-            "numbered": null,
-            "mediaPosition": "left",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Downtime on a production line or process skid costs more than the repair itself. That's why our industrial automation services are built around fast turnaround and traceable, genuine parts. We hold factory authorization from multiple global automation brands, so our technicians are trained directly by the manufacturers whose equipment they repair, and our replacement components come with full warranty backing.",
                         "type": "text",
+                        "text": "General Tech Automation delivers industrial automation services and factory-authorized electronics repair across the United Arab Emirates, from our Sharjah workshop to job sites in Dubai and Abu Dhabi. Our engineers repair, maintain, and program the equipment that keeps production lines, process plants, and utilities running: PLCs, servo motors, HMIs, VFDs, and the panels that house them. Every unit we handle is load tested and function tested before it leaves our facility, so you get equipment you can trust the moment it goes back into service.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "richText",
+            "layout": "split",
+            "eyebrow": "Why choose us",
+            "heading": "Why *General Tech Automation*",
+            "collapsible": false,
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf3a6",
                 "image": {
                   "id": 78,
                   "alt": "Automation engineer in helmet and safety glasses reviewing plant data on a tablet",
@@ -1924,24 +1688,45 @@
                 }
               }
             ],
-            "blockType": "richText"
+            "content": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "direction": "ltr",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Downtime on a production line or process skid costs more than the repair itself. That's why our industrial automation services are built around fast turnaround and traceable, genuine parts. We hold factory authorization from multiple global automation brands, so our technicians are trained directly by the manufacturers whose equipment they repair, and our replacement components come with full warranty backing.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
           },
           {
-            "id": "6a9be521cddd2dae426bf3c3",
-            "eyebrow": null,
-            "heading": null,
-            "intro": null,
-            "footnote": null,
-            "blockName": null,
+            "blockType": "serviceIndex",
             "groups": [
               {
-                "id": "6a9be521cddd2dae426bf3b0",
                 "title": "Repair & Maintenance Services",
-                "description": "Our core repair services cover industrial electronics repair, servo motor repair, and AC and DC motor repair for facilities across Dubai, Sharjah, and Abu Dhabi. We handle HMI and display repair, PLC repair and maintenance, and VFD and AC drive repair, along with soft starter repair, CNC machine repair services, and hydraulic and pneumatic repair. As a factory authorized repair center, we replace failed components rather than the whole unit wherever possible, keeping turnaround time and cost down.",
                 "iconName": "refresh",
+                "description": "Our core repair services cover industrial electronics repair, servo motor repair, and AC and DC motor repair for facilities across Dubai, Sharjah, and Abu Dhabi. We handle HMI and display repair, PLC repair and maintenance, and VFD and AC drive repair, along with soft starter repair, CNC machine repair services, and hydraulic and pneumatic repair. As a factory authorized repair center, we replace failed components rather than the whole unit wherever possible, keeping turnaround time and cost down.",
                 "services": [
                   {
-                    "id": "6a9be521cddd2dae426bf3a8",
                     "link": {
                       "type": "custom",
                       "label": "Industrial Electronics Repair",
@@ -1950,7 +1735,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3a9",
                     "link": {
                       "type": "custom",
                       "label": "Servo Motor Repair",
@@ -1959,7 +1743,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3aa",
                     "link": {
                       "type": "custom",
                       "label": "AC & DC Motor Repair",
@@ -1968,7 +1751,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3ab",
                     "link": {
                       "type": "custom",
                       "label": "HMI & Display Repair",
@@ -1977,7 +1759,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3ac",
                     "link": {
                       "type": "custom",
                       "label": "VFD / AC Drive Repair",
@@ -1986,7 +1767,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3ad",
                     "link": {
                       "type": "custom",
                       "label": "Soft Starter Repair",
@@ -1995,7 +1775,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3ae",
                     "link": {
                       "type": "custom",
                       "label": "CNC Machine Repair",
@@ -2004,7 +1783,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3af",
                     "link": {
                       "type": "custom",
                       "label": "Hydraulic & Pneumatic Repair",
@@ -2015,13 +1793,11 @@
                 ]
               },
               {
-                "id": "6a9be521cddd2dae426bf3b7",
                 "title": "Automation & Control Services",
-                "description": "Beyond repair, we provide PLC maintenance and troubleshooting, PLC programming, and complete automation solutions for new and legacy control systems. Our retrofit solutions modernize aging equipment for Industry 4.0 without a full system replacement, and our digital transformation and industrial IoT services help plants move toward real-time monitoring and predictive maintenance.",
                 "iconName": "cpu",
+                "description": "Beyond repair, we provide PLC maintenance and troubleshooting, PLC programming, and complete automation solutions for new and legacy control systems. Our retrofit solutions modernize aging equipment for Industry 4.0 without a full system replacement, and our digital transformation and industrial IoT services help plants move toward real-time monitoring and predictive maintenance.",
                 "services": [
                   {
-                    "id": "6a9be521cddd2dae426bf3b1",
                     "link": {
                       "type": "custom",
                       "label": "PLC Maintenance & Troubleshooting",
@@ -2030,7 +1806,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3b2",
                     "link": {
                       "type": "custom",
                       "label": "PLC Programming",
@@ -2039,7 +1814,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3b3",
                     "link": {
                       "type": "custom",
                       "label": "Automation Solutions",
@@ -2048,7 +1822,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3b4",
                     "link": {
                       "type": "custom",
                       "label": "Retrofit Solutions",
@@ -2057,7 +1830,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3b5",
                     "link": {
                       "type": "custom",
                       "label": "Digital Transformation",
@@ -2066,7 +1838,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3b6",
                     "link": {
                       "type": "custom",
                       "label": "Industrial IoT Services",
@@ -2077,13 +1848,11 @@
                 ]
               },
               {
-                "id": "6a9be521cddd2dae426bf3be",
                 "title": "Instrumentation & Measurement Services",
-                "description": "General Tech Automation acts as a main instrument supplier and provides field instrumentation services and support, measurement preventative services, and commissioning and start-up support. We also offer weighing scale repair services and asset data management to keep your instrumentation records accurate and audit-ready.",
                 "iconName": "gauge",
+                "description": "General Tech Automation acts as a main instrument supplier and provides field instrumentation services and support, measurement preventative services, and commissioning and start-up support. We also offer weighing scale repair services and asset data management to keep your instrumentation records accurate and audit-ready.",
                 "services": [
                   {
-                    "id": "6a9be521cddd2dae426bf3b8",
                     "link": {
                       "type": "custom",
                       "label": "Main Instrument Supplier",
@@ -2092,7 +1861,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3b9",
                     "link": {
                       "type": "custom",
                       "label": "Field Instrumentation Services",
@@ -2101,7 +1869,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3ba",
                     "link": {
                       "type": "custom",
                       "label": "Measurement Preventative Services",
@@ -2110,7 +1877,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3bb",
                     "link": {
                       "type": "custom",
                       "label": "Commissioning & Start-Up",
@@ -2119,7 +1885,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3bc",
                     "link": {
                       "type": "custom",
                       "label": "Weighing Scale Repair",
@@ -2128,7 +1893,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3bd",
                     "link": {
                       "type": "custom",
                       "label": "Asset Data Management",
@@ -2139,13 +1903,11 @@
                 ]
               },
               {
-                "id": "6a9be521cddd2dae426bf3c2",
                 "title": "Panel Design, Manufacturing & Support Contracts",
-                "description": "Our workshop designs and manufactures custom control panels engineered around your process, and our wireless plant network support extends reliable connectivity across your site. For ongoing coverage, we offer Annual Maintenance Contracts (AMC) for panels, VFDs, UPS, and servo drives, giving facilities predictable, scheduled maintenance instead of reactive callouts.",
                 "iconName": "cabinet",
+                "description": "Our workshop designs and manufactures custom control panels engineered around your process, and our wireless plant network support extends reliable connectivity across your site. For ongoing coverage, we offer Annual Maintenance Contracts (AMC) for panels, VFDs, UPS, and servo drives, giving facilities predictable, scheduled maintenance instead of reactive callouts.",
                 "services": [
                   {
-                    "id": "6a9be521cddd2dae426bf3bf",
                     "link": {
                       "type": "custom",
                       "label": "Custom Panel Design & Manufacturing",
@@ -2154,7 +1916,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3c0",
                     "link": {
                       "type": "custom",
                       "label": "Wireless Plant Network Support",
@@ -2163,7 +1924,6 @@
                     }
                   },
                   {
-                    "id": "6a9be521cddd2dae426bf3c1",
                     "link": {
                       "type": "custom",
                       "label": "AMC for Panels, VFD, UPS & Servo Drives",
@@ -2173,99 +1933,84 @@
                   }
                 ]
               }
-            ],
-            "blockType": "serviceIndex"
+            ]
           },
           {
-            "id": "6a9be521cddd2dae426bf3c8",
+            "blockType": "coverage",
             "eyebrow": "Where we work",
             "heading": "Service Coverage Across the *UAE*",
             "tone": "dark",
-            "note": null,
+            "areas": [
+              {
+                "name": "Dubai",
+                "note": "Industrial & free zone facilities"
+              },
+              {
+                "name": "Sharjah",
+                "note": "Head office & workshop"
+              },
+              {
+                "name": "Abu Dhabi",
+                "note": "Energy & manufacturing sites"
+              },
+              {
+                "name": "N. Emirates",
+                "note": "On-request coverage"
+              }
+            ],
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Operating from our Sharjah headquarters, our service teams reach Dubai's industrial and free zone facilities, Abu Dhabi's energy and manufacturing sites, and the wider Northern Emirates, all supported by the same factory-trained technicians and genuine parts supply chain on every call-out.",
                         "type": "text",
+                        "text": "Operating from our Sharjah headquarters, our service teams reach Dubai's industrial and free zone facilities, Abu Dhabi's energy and manufacturing sites, and the wider Northern Emirates, all supported by the same factory-trained technicians and genuine parts supply chain on every call-out.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
-            "areas": [
-              {
-                "id": "6a9be521cddd2dae426bf3c4",
-                "name": "Dubai",
-                "note": "Industrial & free zone facilities"
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3c5",
-                "name": "Sharjah",
-                "note": "Head office & workshop"
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3c6",
-                "name": "Abu Dhabi",
-                "note": "Energy & manufacturing sites"
-              },
-              {
-                "id": "6a9be521cddd2dae426bf3c7",
-                "name": "N. Emirates",
-                "note": "On-request coverage"
-              }
-            ],
-            "blockType": "coverage"
+            }
           },
           {
-            "id": "6a9be521cddd2dae426bf3cb",
+            "blockType": "cta",
             "variant": "dark",
-            "eyebrow": null,
             "heading": "Request a Service or *Repair Quote*",
             "body": "Have equipment down or a maintenance contract to plan? Contact General Tech Automation to discuss your industrial automation services requirements anywhere in the UAE.",
-            "blockName": null,
             "actions": [
               {
-                "id": "6a9be521cddd2dae426bf3c9",
                 "link": {
                   "type": "custom",
                   "label": "Get A Free Quote",
                   "url": "/contact_us",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf3ca",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "cta"
+            ]
           }
         ],
         "meta": {
@@ -2273,7 +2018,7 @@
           "description": "Factory-authorized repair, maintenance and automation support for PLCs, servo motors, drives and panels — delivered across Dubai, Sharjah and Abu Dhabi.",
           "image": null
         },
-        "updatedAt": "2026-09-05T09:47:13.173Z",
+        "updatedAt": "2026-09-05T11:55:01.930Z",
         "createdAt": "2026-09-05T07:21:52.306Z",
         "_status": "published"
       },
@@ -2283,7 +2028,7 @@
         "slug": "brands",
         "layout": [
           {
-            "id": "6a9be521cddd2dae426bf344",
+            "blockType": "hero",
             "variant": "centered",
             "eyebrow": "General Tech Automation · Sharjah, UAE",
             "heading": "Brands",
@@ -2330,76 +2075,33 @@
                 }
               }
             },
-            "blockName": null,
-            "images": [],
-            "marqueeLogos": [],
             "actions": [
               {
-                "id": "6a9be521cddd2dae426bf342",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf343",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "hero"
+            ]
           },
           {
-            "id": "6a9be521cddd2dae426bf346",
+            "blockType": "richText",
             "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": null,
-            "numbered": null,
             "mediaPosition": "left",
             "lede": true,
             "collapsible": false,
-            "content": {
-              "root": {
-                "type": "root",
-                "format": "",
-                "indent": 0,
-                "version": 1,
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "General Tech Automation covers industrial automation brands we service in UAE across drives, control panels, sensors, and safety systems, repairing, supplying parts for, and integrating equipment from over 60 manufacturers out of our Sharjah facility.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  }
-                ],
-                "direction": "ltr"
-              }
-            },
-            "blockName": null,
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf345",
                 "image": {
                   "id": 76,
                   "alt": "Engineer thermal-imaging a live control panel on site",
@@ -2444,99 +2146,63 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be521cddd2dae426bf34a",
-            "eyebrow": null,
-            "heading": null,
-            "intro": null,
-            "tone": "light",
-            "footnote": null,
-            "blockName": null,
-            "items": [
-              {
-                "id": "6a9be521cddd2dae426bf347",
-                "lead": null,
-                "value": "60+",
-                "label": "Brands Serviced"
-              },
-              {
-                "id": "6a9be521cddd2dae426bf348",
-                "lead": null,
-                "value": "5",
-                "label": "Component Categories"
-              },
-              {
-                "id": "6a9be521cddd2dae426bf349",
-                "lead": null,
-                "value": "Sharjah",
-                "label": "Stockholding"
-              }
-            ],
-            "blockType": "stats"
-          },
-          {
-            "id": "6a9be521cddd2dae426bf34c",
-            "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": "Multi-Brand Support, *Not a Single-Brand Lock-In*",
-            "numbered": true,
-            "mediaPosition": "right",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Working with a provider that covers this many industrial automation brands we service in UAE means a plant doesn't need a different vendor for every drive, sensor, or PLC on the floor.",
                         "type": "text",
+                        "text": "General Tech Automation covers industrial automation brands we service in UAE across drives, control panels, sensors, and safety systems, repairing, supplying parts for, and integrating equipment from over 60 manufacturers out of our Sharjah facility.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  },
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
                         "mode": "normal",
-                        "text": "We service, repair, and supply parts across the brands below rather than positioning ourselves as the exclusive authorized distributor for any single one. For equipment still under a manufacturer's own warranty or authorized network, we'll say so and point you there directly rather than take on work that belongs elsewhere.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "stats",
+            "tone": "light",
+            "items": [
+              {
+                "value": "60+",
+                "label": "Brands Serviced"
+              },
+              {
+                "value": "5",
+                "label": "Component Categories"
+              },
+              {
+                "value": "Sharjah",
+                "label": "Stockholding"
+              }
+            ]
+          },
+          {
+            "blockType": "richText",
+            "layout": "editorial",
+            "mediaPosition": "right",
+            "heading": "Multi-Brand Support, *Not a Single-Brand Lock-In*",
+            "numbered": true,
+            "collapsible": false,
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf34b",
                 "image": {
                   "id": 80,
                   "alt": "Operator at a machine HMI panel while a technician works inside an open control cabinet",
@@ -2581,82 +2247,87 @@
                 }
               }
             ],
-            "blockType": "richText"
+            "content": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "direction": "ltr",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Working with a provider that covers this many industrial automation brands we service in UAE means a plant doesn't need a different vendor for every drive, sensor, or PLC on the floor.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "We service, repair, and supply parts across the brands below rather than positioning ourselves as the exclusive authorized distributor for any single one. For equipment still under a manufacturer's own warranty or authorized network, we'll say so and point you there directly rather than take on work that belongs elsewhere.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
           },
           {
-            "id": "6a9be521cddd2dae426bf351",
-            "heading": null,
-            "intro": null,
+            "blockType": "featureGrid",
             "display": "grid",
             "columns": "2",
-            "footnote": null,
-            "blockName": null,
             "features": [
               {
-                "id": "6a9be521cddd2dae426bf34d",
                 "iconName": "cog",
-                "icon": null,
                 "title": "Drives, Motors & Motion Control",
-                "description": "Our repair and parts work covers drive and motion control brands including Siemens automation repair UAE, Control Techniques drive repair UAE, and multi-brand automation repair UAE more broadly for AC/DC drives, inverters, and servo systems from these and comparable manufacturers.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
+                "description": "Our repair and parts work covers drive and motion control brands including Siemens automation repair UAE, Control Techniques drive repair UAE, and multi-brand automation repair UAE more broadly for AC/DC drives, inverters, and servo systems from these and comparable manufacturers."
               },
               {
-                "id": "6a9be521cddd2dae426bf34e",
                 "iconName": "cabinet",
-                "icon": null,
                 "title": "Control Panels & Wiring Components",
-                "description": "For panel builds and retrofits, our work spans WAGO components supplier UAE, Phoenix Contact parts UAE, and Weidmuller panel components UAE for terminal blocks, relays, and wiring systems, alongside Rittal enclosures UAE for panel housings and climate control.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
+                "description": "For panel builds and retrofits, our work spans WAGO components supplier UAE, Phoenix Contact parts UAE, and Weidmuller panel components UAE for terminal blocks, relays, and wiring systems, alongside Rittal enclosures UAE for panel housings and climate control."
               },
               {
-                "id": "6a9be521cddd2dae426bf34f",
                 "iconName": "gauge",
-                "icon": null,
                 "title": "Sensors & Process Instrumentation",
-                "description": "Field-level monitoring and process measurement work draws on IFM sensors UAE, VEGA level measurement UAE, and WIKA instrumentation UAE for pressure and temperature, plus Leuze sensors UAE for photoelectric and safety sensing, and Datalogic and Microsonic components for detection and distance sensing.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
+                "description": "Field-level monitoring and process measurement work draws on IFM sensors UAE, VEGA level measurement UAE, and WIKA instrumentation UAE for pressure and temperature, plus Leuze sensors UAE for photoelectric and safety sensing, and Datalogic and Microsonic components for detection and distance sensing."
               },
               {
-                "id": "6a9be521cddd2dae426bf350",
                 "iconName": "shield",
-                "icon": null,
                 "title": "Safety, Signaling & Connectivity",
-                "description": "Rounding out the industrial automation brands we service in UAE, we support Pilz safety systems UAE for machine safety circuits, Harting connectors UAE for industrial connectivity, and Patlite for visual and audible signaling across plant floors.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
+                "description": "Rounding out the industrial automation brands we service in UAE, we support Pilz safety systems UAE for machine safety circuits, Harting connectors UAE for industrial connectivity, and Patlite for visual and audible signaling across plant floors."
               }
-            ],
-            "blockType": "featureGrid"
+            ]
           },
           {
-            "id": "6a9be521cddd2dae426bf393",
-            "eyebrow": null,
+            "blockType": "logoWall",
             "heading": "Industrial Automation Brands We *Service in UAE*",
-            "intro": null,
             "layout": "marquee",
-            "blockName": null,
             "logos": [
               {
-                "id": "6a9be521cddd2dae426bf352",
                 "image": {
                   "id": 6,
                   "alt": "3M logo",
@@ -2699,11 +2370,9 @@
                     }
                   }
                 },
-                "name": "3M",
-                "url": null
+                "name": "3M"
               },
               {
-                "id": "6a9be521cddd2dae426bf353",
                 "image": {
                   "id": 7,
                   "alt": "Anybus logo",
@@ -2746,11 +2415,9 @@
                     }
                   }
                 },
-                "name": "Anybus",
-                "url": null
+                "name": "Anybus"
               },
               {
-                "id": "6a9be521cddd2dae426bf354",
                 "image": {
                   "id": 8,
                   "alt": "ASO Safety logo",
@@ -2793,11 +2460,9 @@
                     }
                   }
                 },
-                "name": "ASO Safety",
-                "url": null
+                "name": "ASO Safety"
               },
               {
-                "id": "6a9be521cddd2dae426bf355",
                 "image": {
                   "id": 9,
                   "alt": "BIT logo",
@@ -2840,11 +2505,9 @@
                     }
                   }
                 },
-                "name": "BIT",
-                "url": null
+                "name": "BIT"
               },
               {
-                "id": "6a9be521cddd2dae426bf356",
                 "image": {
                   "id": 10,
                   "alt": "Contaclip logo",
@@ -2887,11 +2550,9 @@
                     }
                   }
                 },
-                "name": "Contaclip",
-                "url": null
+                "name": "Contaclip"
               },
               {
-                "id": "6a9be521cddd2dae426bf357",
                 "image": {
                   "id": 11,
                   "alt": "Control Techniques logo",
@@ -2934,11 +2595,9 @@
                     }
                   }
                 },
-                "name": "Control Techniques",
-                "url": null
+                "name": "Control Techniques"
               },
               {
-                "id": "6a9be521cddd2dae426bf358",
                 "image": {
                   "id": 12,
                   "alt": "Datalogic logo",
@@ -2981,11 +2640,9 @@
                     }
                   }
                 },
-                "name": "Datalogic",
-                "url": null
+                "name": "Datalogic"
               },
               {
-                "id": "6a9be521cddd2dae426bf359",
                 "image": {
                   "id": 13,
                   "alt": "Deflesko logo",
@@ -3028,11 +2685,9 @@
                     }
                   }
                 },
-                "name": "Deflesko",
-                "url": null
+                "name": "Deflesko"
               },
               {
-                "id": "6a9be521cddd2dae426bf35a",
                 "image": {
                   "id": 14,
                   "alt": "Dremel logo",
@@ -3075,11 +2730,9 @@
                     }
                   }
                 },
-                "name": "Dremel",
-                "url": null
+                "name": "Dremel"
               },
               {
-                "id": "6a9be521cddd2dae426bf35b",
                 "image": {
                   "id": 15,
                   "alt": "Eaton logo",
@@ -3122,11 +2775,9 @@
                     }
                   }
                 },
-                "name": "Eaton",
-                "url": null
+                "name": "Eaton"
               },
               {
-                "id": "6a9be521cddd2dae426bf35c",
                 "image": {
                   "id": 16,
                   "alt": "EH logo",
@@ -3169,11 +2820,9 @@
                     }
                   }
                 },
-                "name": "EH",
-                "url": null
+                "name": "EH"
               },
               {
-                "id": "6a9be521cddd2dae426bf35d",
                 "image": {
                   "id": 17,
                   "alt": "Eickmann logo",
@@ -3216,11 +2865,9 @@
                     }
                   }
                 },
-                "name": "Eickmann",
-                "url": null
+                "name": "Eickmann"
               },
               {
-                "id": "6a9be521cddd2dae426bf35e",
                 "image": {
                   "id": 18,
                   "alt": "Electro Task logo",
@@ -3263,11 +2910,9 @@
                     }
                   }
                 },
-                "name": "Electro Task",
-                "url": null
+                "name": "Electro Task"
               },
               {
-                "id": "6a9be521cddd2dae426bf35f",
                 "image": {
                   "id": 19,
                   "alt": "Equflow logo",
@@ -3310,11 +2955,9 @@
                     }
                   }
                 },
-                "name": "Equflow",
-                "url": null
+                "name": "Equflow"
               },
               {
-                "id": "6a9be521cddd2dae426bf360",
                 "image": {
                   "id": 20,
                   "alt": "ETA logo",
@@ -3357,11 +3000,9 @@
                     }
                   }
                 },
-                "name": "ETA",
-                "url": null
+                "name": "ETA"
               },
               {
-                "id": "6a9be521cddd2dae426bf361",
                 "image": {
                   "id": 21,
                   "alt": "Fibox logo",
@@ -3404,11 +3045,9 @@
                     }
                   }
                 },
-                "name": "Fibox",
-                "url": null
+                "name": "Fibox"
               },
               {
-                "id": "6a9be521cddd2dae426bf362",
                 "image": {
                   "id": 22,
                   "alt": "GF logo",
@@ -3451,11 +3090,9 @@
                     }
                   }
                 },
-                "name": "GF",
-                "url": null
+                "name": "GF"
               },
               {
-                "id": "6a9be521cddd2dae426bf363",
                 "image": {
                   "id": 23,
                   "alt": "Harting logo",
@@ -3498,11 +3135,9 @@
                     }
                   }
                 },
-                "name": "Harting",
-                "url": null
+                "name": "Harting"
               },
               {
-                "id": "6a9be521cddd2dae426bf364",
                 "image": {
                   "id": 24,
                   "alt": "Helmholz logo",
@@ -3545,11 +3180,9 @@
                     }
                   }
                 },
-                "name": "Helmholz",
-                "url": null
+                "name": "Helmholz"
               },
               {
-                "id": "6a9be521cddd2dae426bf365",
                 "image": {
                   "id": 25,
                   "alt": "Hongfa logo",
@@ -3592,11 +3225,9 @@
                     }
                   }
                 },
-                "name": "Hongfa",
-                "url": null
+                "name": "Hongfa"
               },
               {
-                "id": "6a9be521cddd2dae426bf366",
                 "image": {
                   "id": 26,
                   "alt": "Honsberg logo",
@@ -3639,11 +3270,9 @@
                     }
                   }
                 },
-                "name": "Honsberg",
-                "url": null
+                "name": "Honsberg"
               },
               {
-                "id": "6a9be521cddd2dae426bf367",
                 "image": {
                   "id": 27,
                   "alt": "IFM logo",
@@ -3686,11 +3315,9 @@
                     }
                   }
                 },
-                "name": "IFM",
-                "url": null
+                "name": "IFM"
               },
               {
-                "id": "6a9be521cddd2dae426bf368",
                 "image": {
                   "id": 28,
                   "alt": "Isotech logo",
@@ -3733,11 +3360,9 @@
                     }
                   }
                 },
-                "name": "Isotech",
-                "url": null
+                "name": "Isotech"
               },
               {
-                "id": "6a9be521cddd2dae426bf369",
                 "image": {
                   "id": 29,
                   "alt": "Ixon logo",
@@ -3780,11 +3405,9 @@
                     }
                   }
                 },
-                "name": "Ixon",
-                "url": null
+                "name": "Ixon"
               },
               {
-                "id": "6a9be521cddd2dae426bf36a",
                 "image": {
                   "id": 30,
                   "alt": "Karlengoffer logo",
@@ -3827,11 +3450,9 @@
                     }
                   }
                 },
-                "name": "Karlengoffer",
-                "url": null
+                "name": "Karlengoffer"
               },
               {
-                "id": "6a9be521cddd2dae426bf36b",
                 "image": {
                   "id": 31,
                   "alt": "Knipex logo",
@@ -3874,11 +3495,9 @@
                     }
                   }
                 },
-                "name": "Knipex",
-                "url": null
+                "name": "Knipex"
               },
               {
-                "id": "6a9be521cddd2dae426bf36c",
                 "image": {
                   "id": 32,
                   "alt": "Lapp logo",
@@ -3921,11 +3540,9 @@
                     }
                   }
                 },
-                "name": "Lapp",
-                "url": null
+                "name": "Lapp"
               },
               {
-                "id": "6a9be521cddd2dae426bf36d",
                 "image": {
                   "id": 33,
                   "alt": "Lascar logo",
@@ -3968,11 +3585,9 @@
                     }
                   }
                 },
-                "name": "Lascar",
-                "url": null
+                "name": "Lascar"
               },
               {
-                "id": "6a9be521cddd2dae426bf36e",
                 "image": {
                   "id": 34,
                   "alt": "Ledwork logo",
@@ -4015,11 +3630,9 @@
                     }
                   }
                 },
-                "name": "Ledwork",
-                "url": null
+                "name": "Ledwork"
               },
               {
-                "id": "6a9be521cddd2dae426bf36f",
                 "image": {
                   "id": 35,
                   "alt": "Leuze logo",
@@ -4062,11 +3675,9 @@
                     }
                   }
                 },
-                "name": "Leuze",
-                "url": null
+                "name": "Leuze"
               },
               {
-                "id": "6a9be521cddd2dae426bf370",
                 "image": {
                   "id": 36,
                   "alt": "Lovato logo",
@@ -4109,11 +3720,9 @@
                     }
                   }
                 },
-                "name": "Lovato",
-                "url": null
+                "name": "Lovato"
               },
               {
-                "id": "6a9be521cddd2dae426bf371",
                 "image": {
                   "id": 37,
                   "alt": "Makita logo",
@@ -4156,11 +3765,9 @@
                     }
                   }
                 },
-                "name": "Makita",
-                "url": null
+                "name": "Makita"
               },
               {
-                "id": "6a9be521cddd2dae426bf372",
                 "image": {
                   "id": 38,
                   "alt": "Martens logo",
@@ -4203,11 +3810,9 @@
                     }
                   }
                 },
-                "name": "Martens",
-                "url": null
+                "name": "Martens"
               },
               {
-                "id": "6a9be521cddd2dae426bf373",
                 "image": {
                   "id": 39,
                   "alt": "Metri logo",
@@ -4250,11 +3855,9 @@
                     }
                   }
                 },
-                "name": "Metri",
-                "url": null
+                "name": "Metri"
               },
               {
-                "id": "6a9be521cddd2dae426bf374",
                 "image": {
                   "id": 40,
                   "alt": "Micro Detectors logo",
@@ -4297,11 +3900,9 @@
                     }
                   }
                 },
-                "name": "Micro Detectors",
-                "url": null
+                "name": "Micro Detectors"
               },
               {
-                "id": "6a9be521cddd2dae426bf375",
                 "image": {
                   "id": 41,
                   "alt": "Microsonic logo",
@@ -4344,11 +3945,9 @@
                     }
                   }
                 },
-                "name": "Microsonic",
-                "url": null
+                "name": "Microsonic"
               },
               {
-                "id": "6a9be521cddd2dae426bf376",
                 "image": {
                   "id": 42,
                   "alt": "Murplastic logo",
@@ -4391,11 +3990,9 @@
                     }
                   }
                 },
-                "name": "Murplastic",
-                "url": null
+                "name": "Murplastic"
               },
               {
-                "id": "6a9be521cddd2dae426bf377",
                 "image": {
                   "id": 43,
                   "alt": "Murr logo",
@@ -4438,11 +4035,9 @@
                     }
                   }
                 },
-                "name": "Murr",
-                "url": null
+                "name": "Murr"
               },
               {
-                "id": "6a9be521cddd2dae426bf378",
                 "image": {
                   "id": 44,
                   "alt": "Novus logo",
@@ -4485,11 +4080,9 @@
                     }
                   }
                 },
-                "name": "Novus",
-                "url": null
+                "name": "Novus"
               },
               {
-                "id": "6a9be521cddd2dae426bf379",
                 "image": {
                   "id": 45,
                   "alt": "Patlite logo",
@@ -4532,11 +4125,9 @@
                     }
                   }
                 },
-                "name": "Patlite",
-                "url": null
+                "name": "Patlite"
               },
               {
-                "id": "6a9be521cddd2dae426bf37a",
                 "image": {
                   "id": 46,
                   "alt": "Pflish logo",
@@ -4579,11 +4170,9 @@
                     }
                   }
                 },
-                "name": "Pflish",
-                "url": null
+                "name": "Pflish"
               },
               {
-                "id": "6a9be521cddd2dae426bf37b",
                 "image": {
                   "id": 47,
                   "alt": "Phoenix logo",
@@ -4626,11 +4215,9 @@
                     }
                   }
                 },
-                "name": "Phoenix",
-                "url": null
+                "name": "Phoenix"
               },
               {
-                "id": "6a9be521cddd2dae426bf37c",
                 "image": {
                   "id": 48,
                   "alt": "Pilz logo",
@@ -4673,11 +4260,9 @@
                     }
                   }
                 },
-                "name": "Pilz",
-                "url": null
+                "name": "Pilz"
               },
               {
-                "id": "6a9be521cddd2dae426bf37d",
                 "image": {
                   "id": 49,
                   "alt": "PMD logo",
@@ -4720,11 +4305,9 @@
                     }
                   }
                 },
-                "name": "PMD",
-                "url": null
+                "name": "PMD"
               },
               {
-                "id": "6a9be521cddd2dae426bf37e",
                 "image": {
                   "id": 50,
                   "alt": "Procom logo",
@@ -4767,11 +4350,9 @@
                     }
                   }
                 },
-                "name": "Procom",
-                "url": null
+                "name": "Procom"
               },
               {
-                "id": "6a9be521cddd2dae426bf37f",
                 "image": {
                   "id": 51,
                   "alt": "Raychem logo",
@@ -4814,11 +4395,9 @@
                     }
                   }
                 },
-                "name": "Raychem",
-                "url": null
+                "name": "Raychem"
               },
               {
-                "id": "6a9be521cddd2dae426bf380",
                 "image": {
                   "id": 52,
                   "alt": "Reltech logo",
@@ -4861,11 +4440,9 @@
                     }
                   }
                 },
-                "name": "Reltech",
-                "url": null
+                "name": "Reltech"
               },
               {
-                "id": "6a9be521cddd2dae426bf381",
                 "image": {
                   "id": 53,
                   "alt": "Rittal logo",
@@ -4908,11 +4485,9 @@
                     }
                   }
                 },
-                "name": "Rittal",
-                "url": null
+                "name": "Rittal"
               },
               {
-                "id": "6a9be521cddd2dae426bf382",
                 "image": {
                   "id": 54,
                   "alt": "Sceider logo",
@@ -4955,11 +4530,9 @@
                     }
                   }
                 },
-                "name": "Sceider",
-                "url": null
+                "name": "Sceider"
               },
               {
-                "id": "6a9be521cddd2dae426bf383",
                 "image": {
                   "id": 55,
                   "alt": "Seimens logo",
@@ -5002,11 +4575,9 @@
                     }
                   }
                 },
-                "name": "Seimens",
-                "url": null
+                "name": "Seimens"
               },
               {
-                "id": "6a9be521cddd2dae426bf384",
                 "image": {
                   "id": 56,
                   "alt": "Selec logo",
@@ -5049,11 +4620,9 @@
                     }
                   }
                 },
-                "name": "Selec",
-                "url": null
+                "name": "Selec"
               },
               {
-                "id": "6a9be521cddd2dae426bf385",
                 "image": {
                   "id": 57,
                   "alt": "SSP logo",
@@ -5096,11 +4665,9 @@
                     }
                   }
                 },
-                "name": "SSP",
-                "url": null
+                "name": "SSP"
               },
               {
-                "id": "6a9be521cddd2dae426bf386",
                 "image": {
                   "id": 58,
                   "alt": "Stall Instruments logo",
@@ -5143,11 +4710,9 @@
                     }
                   }
                 },
-                "name": "Stall Instruments",
-                "url": null
+                "name": "Stall Instruments"
               },
               {
-                "id": "6a9be521cddd2dae426bf387",
                 "image": {
                   "id": 59,
                   "alt": "Tele logo",
@@ -5190,11 +4755,9 @@
                     }
                   }
                 },
-                "name": "Tele",
-                "url": null
+                "name": "Tele"
               },
               {
-                "id": "6a9be521cddd2dae426bf388",
                 "image": {
                   "id": 60,
                   "alt": "Terz logo",
@@ -5237,11 +4800,9 @@
                     }
                   }
                 },
-                "name": "Terz",
-                "url": null
+                "name": "Terz"
               },
               {
-                "id": "6a9be521cddd2dae426bf389",
                 "image": {
                   "id": 61,
                   "alt": "Titec logo",
@@ -5284,11 +4845,9 @@
                     }
                   }
                 },
-                "name": "Titec",
-                "url": null
+                "name": "Titec"
               },
               {
-                "id": "6a9be521cddd2dae426bf38a",
                 "image": {
                   "id": 62,
                   "alt": "Trellerborg logo",
@@ -5331,11 +4890,9 @@
                     }
                   }
                 },
-                "name": "Trellerborg",
-                "url": null
+                "name": "Trellerborg"
               },
               {
-                "id": "6a9be521cddd2dae426bf38b",
                 "image": {
                   "id": 63,
                   "alt": "Vega logo",
@@ -5378,11 +4935,9 @@
                     }
                   }
                 },
-                "name": "Vega",
-                "url": null
+                "name": "Vega"
               },
               {
-                "id": "6a9be521cddd2dae426bf38c",
                 "image": {
                   "id": 64,
                   "alt": "Wago logo",
@@ -5425,11 +4980,9 @@
                     }
                   }
                 },
-                "name": "Wago",
-                "url": null
+                "name": "Wago"
               },
               {
-                "id": "6a9be521cddd2dae426bf38d",
                 "image": {
                   "id": 65,
                   "alt": "Weidmuller logo",
@@ -5472,11 +5025,9 @@
                     }
                   }
                 },
-                "name": "Weidmuller",
-                "url": null
+                "name": "Weidmuller"
               },
               {
-                "id": "6a9be521cddd2dae426bf38e",
                 "image": {
                   "id": 66,
                   "alt": "Wera logo",
@@ -5519,11 +5070,9 @@
                     }
                   }
                 },
-                "name": "Wera",
-                "url": null
+                "name": "Wera"
               },
               {
-                "id": "6a9be521cddd2dae426bf38f",
                 "image": {
                   "id": 67,
                   "alt": "Wieland logo",
@@ -5566,11 +5115,9 @@
                     }
                   }
                 },
-                "name": "Wieland",
-                "url": null
+                "name": "Wieland"
               },
               {
-                "id": "6a9be521cddd2dae426bf390",
                 "image": {
                   "id": 68,
                   "alt": "Wika logo",
@@ -5613,11 +5160,9 @@
                     }
                   }
                 },
-                "name": "Wika",
-                "url": null
+                "name": "Wika"
               },
               {
-                "id": "6a9be521cddd2dae426bf391",
                 "image": {
                   "id": 69,
                   "alt": "Yamato logo",
@@ -5660,11 +5205,9 @@
                     }
                   }
                 },
-                "name": "Yamato",
-                "url": null
+                "name": "Yamato"
               },
               {
-                "id": "6a9be521cddd2dae426bf392",
                 "image": {
                   "id": 70,
                   "alt": "Realwear logo",
@@ -5707,73 +5250,19 @@
                     }
                   }
                 },
-                "name": "Realwear",
-                "url": null
+                "name": "Realwear"
               }
-            ],
-            "blockType": "logoWall"
+            ]
           },
           {
-            "id": "6a9be521cddd2dae426bf395",
+            "blockType": "richText",
             "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
+            "mediaPosition": "left",
             "heading": "Genuine Parts Supplier, *Backed by Repair Expertise*",
             "numbered": true,
-            "mediaPosition": "left",
-            "lede": null,
             "collapsible": false,
-            "content": {
-              "root": {
-                "type": "root",
-                "format": "",
-                "indent": 0,
-                "version": 1,
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "As a genuine brand parts supplier UAE, every component we supply or fit during a repair is sourced through established supplier relationships and tested before it reaches a client, whether the job is a straightforward part swap or a full panel rebuild.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  },
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "This range of industrial automation brands we service in UAE is what lets General Tech Automation take on mixed-brand plants without turning away equipment because it falls outside a single manufacturer's line, and it's a big part of why repeat clients bring us their whole panel rather than one drive at a time.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  }
-                ],
-                "direction": "ltr"
-              }
-            },
-            "blockName": null,
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf394",
                 "image": {
                   "id": 77,
                   "alt": "Technician soldering a component onto an industrial drive control board",
@@ -5818,69 +5307,60 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be521cddd2dae426bf397",
-            "layout": "split",
-            "width": "prose",
-            "eyebrow": "Straight about status",
-            "heading": "Why We Don't Chase *Every Authorization*",
-            "numbered": true,
-            "mediaPosition": "left",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "A number of these manufacturers already have official authorized distributors or service centers in the UAE, including some of the calibration and measurement instrument brands in our list. Where that's the case, we're upfront about it rather than implying a status we don't hold.",
                         "type": "text",
+                        "text": "As a genuine brand parts supplier UAE, every component we supply or fit during a repair is sourced through established supplier relationships and tested before it reaches a client, whether the job is a straightforward part swap or a full panel rebuild.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   },
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Our value on the industrial automation brands we service in UAE side is different: independent, multi-brand repair and parts sourcing for plants that don't want to manage a separate authorized-service relationship for every nameplate on their equipment.",
                         "type": "text",
+                        "text": "This range of industrial automation brands we service in UAE is what lets General Tech Automation take on mixed-brand plants without turning away equipment because it falls outside a single manufacturer's line, and it's a big part of why repeat clients bring us their whole panel rather than one drive at a time.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "richText",
+            "layout": "editorial",
+            "mediaPosition": "right",
             "media": [
               {
-                "id": "6a9be521cddd2dae426bf396",
                 "image": {
                   "id": 3,
                   "alt": "Industrial plant floor with automated production line",
@@ -5925,98 +5405,129 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be521cddd2dae426bf39c",
-            "eyebrow": "Where we work",
-            "heading": "Where We Support *These Brands*",
-            "tone": "light",
-            "note": null,
+            "heading": "Why We Don't Chase *Every Authorization*",
+            "numbered": true,
+            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Based in Sharjah, we cover these industrial automation brands we service in UAE for clients across Dubai, Abu Dhabi, and the wider GCC, with parts stock held locally so most standard components don't wait on a manufacturer's own lead time.",
                         "type": "text",
+                        "text": "A number of these manufacturers already have official authorized distributors or service centers in the UAE, including some of the calibration and measurement instrument brands in our list. Where that's the case, we're upfront about it rather than implying a status we don't hold.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Our value on the industrial automation brands we service in UAE side is different: independent, multi-brand repair and parts sourcing for plants that don't want to manage a separate authorized-service relationship for every nameplate on their equipment.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
-            "areas": [
-              {
-                "id": "6a9be521cddd2dae426bf398",
-                "name": "Sharjah",
-                "note": null
-              },
-              {
-                "id": "6a9be521cddd2dae426bf399",
-                "name": "Dubai",
-                "note": null
-              },
-              {
-                "id": "6a9be521cddd2dae426bf39a",
-                "name": "Abu Dhabi",
-                "note": null
-              },
-              {
-                "id": "6a9be521cddd2dae426bf39b",
-                "name": "Wider GCC",
-                "note": null
-              }
-            ],
-            "blockType": "coverage"
+            }
           },
           {
-            "id": "6a9be521cddd2dae426bf39f",
+            "blockType": "coverage",
+            "eyebrow": "Where we work",
+            "heading": "Where We Support *These Brands*",
+            "tone": "light",
+            "areas": [
+              {
+                "name": "Sharjah"
+              },
+              {
+                "name": "Dubai"
+              },
+              {
+                "name": "Abu Dhabi"
+              },
+              {
+                "name": "Wider GCC"
+              }
+            ],
+            "content": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "direction": "ltr",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Based in Sharjah, we cover these industrial automation brands we service in UAE for clients across Dubai, Abu Dhabi, and the wider GCC, with parts stock held locally so most standard components don't wait on a manufacturer's own lead time.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "blockType": "cta",
             "variant": "dark",
-            "eyebrow": null,
             "heading": "Get Support Across the Brands *Running Your Plant*",
             "body": "If your plant runs equipment from any of these brands — or one we haven't listed — General Tech Automation's Sharjah team can advise on repair, parts, or integration.",
-            "blockName": null,
             "actions": [
               {
-                "id": "6a9be521cddd2dae426bf39d",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be521cddd2dae426bf39e",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "cta"
+            ]
           }
         ],
         "meta": {
@@ -6024,7 +5535,7 @@
           "description": "Industrial automation brands we service in UAE across drives, control panels, sensors, and safety systems — repair, parts and integration from our Sharjah facility.",
           "image": null
         },
-        "updatedAt": "2026-09-05T09:47:13.089Z",
+        "updatedAt": "2026-09-05T11:55:01.930Z",
         "createdAt": "2026-09-05T07:21:52.249Z",
         "_status": "published"
       },
@@ -6034,7 +5545,7 @@
         "slug": "products",
         "layout": [
           {
-            "id": "6a9be520cddd2dae426bf323",
+            "blockType": "hero",
             "variant": "minimal",
             "eyebrow": "General Tech Automation · Sharjah, UAE",
             "heading": "Products",
@@ -6081,76 +5592,33 @@
                 }
               }
             },
-            "blockName": null,
-            "images": [],
-            "marqueeLogos": [],
             "actions": [
               {
-                "id": "6a9be520cddd2dae426bf321",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be520cddd2dae426bf322",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "hero"
+            ]
           },
           {
-            "id": "6a9be520cddd2dae426bf325",
+            "blockType": "richText",
             "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": null,
-            "numbered": null,
             "mediaPosition": "left",
             "lede": true,
             "collapsible": false,
-            "content": {
-              "root": {
-                "type": "root",
-                "format": "",
-                "indent": 0,
-                "version": 1,
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "General Tech Automation is an industrial automation spare parts supplier in UAE, stocking drives, servo motors, PLC and HMI components, and control panel parts in Sharjah for same-day dispatch to plants across the UAE and GCC.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  }
-                ],
-                "direction": "ltr"
-              }
-            },
-            "blockName": null,
             "media": [
               {
-                "id": "6a9be520cddd2dae426bf324",
                 "image": {
                   "id": 77,
                   "alt": "Technician soldering a component onto an industrial drive control board",
@@ -6195,131 +5663,62 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf329",
-            "eyebrow": null,
-            "heading": null,
-            "intro": null,
-            "tone": "light",
-            "footnote": null,
-            "blockName": null,
-            "items": [
-              {
-                "id": "6a9be520cddd2dae426bf326",
-                "lead": null,
-                "value": "1998",
-                "label": "Parent Est."
-              },
-              {
-                "id": "6a9be520cddd2dae426bf327",
-                "lead": null,
-                "value": "28+",
-                "label": "Years Combined Experience"
-              },
-              {
-                "id": "6a9be520cddd2dae426bf328",
-                "lead": null,
-                "value": "Sharjah",
-                "label": "Stockholding"
-              }
-            ],
-            "blockType": "stats"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf32b",
-            "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
-            "heading": "Genuine Stock, Sourced to *Match Your Equipment*",
-            "numbered": null,
-            "mediaPosition": "right",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "As an industrial automation spare parts supplier in UAE, our catalog covers genuine OEM automation parts across the categories below, held in Sharjah so most standard requests don't wait on an overseas order.",
                         "type": "text",
+                        "text": "General Tech Automation is an industrial automation spare parts supplier in UAE, stocking drives, servo motors, PLC and HMI components, and control panel parts in Sharjah for same-day dispatch to plants across the UAE and GCC.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
-                  },
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "When a part is obsolete or hard to source, our Repair Services team can often supply a tested surplus or refurbished replacement as part of a repair job rather than as a separate purchase — see ",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      },
-                      {
-                        "type": "link",
-                        "fields": {
-                          "url": "/industrial-repair-services-uae",
-                          "newTab": false,
-                          "linkType": "custom"
-                        },
-                        "format": "",
-                        "indent": 0,
-                        "version": 3,
-                        "children": [
-                          {
-                            "mode": "normal",
-                            "text": "Repair Services",
-                            "type": "text",
-                            "style": "",
-                            "detail": 0,
-                            "format": 0,
-                            "version": 1
-                          }
-                        ],
-                        "direction": "ltr"
-                      },
-                      {
-                        "mode": "normal",
-                        "text": " for that path if you're sending equipment in rather than buying a standalone part.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "stats",
+            "tone": "light",
+            "items": [
+              {
+                "value": "1998",
+                "label": "Parent Est."
+              },
+              {
+                "value": "28+",
+                "label": "Years Combined Experience"
+              },
+              {
+                "value": "Sharjah",
+                "label": "Stockholding"
+              }
+            ]
+          },
+          {
+            "blockType": "richText",
+            "layout": "editorial",
+            "mediaPosition": "right",
+            "heading": "Genuine Stock, Sourced to *Match Your Equipment*",
+            "collapsible": false,
             "media": [
               {
-                "id": "6a9be520cddd2dae426bf32a",
                 "image": {
                   "id": 80,
                   "alt": "Operator at a machine HMI panel while a technician works inside an open control cabinet",
@@ -6364,178 +5763,130 @@
                 }
               }
             ],
-            "blockType": "richText"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf331",
-            "heading": "What We *Supply*",
-            "intro": "As an industrial automation spare parts supplier in UAE, our Repair Services and Automation Solutions teams draw on the same inventory we make available to clients directly, organized across five main categories.",
-            "display": "grid",
-            "columns": "3",
-            "footnote": "If a part isn't on the shelf, our sourcing network typically brings it in faster than an end user going direct to the manufacturer, since we already hold established supplier relationships across these categories. It's this range that lets one automation spare parts supplier in UAE cover a plant's drive, motion control, and control panel needs without juggling separate vendors for each category.",
-            "blockName": null,
-            "features": [
-              {
-                "id": "6a9be520cddd2dae426bf32c",
-                "iconName": "refresh",
-                "icon": null,
-                "title": "VFD spare parts UAE",
-                "description": "VFD spare parts UAE and drive replacement parts cover AC and DC drives, inverters, and soft starters.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
-              },
-              {
-                "id": "6a9be520cddd2dae426bf32d",
-                "iconName": "cog",
-                "icon": null,
-                "title": "Servo motor spare parts UAE",
-                "description": "Servo motor spare parts UAE and servo drive components include amplifiers and feedback devices for motion control systems.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
-              },
-              {
-                "id": "6a9be520cddd2dae426bf32e",
-                "iconName": "cpu",
-                "icon": null,
-                "title": "PLC modules and spares UAE",
-                "description": "PLC modules and spares UAE span major platforms, alongside HMI panel components UAE for operator interfaces and displays.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
-              },
-              {
-                "id": "6a9be520cddd2dae426bf32f",
-                "iconName": "cabinet",
-                "icon": null,
-                "title": "Control panel components",
-                "description": "Control panel components and panel wiring and control components support new builds and retrofits.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
-              },
-              {
-                "id": "6a9be520cddd2dae426bf330",
-                "iconName": "signal",
-                "icon": null,
-                "title": "Automation sensors and switches UAE",
-                "description": "Automation sensors and switches UAE round out our range for field-level monitoring and control.",
-                "link": {
-                  "type": "reference",
-                  "label": null,
-                  "url": null,
-                  "newTab": null
-                }
-              }
-            ],
-            "blockType": "featureGrid"
-          },
-          {
-            "id": "6a9be520cddd2dae426bf333",
-            "layout": "split",
-            "width": "prose",
-            "eyebrow": "Parts and repair, one standard",
-            "heading": "Genuine Parts, *Factory-Backed Repair*",
-            "numbered": true,
-            "mediaPosition": "left",
-            "lede": null,
-            "collapsible": false,
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Our repair team's factory-backed drive credentials (see ",
                         "type": "text",
+                        "text": "As an industrial automation spare parts supplier in UAE, our catalog covers genuine OEM automation parts across the categories below, held in Sharjah so most standard requests don't wait on an overseas order.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      },
-                      {
-                        "type": "link",
-                        "fields": {
-                          "url": "/about_us",
-                          "newTab": false,
-                          "linkType": "custom"
-                        },
-                        "format": "",
-                        "indent": 0,
-                        "version": 3,
-                        "children": [
-                          {
-                            "mode": "normal",
-                            "text": "About Us",
-                            "type": "text",
-                            "style": "",
-                            "detail": 0,
-                            "format": 0,
-                            "version": 1
-                          }
-                        ],
-                        "direction": "ltr"
-                      },
-                      {
                         "mode": "normal",
-                        "text": " for details) carry over into the parts side of the business — each component is tested before it leaves our Sharjah facility, not just boxed and shipped.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   },
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "As an automation spare parts supplier in GCC markets, we back our parts with the same service guarantee that covers our repair work, so a replacement component and a repaired unit carry the same standard of documentation and traceability.",
                         "type": "text",
+                        "text": "When a part is obsolete or hard to source, our Repair Services team can often supply a tested surplus or refurbished replacement as part of a repair job rather than as a separate purchase — see ",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      },
+                      {
+                        "type": "link",
+                        "format": "",
+                        "indent": 0,
+                        "version": 3,
+                        "direction": "ltr",
+                        "fields": {
+                          "linkType": "custom",
+                          "url": "/industrial-repair-services-uae",
+                          "newTab": false
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Repair Services",
+                            "format": 0,
+                            "style": "",
+                            "detail": 0,
+                            "mode": "normal",
+                            "version": 1
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " for that path if you're sending equipment in rather than buying a standalone part.",
                         "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
+            }
+          },
+          {
+            "blockType": "featureGrid",
+            "heading": "What We *Supply*",
+            "intro": "As an industrial automation spare parts supplier in UAE, our Repair Services and Automation Solutions teams draw on the same inventory we make available to clients directly, organized across five main categories.",
+            "display": "grid",
+            "columns": "3",
+            "features": [
+              {
+                "iconName": "refresh",
+                "title": "VFD spare parts UAE",
+                "description": "VFD spare parts UAE and drive replacement parts cover AC and DC drives, inverters, and soft starters."
+              },
+              {
+                "iconName": "cog",
+                "title": "Servo motor spare parts UAE",
+                "description": "Servo motor spare parts UAE and servo drive components include amplifiers and feedback devices for motion control systems."
+              },
+              {
+                "iconName": "cpu",
+                "title": "PLC modules and spares UAE",
+                "description": "PLC modules and spares UAE span major platforms, alongside HMI panel components UAE for operator interfaces and displays."
+              },
+              {
+                "iconName": "cabinet",
+                "title": "Control panel components",
+                "description": "Control panel components and panel wiring and control components support new builds and retrofits."
+              },
+              {
+                "iconName": "signal",
+                "title": "Automation sensors and switches UAE",
+                "description": "Automation sensors and switches UAE round out our range for field-level monitoring and control."
+              }
+            ],
+            "footnote": "If a part isn't on the shelf, our sourcing network typically brings it in faster than an end user going direct to the manufacturer, since we already hold established supplier relationships across these categories. It's this range that lets one automation spare parts supplier in UAE cover a plant's drive, motion control, and control panel needs without juggling separate vendors for each category."
+          },
+          {
+            "blockType": "richText",
+            "layout": "split",
+            "eyebrow": "Parts and repair, one standard",
+            "heading": "Genuine Parts, *Factory-Backed Repair*",
+            "numbered": true,
+            "collapsible": false,
             "media": [
               {
-                "id": "6a9be520cddd2dae426bf332",
                 "image": {
                   "id": 77,
                   "alt": "Technician soldering a component onto an industrial drive control board",
@@ -6580,141 +5931,168 @@
                 }
               }
             ],
-            "blockType": "richText"
+            "content": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "direction": "ltr",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Our repair team's factory-backed drive credentials (see ",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      },
+                      {
+                        "type": "link",
+                        "format": "",
+                        "indent": 0,
+                        "version": 3,
+                        "direction": "ltr",
+                        "fields": {
+                          "linkType": "custom",
+                          "url": "/about_us",
+                          "newTab": false
+                        },
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "About Us",
+                            "format": 0,
+                            "style": "",
+                            "detail": 0,
+                            "mode": "normal",
+                            "version": 1
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " for details) carry over into the parts side of the business — each component is tested before it leaves our Sharjah facility, not just boxed and shipped.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "As an automation spare parts supplier in GCC markets, we back our parts with the same service guarantee that covers our repair work, so a replacement component and a repaired unit carry the same standard of documentation and traceability.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
           },
           {
-            "id": "6a9be520cddd2dae426bf337",
+            "blockType": "industries",
             "eyebrow": "Who we supply",
             "heading": "Industrial Control Components for *Every Plant Type*",
-            "intro": "Our client base spans industries where a single failed component can stop a production line.",
             "display": "grid",
-            "footnote": null,
-            "blockName": null,
+            "intro": "Our client base spans industries where a single failed component can stop a production line.",
             "sectors": [
               {
-                "id": "6a9be520cddd2dae426bf334",
                 "name": "Oil & Gas",
                 "iconName": "oil",
                 "description": "Oil & Gas facilities come to us for factory authorized spare parts UAE supporting field instrumentation."
               },
               {
-                "id": "6a9be520cddd2dae426bf335",
                 "name": "Manufacturing",
                 "iconName": "factory",
                 "description": "Manufacturers turn to this industrial automation spare parts supplier in UAE for PLC modules and servo drive components on line upgrades and retrofits."
               },
               {
-                "id": "6a9be520cddd2dae426bf336",
                 "name": "Life Sciences and Chemical Plants",
                 "iconName": "pharma",
                 "description": "Life sciences and chemical plants require documented, traceable parts for regulated equipment where an unverified substitute isn't an option."
               }
-            ],
-            "blockType": "industries"
+            ]
           },
           {
-            "id": "6a9be520cddd2dae426bf33c",
+            "blockType": "coverage",
             "eyebrow": "Where we supply",
             "heading": "Where We *Supply*",
             "tone": "dark",
-            "note": null,
+            "areas": [
+              {
+                "name": "Sharjah"
+              },
+              {
+                "name": "Dubai"
+              },
+              {
+                "name": "Abu Dhabi"
+              },
+              {
+                "name": "Wider GCC"
+              }
+            ],
             "content": {
               "root": {
                 "type": "root",
                 "format": "",
                 "indent": 0,
                 "version": 1,
+                "direction": "ltr",
                 "children": [
                   {
                     "type": "paragraph",
                     "format": "",
                     "indent": 0,
                     "version": 1,
+                    "direction": "ltr",
                     "children": [
                       {
-                        "mode": "normal",
-                        "text": "Based in Sharjah, this industrial automation spare parts supplier in UAE serves industrial control components Sharjah clients directly, along with businesses across Dubai, Abu Dhabi, and the wider GCC, with stock held locally rather than shipped in on order each time, so most standard parts move same-day once a request comes in.",
                         "type": "text",
+                        "text": "Based in Sharjah, this industrial automation spare parts supplier in UAE serves industrial control components Sharjah clients directly, along with businesses across Dubai, Abu Dhabi, and the wider GCC, with stock held locally rather than shipped in on order each time, so most standard parts move same-day once a request comes in.",
+                        "format": 0,
                         "style": "",
                         "detail": 0,
-                        "format": 0,
+                        "mode": "normal",
                         "version": 1
                       }
-                    ],
-                    "direction": "ltr"
+                    ]
                   }
-                ],
-                "direction": "ltr"
+                ]
               }
-            },
-            "blockName": null,
-            "areas": [
-              {
-                "id": "6a9be520cddd2dae426bf338",
-                "name": "Sharjah",
-                "note": null
-              },
-              {
-                "id": "6a9be520cddd2dae426bf339",
-                "name": "Dubai",
-                "note": null
-              },
-              {
-                "id": "6a9be520cddd2dae426bf33a",
-                "name": "Abu Dhabi",
-                "note": null
-              },
-              {
-                "id": "6a9be520cddd2dae426bf33b",
-                "name": "Wider GCC",
-                "note": null
-              }
-            ],
-            "blockType": "coverage"
+            }
           },
           {
-            "id": "6a9be520cddd2dae426bf33e",
+            "blockType": "richText",
             "layout": "editorial",
-            "width": "prose",
-            "eyebrow": null,
             "heading": "Why Work With This *Industrial Automation Spare Parts Supplier in UAE*",
-            "numbered": null,
             "mediaPosition": "right",
             "lede": true,
             "collapsible": false,
-            "content": {
-              "root": {
-                "type": "root",
-                "format": "",
-                "indent": 0,
-                "version": 1,
-                "children": [
-                  {
-                    "type": "paragraph",
-                    "format": "",
-                    "indent": 0,
-                    "version": 1,
-                    "children": [
-                      {
-                        "mode": "normal",
-                        "text": "Sourcing parts and repairing equipment from the same company means one point of contact when something fails, one warranty standard across new and repaired components, and a Sharjah-based team that already knows your equipment history from prior repair jobs.",
-                        "type": "text",
-                        "style": "",
-                        "detail": 0,
-                        "format": 0,
-                        "version": 1
-                      }
-                    ],
-                    "direction": "ltr"
-                  }
-                ],
-                "direction": "ltr"
-              }
-            },
-            "blockName": null,
             "media": [
               {
-                "id": "6a9be520cddd2dae426bf33d",
                 "image": {
                   "id": 4,
                   "alt": "Engineer working on an industrial control panel",
@@ -6759,38 +6137,59 @@
                 }
               }
             ],
-            "blockType": "richText"
+            "content": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "direction": "ltr",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "direction": "ltr",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Sourcing parts and repairing equipment from the same company means one point of contact when something fails, one warranty standard across new and repaired components, and a Sharjah-based team that already knows your equipment history from prior repair jobs.",
+                        "format": 0,
+                        "style": "",
+                        "detail": 0,
+                        "mode": "normal",
+                        "version": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
           },
           {
-            "id": "6a9be520cddd2dae426bf341",
+            "blockType": "cta",
             "variant": "dark",
-            "eyebrow": null,
             "heading": "Source Automation Parts From a Supplier *That Also Repairs Them*",
             "body": "If you need a drive, servo motor, PLC module, or control panel component sourced quickly, General Tech Automation's Sharjah stock and repair team can help.",
-            "blockName": null,
             "actions": [
               {
-                "id": "6a9be520cddd2dae426bf33f",
                 "link": {
                   "type": "custom",
                   "label": "Call +971 6 543 6933",
                   "url": "tel:+97165436933",
-                  "newTab": null,
                   "appearance": "primary"
                 }
               },
               {
-                "id": "6a9be520cddd2dae426bf340",
                 "link": {
                   "type": "custom",
                   "label": "mathews@generaltechuae.com",
                   "url": "mailto:mathews@generaltechuae.com",
-                  "newTab": null,
                   "appearance": "secondary"
                 }
               }
-            ],
-            "blockType": "cta"
+            ]
           }
         ],
         "meta": {
@@ -6798,7 +6197,7 @@
           "description": "General Tech Automation is an industrial automation spare parts supplier in UAE, stocking drives, servo motors, PLC and HMI components, and control panel parts in Sharjah.",
           "image": null
         },
-        "updatedAt": "2026-09-05T09:47:12.990Z",
+        "updatedAt": "2026-09-05T11:55:01.930Z",
         "createdAt": "2026-09-05T07:21:52.206Z",
         "_status": "published"
       },

@@ -10,6 +10,7 @@
  * redirect, and a sitemap is a list of canonical URLs, not of everything that
  * resolves.
  */
+import { publicOrigin } from '@/lib/origin'
 import { find, getPage } from '@/lib/payload'
 import { serviceSummaries } from '@/lib/service-pages'
 
@@ -35,7 +36,7 @@ const xmlEscape = (value: string): string =>
   value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 export const GET: APIRoute = async ({ site, url }) => {
-  const origin = (site ?? new URL(url.origin)).origin
+  const origin = publicOrigin(site, url)
   const entries: Entry[] = []
 
   // Pages held in the CMS. `home` is served at `/`, and the leftover seed stub

@@ -1,0 +1,33 @@
+---
+import { splitCaption } from '@/lib/accent'
+
+/**
+ * A caption heading: the title of a card, panel or step. It carries the brand's
+ * three colours the way the section headings do — the title in the card's own
+ * colour, its closing word in red italic. On a dark card the accent is white
+ * rather than red: red on black there would shout over the section heading it
+ * sits under, and it is how generaltech.ae sets its own dark cards.
+ */
+interface Props {
+  text: string
+  tone?: 'light' | 'dark'
+  class?: string
+}
+
+const { text, tone = 'light', class: className } = Astro.props
+const { lead, accent } = splitCaption(text)
+---
+
+<h3 class={className}>
+  {lead}
+  {
+    accent && (
+      <span
+        class:list={['font-medium italic', tone === 'dark' ? 'text-white/60' : 'text-general-red']}
+      >
+        {' '}
+        {accent}
+      </span>
+    )
+  }
+</h3>

@@ -138,11 +138,14 @@ export const brandsPage = (media: MediaResolver, logos: { image: number }[]): Se
     },
 
     // --- Why we don't chase every authorization -------------------------------
+    // Editorial like the three prose sections above it, continuing their
+    // left/right/left alternation, so the two paragraphs stay together beside
+    // the photograph instead of one being stranded in a row of its own.
     {
       blockType: 'richText',
-      layout: 'split',
+      layout: 'editorial',
+      mediaPosition: 'right',
       media: [{ image: media('industrial-slider.jpg') }].filter((entry) => entry.image),
-      eyebrow: 'Straight about status',
       heading: "Why We Don't Chase *Every Authorization*",
       numbered: true,
       collapsible: false,
@@ -161,8 +164,8 @@ export const brandsPage = (media: MediaResolver, logos: { image: number }[]): Se
       blockType: 'coverage',
       eyebrow: 'Where we work',
       heading: 'Where We Support *These Brands*',
-      // Light: the section above it and the closing ask below are both black,
-      // and three dark bands in a row read as one.
+      // Light: the closing ask below is black, and a grey band between the
+      // white section above and that slab keeps the two apart.
       tone: 'light',
       areas: [
         { name: 'Sharjah' },

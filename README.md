@@ -201,6 +201,16 @@ Numbers you can *count on.*
 `splitAccent()` in `apps/web/src/lib/accent.ts` does the split; a heading with no
 asterisks renders entirely in black.
 
+**Caption headings.** Card, panel and step titles carry the same two tones:
+`CaptionHeading.astro` sets the closing word of a title in red italic, so a
+service card reads "PLC Programming and Control Logic *Design*" under a section
+heading that reads "Our Automation Engineering *Services*". Captions come from
+CMS fields and content files as plain strings, so `splitCaption()` finds that
+word rather than waiting for a marker — only on a title-cased caption, never on
+a sentence-cased one ("Call logged and triaged" stays whole) and never on a
+single word. An explicit `*…*` still wins where an editor wants a different
+split. Place names are left alone: the coverage block does not use it.
+
 **Motion.** Anything with `.reveal-item opacity-0 translate-y-8` fades up when it
 scrolls into view — one IntersectionObserver in `Base.astro` drives them all, and
 re-runs after every view transition. Section headers marked `sticky` pin under the

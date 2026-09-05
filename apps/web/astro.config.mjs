@@ -5,7 +5,20 @@ import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
 
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || 'http://localhost:4331',
+  // Canonical origin. Everything that has to name the site absolutely — the
+  // canonical link, og:url, robots.txt, the sitemap — is built from this, so
+  // getting it wrong is not cosmetic: production was publishing
+  // `<link rel="canonical" href="http://localhost:4331/…">` on every page,
+  // because PUBLIC_SITE_URL is not set on the host and the localhost default
+  // was taking its place. Vercel exposes the project's production hostname at
+  // build time, so the deployed site names itself correctly whether or not the
+  // variable is set. Set PUBLIC_SITE_URL to override — that is what to use once
+  // the real domain points here.
+  site:
+    process.env.PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : 'http://localhost:4331'),
 
   // SSR: content is read from Payload on each request, so edits go live
   // immediately. Individual routes can still opt into `prerender = true`.
