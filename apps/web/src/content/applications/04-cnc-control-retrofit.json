@@ -5,7 +5,11 @@
   "cardTitle": "CNC Control Retrofit",
   "cardBlurb": "The machine is mechanically sound and the control is dead. Replacing the CNC, drives and motors keeps a good machine working instead of replacing it.",
   "cardImage": "automation-machine.jpg",
-  "sectors": ["Automotive", "Manufacturing", "Metals"],
+  "sectors": [
+    "Automotive",
+    "Manufacturing",
+    "Metals"
+  ],
   "meta": {
     "title": "CNC Machine Control Retrofit in the UAE | General Tech Automation",
     "description": "How a CNC control retrofit is done — replacing the control, drives and motors on a mechanically sound machine tool, and re-proving accuracy afterwards."
@@ -41,6 +45,70 @@
         "Machine tools outlive their electronics by a wide margin. The castings, ways, ballscrews and spindle on a well-maintained machining centre have decades of working life in them, while the control that drives it has a supported lifetime measured in a fraction of that. The result is a familiar and frustrating situation: a mechanically excellent machine standing idle because a drive amplifier failed and there is nothing to replace it with.",
         "**A control retrofit** separates the two. The mechanical machine stays; the control, drives, motors, encoders and operator interface are replaced with current equipment. It is a considerable piece of work and it is still, for a machine worth keeping, a fraction of the cost of a new one — and it does not carry the lead time, the foundations or the re-training that a new machine does."
       ]
+    },
+    {
+      "type": "diagram",
+      "variant": "groups",
+      "eyebrow": "What changes",
+      "heading": "The electrics go; *the machine stays*",
+      "intro": "A retrofit separates the machine tool from its electronics. The castings and slideways that make it accurate are the part with decades of life left, and they are the part you keep.",
+      "groups": [
+        {
+          "title": "Replaced",
+          "tone": "accent",
+          "note": "The parts that aged out from under the machine, and the ones that failed.",
+          "items": [
+            {
+              "icon": "screen",
+              "title": "CNC and operator panel",
+              "note": "Network connectivity and program storage that is not a floppy drive"
+            },
+            {
+              "icon": "motor",
+              "title": "Servo drives and motors",
+              "note": "Replaced as matched sets with their encoders"
+            },
+            {
+              "icon": "cog",
+              "title": "Spindle drive and feedback",
+              "note": "What rigid tapping, threading and orientation depend on"
+            },
+            {
+              "icon": "cabinet",
+              "title": "Cabinet, safety and limits",
+              "note": "E-stop, guard interlocks and overtravels brought to a current standard"
+            }
+          ]
+        },
+        {
+          "title": "Kept",
+          "tone": "neutral",
+          "note": "Proven by measurement before anything is quoted — this is what the mechanical assessment is for.",
+          "items": [
+            {
+              "icon": "machine",
+              "title": "Castings, ways and ballscrews",
+              "note": "The structure that determines what tolerance the machine can hold"
+            },
+            {
+              "icon": "cog",
+              "title": "Spindle and bearings",
+              "note": "Where condition allows; measured, not assumed"
+            },
+            {
+              "icon": "wrench",
+              "title": "Tool changer and ancillaries",
+              "note": "Coolant, chip conveyor, tailstock and probing all carried over"
+            },
+            {
+              "icon": "clipboard",
+              "title": "Your fixtures, tooling and programs",
+              "note": "Programs need translation and testing, but the work you have proved stays proved"
+            }
+          ]
+        }
+      ],
+      "footnote": "If the assessment finds worn ways or a tired spindle, that is said before the order rather than discovered at the test cut. A retrofit restores what the mechanics can still deliver — it cannot exceed it."
     },
     {
       "type": "features",

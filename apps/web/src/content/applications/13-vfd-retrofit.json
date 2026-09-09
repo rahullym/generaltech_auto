@@ -1,0 +1,250 @@
+{
+  "order": 13,
+  "title": "Fitting Variable Speed Drives to Fixed-Speed Pumps and Fans",
+  "slug": "applications/vfd-retrofit",
+  "cardTitle": "Variable Speed Drive Retrofit",
+  "cardBlurb": "A pump running flat out against a half-closed valve is a motor heating a valve. Putting a drive on it and letting it run at the speed the process needs.",
+  "cardImage": "board-repair.jpg",
+  "sectors": [
+    "Water",
+    "Manufacturing",
+    "Power"
+  ],
+  "meta": {
+    "title": "VFD Retrofit for Pumps and Fans in the UAE | General Tech Automation",
+    "description": "How variable speed drives are retrofitted to fixed-speed pumps and fans — surveying the duty, sizing the drive, harmonics and cabling, and proving the saving."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Fitting Variable Speed Drives *to Fixed-Speed Pumps and Fans*",
+      "subheading": "Duty Surveys • Drive Sizing • Harmonics & Cabling • Proven Savings • UAE",
+      "image": "board-repair.jpg",
+      "actions": [
+        {
+          "label": "Book a free duty survey",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "automation-machine.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "A great deal of industrial plant runs at one speed: full. The pump was sized for the worst case that might occur on the hottest day with the dirtiest filter, that case happens rarely or never, and the surplus is thrown away across a throttling valve or a damper. The motor draws what it draws, the valve gets hot, and the energy difference is simply lost.",
+        "**A variable speed drive** lets the machine run at the speed the process actually needs. On a centrifugal pump or fan the relationship between speed and power is steep, so a modest reduction in speed is a disproportionate reduction in energy — which is why this is one of the few efficiency measures where the physics does most of the arguing for you."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "groups",
+      "eyebrow": "What changes",
+      "heading": "A drive in the circuit, *and the pump left alone*",
+      "intro": "A drive retrofit is an electrical job. The pump, the impeller and the pipework are not touched — what changes is what the motor is fed and what decides its speed.",
+      "groups": [
+        {
+          "title": "Added or replaced",
+          "tone": "accent",
+          "note": "Everything here lives in the motor control centre or beside it.",
+          "items": [
+            {
+              "icon": "cpu",
+              "title": "The drive itself",
+              "note": "Sized on measured load, not on the motor's nameplate rating"
+            },
+            {
+              "icon": "cable",
+              "title": "Screened motor cable and glanding",
+              "note": "Not optional on a drive; it is what keeps the emissions where they belong"
+            },
+            {
+              "icon": "sensor",
+              "title": "A process signal to control on",
+              "note": "Pressure, flow, level or temperature — the drive needs something to follow"
+            },
+            {
+              "icon": "shield",
+              "title": "Harmonic mitigation where required",
+              "note": "Chokes or filters, decided by a study rather than by habit"
+            }
+          ]
+        },
+        {
+          "title": "Left alone",
+          "tone": "neutral",
+          "note": "Which is what keeps the work inside an electrical isolation rather than a plant shutdown.",
+          "items": [
+            {
+              "icon": "pump",
+              "title": "The pump or fan",
+              "note": "Same machine, same impeller, same duty point at full speed"
+            },
+            {
+              "icon": "motor",
+              "title": "The motor, usually",
+              "note": "Checked for insulation and bearing suitability; replaced only if it fails that check"
+            },
+            {
+              "icon": "valve",
+              "title": "The pipework and dampers",
+              "note": "The throttling valve stays fitted, but stops being what sets the flow"
+            },
+            {
+              "icon": "cog",
+              "title": "The process itself",
+              "note": "It gets the same flow or pressure, produced with less energy"
+            }
+          ]
+        }
+      ],
+      "footnote": "The throttling valve is left in place and opened up rather than removed. It remains available for isolation, and its position becomes a diagnostic rather than a control."
+    },
+    {
+      "type": "features",
+      "heading": "What the job *involves*",
+      "intro": "The drive is the cheapest part. Most of the engineering is in deciding whether it belongs there at all and in the details that decide whether it survives.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "gauge",
+          "title": "A duty survey first",
+          "description": "Logging actual flow, pressure and power over a normal operating period, so the drive is sized and justified on how the machine really runs rather than on its nameplate. This is also the step that finds the machines where a drive will save nothing — a pump that genuinely runs at full duty most of the time is better left alone, and saying so is part of the job."
+        },
+        {
+          "icon": "cpu",
+          "title": "Drive selection and control mode",
+          "description": "Sized on measured load with the right overload rating for the duty, and configured to follow the process rather than a fixed reference — pressure on a boost set, level on a transfer pump, differential pressure on a fan. A drive running at a manually set fixed speed is a more expensive way of doing what the machine did before."
+        },
+        {
+          "icon": "shield",
+          "title": "Harmonics and power quality",
+          "description": "Drives draw non-linear current, and enough of them on one supply becomes a power quality problem. Whether line chokes are sufficient or a filter is needed is settled by a study against the site's supply and existing drive population, not by assuming the last installation's answer applies here."
+        },
+        {
+          "icon": "cable",
+          "title": "Cabling, earthing and the motor itself",
+          "description": "Screened cable properly glanded at both ends, correct earthing, and cable length within the drive's limit or with an output filter to suit. The motor's insulation and bearings are checked for inverter duty — an older motor on a long cable run is where shaft currents and insulation stress show up, months after everyone declared the project finished."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "From a survey *to a proven saving*",
+      "intro": "The order matters because the first step is the one that can, and sometimes should, stop the project.",
+      "steps": [
+        {
+          "meta": "Measure",
+          "title": "Log the machine as it runs",
+          "description": "Power, flow and pressure over a representative period, including the quiet times. The result either shows a machine spending most of its life throttled — in which case the case makes itself — or it does not, and the money is better spent elsewhere."
+        },
+        {
+          "meta": "Design",
+          "title": "Size the drive and the installation",
+          "description": "Drive rating, enclosure and cooling for an ambient that is a real constraint in this region, cable specification and route, harmonic mitigation, and where the control signal comes from. Panel modifications are drawn and approved before anything is ordered."
+        },
+        {
+          "meta": "Install",
+          "title": "Fit within an electrical isolation",
+          "description": "Drive installed in or beside the motor control centre, motor cable replaced with screened, control signal wired in, and the starter left in place or removed as the design dictates. The process itself does not need to be broken into."
+        },
+        {
+          "meta": "Prove",
+          "title": "Commission and measure again",
+          "description": "Control loop tuned so the machine follows the process without hunting, minimum speed set so the pump is never run below where it can deliver, and then the same measurement taken again. The saving is a measured difference, not a calculated projection."
+        }
+      ],
+      "footnote": "Minimum speed is the setting most often left at default and most often the cause of a complaint. A centrifugal pump run too slowly delivers nothing while consuming power."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What a drive *actually gives you*",
+      "body": [
+        "Energy proportional to the duty the process needs rather than to the worst case the pump was sized for.",
+        "Soft starting, which removes the mechanical and electrical shock that shortens the life of couplings, belts and the supply.",
+        "Control of the process variable itself — pressure, level, temperature — rather than of a valve position that approximates it.",
+        "Less wear on the throttling valve, which was absorbing the surplus and being eroded by it.",
+        "Motor current, torque and running hours available on the network, which is condition monitoring you have already paid for."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Machines that spend their lives *throttled*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Water and Wastewater",
+          "icon": "water",
+          "description": "Boost sets, transfer pumps and blowers sized for peak demand and running against control valves for most of the year."
+        },
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Process pumps, cooling fans and extraction systems that were specified once for a worst case and have run flat out ever since."
+        },
+        {
+          "name": "Power and Utilities",
+          "icon": "power",
+          "description": "Cooling water, condenser and draught fan duties where the load genuinely varies and the machines are large enough that a few per cent matters."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about drive retrofits*",
+      "items": [
+        {
+          "q": "Will a drive save energy on any pump?",
+          "a": [
+            "No, and this is the most important thing to get right. The saving comes from reducing speed on a centrifugal machine with a variable demand. A positive displacement pump, or a centrifugal one that genuinely runs at full duty around the clock, will save little or nothing and may cost you in drive losses. The duty survey exists to tell the two apart before you spend anything."
+          ]
+        },
+        {
+          "q": "Can we keep the existing motor?",
+          "a": [
+            "Usually, after a check. Insulation condition, bearing type and cable length together decide it — inverter supplies stress insulation and can produce shaft currents that damage bearings, particularly on older motors and long runs. Where the motor is marginal the honest answer is to replace it or fit an output filter, and to say so before the drive goes in rather than after a bearing fails."
+          ]
+        },
+        {
+          "q": "Do drives cause problems for the rest of the plant?",
+          "a": [
+            "They can, and it is worth taking seriously. Harmonic current distorts the supply and enough drives on one transformer will affect other equipment; the switching also demands proper screened cable and earthing to stay out of nearby instrument signals. All of this is manageable and well understood — it just has to be designed rather than discovered."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Point us at a pump that runs against a throttled valve, and *we will measure it before we sell you anything.*",
+      "body": "A duty survey with logged power, flow and pressure, and an honest answer about whether a drive is worth fitting.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

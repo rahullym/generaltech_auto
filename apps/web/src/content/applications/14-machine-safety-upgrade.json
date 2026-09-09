@@ -1,0 +1,225 @@
+{
+  "order": 14,
+  "title": "Bringing an Older Machine up to a Current Safety Standard",
+  "slug": "applications/machine-safety-upgrade",
+  "cardTitle": "Machine Safety Upgrade",
+  "cardBlurb": "A guard that is bolted shut because the interlock kept tripping, and an e-stop wired through a single contactor. Making the machine safe without making it unusable.",
+  "cardImage": "automation-machine.jpg",
+  "sectors": [
+    "Manufacturing",
+    "Automotive",
+    "Food & Beverage"
+  ],
+  "meta": {
+    "title": "Machine Safety Upgrades and Guard Interlocks UAE | General Tech Automation",
+    "description": "How an older machine is brought to a current safety standard — risk assessment, safety relays or controllers, guard interlocks and light curtains, and validation."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Bringing an Older Machine *up to a Current Safety Standard*",
+      "subheading": "Risk Assessment • Safety Relays & Controllers • Interlocks & Light Curtains • Validation • UAE",
+      "image": "automation-machine.jpg",
+      "actions": [
+        {
+          "label": "Book a free machine assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Safety on an older machine tends to fail in a particular direction. A guard interlock nuisance-trips, so somebody defeats it. A light curtain is mounted where it can be stepped around. An emergency stop drops out a single contactor whose welded contact nobody would ever detect. The machine looks protected, everyone believes it is protected, and the protection would not survive the first fault it was there to catch.",
+        "**A safety upgrade** starts by deciding, in writing, what each hazard actually requires — and then builds protection that meets it and that people will not work around. The second half of that sentence matters as much as the first: a guard that stops the operator doing their job is a guard that will be defeated, and a defeated guard is worse than an honest absence of one."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a hazard *to a machine that stops*",
+      "intro": "A safety function is a chain, and it is only as good as its weakest link. Each stage below is specified to the level the assessment calls for, not to whatever was in the cupboard.",
+      "nodes": [
+        {
+          "icon": "clipboard",
+          "title": "Risk assessment",
+          "note": "Each hazard identified and given a required performance level"
+        },
+        {
+          "icon": "sensor",
+          "title": "The detecting device",
+          "via": "Selected to suit",
+          "note": "Interlock switch, light curtain, scanner, mat or two-hand control"
+        },
+        {
+          "icon": "shield",
+          "title": "Safety relay or controller",
+          "via": "Dual channel, monitored",
+          "note": "Cross-monitored, so a welded contact or a shorted wire is detected"
+        },
+        {
+          "icon": "motor",
+          "title": "The final element",
+          "via": "Redundant contactors with feedback",
+          "note": "Contactors, safe torque off on the drive, or a dump valve"
+        },
+        {
+          "icon": "screen",
+          "title": "Diagnostics and reset",
+          "via": "To the machine HMI",
+          "note": "Which device tripped, so a stop is cleared in seconds and not defeated"
+        }
+      ],
+      "footnote": "The last stage is the one that keeps the rest of it in service. A safety system that stops the machine without telling anyone why is the system that gets bypassed by the end of the month."
+    },
+    {
+      "type": "features",
+      "heading": "What typically *gets fitted*",
+      "intro": "The devices follow the assessment. What is right for a slow-moving conveyor is not what is right for a press.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "shield",
+          "title": "A safety relay or safety controller",
+          "description": "Dual-channel monitored circuits so that a broken wire, a shorted wire or a welded contact is detected rather than silently ignored. A relay suits a machine with a handful of functions; a configurable safety controller earns its place once there are several zones, muting requirements or a need to change the logic without rewiring."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Guard interlocks that suit the work",
+          "description": "Coded magnetic or RFID switches that cannot be defeated with a spare actuator taped to the frame, and guard locking where the machine takes time to come to rest. Where a guard has to open frequently, choosing a device and a reset scheme that fits the operator's rhythm is what stops it being defeated."
+        },
+        {
+          "icon": "sensor",
+          "title": "Light curtains and scanners",
+          "description": "For openings that have to stay open — loading points, robot cells, palletiser infeeds. Mounting distance is calculated from the machine's actual stopping time rather than estimated, because a curtain mounted too close protects nobody while looking exactly like one that works."
+        },
+        {
+          "icon": "motor",
+          "title": "Safe stopping at the machine",
+          "description": "Redundant contactors with feedback monitoring, or safe torque off on a drive where the machine has one, or a dump valve on a pneumatic system. This is the end of the chain and it is where an old installation is most often weakest, with everything routed through a single unmonitored contactor."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Making it safe *and still usable*",
+      "intro": "The assessment leads and the hardware follows. Doing it the other way round is how a machine ends up with expensive equipment protecting the wrong thing.",
+      "steps": [
+        {
+          "meta": "Assess",
+          "title": "Identify hazards and required performance",
+          "description": "Every hazard at every stage of the machine's life — running, setting, cleaning, clearing a jam — with a required performance level attached. Setting and jam clearing is where most incidents happen and where production-only assessments tend to go quiet."
+        },
+        {
+          "meta": "Design",
+          "title": "Specify the safety functions",
+          "description": "Each function written down: what detects, what decides, what stops, and to what performance level. The architecture is then chosen to achieve it, and the calculation is documented so it can be shown rather than asserted."
+        },
+        {
+          "meta": "Fit",
+          "title": "Install and integrate",
+          "description": "Devices mounted at calculated distances, wiring to the safety circuit kept separate and identified, and the machine's own control interlocked with it. Diagnostics are brought to the HMI at this point rather than added later when the complaints start."
+        },
+        {
+          "meta": "Validate",
+          "title": "Prove every function, then train",
+          "description": "Each safety function tested deliberately, including the fault conditions it is supposed to detect — a channel disconnected, a contact held closed. Results are documented, and operators and setters are trained on how the machine now behaves before it goes back into production."
+        }
+      ],
+      "footnote": "Validation is not a formality. A dual-channel circuit wired as two parallel single channels passes every functional test and detects nothing."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What you get *besides compliance*",
+      "body": [
+        "Protection that behaves correctly when a component fails, which is the entire point of a monitored circuit.",
+        "Guards that people use as intended, because they were designed around how the job is actually done.",
+        "Diagnostics that turn a mystery stop into a named device, so production is restored in seconds rather than by bypassing something.",
+        "Documentation — assessment, design, calculations and validation records — that can be produced when somebody asks for it.",
+        "A machine that can be set and cleaned safely, which is where the incidents that documentation never anticipated actually occur."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Machines that predate *the standard they are held to*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Presses, mixers, conveyors and packaging machines installed before current requirements, still in daily use and still perfectly serviceable."
+        },
+        {
+          "name": "Automotive",
+          "icon": "automotive",
+          "description": "Robot cells and assembly stations where the guarding was designed for a cycle that has since changed, and the operators have adapted around it."
+        },
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "Machines that must be opened frequently for cleaning, where an interlock that suits production but obstructs the wash-down is the one that gets defeated."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about safety upgrades*",
+      "items": [
+        {
+          "q": "Our machine is old. Does it have to meet current standards?",
+          "a": [
+            "The obligation is to provide safe equipment, and what that means in practice is decided by a risk assessment of the machine as it stands and as it is actually used. An older machine does not automatically have to be brought to the standard a new one would be built to, but nor does its age excuse a hazard. The assessment is what turns that question from an opinion into a documented position."
+          ]
+        },
+        {
+          "q": "Will this slow the machine down?",
+          "a": [
+            "Badly designed protection does, which is precisely why it gets defeated. Good design keeps the safe way of working the quick way — zone control so only the relevant part stops, muting so the machine can accept material without a stop, and guard locking that releases as soon as it is genuinely safe rather than on a fixed timer. If a proposed change makes an operator's job harder, that is a design problem and it is worth solving before installation."
+          ]
+        },
+        {
+          "q": "Can it be done without taking the machine out of production for long?",
+          "a": [
+            "Mostly. The assessment and design happen while the machine runs, panels and brackets are prepared off-line, and the installation is planned into a shutdown or a weekend. Validation needs the machine stopped and available, and that time should not be compressed — it is the step that establishes the protection actually works."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us which machine worries you, and *we will assess it before we quote anything.*",
+      "body": "A risk assessment of the machine as it is actually used, and a safety design costed against what it found.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

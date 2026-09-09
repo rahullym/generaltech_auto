@@ -1,0 +1,224 @@
+{
+  "order": 19,
+  "title": "Instrument Calibration Management Across a Plant",
+  "slug": "applications/calibration-management",
+  "cardTitle": "Calibration Management",
+  "cardBlurb": "Certificates in a lever-arch file, a spreadsheet somebody left behind, and no clear answer to which instruments are overdue. Putting the plant on a schedule it can keep.",
+  "cardImage": "engineer-tablet-plant.jpg",
+  "sectors": [
+    "Oil & Gas",
+    "Pharmaceutical",
+    "Manufacturing"
+  ],
+  "meta": {
+    "title": "Instrument Calibration Management in the UAE | General Tech Automation",
+    "description": "How a plant gets its instrument calibration under control — a verified instrument register, risk-based intervals, traceable field calibration and audit-ready records."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Instrument Calibration Management *Across a Plant*",
+      "subheading": "Instrument Register • Risk-Based Intervals • Traceable Certificates • Audit Records • UAE",
+      "image": "engineer-tablet-plant.jpg",
+      "actions": [
+        {
+          "label": "Book a free instrument audit",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "board-repair.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Calibration tends to be managed by the person who has always managed it. They know which transmitters matter, roughly when each was last done, and where the certificates are — and the whole system works well right up until they are on leave, or they retire, or an auditor asks for evidence rather than assurance. Then it becomes apparent that the register is a spreadsheet with three versions and the certificates are in a file that stops in 2022.",
+        "**Calibration management** turns that into something the plant owns rather than a person. A verified register of what is actually installed, intervals set by what an instrument does rather than by habit, calibration performed traceably in the field, and results recorded where anyone can find them — including the ones that failed, which are the entries that matter most."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a tag number *to evidence you can hand over*",
+      "intro": "The loop closes at the last stage. A calibration that is performed and not recorded has cost you the money and left you with nothing to show.",
+      "nodes": [
+        {
+          "icon": "database",
+          "title": "A verified register",
+          "note": "Every instrument, walked down and confirmed against the drawings"
+        },
+        {
+          "icon": "clipboard",
+          "title": "Risk-based intervals",
+          "via": "Criticality review",
+          "note": "Frequency set by consequence and observed drift, not by one blanket rule"
+        },
+        {
+          "icon": "gauge",
+          "title": "Field calibration",
+          "via": "Traceable reference",
+          "note": "As-found recorded before adjustment, as-left after"
+        },
+        {
+          "icon": "screen",
+          "title": "Results captured at the instrument",
+          "via": "Documenting calibrator",
+          "note": "Straight from the calibrator rather than transcribed from a notebook"
+        },
+        {
+          "icon": "cloud",
+          "title": "The record",
+          "via": "CMMS or register",
+          "note": "Certificates, due dates and failures, searchable and exportable"
+        }
+      ],
+      "footnote": "The as-found reading is the valuable one. An instrument that was found 4% out and adjusted tells you the interval is too long; only recording the as-left tells you nothing at all."
+    },
+    {
+      "type": "features",
+      "heading": "What the programme *consists of*",
+      "intro": "Most of the value comes from the first two items. The field work is the easy part once the plant knows what it owns and how often each thing needs doing.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "database",
+          "title": "A register that matches reality",
+          "description": "Built by walking the plant, not by copying the last spreadsheet. Tag, type, manufacturer, range, location, loop, what it does and what the consequence of it being wrong would be. Instruments that were removed years ago come off, instruments nobody had recorded go on, and duplicate tags get resolved — which on a plant that has been modified over two decades is most of the work."
+        },
+        {
+          "icon": "clipboard",
+          "title": "Intervals set by consequence",
+          "description": "Calibrating everything annually is simple and wrong in both directions: it over-services instruments that drift slowly and matter little, while under-servicing the few whose error would cause a real problem. Intervals set from criticality and then adjusted by observed as-found drift concentrate the effort where it changes something."
+        },
+        {
+          "icon": "gauge",
+          "title": "Traceable field calibration",
+          "description": "Documenting calibrators with certificates traceable to national standards, checking at several points across the range rather than at zero and span alone, and recording as-found before any adjustment. Loop calibration — from the sensor all the way to what the control system displays — catches scaling and configuration errors that a bench calibration of the transmitter alone will never see."
+        },
+        {
+          "icon": "cloud",
+          "title": "Records that outlive the engineer",
+          "description": "Certificates and results held where the maintenance team, quality and an auditor can all reach them, with due dates that raise work orders in the system the plant already uses. Failures are recorded as prominently as passes, because the failure history is what tells you an interval is wrong or an instrument should be replaced."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Getting from a spreadsheet *to a programme*",
+      "intro": "The first pass is the expensive one. After that it becomes a routine the plant runs itself.",
+      "steps": [
+        {
+          "meta": "Establish",
+          "title": "Walk down and build the register",
+          "description": "Every instrument located, identified and verified against the P&IDs and the loop drawings. Discrepancies are resolved rather than noted, because a register with known errors in it will be trusted exactly as much as the spreadsheet it replaced."
+        },
+        {
+          "meta": "Prioritise",
+          "title": "Rank by consequence",
+          "description": "Which instruments affect safety, product quality, environmental compliance or custody transfer, and which simply indicate. The first group sets the schedule and the budget; the last group can often be checked rather than calibrated, or left until it disagrees with something."
+        },
+        {
+          "meta": "Execute",
+          "title": "Calibrate and record in the field",
+          "description": "Field calibration with documenting instruments, as-found and as-left at multiple points, and results captured at the instrument rather than written down and typed up later. Loop checks where the whole path matters, not just the transmitter."
+        },
+        {
+          "meta": "Sustain",
+          "title": "Schedule, review and adjust",
+          "description": "Due dates raise work orders automatically, and the as-found history is reviewed periodically to lengthen intervals on instruments that never drift and shorten them on those that do. That review is what stops the programme becoming a calendar nobody questions."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What the programme *is worth*",
+      "body": [
+        "A definite answer to what is installed, what is due and what is overdue, available without asking a particular person.",
+        "Effort concentrated on the instruments whose error would actually cost something.",
+        "Evidence for an audit produced in minutes rather than assembled over a fortnight.",
+        "Drift history per instrument, which is what justifies extending an interval — and what justifies replacing a device that will not hold calibration.",
+        "Measurement you can rely on downstream, since every dashboard, control loop and yield calculation on the plant inherits its accuracy from these instruments."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Plants where *the measurement has to be defensible*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Oil and Gas",
+          "icon": "oil",
+          "description": "Custody transfer, safety instrumented functions and environmental monitoring, where the certificate is part of the commercial and regulatory position."
+        },
+        {
+          "name": "Pharmaceutical",
+          "icon": "pharma",
+          "description": "Qualified equipment where calibration status is inspected directly and an out-of-tolerance instrument triggers an impact assessment on everything it touched."
+        },
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Quality-critical measurements on process plant, where a drifted instrument produces out-of-specification product long before anybody suspects the instrument."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about calibration programmes*",
+      "items": [
+        {
+          "q": "How do we decide the right interval?",
+          "a": [
+            "Start from consequence — what happens if this instrument is wrong — and then let the as-found data adjust it. An instrument that comes back within tolerance three times running is telling you the interval could be longer; one that is regularly out is telling you the opposite, or that it needs replacing. This is why recording as-found readings matters: without them there is no basis for ever changing an interval, and the programme calcifies."
+          ]
+        },
+        {
+          "q": "Do we need our own calibration equipment?",
+          "a": [
+            "It depends on the size of the plant and how much of the work you intend to do in house. A site with a large instrument population and its own technicians usually justifies documenting calibrators and a reference standard, with those references themselves sent away for traceable calibration. A smaller site is generally better served by having the work done with a contractor's certified equipment than by buying kit that will itself fall out of calibration between uses."
+          ]
+        },
+        {
+          "q": "What about instruments that cannot be taken out of service?",
+          "a": [
+            "Many can be checked in place — a loop check against a known input, a comparison against a nearby redundant measurement, or a verification routine that a smart instrument can run on itself. Where a true calibration genuinely requires removal, it is scheduled into a shutdown, and that requirement is recorded against the tag so it appears in the shutdown scope rather than being remembered at the last minute."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us how many instruments you think you have, and *we will find out how many there are.*",
+      "body": "A walk-down and verified register, a criticality ranking, and a calibration schedule your team can actually sustain.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

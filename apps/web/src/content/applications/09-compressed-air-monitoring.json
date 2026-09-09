@@ -1,0 +1,219 @@
+{
+  "order": 9,
+  "title": "Compressed Air Monitoring and Leak Detection",
+  "slug": "applications/compressed-air-monitoring",
+  "cardTitle": "Compressed Air Monitoring",
+  "cardBlurb": "Compressed air is the most expensive utility on most sites and the least measured. Metering it usually finds a quarter of it leaking into an empty building.",
+  "cardImage": "factory-about.jpg",
+  "sectors": [
+    "Manufacturing",
+    "Automotive",
+    "Food & Beverage"
+  ],
+  "meta": {
+    "title": "Compressed Air Monitoring and Leak Detection UAE | General Tech Automation",
+    "description": "How compressed air monitoring is put on a plant — flow and pressure metering at the compressor and the branches, with out-of-hours logging that finds leaks."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Compressed Air Monitoring *and Leak Detection*",
+      "subheading": "Flow & Pressure Metering • Leak Surveys • Out-of-Hours Logging • Dubai • Sharjah • Abu Dhabi",
+      "image": "factory-about.jpg",
+      "actions": [
+        {
+          "label": "Book a free air survey",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "7_1.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Compressed air costs several times more per unit of energy than the electricity that makes it, and almost nobody meters it. The compressor house is treated as a fixed overhead, the ring main is assumed to be sound because it was when it went in, and the only signal that anything is wrong is a second compressor cutting in more often than it used to.",
+        "**Metering the air** turns that overhead into a set of numbers. Flow and pressure at the compressor outlet, and on the branches feeding each area, logged continuously. The most useful reading is the one taken at three on a Sunday morning, when the plant is empty and nothing should be moving — whatever the meter shows then is leaking, and it is usually a larger number than anyone expects."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From the compressor *to a leak you can find*",
+      "intro": "The measurement is straightforward. The insight comes from logging it against the clock, so the plant's own idle periods do the leak survey for you.",
+      "nodes": [
+        {
+          "icon": "gauge",
+          "title": "Thermal mass flow meters",
+          "note": "Insertion probes in the ring main and on each branch worth knowing"
+        },
+        {
+          "icon": "sensor",
+          "title": "Pressure and dew point",
+          "via": "Same tapping points",
+          "note": "Pressure drop across the system, and air quality where it matters"
+        },
+        {
+          "icon": "logger",
+          "title": "Datalogger",
+          "via": "4-20mA or pulse",
+          "note": "Continuous logging, so the idle hours are captured too"
+        },
+        {
+          "icon": "dashboard",
+          "title": "Consumption by area and by hour",
+          "via": "Modbus, Ethernet or cellular",
+          "note": "Baseline demand at three on a Sunday is the leak rate"
+        }
+      ],
+      "footnote": "An ultrasonic leak survey walks the plant afterwards and tags the individual leaks. The metering tells you how much there is to find and whether the fixing worked; the survey tells you where to put the spanner."
+    },
+    {
+      "type": "features",
+      "heading": "What gets *fitted*",
+      "intro": "Insertion meters go into a live ring main under a hot tap, so most of this is installed without stopping the air.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "gauge",
+          "title": "Thermal mass flow meters",
+          "description": "Insertion-type meters read mass flow directly, which is what you actually consume — a volumetric reading changes with pressure and temperature and will not reconcile against the compressor's output. One at the compressor outlet establishes the total; one per branch tells you which building or department is spending it."
+        },
+        {
+          "icon": "signal",
+          "title": "Pressure and dew point sensors",
+          "description": "Pressure at the compressor and at the furthest point of use shows the drop across the distribution, which is what forces the compressor set point higher than it needs to be. Every extra bar of generation pressure costs money on every cubic metre, and a pressure survey is often the cheapest saving on the whole system. Dew point matters wherever the air touches product or instruments."
+        },
+        {
+          "icon": "logger",
+          "title": "A logger that runs through the night",
+          "description": "The whole method depends on capturing the hours nobody is watching. A logger with its own buffer records continuously and does not care whether the plant is manned, which is what makes the Sunday-morning baseline available at all."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Reporting against production",
+          "description": "Consumption by area, by shift and by hour, and — where production data can be joined in — air per unit made. Compressor loading and unloading time is worth reporting alongside it, because a machine that spends half its life unloaded is a sizing problem rather than a leak problem."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Metering air *without stopping it*",
+      "intro": "The air system usually cannot be shut down for the survey, and it does not need to be.",
+      "steps": [
+        {
+          "meta": "Survey",
+          "title": "Walk the distribution",
+          "description": "Compressor house, receivers, dryers, the ring main and the branches off it. Where the pipework has been extended over the years there is often no drawing, and the first output of the exercise is an accurate one."
+        },
+        {
+          "meta": "Install",
+          "title": "Hot-tap the insertion meters",
+          "description": "Insertion meters go into the live main through an isolation valve, so the air stays on. Straight-run requirements either side of each meter decide the positions, and those are settled at the survey rather than argued about on the day."
+        },
+        {
+          "meta": "Log",
+          "title": "Record a full week",
+          "description": "Seven days including a full weekend, so the plant's own shutdown periods are captured. The idle-hours flow is the leak rate, and it is the number that makes the case for everything that follows."
+        },
+        {
+          "meta": "Act",
+          "title": "Ultrasonic survey and re-measure",
+          "description": "A walk-round with an ultrasonic detector tags and ranks the individual leaks so they can be repaired in priority order. Then the meters are read again — which is the part that proves the repairs worked, and the part most leak surveys leave out."
+        }
+      ],
+      "footnote": "Fixing leaks without metering before and after is how a plant pays for a leak survey twice."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What the measurement *pays for*",
+      "body": [
+        "A leak rate expressed as a number and a cost, rather than as a suspicion that the system is leaky.",
+        "The evidence to reduce generation pressure, which saves on every cubic metre the plant uses rather than on one repair.",
+        "Consumption attributed by area, so a department that has quietly doubled its air use becomes visible.",
+        "Compressor loading data, which is what tells you whether the next compressor should be bigger, smaller or variable speed.",
+        "A before-and-after that proves a repair programme worked, so the next one is easier to get approved."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Plants that run *on air and never measure it*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Pneumatic tooling, actuators and blow-off across a site whose ring main has been extended piecemeal for twenty years, with no drawing that matches it."
+        },
+        {
+          "name": "Automotive",
+          "icon": "automotive",
+          "description": "Assembly and paint operations with very large air demands and tight pressure requirements, where a pressure drop shows up as a quality problem before it shows up as a cost."
+        },
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "Packaging and conveying air where dew point and oil content are part of the product specification, so air quality is monitored alongside consumption."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about air metering*",
+      "items": [
+        {
+          "q": "How much of our air is likely to be leaking?",
+          "a": [
+            "Enough to be worth measuring — leakage on an unmanaged system is commonly a substantial fraction of total generation, and on older pipework it can be a great deal more. Rather than quote a figure at you, the honest approach is to meter the idle hours and read the answer for your plant, which takes a week and settles the argument with your own data."
+          ]
+        },
+        {
+          "q": "Do we have to shut the air off to fit the meters?",
+          "a": [
+            "Not for insertion meters, which are hot-tapped into a live main through an isolation valve. Inline meters do need the section drained and broken, so those are planned into a maintenance window. On most systems the survey positions are chosen so that the work can be done live."
+          ]
+        },
+        {
+          "q": "Is it worth metering the branches, or just the compressor?",
+          "a": [
+            "Start at the compressor, because that establishes the total and the leak rate, and those two numbers carry most of the value. Branch meters answer the follow-up question — which area is responsible — and are worth adding once there is a total worth apportioning. Metering every drop is rarely justified."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Give us a week on your ring main, and *we will tell you what it leaks.*",
+      "body": "A survey of the distribution, insertion metering fitted live, and a full week of logging including the weekend.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

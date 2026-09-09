@@ -62,6 +62,32 @@ export type AuthoredBlock =
       footnote?: string
     }
   | {
+      /**
+       * A picture of the arrangement rather than a photograph of a plant.
+       *
+       * `chain` draws the signal or control path as a run of labelled stages —
+       * what measures, what it is wired to, where the reading ends up — with
+       * the protocol on each connector. `groups` draws a retrofit instead: what
+       * is replaced beside what is kept, which is the question a customer
+       * looking at a working machine actually has.
+       */
+      type: 'diagram'
+      variant?: 'chain' | 'groups'
+      eyebrow?: string
+      heading?: string
+      intro?: string
+      /** `chain` only. `via` labels the connector *into* the node. */
+      nodes?: { icon?: string; title: string; note?: string; via?: string }[]
+      /** `groups` only. */
+      groups?: {
+        title: string
+        note?: string
+        tone?: 'accent' | 'neutral'
+        items: { icon?: string; title: string; note?: string }[]
+      }[]
+      footnote?: string
+    }
+  | {
       type: 'why'
       eyebrow?: string
       heading?: string
@@ -302,6 +328,26 @@ const expand = (block: AuthoredBlock, slug: string, index: number): Block => {
           title: step.title,
           description: step.description,
           meta: step.meta,
+        })),
+      }
+
+    case 'diagram':
+      return {
+        id,
+        blockType: 'diagram',
+        variant: block.variant ?? 'chain',
+        eyebrow: block.eyebrow ?? null,
+        heading: block.heading ?? null,
+        intro: block.intro ?? null,
+        footnote: block.footnote ?? null,
+        nodes: (block.nodes ?? []).map((node, i) => ({
+          id: key(slug, index, `-n${i}`),
+          ...node,
+        })),
+        groups: (block.groups ?? []).map((group, i) => ({
+          id: key(slug, index, `-g${i}`),
+          ...group,
+          items: group.items.map((item, j) => ({ id: key(slug, index, `-g${i}i${j}`), ...item })),
         })),
       }
 

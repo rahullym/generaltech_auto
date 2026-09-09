@@ -1,0 +1,224 @@
+{
+  "order": 20,
+  "title": "Conveyor and Sortation Control in a Warehouse",
+  "slug": "applications/conveyor-sortation-control",
+  "cardTitle": "Conveyor and Sortation Control",
+  "cardBlurb": "Sections that run whether or not the next one can take anything, and a jam that stops the whole hall. Zoned accumulation and sortation that keeps working around a fault.",
+  "cardImage": "automation-machine.jpg",
+  "sectors": [
+    "Logistics",
+    "Food & Beverage",
+    "Manufacturing"
+  ],
+  "meta": {
+    "title": "Conveyor and Sortation Control Systems UAE | General Tech Automation",
+    "description": "How conveyor and sortation control is built — zoned accumulation, barcode scanning and divert logic, VFD-driven sections, and safety that does not stop the whole hall."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Conveyor and Sortation Control *in a Warehouse*",
+      "subheading": "Zoned Accumulation • Scanning & Divert Logic • Drive Control • Zone Safety • UAE",
+      "image": "automation-machine.jpg",
+      "actions": [
+        {
+          "label": "Book a free flow survey",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "operator-control-panel.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "A conveyor system that was extended one section at a time behaves like several conveyors that happen to touch. Each length runs when it is switched on, regardless of whether the next one can take what it is delivering, so product backs up at every junction and a single jam propagates until somebody hits a stop button and the whole hall goes quiet. Clearing it is manual, and restarting is a sequence somebody has learned by heart.",
+        "**Zoned control** makes it one system. Each zone knows whether the one downstream can accept, and stops accumulating rather than pushing; scanning decides where each item goes and the diverts act on that decision; and a fault stops the zones it affects instead of the building. The hall keeps running around a problem while it is dealt with."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a scanned label *to the right chute*",
+      "intro": "Every item is tracked from the moment it is identified until it leaves. The tracking is what allows a divert to fire at exactly the right moment on a moving line.",
+      "nodes": [
+        {
+          "icon": "conveyor",
+          "title": "Infeed and singulation",
+          "note": "Items separated and gapped so each one can be identified individually"
+        },
+        {
+          "icon": "sensor",
+          "title": "Scanner or vision",
+          "via": "Photocell trigger",
+          "note": "Barcode, RFID or dimensioning, read as the item passes"
+        },
+        {
+          "icon": "cpu",
+          "title": "Tracking and divert logic",
+          "via": "Ethernet or fieldbus",
+          "note": "Each item followed by encoder count from scan point to its destination"
+        },
+        {
+          "icon": "machine",
+          "title": "Diverts and chutes",
+          "via": "Timed output",
+          "note": "Pusher, shoe or pop-up wheel, fired on the item rather than on a timer"
+        },
+        {
+          "icon": "dashboard",
+          "title": "Throughput and exceptions",
+          "via": "To WMS or dashboard",
+          "note": "No-reads, rejects and blocked chutes, visible while they can still be fixed"
+        }
+      ],
+      "footnote": "Encoder-based tracking rather than fixed timers is what keeps diverts accurate when the line speed changes — which it does, every time a zone upstream accumulates."
+    },
+    {
+      "type": "features",
+      "heading": "What the control system *does*",
+      "intro": "The mechanical handling is usually sound. What separates a hall that flows from one that jams is almost entirely in the logic.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "conveyor",
+          "title": "Zoned accumulation",
+          "description": "Each zone has its own sensor and its own drive, and it only releases into the next zone when that zone reports itself clear. Product gathers in an orderly queue instead of pressing against whatever is in front of it, which removes both the jams and the damage that comes from packages being pushed into each other."
+        },
+        {
+          "icon": "sensor",
+          "title": "Identification and tracking",
+          "description": "A scanner or vision system reads each item, and the control system then follows it by encoder count rather than by an assumed travel time. That distinction is what keeps diverts accurate on a line whose speed varies, and it is why a system built on fixed timers starts mis-sorting the moment anything accumulates upstream."
+        },
+        {
+          "icon": "cpu",
+          "title": "Divert and destination logic",
+          "description": "Where an item goes comes from the warehouse system or from a rule set held locally, with a defined fallback for a no-read, a full chute or an unknown destination. Deciding what happens to an item nobody planned for is a large part of the design, and it is what stops an exception becoming a stoppage."
+        },
+        {
+          "icon": "shield",
+          "title": "Safety by zone",
+          "description": "Emergency stops and guarding that isolate the section affected while the rest of the hall keeps running, with clear indication of what is stopped and why. A system whose only safe state is everything stopped will be operated with the guards defeated within a month, because the alternative costs too much every time."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Building it *around a running operation*",
+      "intro": "A warehouse rarely gets to stop. The work is sequenced so that each stage is proved before the next depends on it.",
+      "steps": [
+        {
+          "meta": "Define",
+          "title": "Map the flow and the exceptions",
+          "description": "Every path an item can take, every destination, and every abnormal case — no-read, oversize, full chute, recirculation. The exceptions take more thought than the normal flow and cause almost all of the trouble when they are left until commissioning."
+        },
+        {
+          "meta": "Design",
+          "title": "Zones, drives and interfaces",
+          "description": "Zone boundaries, sensor and drive layout, panel design, and the interface to the warehouse system agreed in detail on both sides. Where an existing WMS is involved, the message formats and the failure behaviour are settled before anything is built."
+        },
+        {
+          "meta": "Build",
+          "title": "Panels built and tested off site",
+          "description": "Panels manufactured and tested in the workshop with the logic loaded and I/O exercised, and the tracking and divert logic run against simulation. The more that is proved on a bench, the shorter the nights on site."
+        },
+        {
+          "meta": "Cut over",
+          "title": "Section by section, then at speed",
+          "description": "Zones are brought under control in sequence with the rest of the hall still working, then the whole system is run with real product at full rate before anyone signs anything. Peak-rate testing is where tracking errors and chute capacity problems appear, and it is not a step to skip."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What zoned control *changes*",
+      "body": [
+        "A jam stops the zones around it rather than the hall, so the rest of the operation keeps running while it is cleared.",
+        "Product accumulates in a queue instead of being pushed, which removes a steady source of damage and of jams.",
+        "Sortation accuracy holds when the line speed varies, because items are tracked rather than timed.",
+        "Exceptions are visible as they happen — no-reads, full chutes, recirculating items — while somebody can still act on them.",
+        "Zones can be isolated for maintenance and cleaning without shutting down the building."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Halls where *the flow is the operation*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Warehousing and Logistics",
+          "icon": "logistics",
+          "description": "Pick, pack and despatch operations with multiple destinations, where sortation accuracy and throughput are the operation rather than a support function."
+        },
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "Case and pallet handling between production and despatch, where washdown requirements and hygienic zone design shape the control as much as the throughput does."
+        },
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Inter-process transfer and buffering between cells, where accumulation is what decouples one machine's stoppage from the next machine's starvation."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about conveyor control*",
+      "items": [
+        {
+          "q": "Can our existing conveyor be zoned, or does it need replacing?",
+          "a": [
+            "Very often it can be zoned as it stands. Most accumulation problems are control problems rather than mechanical ones, and adding sensors, splitting the drives and rewriting the logic is a fraction of the cost of new handling. Where a single long drive runs an entire run, splitting it mechanically may be necessary — the survey establishes which situation you are in before anything is quoted."
+          ]
+        },
+        {
+          "q": "How does it cope with a barcode that will not read?",
+          "a": [
+            "By having been told what to do in advance. The usual answer is a recirculation loop or a dedicated exception lane with the item flagged for manual handling, and the important part is that the item leaves the main flow promptly rather than stopping it. A no-read rate is also worth monitoring in its own right, because a rising one usually means a dirty scanner or a label quality problem upstream."
+          ]
+        },
+        {
+          "q": "Will this integrate with the warehouse system we already run?",
+          "a": [
+            "Normally yes, through whatever interface the WMS supports — a message queue, a database, a web service or a straightforward fieldbus link. What needs agreeing early is not the protocol but the behaviour: what the conveyor does when the WMS does not answer in time, and what the WMS is told when an item is diverted somewhere other than where it asked. Those two questions cause more integration trouble than the connection ever does."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Show us where your hall jams, and *we will zone it around your operation.*",
+      "body": "A flow and exception survey, a zoning and control design, and a cut-over plan that keeps you despatching throughout.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

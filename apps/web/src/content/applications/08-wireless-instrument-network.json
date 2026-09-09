@@ -5,7 +5,11 @@
   "cardTitle": "Wireless Instrument Network",
   "cardBlurb": "The measurement you want is four hundred metres from the nearest marshalling cabinet, across a bunded area. Wireless is what makes it affordable.",
   "cardImage": "industrial-slider.jpg",
-  "sectors": ["Oil & Gas", "Chemical", "Water"],
+  "sectors": [
+    "Oil & Gas",
+    "Chemical",
+    "Water"
+  ],
   "meta": {
     "title": "WirelessHART Instrument Networks in the UAE | General Tech Automation",
     "description": "How a wireless instrument network is designed and installed across a tank farm — site survey, mesh design, gateway integration and the points where cable still wins."
@@ -41,6 +45,39 @@
         "On a spread-out site, the instrument is cheap and the cable is not. A pressure transmitter costs a few thousand dirhams; getting a signal from it back to a marshalling cabinet four hundred metres away, across a bund, under a road and through a hazardous area classification, can cost many times that before anyone has measured anything. This is why so many useful measurements on tank farms, well pads and outlying pump stations simply never get made — not because nobody wanted the data, but because the trench was never going to be approved.",
         "**A wireless instrument network** removes the trench from the equation. Battery-powered field devices form a self-organising mesh, each one relaying for its neighbours, back to a gateway that presents everything to the control system as though it were wired. The instruments are the same instruments; what changes is how their readings get home."
       ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "No trench, *no cable tray*",
+      "intro": "The instruments are the same instruments you would have wired. What changes is that the signal finds its own way home.",
+      "nodes": [
+        {
+          "icon": "transmitter",
+          "title": "Field devices",
+          "note": "Pressure, level, temperature and flow, battery powered and Ex rated where the area demands"
+        },
+        {
+          "icon": "network",
+          "title": "A self-organising mesh",
+          "via": "WirelessHART, 2.4 GHz",
+          "note": "Every device relays for its neighbours, so a blocked path simply reroutes"
+        },
+        {
+          "icon": "gateway",
+          "title": "Gateway",
+          "via": "Mesh routing",
+          "note": "The one part that needs mains power and a wired path home"
+        },
+        {
+          "icon": "screen",
+          "title": "Your control system",
+          "via": "Modbus, OPC UA or HART-IP",
+          "note": "The devices appear to the DCS or PLC as though they were wired"
+        }
+      ],
+      "footnote": "Wireless is not the answer for closed-loop control or for a safety function. Those still get cable, and a good design says so plainly rather than selling you a mesh for everything."
     },
     {
       "type": "features",

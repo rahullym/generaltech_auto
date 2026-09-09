@@ -5,7 +5,11 @@
   "cardTitle": "Energy and Power Monitoring",
   "cardBlurb": "One meter at the incomer and one bill at the end of the month. Sub-metering turns a single number into a picture of where the electricity actually goes.",
   "cardImage": "digital-bg.jpg",
-  "sectors": ["Manufacturing", "Power", "Chemical"],
+  "sectors": [
+    "Manufacturing",
+    "Power",
+    "Chemical"
+  ],
   "meta": {
     "title": "Plant Energy and Power Monitoring UAE | General Tech Automation",
     "description": "How plant-wide energy monitoring is built — sub-metering at the distribution boards, power quality logging, and dashboards that tie consumption to production."
@@ -41,6 +45,39 @@
         "Most plants meter electricity once, at the incomer, because that is where the utility meters it. Everything downstream is an estimate: the production hall is assumed to be most of it, the chillers are assumed to be a lot, and the compressed air system is assumed to be efficient because it was when it was installed. When the bill goes up, the conversation is about tariffs, because nobody has a number to point at.",
         "**Sub-metering** replaces the estimate with measurement. Meters go on the distribution boards and on the large individual loads, readings are logged continuously, and consumption is broken down by area, by asset and by time. The first month of data almost always contains at least one genuine surprise — a load running through the night that nobody thought was on, or a machine drawing far more than its rating suggests it should."
       ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From the busbar *to a number per tonne*",
+      "intro": "Almost all of it installs inside existing switchgear, which is what makes it practical to fit on a plant that cannot stop.",
+      "nodes": [
+        {
+          "icon": "cable",
+          "title": "Split-core CTs",
+          "note": "Clipped around existing conductors without breaking them"
+        },
+        {
+          "icon": "meter",
+          "title": "Power meters at the boards",
+          "via": "CT secondaries",
+          "note": "Real and reactive power, power factor, harmonics and demand"
+        },
+        {
+          "icon": "gateway",
+          "title": "Gateway",
+          "via": "Modbus RTU or Ethernet",
+          "note": "Polls the meters and timestamps every reading"
+        },
+        {
+          "icon": "dashboard",
+          "title": "Dashboards and reports",
+          "via": "To SCADA, historian or cloud",
+          "note": "By area, by asset, and per batch or tonne produced"
+        }
+      ],
+      "footnote": "Meters are placed so the readings reconcile — every sub-meter under a parent, so an unmetered remainder shows up as a number instead of hiding. A flat set of meters that cannot be reconciled produces figures nobody trusts."
     },
     {
       "type": "features",

@@ -1,0 +1,225 @@
+{
+  "order": 15,
+  "title": "OEE and Downtime Monitoring on a Production Line",
+  "slug": "applications/oee-downtime-monitoring",
+  "cardTitle": "OEE and Downtime Monitoring",
+  "cardBlurb": "Everyone knows the line is slow and everyone has a different theory. Recording every stop with a reason ends the argument in about a fortnight.",
+  "cardImage": "digital-bg.jpg",
+  "sectors": [
+    "Manufacturing",
+    "Food & Beverage",
+    "Automotive"
+  ],
+  "meta": {
+    "title": "OEE and Downtime Monitoring for Production Lines UAE | General Tech Automation",
+    "description": "How OEE and downtime monitoring is put on a line — counting from the machines themselves, capturing a reason for every stop, and reporting losses that can be acted on."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "OEE and Downtime Monitoring *on a Production Line*",
+      "subheading": "Automatic Counting • Stop Reasons • Loss Analysis • Shift Reporting • UAE",
+      "image": "digital-bg.jpg",
+      "actions": [
+        {
+          "label": "Book a free line survey",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Every plant has a line everybody knows is underperforming, and every plant has three confident and incompatible explanations for why. Maintenance says it is the operators, operations says it is breakdowns, and planning says it is changeovers. The shift report records total output and a hand-written note about the afternoon, which is enough to sustain all three theories indefinitely.",
+        "**Downtime monitoring** replaces the theories with a record. The line counts itself, every stop longer than a few seconds is captured automatically, and the operator attributes a reason to it from a short list. Within a couple of weeks the losses are ranked by the hours they actually cost, and the argument is over — usually with an answer nobody had put first."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a stopped machine *to a ranked list of losses*",
+      "intro": "The counting is automatic; the reason is not. That division of labour is what makes the data both accurate and meaningful.",
+      "nodes": [
+        {
+          "icon": "sensor",
+          "title": "Count and state from the machine",
+          "note": "An existing PLC signal, or a photocell and a run contact where there is none"
+        },
+        {
+          "icon": "cpu",
+          "title": "Edge device on the line",
+          "via": "Fieldbus or hardwired",
+          "note": "Detects a stop the moment it happens and starts timing it"
+        },
+        {
+          "icon": "screen",
+          "title": "The operator names the stop",
+          "via": "Shop-floor terminal",
+          "note": "A short list of reasons, chosen in seconds, not a free-text box"
+        },
+        {
+          "icon": "dashboard",
+          "title": "Loss analysis",
+          "via": "Ethernet or Wi-Fi",
+          "note": "Availability, performance and quality, and the top losses by hours lost"
+        },
+        {
+          "icon": "clipboard",
+          "title": "A shift review that has evidence",
+          "via": "Scheduled report",
+          "note": "The same numbers for every shift, produced without anyone compiling them"
+        }
+      ],
+      "footnote": "Keep the reason list short and written in the operators' own words. A list of forty options is a list that gets scrolled past, and the reason chosen becomes whichever one is at the top."
+    },
+    {
+      "type": "features",
+      "heading": "What it takes *to instrument a line*",
+      "intro": "Far less than most people expect. The machines already know almost everything the system needs.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "cpu",
+          "title": "Signals the line already produces",
+          "description": "A run contact, a fault output and a count pulse are usually available from an existing PLC or starter, and taking them costs a few terminals. Where a machine offers nothing, a photocell on the product stream and a current sensor on the motor will establish running and counting without touching the machine's own controls at all."
+        },
+        {
+          "icon": "screen",
+          "title": "A terminal the operator will actually use",
+          "description": "Mounted where the stop happens, not in an office. Stops appear on it as they occur, unattributed ones queue up, and a reason is two taps away. If naming a stop takes longer than clearing it, the data will be attributed to whatever is quickest rather than to what happened."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Availability, performance and quality",
+          "description": "OEE split into its three components, because the composite number on its own tells you that the line is at sixty-one per cent and nothing about what to do. The useful output is the ranked loss list underneath it: which reason, how many hours, on which shift."
+        },
+        {
+          "icon": "clipboard",
+          "title": "Reporting into the routine that exists",
+          "description": "A shift handover report and a weekly loss summary, produced automatically and formatted for the meeting that already happens. A system that requires a new meeting to be useful tends not to survive its first busy month."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Getting numbers *people believe*",
+      "intro": "The technical work is straightforward. The part that decides whether it succeeds is getting the shop floor to trust what it says.",
+      "steps": [
+        {
+          "meta": "Agree",
+          "title": "Define a stop and agree the reasons",
+          "description": "How long a pause has to last before it counts, what the ideal cycle rate is, and the short list of reasons — written with the operators and in their language. Definitions imposed from an office produce numbers the floor disputes, and disputed numbers change nothing."
+        },
+        {
+          "meta": "Connect",
+          "title": "Take the signals",
+          "description": "Count and state from the existing controls where possible, sensors where not. Nothing is changed inside the machines; the monitoring sits alongside them and reads."
+        },
+        {
+          "meta": "Run",
+          "title": "Two weeks with no targets attached",
+          "description": "Data collected and shown to the line, with the explicit understanding that nobody is being measured yet. This is when miscounts and misattributions get found and fixed, and it is when the shop floor decides whether the system is a tool or a stick."
+        },
+        {
+          "meta": "Use",
+          "title": "Attack the top loss, then re-measure",
+          "description": "The ranked list is worked from the top, one loss at a time, and the effect is visible in the same numbers. Doing this once in public is what makes the system permanent — everybody sees a change they made move the figure."
+        }
+      ],
+      "footnote": "A monitoring system introduced as a performance-management tool measures how well operators can defeat a monitoring system."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What the data *settles*",
+      "body": [
+        "Which losses actually cost hours, ranked, rather than which ones are most visible or most recently complained about.",
+        "Whether the problem is breakdowns, minor stops, changeovers or speed loss — four different problems that a single output figure hides.",
+        "How the same line performs across shifts and products, which is often where the largest and least discussed variation sits.",
+        "Whether an improvement worked, measured on the same basis as before it.",
+        "A defensible baseline for capacity planning, so a decision about buying another machine starts from the real number."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Lines where the output *is lower than it should be*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Assembly and process lines where the shift report has been a total and a comment for as long as anyone can remember."
+        },
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "High-speed packing lines that lose most of their capacity to short, frequent stops nobody logs individually because each one is trivial."
+        },
+        {
+          "name": "Automotive",
+          "icon": "automotive",
+          "description": "Cells with a fixed takt time, where a small persistent loss compounds across a shift and shows up as a shortfall against plan."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about OEE monitoring*",
+      "items": [
+        {
+          "q": "Will our operators accept being monitored?",
+          "a": [
+            "That depends entirely on how it is introduced. A system presented as a way of proving which machine keeps letting the shift down gets cooperation; one presented as a way of seeing who is slow does not, and it will produce data to match. The two-week period with no targets attached exists for exactly this reason, and skipping it is the most reliable way to make the project fail."
+          ]
+        },
+        {
+          "q": "Do we need to modify the machines?",
+          "a": [
+            "No. The signals are read from what the machines already produce — a run contact, a fault relay, a count pulse — or picked up by sensors mounted on the outside. Nothing is changed inside a machine's own controls, which also means no supplier warranty is affected and no machine has to be re-proved."
+          ]
+        },
+        {
+          "q": "Is OEE the right measure for us?",
+          "a": [
+            "The composite number is often less useful than its parts, and on some lines it is actively misleading — a line deliberately run below capacity to match demand will score poorly while doing exactly what it should. The ranked downtime list is valuable on almost any line; the single OEE figure is worth reporting only where somebody will act on it."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Point us at the line everyone argues about, and *we will let it settle the argument.*",
+      "body": "A survey of the available signals, a reason list agreed with your operators, and two weeks of data before anyone sets a target.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

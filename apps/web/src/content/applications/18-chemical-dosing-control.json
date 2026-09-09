@@ -1,0 +1,224 @@
+{
+  "order": 18,
+  "title": "Automatic Chemical Dosing Control",
+  "slug": "applications/chemical-dosing-control",
+  "cardTitle": "Chemical Dosing Control",
+  "cardBlurb": "A dosing pump set to a stroke rate somebody chose in 2019, and a residual that is either wasteful or out of specification. Dosing to the measurement instead.",
+  "cardImage": "DeltaV.jpg",
+  "sectors": [
+    "Water",
+    "Chemical",
+    "Food & Beverage"
+  ],
+  "meta": {
+    "title": "Automatic Chemical Dosing Control in the UAE | General Tech Automation",
+    "description": "How chemical dosing is automated — analysers for residual and pH, flow-paced and feedback control, dosing pump integration, and alarms that catch a failed dose."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Automatic *Chemical Dosing Control*",
+      "subheading": "Residual & pH Analysers • Flow Pacing • Feedback Control • Dose Verification • UAE",
+      "image": "DeltaV.jpg",
+      "actions": [
+        {
+          "label": "Book a free dosing survey",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "oil-refinery.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Manual dosing is dosing for the worst case. Somebody sets the pump at a stroke rate that will keep the residual in specification even when the flow is highest and the demand greatest, and it stays there — which means that for most of the week the plant is overdosing, and on the day conditions change unexpectedly it is underdosing without anyone knowing until a sample comes back.",
+        "**Automatic dosing** ties the pump to a measurement. Flow pacing scales the dose to the volume being treated, feedback from an analyser trims it to hold the actual residual or pH at set point, and a verification check confirms that chemical is genuinely being delivered. The chemical bill falls, the specification is held more tightly, and a failed dose becomes an alarm rather than a laboratory result three days later."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From the flow meter *to a residual that holds*",
+      "intro": "Two control actions working together: the flow sets the rough dose immediately, and the analyser corrects it slowly. Neither works well alone.",
+      "nodes": [
+        {
+          "icon": "flow",
+          "title": "Flow meter",
+          "note": "Paces the dose to the volume being treated, responding immediately"
+        },
+        {
+          "icon": "sensor",
+          "title": "Analyser",
+          "via": "Sample line or in-line",
+          "note": "Residual chlorine, pH, conductivity or turbidity, downstream of mixing"
+        },
+        {
+          "icon": "cpu",
+          "title": "Controller",
+          "via": "4-20mA",
+          "note": "Feed-forward from flow, feedback trim from the analyser, with limits"
+        },
+        {
+          "icon": "pump",
+          "title": "Dosing pump",
+          "via": "4-20mA or pulse",
+          "note": "Speed or stroke controlled, within a safe minimum and maximum"
+        },
+        {
+          "icon": "alert",
+          "title": "Verification and alarms",
+          "via": "Loss-of-flow and tank level",
+          "note": "Proof that chemical actually moved, not just that the pump was told to run"
+        }
+      ],
+      "footnote": "The last stage is the one that gets left out and the one that matters most. A dosing pump running with an airlocked suction, an empty tank or a failed diaphragm reports itself as running perfectly."
+    },
+    {
+      "type": "features",
+      "heading": "What the loop *needs*",
+      "intro": "Dosing loops fail more often through poor sample lines and unverified delivery than through poor control algorithms.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "sensor",
+          "title": "An analyser that sees the truth",
+          "description": "Residual chlorine, pH, ORP, conductivity or turbidity, sited downstream of the injection point with enough distance and turbulence for mixing to have finished. Too close and it reads a slug of neat chemical; too far and the loop is too slow to control. Sample line length, flow rate and cleaning arrangements decide whether the reading is usable, and they are worth more attention than the analyser's specification."
+        },
+        {
+          "icon": "flow",
+          "title": "Flow pacing as the feed-forward",
+          "description": "Scaling the dose to the treated flow deals with the largest and fastest disturbance immediately, before the analyser has even noticed it. Feedback alone on a plant with variable flow is always chasing, and the result is an oscillating residual and an operator who eventually puts it back on manual."
+        },
+        {
+          "icon": "pump",
+          "title": "Dosing pumps under real control",
+          "description": "Speed or stroke controlled from 4-20mA or a pulse train, with minimum and maximum limits set so the loop cannot demand a dose the plant should never receive. Chemical compatibility of every wetted part, correct backpressure, and degassing arrangements for chemicals that off-gas are what determine whether the pump still doses accurately in six months."
+        },
+        {
+          "icon": "shield",
+          "title": "Verification and containment",
+          "description": "Loss-of-flow detection on the dosing line, tank level with a low alarm, and bunding and leak detection appropriate to the chemical. Overdose protection is an independent limit, not a software clamp inside the same controller that is calculating the dose."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Automating a dose *that is already being made*",
+      "intro": "The plant keeps treating throughout. Each step below is designed so the loop is trusted before it is left alone.",
+      "steps": [
+        {
+          "meta": "Establish",
+          "title": "Measure what is happening now",
+          "description": "Actual flow range, current dose rate, residual against time, and how far the plant already drifts. This establishes both the size of the prize and the control range the loop needs, and it occasionally shows that the existing dosing is fine and the problem is elsewhere."
+        },
+        {
+          "meta": "Design",
+          "title": "Site the analyser and the injection point",
+          "description": "Where chemical is injected, where mixing completes, and where the sample is drawn — decided together, because the dead time between them sets what the loop can achieve. This is the single decision that most determines whether the finished loop is stable."
+        },
+        {
+          "meta": "Install",
+          "title": "Fit the instruments and the control",
+          "description": "Analyser, sample line, flow meter and pump control wired to the controller, with verification instrumentation on the dosing line and the tank. Chemical handling, bunding and safety showers are checked as part of the work rather than assumed."
+        },
+        {
+          "meta": "Tune",
+          "title": "Run in manual, then close the loop",
+          "description": "The loop is run open with the controller calculating but not acting, so its output can be compared against what an experienced operator would do. Only when the two agree is it closed, and the alarms are proved by deliberately emptying a tank and airlocking a suction."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What automatic dosing *changes*",
+      "body": [
+        "Chemical consumption falls, because the plant stops dosing continuously for a worst case that occurs occasionally.",
+        "The residual or pH holds closer to set point, which is what the specification actually asks for.",
+        "A failed dose raises an alarm within minutes instead of appearing in a laboratory result days later.",
+        "Operators stop adjusting a stroke dial by judgement, and start responding to a plant that tells them when it needs them.",
+        "Dose, flow and residual are recorded together, which is what regulatory reporting and any subsequent investigation both need."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Processes that *dose continuously*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Water and Wastewater",
+          "icon": "water",
+          "description": "Chlorination, pH correction, coagulant and polymer dosing, where the residual is a compliance limit and the flow varies through the day."
+        },
+        {
+          "name": "Chemical Processing",
+          "icon": "chemical",
+          "description": "Neutralisation, inhibitor and additive dosing where the chemical is expensive enough that overdosing is a direct and continuous cost."
+        },
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "CIP chemical concentration and process water treatment, where consistency between cleans matters as much as the average."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about dosing control*",
+      "items": [
+        {
+          "q": "Is flow pacing enough on its own?",
+          "a": [
+            "It is a large improvement over a fixed rate and on a stable feed it is often sufficient. It corrects for volume but not for changes in demand — a raw water whose quality varies, or a process whose loading changes — so where the specification is tight or the feed varies in character, feedback from an analyser is what holds the residual rather than approximating it. Many plants start with pacing and add the analyser once the benefit is proved."
+          ]
+        },
+        {
+          "q": "Our analyser readings drift. Will the loop chase them?",
+          "a": [
+            "It will, which is why the analyser's maintenance is part of the design rather than an afterthought. Sample line cleaning, reagent replacement and calibration go on a schedule, and the controller is given rate and range limits so a drifting or failed analyser cannot drive the dose to an extreme. A comparison against a manual sample at a set interval is the check that catches slow drift before it becomes a dosing problem."
+          ]
+        },
+        {
+          "q": "Can our existing dosing pumps be used?",
+          "a": [
+            "Usually, if they accept an external signal and their capacity suits the range the loop needs. Many installed pumps are oversized because they were selected for a worst case, and a pump running at five per cent of stroke will not dose accurately or repeatably — in which case a correctly sized pump is a better investment than a controller trying to compensate for one that is too big."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us what you dose and how you set it today, and *we will measure the loop before we change it.*",
+      "body": "A survey of flow, dose and residual as they are now, and a control design with the analyser sited where it can actually work.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

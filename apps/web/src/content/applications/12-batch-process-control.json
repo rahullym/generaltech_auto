@@ -1,0 +1,224 @@
+{
+  "order": 12,
+  "title": "Batch Process Control and Recipe Management",
+  "slug": "applications/batch-process-control",
+  "cardTitle": "Batch and Recipe Control",
+  "cardBlurb": "The same product made three ways by three shifts, and the record written on a clipboard. Recipes in the controller and a batch record that writes itself.",
+  "cardImage": "operator-control-panel.jpg",
+  "sectors": [
+    "Pharmaceutical",
+    "Food & Beverage",
+    "Chemical"
+  ],
+  "meta": {
+    "title": "Batch Process Control and Recipe Management UAE | General Tech Automation",
+    "description": "How batch control is put on a process — recipes held in the controller, phases and interlocks, and an electronic batch record produced as the batch runs."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Batch Process Control *and Recipe Management*",
+      "subheading": "Recipes • Phases & Interlocks • Electronic Batch Records • Dubai • Sharjah • Abu Dhabi",
+      "image": "operator-control-panel.jpg",
+      "actions": [
+        {
+          "label": "Book a free process review",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "DeltaV.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "A batch process run from a laminated sheet is a process that varies with whoever is running it. The night shift adds the acid a little faster, one operator holds the mix two minutes longer than the sheet says because it has always come out better that way, and the record of what actually happened is a clipboard filled in from memory at the end of the shift. When a batch fails, there is nothing to investigate.",
+        "**Batch control** puts the recipe in the controller. Set points, sequences, ramp rates and hold times are parameters of a named recipe rather than instructions to a person, the equipment executes them the same way every time, and the record is generated as the batch runs rather than written up afterwards. What the operator does becomes selecting the right recipe and responding to what the process asks for."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a recipe *to a record that wrote itself*",
+      "intro": "The structure matters more than the hardware. A recipe is data, phases are reusable equipment behaviour, and the record is a by-product of running them.",
+      "nodes": [
+        {
+          "icon": "clipboard",
+          "title": "The recipe",
+          "note": "Set points, ramp rates, hold times and tolerances, versioned and approved"
+        },
+        {
+          "icon": "cpu",
+          "title": "The batch controller",
+          "via": "Recipe download",
+          "note": "Runs the phases in order, holds the interlocks and handles the exceptions"
+        },
+        {
+          "icon": "valve",
+          "title": "Vessels, valves and instruments",
+          "via": "Field I/O",
+          "note": "Weighing, dosing, agitation, jacket heating and cooling"
+        },
+        {
+          "icon": "screen",
+          "title": "The operator's screen",
+          "via": "Ethernet",
+          "note": "Which phase, what it is waiting for, and what the operator must confirm"
+        },
+        {
+          "icon": "database",
+          "title": "The batch record",
+          "via": "Historian or MES",
+          "note": "Every set point, actual value, deviation and signature, per batch"
+        }
+      ],
+      "footnote": "Structuring the control as reusable phases — charge, heat, hold, cool, discharge — is what lets a new product become a new recipe rather than a new programming project."
+    },
+    {
+      "type": "features",
+      "heading": "What the system *is built from*",
+      "intro": "The design borrows the structure of ISA-88 whether or not the site formally adopts it, because separating the recipe from the equipment is what makes the next product cheap.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "clipboard",
+          "title": "Recipes as data, not code",
+          "description": "A recipe is a set of parameters against a named procedure, held where it can be viewed, versioned and approved without a programming change. That separation is the whole point: adding a product or adjusting a hold time becomes a controlled data change rather than a request to a control engineer and a revalidation of the program."
+        },
+        {
+          "icon": "cpu",
+          "title": "Phases and equipment modules",
+          "description": "Charge, heat, hold, cool, transfer and discharge are written once as reusable phases, each knowing how to run its own equipment safely and how to stop. A new recipe assembles existing phases in a new order with new parameters, which is why the second product costs a fraction of the first."
+        },
+        {
+          "icon": "shield",
+          "title": "Interlocks and exception handling",
+          "description": "What happens when a valve does not confirm, a temperature will not reach set point, or an operator holds a batch mid-phase. Deciding this deliberately — hold, abort, or wait for a decision — is most of the engineering, and it is what stops a plant improvising during a deviation."
+        },
+        {
+          "icon": "database",
+          "title": "The batch record",
+          "description": "Set point against actual for every phase, every deviation with its acknowledgement, every manual intervention and every operator signature, tied to a batch and a recipe version. Where an MES or historian exists it lands there; where one does not, a signed report per batch covers most requirements."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Automating a process *that is already making product*",
+      "intro": "The plant keeps producing throughout. The sequence below is designed so that the automation is proved before it is trusted with a real batch.",
+      "steps": [
+        {
+          "meta": "Define",
+          "title": "Write the process down",
+          "description": "The procedure as it is actually run, not as the original sheet describes it — including the adjustments operators make and why. This document is the specification, and getting the undocumented practice into it is the part that determines whether the automated version makes the same product."
+        },
+        {
+          "meta": "Structure",
+          "title": "Split recipe from equipment",
+          "description": "Which values are recipe parameters and which are properties of the vessel. Get this line in the wrong place and every new product needs an engineer; get it right and a new product is a form somebody fills in."
+        },
+        {
+          "meta": "Prove",
+          "title": "Test against simulation, then water",
+          "description": "Phases and interlocks are exercised against simulated I/O, then run on the real plant with water or an inert charge. Every deviation path is triggered deliberately — this is where you find out what the system does when a valve sticks, at no cost."
+        },
+        {
+          "meta": "Run",
+          "title": "Parallel batches, then handover",
+          "description": "The first production batches run with the paper record kept alongside the electronic one and the two compared. When they agree, the paper stops. Operators and QA are trained on the recipe management before that point, not after."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What consistency *is worth*",
+      "body": [
+        "The same product from every shift, because the sequence no longer depends on who is running it.",
+        "A batch record that exists whether or not anyone remembered to write one, tied to the recipe version that produced it.",
+        "Deviation investigations that read a log rather than reconstruct a story.",
+        "A new product introduced as a recipe and a trial rather than as a control system project.",
+        "Yield and cycle time visible per batch, which is what makes process improvement measurable instead of anecdotal."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Processes made *in batches*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Pharmaceutical",
+          "icon": "pharma",
+          "description": "Where the batch record is a regulatory artefact and recipe version control is inspected, so the structure of the system matters as much as its behaviour."
+        },
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "Mixing, cooking, fermentation and CIP, where consistency between shifts is the difference between a specification and a range."
+        },
+        {
+          "name": "Chemical Processing",
+          "icon": "chemical",
+          "description": "Reactor and blending operations where exothermic steps make the interlock and exception design a safety matter, not only a quality one."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about batch control*",
+      "items": [
+        {
+          "q": "Do we have to replace our existing controls?",
+          "a": [
+            "Often not. Where the plant already has a capable PLC or DCS with sound field instrumentation, batch control is largely a structuring and programming exercise on what is there. Replacement becomes the answer when the existing controller is out of support or has no capacity left, which is a migration question rather than a batch question."
+          ]
+        },
+        {
+          "q": "Does this have to comply with ISA-88?",
+          "a": [
+            "The standard is a way of thinking about the problem more than a certification to hold. Sites that adopt its structure — separating recipes from equipment, building reusable phases — get the benefit whether or not they ever say the number out loud. Formal compliance matters most where a customer or a regulator asks for it explicitly."
+          ]
+        },
+        {
+          "q": "Our operators know the process better than any recipe. Will this make things worse?",
+          "a": [
+            "It should capture what they know rather than override it. The definition step exists precisely to get the undocumented adjustments into the specification, because a system that automates the written procedure while ignoring what the experienced operator actually does will make a worse product very consistently. Their knowledge becomes the recipe rather than being lost when they retire."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us how your batches are run today, and *we will write down what they actually do.*",
+      "body": "A process definition workshop, a recipe and phase structure, and a proving plan that keeps you producing throughout.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

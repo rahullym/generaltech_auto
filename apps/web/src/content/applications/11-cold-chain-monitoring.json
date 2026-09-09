@@ -1,0 +1,224 @@
+{
+  "order": 11,
+  "title": "Temperature Monitoring for Cold Stores and Cold Chain",
+  "slug": "applications/cold-chain-monitoring",
+  "cardTitle": "Cold Chain Monitoring",
+  "cardBlurb": "A chart recorder nobody reads and a door somebody left open. Continuous temperature logging with alarms that arrive before the stock is written off.",
+  "cardImage": "panel-inspection.jpg",
+  "sectors": [
+    "Food & Beverage",
+    "Pharmaceutical",
+    "Logistics"
+  ],
+  "meta": {
+    "title": "Cold Store and Cold Chain Temperature Monitoring UAE | General Tech Automation",
+    "description": "How continuous temperature monitoring is put on cold stores and chillers — calibrated probes, wireless logging, escalating alarms and audit-ready records."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Temperature Monitoring *for Cold Stores and Cold Chain*",
+      "subheading": "Calibrated Probes • Continuous Logging • Escalating Alarms • Audit Records • UAE",
+      "image": "panel-inspection.jpg",
+      "actions": [
+        {
+          "label": "Book a free store assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Cold storage fails quietly and at the worst possible time. A condenser fan seizes on a Thursday evening, the store climbs slowly over the long weekend, and the first person to know is whoever opens the door on Sunday. The chart recorder on the wall has faithfully recorded the whole thing, which is useful for the insurance claim and useless for preventing it.",
+        "**Continuous monitoring with alarms** changes what the record is for. Calibrated probes in the positions that actually matter, readings logged every few minutes, and a threshold that raises an alarm to a named person while there is still time to act. The audit trail comes free — it is the same data — but the point of the system is the phone ringing on Thursday evening."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From the warmest shelf *to somebody's phone at 11pm*",
+      "intro": "The whole design question is where the probes go and who the alarm reaches. Everything between those two is ordinary.",
+      "nodes": [
+        {
+          "icon": "thermometer",
+          "title": "Calibrated probes",
+          "note": "Placed at the warmest points found by mapping, not at the point that was convenient"
+        },
+        {
+          "icon": "gateway",
+          "title": "Wireless nodes and gateway",
+          "via": "Sub-GHz or 2.4 GHz",
+          "note": "Battery powered, so a store needs no cabling or door penetrations"
+        },
+        {
+          "icon": "cloud",
+          "title": "Logging platform",
+          "via": "Ethernet or cellular",
+          "note": "Readings every few minutes, retained for the period your auditor requires"
+        },
+        {
+          "icon": "alert",
+          "title": "Escalating alarm",
+          "via": "SMS, call and email",
+          "note": "To a rota, with a delay so a defrost cycle does not wake anyone"
+        },
+        {
+          "icon": "clipboard",
+          "title": "Audit-ready records",
+          "via": "Scheduled export",
+          "note": "Signed reports and excursion logs, produced without anyone transcribing a chart"
+        }
+      ],
+      "footnote": "The alarm delay is the setting that decides whether the system gets trusted. Too short and a normal defrost triggers a call-out; too long and a genuine failure gets a head start."
+    },
+    {
+      "type": "features",
+      "heading": "What the system *is made of*",
+      "intro": "Wireless is the norm here, because a cold store is exactly the sort of structure you do not want to drill for cable.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "thermometer",
+          "title": "Probes, calibrated and certified",
+          "description": "PT100 or PT1000 probes with a calibration certificate, and a re-calibration interval that is scheduled rather than remembered. In a regulated store the certificate is part of the record, and an uncalibrated probe makes the whole log inadmissible however diligently it was collected."
+        },
+        {
+          "icon": "signal",
+          "title": "Wireless nodes",
+          "description": "Battery-powered transmitters mean no cable penetrations through insulated panels, which is both cheaper and better for the fabric of the store. Range and battery life in a metal-lined cold room are the real design constraints, and they are settled by a survey inside the store rather than from a datasheet."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Door, defrost and plant signals",
+          "description": "Temperature alone produces false alarms. Bringing in the door contact and the defrost signal lets the system distinguish a door held open by a forklift from a compressor that has stopped, and alarm on the one that matters. Condenser and compressor status turn a temperature alarm into a diagnosis."
+        },
+        {
+          "icon": "clipboard",
+          "title": "Reporting built for an audit",
+          "description": "Scheduled reports, excursion logs with acknowledgement and comment, and retention for the period your standard requires. The value of this is not the report itself but that nobody has to spend a morning photographing chart paper before an inspection."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Getting it right *before it is trusted*",
+      "intro": "A temperature system is trusted or ignored, and the difference is decided in the first two steps.",
+      "steps": [
+        {
+          "meta": "Map",
+          "title": "Find the warm spots",
+          "description": "A temperature mapping exercise with a grid of loggers, run over a normal operating cycle with the store loaded. It finds the positions that actually run warmest, which are rarely where anybody would have guessed and almost never where the original sensor was fitted."
+        },
+        {
+          "meta": "Install",
+          "title": "Fit probes and nodes",
+          "description": "Probes go at the mapped positions, nodes are placed for reliable radio inside a metal-lined room, and door and defrost signals are picked up from the refrigeration panel. Everything is labelled to the same scheme as the store's own asset register."
+        },
+        {
+          "meta": "Tune",
+          "title": "Set thresholds against real behaviour",
+          "description": "Alarm limits and delays are set after watching a week of normal running, including defrost cycles and the daily loading pattern. This is where false alarms are designed out, and it is what stops the system being muted in month two."
+        },
+        {
+          "meta": "Prove",
+          "title": "Test the alarm to a person",
+          "description": "Every alarm path is triggered deliberately and confirmed to have reached a human being who can act, at the hour it would actually happen. Validation documents and calibration certificates are handed over as part of the pack."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What it protects",
+      "body": [
+        "Stock, by giving a maintenance team hours of warning instead of a discovery on Monday morning.",
+        "The audit, because the record is continuous, calibrated and exportable rather than a roll of chart paper.",
+        "Staff time, since nobody walks a route with a clipboard to write down numbers a logger already has.",
+        "Refrigeration plant, because a store that is drifting warm is usually a plant fault visible in the trend well before the temperature breaches.",
+        "The excursion investigation, which becomes a matter of reading a log rather than reconstructing what might have happened."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Where the temperature *is the product*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "Chilled and frozen stores, blast freezers and process rooms where a documented cold chain is a customer requirement as much as a food safety one."
+        },
+        {
+          "name": "Pharmaceutical",
+          "icon": "pharma",
+          "description": "Controlled storage where mapping, calibration and excursion records are inspected, and where the value of a single store's contents justifies the system several times over."
+        },
+        {
+          "name": "Warehousing and Logistics",
+          "icon": "logistics",
+          "description": "Third-party cold storage holding other people's stock, where the ability to produce a record on demand is part of what is being sold."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about temperature monitoring*",
+      "items": [
+        {
+          "q": "We already have a chart recorder. Why change?",
+          "a": [
+            "A chart recorder records; it does not alert. It tells you accurately, afterwards, exactly how long the store was out of specification, which is the one thing you did not want to find out. It also has to be read, changed and filed by a person. If the recorder is satisfying an audit requirement it can often stay, with the monitoring system added alongside it for the alarming."
+          ]
+        },
+        {
+          "q": "How many probes does a store need?",
+          "a": [
+            "The mapping exercise answers that rather than a rule of thumb. A small uniform store may genuinely need two; a large one with racking, multiple evaporators and a busy door will need more, placed at the positions the mapping showed to be worst. Fitting a single probe near the door and calling the store monitored is the common mistake."
+          ]
+        },
+        {
+          "q": "Will it survive being knocked by a forklift?",
+          "a": [
+            "The probes and nodes are chosen and positioned for the traffic in the room, which is a genuine design constraint in a busy store rather than an afterthought. Guarding and placement out of the racking lines does most of the work, and a node that stops reporting raises its own alarm, so damage is discovered rather than silently tolerated."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us what you store and what it must stay below, and *we will map it first.*",
+      "body": "A temperature mapping exercise, a probe layout based on what it finds, and alarms proved to reach a person.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

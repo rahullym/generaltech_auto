@@ -1,0 +1,224 @@
+{
+  "order": 16,
+  "title": "Furnace and Oven Temperature Control and Profiling",
+  "slug": "applications/furnace-temperature-control",
+  "cardTitle": "Furnace and Oven Control",
+  "cardBlurb": "Thermocouples that have drifted, zones fighting each other, and a profile nobody has surveyed in years. Getting the temperature you think you have.",
+  "cardImage": "7_1.jpg",
+  "sectors": [
+    "Metals",
+    "Manufacturing",
+    "Pharmaceutical"
+  ],
+  "meta": {
+    "title": "Furnace and Oven Temperature Control in the UAE | General Tech Automation",
+    "description": "How furnace and oven temperature control is put right — thermocouple selection and drift, multi-zone tuning, temperature uniformity surveys and recorded profiles."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Furnace and Oven *Temperature Control and Profiling*",
+      "subheading": "Thermocouples • Multi-Zone Tuning • Uniformity Surveys • Recorded Profiles • UAE",
+      "image": "7_1.jpg",
+      "actions": [
+        {
+          "label": "Book a free furnace assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "factory-about.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "A furnace controller displays a number with great confidence, and that number is only as good as the thermocouple behind it. Thermocouples drift, particularly the base-metal types working near the top of their range, and they drift in one direction: reading low. The controller compensates by putting in more heat, the display still says eight hundred and fifty, and the work is being processed somewhere else entirely.",
+        "**Getting furnace control right** is mostly about trusting the measurement and then knowing what the space inside actually does. Sound thermocouples in the right positions, zones tuned so they cooperate rather than fight, a uniformity survey that establishes what the working volume is really doing, and a recorded profile per batch so the process can be shown as well as claimed."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a thermocouple *to a profile you can produce*",
+      "intro": "Each stage can quietly lie to the one after it. The design and the commissioning are about making sure none of them does.",
+      "nodes": [
+        {
+          "icon": "thermometer",
+          "title": "Thermocouples",
+          "note": "Type and sheath chosen for the range and atmosphere, with a replacement interval"
+        },
+        {
+          "icon": "cpu",
+          "title": "Multi-zone controller",
+          "via": "Compensating cable",
+          "note": "One loop per zone, tuned so zones do not fight across the boundaries"
+        },
+        {
+          "icon": "cabinet",
+          "title": "Power control",
+          "via": "4-20mA or logic",
+          "note": "Thyristor stacks or burner control, and the interlocks around them"
+        },
+        {
+          "icon": "screen",
+          "title": "Profile and setpoint programmer",
+          "via": "Ethernet",
+          "note": "Ramps, soaks and dwell times run as a stored profile, not set by hand"
+        },
+        {
+          "icon": "database",
+          "title": "Recorded chart per batch",
+          "via": "Historian or recorder",
+          "note": "What the work actually saw, retained and exportable"
+        }
+      ],
+      "footnote": "A temperature uniformity survey sits alongside all of this: a grid of test thermocouples through the working volume, proving what the space does rather than what the control thermocouple reports."
+    },
+    {
+      "type": "features",
+      "heading": "What the work *covers*",
+      "intro": "Some of this is instrumentation, some is control, and some is simply establishing the truth about a furnace nobody has surveyed in a decade.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "thermometer",
+          "title": "Thermocouples and their drift",
+          "description": "Type K is cheap and drifts; type N and the noble-metal types cost more and hold calibration far better at high temperature. Sheath material has to suit the atmosphere as well as the temperature. Most importantly, thermocouples become a scheduled replacement item with a documented interval, because a drifted thermocouple gives no symptom at all until the metallurgy or the product tells you."
+        },
+        {
+          "icon": "cpu",
+          "title": "Multi-zone control that cooperates",
+          "description": "Adjacent zones share heat across their boundaries, so tuning them independently produces zones that hunt against each other indefinitely. They are tuned together, with the interaction accounted for, and cascade control is used where the work temperature matters more than the air temperature around it."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Power control and safety",
+          "description": "Thyristor stacks with the right firing mode for the elements, or burner management with the interlocks and proving sequences the fuel demands. Over-temperature protection is an independent circuit with its own sensor — not a software limit inside the controller that is doing the heating."
+        },
+        {
+          "icon": "clipboard",
+          "title": "Uniformity surveys and recorded profiles",
+          "description": "A survey establishes what the working volume does across its range, which is the basis of any claim about where work can be placed. Profiles then run as stored programs with the actual chart recorded per batch, so the process can be evidenced rather than described."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Establishing what the furnace *actually does*",
+      "intro": "The order below is deliberate: there is no point tuning a loop that is following a thermocouple which is lying to it.",
+      "steps": [
+        {
+          "meta": "Verify",
+          "title": "Check the measurement first",
+          "description": "Every control and over-temperature thermocouple checked against a calibrated reference, compensating cable verified for correct type and polarity, and cold junction compensation confirmed. Reversed compensating cable is common, entirely invisible on the display, and makes everything downstream meaningless."
+        },
+        {
+          "meta": "Survey",
+          "title": "Map the working volume",
+          "description": "A grid of test thermocouples through the usable space, run at the temperatures the furnace works at, loaded as it would be in production. The result defines where work can actually be placed and what tolerance can honestly be claimed."
+        },
+        {
+          "meta": "Tune",
+          "title": "Tune the zones together",
+          "description": "Loops tuned with their interaction accounted for, ramp rates set to what the furnace and the work can take, and overshoot on approach to soak eliminated — which is where a surprising amount of scrap is made on a furnace that looks well controlled at steady state."
+        },
+        {
+          "meta": "Record",
+          "title": "Profiles, alarms and the chart",
+          "description": "Programs entered as stored profiles rather than set by hand each time, deviation alarms set against the survey results, and recording configured so every batch produces its chart automatically. Then the survey is repeated at the interval the process requires."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What accurate control *is worth*",
+      "body": [
+        "Work processed at the temperature the specification calls for, rather than at whatever a drifted thermocouple has been quietly requesting.",
+        "A known, surveyed working volume, so parts are placed where the furnace can actually hold them.",
+        "Less scrap from overshoot on approach to soak, which steady-state performance figures conceal entirely.",
+        "Fuel or element energy proportional to the work, instead of to a measurement error.",
+        "A recorded chart per batch, which is what a customer or an auditor asks for and what a failure investigation needs."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Processes where *temperature is the process*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Metals and Heat Treatment",
+          "icon": "construction",
+          "description": "Hardening, tempering, annealing and stress relief, where uniformity surveys and recorded charts are routinely required by the customer."
+        },
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Curing, drying and paint ovens where the profile determines the finish, and where a zone that has quietly drifted shows up as a quality problem first."
+        },
+        {
+          "name": "Pharmaceutical",
+          "icon": "pharma",
+          "description": "Depyrogenation and drying, where mapping, calibration records and batch charts are part of the qualification rather than an optional extra."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about furnace control*",
+      "items": [
+        {
+          "q": "How often should thermocouples be replaced?",
+          "a": [
+            "It depends on type, temperature and atmosphere far more than on elapsed time — a base-metal thermocouple worked near the top of its range in an aggressive atmosphere may need replacing several times as often as the same type running gently. The practical approach is to check against a calibrated reference at a set interval and use the observed drift to set a replacement schedule for your own furnace, rather than adopting a number from a general recommendation."
+          ]
+        },
+        {
+          "q": "Our furnace holds temperature perfectly. Is a survey still worth it?",
+          "a": [
+            "Holding a set point at the control thermocouple and being uniform through the working volume are different things, and a furnace can do the first beautifully while failing the second. The survey measures the space rather than the sensor. If work is loaded in a corner or on a full charge, that is exactly where a survey earns its cost."
+          ]
+        },
+        {
+          "q": "Can our existing controller be kept?",
+          "a": [
+            "Frequently, yes. Where the controller is in support, has the loops and profile capability the process needs, and can communicate, the work is instrumentation, tuning and recording rather than replacement. Replacement becomes worthwhile when the controller is obsolete, cannot record, or cannot be reached from anything other than its own front panel."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us what your furnace is meant to hold, and *we will find out what it actually holds.*",
+      "body": "Thermocouple verification, a temperature uniformity survey of the working volume, and a tuning and recording plan based on the results.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

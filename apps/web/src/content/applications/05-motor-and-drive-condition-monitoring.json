@@ -5,7 +5,11 @@
   "cardTitle": "Condition Monitoring",
   "cardBlurb": "Bearings fail in a way you can hear weeks before you can see it. Vibration and temperature sensors turn that warning into a work order instead of a breakdown.",
   "cardImage": "board-repair.jpg",
-  "sectors": ["Oil & Gas", "Water", "Manufacturing"],
+  "sectors": [
+    "Oil & Gas",
+    "Water",
+    "Manufacturing"
+  ],
   "meta": {
     "title": "Motor, Pump and Drive Condition Monitoring UAE | General Tech Automation",
     "description": "How condition monitoring is put on rotating equipment — vibration and temperature sensors, drive data and alarm thresholds that turn a failure into a planned repair."
@@ -41,6 +45,45 @@
         "Rotating equipment rarely fails without warning. A bearing that is going to seize has usually been telling anyone who was listening for weeks — a rise in high-frequency vibration, then a temperature that runs a few degrees warmer than its neighbours, then a noise somebody mentions but nobody logs. The failure that stops the plant at two in the morning is almost always the end of a long, quiet, ignored conversation.",
         "**Condition monitoring** is the practice of listening on purpose. Sensors on the machines that matter, readings taken continuously rather than on a quarterly route, thresholds set so that a change raises an alert, and a history to compare against. The point is not to predict the exact hour of failure; it is to convert an unplanned stoppage into a repair that happens on a Tuesday with the part already on the shelf."
       ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a bearing *to a work order*",
+      "intro": "The value is not in the sensor. It is in the last two stages — a change reaching a named person, and becoming a job with a part ordered against it.",
+      "nodes": [
+        {
+          "icon": "sensor",
+          "title": "Vibration and temperature sensors",
+          "note": "Mounted at the bearing positions that actually carry the load"
+        },
+        {
+          "icon": "gateway",
+          "title": "Gateway",
+          "via": "Wireless mesh or existing cabling",
+          "note": "Collects the sensors and the data the VFDs already hold"
+        },
+        {
+          "icon": "cloud",
+          "title": "Baseline and thresholds",
+          "via": "Ethernet or cellular",
+          "note": "Alarms set as a departure from this machine's own normal"
+        },
+        {
+          "icon": "alert",
+          "title": "An alert to a named engineer",
+          "via": "Email, SMS or SCADA",
+          "note": "Not a shared mailbox, which is an alert nobody owns"
+        },
+        {
+          "icon": "clipboard",
+          "title": "A planned job",
+          "via": "Maintenance system",
+          "note": "Scheduled, with the part on the shelf before it is needed"
+        }
+      ],
+      "footnote": "The third stage is the one that decides whether the system survives its first year. Thresholds guessed before a baseline exists produce false alarms, and false alarms are how a condition monitoring system gets muted."
     },
     {
       "type": "features",

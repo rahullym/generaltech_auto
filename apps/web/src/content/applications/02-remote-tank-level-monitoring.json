@@ -5,7 +5,11 @@
   "cardTitle": "Remote Tank Level Monitoring",
   "cardBlurb": "Someone climbs the tank with a dip tape once a shift, and the reorder still gets left too late. Put a level transmitter on it and the number comes to you.",
   "cardImage": "oil-refinery.jpg",
-  "sectors": ["Oil & Gas", "Water", "Chemical"],
+  "sectors": [
+    "Oil & Gas",
+    "Water",
+    "Chemical"
+  ],
   "meta": {
     "title": "Remote Tank Level Monitoring in the UAE | General Tech Automation",
     "description": "How remote tank level monitoring is put together — radar and hydrostatic transmitters, telemetry and alarms, for tanks on sites with no cabling and no permanent staff."
@@ -41,6 +45,39 @@
         "A tank that is read by hand is a tank that is read late. Someone walks out to it, climbs it, dips it, writes the number on a sheet, and by the time that sheet reaches anyone who orders stock the level has moved again. On a remote site — a pumping station, a bulk depot, a yard on the far side of an industrial area — the walk is long enough that the reading happens once a day, or once a week, or when somebody remembers.",
         "**Remote tank level monitoring** replaces the walk with a transmitter and a signal. The level is measured continuously, sent out over the mobile network or the site's own connection, and presented as a live figure with a history behind it. The reorder point stops being a judgement call made from a stale number, and a run-out stops being something you find out about from the process that just stopped."
       ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From the tank *to the reorder decision*",
+      "intro": "No cabling leaves the tank compound. The transmitter measures, the RTU sends, and everything after that is software.",
+      "nodes": [
+        {
+          "icon": "tank",
+          "title": "Level transmitter",
+          "note": "Radar from the roof, or hydrostatic from the bottom"
+        },
+        {
+          "icon": "gateway",
+          "title": "RTU with solar and battery",
+          "via": "4-20mA or HART",
+          "note": "Applies the strapping table, so you get volume and not just level"
+        },
+        {
+          "icon": "cloud",
+          "title": "Cloud platform",
+          "via": "Cellular",
+          "note": "Trends, forecast run-out and threshold alarms"
+        },
+        {
+          "icon": "alert",
+          "title": "Dashboard and alarms",
+          "via": "Secure web, SMS or email",
+          "note": "Low level early enough to book a delivery; high level before an overfill"
+        }
+      ],
+      "footnote": "The reporting interval is a design choice, not a fixed property. A slow tank reported hourly is the difference between a battery that lasts a year and one changed every month."
     },
     {
       "type": "features",

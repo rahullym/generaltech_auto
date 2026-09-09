@@ -1,0 +1,224 @@
+{
+  "order": 10,
+  "title": "SCADA and Telemetry for Unmanned Pump Stations",
+  "slug": "applications/pump-station-telemetry",
+  "cardTitle": "Pump Station Telemetry",
+  "cardBlurb": "Twelve stations, no permanent staff, and the first sign of a problem is a call about no water. Bringing them all onto one screen.",
+  "cardImage": "industrial-slider.jpg",
+  "sectors": [
+    "Water",
+    "Municipal",
+    "Oil & Gas"
+  ],
+  "meta": {
+    "title": "Pump Station SCADA and Telemetry in the UAE | General Tech Automation",
+    "description": "How unmanned pump stations are brought onto one SCADA screen — RTUs, cellular or radio telemetry, alarms that reach a standby engineer, and duty rotation."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "SCADA and Telemetry *for Unmanned Pump Stations*",
+      "subheading": "RTUs • Cellular & Radio Telemetry • Alarm Escalation • Dubai • Sharjah • Abu Dhabi",
+      "image": "industrial-slider.jpg",
+      "actions": [
+        {
+          "label": "Book a free network survey",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "digital-bg.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "A network of pump stations is a network of places nobody is standing. Each one has a local panel, a set of float switches and a pump that either runs or does not, and the way anyone finds out that it does not is that something downstream stopped happening. Then a van is despatched, and the first thing the fitter does on arrival is read a panel that could have told him the same thing an hour earlier from anywhere.",
+        "**Telemetry** puts every station on one screen. An RTU at each site reads what the local panel already knows — pump status, levels, flows, power, intruder and flood — and sends it over the mobile network or a licensed radio link to a central SCADA. The stations stay unmanned; what changes is that they stop being unwatched."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a station nobody is at *to a screen somebody is*",
+      "intro": "Nothing about the pumps changes. An RTU is added beside the existing panel, reading the signals that panel already generates.",
+      "nodes": [
+        {
+          "icon": "pump",
+          "title": "The station's own panel",
+          "note": "Pump run and fault, level floats or transmitter, flow, power and door contacts"
+        },
+        {
+          "icon": "gateway",
+          "title": "RTU at the station",
+          "via": "Hardwired signals",
+          "note": "Reads, timestamps and buffers; runs the local duty rotation if asked to"
+        },
+        {
+          "icon": "signal",
+          "title": "Cellular or licensed radio",
+          "via": "Encrypted link",
+          "note": "Radio where coverage is poor or the data must not depend on a public network"
+        },
+        {
+          "icon": "screen",
+          "title": "Central SCADA",
+          "via": "Modbus, DNP3 or MQTT",
+          "note": "Every station on one mimic, with history and reports behind it"
+        },
+        {
+          "icon": "alert",
+          "title": "The standby engineer",
+          "via": "SMS, call-out or app",
+          "note": "Escalating, so an unacknowledged alarm reaches the next person"
+        }
+      ],
+      "footnote": "The RTU buffers locally, so a station that loses signal for six hours delivers those six hours when it comes back rather than leaving a hole in the record."
+    },
+    {
+      "type": "features",
+      "heading": "What goes in *at each station*",
+      "intro": "A station kit is small and largely standard, which is what makes rolling it out across a dozen sites affordable.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "gateway",
+          "title": "An RTU or small PLC",
+          "description": "Mounted beside the existing panel and wired to the signals it already produces. It timestamps everything locally, buffers through a comms outage, and can take over the duty and standby rotation so the pumps share their running hours instead of one doing all the work until it fails."
+        },
+        {
+          "icon": "tank",
+          "title": "Level and flow measurement",
+          "description": "Where a station runs on float switches alone, an ultrasonic or hydrostatic level transmitter gives a continuous level instead of three discrete states — which is what makes a trend, a rate-of-fill calculation and an early warning possible. A flow meter on the rising main confirms the pump is actually delivering, not just running."
+        },
+        {
+          "icon": "signal",
+          "title": "A communications path",
+          "description": "Cellular is the default and the cheapest. A licensed radio network costs more up front and is worth it where coverage is unreliable, where the sites are remote, or where the operation cannot depend on a public network. Many networks run both, with radio as the primary and cellular as the fallback."
+        },
+        {
+          "icon": "alert",
+          "title": "Alarms with an escalation path",
+          "description": "An alarm that appears on a screen in an empty control room at two in the morning has not been delivered. Alarms are routed to a rota, acknowledged by a person, and escalated to the next name if nobody responds — and the acknowledgement is recorded, which is what makes a response time measurable."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Rolling it out *across a network*",
+      "intro": "The first station takes the longest, because it is where the standard is set. The rest are repetitions of it.",
+      "steps": [
+        {
+          "meta": "Standardise",
+          "title": "Design one station kit",
+          "description": "The same RTU, the same enclosure, the same signal list and the same tag naming at every site, even where the pumps differ. A network built from twelve bespoke solutions is a network nobody can maintain."
+        },
+        {
+          "meta": "Prove",
+          "title": "Install and prove the pilot",
+          "description": "One station, fully commissioned, with the SCADA mimic, the historian and the alarm routing all working end to end. Everything that is going to be wrong with the design is wrong here, where it costs one site to fix."
+        },
+        {
+          "meta": "Roll out",
+          "title": "Repeat across the network",
+          "description": "Kits are built and pre-tested in the workshop, so each site visit is a mounting, a wiring and a signal check rather than a design exercise. Sites go live one at a time and each is proved against the central system before the team moves on."
+        },
+        {
+          "meta": "Operate",
+          "title": "Hand over with the rota",
+          "description": "Operators trained on the mimic, maintenance trained on the RTU, and the alarm rota configured with real names and real numbers. Reports for regulatory returns and pump running hours are set up before handover, not requested six months later."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What changes *for the operation*",
+      "body": [
+        "Faults are known when they happen rather than when their consequence is noticed downstream.",
+        "Van journeys drop, because the state of a station is readable before anyone decides whether to drive to it.",
+        "Duty rotation shares running hours across pumps, which is the cheapest reliability improvement on a two-pump station.",
+        "Level trends give warning of a blockage or an inflow change hours before a high-level alarm.",
+        "Running hours, flows and alarm history are recorded, which is what regulatory reporting and maintenance planning both need."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Assets spread out *and left alone*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Water and Wastewater",
+          "icon": "water",
+          "description": "Foul and storm pumping stations, boosters and reservoirs across a district, visited on a route rather than staffed, where an overflow is a reportable event."
+        },
+        {
+          "name": "Municipal and Utilities",
+          "icon": "power",
+          "description": "Irrigation, district cooling and drainage assets spread across a city, each too small to staff and collectively too important to leave unwatched."
+        },
+        {
+          "name": "Oil and Gas",
+          "icon": "oil",
+          "description": "Transfer and sump pumps at outlying parts of a site or along a pipeline route, where the classification and the distance both argue against routine manual checks."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about telemetry*",
+      "items": [
+        {
+          "q": "Do we need a control room to run this?",
+          "a": [
+            "No. A hosted SCADA reachable from a browser and a phone covers most networks perfectly well, and many operators run entirely that way — the alarms go to a rota rather than to a room. A physical control room makes sense once there are people whose job is to watch continuously, which is a decision about staffing rather than about the telemetry."
+          ]
+        },
+        {
+          "q": "Cellular or radio?",
+          "a": [
+            "Cellular is cheaper, faster to deploy and adequate for most municipal networks. Licensed radio costs more up front and earns it where coverage is genuinely poor, where sites are remote, or where the operation must not depend on a public network's availability. The honest answer usually comes from a signal survey at the sites themselves rather than from a coverage map."
+          ]
+        },
+        {
+          "q": "Can it work with the panels we already have?",
+          "a": [
+            "Almost always. The RTU reads volt-free contacts and analogue signals that an existing panel already generates, so the pumps, starters and protection are untouched. Where a station has only float switches, adding a level transmitter is usually the one upgrade worth making at the same time, because it is what turns status into a trend."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us how many stations you run, and *we will design one kit for all of them.*",
+      "body": "A survey of the network, a standard station design, and a pilot proved end to end before the rollout starts.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

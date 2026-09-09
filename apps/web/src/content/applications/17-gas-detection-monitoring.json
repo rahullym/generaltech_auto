@@ -1,0 +1,225 @@
+{
+  "order": 17,
+  "title": "Fixed Gas Detection and Area Monitoring",
+  "slug": "applications/gas-detection-monitoring",
+  "cardTitle": "Gas Detection and Area Monitoring",
+  "cardBlurb": "Detectors fitted years ago, bump-tested when someone remembers, and a panel in a room nobody sits in. Making the system one you would actually stake a shift on.",
+  "cardImage": "oil-refinery.jpg",
+  "sectors": [
+    "Oil & Gas",
+    "Chemical",
+    "Water"
+  ],
+  "meta": {
+    "title": "Fixed Gas Detection and Area Monitoring UAE | General Tech Automation",
+    "description": "How a fixed gas detection system is designed and maintained — detector selection and placement, a certified controller, alarm and shutdown logic, and calibration records."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Fixed Gas Detection *and Area Monitoring*",
+      "subheading": "Detector Placement • Certified Controllers • Alarm & Shutdown Logic • Calibration Records • UAE",
+      "image": "oil-refinery.jpg",
+      "actions": [
+        {
+          "label": "Book a free detection survey",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "industrial-slider.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Gas detection has a particular failure mode: it looks fine. The detectors are on the wall, the panel has green lights, and nothing about the installation announces that a sensor reached the end of its life eighteen months ago, or that the detector protecting a compressor was mounted at head height when the gas it detects is heavier than air and pools at the floor.",
+        "**A system worth relying on** is one where placement follows the gas, the detectors are within their working life, the alarm goes somewhere a person is, and the calibration record is current. None of that is exotic. It is ordinary discipline applied to equipment that gives no feedback when it is quietly failing to do its job."
+      ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From a leak *to a plant that has already responded*",
+      "intro": "Detection is the first stage and the least of it. What decides whether the system protects anyone is what happens in the three stages after.",
+      "nodes": [
+        {
+          "icon": "sensor",
+          "title": "Detectors",
+          "note": "Placed by gas density, ventilation and where a release would actually go"
+        },
+        {
+          "icon": "shield",
+          "title": "Certified controller",
+          "via": "4-20mA or addressable loop",
+          "note": "Voting logic, fault monitoring and its own supervised power"
+        },
+        {
+          "icon": "alert",
+          "title": "Alarms and beacons",
+          "via": "Relay or fieldbus",
+          "note": "Audible and visual in the area, and a signal to where people are"
+        },
+        {
+          "icon": "valve",
+          "title": "Executive action",
+          "via": "Interlock to the plant",
+          "note": "Shutdown, isolation or ventilation — decided in advance, not on the night"
+        },
+        {
+          "icon": "clipboard",
+          "title": "Calibration and event record",
+          "via": "To SCADA or a logbook",
+          "note": "Every bump test, calibration and event, with dates that can be shown"
+        }
+      ],
+      "footnote": "A detector at fault must be distinguishable from a detector reading zero. A system that shows the same green light for both is a system that will be trusted right up until it matters."
+    },
+    {
+      "type": "features",
+      "heading": "What the system *comprises*",
+      "intro": "Detector technology is chosen per gas and per environment. Getting that wrong is expensive, and it is the mistake most often carried over from the previous installation.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "sensor",
+          "title": "Detectors matched to the gas",
+          "description": "Catalytic bead for general flammables but poisoned by silicones and needing oxygen; infrared point or open-path for hydrocarbons, immune to poisoning and functional in inert atmospheres; electrochemical for toxics such as hydrogen sulphide with a defined and unavoidable service life. Choosing by what was there before, rather than by what is being detected in what conditions, is how a system ends up blind."
+        },
+        {
+          "icon": "cabinet",
+          "title": "A controller built for the duty",
+          "description": "A certified gas detection controller with supervised inputs, so an open circuit or a detector fault raises a fault rather than a comfortable zero. Voting logic where a single detector should not trip a plant, and a supervised power supply with battery backup, because the moment the system is most needed is not the moment to discover it shares a circuit with the lighting."
+        },
+        {
+          "icon": "alert",
+          "title": "Alarms that reach people",
+          "description": "Sounders and beacons in the affected area, and repeat indication in the control room or wherever the responsible person actually is. Two levels — a warning that prompts investigation and a high alarm that requires evacuation or shutdown — with the difference between them obvious to somebody who has never read the manual."
+        },
+        {
+          "icon": "valve",
+          "title": "Executive action, decided in advance",
+          "description": "What the plant does on a high alarm: trip a compressor, close an isolation valve, start ventilation, or nothing at all. This is a written decision made calmly beforehand, interlocked and tested, rather than a judgement made by whoever is nearest the panel during an alarm."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Designing and keeping it *fit for purpose*",
+      "intro": "Detection systems are unusual in that the maintenance regime is part of the design. A well-designed system with no calibration programme is not a working system.",
+      "steps": [
+        {
+          "meta": "Study",
+          "title": "Decide where a release goes",
+          "description": "Sources of release, the density of the gas relative to air, ventilation paths, and where people work. Detectors are placed where a release would actually accumulate or pass — low for heavier-than-air, high for lighter, and in the ventilation path rather than in the corner where there was a spare bracket."
+        },
+        {
+          "meta": "Specify",
+          "title": "Match technology and certification",
+          "description": "Detector type per gas and environment, area classification and Ex certification, ingress protection for a coastal climate, and the controller's voting and fault logic. Cause and effect is written down and agreed at this stage, because it is a plant operations decision as much as an engineering one."
+        },
+        {
+          "meta": "Install",
+          "title": "Fit, cable and interlock",
+          "description": "Detectors mounted where they can be reached for calibration without a scaffold and a permit, cabling and glanding to the classification, and the executive interlocks wired and proved against the agreed cause and effect."
+        },
+        {
+          "meta": "Maintain",
+          "title": "Commission, then keep it alive",
+          "description": "Every detector calibrated with certified gas, every alarm and interlock function proved end to end, and then a bump test and calibration schedule established with records. Sensor replacement is put on a plan against its known life rather than left to fail quietly."
+        }
+      ],
+      "footnote": "Mounting a detector where it cannot be reached is the most reliable way to guarantee it stops being calibrated."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What a maintained system *gives you*",
+      "body": [
+        "Detection where a release would actually go, rather than where a bracket happened to be convenient.",
+        "A fault that announces itself, so a dead detector is known rather than assumed to be a quiet one.",
+        "An alarm that reaches a person who can act, at every hour the plant runs.",
+        "A plant response that was decided calmly in advance and proved, rather than improvised during an event.",
+        "Calibration and test records that can be produced on request, which is what turns a claim of compliance into evidence of it."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Where a release *has to be found early*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Oil and Gas",
+          "icon": "oil",
+          "description": "Process areas, compressor houses, loading gantries and confined spaces, where classification governs the equipment and the consequences govern everything else."
+        },
+        {
+          "name": "Chemical Processing",
+          "icon": "chemical",
+          "description": "Storage and reaction areas with specific toxic and flammable hazards, where detector selection per gas matters more than the overall count of detectors."
+        },
+        {
+          "name": "Water and Wastewater",
+          "icon": "water",
+          "description": "Wet wells, digesters and chemical dosing rooms, where hydrogen sulphide and chlorine risks sit alongside confined-space entry procedures."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about gas detection*",
+      "items": [
+        {
+          "q": "How often do detectors need calibrating?",
+          "a": [
+            "The interval follows the manufacturer's guidance, the environment and your own experience of drift on that installation, and it is confirmed by regular bump testing between calibrations. What matters more than the exact number is that the schedule exists, is recorded, and is actually kept — an annual calibration performed reliably beats a six-monthly one that slips to whenever somebody has time."
+          ]
+        },
+        {
+          "q": "Can we reuse the detectors we already have?",
+          "a": [
+            "Sometimes. Sensor elements have a finite life that runs whether or not the detector has ever seen gas, so age is as relevant as condition — an electrochemical cell has a defined service life and will reach the end of it sitting on a wall doing nothing. The survey establishes what is still within life, what is the correct technology for the gas, and what is simply in the wrong place."
+          ]
+        },
+        {
+          "q": "Should a gas alarm shut the plant down?",
+          "a": [
+            "Sometimes, and it is a decision that should be made deliberately with the operations team rather than defaulted to. Automatic shutdown on a high alarm is appropriate where a release is genuinely dangerous and quick isolation limits it; it is inappropriate where nuisance trips would cause more risk than they prevent, in which case voting logic and a two-stage response usually serve better. Either way it is written down and tested before it is relied on."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us what you handle and where, and *we will survey what you have first.*",
+      "body": "A detector placement and condition survey, a cause and effect proposal, and a calibration regime you can actually keep.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

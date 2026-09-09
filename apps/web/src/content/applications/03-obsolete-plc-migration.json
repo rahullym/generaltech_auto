@@ -5,7 +5,11 @@
   "cardTitle": "Obsolete PLC Migration",
   "cardBlurb": "The controller running your line went out of production years ago and the spare in the cupboard is the last one. Moving to a current platform without rebuilding the line.",
   "cardImage": "operator-control-panel.jpg",
-  "sectors": ["Manufacturing", "Automotive", "Food & Beverage"],
+  "sectors": [
+    "Manufacturing",
+    "Automotive",
+    "Food & Beverage"
+  ],
   "meta": {
     "title": "Obsolete PLC Migration in the UAE | General Tech Automation",
     "description": "How a production line is moved off an end-of-life PLC — documenting the existing logic, converting it, and cutting over inside a planned shutdown."
@@ -41,6 +45,70 @@
         "An obsolete PLC does not announce itself. The line runs perfectly well, the logic has not been touched in a decade, and the risk is entirely invisible until the day a card fails. Then it becomes very visible: the part is out of production, the broker wants a great deal of money for a used one with no warranty, the programming software will not run on anything newer than Windows XP, and the only person who understood the program left in 2014.",
         "**Migrating to a current platform** is the work of removing that risk before it collects. Done properly it is not a rebuild — the field devices, the wiring and the machine itself stay exactly as they are. What changes is the controller, the software it runs, and the fact that spares and support exist for it again."
       ]
+    },
+    {
+      "type": "diagram",
+      "variant": "groups",
+      "eyebrow": "What changes",
+      "heading": "What comes out, and *what stays*",
+      "intro": "The most common worry about a migration is that it is a rebuild. It is not. The machine, the field devices and the wiring are untouched — only the control that drives them is replaced.",
+      "groups": [
+        {
+          "title": "Replaced",
+          "tone": "accent",
+          "note": "Everything here is end-of-life, unsupported, or dependent on software that will not run on a current laptop.",
+          "items": [
+            {
+              "icon": "cpu",
+              "title": "Processor and I/O racks",
+              "note": "A current controller on the platform your team already supports"
+            },
+            {
+              "icon": "screen",
+              "title": "Operator interface",
+              "note": "Usually as unobtainable as the PLC, and replaced with it"
+            },
+            {
+              "icon": "cabinet",
+              "title": "The panel and its terminals",
+              "note": "New equipment in a thirty-year-old enclosure is a false economy"
+            },
+            {
+              "icon": "clipboard",
+              "title": "Programming software",
+              "note": "So a change no longer starts with finding the one laptop that can connect"
+            }
+          ]
+        },
+        {
+          "title": "Kept",
+          "tone": "neutral",
+          "note": "None of this is disturbed. It is why a migration fits a shutdown rather than a project.",
+          "items": [
+            {
+              "icon": "sensor",
+              "title": "Field devices",
+              "note": "Sensors, valves, drives and motors stay exactly as they are"
+            },
+            {
+              "icon": "cable",
+              "title": "Field wiring",
+              "note": "Landed onto the new rack, laid out to minimise re-termination"
+            },
+            {
+              "icon": "machine",
+              "title": "The machine itself",
+              "note": "No mechanical scope, no foundations, no re-commissioning of the process"
+            },
+            {
+              "icon": "cog",
+              "title": "What the line does",
+              "note": "The sequence is reproduced, including the odd behaviour somebody asked for in 2009"
+            }
+          ]
+        }
+      ],
+      "footnote": "The old hardware is kept, intact and labelled, until the new system has run a full production cycle. It is the cheapest insurance in the project."
     },
     {
       "type": "features",

@@ -5,7 +5,11 @@
   "cardTitle": "Packaging Line Control Panel",
   "cardBlurb": "Three machines bought from three suppliers, each with its own start button and none of them talking. One panel, one HMI, one sequence.",
   "cardImage": "panel-inspection.jpg",
-  "sectors": ["Food & Beverage", "Pharmaceutical", "Logistics"],
+  "sectors": [
+    "Food & Beverage",
+    "Pharmaceutical",
+    "Logistics"
+  ],
   "meta": {
     "title": "Packaging Line Control Panel and HMI | General Tech Automation UAE",
     "description": "How a custom control panel and HMI ties a packaging line together — filler, capper, labeller and conveyors under one sequence, built and tested before it ships."
@@ -41,6 +45,39 @@
         "Packaging lines are rarely bought as lines. A filler is ordered one year, a capper the next, a labeller and a case packer after that, and each arrives with its own controller, its own operator panel and its own idea of what a start button means. They are connected by conveyor and by an operator who has learned in what order to press things. When something jams, every machine keeps doing what it was doing, and the pile-up is cleared by hand.",
         "**One panel over the line** makes the machines into a line. A single controller sequences them, holds the interlocks between them, and presents one screen an operator actually runs the line from. The machines keep their own internal controls; what changes is that they now stop for each other."
       ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "Four machines *behaving as one line*",
+      "intro": "Nothing inside the machines changes. What is added is a controller above them that reads what each one is doing and decides what the others should do about it.",
+      "nodes": [
+        {
+          "icon": "machine",
+          "title": "Each machine's own control",
+          "note": "Filler, capper, labeller and case packer keep their own panels and local mode"
+        },
+        {
+          "icon": "cpu",
+          "title": "The line controller",
+          "via": "Run, fault and ready signals",
+          "note": "Holds the sequence and the interlocks between machines"
+        },
+        {
+          "icon": "conveyor",
+          "title": "Conveyor and accumulation drives",
+          "via": "Speed reference",
+          "note": "The line is balanced rather than run flat out and jammed"
+        },
+        {
+          "icon": "screen",
+          "title": "One HMI",
+          "via": "Ethernet",
+          "note": "Status, alarms in plain words, recipes and format changeover"
+        }
+      ],
+      "footnote": "Every machine keeps a local mode so it can be run alone for cleaning, setting and fault finding. A design that only works with every machine present makes maintenance harder than it was before."
     },
     {
       "type": "features",

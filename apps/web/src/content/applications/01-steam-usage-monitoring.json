@@ -5,7 +5,11 @@
   "cardTitle": "Steam Usage Monitoring",
   "cardBlurb": "The gas bill arrives every month and nobody can say which line spent it. Metering the steam turns that bill into numbers a plant manager can act on.",
   "cardImage": "factory-about.jpg",
-  "sectors": ["Food & Beverage", "Pharmaceutical", "Manufacturing"],
+  "sectors": [
+    "Food & Beverage",
+    "Pharmaceutical",
+    "Manufacturing"
+  ],
   "meta": {
     "title": "Steam Usage Monitoring on a Factory Boiler | General Tech Automation",
     "description": "How steam flow monitoring is put on a factory boiler in the UAE — vortex flowmeters, a datalogger and a cloud dashboard, installed inside a shutdown window."
@@ -41,6 +45,45 @@
         "Most factories that run a steam boiler know exactly what they pay for gas and almost nothing about where the steam goes. The boiler is metered on its fuel side, if at all, and everything downstream — the jacketed vessels, the sterilisers, the washdown lines, the heat exchangers — draws from a common header with no measurement on it. When the energy bill climbs, there is no data to argue with, only a guess about which department is responsible.",
         "**Steam usage monitoring** closes that gap. Flowmeters go on the header and on the branches that matter, their readings are logged continuously, and the result appears as a trend rather than a monthly total. A leaking trap, a valve someone left cracked open over a weekend, a batch process that costs twice what the next one does — all of these are invisible in a bill and obvious in a trend line."
       ]
+    },
+    {
+      "type": "diagram",
+      "variant": "chain",
+      "eyebrow": "How it works",
+      "heading": "From the steam header *to your phone*",
+      "intro": "Four stages between the pipe and the number. The boxes are the equipment; the labels on the arrows are how the reading actually travels, which is the part most people want explained.",
+      "nodes": [
+        {
+          "icon": "flow",
+          "title": "Vortex flowmeter",
+          "note": "In the steam header, or on the branch you want to know about"
+        },
+        {
+          "icon": "transmitter",
+          "title": "Remote transmitter",
+          "via": "Sensor cable",
+          "note": "On a bracket at working height, not under the lagging"
+        },
+        {
+          "icon": "logger",
+          "title": "Datalogger",
+          "via": "4-20mA or pulse",
+          "note": "Timestamps, totalises and buffers if the link drops"
+        },
+        {
+          "icon": "cloud",
+          "title": "Cloud platform",
+          "via": "Cellular or site network",
+          "note": "Trends, totals and scheduled reports"
+        },
+        {
+          "icon": "phone",
+          "title": "Whoever needs the number",
+          "via": "Secure web",
+          "note": "Consumption per line and per shift, from anywhere"
+        }
+      ],
+      "footnote": "Pressure and temperature compensation happens between the first two stages — it is what turns a volume of steam into the mass you are actually paying for."
     },
     {
       "type": "features",
