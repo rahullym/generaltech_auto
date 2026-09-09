@@ -131,13 +131,18 @@ export type Global = { id: string; updatedAt: string }
 export type NavItem = {
   id?: string
   link: LinkValue
-  children?: { id?: string; link: LinkValue; description?: string; iconName?: string }[]
+  children?: {
+    id?: string
+    link: LinkValue
+    description?: string
+    iconName?: string
+    /** The panel column this child sits under; see `SERVICE_MENU_GROUPS`. */
+    groupName?: string
+  }[]
   /** Overrides for the expanded panel; see `lib/nav.ts` for the defaults. */
   megaMenu?: {
     enabled?: boolean
     eyebrow?: string
-    moreEyebrow?: string
-    featuredCount?: number
     viewAllLabel?: string
     promoTitle?: string
     promoBody?: string

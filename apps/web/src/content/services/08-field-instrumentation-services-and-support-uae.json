@@ -7,7 +7,8 @@
   "menu": {
     "label": "Instrumentation",
     "blurb": "Field Install & Support",
-    "icon": "gauge"
+    "icon": "gauge",
+    "group": "Engineering & Build"
   },
   "summary": "Field Instrumentation Services and Support UAE by General Tech Automation. Commissioning, calibration & loop testing in 1-2 days. Get a quote today.",
   "meta": {

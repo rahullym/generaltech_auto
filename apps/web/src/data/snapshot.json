@@ -1145,6 +1145,14 @@
             ]
           },
           {
+            "eyebrow": "What automation looks like",
+            "heading": "Worked examples of *what is possible*",
+            "intro": "Typical arrangements for problems we are asked about most often — what gets measured or controlled, what it is made of, how it goes in, and what changes once it is running. These are illustrative applications rather than case studies: no client names and no borrowed figures.",
+            "footnote": "Every example describes a common arrangement rather than one specific installation. What your site needs is settled by a survey, and the scope always follows the plant rather than the page.",
+            "id": "68d1a4c2f0b7e93a5c410002",
+            "blockType": "applicationIndex"
+          },
+          {
             "blockType": "richText",
             "layout": "split",
             "media": [

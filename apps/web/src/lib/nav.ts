@@ -3,15 +3,21 @@
  *
  * A nav item with a long child list is unreadable as a single dropdown column —
  * Services alone has sixteen entries — so those open into a panel instead: the
- * first few children as a two-column tile grid with an icon and a one-line
- * blurb, the rest as a plain index down the side, and a quote card under it.
+ * children as short headed columns of icon-and-blurb rows, with a quote card
+ * beside them. The columns are the point. Sixteen links in one run gives a
+ * visitor nothing to navigate by, and splitting them into a featured set and an
+ * overflow list only helps if the split means something; ranking by position in
+ * an alphabetical list means nothing, so each child names its own group and the
+ * panel is built from those.
  *
- * Everything here is derived, never required: the CMS can name the panel's
- * headings, its blurbs and its promo copy, and where it says nothing the
- * service registry and the site settings fill the gaps, so the panel is
- * complete with the nav data that already exists.
+ * Everything here is derived, never required: the CMS can name each child's
+ * group, its blurb and the promo copy, and where it says nothing the service
+ * registry and the site settings fill the gaps, so the panel is complete with
+ * the nav data that already exists. Children that name no group at all fall
+ * back to untitled columns of roughly equal length, so a mega menu built from
+ * links that are not services still reads as a panel.
  */
-import { serviceMenuMeta } from './service-pages'
+import { SERVICE_MENU_GROUPS, serviceMenuMeta } from './service-pages'
 import { isActive, resolveHref } from './urls'
 
 import type { Header, NavItem, SiteSettings } from './types'
@@ -54,13 +60,12 @@ export type MegaTile = {
   active: boolean
 }
 
-export type MegaLink = { href: string; label: string; active: boolean }
+/** One column of the panel. `title` is null only in the ungrouped fallback. */
+export type MegaGroup = { title: string | null; items: MegaTile[] }
 
 export type MegaMenu = {
   eyebrow: string
-  moreEyebrow: string
-  tiles: MegaTile[]
-  more: MegaLink[]
+  groups: MegaGroup[]
   viewAll: { href: string; label: string } | null
   promo: { title: string; body?: string; cta: { href: string; label: string } | null } | null
   strip: { label: string; items: string[] } | null
@@ -68,11 +73,63 @@ export type MegaMenu = {
 
 /** A panel rather than a column past this many children, unless the CMS says. */
 const MEGA_THRESHOLD = 6
-const DEFAULT_TILES = 8
+
+/** As many columns as the panel can give a readable width to. */
+const MAX_COLUMNS = 3
 
 /** Whether this item's children open as the expanded panel. */
 export const isMega = (item: NavItem): boolean =>
   item.megaMenu?.enabled ?? (item.children ?? []).length > MEGA_THRESHOLD
+
+/** Splits `items` into `count` columns of near-equal length, in order. */
+const inColumns = <T,>(items: T[], count: number): T[][] => {
+  const columns = Math.min(count, items.length)
+  const per = Math.ceil(items.length / Math.max(columns, 1))
+
+  return Array.from({ length: columns }, (_, index) =>
+    items.slice(index * per, (index + 1) * per),
+  ).filter((column) => column.length > 0)
+}
+
+/**
+ * The panel's columns: one per named group, ordered as the service registry
+ * lists them, with any group it does not name following in the order the
+ * children introduce it.
+ *
+ * Children that name no group are the fallback for a menu built from links
+ * that are not services: rather than one unreadable column of everything, they
+ * are dealt into untitled columns the panel can lay out side by side.
+ */
+const toGroups = (entries: { group: string | null; tile: MegaTile }[]): MegaGroup[] => {
+  const named = new Map<string, MegaTile[]>()
+  const loose: MegaTile[] = []
+
+  for (const { group, tile } of entries) {
+    if (!group) {
+      loose.push(tile)
+      continue
+    }
+
+    const column = named.get(group)
+    if (column) column.push(tile)
+    else named.set(group, [tile])
+  }
+
+  // Anything the registry does not rank sorts last, and ties keep insertion
+  // order because Array.prototype.sort is stable.
+  const rank = (title: string) => {
+    const index = (SERVICE_MENU_GROUPS as readonly string[]).indexOf(title)
+    return index === -1 ? SERVICE_MENU_GROUPS.length : index
+  }
+
+  const groups: MegaGroup[] = [...named]
+    .sort(([a], [b]) => rank(a) - rank(b))
+    .map(([title, items]) => ({ title, items }))
+
+  const spare = Math.max(MAX_COLUMNS - groups.length, 1)
+
+  return [...groups, ...inColumns(loose, spare).map((items) => ({ title: null, items }))]
+}
 
 /**
  * Builds the panel for one nav item. `pathname` marks the current page inside
@@ -89,29 +146,23 @@ export const buildMegaMenu = (
   const parentHref = resolveHref(item.link)
   const children = item.children ?? []
 
-  // Tiles keep the registry's short label — the CMS label is the full page
-  // title, which is a paragraph in a grid cell — but a description written in
-  // the CMS always outranks the registry blurb.
+  // Rows keep the registry's short label — the CMS label is the full page
+  // title, which is a paragraph in a grid cell — but a description or a group
+  // written in the CMS always outranks the registry's.
   const entries = children.map((child) => {
     const href = resolveHref(child.link)
     const meta = serviceMenuMeta(href)
 
     return {
-      href,
-      label: meta?.label ?? child.link?.label ?? '',
-      blurb: child.description ?? meta?.blurb ?? undefined,
-      icon: child.iconName ?? meta?.icon ?? 'cog',
-      active: isActive(href, pathname),
+      group: child.groupName || meta?.group || null,
+      tile: {
+        href,
+        label: meta?.label ?? child.link?.label ?? '',
+        blurb: child.description ?? meta?.blurb ?? undefined,
+        icon: child.iconName ?? meta?.icon ?? 'cog',
+        active: isActive(href, pathname),
+      },
     }
-  })
-
-  const count = Math.max(0, Math.min(config.featuredCount ?? DEFAULT_TILES, entries.length))
-
-  // The overflow column is an index, so it carries the full CMS label: there is
-  // a whole line for it, and the longer name is the more findable one.
-  const more = children.slice(count).map((child) => {
-    const href = resolveHref(child.link)
-    return { href, label: child.link?.label ?? '', active: isActive(href, pathname) }
   })
 
   const ctaLink = header.ctas?.[0]?.link
@@ -120,9 +171,7 @@ export const buildMegaMenu = (
 
   return {
     eyebrow: config.eyebrow || parentLabel,
-    moreEyebrow: config.moreEyebrow || `More ${parentLabel.toLowerCase()}`,
-    tiles: entries.slice(0, count),
-    more,
+    groups: toGroups(entries),
     viewAll:
       parentHref === '#'
         ? null

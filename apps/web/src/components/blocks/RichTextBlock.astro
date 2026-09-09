@@ -277,6 +277,25 @@ const numberPoints = points.length > 1
           width === 'prose' ? 'max-w-3xl' : 'max-w-7xl',
         ]}
       >
+        {/* Stacked over the measure rather than beside it: this layout has no
+            second column to put a title in. Rendering it here at all matters —
+            a heading typed into the field used to vanish without a trace. */}
+        {eyebrow && (
+          <span class="mb-5 block text-[11px] font-bold uppercase tracking-[0.25em] text-general-red">
+            {eyebrow}
+          </span>
+        )}
+
+        {heading && (
+          <h2
+            data-reveal="mask"
+            class="mb-10 text-[2.25rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-general-black lg:text-[2.75rem]"
+          >
+            {lead}
+            {accent && <span class="font-medium italic text-general-red"> {accent}</span>}
+          </h2>
+        )}
+
         <ReadMore enabled={clamp}>
           <RichText value={content} class={copyClass || undefined} />
         </ReadMore>

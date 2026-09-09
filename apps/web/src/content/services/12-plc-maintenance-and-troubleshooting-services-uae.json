@@ -7,7 +7,8 @@
   "menu": {
     "label": "PLC Support",
     "blurb": "Fault Finding & Recovery",
-    "icon": "wrench"
+    "icon": "wrench",
+    "group": "Maintenance & Repair"
   },
   "summary": "PLC Maintenance and Troubleshooting Services in UAE for Siemens, Allen Bradley & ABB systems. Fast fault diagnosis across Dubai & Sharjah.",
   "meta": {

@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 
 import { editors, publishedOrAuthenticated } from '../access'
 import {
+  ApplicationIndex,
   CallToAction,
   ContactBlock,
   Coverage,
@@ -58,6 +59,7 @@ export const Pages: CollectionConfig = {
                 MediaBlock,
                 FeatureGrid,
                 ServiceIndex,
+                ApplicationIndex,
                 Industries,
                 ProcessSteps,
                 Stats,

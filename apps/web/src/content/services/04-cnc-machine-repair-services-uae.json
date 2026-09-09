@@ -7,7 +7,8 @@
   "menu": {
     "label": "CNC Repair",
     "blurb": "Controls, Drives & Spindles",
-    "icon": "cog"
+    "icon": "cog",
+    "group": "Maintenance & Repair"
   },
   "summary": "CNC Machine Repair Services UAE from General Tech Automation — expert control, servo, spindle & PLC repair with fast turnaround across the GCC.",
   "meta": {

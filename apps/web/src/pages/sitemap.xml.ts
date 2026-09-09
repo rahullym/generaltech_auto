@@ -3,13 +3,15 @@
  *
  * `@astrojs/sitemap` only sees routes it can enumerate at build time, which
  * under SSR is the handful of static ones — it was publishing four URLs and
- * none of the twenty-four real pages. This walks the actual content instead:
- * every published page, every service page, every post and every doc.
+ * none of the real ones. This walks the actual content instead: every published
+ * page, every service page, every application example, every post and every
+ * doc.
  *
  * Retired service paths are deliberately absent. They answer with a permanent
  * redirect, and a sitemap is a list of canonical URLs, not of everything that
  * resolves.
  */
+import { applicationSummaries } from '@/lib/application-pages'
 import { publicOrigin } from '@/lib/origin'
 import { find, getPage } from '@/lib/payload'
 import { serviceSummaries } from '@/lib/service-pages'
@@ -57,6 +59,14 @@ export const GET: APIRoute = async ({ site, url }) => {
   for (const service of serviceSummaries) {
     if (await getPage(service.slug)) continue
     entries.push({ path: service.slug, priority: '0.9', changefreq: 'monthly' })
+  }
+
+  // As do the application examples, which are linked only from the grid on
+  // /applications and would otherwise be found by crawling alone.
+  for (const application of applicationSummaries) {
+    const slug = application.href.replace(/^\//, '')
+    if (await getPage(slug)) continue
+    entries.push({ path: slug, priority: '0.7', changefreq: 'monthly' })
   }
 
   const posts = await find<Post>('posts', { limit: 500, depth: 0, sort: '-publishedAt' })

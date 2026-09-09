@@ -7,7 +7,8 @@
   "menu": {
     "label": "Asset Data",
     "blurb": "Records & Tag History",
-    "icon": "database"
+    "icon": "database",
+    "group": "Digital & Data"
   },
   "summary": "Asset Data Management Services in UAE for calibration records, tag tracking and maintenance history. Serving Dubai, Sharjah & Abu Dhabi.",
   "meta": {

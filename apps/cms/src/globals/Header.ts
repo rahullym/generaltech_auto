@@ -46,7 +46,16 @@ export const Header: GlobalConfig = {
               name: 'iconName',
               type: 'select',
               options: NAV_ICONS,
-              admin: { description: 'Icon for the tile in an expanded menu.' },
+              admin: { description: 'Icon for the row in an expanded menu.' },
+            },
+            {
+              name: 'groupName',
+              type: 'text',
+              label: 'Menu column',
+              admin: {
+                description:
+                  'The heading this item sits under in an expanded menu. Items sharing a name share a column. Left empty, a service page uses the group it names itself.',
+              },
             },
           ],
         },
@@ -56,7 +65,7 @@ export const Header: GlobalConfig = {
           label: 'Expanded menu',
           admin: {
             description:
-              'A menu with more than six children opens as a panel. Every field here is optional — left empty, the panel names itself after this item and takes its quote card from the header button and the site contact details.',
+              'A menu with more than six children opens as a panel, laid out as headed columns — set each item\'s "Menu column" above. Every field here is optional — left empty, the panel names itself after this item and takes its quote card from the header button and the site contact details.',
           },
           fields: [
             {
@@ -65,15 +74,13 @@ export const Header: GlobalConfig = {
               label: 'Force the panel on or off',
               admin: { description: 'Leave unchecked to decide by the number of children.' },
             },
-            { name: 'eyebrow', type: 'text', admin: { width: '50%' } },
-            { name: 'moreEyebrow', type: 'text', label: 'Overflow column heading', admin: { width: '50%' } },
             {
-              name: 'featuredCount',
-              type: 'number',
-              label: 'Tiles before the overflow column',
-              min: 0,
-              max: 20,
-              admin: { width: '50%', placeholder: '8' },
+              name: 'eyebrow',
+              type: 'text',
+              admin: {
+                width: '50%',
+                description: 'Only shown when no item in the menu names a column.',
+              },
             },
             { name: 'viewAllLabel', type: 'text', admin: { width: '50%' } },
             { name: 'promoTitle', type: 'text' },

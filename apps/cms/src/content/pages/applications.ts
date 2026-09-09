@@ -125,6 +125,21 @@ export const applicationsPage = (media: MediaResolver): SeededPage => ({
       ],
     },
 
+    // --- What the work looks like -------------------------------------------------
+    // The sectors above tell a visitor whether we work in their industry; they
+    // do not show what the work actually is. This grid does, one worked example
+    // per card. The examples are not listed here — they are content files in
+    // apps/web, and every one of them appears in the grid automatically.
+    {
+      blockType: 'applicationIndex',
+      eyebrow: 'What automation looks like',
+      heading: 'Worked examples of *what is possible*',
+      intro:
+        'Typical arrangements for problems we are asked about most often — what gets measured or controlled, what it is made of, how it goes in, and what changes once it is running. These are illustrative applications rather than case studies: no client names and no borrowed figures.',
+      footnote:
+        'Every example describes a common arrangement rather than one specific installation. What your site needs is settled by a survey, and the scope always follows the plant rather than the page.',
+    },
+
     // --- Sector Experience and Support ------------------------------------------
     {
       blockType: 'richText',

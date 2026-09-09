@@ -1,12 +1,13 @@
 /**
- * The service inner pages, authored as content files and rendered through the
- * same blocks the homepage uses.
+ * Pages authored as content files and rendered through the same blocks the
+ * homepage uses — the service inner pages under `src/content/services/*.json`
+ * and the application examples under `src/content/applications/*.json`.
  *
- * Each page in `src/content/services/*.json` is written in a compact authoring
- * shape — paragraphs as plain strings rather than Lexical trees — and this
- * module expands it into the exact `Page` shape `BlockRenderer` already
- * consumes. Nothing new is rendered: `hero`, `richText`, `featureGrid`,
- * `processSteps`, `coverage`, `faq` and `cta` are the homepage's own blocks.
+ * Each file is written in a compact authoring shape — paragraphs as plain
+ * strings rather than Lexical trees — and this module expands it into the exact
+ * `Page` shape `BlockRenderer` already consumes. Nothing new is rendered:
+ * `hero`, `richText`, `featureGrid`, `processSteps`, `coverage`, `faq` and
+ * `cta` are the homepage's own blocks.
  *
  * The pages resolve from here whenever the CMS does not have them, which is
  * every deployment until the CMS is hosted. Moving one into Payload later needs
@@ -20,7 +21,7 @@ import type { Block, LexicalNode, Media, Page, RichTextValue } from './types'
 
 type Action = { label: string; url: string; appearance?: 'primary' | 'secondary' | 'link' }
 
-type AuthoredBlock =
+export type AuthoredBlock =
   | {
       type: 'hero'
       variant?: 'centered' | 'minimal' | 'split' | 'banner'
@@ -102,11 +103,20 @@ type AuthoredBlock =
       actions?: Action[]
     }
 
-export type AuthoredService = {
-  /** Position in the Services menu and on the index page. */
-  order: number
+/**
+ * The parts every authored page has. `toPage` needs only these; the service and
+ * application registries add whatever else their own menus and indexes read.
+ */
+export type AuthoredPage = {
   title: string
   slug: string
+  meta: { title: string; description: string }
+  layout: AuthoredBlock[]
+}
+
+export type AuthoredService = AuthoredPage & {
+  /** Position in the Services menu and on the index page. */
+  order: number
   /**
    * Paths this page used to live at. They 301 here, so the menu, the services
    * index and any link already in the wild keep resolving after the move to
@@ -117,14 +127,13 @@ export type AuthoredService = {
   /**
    * How the service reads in the header's mega menu: a short label (the full
    * `navLabel` is a page title and will not fit a tile), the line under it,
-   * and the icon key from the nav icon set.
+   * the icon key from the nav icon set, and the column the service belongs
+   * under. See `SERVICE_MENU_GROUPS` for the group names and their order.
    */
-  menu?: { label: string; blurb: string; icon: string }
+  menu?: { label: string; blurb: string; icon: string; group?: string }
   summary: string
-  meta: { title: string; description: string }
   /** Optional `serviceType` for the Service JSON-LD. Defaults to the title. */
   serviceType?: string
-  layout: AuthoredBlock[]
 }
 
 // -- Media -----------------------------------------------------------------
@@ -157,6 +166,9 @@ const MEDIA: Record<string, Media> = (() => {
 })()
 
 const media = (name?: string): Media | undefined => (name ? MEDIA[name] : undefined)
+
+/** The same lookup, for indexes that draw a card image by filename. */
+export const authoredMedia = media
 
 // -- Lexical ---------------------------------------------------------------
 
@@ -376,12 +388,13 @@ const expand = (block: AuthoredBlock, slug: string, index: number): Block => {
 /** One timestamp for the set: these pages ship with the build, not per request. */
 const BUILT_AT = '2026-09-05T00:00:00.000Z'
 
-export const toPage = (service: AuthoredService): Page => ({
-  id: `service-${service.slug}`,
-  title: service.title,
-  slug: service.slug,
-  layout: service.layout.map((block, index) => expand(block, service.slug, index)),
-  meta: { title: service.meta.title, description: service.meta.description },
+/** `kind` only namespaces the generated id, so the two registries cannot collide. */
+export const toPage = (doc: AuthoredPage, kind = 'service'): Page => ({
+  id: `${kind}-${doc.slug}`,
+  title: doc.title,
+  slug: doc.slug,
+  layout: doc.layout.map((block, index) => expand(block, doc.slug, index)),
+  meta: { title: doc.meta.title, description: doc.meta.description },
   _status: 'published',
   updatedAt: BUILT_AT,
   createdAt: BUILT_AT,

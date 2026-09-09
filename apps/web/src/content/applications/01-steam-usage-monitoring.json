@@ -1,0 +1,182 @@
+{
+  "order": 1,
+  "title": "Steam Usage Monitoring on a Factory Boiler",
+  "slug": "applications/steam-usage-monitoring",
+  "cardTitle": "Steam Usage Monitoring",
+  "cardBlurb": "The gas bill arrives every month and nobody can say which line spent it. Metering the steam turns that bill into numbers a plant manager can act on.",
+  "cardImage": "factory-about.jpg",
+  "sectors": ["Food & Beverage", "Pharmaceutical", "Manufacturing"],
+  "meta": {
+    "title": "Steam Usage Monitoring on a Factory Boiler | General Tech Automation",
+    "description": "How steam flow monitoring is put on a factory boiler in the UAE — vortex flowmeters, a datalogger and a cloud dashboard, installed inside a shutdown window."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Steam Usage Monitoring *on a Factory Boiler*",
+      "subheading": "Vortex Flow Metering • Datalogging • Cloud Dashboards • Dubai • Sharjah • Abu Dhabi",
+      "image": "factory-about.jpg",
+      "actions": [
+        {
+          "label": "Book a free site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Most factories that run a steam boiler know exactly what they pay for gas and almost nothing about where the steam goes. The boiler is metered on its fuel side, if at all, and everything downstream — the jacketed vessels, the sterilisers, the washdown lines, the heat exchangers — draws from a common header with no measurement on it. When the energy bill climbs, there is no data to argue with, only a guess about which department is responsible.",
+        "**Steam usage monitoring** closes that gap. Flowmeters go on the header and on the branches that matter, their readings are logged continuously, and the result appears as a trend rather than a monthly total. A leaking trap, a valve someone left cracked open over a weekend, a batch process that costs twice what the next one does — all of these are invisible in a bill and obvious in a trend line."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "What the installation *is made of*",
+      "intro": "A steam metering point is four things working together. The specification changes with the pipe size, the pressure and how far the data has to travel, but the shape stays the same.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "gauge",
+          "title": "The flowmeter",
+          "description": "Vortex meters are the usual choice on saturated steam: no moving parts, tolerant of the temperature, and accurate across the turndown a plant actually operates over. Where the line is already broken for other work, an inline meter goes in; where it cannot be, a clamp-on ultrasonic or an insertion meter avoids cutting the pipe. Pressure and temperature compensation is what turns a volume reading into the mass of steam you are actually buying."
+        },
+        {
+          "icon": "cabinet",
+          "title": "The remote transmitter",
+          "description": "On a boiler house pipe the electronics sit in the worst place in the room — hot, high up, and about to disappear under lagging. Mounting the transmitter remotely, on a bracket at working height with the sensor left in the line, is a decision made at install time that pays for itself the first time someone needs to read a display or change a setting without a scaffold."
+        },
+        {
+          "icon": "cpu",
+          "title": "The datalogger",
+          "description": "A logger sits between the meters and the outside world. It takes the 4-20mA or pulse outputs, timestamps them, holds a local buffer so a dropped connection does not lose a shift's data, and handles the totalising. This is also where a local display lives, for the operator who wants a number without opening a laptop."
+        },
+        {
+          "icon": "dashboard",
+          "title": "The dashboard",
+          "description": "Data reaches a cloud platform over the cellular network or the plant's own connection, and becomes a set of trends, totals and threshold alarms reachable from a phone. Reports can be scheduled — consumption per shift, per line, per product — so the numbers arrive with the people who make decisions instead of waiting to be asked for."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Installation",
+      "heading": "Fitting it *inside a shutdown*",
+      "intro": "Steam lines are not opened casually. Almost every installation of this kind happens inside a planned shutdown, which means the work is designed around a fixed window rather than the other way round.",
+      "steps": [
+        {
+          "meta": "Before the shutdown",
+          "title": "Survey and specification",
+          "description": "Pipe sizes, working pressure, insulation, straight-run lengths either side of each proposed meter position, and where power and signal can reach. This is where meter positions are settled and where the awkward ones get found — a bend too close, a valve in the way, a run too short for the meter chosen."
+        },
+        {
+          "meta": "Before the shutdown",
+          "title": "Prefabrication",
+          "description": "Spool pieces, brackets, enclosures and cable routes are built and wired on the bench while the plant is still running. The more that arrives on site finished, the less of the window is spent making things."
+        },
+        {
+          "meta": "The window",
+          "title": "Mechanical installation",
+          "description": "Meters go into the line, transmitters onto their remote brackets, cabling is pulled and terminated, and the logger is mounted and powered. The pipework is signed off and handed back for insulation, which is the point of no return for access."
+        },
+        {
+          "meta": "After start-up",
+          "title": "Commissioning against live steam",
+          "description": "Configuration, scaling, compensation settings and alarm thresholds are set once the plant is running and the readings can be checked against something real. Cloud connectivity and reporting are proved end to end, and the operating team is walked through the dashboard before handover."
+        }
+      ],
+      "footnote": "Commissioning during normal operation, rather than inside the window, is usually what makes a two-day shutdown achievable."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What it gives you *afterwards*",
+      "body": [
+        "A defensible number for steam consumption, by line and by shift, instead of a single site total divided up by argument.",
+        "Early sight of the faults that quietly cost the most — failed steam traps, passing valves, and insulation that has been off for longer than anyone remembers.",
+        "A baseline to measure improvement against, which is what makes an efficiency project provable rather than merely plausible.",
+        "Consumption data attached to production data, so the cost of steam can be carried into the cost of a batch or a product.",
+        "Remote visibility, so a question asked from an office in Dubai about a plant in Sharjah does not need someone to walk to the boiler house."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Plants that *run on steam*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "Cooking, pasteurising, CIP and washdown all draw from the same header, and the split between them is rarely known. Metering the branches is usually the fastest way to find out which process is the expensive one."
+        },
+        {
+          "name": "Pharmaceutical",
+          "icon": "pharma",
+          "description": "Sterilisation and clean steam generation are energy-intensive and heavily documented. Continuous logged measurement supports both the utilities budget and the records the process has to produce anyway."
+        },
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Process heating, drying and curing lines are often the largest single steam consumers on a site, and the ones where a small permanent fault runs for months before anyone notices it in the numbers."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about steam metering*",
+      "items": [
+        {
+          "q": "Do we have to shut down to install it?",
+          "a": [
+            "For an inline meter, yes — the line has to be opened, so the work is planned into an existing shutdown rather than creating a new one. Clamp-on ultrasonic meters can go on a live line and avoid the shutdown entirely, at some cost in accuracy on steam. Which is right depends on what the measurement is for: billing and allocation usually justify an inline meter, while a first look at where the steam goes often does not."
+          ]
+        },
+        {
+          "q": "How many meters do we actually need?",
+          "a": [
+            "Fewer than most people expect at the start. One on the boiler header establishes the total, and after that each additional meter should answer a question someone is actually asking — which line, which building, which shift. Metering every branch on day one is a common way to spend a budget without gaining an insight, and it is usually better to start with the header and the two or three biggest consumers."
+          ]
+        },
+        {
+          "q": "Does the data have to go to the cloud?",
+          "a": [
+            "No. A logger with a local display and a periodic export covers sites where outbound connectivity is restricted or unwelcome, and the data can equally be handed to an existing SCADA or historian over Modbus rather than leaving the plant at all. The cloud dashboard is what makes the data reachable from a phone; it is not what makes the measurement work."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us what your boiler feeds, and *we will tell you where to meter it.*",
+      "body": "A site walk-through and a written proposal covering meter positions, specification and the shutdown time the work needs.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "order": 7,
+  "title": "Plant-Wide Energy and Power Monitoring",
+  "slug": "applications/plant-energy-monitoring",
+  "cardTitle": "Energy and Power Monitoring",
+  "cardBlurb": "One meter at the incomer and one bill at the end of the month. Sub-metering turns a single number into a picture of where the electricity actually goes.",
+  "cardImage": "digital-bg.jpg",
+  "sectors": ["Manufacturing", "Power", "Chemical"],
+  "meta": {
+    "title": "Plant Energy and Power Monitoring UAE | General Tech Automation",
+    "description": "How plant-wide energy monitoring is built — sub-metering at the distribution boards, power quality logging, and dashboards that tie consumption to production."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Plant-Wide Energy *and Power Monitoring*",
+      "subheading": "Sub-Metering • Power Quality • Consumption per Product • Dubai • Sharjah • Abu Dhabi",
+      "image": "digital-bg.jpg",
+      "actions": [
+        {
+          "label": "Book a free site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "7_1.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Most plants meter electricity once, at the incomer, because that is where the utility meters it. Everything downstream is an estimate: the production hall is assumed to be most of it, the chillers are assumed to be a lot, and the compressed air system is assumed to be efficient because it was when it was installed. When the bill goes up, the conversation is about tariffs, because nobody has a number to point at.",
+        "**Sub-metering** replaces the estimate with measurement. Meters go on the distribution boards and on the large individual loads, readings are logged continuously, and consumption is broken down by area, by asset and by time. The first month of data almost always contains at least one genuine surprise — a load running through the night that nobody thought was on, or a machine drawing far more than its rating suggests it should."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "What the system *is made of*",
+      "intro": "Almost all of it installs into existing switchgear, which is what makes it practical to fit on a live plant.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "gauge",
+          "title": "Meters at the boards",
+          "description": "Multifunction power meters on the main distribution boards and on the loads worth knowing individually — chillers, compressors, large motors, the production hall by area. They measure real and reactive power, power factor, harmonics and demand, not just kilowatt-hours, which is what makes them useful for more than billing."
+        },
+        {
+          "icon": "signal",
+          "title": "Current transformers",
+          "description": "Split-core CTs clip around existing conductors without breaking them, which means most of a plant can be metered during short isolations of individual boards rather than a site shutdown. Sizing and positioning them correctly is the part that determines whether the readings are worth having."
+        },
+        {
+          "icon": "network",
+          "title": "A data path",
+          "description": "Meters are chained on Modbus RTU or connected over Ethernet to a gateway that polls them, timestamps the readings and passes them on. Where a plant already runs SCADA or a historian, this is the natural place for the data to land rather than in a parallel system nobody opens."
+        },
+        {
+          "icon": "dashboard",
+          "title": "Reporting that reaches people",
+          "description": "Dashboards by area and by asset, consumption against time of day, and — where production data can be joined in — energy per tonne, per batch or per unit produced. That last figure is the one that changes behaviour, because it survives the argument that output was higher this month."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Metering a plant *that cannot stop*",
+      "intro": "Energy projects fail more often through poor sequencing than poor equipment. The order below keeps the plant running and the scope honest.",
+      "steps": [
+        {
+          "meta": "Survey",
+          "title": "Follow the distribution",
+          "description": "Single-line drawings against reality, board by board: what feeds what, which boards have space for a meter, what the CT access is like, and which loads are big enough to deserve their own measurement. Drawings on the wall and the wiring in the board are not always the same thing, and this is when that gets found out."
+        },
+        {
+          "meta": "Design",
+          "title": "Decide the metering hierarchy",
+          "description": "Meters are placed so that the readings add up — every sub-meter under a parent, so consumption can be reconciled and an unmetered remainder is visible as a number rather than hidden. A flat set of meters that cannot be reconciled produces figures nobody trusts."
+        },
+        {
+          "meta": "Install",
+          "title": "Fit board by board",
+          "description": "Each board is isolated in turn, meters and CTs are fitted, and the communications trunk is extended. Work is planned around the plant's own schedule, and no board is opened without the isolation agreed with the people whose process depends on it."
+        },
+        {
+          "meta": "Prove",
+          "title": "Verify, reconcile and report",
+          "description": "Every meter is checked for correct CT ratio, phase association and direction — a reversed CT reads perfectly plausibly and is completely wrong. The sub-meters are reconciled against the incomer, and only then are dashboards and reports built on top of numbers that have been proven to add up."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What the data *is good for*",
+      "body": [
+        "Consumption attributed to areas and assets, so the energy budget can be discussed with evidence rather than opinion.",
+        "Out-of-hours load made visible — the equipment that runs all weekend because nothing ever told anyone it was on.",
+        "Power factor and harmonic data, which is what a correction or filtering decision should be based on instead of a supplier's assumption.",
+        "Energy per unit of production, which is the only figure that stays meaningful when output changes month to month.",
+        "A measured baseline, so any efficiency project afterwards can be shown to have worked rather than argued to have worked."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Sites where energy is *a large and unexamined cost*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Multi-hall sites where production, utilities and HVAC all sit behind one incomer and the split between them has never been measured."
+        },
+        {
+          "name": "Power and Utilities",
+          "icon": "power",
+          "description": "Generation and distribution assets where power quality data matters as much as consumption, and where the metering has to be reconcilable to be defensible."
+        },
+        {
+          "name": "Chemical Processing",
+          "icon": "chemical",
+          "description": "Continuous plants with large rotating loads, where energy per tonne is a real operating metric and a drift in it is a symptom worth chasing."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about sub-metering*",
+      "items": [
+        {
+          "q": "How many meters does a plant need?",
+          "a": [
+            "Start with the incomer, the main boards and the handful of loads big enough to move the total — typically the chillers, the compressors and the largest production areas. That is usually somewhere between ten and thirty meters, and it answers most of the questions a site actually has. Metering every final circuit produces a great deal of data and very little additional insight, at considerable cost."
+          ]
+        },
+        {
+          "q": "Can it be installed without shutting the plant down?",
+          "a": [
+            "Largely, yes. Split-core CTs clip around live conductors without breaking them, so the work is a series of short isolations of individual boards rather than one site outage. Some boards will still need a planned isolation for safe access, and those are scheduled against the plant's existing maintenance windows."
+          ]
+        },
+        {
+          "q": "We already have meters in our switchgear. Can they be used?",
+          "a": [
+            "Often. A great many plants already have multifunction meters fitted that nobody ever connected to anything — they display locally and are read by someone walking round with a clipboard, if at all. Where those meters have a communications port, bringing them onto a network and polling them is far cheaper than replacing them, and it is the first thing worth checking."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Send us your single-line drawing, and *we will show you where to meter it.*",
+      "body": "A distribution survey and a metering plan covering hierarchy, meter positions and what the installation needs in isolations.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

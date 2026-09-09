@@ -1,0 +1,181 @@
+{
+  "order": 5,
+  "title": "Condition Monitoring on Motors, Pumps and Drives",
+  "slug": "applications/motor-and-drive-condition-monitoring",
+  "cardTitle": "Condition Monitoring",
+  "cardBlurb": "Bearings fail in a way you can hear weeks before you can see it. Vibration and temperature sensors turn that warning into a work order instead of a breakdown.",
+  "cardImage": "board-repair.jpg",
+  "sectors": ["Oil & Gas", "Water", "Manufacturing"],
+  "meta": {
+    "title": "Motor, Pump and Drive Condition Monitoring UAE | General Tech Automation",
+    "description": "How condition monitoring is put on rotating equipment — vibration and temperature sensors, drive data and alarm thresholds that turn a failure into a planned repair."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Condition Monitoring *on Motors, Pumps and Drives*",
+      "subheading": "Vibration • Temperature • Drive Data • Alarm Thresholds • Dubai • Sharjah • Abu Dhabi",
+      "image": "board-repair.jpg",
+      "actions": [
+        {
+          "label": "Book a free site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "engineer-tablet-plant.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "Rotating equipment rarely fails without warning. A bearing that is going to seize has usually been telling anyone who was listening for weeks — a rise in high-frequency vibration, then a temperature that runs a few degrees warmer than its neighbours, then a noise somebody mentions but nobody logs. The failure that stops the plant at two in the morning is almost always the end of a long, quiet, ignored conversation.",
+        "**Condition monitoring** is the practice of listening on purpose. Sensors on the machines that matter, readings taken continuously rather than on a quarterly route, thresholds set so that a change raises an alert, and a history to compare against. The point is not to predict the exact hour of failure; it is to convert an unplanned stoppage into a repair that happens on a Tuesday with the part already on the shelf."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "What gets *measured*",
+      "intro": "The starting set is small and deliberately so. Adding measurements is easy; deciding what to do about them is the hard part, so it is better to begin with the few that give clear answers.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "signal",
+          "title": "Vibration",
+          "description": "The earliest and most informative indicator on rotating plant. Overall velocity levels flag a machine that has changed; frequency analysis tells you what changed — imbalance, misalignment, looseness or a specific bearing defect, each of which appears in its own part of the spectrum. Wireless triaxial sensors have made this practical to fit permanently on machines that used to be visited with a handheld meter."
+        },
+        {
+          "icon": "gauge",
+          "title": "Temperature",
+          "description": "Bearing and winding temperature is easy to measure, easy to interpret and slower to move than vibration, which makes it a good confirming signal rather than a leading one. Its real strength is comparison: two identical pumps side by side, one running eight degrees warmer than the other, is a question worth asking even when both are within their absolute limits."
+        },
+        {
+          "icon": "cpu",
+          "title": "Data from the drive itself",
+          "description": "A VFD already knows the motor's current, torque, speed, running hours and fault history, and most sites never read any of it. Pulling that over the existing network is the cheapest condition monitoring available, because the sensors are fitted, powered and calibrated already — a rising current at constant speed and load is a machine working harder than it was."
+        },
+        {
+          "icon": "dashboard",
+          "title": "A baseline and a threshold",
+          "description": "None of the above means anything without a reference. The first weeks of data establish what normal looks like for each machine in its own duty, and alarms are then set as a departure from that rather than from a number in a standard. This is the step that separates a system people act on from one they mute."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Starting with *the machines that matter*",
+      "intro": "Monitoring everything is how a condition monitoring programme dies. Monitoring the right twenty machines is how one survives its first year.",
+      "steps": [
+        {
+          "meta": "Decide",
+          "title": "Rank the equipment by consequence",
+          "description": "Not by size or by age, but by what happens when it stops — the unspared pump, the fan with a six-week lead time on its motor, the compressor the whole line depends on. That list is almost always shorter than expected and it is where the sensors go first."
+        },
+        {
+          "meta": "Fit",
+          "title": "Mount sensors and establish collection",
+          "description": "Sensors are mounted at the bearing positions that actually carry the load, which matters more than the sensor specification. Data reaches a gateway over a wireless mesh or existing cabling, and drive data is pulled over the network the VFDs are already on."
+        },
+        {
+          "meta": "Learn",
+          "title": "Build the baseline",
+          "description": "Several weeks of running across the machine's normal duty range, including the states people forget — start-up, low load, the pump running against a partly closed valve. Thresholds set before this period exists are guesses, and guessed thresholds are what generate the false alarms that get a system switched off."
+        },
+        {
+          "meta": "Use",
+          "title": "Route alerts to someone who can act",
+          "description": "An alert that arrives as an email to a shared mailbox is an alert nobody owns. Thresholds are tied to named people and to the maintenance system, so a rising trend becomes a planned job with a part ordered against it rather than a notification somebody read on a phone and forgot."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What it changes *about maintenance*",
+      "body": [
+        "Repairs move from unplanned to scheduled, which is where the cost difference between the two actually lives.",
+        "Parts are ordered against a trend with weeks of warning, instead of paid for at premium freight rates on a Friday night.",
+        "Time-based overhauls can be challenged with evidence — a machine in good condition need not be stripped just because the calendar says so.",
+        "Repeat failures get a cause, because there is a record of how the machine behaved before each one rather than only the fact that it failed.",
+        "Manual inspection routes shrink to the machines that genuinely need a person standing next to them."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Plants with rotating equipment *they cannot afford to lose*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Oil and Gas",
+          "icon": "oil",
+          "description": "Pumps, compressors and fans where a failure is a production loss measured in hours of throughput, and where access for manual inspection is restricted by permits and classification."
+        },
+        {
+          "name": "Water and Wastewater",
+          "icon": "water",
+          "description": "Pump stations that run continuously, are often unstaffed, and where the first sign of a problem has historically been a station that stopped pumping."
+        },
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Motors and gearboxes embedded in a production line, where the machine itself is inexpensive and the stoppage it causes is not."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about condition monitoring*",
+      "items": [
+        {
+          "q": "How many machines should we start with?",
+          "a": [
+            "Fewer than the site's instinct, which is usually to cover everything. A first phase of ten to thirty critical machines produces data a team can actually respond to, proves the alerts are worth reading, and builds the habit. A hundred machines instrumented on day one produces an alarm list nobody triages, and the system is muted within a quarter."
+          ]
+        },
+        {
+          "q": "Do we need someone who can read vibration spectra?",
+          "a": [
+            "Not to get value from it. Trend and threshold alarms on overall levels catch a large share of developing faults and need no specialist to interpret — the machine changed, go and look at it. Spectral diagnosis is what tells you which bearing and why, and that expertise can be brought in for the specific machines and moments where it matters rather than kept on staff."
+          ]
+        },
+        {
+          "q": "Can this use the VFDs and sensors we already have?",
+          "a": [
+            "Very often, yes, and it is the right place to start. Most sites already have drives holding current, torque and running-hour data that nothing reads, and PT100s already fitted in motor windings. Reading what is already there costs a network connection and some configuration, and it establishes whether a fuller sensor rollout is justified."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us which machine you cannot afford to lose, and *we will start there.*",
+      "body": "A criticality review and a first-phase proposal covering sensors, data collection and how alerts reach your maintenance team.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

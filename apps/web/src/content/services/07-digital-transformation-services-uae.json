@@ -7,7 +7,8 @@
   "menu": {
     "label": "Digital",
     "blurb": "Plant Data & Analytics",
-    "icon": "chart"
+    "icon": "chart",
+    "group": "Digital & Data"
   },
   "summary": "Digital Transformation Services UAE from General Tech Automation. IT-OT integration, IoT, analytics & cyber security with Emerson. Get a roadmap today.",
   "meta": {

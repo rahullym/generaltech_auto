@@ -1,0 +1,182 @@
+{
+  "order": 3,
+  "title": "Migrating a Line off an Obsolete PLC",
+  "slug": "applications/obsolete-plc-migration",
+  "cardTitle": "Obsolete PLC Migration",
+  "cardBlurb": "The controller running your line went out of production years ago and the spare in the cupboard is the last one. Moving to a current platform without rebuilding the line.",
+  "cardImage": "operator-control-panel.jpg",
+  "sectors": ["Manufacturing", "Automotive", "Food & Beverage"],
+  "meta": {
+    "title": "Obsolete PLC Migration in the UAE | General Tech Automation",
+    "description": "How a production line is moved off an end-of-life PLC — documenting the existing logic, converting it, and cutting over inside a planned shutdown."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Migrating a Line *off an Obsolete PLC*",
+      "subheading": "Logic Recovery • Hardware Replacement • Tested Cutover • Dubai • Sharjah • Abu Dhabi",
+      "image": "operator-control-panel.jpg",
+      "actions": [
+        {
+          "label": "Book a free site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "An obsolete PLC does not announce itself. The line runs perfectly well, the logic has not been touched in a decade, and the risk is entirely invisible until the day a card fails. Then it becomes very visible: the part is out of production, the broker wants a great deal of money for a used one with no warranty, the programming software will not run on anything newer than Windows XP, and the only person who understood the program left in 2014.",
+        "**Migrating to a current platform** is the work of removing that risk before it collects. Done properly it is not a rebuild — the field devices, the wiring and the machine itself stay exactly as they are. What changes is the controller, the software it runs, and the fact that spares and support exist for it again."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "What actually *gets replaced*",
+      "intro": "The scope is deliberately narrow. Every extra thing pulled into a migration is another thing that can go wrong in the cutover window.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "cpu",
+          "title": "The processor and I/O",
+          "description": "The old rack comes out and a current-generation controller goes in — Siemens, Allen-Bradley, Schneider or whatever the site already standardises on, because a second platform to support is a cost that outlives the project. Where the I/O count and types allow, the new rack is laid out to land the existing field wiring with minimal re-termination."
+        },
+        {
+          "icon": "screen",
+          "title": "The program",
+          "description": "The logic is recovered from the running controller, read and understood, and rewritten for the new platform. Automatic conversion tools get part of the way and are worth using, but the output always needs a pass by someone who knows what the machine does — a converted rung that is syntactically correct and behaviourally wrong is worse than no conversion at all."
+        },
+        {
+          "icon": "dashboard",
+          "title": "The operator interface",
+          "description": "An HMI of the same vintage as the PLC is usually just as unobtainable, so it goes at the same time. This is the one place where taking the opportunity to improve things is worth it: clearer alarm text, a proper alarm history, and diagnostics that tell a fitter which sensor failed rather than which fault code appeared."
+        },
+        {
+          "icon": "cabinet",
+          "title": "The panel it lives in",
+          "description": "New hardware in a thirty-year-old enclosure with tired terminals and no room for a new power supply is a false economy. Depending on condition, the panel is either refurbished around the new equipment or rebuilt entirely and swapped as a unit, which is far quicker in the window."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Doing it *without losing the line*",
+      "intro": "The entire method is about moving risk out of the shutdown window and into the weeks before it, where a problem costs time instead of production.",
+      "steps": [
+        {
+          "meta": "Weeks before",
+          "title": "Recover and document the existing system",
+          "description": "The current program is uploaded while the machine still runs, and the I/O list, wiring and sequence of operation are documented against it. On many older installations this is the first accurate documentation the line has ever had, and it has value well beyond the migration."
+        },
+        {
+          "meta": "Weeks before",
+          "title": "Convert, review and simulate",
+          "description": "The logic is rewritten for the new platform and tested against simulated I/O — every interlock, every alarm, every mode change, and specifically all the odd behaviour that only exists because a fitter asked for it in 2009. Faults found here cost an afternoon; the same faults found during cutover cost production."
+        },
+        {
+          "meta": "Weeks before",
+          "title": "Build and pre-test the panel",
+          "description": "The replacement panel is built and wired on the bench, powered up, and tested with the new program loaded and the I/O forced through its states. It arrives on site as a proven assembly rather than a box of parts."
+        },
+        {
+          "meta": "The window",
+          "title": "Cut over and prove",
+          "description": "Old panel out, new panel in, field wiring landed, and then a full point-to-point check of every input and output before anything is allowed to move. Dry runs, then a supervised production run, then handover with the documentation and the source program in the site's hands — not the contractor's."
+        }
+      ],
+      "footnote": "Keeping the old hardware, intact and labelled, until the new system has run a full production cycle is the cheapest insurance in the project."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What you are *actually buying*",
+      "body": [
+        "Spare parts that exist and can be bought in an afternoon rather than sourced from a broker in another country.",
+        "Programming software that runs on a current laptop, so a change does not begin with finding the one machine that can talk to the controller.",
+        "Documentation and a source program the site owns, which is what makes the next engineer's job possible.",
+        "Diagnostics good enough that a maintenance team can find a failed field device themselves instead of calling someone out to read the logic.",
+        "A path to connect the line to the rest of the plant — historians, dashboards, condition monitoring — which an end-of-life controller simply cannot take."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Lines that are *too old to trust and too good to scrap*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Manufacturing",
+          "icon": "factory",
+          "description": "Process and assembly lines built around controllers that have been end-of-life for years, still running well, and carrying a single point of failure nobody has costed."
+        },
+        {
+          "name": "Automotive",
+          "icon": "automotive",
+          "description": "Press, weld and assembly cells where the mechanical plant has decades of life left and only the control system has aged out from under it."
+        },
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "Filling, packing and CIP systems where downtime is measured against a production plan with no slack in it, and where the migration has to fit a scheduled clean rather than create a stoppage."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about migration*",
+      "items": [
+        {
+          "q": "The original program is password protected and nobody has the password. Now what?",
+          "a": [
+            "It is a common situation and not usually fatal. Where the logic cannot be recovered from the controller, the system is reverse-engineered from the outside: the I/O list, the electrical drawings, the machine's actual behaviour, and a great deal of time with the people who operate it. It costs more and takes longer than a straight conversion, which is a good argument for doing the migration before the person who knows the machine retires."
+          ]
+        },
+        {
+          "q": "How long does the line have to be down?",
+          "a": [
+            "That depends almost entirely on how much was proved beforehand. A migration where the panel was pre-built and the logic was simulated is a cutover measured in a weekend or a planned shutdown. A migration where the first time the new program meets the real machine is on the night of the changeover is measured in however long the surprises take. The preparation is what buys the short window."
+          ]
+        },
+        {
+          "q": "Should we change platform, or stay with the same manufacturer?",
+          "a": [
+            "Staying within the same manufacturer's current range usually converts more cleanly and keeps the maintenance team on software they know. Changing is worth it when the site already standardises on something else, or when the incumbent range no longer suits the application. What is rarely worth it is choosing a platform nobody on site has seen before because it was cheapest on the quotation."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us what is controlling your line, and *we will tell you how exposed you are.*",
+      "body": "A survey of the installed control hardware, its support status, and what a migration would take in scope, cost and downtime.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

@@ -7,7 +7,8 @@
   "menu": {
     "label": "Control Panels",
     "blurb": "Design & Manufacturing",
-    "icon": "cabinet"
+    "icon": "cabinet",
+    "group": "Engineering & Build"
   },
   "summary": "Custom Control Panel Design & Manufacturing UAE by General Tech Automation. VFD, PLC, MCC & switchgear panels built in 10-15 days. Get a fixed quote today.",
   "meta": {

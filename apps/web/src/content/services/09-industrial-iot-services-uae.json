@@ -7,7 +7,8 @@
   "menu": {
     "label": "IoT",
     "blurb": "Sensors, Gateways & Cloud",
-    "icon": "network"
+    "icon": "network",
+    "group": "Digital & Data"
   },
   "summary": "Get expert Industrial IoT Services in UAE: smart sensors, predictive maintenance & real-time monitoring across Dubai, Sharjah, Abu Dhabi & Fujairah.",
   "meta": {

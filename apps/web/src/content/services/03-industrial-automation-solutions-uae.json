@@ -7,7 +7,8 @@
   "menu": {
     "label": "Automation",
     "blurb": "PLC, DCS & SCADA",
-    "icon": "cpu"
+    "icon": "cpu",
+    "group": "Engineering & Build"
   },
   "summary": "Industrial Automation Solutions UAE for DeltaV DCS, PLC and SCADA, and process control. Serving Dubai, Sharjah & Abu Dhabi.",
   "meta": {

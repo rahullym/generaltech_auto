@@ -7,7 +7,8 @@
   "menu": {
     "label": "Instrument Supply",
     "blurb": "Emerson & Partner Brands",
-    "icon": "package"
+    "icon": "package",
+    "group": "Maintenance & Repair"
   },
   "summary": "Main Instrument Supplier in UAE: capital project instrumentation, control valves & bulk supply with cost certainty across Dubai, Sharjah, Abu Dhabi.",
   "meta": {

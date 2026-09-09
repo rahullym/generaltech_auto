@@ -1,0 +1,181 @@
+{
+  "order": 2,
+  "title": "Remote Tank Level Monitoring",
+  "slug": "applications/remote-tank-level-monitoring",
+  "cardTitle": "Remote Tank Level Monitoring",
+  "cardBlurb": "Someone climbs the tank with a dip tape once a shift, and the reorder still gets left too late. Put a level transmitter on it and the number comes to you.",
+  "cardImage": "oil-refinery.jpg",
+  "sectors": ["Oil & Gas", "Water", "Chemical"],
+  "meta": {
+    "title": "Remote Tank Level Monitoring in the UAE | General Tech Automation",
+    "description": "How remote tank level monitoring is put together — radar and hydrostatic transmitters, telemetry and alarms, for tanks on sites with no cabling and no permanent staff."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Remote Tank *Level Monitoring*",
+      "subheading": "Radar & Hydrostatic Level • Telemetry • Threshold Alarms • Dubai • Sharjah • Abu Dhabi",
+      "image": "oil-refinery.jpg",
+      "actions": [
+        {
+          "label": "Book a free site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "digital-bg.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "A tank that is read by hand is a tank that is read late. Someone walks out to it, climbs it, dips it, writes the number on a sheet, and by the time that sheet reaches anyone who orders stock the level has moved again. On a remote site — a pumping station, a bulk depot, a yard on the far side of an industrial area — the walk is long enough that the reading happens once a day, or once a week, or when somebody remembers.",
+        "**Remote tank level monitoring** replaces the walk with a transmitter and a signal. The level is measured continuously, sent out over the mobile network or the site's own connection, and presented as a live figure with a history behind it. The reorder point stops being a judgement call made from a stale number, and a run-out stops being something you find out about from the process that just stopped."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "What goes on *the tank*",
+      "intro": "The measurement technology follows the contents and the tank, not the other way round. The rest of the chain is much the same whichever is chosen.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "signal",
+          "title": "Radar or ultrasonic, from the top",
+          "description": "A non-contact transmitter measures down to the surface from a nozzle in the tank roof. Nothing touches the product, which suits aggressive chemicals, sticky media and anything where a probe would need cleaning. Radar copes with vapour, foam and dust far better than ultrasonic, which is what usually decides between them on a process tank rather than a water tank."
+        },
+        {
+          "icon": "gauge",
+          "title": "Hydrostatic, from the bottom",
+          "description": "A submersible or flush-mounted pressure transmitter reads the head of liquid above it and converts it to level. It is the straightforward choice on water, fuel and simple storage duties, and it stays accurate in a tank whose roof is crowded or hard to reach. Density changes are the thing to watch: the reading is a pressure, and a product that varies in density varies in indicated level."
+        },
+        {
+          "icon": "cpu",
+          "title": "An RTU or telemetry unit",
+          "description": "The transmitter's 4-20mA or HART output goes to a unit that logs it, applies the tank's strapping table to turn level into volume, and holds the data if the link drops. On a site with no mains it runs from a battery and a solar panel, and its reporting interval is set to match — hourly is plenty for a slow tank, and it is what makes a battery last a year rather than a month."
+        },
+        {
+          "icon": "dashboard",
+          "title": "A dashboard and an alarm list",
+          "description": "Levels, volumes and trends for every tank on one screen, reachable from a phone. Thresholds are the part people use most: a low-level warning early enough to get a delivery booked, a high-level alarm before an overfill, and a rate-of-change alarm that catches a leak or an open valve that a static level check would miss for hours."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Installation",
+      "heading": "Getting it *onto a live tank*",
+      "intro": "Most tank level work is done on tanks that stay in service. The sequence below is what keeps it that way.",
+      "steps": [
+        {
+          "meta": "Survey",
+          "title": "Tank, product and access",
+          "description": "Dimensions and strapping, what the tank holds and how it behaves, what nozzles exist and what would have to be cut, whether there is power nearby, and how good the mobile signal is at the tank rather than at the gate. The last two decide as much about the design as the first two."
+        },
+        {
+          "meta": "Design",
+          "title": "Sensor choice and mounting",
+          "description": "The transmitter is matched to the product, the tank geometry and the certification the area demands — an intrinsically safe or Ex-rated instrument where the classification calls for it, and never as an afterthought. Mounting is designed so the instrument can be reached for service without a permit that takes a week to raise."
+        },
+        {
+          "meta": "Install",
+          "title": "Fit, wire and power",
+          "description": "The transmitter goes on its nozzle or into its stilling well, cabling is run and glanded, and the RTU is mounted with its antenna and, where there is no mains, its solar panel and battery. On an existing spare nozzle this is a few hours per tank; where a nozzle has to be cut it becomes a shutdown job."
+        },
+        {
+          "meta": "Commission",
+          "title": "Calibrate and prove the alarms",
+          "description": "The reading is verified against a manual dip across as much of the range as the tank's contents allow, the strapping table is loaded so volume is right and not just level, and every alarm is triggered deliberately to confirm it reaches a person — which is the step most often skipped and most often regretted."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What changes *once it is live*",
+      "body": [
+        "Stock levels are known continuously rather than at whatever moment somebody last climbed the tank.",
+        "Deliveries are ordered against a trend and a forecast run-out date, instead of against a number that is already a day old.",
+        "Overfills and run-outs are preceded by an alarm rather than followed by an incident report.",
+        "Usage history per tank shows what is actually consumed, which is the basis for arguing about tank sizing and delivery frequency.",
+        "Nobody climbs a tank to read it, which removes a routine working-at-height task from the shift."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Sites with tanks *and no one standing next to them*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Oil and Gas",
+          "icon": "oil",
+          "description": "Bulk fuel, additive and chemical storage on sites where the classification demands certified instruments and where a run-out interrupts far more than the tank it happens in."
+        },
+        {
+          "name": "Water and Wastewater",
+          "icon": "water",
+          "description": "Reservoirs, break tanks and dosing chemical storage spread across pumping stations that no one is permanently posted to. Telemetry is often the only practical way to see them at all."
+        },
+        {
+          "name": "Chemical Processing",
+          "icon": "chemical",
+          "description": "Raw material and intermediate storage where the product is aggressive enough that a non-contact measurement is worth the extra cost, and where an overfill is a containment event."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about tank telemetry*",
+      "items": [
+        {
+          "q": "There is no power or cabling at our tanks. Does that rule it out?",
+          "a": [
+            "No — it is the normal case rather than the exception. A solar panel, a battery and a cellular RTU make a tank self-sufficient, and the reporting interval is chosen to suit the power budget. A tank that moves slowly does not need a reading every thirty seconds, and reporting hourly instead is usually the difference between changing a battery annually and changing it monthly."
+          ]
+        },
+        {
+          "q": "Can it feed our existing SCADA rather than a separate dashboard?",
+          "a": [
+            "Yes. The RTU can present the same data over Modbus, MQTT or OPC UA to a SCADA or historian you already run, and many sites do exactly that so tank levels sit alongside everything else the control room watches. The hosted dashboard is a convenience for people who are not in front of SCADA; the two are not mutually exclusive."
+          ]
+        },
+        {
+          "q": "How accurate is it compared with dipping?",
+          "a": [
+            "For most storage duties a properly installed and calibrated transmitter is at least as accurate as a dip tape and far more consistent, because it is not affected by who is holding the tape. Where the measurement is used for custody transfer the requirements are different and stricter, and that is a separate conversation about certified metering rather than monitoring."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us how many tanks, and where they are, and *we will scope the telemetry.*",
+      "body": "A survey covering sensor selection, power and signal at each tank, and what it takes to see them all on one screen.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

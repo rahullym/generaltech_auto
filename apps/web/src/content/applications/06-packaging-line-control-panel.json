@@ -1,0 +1,182 @@
+{
+  "order": 6,
+  "title": "A Control Panel and HMI for a Packaging Line",
+  "slug": "applications/packaging-line-control-panel",
+  "cardTitle": "Packaging Line Control Panel",
+  "cardBlurb": "Three machines bought from three suppliers, each with its own start button and none of them talking. One panel, one HMI, one sequence.",
+  "cardImage": "panel-inspection.jpg",
+  "sectors": ["Food & Beverage", "Pharmaceutical", "Logistics"],
+  "meta": {
+    "title": "Packaging Line Control Panel and HMI | General Tech Automation UAE",
+    "description": "How a custom control panel and HMI ties a packaging line together — filler, capper, labeller and conveyors under one sequence, built and tested before it ships."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "A Control Panel and HMI *for a Packaging Line*",
+      "subheading": "Panel Design & Build • PLC & HMI • Line Sequencing • Dubai • Sharjah • Abu Dhabi",
+      "image": "panel-inspection.jpg",
+      "actions": [
+        {
+          "label": "Book a free line assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "operator-control-panel.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Packaging lines are rarely bought as lines. A filler is ordered one year, a capper the next, a labeller and a case packer after that, and each arrives with its own controller, its own operator panel and its own idea of what a start button means. They are connected by conveyor and by an operator who has learned in what order to press things. When something jams, every machine keeps doing what it was doing, and the pile-up is cleared by hand.",
+        "**One panel over the line** makes the machines into a line. A single controller sequences them, holds the interlocks between them, and presents one screen an operator actually runs the line from. The machines keep their own internal controls; what changes is that they now stop for each other."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "What is *in the panel*",
+      "intro": "Built to the site's electrical standard and to the environment it will live in, which on a wet packaging hall is a bigger constraint than most specifications admit.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "cpu",
+          "title": "The controller and I/O",
+          "description": "A PLC sized for the line with room left for the machine that gets added next year — because one always is. I/O covers the interlocks, the photocells that detect a backup, the conveyor drives, and the handshakes with each machine's own controller over hardwired signals or a fieldbus, whichever the supplier equipment supports."
+        },
+        {
+          "icon": "screen",
+          "title": "The HMI",
+          "description": "One screen showing the whole line: what is running, what is waiting, what stopped and why. Recipes and format changeover parameters live here rather than in a folder of laminated sheets, and the alarm page names the device and the location rather than showing a numeric code that has to be looked up."
+        },
+        {
+          "icon": "cog",
+          "title": "Drives and motor control",
+          "description": "Conveyor and accumulation drives with speed control, so the line can be balanced rather than run flat out and jammed. Starters, protection and isolation to the site standard, laid out so a fitter can isolate one section without shutting the whole hall down."
+        },
+        {
+          "icon": "shield",
+          "title": "Safety and stainless",
+          "description": "Emergency stop and guard interlock circuits designed to the assessed safety requirement, with safety relays or a safety controller as the assessment demands. On a washdown line the enclosure is stainless and rated for the hosing it will actually receive, not the hosing the specification imagines."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Built on a bench, *not on your floor*",
+      "intro": "Almost all of the risk in a line control project can be moved off site and into a workshop, where a problem costs an afternoon rather than a shift of production.",
+      "steps": [
+        {
+          "meta": "Define",
+          "title": "Write down what the line does",
+          "description": "The sequence, the interlocks, what happens on each stop condition, what an operator is allowed to override, and what a format changeover involves. This document is agreed before anything is drawn, and it is the thing that arguments at commissioning get settled against."
+        },
+        {
+          "meta": "Design",
+          "title": "Electrical design and approval",
+          "description": "Schematics, panel layout, cable schedules and the I/O list, issued for the client's approval before the build starts. Changing a drawing costs nothing; changing a wired panel costs a day."
+        },
+        {
+          "meta": "Build",
+          "title": "Manufacture and factory test",
+          "description": "The panel is built and wired in the workshop, then powered and tested with the program loaded and every input and output exercised. The client is welcome at that test, and it is the right moment to say the sequence is not quite what was wanted."
+        },
+        {
+          "meta": "Install",
+          "title": "Install, integrate and hand over",
+          "description": "The panel is set, field wiring landed, and the machines are brought under the sequence one at a time rather than all at once. Then dry runs, then product, then operator and maintenance training, with drawings and the source program left with the site."
+        }
+      ],
+      "footnote": "A factory acceptance test with the customer present is the cheapest place in the project to change your mind."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What the line *does differently afterwards*",
+      "body": [
+        "The machines stop for each other, so a jam at the labeller no longer means clearing product off the floor behind it.",
+        "One operator interface replaces four, which shortens training and removes the knowledge that only lives with the person who has run the line longest.",
+        "Format changeovers become a recipe selection instead of a set of manual adjustments remembered differently by each shift.",
+        "Stoppages are recorded with a reason and a duration, which is the raw material for finding out where the line actually loses its output.",
+        "Adding the next machine is an extension of an existing sequence rather than another island with its own start button."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Lines assembled *one machine at a time*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Food and Beverage",
+          "icon": "beverage",
+          "description": "Filling, capping, labelling and case packing, usually in a wet environment, usually built up over several years from several suppliers."
+        },
+        {
+          "name": "Pharmaceutical",
+          "icon": "pharma",
+          "description": "Packing lines where the sequence, the batch record and the changeover procedure all have to be documented and repeatable, and where an undocumented operator workaround is a finding."
+        },
+        {
+          "name": "Warehousing and Logistics",
+          "icon": "logistics",
+          "description": "Conveyor, sortation and palletising sections that need to be interlocked and accumulated rather than simply run at the same time and hoped for."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about line control panels*",
+      "items": [
+        {
+          "q": "Do the machines have to be replaced or reprogrammed?",
+          "a": [
+            "Usually neither. Most packaging machines expose enough to work with — a run signal, a fault output, a remote start input, sometimes a fieldbus connection — and the line controller works through those. Where a machine offers nothing at all, a small amount of interfacing at its own panel is generally enough. Replacing a working machine to integrate it is almost never the right answer."
+          ]
+        },
+        {
+          "q": "Can we keep using each machine on its own?",
+          "a": [
+            "Yes, and it is worth insisting on. Every machine keeps a local mode so it can be run alone for cleaning, setting and fault finding, with the line sequence selectable separately. A design that only works with every machine present and healthy is a design that makes maintenance harder than it was before."
+          ]
+        },
+        {
+          "q": "How long does installation take on site?",
+          "a": [
+            "Days rather than weeks, when the panel has been properly factory tested — the on-site work is setting the enclosure, landing field wiring and bringing the machines under the sequence in turn. The design and build before that is where the calendar time goes, and it is time the line spends running normally."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us what is on your line, and *we will design the panel that ties it together.*",
+      "body": "A line survey and a written scope covering the sequence, the panel, the HMI and what the installation needs.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

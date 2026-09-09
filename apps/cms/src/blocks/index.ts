@@ -1,3 +1,4 @@
+export { ApplicationIndex } from './ApplicationIndex'
 export { CallToAction } from './CallToAction'
 export { ContactBlock } from './ContactBlock'
 export { Coverage } from './Coverage'

@@ -7,7 +7,8 @@
   "menu": {
     "label": "Commissioning",
     "blurb": "Loop Checks & Start-Up",
-    "icon": "clipboard"
+    "icon": "clipboard",
+    "group": "Engineering & Build"
   },
   "summary": "Measurement Commissioning and Start-Up Services UAE from General Tech Automation — accurate installation, testing & operator training, on schedule.",
   "meta": {

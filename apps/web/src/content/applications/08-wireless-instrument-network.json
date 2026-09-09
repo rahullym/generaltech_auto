@@ -1,0 +1,182 @@
+{
+  "order": 8,
+  "title": "A Wireless Instrument Network Across a Tank Farm",
+  "slug": "applications/wireless-instrument-network",
+  "cardTitle": "Wireless Instrument Network",
+  "cardBlurb": "The measurement you want is four hundred metres from the nearest marshalling cabinet, across a bunded area. Wireless is what makes it affordable.",
+  "cardImage": "industrial-slider.jpg",
+  "sectors": ["Oil & Gas", "Chemical", "Water"],
+  "meta": {
+    "title": "WirelessHART Instrument Networks in the UAE | General Tech Automation",
+    "description": "How a wireless instrument network is designed and installed across a tank farm — site survey, mesh design, gateway integration and the points where cable still wins."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "A Wireless Instrument Network *Across a Tank Farm*",
+      "subheading": "WirelessHART • Site Surveys • Mesh Design • Gateway Integration • Dubai • Sharjah • Abu Dhabi",
+      "image": "industrial-slider.jpg",
+      "actions": [
+        {
+          "label": "Book a free site survey",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "DeltaV.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "On a spread-out site, the instrument is cheap and the cable is not. A pressure transmitter costs a few thousand dirhams; getting a signal from it back to a marshalling cabinet four hundred metres away, across a bund, under a road and through a hazardous area classification, can cost many times that before anyone has measured anything. This is why so many useful measurements on tank farms, well pads and outlying pump stations simply never get made — not because nobody wanted the data, but because the trench was never going to be approved.",
+        "**A wireless instrument network** removes the trench from the equation. Battery-powered field devices form a self-organising mesh, each one relaying for its neighbours, back to a gateway that presents everything to the control system as though it were wired. The instruments are the same instruments; what changes is how their readings get home."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "What makes up *the network*",
+      "intro": "WirelessHART is the usual choice in process plants because it was designed for this job rather than adapted to it — mesh routing, channel hopping and a security model that assumes an industrial site.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "signal",
+          "title": "Field devices",
+          "description": "Wireless transmitters for pressure, temperature, level and flow, or wired instruments brought onto the network through a wireless adapter — which is often the cheaper route where a good instrument is already in place and only its signal path is the problem. Battery life is a design parameter set by the update rate, not a fixed property of the device."
+        },
+        {
+          "icon": "network",
+          "title": "The mesh itself",
+          "description": "Every device relays for the others, so coverage comes from device density rather than from one powerful radio. That is what makes the network resilient — a tanker parked in the wrong place blocks one path and the traffic takes another — and it is also why the design has to consider what the site looks like when it is full, not when it is empty."
+        },
+        {
+          "icon": "cabinet",
+          "title": "Gateways",
+          "description": "The gateway is where the mesh meets the plant. It presents the field devices to the DCS, PLC or historian over Modbus, OPC UA or HART-IP, and it is the one part of the network that needs mains power and a wired path home. Sites that cannot tolerate losing the data provide two, positioned so that neither one's failure isolates a corner of the site."
+        },
+        {
+          "icon": "shield",
+          "title": "Hazardous area certification",
+          "description": "Devices carry the Ex rating the area classification demands, and the battery packs are certified as part of the instrument rather than bought as a commodity. This is not a detail to settle at installation: the classification drives the device selection, and getting it wrong is discovered at exactly the wrong moment."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "Designing a network *for the site as it is*",
+      "intro": "Wireless installations succeed or fail at the survey. Everything after it is comparatively straightforward.",
+      "steps": [
+        {
+          "meta": "Survey",
+          "title": "Walk the site with a radio",
+          "description": "Distances, line of sight, and the steelwork, tanks and pipe racks that will attenuate or reflect the signal. Measured, not estimated from a plot plan — a tank farm drawing does not show the scaffolding that has been up for eight months or the road tankers that park along the eastern fence every morning."
+        },
+        {
+          "meta": "Design",
+          "title": "Place devices and gateways",
+          "description": "Gateway positions and device layout are chosen so that every device has several viable neighbours rather than one. Where a measurement point sits in a radio shadow, a repeater or a relocated gateway solves it at design time for very little money, which is not true once the network is installed."
+        },
+        {
+          "meta": "Set",
+          "title": "Update rates and battery budget",
+          "description": "Each device's publish rate is set to what the measurement is actually for. A tank level that moves over hours does not need a reading every second, and choosing the rate deliberately is what makes the difference between a battery that lasts years and one that is changed annually across a hundred devices."
+        },
+        {
+          "meta": "Prove",
+          "title": "Install, integrate and verify the mesh",
+          "description": "Devices are mounted and commissioned, the gateway is integrated with the control system, and the network is then left to form and checked properly — path stability and reliability statistics per device, not simply whether a value appeared on a screen. Weak devices are found and fixed here rather than in six months."
+        }
+      ],
+      "footnote": "Wireless is not the answer for closed-loop control or for a safety function. Those still get cable, and a good design says so plainly."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "What it makes *possible*",
+      "body": [
+        "Measurements in places where the cable cost could never be justified, which is most of the outlying parts of a large site.",
+        "Installation without trenching, road crossings or cable tray, so the work does not need civil scope or a shutdown to complete.",
+        "Points that can be added later for the cost of a device, rather than the cost of a device plus a route back to the cabinet.",
+        "Temporary instrumentation during a trial, a commissioning campaign or a turnaround, taken away again afterwards.",
+        "Diagnostics from wired smart instruments whose HART data has been sitting unread on a 4-20mA loop for years."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Sites too spread out *to cable*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Oil and Gas",
+          "icon": "oil",
+          "description": "Tank farms, loading gantries and well pads where distances are long, areas are classified, and any excavation is a permitting exercise before it is an engineering one."
+        },
+        {
+          "name": "Chemical Processing",
+          "icon": "chemical",
+          "description": "Bunded storage and outlying process areas where running new cable means crossing containment, and where additional monitoring points are wanted faster than a cabling project can deliver them."
+        },
+        {
+          "name": "Water and Wastewater",
+          "icon": "water",
+          "description": "Treatment works and reservoir sites spread over large footprints, with assets sited for the process rather than for the convenience of the cable route."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about wireless instruments*",
+      "items": [
+        {
+          "q": "Is it reliable enough to trust?",
+          "a": [
+            "For monitoring, indication and open-loop applications, a properly surveyed and correctly dense mesh is very reliable, and the network reports its own reliability per device so the answer is measured rather than asserted. For closed-loop control and for safety instrumented functions the answer is different, and those should be wired. A supplier who tells you wireless is suitable for everything is selling rather than engineering."
+          ]
+        },
+        {
+          "q": "How long do the batteries last?",
+          "a": [
+            "It is a design outcome, not a specification. Update rate is the dominant factor, along with how much routing the device does for its neighbours and the ambient temperature — which in the UAE is not a small consideration. Devices set to publish at a rate matched to the process typically run for years; the same devices set to publish every second do not, and that choice is made at commissioning."
+          ]
+        },
+        {
+          "q": "Will it interfere with our Wi-Fi or our radios?",
+          "a": [
+            "WirelessHART shares the 2.4 GHz band with Wi-Fi but hops across channels and uses very short, low-power transmissions, so coexistence is normally unproblematic. Where a site runs heavy Wi-Fi in the same area it is worth coordinating channel plans during the survey, which is a conversation with the IT team rather than an obstacle."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Tell us what you want to measure and how far away it is, and *we will survey it.*",
+      "body": "A radio survey of the site as it actually stands, with a mesh design, device schedule and gateway integration plan.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

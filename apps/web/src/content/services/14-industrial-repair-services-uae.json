@@ -7,7 +7,8 @@
   "menu": {
     "label": "Repairs",
     "blurb": "Drives, Boards & Servos",
-    "icon": "board"
+    "icon": "board",
+    "group": "Maintenance & Repair"
   },
   "summary": "Industrial Repair Services in UAE for VFDs, servo drives, PLCs and CNC electronics. Serving Dubai, Sharjah & Abu Dhabi. Get a quote.",
   "meta": {

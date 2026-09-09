@@ -7,7 +7,8 @@
   "menu": {
     "label": "Retrofits",
     "blurb": "Legacy System Upgrades",
-    "icon": "upgrade"
+    "icon": "upgrade",
+    "group": "Engineering & Build"
   },
   "summary": "Industrial Retrofit Solutions in UAE for VFDs, PLCs and control panels. Modernize aging equipment across Dubai, Sharjah & Abu Dhabi.",
   "meta": {

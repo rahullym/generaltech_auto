@@ -7,7 +7,8 @@
   "menu": {
     "label": "Wireless Networks",
     "blurb": "WirelessHART & Surveys",
-    "icon": "signal"
+    "icon": "signal",
+    "group": "Digital & Data"
   },
   "summary": "Wireless Plant Network Support UAE from General Tech Automation. WirelessHART gateway integration, secure plant-wide wireless networks, 24/7 support.",
   "meta": {

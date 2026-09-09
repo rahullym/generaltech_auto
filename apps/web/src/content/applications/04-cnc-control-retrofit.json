@@ -1,0 +1,182 @@
+{
+  "order": 4,
+  "title": "Retrofitting the Controls on a CNC Machine",
+  "slug": "applications/cnc-control-retrofit",
+  "cardTitle": "CNC Control Retrofit",
+  "cardBlurb": "The machine is mechanically sound and the control is dead. Replacing the CNC, drives and motors keeps a good machine working instead of replacing it.",
+  "cardImage": "automation-machine.jpg",
+  "sectors": ["Automotive", "Manufacturing", "Metals"],
+  "meta": {
+    "title": "CNC Machine Control Retrofit in the UAE | General Tech Automation",
+    "description": "How a CNC control retrofit is done — replacing the control, drives and motors on a mechanically sound machine tool, and re-proving accuracy afterwards."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Application example",
+      "heading": "Retrofitting the Controls *on a CNC Machine*",
+      "subheading": "Control & Drive Replacement • Servo & Spindle • Accuracy Re-proving • Dubai • Sharjah • Abu Dhabi",
+      "image": "automation-machine.jpg",
+      "actions": [
+        {
+          "label": "Book a free machine assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "board-repair.jpg",
+      "mediaPosition": "left",
+      "body": [
+        "Machine tools outlive their electronics by a wide margin. The castings, ways, ballscrews and spindle on a well-maintained machining centre have decades of working life in them, while the control that drives it has a supported lifetime measured in a fraction of that. The result is a familiar and frustrating situation: a mechanically excellent machine standing idle because a drive amplifier failed and there is nothing to replace it with.",
+        "**A control retrofit** separates the two. The mechanical machine stays; the control, drives, motors, encoders and operator interface are replaced with current equipment. It is a considerable piece of work and it is still, for a machine worth keeping, a fraction of the cost of a new one — and it does not carry the lead time, the foundations or the re-training that a new machine does."
+      ]
+    },
+    {
+      "type": "features",
+      "heading": "What a retrofit *covers*",
+      "intro": "The line between what is replaced and what is kept is drawn by mechanical condition. Everything electrical goes; what stays is whatever the survey proves is still capable of holding tolerance.",
+      "columns": "2",
+      "items": [
+        {
+          "icon": "cpu",
+          "title": "The CNC and operator panel",
+          "description": "A current control with a modern interface, network connectivity and program storage that is not a paper tape reader or a floppy drive. Where operators are used to a particular control, keeping to the same manufacturer's current generation saves a great deal of re-training and argument."
+        },
+        {
+          "icon": "cog",
+          "title": "Servo drives and motors",
+          "description": "Axis drives and motors are replaced as matched sets with their encoders. This is usually where the failure that triggered the project began, and it is also the part that most directly determines whether the retrofitted machine holds position the way it used to."
+        },
+        {
+          "icon": "gauge",
+          "title": "Spindle drive and feedback",
+          "description": "The spindle drive, its motor where required, and the encoder that tells the control where the spindle is — which is what rigid tapping, threading and orientation depend on. A retrofit that skips the spindle feedback is a retrofit that quietly loses machine capability."
+        },
+        {
+          "icon": "shield",
+          "title": "Safety, limits and the electrical cabinet",
+          "description": "Emergency stop circuits, guard interlocks, axis limits and overtravels are brought up to a current standard rather than reproduced as they were. The cabinet is rebuilt around the new equipment, because a new control wired into thirty-year-old terminals and a tired transformer is a fault waiting for a quiet moment."
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it runs",
+      "heading": "From a stopped machine *to a proven one*",
+      "intro": "The order matters. The mechanical assessment comes first, because it is the only step that can conclude the project should not go ahead.",
+      "steps": [
+        {
+          "meta": "First",
+          "title": "Assess the mechanical machine",
+          "description": "Ways, ballscrews, bearings, spindle condition and backlash are measured before anything is quoted. A machine with a worn spindle and tired screws will not hold tolerance however good the new control is, and finding that out first is the difference between a retrofit and an expensive disappointment."
+        },
+        {
+          "meta": "Design",
+          "title": "Specify the control package",
+          "description": "Control, drives, motors and encoders are selected to match the machine's kinematics and the work it does, and the cabinet layout and wiring are designed in full. Anything the machine has to keep doing — tool changer, coolant, chip conveyor, probing, tailstock — is written down now, because it is what gets forgotten and discovered late."
+        },
+        {
+          "meta": "Install",
+          "title": "Strip, rebuild and wire",
+          "description": "The old electrics come out, motors and encoders are fitted to the axes, the cabinet is rebuilt, and everything is wired and landed. Any mechanical work the assessment called for happens in the same window, while the machine is already apart."
+        },
+        {
+          "meta": "Prove",
+          "title": "Commission, tune and cut",
+          "description": "Axes are set up and tuned, homing and limits established, compensation applied, and the machine is put through geometric checks and then real test cuts measured against the drawing. Operators are trained on the new control before the machine goes back into the schedule, not after."
+        }
+      ],
+      "footnote": "A retrofit is finished when the machine has cut a known part to tolerance — not when the control powers up."
+    },
+    {
+      "type": "prose",
+      "layout": "default",
+      "numbered": true,
+      "heading": "Why retrofit *rather than replace*",
+      "body": [
+        "The mechanical machine you already trust is kept, along with the fixtures, tooling and workholding built around it.",
+        "Cost sits well below a comparable new machine, and the money goes into the parts that had actually worn out.",
+        "Lead time is weeks rather than the months a new machine tool takes to arrive and be installed.",
+        "Spares and control support are available again, which is the problem that started the project.",
+        "Programs, networking and tool data can join the rest of the shop, so the machine stops being an island that has to be walked to with a USB stick."
+      ]
+    },
+    {
+      "type": "industries",
+      "eyebrow": "Where it fits",
+      "heading": "Shops running *good machines with dead controls*",
+      "display": "grid",
+      "sectors": [
+        {
+          "name": "Automotive",
+          "icon": "automotive",
+          "description": "Machining and grinding cells where the process is qualified around a specific machine, and moving the work to a different one means re-proving everything."
+        },
+        {
+          "name": "General Manufacturing",
+          "icon": "factory",
+          "description": "Machining centres, lathes and presses bought when the business was set up, still capable, and now standing on borrowed time with their original electronics."
+        },
+        {
+          "name": "Metals and Fabrication",
+          "icon": "construction",
+          "description": "Heavy machines where the mechanical structure is the expensive part and is nowhere near worn out, and where replacement would mean lifting equipment and foundations as well as capital."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "Questions",
+      "heading": "Common questions *about CNC retrofits*",
+      "items": [
+        {
+          "q": "Will it hold the same accuracy afterwards?",
+          "a": [
+            "It will hold whatever the mechanical machine is capable of, which is why the assessment comes first. A retrofit onto sound ways and screws typically restores the machine to its original specification and often improves repeatability, because the new drives and encoders are better than what came out. A retrofit onto worn mechanics will not, and that is a conversation to have before the order rather than after the test cut."
+          ]
+        },
+        {
+          "q": "Do our existing programs still run?",
+          "a": [
+            "Usually with some translation. Standard G-code carries across, but canned cycles, macros, tool change routines and anything manufacturer-specific need converting and testing. Where the retrofit stays within the same control family the changes are small; across families it is a real piece of work and should be scoped as one rather than assumed."
+          ]
+        },
+        {
+          "q": "How long is the machine out of service?",
+          "a": [
+            "Typically a few weeks on site, depending on the size of the machine and how much mechanical work the assessment calls for. The long-lead items are the control and drive package, and those are ordered and delivered before the machine is touched, so the machine keeps running until the parts are physically on site."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "heading": "Send us the machine and control details, and *we will tell you whether it is worth retrofitting.*",
+      "body": "A mechanical assessment and a written scope covering the control package, the downtime and what accuracy you should expect back.",
+      "actions": [
+        {
+          "label": "Call +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}
