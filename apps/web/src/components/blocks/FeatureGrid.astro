@@ -178,7 +178,7 @@ const ICONS: Record<string, string> = {
 
                 {feature.description &&
                   paragraphs(feature.description).map((text, i) => (
-                    <p class:list={['text-[15px] leading-[1.8] text-gray-700', i > 0 && 'mt-5']}>
+                    <p class:list={['text-[15px] leading-[1.8] text-general-black', i > 0 && 'mt-5']}>
                       {text}
                     </p>
                   ))}
@@ -206,7 +206,7 @@ const ICONS: Record<string, string> = {
       footnote && (
         <p
           data-reveal="up"
-          class="mt-16 max-w-3xl border-l-2 border-general-red/20 pl-8 text-[15px] leading-[1.8] text-gray-600"
+          class="mt-16 max-w-3xl border-l-2 border-general-red/20 pl-8 text-[15px] leading-[1.8] text-general-black"
         >
           {footnote}
         </p>

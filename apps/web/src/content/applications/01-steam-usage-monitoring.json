@@ -51,7 +51,7 @@
       "variant": "chain",
       "eyebrow": "How it works",
       "heading": "From the steam header *to your phone*",
-      "intro": "Four stages between the pipe and the number. The boxes are the equipment; the labels on the arrows are how the reading actually travels, which is the part most people want explained.",
+      "intro": "Five steps between the pipe and the number. Each circle is a piece of equipment, and the label above each gap is how the reading travels to the next one — which is the part most people want explained.",
       "nodes": [
         {
           "icon": "flow",
@@ -62,7 +62,7 @@
           "icon": "transmitter",
           "title": "Remote transmitter",
           "via": "Sensor cable",
-          "note": "On a bracket at working height, not under the lagging"
+          "note": "Fitted at working height, not buried under the pipe insulation"
         },
         {
           "icon": "logger",
@@ -83,7 +83,7 @@
           "note": "Consumption per line and per shift, from anywhere"
         }
       ],
-      "footnote": "Pressure and temperature compensation happens between the first two stages — it is what turns a volume of steam into the mass you are actually paying for."
+      "footnote": "Pressure and temperature compensation happens between steps 1 and 2 — it is what turns a volume of steam into the mass you are actually paying for."
     },
     {
       "type": "features",
@@ -99,7 +99,7 @@
         {
           "icon": "cabinet",
           "title": "The remote transmitter",
-          "description": "On a boiler house pipe the electronics sit in the worst place in the room — hot, high up, and about to disappear under lagging. Mounting the transmitter remotely, on a bracket at working height with the sensor left in the line, is a decision made at install time that pays for itself the first time someone needs to read a display or change a setting without a scaffold."
+          "description": "On a boiler house pipe the electronics sit in the worst place in the room — hot, high up, and about to disappear under the pipe insulation. Mounting the transmitter remotely, on a bracket at working height with the sensor left in the line, is a decision made at install time that pays for itself the first time someone needs to read a display or change a setting without a scaffold."
         },
         {
           "icon": "cpu",

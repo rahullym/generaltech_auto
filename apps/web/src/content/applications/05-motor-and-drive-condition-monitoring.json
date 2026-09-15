@@ -51,7 +51,7 @@
       "variant": "chain",
       "eyebrow": "How it works",
       "heading": "From a bearing *to a work order*",
-      "intro": "The value is not in the sensor. It is in the last two stages — a change reaching a named person, and becoming a job with a part ordered against it.",
+      "intro": "The value is not in the sensor. It is in steps 4 and 5 — a change reaching a named person, and becoming a job with a part ordered against it.",
       "nodes": [
         {
           "icon": "sensor",
@@ -83,7 +83,7 @@
           "note": "Scheduled, with the part on the shelf before it is needed"
         }
       ],
-      "footnote": "The third stage is the one that decides whether the system survives its first year. Thresholds guessed before a baseline exists produce false alarms, and false alarms are how a condition monitoring system gets muted."
+      "footnote": "Step 3 is the one that decides whether the system survives its first year. Thresholds guessed before a baseline exists produce false alarms, and false alarms are how a condition monitoring system gets muted."
     },
     {
       "type": "features",

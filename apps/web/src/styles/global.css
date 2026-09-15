@@ -23,7 +23,7 @@
     overflow-anchor: none;
   }
   body {
-    @apply bg-white text-[#1a1a1a] font-sans antialiased overflow-x-hidden;
+    @apply bg-white text-general-black font-sans antialiased overflow-x-hidden;
     overflow-anchor: none;
   }
 
@@ -232,7 +232,7 @@
 /* Rich text output from lib/lexical.ts */
 .prose-content {
   line-height: 1.85;
-  color: #374151;
+  color: #000;
   font-size: 1.0625rem;
   /* Cap the measure. Without this, body copy ran the full width of its
      column — around 95 characters in the wider blocks — which is the single
@@ -309,7 +309,7 @@
 .prose-content blockquote {
   border-left: 2px solid #ed1c25;
   padding-left: 1.75em;
-  color: #4b5563;
+  color: #000;
   font-style: italic;
   font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
 }
@@ -347,7 +347,7 @@
 .prose-content figcaption {
   margin-top: 0.6em;
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #000;
   text-align: center;
 }
 .prose-content .text-center {

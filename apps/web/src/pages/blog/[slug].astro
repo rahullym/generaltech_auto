@@ -96,7 +96,7 @@ const articleSchema = {
             {categories.map((category) => (
               <a
                 href={`/blog?category=${category.slug}`}
-                class="rounded-xl border border-gray-200 px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-gray-600 transition-all duration-300 hover:border-general-red hover:text-general-red"
+                class="rounded-xl border border-gray-200 px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] text-general-black transition-all duration-300 hover:border-general-red hover:text-general-red"
               >
                 {category.title}
               </a>
@@ -111,7 +111,7 @@ const articleSchema = {
         (post.tags ?? []).length > 0 && (
           <ul class="mt-16 flex flex-wrap gap-3 border-t border-gray-100 pt-10">
             {(post.tags ?? []).map((entry) => (
-              <li class="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
+              <li class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-black">
                 #{entry.tag}
               </li>
             ))}

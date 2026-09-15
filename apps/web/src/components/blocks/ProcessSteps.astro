@@ -51,7 +51,7 @@ const pad = (value: number) => String(value).padStart(2, '0')
 
       {
         intro && (
-          <p data-reveal="up" class="mx-auto mt-7 max-w-2xl text-[17px] leading-[1.8] text-gray-600">
+          <p data-reveal="up" class="mx-auto mt-7 max-w-2xl text-[17px] leading-[1.8] text-general-black">
             {intro}
           </p>
         )
@@ -59,7 +59,7 @@ const pad = (value: number) => String(value).padStart(2, '0')
 
       <div
         data-reveal="up"
-        class="mt-8 font-mono text-[12px] font-semibold tracking-[0.18em] text-gray-400"
+        class="mt-8 font-mono text-[12px] font-semibold tracking-[0.18em] text-general-black"
       >
         <span data-process-current class="text-general-red">01</span> / {total} STAGES
       </div>
@@ -118,7 +118,7 @@ const pad = (value: number) => String(value).padStart(2, '0')
                   {step.description && (
                     <p
                       class:list={[
-                        'mt-4 text-[15px] leading-[1.85] text-gray-600',
+                        'mt-4 text-[15px] leading-[1.85] text-general-black',
                         right ? 'lg:mr-auto' : 'lg:ml-auto',
                         'lg:max-w-[42ch]',
                       ]}
@@ -138,7 +138,7 @@ const pad = (value: number) => String(value).padStart(2, '0')
       footnote && (
         <p
           data-reveal="up"
-          class="mx-auto mt-16 max-w-3xl border-l-2 border-general-red/20 pl-8 text-[15px] leading-[1.8] text-gray-500"
+          class="mx-auto mt-16 max-w-3xl border-l-2 border-general-red/20 pl-8 text-[15px] leading-[1.8] text-general-black"
         >
           {footnote}
         </p>

@@ -127,7 +127,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
           {
             intro && (
               <div class="lg:col-span-5">
-                <p class="translate-y-8 border-l-2 border-general-red/20 pl-8 text-[17px] leading-relaxed text-gray-700 opacity-0 reveal-item">
+                <p class="translate-y-8 border-l-2 border-general-red/20 pl-8 text-[17px] leading-relaxed text-general-black opacity-0 reveal-item">
                   {intro}
                 </p>
               </div>
@@ -199,7 +199,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
                 />
 
                 {sector.description && (
-                  <p class="mt-4 text-[15px] leading-[1.8] text-gray-600">{sector.description}</p>
+                  <p class="mt-4 text-[15px] leading-[1.8] text-general-black">{sector.description}</p>
                 )}
 
                 {/* Foot tick: the cards are a fixed height, so each one is
@@ -228,13 +228,13 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
               class="text-[40px] font-black leading-none tracking-tighter tabular-nums text-general-black"
               data-industries-current>01</span
             >
-            <span class="text-[12px] font-bold uppercase tracking-[0.25em] text-gray-400">
+            <span class="text-[12px] font-bold uppercase tracking-[0.25em] text-general-black">
               / {total} sectors
             </span>
           </div>
 
           <p
-            class="min-w-0 flex-1 truncate text-[15px] font-bold tracking-tight text-gray-500"
+            class="min-w-0 flex-1 truncate text-[15px] font-bold tracking-tight text-general-black"
             data-industries-label
           >
             {sectors[0]?.name}
@@ -255,7 +255,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
   {
     footnote && (
       <div class="mx-auto w-full max-w-7xl px-6 pb-24 md:px-12 lg:pb-32">
-        <p class="max-w-3xl translate-y-8 border-l-2 border-general-red/20 pl-6 text-[15px] leading-relaxed text-gray-500 opacity-0 reveal-item">
+        <p class="max-w-3xl translate-y-8 border-l-2 border-general-red/20 pl-6 text-[15px] leading-relaxed text-general-black opacity-0 reveal-item">
           {footnote}
         </p>
       </div>

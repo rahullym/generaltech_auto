@@ -61,7 +61,7 @@ while (cursor) {
     <article class="min-w-0">
       {
         breadcrumbs.length > 0 && (
-          <nav aria-label="Breadcrumb" class="mb-6 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">
+          <nav aria-label="Breadcrumb" class="mb-6 text-[11px] font-bold uppercase tracking-[0.2em] text-general-black">
             <ol class="flex flex-wrap items-center gap-2">
               <li>
                 <a href="/docs" class="transition-colors hover:text-general-red">Docs</a>
@@ -84,7 +84,7 @@ while (cursor) {
       </h1>
       {
         doc.description && (
-          <p class="mt-8 border-l-2 border-general-red/10 pl-8 text-xl leading-relaxed text-gray-700">
+          <p class="mt-8 border-l-2 border-general-red/10 pl-8 text-xl leading-relaxed text-general-black">
             {doc.description}
           </p>
         )
@@ -93,7 +93,7 @@ while (cursor) {
       <RichText value={doc.content} class="mt-12" />
 
       <footer class="mt-20 border-t border-gray-100 pt-8">
-        <p class="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
+        <p class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-black">
           Last updated {formatDate(doc.updatedAt)}
         </p>
 
@@ -105,7 +105,7 @@ while (cursor) {
                 rel="prev"
                 class="group rounded-2xl border border-gray-100 px-6 py-5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
               >
-                <span class="block text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">
+                <span class="block text-[10px] font-bold uppercase tracking-[0.4em] text-general-black">
                   Previous
                 </span>
                 <span class="mt-2 block font-bold tracking-tight text-general-black transition-colors group-hover:text-general-red">
@@ -123,7 +123,7 @@ while (cursor) {
                 rel="next"
                 class="group rounded-2xl border border-gray-100 px-6 py-5 text-right transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
               >
-                <span class="block text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">
+                <span class="block text-[10px] font-bold uppercase tracking-[0.4em] text-general-black">
                   Next
                 </span>
                 <span class="mt-2 block font-bold tracking-tight text-general-black transition-colors group-hover:text-general-red">
@@ -139,7 +139,7 @@ while (cursor) {
     {
       headings.length > 1 && (
         <aside class="hidden lg:sticky lg:top-[150px] lg:block lg:self-start">
-          <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
+          <p class="mb-4 text-[11px] font-bold uppercase tracking-[0.25em] text-general-black">
             On this page
           </p>
           <ul class="space-y-1.5 border-l border-gray-100">
@@ -147,7 +147,7 @@ while (cursor) {
               <li style={`padding-left:${(heading.level - 2) * 0.75 + 0.75}rem`}>
                 <a
                   href={`#${heading.id}`}
-                  class="block py-1 text-[14px] font-light text-gray-500 transition-colors hover:text-general-red"
+                  class="block py-1 text-[14px] font-light text-general-black transition-colors hover:text-general-red"
                 >
                   {heading.text}
                 </a>

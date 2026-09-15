@@ -83,7 +83,7 @@
           "note": "Proof that chemical actually moved, not just that the pump was told to run"
         }
       ],
-      "footnote": "The last stage is the one that gets left out and the one that matters most. A dosing pump running with an airlocked suction, an empty tank or a failed diaphragm reports itself as running perfectly."
+      "footnote": "Step 5 is the one that gets left out and the one that matters most. A dosing pump running with an airlocked suction, an empty tank or a failed diaphragm reports itself as running perfectly."
     },
     {
       "type": "features",

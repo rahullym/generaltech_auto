@@ -122,103 +122,133 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.cog
 
     {
       variant === 'chain' && nodes.length > 0 && (
-        /* The chain reads left to right on a wide screen and top to bottom on a
-           narrow one, and the connectors turn with it. It is one ordered list:
-           the stages are a sequence, and a screen reader should hear them as
-           one. */
-        <ol class="flex flex-col items-stretch lg:flex-row lg:items-stretch">
-          {nodes.map((node, index) => (
-            <>
-              {index > 0 && (
-                <li
-                  class="relative flex shrink-0 flex-col items-center justify-center gap-2 py-3 lg:w-[clamp(4rem,6vw,7.5rem)] lg:py-0"
-                  aria-hidden="true"
-                >
-                  {/* The protocol is the answer to "how does it get there", so
-                      it sits on the arrow and not in either box. */}
-                  {node.via && (
-                    <span class="order-2 rounded-full border border-gray-100 bg-white px-2.5 py-1 text-center text-[10.5px] font-bold uppercase leading-tight tracking-[0.1em] text-gray-500 lg:order-1 lg:mb-2.5">
-                      {node.via}
-                    </span>
-                  )}
+        /* A pipeline rather than a row of boxes. Every stage is a numbered
+           circle on one rail, so the eye follows the line instead of reading
+           five equal cards. The protocol that carries the reading is labelled
+           above the gap it crosses, in its own case — "4-20mA" and "2.4 GHz"
+           are wrong in capitals — and the last stage is filled, because it is
+           what the customer actually ends up with.
 
-                  {/* Two arrows rather than one rotated: a single path scaled
-                      across both axes shears the arrowhead into a smear. The
-                      shaft stretches, the head never does, and they share a row
-                      so they sit on one line. */}
-                  <svg
-                    class="order-1 h-7 w-4 text-gray-300 lg:hidden"
-                    viewBox="0 0 16 28"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    aria-hidden="true"
-                  >
-                    <path d="M8 1v18" stroke-dasharray="3 3" />
-                    <path d="m4 19 4 6 4-6" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
+           Left to right on a wide screen, top to bottom on a narrow one, and
+           one ordered list either way: the stages are a sequence, and a screen
+           reader should hear them as one. Horizontal only from `xl`, because
+           five stages narrower than that crush the labels into the circles. */
+        <div class="rounded-[28px] border border-gray-200/70 bg-gray-50/70 px-5 py-8 sm:px-8 xl:px-6 xl:py-12">
+          <div class="relative" style={`--stages: ${nodes.length}`}>
+            <span class="chain-rail pointer-events-none absolute hidden xl:block" aria-hidden="true">
+              <span class="chain-pulse" />
+            </span>
 
-                  <span class="order-2 hidden w-full items-center text-gray-300 lg:flex">
-                    <svg
-                      class="h-2 flex-1"
-                      viewBox="0 0 48 8"
-                      preserveAspectRatio="none"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M0 4h48"
-                        stroke-dasharray="3 3"
-                        vector-effect="non-scaling-stroke"
+            <ol class="relative flex flex-col xl:grid xl:grid-cols-[repeat(var(--stages),minmax(0,1fr))] xl:grid-rows-[auto_auto_auto] xl:pt-16">
+              {nodes.map((node, index) => {
+                const last = index === nodes.length - 1
+
+                return (
+                  <li class="relative flex gap-5 pb-9 last:pb-0 xl:row-span-3 xl:grid xl:grid-rows-subgrid xl:gap-0 xl:px-3 xl:pb-0">
+                    {/* Narrow: a segment from this circle down to the next. */}
+                    {!last && (
+                      <span
+                        class="absolute bottom-0 left-8 top-16 w-0.5 -translate-x-1/2 bg-gray-300 xl:hidden"
+                        aria-hidden="true"
                       />
-                    </svg>
+                    )}
 
-                    <svg
-                      class="h-2.5 w-2.5 shrink-0"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
+                    {/* Wide: the protocol sits above the gap before this stage,
+                        with a tick down to the rail so it is clear which gap
+                        it names. */}
+                    {index > 0 && node.via && (
+                      <>
+                        <span class="absolute -top-4 left-0 z-10 hidden w-max max-w-[12rem] -translate-x-1/2 -translate-y-full rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-center text-[12px] font-semibold leading-snug text-general-black shadow-[0_2px_6px_-2px_rgba(0,0,0,0.12)] [text-wrap:balance] xl:block">
+                          {node.via}
+                        </span>
+                        <span class="absolute -top-4 left-0 hidden h-12 w-px bg-gray-300 xl:block" aria-hidden="true" />
+                      </>
+                    )}
+
+                    {index > 0 && (
+                      <svg
+                        class="absolute top-8 z-10 hidden h-3 w-3 -translate-y-1/2 text-general-red xl:block"
+                        style="left: calc(50% - 2.875rem)"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="m4 2 4 4-4 4" />
+                      </svg>
+                    )}
+
+                    <span
+                      class:list={[
+                        'relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full xl:mx-auto',
+                        last
+                          ? 'bg-general-red text-white shadow-[0_10px_24px_-10px_rgba(237,28,37,0.7)]'
+                          : 'bg-white text-general-red shadow-[0_8px_20px_-12px_rgba(0,0,0,0.35)] ring-1 ring-gray-200',
+                      ]}
                     >
-                      <path d="m2.5 1 4 4-4 4" />
-                    </svg>
-                  </span>
-                </li>
-              )}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                        set:html={icon(node.icon)}
+                      />
+                      <span
+                        class="absolute -right-1 -top-1 flex h-6 min-w-6 items-center justify-center rounded-full bg-general-black px-1.5 text-[11px] font-bold tabular-nums text-white ring-2 ring-white"
+                        aria-hidden="true"
+                      >
+                        {index + 1}
+                      </span>
+                    </span>
 
-              <li class="flex flex-1 flex-col rounded-2xl border border-gray-100 bg-gray-50/70 p-6 text-center transition-colors duration-500 hover:border-general-red/25 hover:bg-white lg:p-7">
-                <span class="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white text-general-red ring-1 ring-red-100">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                    set:html={icon(node.icon)}
-                  />
-                </span>
+                    {/* `contents` on a wide screen, so the title and note join
+                        the list's subgrid and line up across every stage however
+                        many lines each one wraps to. */}
+                    <div class="min-w-0 flex-1 pt-1.5 xl:contents">
+                      {index > 0 && node.via && (
+                        <span class="mb-2 inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white px-2 py-0.5 text-[12px] font-semibold leading-snug text-general-black xl:hidden">
+                          <svg
+                            class="h-3 w-3 shrink-0 text-general-red"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                          >
+                            <path d="M6 1v10" />
+                            <path d="m2.5 7.5 3.5 3.5 3.5-3.5" />
+                          </svg>
+                          {node.via}
+                        </span>
+                      )}
 
-                <span class="block text-[15px] font-black leading-tight tracking-[-0.02em] text-general-black">
-                  {node.title}
-                </span>
+                      <span class="block text-[16px] font-extrabold leading-snug tracking-[-0.01em] text-general-black [text-wrap:balance] xl:mt-6 xl:text-center">
+                        {node.title}
+                      </span>
 
-                {node.note && (
-                  <span class="mt-2 block text-[13px] leading-[1.6] text-gray-500">{node.note}</span>
-                )}
-              </li>
-            </>
-          ))}
-        </ol>
+                      {node.note && (
+                        <span class="mt-1.5 block text-[14px] leading-[1.65] text-general-black [text-wrap:balance] xl:mt-2 xl:text-center">
+                          {node.note}
+                        </span>
+                      )}
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
+          </div>
+        </div>
       )
     }
 
@@ -243,7 +273,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.cog
                 />
 
                 {group.note && (
-                  <p class="mt-3 text-[14px] leading-[1.75] text-gray-600">{group.note}</p>
+                  <p class="mt-3 text-[14px] leading-[1.75] text-general-black">{group.note}</p>
                 )}
 
                 <ul class="mt-8 space-y-3">
@@ -277,7 +307,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.cog
                           {item.title}
                         </span>
                         {item.note && (
-                          <span class="mt-1 block text-[13px] leading-[1.6] text-gray-500">
+                          <span class="mt-1 block text-[13px] leading-[1.6] text-general-black">
                             {item.note}
                           </span>
                         )}
@@ -292,6 +322,49 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.cog
       )
     }
 
-    {footnote && <p class="mt-10 max-w-3xl text-[14px] leading-[1.8] text-gray-500">{footnote}</p>}
+    {footnote && (
+      <p class="mt-10 max-w-3xl border-l-2 border-general-red pl-5 text-[15px] leading-[1.8] text-general-black">
+        {footnote}
+      </p>
+    )}
   </div>
 </section>
+
+<style>
+  /* One line from the first stage's centre to the last's. Its top is the
+     list's top padding (4rem, `xl:pt-16`) plus a circle's radius (2rem), so
+     those two numbers have to change together. */
+  .chain-rail {
+    top: calc(6rem - 1px);
+    left: calc(100% / var(--stages) / 2);
+    right: calc(100% / var(--stages) / 2);
+    height: 2px;
+    overflow: hidden;
+    background: #d1d5db;
+  }
+
+  /* A pulse travels along the rail, so the line reads as something moving
+     from the sensor to the screen rather than as a rule. The circles sit
+     above the rail, so it passes behind each stage on its way. */
+  .chain-pulse {
+    position: absolute;
+    top: 0;
+    left: -4rem;
+    width: 4rem;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(237, 28, 37, 0), #ed1c25, rgba(237, 28, 37, 0));
+    animation: chain-flow 3.6s linear infinite;
+  }
+
+  @keyframes chain-flow {
+    to {
+      left: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .chain-pulse {
+      display: none;
+    }
+  }
+</style>

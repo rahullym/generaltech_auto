@@ -63,7 +63,7 @@ const description = activeCategory?.description ?? 'Articles, updates and techni
                 'rounded-xl px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] transition-all duration-300',
                 !category
                   ? 'bg-general-red text-white shadow-lg shadow-general-red/20'
-                  : 'border border-gray-200 text-gray-600 hover:border-general-red hover:text-general-red',
+                  : 'border border-gray-200 text-general-black hover:border-general-red hover:text-general-red',
               ]}
             >
               All
@@ -75,7 +75,7 @@ const description = activeCategory?.description ?? 'Articles, updates and techni
                   'rounded-xl px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.1em] transition-all duration-300',
                   category === c.slug
                     ? 'bg-general-red text-white shadow-lg shadow-general-red/20'
-                    : 'border border-gray-200 text-gray-600 hover:border-general-red hover:text-general-red',
+                    : 'border border-gray-200 text-general-black hover:border-general-red hover:text-general-red',
                 ]}
               >
                 {c.title}
@@ -87,7 +87,7 @@ const description = activeCategory?.description ?? 'Articles, updates and techni
 
       {
         posts.docs.length === 0 ? (
-          <p class="py-24 text-center text-xl font-light text-gray-500">No posts published yet.</p>
+          <p class="py-24 text-center text-xl font-light text-general-black">No posts published yet.</p>
         ) : (
           <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.docs.map((post, index) => (
@@ -137,19 +137,19 @@ const description = activeCategory?.description ?? 'Articles, updates and techni
               <a
                 href={buildPageHref(page - 1)}
                 rel="prev"
-                class="rounded-xl border border-gray-200 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-gray-600 transition-all duration-300 hover:border-general-red hover:text-general-red"
+                class="rounded-xl border border-gray-200 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-general-black transition-all duration-300 hover:border-general-red hover:text-general-red"
               >
                 Previous
               </a>
             )}
-            <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">
+            <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-general-black">
               Page {posts.page} of {posts.totalPages}
             </span>
             {posts.hasNextPage && (
               <a
                 href={buildPageHref(page + 1)}
                 rel="next"
-                class="rounded-xl border border-gray-200 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-gray-600 transition-all duration-300 hover:border-general-red hover:text-general-red"
+                class="rounded-xl border border-gray-200 px-6 py-3 text-[12px] font-bold uppercase tracking-[0.1em] text-general-black transition-all duration-300 hover:border-general-red hover:text-general-red"
               >
                 Next
               </a>

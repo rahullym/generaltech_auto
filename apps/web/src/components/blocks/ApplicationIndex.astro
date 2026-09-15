@@ -79,14 +79,14 @@ const pad = (value: number) => String(value).padStart(2, '0')
                   class="text-[19px] font-black leading-[1.2] tracking-[-0.02em] text-general-black transition-colors duration-300 group-hover/card:text-general-red"
                 />
 
-                <span class="mt-3 block text-[14.5px] leading-[1.75] text-gray-600">
+                <span class="mt-3 block text-[14.5px] leading-[1.75] text-general-black">
                   {item.blurb}
                 </span>
 
                 {item.sectors.length > 0 && (
                   <span class="mt-6 flex flex-wrap gap-2">
                     {item.sectors.map((sector) => (
-                      <span class="rounded-full border border-gray-100 bg-gray-50 px-3 py-1 text-[11.5px] font-bold uppercase tracking-[0.12em] text-gray-500">
+                      <span class="rounded-full border border-gray-100 bg-gray-50 px-3 py-1 text-[11.5px] font-bold uppercase tracking-[0.12em] text-general-black">
                         {sector}
                       </span>
                     ))}
@@ -118,7 +118,7 @@ const pad = (value: number) => String(value).padStart(2, '0')
         </div>
 
         {footnote && (
-          <p class="mt-12 max-w-3xl text-[14px] leading-[1.8] text-gray-500">{footnote}</p>
+          <p class="mt-12 max-w-3xl text-[14px] leading-[1.8] text-general-black">{footnote}</p>
         )}
       </div>
     </section>

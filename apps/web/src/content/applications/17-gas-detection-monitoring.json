@@ -51,7 +51,7 @@
       "variant": "chain",
       "eyebrow": "How it works",
       "heading": "From a leak *to a plant that has already responded*",
-      "intro": "Detection is the first stage and the least of it. What decides whether the system protects anyone is what happens in the three stages after.",
+      "intro": "Detection is step 1, and the least of it. What decides whether the system protects anyone is what happens in steps 2 to 5.",
       "nodes": [
         {
           "icon": "sensor",
