@@ -114,6 +114,18 @@ export type AuthoredBlock =
       body?: string[]
     }
   | {
+      /**
+       * A row of manufacturer marks. `image` is a filename in `public/cms`;
+       * `name` is what a screen reader hears and what shows on hover.
+       */
+      type: 'logos'
+      eyebrow?: string
+      heading?: string
+      intro?: string
+      layout?: 'grid' | 'marquee'
+      logos: { name: string; image: string; url?: string }[]
+    }
+  | {
       type: 'faq'
       eyebrow?: string
       heading?: string
@@ -399,6 +411,34 @@ const expand = (block: AuthoredBlock, slug: string, index: number): Block => {
           note: area.note,
         })),
         content: block.body ? richText(block.body) : undefined,
+      }
+
+    case 'logos':
+      return {
+        id,
+        blockType: 'logoWall',
+        eyebrow: block.eyebrow ?? null,
+        heading: block.heading ?? null,
+        intro: block.intro ?? null,
+        layout: block.layout ?? 'grid',
+        logos: block.logos.map((logo, i) => ({
+          id: key(slug, index, `-l${i}`),
+          name: logo.name,
+          url: logo.url,
+          // Marks added outside the CMS are not in the snapshot; every committed
+          // mark is drawn on the same 240x88 canvas, so that is what they get.
+          // The alt comes from the authored name, because the CMS records spell
+          // some brands the way their filenames do ("Seimens").
+          image: {
+            ...(media(logo.image) ?? {
+              id: logo.image,
+              url: `/cms/${logo.image}`,
+              width: 240,
+              height: 88,
+            }),
+            alt: `${logo.name} logo`,
+          },
+        })),
       }
 
     case 'faq':

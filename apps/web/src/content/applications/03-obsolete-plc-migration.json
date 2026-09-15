@@ -139,6 +139,21 @@
       ]
     },
     {
+      "type": "logos",
+      "eyebrow": "Platforms",
+      "heading": "The controllers we *migrate from and to*",
+      "intro": "Most end-of-life controllers still running lines in the UAE come from a handful of manufacturers — Siemens S5 and S7-300, Allen-Bradley PLC-5 and SLC 500, Modicon, Mitsubishi A-series, Omron C-series. The replacement is usually the same maker's current range, or whichever platform the site already standardises on.",
+      "layout": "grid",
+      "logos": [
+        { "name": "Siemens", "image": "SEIMENS.avif" },
+        { "name": "Allen-Bradley", "image": "ALLEN-BRADLEY.avif" },
+        { "name": "Schneider Electric", "image": "SCEIDER.avif" },
+        { "name": "Mitsubishi Electric", "image": "MITSUBISHI-ELECTRIC.avif" },
+        { "name": "Omron", "image": "OMRON.avif" },
+        { "name": "ABB", "image": "ABB.avif" }
+      ]
+    },
+    {
       "type": "process",
       "eyebrow": "How it runs",
       "heading": "Doing it *without losing the line*",
