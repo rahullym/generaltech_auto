@@ -76,6 +76,320 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the line",
+      "heading": "The line *counts itself*",
+      "intro": "Nothing inside the machines is changed. The monitoring sits alongside them and reads, taking signals from the PLC where there is one and from a sensor where there is not, and the operator adds the one thing a sensor cannot: the reason.",
+      "title": "Production line — signals to the edge device",
+      "width": 1000,
+      "height": 600,
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 50,
+          "y": 80,
+          "w": 170,
+          "h": 130,
+          "label": "Machine with a PLC",
+          "labelAt": [
+            135,
+            62
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 240,
+          "y": 140,
+          "w": 190,
+          "h": 70,
+          "label": "Transfer conveyor",
+          "labelAt": [
+            335,
+            244
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 450,
+          "y": 80,
+          "w": 170,
+          "h": 130,
+          "label": "Older machine, no PLC",
+          "labelAt": [
+            535,
+            62
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 640,
+          "y": 140,
+          "w": 250,
+          "h": 70,
+          "label": "Outfeed conveyor",
+          "labelAt": [
+            740,
+            244
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 60,
+          "y": 380,
+          "w": 130,
+          "h": 110,
+          "label": "Line control panel",
+          "labelAt": [
+            125,
+            524
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 240,
+          "y": 380,
+          "w": 100,
+          "h": 120,
+          "fitted": true,
+          "label": "Edge device",
+          "labelAt": [
+            290,
+            534
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 455,
+          "y": 355,
+          "w": 110,
+          "h": 85,
+          "fitted": true,
+          "label": "Stop-reason terminal",
+          "labelAt": [
+            510,
+            467
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 740,
+          "y": 430,
+          "w": 160,
+          "h": 110,
+          "fitted": true,
+          "label": "Loss analysis",
+          "labelAt": [
+            820,
+            570
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              125,
+              217
+            ],
+            [
+              125,
+              380
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              190,
+              430
+            ],
+            [
+              240,
+              430
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              600,
+              217
+            ],
+            [
+              600,
+              305
+            ],
+            [
+              265,
+              305
+            ],
+            [
+              265,
+              380
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              840,
+              317
+            ],
+            [
+              840,
+              345
+            ],
+            [
+              290,
+              345
+            ],
+            [
+              290,
+              380
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              455,
+              400
+            ],
+            [
+              340,
+              400
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              340,
+              485
+            ],
+            [
+              740,
+              485
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 975,
+          "y": 126,
+          "text": "Finished product",
+          "anchor": "end",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "U",
+          "x": 62,
+          "y": 300,
+          "path": [
+            [
+              125,
+              300
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "XS",
+          "x": 560,
+          "y": 260,
+          "path": [
+            [
+              560,
+              217
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "Q",
+          "x": 840,
+          "y": 290,
+          "path": [
+            [
+              840,
+              189
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "HS",
+          "x": 625,
+          "y": 400,
+          "path": [
+            [
+              565,
+              400
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "K",
+          "x": 950,
+          "y": 470,
+          "path": [
+            [
+              900,
+              470
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "U",
+          "title": "Count and state from the PLC",
+          "note": "Run, fault and count signals the machine already produces, taken from a few terminals in the existing panel."
+        },
+        {
+          "tag": "XS",
+          "title": "Run contact",
+          "note": "Establishes running and stopped on a machine that offers no signal, without touching its own controls."
+        },
+        {
+          "tag": "Q",
+          "title": "Photocell on the product",
+          "note": "Counts what actually leaves the line, which is what the performance figure is built from."
+        },
+        {
+          "tag": "HS",
+          "title": "Stop reason",
+          "note": "Mounted where the stop happens, so the operator picks a reason from a short list in two taps."
+        },
+        {
+          "tag": "K",
+          "title": "Hours lost, by reason",
+          "note": "The edge device times every stop, and the losses are ranked by the hours they actually cost, per shift."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

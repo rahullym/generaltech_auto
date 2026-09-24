@@ -83,6 +83,409 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the boiler house",
+      "heading": "Three points *on the steam you already make*",
+      "intro": "The boilers and burners are left as they are. The meters go in along the steam's own path, from the main leaving the boiler house to the branches that feed each line, so the total and its split are measured rather than argued about.",
+      "title": "Steam — boiler house and distribution",
+      "width": 1000,
+      "height": 680,
+      "equipment": [
+        {
+          "kind": "htank",
+          "x": 50,
+          "y": 110,
+          "w": 190,
+          "h": 100,
+          "label": "Boiler 1",
+          "labelAt": [
+            145,
+            94
+          ]
+        },
+        {
+          "kind": "htank",
+          "x": 50,
+          "y": 300,
+          "w": 190,
+          "h": 100,
+          "label": "Boiler 2",
+          "labelAt": [
+            145,
+            284
+          ]
+        },
+        {
+          "kind": "hood",
+          "x": 545,
+          "y": 320,
+          "w": 110,
+          "h": 190,
+          "fill": 0.55,
+          "medium": "product",
+          "label": "Jacketed vessel",
+          "labelAt": [
+            600,
+            300
+          ]
+        },
+        {
+          "kind": "htank",
+          "x": 680,
+          "y": 420,
+          "w": 160,
+          "h": 90,
+          "label": "Steriliser",
+          "labelAt": [
+            725,
+            404
+          ]
+        },
+        {
+          "kind": "hx",
+          "x": 860,
+          "y": 440,
+          "w": 100,
+          "h": 56,
+          "label": "Heat\nexchanger",
+          "labelAt": [
+            872,
+            390
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 345,
+          "y": 450,
+          "w": 80,
+          "h": 70,
+          "fitted": true,
+          "label": "Remote\ntransmitter",
+          "labelAt": [
+            385,
+            550
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 110,
+          "y": 470,
+          "w": 90,
+          "h": 80,
+          "fitted": true,
+          "label": "Datalogger",
+          "labelAt": [
+            155,
+            456
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "gas",
+          "points": [
+            [
+              25,
+              40
+            ],
+            [
+              25,
+              370
+            ],
+            [
+              50,
+              370
+            ]
+          ]
+        },
+        {
+          "medium": "gas",
+          "points": [
+            [
+              25,
+              180
+            ],
+            [
+              50,
+              180
+            ]
+          ]
+        },
+        {
+          "medium": "steam",
+          "points": [
+            [
+              236,
+              160
+            ],
+            [
+              290,
+              160
+            ],
+            [
+              290,
+              250
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "steam",
+          "points": [
+            [
+              236,
+              350
+            ],
+            [
+              290,
+              350
+            ],
+            [
+              290,
+              250
+            ],
+            [
+              480,
+              250
+            ],
+            [
+              480,
+              90
+            ],
+            [
+              932,
+              90
+            ],
+            [
+              932,
+              430
+            ]
+          ]
+        },
+        {
+          "medium": "steam",
+          "points": [
+            [
+              520,
+              90
+            ],
+            [
+              520,
+              460
+            ],
+            [
+              549,
+              460
+            ]
+          ]
+        },
+        {
+          "medium": "steam",
+          "points": [
+            [
+              790,
+              90
+            ],
+            [
+              790,
+              424
+            ]
+          ]
+        },
+        {
+          "medium": "condensate",
+          "points": [
+            [
+              600,
+              506
+            ],
+            [
+              600,
+              620
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "condensate",
+          "points": [
+            [
+              760,
+              506
+            ],
+            [
+              760,
+              620
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "condensate",
+          "points": [
+            [
+              910,
+              494
+            ],
+            [
+              910,
+              620
+            ],
+            [
+              20,
+              620
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              385,
+              355
+            ],
+            [
+              385,
+              450
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              345,
+              500
+            ],
+            [
+              200,
+              500
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 40,
+          "y": 34,
+          "text": "Gas",
+          "strong": true
+        },
+        {
+          "x": 560,
+          "y": 72,
+          "text": "Steam header",
+          "strong": true
+        },
+        {
+          "x": 24,
+          "y": 652,
+          "text": "Condensate return",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "P",
+          "x": 340,
+          "y": 170,
+          "path": [
+            [
+              340,
+              250
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "T",
+          "x": 420,
+          "y": 170,
+          "path": [
+            [
+              420,
+              250
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "F",
+          "x": 385,
+          "y": 330,
+          "path": [
+            [
+              385,
+              250
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "F",
+          "x": 575,
+          "y": 200,
+          "path": [
+            [
+              520,
+              200
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "F",
+          "x": 735,
+          "y": 200,
+          "path": [
+            [
+              790,
+              200
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "F",
+          "x": 877,
+          "y": 200,
+          "path": [
+            [
+              932,
+              200
+            ]
+          ],
+          "key": 4
+        }
+      ],
+      "key": [
+        {
+          "tag": "F",
+          "title": "Header flow",
+          "note": "A vortex meter on the main leaving the boiler house gives the site total before any of it is split."
+        },
+        {
+          "tag": "P",
+          "title": "Header pressure",
+          "note": "Read alongside the flow so the logger can compensate it, turning a volume of steam into the mass you pay for."
+        },
+        {
+          "tag": "T",
+          "title": "Header temperature",
+          "note": "The other half of that compensation. Its transmitter sits at working height, not under the insulation."
+        },
+        {
+          "tag": "F",
+          "title": "Flow on each branch",
+          "note": "One meter on each branch someone is actually asking about, so consumption is known by line and by shift."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

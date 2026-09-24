@@ -83,6 +83,395 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "In the warehouse",
+      "heading": "Tracked *from the merge to the chute*",
+      "intro": "The conveyor frames and rollers are left as they are. The sensing and control go in along the item's route, so each one is identified once and followed to where it belongs.",
+      "title": "Sortation — from the merge to the chutes",
+      "width": 1000,
+      "height": 690,
+      "equipment": [
+        {
+          "kind": "conveyor",
+          "x": 40,
+          "y": 90,
+          "w": 140,
+          "h": 70
+        },
+        {
+          "kind": "conveyor",
+          "x": 40,
+          "y": 230,
+          "w": 180,
+          "h": 70,
+          "label": "Merge",
+          "labelAt": [
+            110,
+            328
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 240,
+          "y": 230,
+          "w": 140,
+          "h": 70,
+          "label": "Induction",
+          "labelAt": [
+            310,
+            328
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 400,
+          "y": 230,
+          "w": 110,
+          "h": 70
+        },
+        {
+          "kind": "conveyor",
+          "x": 520,
+          "y": 230,
+          "w": 110,
+          "h": 70,
+          "label": "Accumulation zones",
+          "labelAt": [
+            515,
+            328
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 650,
+          "y": 230,
+          "w": 310,
+          "h": 70,
+          "label": "Sorter",
+          "labelAt": [
+            805,
+            212
+          ]
+        },
+        {
+          "kind": "chute",
+          "x": 660,
+          "y": 330,
+          "w": 90,
+          "h": 100
+        },
+        {
+          "kind": "chute",
+          "x": 770,
+          "y": 330,
+          "w": 90,
+          "h": 100
+        },
+        {
+          "kind": "chute",
+          "x": 880,
+          "y": 330,
+          "w": 80,
+          "h": 100
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 60,
+          "y": 500,
+          "w": 80,
+          "h": 100,
+          "fitted": true,
+          "label": "Zone drives",
+          "labelAt": [
+            100,
+            486
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 240,
+          "y": 500,
+          "w": 120,
+          "h": 100,
+          "fitted": true,
+          "label": "Tracking controller",
+          "labelAt": [
+            300,
+            632
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 470,
+          "y": 510,
+          "w": 140,
+          "h": 100,
+          "label": "Exceptions dashboard",
+          "labelAt": [
+            540,
+            640
+          ]
+        }
+      ],
+      "mediaNames": {
+        "product": "Item transfer"
+      },
+      "lines": [
+        {
+          "medium": "product",
+          "points": [
+            [
+              180,
+              123
+            ],
+            [
+              225,
+              123
+            ],
+            [
+              225,
+              250
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              670,
+              284
+            ],
+            [
+              670,
+              322
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              780,
+              284
+            ],
+            [
+              780,
+              322
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              890,
+              284
+            ],
+            [
+              890,
+              322
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              190,
+              405
+            ],
+            [
+              190,
+              450
+            ],
+            [
+              300,
+              450
+            ],
+            [
+              300,
+              500
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              240,
+              550
+            ],
+            [
+              140,
+              550
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              360,
+              540
+            ],
+            [
+              470,
+              540
+            ]
+          ],
+          "arrow": "none"
+        }
+      ],
+      "labels": [
+        {
+          "x": 40,
+          "y": 76,
+          "text": "Infeed B",
+          "strong": true
+        },
+        {
+          "x": 40,
+          "y": 216,
+          "text": "Infeed A",
+          "strong": true
+        },
+        {
+          "x": 760,
+          "y": 462,
+          "text": "To despatch lanes",
+          "anchor": "middle",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "S",
+          "x": 190,
+          "y": 380,
+          "path": [
+            [
+              190,
+              300
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "X",
+          "sub": "ID",
+          "x": 310,
+          "y": 160,
+          "path": [
+            [
+              310,
+              268
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "ZS",
+          "x": 455,
+          "y": 160,
+          "path": [
+            [
+              455,
+              268
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "ZS",
+          "x": 575,
+          "y": 160,
+          "path": [
+            [
+              575,
+              268
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "Z",
+          "x": 710,
+          "y": 160,
+          "path": [
+            [
+              710,
+              268
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "U",
+          "x": 415,
+          "y": 590,
+          "path": [
+            [
+              360,
+              590
+            ]
+          ],
+          "key": 5
+        },
+        {
+          "tag": "Q",
+          "x": 940,
+          "y": 490,
+          "path": [
+            [
+              940,
+              430
+            ]
+          ],
+          "key": 6
+        }
+      ],
+      "key": [
+        {
+          "tag": "S",
+          "title": "Singulation and gapping",
+          "note": "Items separated and gapped at the merge by belt speed, so each one can be identified on its own."
+        },
+        {
+          "tag": "X",
+          "sub": "ID",
+          "title": "Scanner or vision",
+          "note": "Barcode, RFID or dimensioning read as the item passes, triggered by a photocell at induction."
+        },
+        {
+          "tag": "ZS",
+          "title": "Zoned accumulation",
+          "note": "A sensor and drive per zone, releasing only when the next zone is clear, so product queues instead of pushing."
+        },
+        {
+          "tag": "Z",
+          "title": "Divert on the item",
+          "note": "Fired by encoder tracking rather than a timer, so sorting stays accurate when the line speed changes."
+        },
+        {
+          "tag": "U",
+          "title": "Tracking controller",
+          "note": "Replaces the separate switches, with a defined fallback for a no-read, a full chute or an unknown destination."
+        },
+        {
+          "tag": "Q",
+          "title": "No-reads and rejects",
+          "note": "Counted at the reject chute and sent to the dashboard, so exceptions are visible while they can still be fixed."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

@@ -76,6 +76,342 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "At the tank",
+      "heading": "A reading *without the climb*",
+      "intro": "The tank and its pipework are left as they are, and no cabling leaves the compound. The transmitter goes on a nozzle that already exists where it can, and the RTU beside it provides its own power.",
+      "title": "Tank farm — storage, transfer and day tank",
+      "width": 1000,
+      "height": 600,
+      "equipment": [
+        {
+          "kind": "tank",
+          "top": "cone",
+          "bottom": "flat",
+          "x": 100,
+          "y": 150,
+          "w": 200,
+          "h": 320,
+          "fill": 0.62,
+          "medium": "product",
+          "label": "Bulk storage tank",
+          "labelAt": [
+            200,
+            502
+          ]
+        },
+        {
+          "kind": "valve",
+          "x": 360,
+          "y": 398,
+          "w": 50,
+          "h": 60,
+          "label": "Outlet valve",
+          "labelAt": [
+            385,
+            378
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 450,
+          "y": 389,
+          "w": 130,
+          "h": 90,
+          "label": "Transfer pump",
+          "labelAt": [
+            515,
+            510
+          ]
+        },
+        {
+          "kind": "tank",
+          "top": "dome",
+          "bottom": "dish",
+          "x": 640,
+          "y": 290,
+          "w": 130,
+          "h": 180,
+          "fill": 0.5,
+          "medium": "product",
+          "label": "Day tank",
+          "labelAt": [
+            650,
+            502
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 420,
+          "y": 130,
+          "w": 100,
+          "h": 100,
+          "fitted": true,
+          "label": "Solar RTU",
+          "labelAt": [
+            470,
+            116
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 640,
+          "y": 100,
+          "w": 120,
+          "h": 110,
+          "fitted": true,
+          "label": "Dashboard",
+          "labelAt": [
+            700,
+            86
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "product",
+          "points": [
+            [
+              140,
+              40
+            ],
+            [
+              140,
+              188
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              296,
+              440
+            ],
+            [
+              362,
+              440
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              408,
+              440
+            ],
+            [
+              454,
+              440
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              483,
+              392
+            ],
+            [
+              483,
+              330
+            ],
+            [
+              644,
+              330
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              705,
+              466
+            ],
+            [
+              705,
+              560
+            ],
+            [
+              980,
+              560
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              225,
+              90
+            ],
+            [
+              380,
+              90
+            ],
+            [
+              380,
+              180
+            ],
+            [
+              420,
+              180
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              520,
+              150
+            ],
+            [
+              640,
+              150
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              865,
+              445
+            ],
+            [
+              930,
+              445
+            ],
+            [
+              930,
+              260
+            ],
+            [
+              560,
+              260
+            ],
+            [
+              560,
+              210
+            ],
+            [
+              520,
+              210
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 156,
+          "y": 40,
+          "text": "From road tanker",
+          "strong": true
+        },
+        {
+          "x": 975,
+          "y": 544,
+          "text": "To the process",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 580,
+          "y": 140,
+          "text": "Cellular",
+          "anchor": "middle"
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "L",
+          "x": 200,
+          "y": 90,
+          "path": [
+            [
+              200,
+              150
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "L",
+          "x": 840,
+          "y": 445,
+          "path": [
+            [
+              770,
+              445
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "LA",
+          "sub": "H",
+          "x": 820,
+          "y": 110,
+          "path": [
+            [
+              760,
+              110
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "LA",
+          "sub": "L",
+          "x": 890,
+          "y": 110,
+          "path": [
+            [
+              890,
+              160
+            ],
+            [
+              760,
+              160
+            ]
+          ],
+          "key": 4
+        }
+      ],
+      "key": [
+        {
+          "tag": "L",
+          "title": "Level from the roof",
+          "note": "A radar transmitter on an existing roof nozzle, measuring down to the surface, so nothing touches the product."
+        },
+        {
+          "tag": "L",
+          "title": "Level from the bottom",
+          "note": "A hydrostatic transmitter reading the head of liquid: the simpler choice on water or fuel, or where the roof is crowded."
+        },
+        {
+          "tag": "LA",
+          "sub": "H",
+          "title": "High level alarm",
+          "note": "Raised before an overfill, so it is an alarm rather than an incident report."
+        },
+        {
+          "tag": "LA",
+          "sub": "L",
+          "title": "Low level alarm",
+          "note": "Early enough to book a delivery, because the RTU applies the strapping table and reports volume, not just level."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

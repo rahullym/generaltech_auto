@@ -81,6 +81,290 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "In the control panel",
+      "heading": "The control changes; *the line does not*",
+      "intro": "Drives, motors, sensors and the machine stay exactly as they are. What is replaced sits at the left of the drawing, and the field wiring is landed onto it as it is.",
+      "title": "Line control — panel, drives and machine",
+      "width": 1000,
+      "height": 600,
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 60,
+          "y": 80,
+          "w": 140,
+          "h": 200,
+          "fitted": true,
+          "label": "New PLC and I/O",
+          "labelAt": [
+            130,
+            66
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 40,
+          "y": 420,
+          "w": 120,
+          "h": 110,
+          "fitted": true,
+          "label": "New HMI",
+          "labelAt": [
+            100,
+            406
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 300,
+          "y": 80,
+          "w": 70,
+          "h": 110,
+          "label": "Drive 1",
+          "labelAt": [
+            335,
+            66
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 420,
+          "y": 80,
+          "w": 70,
+          "h": 110,
+          "label": "Drive 2",
+          "labelAt": [
+            455,
+            66
+          ]
+        },
+        {
+          "kind": "motor",
+          "x": 310,
+          "y": 330,
+          "w": 90,
+          "h": 60,
+          "label": "Motor",
+          "labelAt": [
+            345,
+            420
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 400,
+          "y": 325,
+          "w": 320,
+          "h": 70,
+          "label": "Infeed conveyor",
+          "labelAt": [
+            560,
+            420
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 720,
+          "y": 250,
+          "w": 220,
+          "h": 150,
+          "label": "The machine",
+          "labelAt": [
+            800,
+            234
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              200,
+              100
+            ],
+            [
+              300,
+              100
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              370,
+              100
+            ],
+            [
+              420,
+              100
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              335,
+              197
+            ],
+            [
+              335,
+              330
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              490,
+              130
+            ],
+            [
+              860,
+              130
+            ],
+            [
+              860,
+              250
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              150,
+              287
+            ],
+            [
+              150,
+              420
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              200,
+              250
+            ],
+            [
+              270,
+              250
+            ],
+            [
+              270,
+              510
+            ],
+            [
+              830,
+              510
+            ],
+            [
+              830,
+              407
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 290,
+          "y": 540,
+          "text": "Field wiring, re-landed as it is",
+          "strong": true
+        },
+        {
+          "x": 675,
+          "y": 120,
+          "text": "Power to the machine",
+          "anchor": "middle"
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "S",
+          "x": 550,
+          "y": 175,
+          "path": [
+            [
+              490,
+              175
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "ZS",
+          "x": 530,
+          "y": 250,
+          "path": [
+            [
+              530,
+              362
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "ZS",
+          "x": 900,
+          "y": 180,
+          "path": [
+            [
+              900,
+              250
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "XA",
+          "x": 215,
+          "y": 455,
+          "path": [
+            [
+              160,
+              455
+            ]
+          ],
+          "key": 3
+        }
+      ],
+      "key": [
+        {
+          "tag": "S",
+          "title": "Drive signals",
+          "note": "Run, speed reference and fault from each drive, landed on the new rack. The drives and motors themselves stay."
+        },
+        {
+          "tag": "ZS",
+          "title": "Field sensors",
+          "note": "Position and proximity switches on the line, reconnected as they are and point-checked one by one at cutover."
+        },
+        {
+          "tag": "XA",
+          "title": "Alarms and diagnostics",
+          "note": "On the new HMI, with a proper history and alarm text that names the failed sensor rather than a fault code."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "groups",
       "eyebrow": "What changes",

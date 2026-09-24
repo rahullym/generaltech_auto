@@ -78,6 +78,429 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "In the process area",
+      "heading": "The recipe runs *on the plant you have*",
+      "intro": "The vessels, pumps and instruments stay. What changes is where the sequence comes from and where the record goes, so the points below follow a batch from the charge to the discharge, each one a value the recipe sets and the record keeps.",
+      "title": "Batch process — charge, react and discharge",
+      "width": 1000,
+      "height": 700,
+      "equipment": [
+        {
+          "kind": "tank",
+          "top": "dome",
+          "bottom": "cone",
+          "x": 60,
+          "y": 90,
+          "w": 100,
+          "h": 190,
+          "fill": 0.65,
+          "medium": "product",
+          "label": "Raw material",
+          "labelAt": [
+            110,
+            72
+          ]
+        },
+        {
+          "kind": "valve",
+          "x": 200,
+          "y": 292,
+          "w": 36,
+          "h": 40,
+          "label": "Charge valve",
+          "labelAt": [
+            218,
+            280
+          ]
+        },
+        {
+          "kind": "ibc",
+          "x": 60,
+          "y": 420,
+          "w": 90,
+          "h": 100,
+          "fill": 0.6,
+          "medium": "chemical",
+          "label": "Acid",
+          "labelAt": [
+            105,
+            404
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 196,
+          "y": 450,
+          "w": 94,
+          "h": 60,
+          "label": "Dosing pump",
+          "labelAt": [
+            243,
+            536
+          ]
+        },
+        {
+          "kind": "tank",
+          "top": "dome",
+          "bottom": "dish",
+          "x": 430,
+          "y": 150,
+          "w": 160,
+          "h": 270,
+          "fill": 0.55,
+          "medium": "product",
+          "label": "Process vessel",
+          "labelAt": [
+            372,
+            138
+          ]
+        },
+        {
+          "kind": "motor",
+          "x": 465,
+          "y": 92,
+          "w": 90,
+          "h": 58,
+          "label": "Agitator",
+          "labelAt": [
+            510,
+            78
+          ]
+        },
+        {
+          "kind": "valve",
+          "x": 720,
+          "y": 185,
+          "w": 40,
+          "h": 50,
+          "label": "Jacket valve",
+          "labelAt": [
+            740,
+            168
+          ]
+        },
+        {
+          "kind": "valve",
+          "x": 560,
+          "y": 526,
+          "w": 36,
+          "h": 40
+        },
+        {
+          "kind": "pump",
+          "x": 650,
+          "y": 520,
+          "w": 100,
+          "h": 66,
+          "label": "Discharge pump",
+          "labelAt": [
+            700,
+            612
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 60,
+          "y": 600,
+          "w": 110,
+          "h": 80,
+          "fitted": true,
+          "label": "Phase screen",
+          "labelAt": [
+            115,
+            588
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 260,
+          "y": 600,
+          "w": 100,
+          "h": 73,
+          "fitted": true,
+          "label": "Batch controller",
+          "labelAt": [
+            310,
+            588
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 450,
+          "y": 600,
+          "w": 110,
+          "h": 80,
+          "fitted": true,
+          "label": "Batch record",
+          "labelAt": [
+            505,
+            588
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "product",
+          "points": [
+            [
+              110,
+              278
+            ],
+            [
+              110,
+              320
+            ],
+            [
+              330,
+              320
+            ],
+            [
+              330,
+              200
+            ],
+            [
+              432,
+              200
+            ]
+          ]
+        },
+        {
+          "medium": "chemical",
+          "points": [
+            [
+              150,
+              480
+            ],
+            [
+              202,
+              480
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "chemical",
+          "points": [
+            [
+              224,
+              452
+            ],
+            [
+              224,
+              360
+            ],
+            [
+              432,
+              360
+            ]
+          ]
+        },
+        {
+          "medium": "steam",
+          "points": [
+            [
+              980,
+              220
+            ],
+            [
+              592,
+              220
+            ]
+          ]
+        },
+        {
+          "medium": "condensate",
+          "points": [
+            [
+              590,
+              380
+            ],
+            [
+              980,
+              380
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              510,
+              418
+            ],
+            [
+              510,
+              554
+            ],
+            [
+              652,
+              554
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              676,
+              522
+            ],
+            [
+              676,
+              480
+            ],
+            [
+              980,
+              480
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              170,
+              630
+            ],
+            [
+              260,
+              630
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              360,
+              630
+            ],
+            [
+              450,
+              630
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 975,
+          "y": 206,
+          "text": "Steam",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 975,
+          "y": 406,
+          "text": "Condensate",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 975,
+          "y": 466,
+          "text": "To filling",
+          "anchor": "end",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "W",
+          "x": 375,
+          "y": 265,
+          "path": [
+            [
+              430,
+              265
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "F",
+          "x": 330,
+          "y": 440,
+          "path": [
+            [
+              330,
+              360
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "T",
+          "x": 660,
+          "y": 300,
+          "path": [
+            [
+              590,
+              300
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "S",
+          "x": 625,
+          "y": 121,
+          "path": [
+            [
+              555,
+              121
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "ZS",
+          "x": 578,
+          "y": 468,
+          "path": [
+            [
+              578,
+              526
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "W",
+          "title": "Charge by weight",
+          "note": "The vessel's load cells close the charge valve at the recipe quantity, rather than an operator watching a level."
+        },
+        {
+          "tag": "F",
+          "title": "Dosing rate",
+          "note": "The acid goes in at the rate the approved recipe sets, so it is added the same way on every shift."
+        },
+        {
+          "tag": "T",
+          "title": "Heat, hold and cool",
+          "note": "Batch temperature drives the jacket valve through ramp, hold and cool phases, with the hold time counted by the controller."
+        },
+        {
+          "tag": "S",
+          "title": "Agitation",
+          "note": "Agitator speed and running are confirmed before a phase starts, and logged as they happen."
+        },
+        {
+          "tag": "ZS",
+          "title": "Valve confirmation",
+          "note": "A valve that does not confirm its position holds the batch and tells the operator why, instead of carrying on regardless."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

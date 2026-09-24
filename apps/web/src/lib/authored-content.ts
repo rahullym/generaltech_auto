@@ -15,9 +15,12 @@
  */
 import snapshot from '../data/snapshot.json'
 
+import type { Equipment } from './schematic-symbols'
 import type { Block, LexicalNode, Media, Page, RichTextValue } from './types'
 
 // -- Authoring shape -------------------------------------------------------
+
+type Point = [number, number]
 
 type Action = { label: string; url: string; appearance?: 'primary' | 'secondary' | 'link' }
 
@@ -99,6 +102,28 @@ export type AuthoredBlock =
         tone?: 'accent' | 'neutral'
         items: { icon?: string; title: string; note?: string }[]
       }[]
+      footnote?: string
+    }
+  | {
+      /**
+       * The plant as a process drawing: shaded equipment placed freely, pipes
+       * coloured by medium, and lettered measuring points on leader lines,
+       * with a key below. Coordinates are in the drawing's own units. See
+       * Schematic.astro and lib/schematic-symbols.ts.
+       */
+      type: 'schematic'
+      eyebrow?: string
+      heading?: string
+      intro?: string
+      title?: string
+      width?: number
+      height?: number
+      equipment: (Equipment & { label?: string; labelAt?: Point; leader?: Point })[]
+      lines: { medium: string; points: Point[]; arrow?: 'end' | 'start' | 'both' | 'none'; kind?: 'pipe' | 'signal' }[]
+      instruments: { tag: string; sub?: string; x: number; y: number; path?: Point[]; key?: number }[]
+      labels?: { x: number; y: number; text: string; anchor?: 'start' | 'middle' | 'end'; strong?: boolean }[]
+      key: { tag: string; sub?: string; title: string; note?: string }[]
+      mediaNames?: Record<string, string>
       footnote?: string
     }
   | {
@@ -382,6 +407,11 @@ const expand = (block: AuthoredBlock, slug: string, index: number): Block => {
           items: group.items.map((item, j) => ({ id: key(slug, index, `-g${i}i${j}`), ...item })),
         })),
       }
+
+    case 'schematic': {
+      const { type: _type, ...rest } = block
+      return { id, blockType: 'schematic', ...rest }
+    }
 
     case 'why':
       return {

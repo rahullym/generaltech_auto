@@ -83,6 +83,358 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "At each station and at the centre",
+      "heading": "One station kit, *repeated across the network*",
+      "intro": "The pumps, starters and protection are untouched. The RTU goes beside the existing panel and reads what it already knows, and the level and flow measurements are the two worth adding while someone is on site.",
+      "title": "Pump station — wet well, pumps and telemetry",
+      "width": 1000,
+      "height": 660,
+      "equipment": [
+        {
+          "kind": "tank",
+          "top": "flat",
+          "bottom": "flat",
+          "fill": 0.4,
+          "medium": "water",
+          "x": 90,
+          "y": 150,
+          "w": 190,
+          "h": 420,
+          "label": "Wet well",
+          "labelAt": [
+            185,
+            606
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 350,
+          "y": 470,
+          "w": 130,
+          "h": 80
+        },
+        {
+          "kind": "pump",
+          "x": 560,
+          "y": 470,
+          "w": 130,
+          "h": 80,
+          "label": "Duty and standby pumps",
+          "labelAt": [
+            520,
+            638
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 470,
+          "y": 80,
+          "w": 120,
+          "h": 130,
+          "label": "Station panel",
+          "labelAt": [
+            530,
+            66
+          ]
+        },
+        {
+          "kind": "gateway",
+          "x": 630,
+          "y": 95,
+          "w": 90,
+          "h": 115,
+          "fitted": true,
+          "label": "RTU",
+          "labelAt": [
+            675,
+            66
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 820,
+          "y": 80,
+          "w": 140,
+          "h": 120,
+          "fitted": true,
+          "label": "Central SCADA",
+          "labelAt": [
+            890,
+            66
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "water",
+          "points": [
+            [
+              30,
+              100
+            ],
+            [
+              30,
+              200
+            ],
+            [
+              90,
+              200
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              280,
+              511
+            ],
+            [
+              352,
+              511
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              305,
+              511
+            ],
+            [
+              305,
+              600
+            ],
+            [
+              530,
+              600
+            ],
+            [
+              530,
+              511
+            ],
+            [
+              562,
+              511
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              383,
+              470
+            ],
+            [
+              383,
+              330
+            ],
+            [
+              950,
+              330
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              593,
+              470
+            ],
+            [
+              593,
+              330
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              960,
+              117
+            ],
+            [
+              975,
+              117
+            ],
+            [
+              975,
+              560
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              590,
+              144
+            ],
+            [
+              630,
+              144
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              720,
+              144
+            ],
+            [
+              820,
+              144
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 46,
+          "y": 96,
+          "text": "Inflow",
+          "strong": true
+        },
+        {
+          "x": 950,
+          "y": 316,
+          "text": "Rising main",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 770,
+          "y": 184,
+          "text": "Cellular or radio",
+          "anchor": "middle"
+        },
+        {
+          "x": 975,
+          "y": 590,
+          "text": "To the standby engineer",
+          "anchor": "end",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "LS",
+          "x": 150,
+          "y": 90,
+          "path": [
+            [
+              150,
+              150
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "L",
+          "x": 240,
+          "y": 90,
+          "path": [
+            [
+              240,
+              150
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "XS",
+          "x": 450,
+          "y": 410,
+          "path": [
+            [
+              450,
+              491
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "XS",
+          "x": 660,
+          "y": 410,
+          "path": [
+            [
+              660,
+              491
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "F",
+          "x": 800,
+          "y": 260,
+          "path": [
+            [
+              800,
+              330
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "ZS",
+          "x": 415,
+          "y": 145,
+          "path": [
+            [
+              470,
+              145
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "L",
+          "title": "Continuous level",
+          "note": "A level transmitter in place of float switches alone, which is what turns three states into a trend and an early warning."
+        },
+        {
+          "tag": "LS",
+          "title": "Existing floats",
+          "note": "The station's own float switches, read by the RTU alongside the transmitter rather than taken out."
+        },
+        {
+          "tag": "XS",
+          "title": "Pump run and fault",
+          "note": "Read from the station panel, so the duty and standby rotation and running hours are known at the centre."
+        },
+        {
+          "tag": "F",
+          "title": "Flow on the rising main",
+          "note": "Confirms the pump is actually delivering, not just running."
+        },
+        {
+          "tag": "ZS",
+          "title": "Door contact",
+          "note": "Intruder and access at an unmanned site, alarmed through the same escalating call-out as a pump fault."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

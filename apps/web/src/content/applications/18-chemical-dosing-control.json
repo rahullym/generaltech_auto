@@ -78,6 +78,343 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the dosing point",
+      "heading": "Five points *on the dosing you already run*",
+      "intro": "The tank, the pump and the treated line stay where they are. The measurements go in along the chemical's path, from the tank to the point where mixing has finished.",
+      "title": "Chemical dosing — tank, pump and treated line",
+      "width": 1000,
+      "height": 680,
+      "equipment": [
+        {
+          "kind": "ibc",
+          "x": 90,
+          "y": 400,
+          "w": 130,
+          "h": 150,
+          "fill": 0.55,
+          "medium": "chemical",
+          "label": "Chemical tank",
+          "labelAt": [
+            155,
+            590
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 300,
+          "y": 470,
+          "w": 120,
+          "h": 80,
+          "label": "Dosing pump",
+          "labelAt": [
+            360,
+            590
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 500,
+          "y": 60,
+          "w": 120,
+          "h": 100,
+          "fitted": true,
+          "label": "Dosing controller",
+          "labelAt": [
+            560,
+            46
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "louvre",
+          "x": 690,
+          "y": 400,
+          "w": 100,
+          "h": 100,
+          "fitted": true,
+          "label": "Analyser",
+          "labelAt": [
+            625,
+            455
+          ]
+        },
+        {
+          "kind": "tank",
+          "top": "flat",
+          "bottom": "flat",
+          "x": 790,
+          "y": 150,
+          "w": 100,
+          "h": 220,
+          "fill": 0.65,
+          "medium": "water",
+          "label": "Treated water tank",
+          "labelAt": [
+            840,
+            136
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "water",
+          "points": [
+            [
+              20,
+              240
+            ],
+            [
+              790,
+              240
+            ]
+          ]
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              890,
+              340
+            ],
+            [
+              980,
+              340
+            ]
+          ]
+        },
+        {
+          "medium": "chemical",
+          "points": [
+            [
+              220,
+              513
+            ],
+            [
+              302,
+              513
+            ]
+          ]
+        },
+        {
+          "medium": "chemical",
+          "points": [
+            [
+              331,
+              470
+            ],
+            [
+              331,
+              380
+            ],
+            [
+              440,
+              380
+            ],
+            [
+              440,
+              240
+            ]
+          ]
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              740,
+              240
+            ],
+            [
+              740,
+              400
+            ]
+          ]
+        },
+        {
+          "medium": "wastewater",
+          "points": [
+            [
+              770,
+              507
+            ],
+            [
+              770,
+              620
+            ],
+            [
+              980,
+              620
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              225,
+              140
+            ],
+            [
+              500,
+              140
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              710,
+              400
+            ],
+            [
+              710,
+              110
+            ],
+            [
+              620,
+              110
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              540,
+              160
+            ],
+            [
+              540,
+              513
+            ],
+            [
+              420,
+              513
+            ]
+          ],
+          "arrow": "none"
+        }
+      ],
+      "labels": [
+        {
+          "x": 30,
+          "y": 222,
+          "text": "Water to treat",
+          "strong": true
+        },
+        {
+          "x": 980,
+          "y": 325,
+          "text": "To supply",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 980,
+          "y": 650,
+          "text": "To drain",
+          "anchor": "end",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "L",
+          "x": 155,
+          "y": 330,
+          "path": [
+            [
+              155,
+              400
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "U",
+          "x": 440,
+          "y": 70,
+          "path": [
+            [
+              500,
+              70
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "FS",
+          "x": 380,
+          "y": 320,
+          "path": [
+            [
+              440,
+              320
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "F",
+          "x": 200,
+          "y": 140,
+          "path": [
+            [
+              200,
+              240
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "A",
+          "x": 850,
+          "y": 460,
+          "path": [
+            [
+              790,
+              460
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "L",
+          "title": "Tank level alarm",
+          "note": "A low level raises an alarm before the tank runs dry, rather than after the residual has already fallen."
+        },
+        {
+          "tag": "U",
+          "title": "Dosing controller",
+          "note": "Feed-forward from flow and trim from the analyser, driving the existing pump by speed or stroke within fixed limits."
+        },
+        {
+          "tag": "FS",
+          "title": "Loss-of-flow detection",
+          "note": "Proof that chemical actually moved, since an airlocked or empty pump reports itself as running perfectly."
+        },
+        {
+          "tag": "F",
+          "title": "Flow meter",
+          "note": "Inline on the treated line, pacing the dose to the volume being treated before the analyser has noticed anything."
+        },
+        {
+          "tag": "A",
+          "title": "Residual or pH analyser",
+          "note": "Drawn downstream where mixing has finished, trimming the dose to hold the actual residual at set point."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

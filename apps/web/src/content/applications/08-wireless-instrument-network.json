@@ -74,6 +74,311 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "Across the tank farm",
+      "heading": "Measurements *where the cable never went*",
+      "intro": "The tanks, pumps and pipework stay as they are, and nothing is trenched. Each point below is a battery-powered device that relays for its neighbours back to one gateway at the control system.",
+      "title": "Tank farm — storage, transfer and the control room",
+      "width": 1000,
+      "height": 670,
+      "equipment": [
+        {
+          "kind": "tank",
+          "top": "cone",
+          "bottom": "flat",
+          "fill": 0.62,
+          "medium": "product",
+          "x": 50,
+          "y": 110,
+          "w": 130,
+          "h": 270,
+          "label": "Storage tank 1",
+          "labelAt": [
+            115,
+            90
+          ]
+        },
+        {
+          "kind": "tank",
+          "top": "cone",
+          "bottom": "flat",
+          "fill": 0.4,
+          "medium": "product",
+          "x": 280,
+          "y": 110,
+          "w": 130,
+          "h": 270,
+          "label": "Storage tank 2",
+          "labelAt": [
+            345,
+            90
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 450,
+          "y": 430,
+          "w": 100,
+          "h": 70
+        },
+        {
+          "kind": "pump",
+          "x": 590,
+          "y": 430,
+          "w": 100,
+          "h": 70,
+          "label": "Transfer pumps",
+          "labelAt": [
+            570,
+            566
+          ]
+        },
+        {
+          "kind": "tank",
+          "top": "cone",
+          "bottom": "flat",
+          "fill": 0.3,
+          "medium": "product",
+          "x": 800,
+          "y": 430,
+          "w": 120,
+          "h": 190,
+          "label": "Outlying tank",
+          "labelAt": [
+            860,
+            652
+          ]
+        },
+        {
+          "kind": "gateway",
+          "x": 665,
+          "y": 80,
+          "w": 105,
+          "h": 115,
+          "fitted": true,
+          "label": "Wireless gateway",
+          "labelAt": [
+            712,
+            44
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 820,
+          "y": 60,
+          "w": 140,
+          "h": 110,
+          "label": "Control room DCS",
+          "labelAt": [
+            890,
+            44
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "product",
+          "points": [
+            [
+              115,
+              380
+            ],
+            [
+              115,
+              468
+            ],
+            [
+              450,
+              468
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              345,
+              380
+            ],
+            [
+              345,
+              468
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              420,
+              468
+            ],
+            [
+              420,
+              530
+            ],
+            [
+              570,
+              530
+            ],
+            [
+              570,
+              468
+            ],
+            [
+              590,
+              468
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              476,
+              430
+            ],
+            [
+              476,
+              330
+            ],
+            [
+              860,
+              330
+            ],
+            [
+              860,
+              432
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              616,
+              430
+            ],
+            [
+              616,
+              330
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              770,
+              129
+            ],
+            [
+              820,
+              129
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 740,
+          "y": 366,
+          "text": "Pipe rack",
+          "anchor": "middle"
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "L",
+          "x": 230,
+          "y": 250,
+          "path": [
+            [
+              180,
+              250
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "L",
+          "x": 460,
+          "y": 250,
+          "path": [
+            [
+              410,
+              250
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "T",
+          "x": 750,
+          "y": 530,
+          "path": [
+            [
+              800,
+              530
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "P",
+          "x": 690,
+          "y": 250,
+          "path": [
+            [
+              690,
+              330
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "Y",
+          "x": 790,
+          "y": 250,
+          "path": [
+            [
+              790,
+              330
+            ]
+          ],
+          "key": 4
+        }
+      ],
+      "key": [
+        {
+          "tag": "L",
+          "title": "Tank level",
+          "note": "A wireless transmitter on a tank that was never measured, publishing at a rate matched to how slowly the level moves."
+        },
+        {
+          "tag": "T",
+          "title": "Tank temperature",
+          "note": "On the far side of the bund, where a cable would have meant crossing containment."
+        },
+        {
+          "tag": "P",
+          "title": "Discharge pressure",
+          "note": "Tells the control room the transfer pumps are actually delivering, without a cable run back to the cabinet."
+        },
+        {
+          "tag": "Y",
+          "title": "Wireless adapter",
+          "note": "Brings an existing wired instrument onto the mesh, with HART diagnostics that have sat unread on its loop for years."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

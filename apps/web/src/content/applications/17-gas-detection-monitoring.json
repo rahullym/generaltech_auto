@@ -78,6 +78,397 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "In the protected area",
+      "heading": "Detection *along the path a release takes*",
+      "intro": "The process plant stays as it is. Detectors go where a leak would travel or settle, and the signal runs from them to a controller, an interlock and a person who can act.",
+      "title": "Gas detection — compressor house and control room",
+      "width": 1000,
+      "height": 680,
+      "equipment": [
+        {
+          "kind": "valve",
+          "x": 170,
+          "y": 188,
+          "w": 56,
+          "h": 60,
+          "label": "Isolation valve",
+          "labelAt": [
+            198,
+            172
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "fan",
+          "x": 300,
+          "y": 150,
+          "w": 180,
+          "h": 140,
+          "label": "Gas compressor",
+          "labelAt": [
+            390,
+            136
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "louvre",
+          "x": 560,
+          "y": 60,
+          "w": 100,
+          "h": 100,
+          "label": "Extract fan",
+          "labelAt": [
+            610,
+            48
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 110,
+          "y": 470,
+          "w": 110,
+          "h": 100,
+          "fitted": true,
+          "label": "Supervised supply",
+          "labelAt": [
+            165,
+            456
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 340,
+          "y": 470,
+          "w": 120,
+          "h": 100,
+          "fitted": true,
+          "label": "Gas detection controller",
+          "labelAt": [
+            574,
+            476
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 780,
+          "y": 460,
+          "w": 150,
+          "h": 110,
+          "label": "Control room",
+          "labelAt": [
+            855,
+            600
+          ]
+        }
+      ],
+      "mediaNames": {
+        "gas": "Process gas"
+      },
+      "lines": [
+        {
+          "medium": "gas",
+          "points": [
+            [
+              20,
+              230
+            ],
+            [
+              300,
+              230
+            ]
+          ]
+        },
+        {
+          "medium": "gas",
+          "points": [
+            [
+              480,
+              230
+            ],
+            [
+              980,
+              230
+            ]
+          ]
+        },
+        {
+          "medium": "air",
+          "points": [
+            [
+              660,
+              90
+            ],
+            [
+              760,
+              90
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              390,
+              375
+            ],
+            [
+              390,
+              470
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              800,
+              345
+            ],
+            [
+              800,
+              500
+            ],
+            [
+              460,
+              500
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              360,
+              470
+            ],
+            [
+              360,
+              410
+            ],
+            [
+              198,
+              410
+            ],
+            [
+              198,
+              355
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              440,
+              470
+            ],
+            [
+              440,
+              440
+            ],
+            [
+              540,
+              440
+            ],
+            [
+              540,
+              110
+            ],
+            [
+              560,
+              110
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              460,
+              530
+            ],
+            [
+              780,
+              530
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              220,
+              530
+            ],
+            [
+              340,
+              530
+            ]
+          ],
+          "arrow": "none"
+        }
+      ],
+      "labels": [
+        {
+          "x": 30,
+          "y": 212,
+          "text": "Process gas",
+          "strong": true
+        },
+        {
+          "x": 970,
+          "y": 212,
+          "text": "To process",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 772,
+          "y": 96,
+          "text": "To atmosphere",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "A",
+          "sub": "LEL",
+          "x": 700,
+          "y": 140,
+          "path": [
+            [
+              700,
+              230
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "A",
+          "sub": "LEL",
+          "x": 800,
+          "y": 320,
+          "path": [
+            [
+              800,
+              230
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "A",
+          "sub": "LEL",
+          "x": 390,
+          "y": 350,
+          "path": [
+            [
+              390,
+              297
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "XV",
+          "x": 198,
+          "y": 330,
+          "path": [
+            [
+              198,
+              248
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "U",
+          "x": 400,
+          "y": 630,
+          "path": [
+            [
+              400,
+              577
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "J",
+          "x": 165,
+          "y": 630,
+          "path": [
+            [
+              165,
+              577
+            ]
+          ],
+          "key": 5
+        },
+        {
+          "tag": "XA",
+          "x": 870,
+          "y": 390,
+          "path": [
+            [
+              870,
+              460
+            ]
+          ],
+          "key": 6
+        }
+      ],
+      "key": [
+        {
+          "tag": "A",
+          "sub": "LEL",
+          "title": "Detectors placed by density",
+          "note": "Low for heavier-than-air gases, high for lighter, and in the ventilation path rather than wherever a bracket was spare."
+        },
+        {
+          "tag": "A",
+          "sub": "LEL",
+          "title": "Detector at the compressor",
+          "note": "At the height the gas settles, and where it can be reached for calibration without a scaffold and a permit."
+        },
+        {
+          "tag": "XV",
+          "title": "Automatic shutdown",
+          "note": "On a high alarm the valve closes, as agreed in the cause and effect and proved before it is relied on."
+        },
+        {
+          "tag": "U",
+          "title": "Certified controller",
+          "note": "Supervised inputs and voting logic, so a detector at fault shows as a fault rather than a comfortable zero."
+        },
+        {
+          "tag": "J",
+          "title": "Supervised power",
+          "note": "Its own supply with battery backup, rather than a circuit shared with the lighting."
+        },
+        {
+          "tag": "XA",
+          "title": "Alarms and event record",
+          "note": "Repeat indication where the responsible person actually is, with every bump test, calibration and event logged with its date."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

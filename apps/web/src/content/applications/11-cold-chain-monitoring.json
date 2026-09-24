@@ -76,6 +76,317 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "In the cold store",
+      "heading": "Probes where it runs warm, *signals where it fails*",
+      "intro": "The walls, doors and refrigeration are left alone. Probes go where the mapping found the store runs warmest, and a few signals from the plant let an alarm say why the temperature is moving.",
+      "title": "Cold stores — refrigeration plant and monitoring",
+      "width": 1000,
+      "height": 660,
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "fan",
+          "x": 200,
+          "y": 90,
+          "w": 170,
+          "h": 120,
+          "label": "Condensing unit",
+          "labelAt": [
+            285,
+            76
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 650,
+          "y": 90,
+          "w": 110,
+          "h": 120,
+          "label": "Refrigeration panel",
+          "labelAt": [
+            705,
+            76
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "coldroom",
+          "x": 60,
+          "y": 330,
+          "w": 250,
+          "h": 200,
+          "label": "Cold store 1",
+          "labelAt": [
+            120,
+            316
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "coldroom",
+          "x": 360,
+          "y": 330,
+          "w": 250,
+          "h": 200,
+          "label": "Cold store 2",
+          "labelAt": [
+            420,
+            316
+          ]
+        },
+        {
+          "kind": "gateway",
+          "x": 680,
+          "y": 380,
+          "w": 90,
+          "h": 110,
+          "fitted": true,
+          "label": "Gateway",
+          "labelAt": [
+            725,
+            516
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 820,
+          "y": 360,
+          "w": 150,
+          "h": 130,
+          "fitted": true,
+          "label": "Logging platform",
+          "labelAt": [
+            895,
+            346
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "refrigerant",
+          "points": [
+            [
+              230,
+              217
+            ],
+            [
+              230,
+              332
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "refrigerant",
+          "points": [
+            [
+              270,
+              330
+            ],
+            [
+              270,
+              219
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "refrigerant",
+          "points": [
+            [
+              310,
+              217
+            ],
+            [
+              310,
+              270
+            ],
+            [
+              520,
+              270
+            ],
+            [
+              520,
+              332
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "refrigerant",
+          "points": [
+            [
+              560,
+              330
+            ],
+            [
+              560,
+              240
+            ],
+            [
+              350,
+              240
+            ],
+            [
+              350,
+              219
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              650,
+              150
+            ],
+            [
+              370,
+              150
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              700,
+              217
+            ],
+            [
+              700,
+              413
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              770,
+              427
+            ],
+            [
+              820,
+              427
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              970,
+              400
+            ],
+            [
+              980,
+              400
+            ],
+            [
+              980,
+              560
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 980,
+          "y": 592,
+          "text": "Alarms to the on-call rota",
+          "anchor": "end",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "XS",
+          "x": 830,
+          "y": 150,
+          "path": [
+            [
+              760,
+              150
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "ZS",
+          "x": 125,
+          "y": 600,
+          "path": [
+            [
+              125,
+              530
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "ZS",
+          "x": 425,
+          "y": 600,
+          "path": [
+            [
+              425,
+              530
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "T",
+          "x": 245,
+          "y": 600,
+          "path": [
+            [
+              245,
+              530
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "T",
+          "x": 545,
+          "y": 600,
+          "path": [
+            [
+              545,
+              530
+            ]
+          ],
+          "key": 3
+        }
+      ],
+      "key": [
+        {
+          "tag": "XS",
+          "title": "Defrost and plant status",
+          "note": "The defrost signal and compressor status, so a defrost cycle is not an alarm and a stopped compressor is."
+        },
+        {
+          "tag": "ZS",
+          "title": "Door contact",
+          "note": "Tells a door held open by a forklift apart from a store that is genuinely warming."
+        },
+        {
+          "tag": "T",
+          "title": "Probe at the warmest spot",
+          "note": "Calibrated and certified, where the mapping found the store runs warmest, on a battery node so no cable goes through the panels."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

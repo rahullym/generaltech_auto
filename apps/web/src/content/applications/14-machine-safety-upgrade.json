@@ -83,6 +83,296 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the machine",
+      "heading": "The machine stays, *the chain around it changes*",
+      "intro": "The machine itself is left as it is. Each point below is a link in a safety function, from the device that detects to the contactors that stop, and the screen that says why.",
+      "title": "Machine cell — guarding, safety circuit and stopping",
+      "width": 1000,
+      "height": 680,
+      "equipment": [
+        {
+          "kind": "conveyor",
+          "x": 40,
+          "y": 180,
+          "w": 210,
+          "h": 70,
+          "label": "Infeed conveyor",
+          "labelAt": [
+            145,
+            284
+          ]
+        },
+        {
+          "kind": "curtain",
+          "x": 270,
+          "y": 100,
+          "w": 70,
+          "h": 160,
+          "fitted": true,
+          "label": "Light curtain",
+          "labelAt": [
+            305,
+            82
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 370,
+          "y": 100,
+          "w": 200,
+          "h": 160,
+          "label": "The machine",
+          "labelAt": [
+            470,
+            82
+          ]
+        },
+        {
+          "kind": "guard",
+          "x": 600,
+          "y": 86,
+          "w": 180,
+          "h": 182,
+          "label": "Guard door",
+          "labelAt": [
+            690,
+            68
+          ]
+        },
+        {
+          "kind": "motor",
+          "x": 415,
+          "y": 330,
+          "w": 110,
+          "h": 70,
+          "label": "Motor",
+          "labelAt": [
+            382,
+            370
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 580,
+          "y": 320,
+          "w": 100,
+          "h": 90,
+          "fitted": true,
+          "label": "Dual contactors",
+          "labelAt": [
+            630,
+            302
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 250,
+          "y": 520,
+          "w": 110,
+          "h": 90,
+          "fitted": true,
+          "label": "Safety relay",
+          "labelAt": [
+            305,
+            642
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 60,
+          "y": 520,
+          "w": 130,
+          "h": 90,
+          "label": "Machine HMI",
+          "labelAt": [
+            125,
+            642
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              305,
+              262
+            ],
+            [
+              305,
+              520
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              850,
+              197
+            ],
+            [
+              850,
+              585
+            ],
+            [
+              360,
+              585
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              360,
+              545
+            ],
+            [
+              630,
+              545
+            ],
+            [
+              630,
+              419
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              580,
+              365
+            ],
+            [
+              527,
+              365
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              250,
+              565
+            ],
+            [
+              190,
+              565
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 40,
+          "y": 150,
+          "text": "Material in",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "XS",
+          "x": 210,
+          "y": 118,
+          "path": [
+            [
+              270,
+              118
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "GS",
+          "x": 850,
+          "y": 170,
+          "path": [
+            [
+              780,
+              170
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "K",
+          "x": 470,
+          "y": 468,
+          "path": [
+            [
+              470,
+              400
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "ZS",
+          "x": 760,
+          "y": 365,
+          "path": [
+            [
+              680,
+              365
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "XA",
+          "x": 125,
+          "y": 450,
+          "path": [
+            [
+              125,
+              520
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "XS",
+          "title": "Light curtain",
+          "note": "Covers the loading point that has to stay open, mounted at a distance calculated from the machine's actual stopping time."
+        },
+        {
+          "tag": "GS",
+          "title": "Coded interlock",
+          "note": "Cannot be defeated with a spare actuator, with guard locking where the machine takes time to come to rest."
+        },
+        {
+          "tag": "K",
+          "title": "Measured stopping time",
+          "note": "How long the machine takes to come to rest, measured rather than estimated, which sets the curtain distance and the guard locking."
+        },
+        {
+          "tag": "ZS",
+          "title": "Contactor feedback",
+          "note": "Two contactors replace the single unmonitored one, and the safety relay checks both have dropped out, so a welded contact is caught."
+        },
+        {
+          "tag": "XA",
+          "title": "Which device tripped",
+          "note": "Diagnostics on the HMI turn a mystery stop into a named device, so it is cleared rather than bypassed."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

@@ -76,6 +76,465 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the air system",
+      "heading": "Five points *on the line you already have*",
+      "intro": "Nothing on the generation side is changed. The measurements go in along the air's own path, from the compressor house out to the furthest user, so each one answers a different question about where the air goes.",
+      "title": "Compressed air — generation and distribution",
+      "width": 1000,
+      "height": 690,
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "fan",
+          "x": 70,
+          "y": 110,
+          "w": 160,
+          "h": 120,
+          "label": "Compressor 1",
+          "labelAt": [
+            150,
+            96
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "fan",
+          "x": 70,
+          "y": 330,
+          "w": 160,
+          "h": 120,
+          "label": "Compressor 2",
+          "labelAt": [
+            150,
+            316
+          ]
+        },
+        {
+          "kind": "tank",
+          "top": "dome",
+          "bottom": "dish",
+          "x": 340,
+          "y": 150,
+          "w": 100,
+          "h": 280,
+          "label": "Air receiver",
+          "labelAt": [
+            362,
+            132
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "louvre",
+          "x": 490,
+          "y": 150,
+          "w": 110,
+          "h": 160,
+          "label": "Dryer",
+          "labelAt": [
+            560,
+            340
+          ]
+        },
+        {
+          "kind": "filter",
+          "x": 650,
+          "y": 270,
+          "w": 40,
+          "h": 80,
+          "label": "Filter",
+          "labelAt": [
+            670,
+            378
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 100,
+          "y": 495,
+          "w": 90,
+          "h": 80,
+          "fitted": true,
+          "label": "Datalogger",
+          "labelAt": [
+            145,
+            482
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 580,
+          "y": 540,
+          "w": 110,
+          "h": 90,
+          "label": "Assembly",
+          "labelAt": [
+            635,
+            664
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 730,
+          "y": 540,
+          "w": 110,
+          "h": 90,
+          "label": "Packaging",
+          "labelAt": [
+            785,
+            664
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 870,
+          "y": 540,
+          "w": 110,
+          "h": 90,
+          "label": "Paint shop",
+          "labelAt": [
+            925,
+            664
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "air",
+          "points": [
+            [
+              40,
+              40
+            ],
+            [
+              40,
+              390
+            ],
+            [
+              70,
+              390
+            ]
+          ]
+        },
+        {
+          "medium": "air",
+          "points": [
+            [
+              40,
+              170
+            ],
+            [
+              70,
+              170
+            ]
+          ]
+        },
+        {
+          "medium": "compressed-air",
+          "points": [
+            [
+              230,
+              170
+            ],
+            [
+              290,
+              170
+            ],
+            [
+              290,
+              280
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "compressed-air",
+          "points": [
+            [
+              230,
+              390
+            ],
+            [
+              290,
+              390
+            ],
+            [
+              290,
+              280
+            ],
+            [
+              340,
+              280
+            ]
+          ]
+        },
+        {
+          "medium": "compressed-air",
+          "points": [
+            [
+              425,
+              156
+            ],
+            [
+              425,
+              95
+            ],
+            [
+              545,
+              95
+            ],
+            [
+              545,
+              150
+            ]
+          ]
+        },
+        {
+          "medium": "compressed-air",
+          "points": [
+            [
+              600,
+              280
+            ],
+            [
+              650,
+              280
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "compressed-air",
+          "points": [
+            [
+              690,
+              280
+            ],
+            [
+              950,
+              280
+            ],
+            [
+              950,
+              470
+            ],
+            [
+              635,
+              470
+            ],
+            [
+              635,
+              540
+            ]
+          ]
+        },
+        {
+          "medium": "compressed-air",
+          "points": [
+            [
+              785,
+              470
+            ],
+            [
+              785,
+              540
+            ]
+          ]
+        },
+        {
+          "medium": "compressed-air",
+          "points": [
+            [
+              925,
+              470
+            ],
+            [
+              925,
+              540
+            ]
+          ]
+        },
+        {
+          "medium": "condensate",
+          "points": [
+            [
+              510,
+              317
+            ],
+            [
+              510,
+              610
+            ],
+            [
+              390,
+              610
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "condensate",
+          "points": [
+            [
+              390,
+              437
+            ],
+            [
+              390,
+              610
+            ],
+            [
+              20,
+              610
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              290,
+              525
+            ],
+            [
+              190,
+              525
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 56,
+          "y": 36,
+          "text": "Ambient air",
+          "strong": true
+        },
+        {
+          "x": 24,
+          "y": 640,
+          "text": "Condensate",
+          "strong": true
+        },
+        {
+          "x": 960,
+          "y": 264,
+          "text": "Ring main",
+          "anchor": "end",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "P",
+          "x": 315,
+          "y": 525,
+          "path": [
+            [
+              315,
+              280
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "A",
+          "sub": "DP",
+          "x": 625,
+          "y": 190,
+          "path": [
+            [
+              625,
+              280
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "F",
+          "x": 760,
+          "y": 190,
+          "path": [
+            [
+              760,
+              280
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "F",
+          "x": 585,
+          "y": 505,
+          "path": [
+            [
+              635,
+              505
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "F",
+          "x": 735,
+          "y": 505,
+          "path": [
+            [
+              785,
+              505
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "P",
+          "x": 875,
+          "y": 505,
+          "path": [
+            [
+              925,
+              505
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "P",
+          "title": "Generation pressure",
+          "note": "At the compressor outlet: the set point everything downstream is paying for."
+        },
+        {
+          "tag": "A",
+          "sub": "DP",
+          "title": "Dew point",
+          "note": "After the dryer, so a failing dryer shows up before water reaches the line."
+        },
+        {
+          "tag": "F",
+          "title": "Total flow",
+          "note": "A thermal mass flow probe where the air leaves the compressor house. Its reading on an idle Sunday is the leak rate."
+        },
+        {
+          "tag": "F",
+          "title": "Flow on each branch",
+          "note": "One probe per area worth knowing, hot-tapped into the live main, so consumption is attributed by department."
+        },
+        {
+          "tag": "P",
+          "title": "Pressure at the far end",
+          "note": "The drop between here and the compressor is what forces the set point higher than it needs to be."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

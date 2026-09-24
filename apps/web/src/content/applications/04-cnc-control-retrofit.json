@@ -81,6 +81,407 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the machine",
+      "heading": "New electrics *on a machine worth keeping*",
+      "intro": "Everything electrical between the operator and the axes is replaced. The castings, ways and ballscrews at the right of the drawing stay, once they have been measured and shown to be worth it.",
+      "title": "Machining centre — control, drives and axes",
+      "width": 1000,
+      "height": 700,
+      "mediaNames": {
+        "water": "Coolant"
+      },
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 40,
+          "y": 120,
+          "w": 100,
+          "h": 140,
+          "fitted": true,
+          "label": "CNC and\noperator panel",
+          "labelAt": [
+            90,
+            86
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 200,
+          "y": 110,
+          "w": 165,
+          "h": 170,
+          "fitted": true,
+          "label": "Rebuilt cabinet",
+          "labelAt": [
+            282,
+            96
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 410,
+          "y": 130,
+          "w": 70,
+          "h": 100,
+          "fitted": true,
+          "label": "Spindle drive",
+          "labelAt": [
+            445,
+            116
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 560,
+          "y": 130,
+          "w": 60,
+          "h": 100,
+          "fitted": true,
+          "label": "Servo drives",
+          "labelAt": [
+            650,
+            116
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 680,
+          "y": 130,
+          "w": 60,
+          "h": 100,
+          "fitted": true
+        },
+        {
+          "kind": "motor",
+          "x": 400,
+          "y": 330,
+          "w": 90,
+          "h": 60,
+          "fitted": true
+        },
+        {
+          "kind": "motor",
+          "x": 560,
+          "y": 330,
+          "w": 90,
+          "h": 60,
+          "fitted": true
+        },
+        {
+          "kind": "motor",
+          "x": 740,
+          "y": 420,
+          "w": 90,
+          "h": 60,
+          "flip": true,
+          "fitted": true
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 360,
+          "y": 390,
+          "w": 380,
+          "h": 190,
+          "label": "Machine tool, kept",
+          "labelAt": [
+            300,
+            614
+          ]
+        },
+        {
+          "kind": "htank",
+          "x": 470,
+          "y": 620,
+          "w": 180,
+          "h": 44,
+          "fill": 0.6,
+          "medium": "water",
+          "label": "Coolant tank",
+          "labelAt": [
+            408,
+            652
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 680,
+          "y": 604,
+          "w": 110,
+          "h": 76,
+          "label": "Coolant pump",
+          "labelAt": [
+            868,
+            660
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "water",
+          "points": [
+            [
+              646,
+              648
+            ],
+            [
+              682,
+              648
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              708,
+              610
+            ],
+            [
+              708,
+              584
+            ]
+          ]
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              530,
+              584
+            ],
+            [
+              530,
+              624
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              140,
+              190
+            ],
+            [
+              200,
+              190
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              365,
+              180
+            ],
+            [
+              410,
+              180
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              480,
+              180
+            ],
+            [
+              560,
+              180
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              620,
+              180
+            ],
+            [
+              680,
+              180
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              442,
+              237
+            ],
+            [
+              442,
+              330
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              602,
+              237
+            ],
+            [
+              602,
+              330
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              710,
+              237
+            ],
+            [
+              710,
+              300
+            ],
+            [
+              788,
+              300
+            ],
+            [
+              788,
+              420
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 470,
+          "y": 290,
+          "text": "Spindle",
+          "anchor": "start"
+        },
+        {
+          "x": 590,
+          "y": 290,
+          "text": "Axis",
+          "anchor": "end"
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "S",
+          "x": 335,
+          "y": 360,
+          "path": [
+            [
+              400,
+              360
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "Z",
+          "x": 695,
+          "y": 360,
+          "path": [
+            [
+              650,
+              360
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "Z",
+          "x": 900,
+          "y": 450,
+          "path": [
+            [
+              830,
+              450
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "ZS",
+          "x": 290,
+          "y": 450,
+          "path": [
+            [
+              360,
+              450
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "ZS",
+          "x": 290,
+          "y": 530,
+          "path": [
+            [
+              360,
+              530
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "HS",
+          "x": 90,
+          "y": 320,
+          "path": [
+            [
+              90,
+              262
+            ]
+          ],
+          "key": 4
+        }
+      ],
+      "key": [
+        {
+          "tag": "Z",
+          "title": "Axis position",
+          "note": "Encoders on the new servo motors, fitted as matched sets with their drives. They decide whether the machine holds position."
+        },
+        {
+          "tag": "S",
+          "title": "Spindle feedback",
+          "note": "Speed and orientation from the spindle encoder, which rigid tapping, threading and orientation depend on."
+        },
+        {
+          "tag": "ZS",
+          "title": "Guards and overtravels",
+          "note": "Guard interlocks and axis limits rewired to a current standard in the rebuilt cabinet, not into thirty-year-old terminals."
+        },
+        {
+          "tag": "HS",
+          "title": "Emergency stop",
+          "note": "On the new operator panel, with the stop circuit brought up to date along with the rest of the safety."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "groups",
       "eyebrow": "What changes",

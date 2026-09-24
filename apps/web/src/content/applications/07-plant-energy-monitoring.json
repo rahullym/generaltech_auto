@@ -76,6 +76,498 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "In the switchroom",
+      "heading": "Meters *that add up to the incomer*",
+      "intro": "Everything goes inside switchgear the plant already has. The meters follow the distribution down from the main board to the loads, so each reading sits under a parent and the whole set reconciles.",
+      "title": "Electrical distribution — incomer to loads",
+      "width": 1000,
+      "height": 710,
+      "mediaNames": {
+        "product": "Power"
+      },
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "fins",
+          "x": 60,
+          "y": 120,
+          "w": 130,
+          "h": 100,
+          "label": "Transformer",
+          "labelAt": [
+            125,
+            254
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 280,
+          "y": 90,
+          "w": 200,
+          "h": 150,
+          "label": "Main switchboard",
+          "labelAt": [
+            380,
+            76
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 150,
+          "y": 360,
+          "w": 140,
+          "h": 120,
+          "label": "Production DB",
+          "labelAt": [
+            220,
+            346
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 530,
+          "y": 360,
+          "w": 140,
+          "h": 120,
+          "label": "Utilities DB",
+          "labelAt": [
+            600,
+            346
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 60,
+          "y": 580,
+          "w": 110,
+          "h": 80,
+          "label": "Hall A",
+          "labelAt": [
+            115,
+            692
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 250,
+          "y": 580,
+          "w": 110,
+          "h": 80,
+          "label": "Hall B",
+          "labelAt": [
+            305,
+            692
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "fan",
+          "x": 470,
+          "y": 580,
+          "w": 120,
+          "h": 80,
+          "label": "Compressor",
+          "labelAt": [
+            530,
+            692
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "fan",
+          "x": 660,
+          "y": 580,
+          "w": 120,
+          "h": 80,
+          "label": "Chiller",
+          "labelAt": [
+            720,
+            692
+          ]
+        },
+        {
+          "kind": "gateway",
+          "x": 850,
+          "y": 380,
+          "w": 90,
+          "h": 110,
+          "fitted": true,
+          "label": "Gateway",
+          "labelAt": [
+            895,
+            518
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 830,
+          "y": 100,
+          "w": 140,
+          "h": 120,
+          "fitted": true,
+          "label": "Dashboards",
+          "labelAt": [
+            900,
+            86
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "product",
+          "points": [
+            [
+              125,
+              25
+            ],
+            [
+              125,
+              100
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              190,
+              170
+            ],
+            [
+              280,
+              170
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              330,
+              247
+            ],
+            [
+              330,
+              420
+            ],
+            [
+              290,
+              420
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              430,
+              247
+            ],
+            [
+              430,
+              420
+            ],
+            [
+              530,
+              420
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              190,
+              487
+            ],
+            [
+              190,
+              530
+            ],
+            [
+              115,
+              530
+            ],
+            [
+              115,
+              580
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              250,
+              487
+            ],
+            [
+              250,
+              530
+            ],
+            [
+              305,
+              530
+            ],
+            [
+              305,
+              580
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              570,
+              487
+            ],
+            [
+              570,
+              530
+            ],
+            [
+              530,
+              530
+            ],
+            [
+              530,
+              580
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              630,
+              487
+            ],
+            [
+              630,
+              530
+            ],
+            [
+              720,
+              530
+            ],
+            [
+              720,
+              580
+            ]
+          ],
+          "arrow": "end"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              480,
+              210
+            ],
+            [
+              800,
+              210
+            ],
+            [
+              800,
+              427
+            ],
+            [
+              850,
+              427
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              670,
+              460
+            ],
+            [
+              800,
+              460
+            ],
+            [
+              800,
+              427
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              860,
+              413
+            ],
+            [
+              860,
+              174
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 113,
+          "y": 44,
+          "text": "From grid",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 640,
+          "y": 198,
+          "text": "Modbus or Ethernet",
+          "anchor": "middle"
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "JQ",
+          "x": 235,
+          "y": 60,
+          "path": [
+            [
+              235,
+              170
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "I",
+          "x": 480,
+          "y": 345,
+          "path": [
+            [
+              480,
+              420
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "J",
+          "x": 80,
+          "y": 420,
+          "path": [
+            [
+              150,
+              420
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "J",
+          "x": 740,
+          "y": 400,
+          "path": [
+            [
+              670,
+              400
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "J",
+          "x": 470,
+          "y": 530,
+          "path": [
+            [
+              530,
+              530
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "J",
+          "x": 780,
+          "y": 530,
+          "path": [
+            [
+              720,
+              530
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "JQ",
+          "x": 55,
+          "y": 540,
+          "path": [
+            [
+              115,
+              540
+            ]
+          ],
+          "key": 5
+        },
+        {
+          "tag": "JQ",
+          "x": 370,
+          "y": 555,
+          "path": [
+            [
+              305,
+              555
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "JQ",
+          "title": "Main board meter",
+          "note": "The parent every sub-meter reconciles against, so an unmetered remainder shows up as a number rather than hiding."
+        },
+        {
+          "tag": "I",
+          "title": "Split-core CTs",
+          "note": "Clipped around existing conductors without breaking them, so boards are metered during short isolations instead of a site shutdown."
+        },
+        {
+          "tag": "J",
+          "title": "Meters at each board",
+          "note": "Real and reactive power, power factor, harmonics and demand, by area rather than one figure for the site."
+        },
+        {
+          "tag": "J",
+          "title": "Large loads on their own",
+          "note": "Compressors, chillers and large motors are big enough to move the total, so each is worth its own meter."
+        },
+        {
+          "tag": "JQ",
+          "title": "Production by area",
+          "note": "Metered by area so consumption can be joined to output as energy per tonne or per batch."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

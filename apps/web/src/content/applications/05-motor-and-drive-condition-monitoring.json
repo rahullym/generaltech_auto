@@ -83,6 +83,445 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the rotating equipment",
+      "heading": "Listening *at the bearings that matter*",
+      "intro": "The motors, pumps and drives are left as they are. Sensors go on the bearings, the drives are read for what they already know, and the result reaches a named engineer rather than a shared inbox.",
+      "title": "Pump house — drives, motors and pumps",
+      "width": 1000,
+      "height": 690,
+      "mediaNames": {
+        "water": "Pumped liquid"
+      },
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 410,
+          "y": 130,
+          "w": 170,
+          "h": 110,
+          "label": "Motor control centre",
+          "labelAt": [
+            495,
+            116
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 300,
+          "y": 300,
+          "w": 60,
+          "h": 100,
+          "label": "VFD 1",
+          "labelAt": [
+            388,
+            296
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 630,
+          "y": 300,
+          "w": 60,
+          "h": 100,
+          "label": "VFD 2",
+          "labelAt": [
+            602,
+            296
+          ]
+        },
+        {
+          "kind": "gateway",
+          "x": 455,
+          "y": 290,
+          "w": 80,
+          "h": 130,
+          "fitted": true,
+          "label": "Gateway",
+          "labelAt": [
+            495,
+            276
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 430,
+          "y": 480,
+          "w": 130,
+          "h": 100,
+          "label": "Maintenance office",
+          "labelAt": [
+            495,
+            602
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 60,
+          "y": 400,
+          "w": 170,
+          "h": 100,
+          "label": "Pump 1",
+          "labelAt": [
+            145,
+            530
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 760,
+          "y": 400,
+          "w": 170,
+          "h": 100,
+          "flip": true,
+          "label": "Pump 2",
+          "labelAt": [
+            845,
+            530
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "water",
+          "points": [
+            [
+              20,
+              630
+            ],
+            [
+              955,
+              630
+            ],
+            [
+              955,
+              451
+            ],
+            [
+              926,
+              451
+            ]
+          ]
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              40,
+              630
+            ],
+            [
+              40,
+              451
+            ],
+            [
+              64,
+              451
+            ]
+          ]
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              103,
+              404
+            ],
+            [
+              103,
+              80
+            ],
+            [
+              960,
+              80
+            ]
+          ]
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              887,
+              404
+            ],
+            [
+              887,
+              80
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              410,
+              180
+            ],
+            [
+              330,
+              180
+            ],
+            [
+              330,
+              300
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              580,
+              180
+            ],
+            [
+              660,
+              180
+            ],
+            [
+              660,
+              300
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              330,
+              407
+            ],
+            [
+              330,
+              464
+            ],
+            [
+              232,
+              464
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              660,
+              407
+            ],
+            [
+              660,
+              464
+            ],
+            [
+              758,
+              464
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              360,
+              345
+            ],
+            [
+              455,
+              345
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              630,
+              345
+            ],
+            [
+              535,
+              345
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              495,
+              420
+            ],
+            [
+              495,
+              480
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 960,
+          "y": 64,
+          "text": "To the process",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 24,
+          "y": 662,
+          "text": "From the sump",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "V",
+          "x": 145,
+          "y": 330,
+          "path": [
+            [
+              145,
+              440
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "V",
+          "x": 200,
+          "y": 250,
+          "path": [
+            [
+              200,
+              427
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "T",
+          "x": 255,
+          "y": 330,
+          "path": [
+            [
+              255,
+              445
+            ],
+            [
+              230,
+              445
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "V",
+          "x": 845,
+          "y": 330,
+          "path": [
+            [
+              845,
+              440
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "V",
+          "x": 790,
+          "y": 250,
+          "path": [
+            [
+              790,
+              427
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "T",
+          "x": 735,
+          "y": 330,
+          "path": [
+            [
+              735,
+              445
+            ],
+            [
+              760,
+              445
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "U",
+          "x": 405,
+          "y": 425,
+          "path": [
+            [
+              360,
+              425
+            ],
+            [
+              360,
+              390
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "U",
+          "x": 585,
+          "y": 425,
+          "path": [
+            [
+              630,
+              425
+            ],
+            [
+              630,
+              390
+            ]
+          ],
+          "key": 4
+        }
+      ],
+      "key": [
+        {
+          "tag": "V",
+          "title": "Motor bearing vibration",
+          "note": "Stud-mounted at the bearing that actually carries the load: the earliest sign that a machine has changed."
+        },
+        {
+          "tag": "T",
+          "title": "Bearing temperature",
+          "note": "Slower than vibration, so a confirming signal. Strongest as a comparison with the identical pump next to it."
+        },
+        {
+          "tag": "V",
+          "title": "Pump bearing vibration",
+          "note": "The same measurement at the pump end, trended against this machine's own baseline rather than a guessed limit."
+        },
+        {
+          "tag": "U",
+          "title": "Drive data",
+          "note": "Current, torque, speed and running hours the VFD already holds, read over the network it is already on."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

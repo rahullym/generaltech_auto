@@ -76,6 +76,464 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the line",
+      "heading": "One sequence *over the machines you already have*",
+      "intro": "The filler, capper, labeller and case packer stay where they are and keep their own controls. What goes in is the wiring that lets them stop for each other, and one screen to run them from.",
+      "title": "Packaging line — machines, conveyors and line control",
+      "width": 1000,
+      "height": 710,
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 300,
+          "y": 60,
+          "w": 110,
+          "h": 140,
+          "fitted": true,
+          "label": "Line controller",
+          "labelAt": [
+            355,
+            46
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 500,
+          "y": 70,
+          "w": 140,
+          "h": 120,
+          "fitted": true,
+          "label": "Line HMI",
+          "labelAt": [
+            570,
+            56
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 60,
+          "y": 360,
+          "w": 110,
+          "h": 110,
+          "label": "Filler",
+          "labelAt": [
+            115,
+            500
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 165,
+          "y": 400,
+          "w": 110,
+          "h": 70
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 270,
+          "y": 360,
+          "w": 100,
+          "h": 110,
+          "label": "Capper",
+          "labelAt": [
+            320,
+            500
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 365,
+          "y": 400,
+          "w": 110,
+          "h": 70
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 470,
+          "y": 360,
+          "w": 110,
+          "h": 110,
+          "label": "Labeller",
+          "labelAt": [
+            525,
+            500
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 575,
+          "y": 400,
+          "w": 110,
+          "h": 70
+        },
+        {
+          "kind": "box",
+          "detail": "window",
+          "x": 680,
+          "y": 350,
+          "w": 130,
+          "h": 120,
+          "label": "Case packer",
+          "labelAt": [
+            745,
+            500
+          ]
+        },
+        {
+          "kind": "conveyor",
+          "x": 805,
+          "y": 400,
+          "w": 150,
+          "h": 70
+        },
+        {
+          "kind": "motor",
+          "x": 192,
+          "y": 485,
+          "w": 56,
+          "h": 40
+        },
+        {
+          "kind": "motor",
+          "x": 392,
+          "y": 485,
+          "w": 56,
+          "h": 40
+        },
+        {
+          "kind": "motor",
+          "x": 602,
+          "y": 485,
+          "w": 56,
+          "h": 40
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 400,
+          "y": 590,
+          "w": 180,
+          "h": 70,
+          "fitted": true,
+          "label": "Accumulation drives",
+          "labelAt": [
+            490,
+            692
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "product",
+          "points": [
+            [
+              30,
+              210
+            ],
+            [
+              30,
+              415
+            ],
+            [
+              60,
+              415
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              410,
+              110
+            ],
+            [
+              500,
+              110
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              355,
+              207
+            ],
+            [
+              355,
+              250
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              85,
+              360
+            ],
+            [
+              85,
+              250
+            ],
+            [
+              745,
+              250
+            ],
+            [
+              745,
+              350
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              295,
+              250
+            ],
+            [
+              295,
+              360
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              485,
+              250
+            ],
+            [
+              485,
+              360
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              395,
+              207
+            ],
+            [
+              395,
+              225
+            ],
+            [
+              975,
+              225
+            ],
+            [
+              975,
+              625
+            ],
+            [
+              580,
+              625
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              220,
+              525
+            ],
+            [
+              220,
+              555
+            ],
+            [
+              630,
+              555
+            ],
+            [
+              630,
+              525
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              420,
+              525
+            ],
+            [
+              420,
+              555
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              490,
+              555
+            ],
+            [
+              490,
+              590
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 22,
+          "y": 196,
+          "text": "Product",
+          "strong": true
+        },
+        {
+          "x": 950,
+          "y": 390,
+          "text": "To palletising",
+          "anchor": "end",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "XS",
+          "x": 125,
+          "y": 305,
+          "path": [
+            [
+              125,
+              360
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "XS",
+          "x": 700,
+          "y": 300,
+          "path": [
+            [
+              700,
+              350
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "LS",
+          "x": 225,
+          "y": 305,
+          "path": [
+            [
+              225,
+              438
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "LS",
+          "x": 635,
+          "y": 305,
+          "path": [
+            [
+              635,
+              438
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "SC",
+          "x": 425,
+          "y": 305,
+          "path": [
+            [
+              425,
+              438
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "HS",
+          "x": 535,
+          "y": 305,
+          "path": [
+            [
+              535,
+              360
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "ZS",
+          "x": 870,
+          "y": 300,
+          "path": [
+            [
+              800,
+              300
+            ],
+            [
+              800,
+              350
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "XS",
+          "title": "Run, fault and ready",
+          "note": "Taken from each machine's own controller, hardwired or over fieldbus, so the line controller knows what every machine is doing."
+        },
+        {
+          "tag": "LS",
+          "title": "Backup photocells",
+          "note": "They see product backing up on the conveyor, so the machine feeding it stops before the jam reaches the floor."
+        },
+        {
+          "tag": "SC",
+          "title": "Conveyor speed",
+          "note": "Accumulation drives set each conveyor's speed, so the line is balanced rather than run flat out and jammed."
+        },
+        {
+          "tag": "HS",
+          "title": "Emergency stop",
+          "note": "Stop circuits that reach across the whole line, designed to the assessed safety requirement rather than machine by machine."
+        },
+        {
+          "tag": "ZS",
+          "title": "Guard interlocks",
+          "note": "Guard doors proved closed before the line will run, and wired into the same stop circuits."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

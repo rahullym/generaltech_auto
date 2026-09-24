@@ -83,6 +83,310 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "On the furnace",
+      "heading": "Five points *between the heat and the record*",
+      "intro": "The furnace, burners and elements stay as they are. The work sits on the measurement and control around them, starting with the thermocouples everything else believes.",
+      "title": "Furnace — measurement, control and record",
+      "width": 1000,
+      "height": 620,
+      "equipment": [
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 60,
+          "y": 110,
+          "w": 150,
+          "h": 150,
+          "label": "Power control",
+          "labelAt": [
+            135,
+            92
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "flame",
+          "x": 320,
+          "y": 90,
+          "w": 340,
+          "h": 220,
+          "label": "Furnace",
+          "labelAt": [
+            490,
+            346
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 215,
+          "y": 400,
+          "w": 100,
+          "h": 80,
+          "fitted": true,
+          "label": "Over-temperature",
+          "labelAt": [
+            265,
+            509
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 400,
+          "y": 430,
+          "w": 150,
+          "h": 110,
+          "fitted": true,
+          "label": "Multi-zone controller",
+          "labelAt": [
+            475,
+            572
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 720,
+          "y": 450,
+          "w": 160,
+          "h": 110,
+          "fitted": true,
+          "label": "Batch records",
+          "labelAt": [
+            800,
+            590
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              210,
+              185
+            ],
+            [
+              320,
+              185
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              410,
+              50
+            ],
+            [
+              800,
+              50
+            ],
+            [
+              800,
+              380
+            ],
+            [
+              475,
+              380
+            ],
+            [
+              475,
+              430
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              265,
+              327
+            ],
+            [
+              265,
+              400
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              215,
+              440
+            ],
+            [
+              135,
+              440
+            ],
+            [
+              135,
+              267
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              400,
+              530
+            ],
+            [
+              90,
+              530
+            ],
+            [
+              90,
+              267
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              550,
+              500
+            ],
+            [
+              720,
+              500
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 812,
+          "y": 226,
+          "text": "Compensating cable"
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "TE",
+          "x": 410,
+          "y": 50,
+          "path": [
+            [
+              410,
+              90
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "TE",
+          "x": 490,
+          "y": 50,
+          "path": [
+            [
+              490,
+              90
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "TE",
+          "x": 570,
+          "y": 50,
+          "path": [
+            [
+              570,
+              90
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "TJ",
+          "x": 730,
+          "y": 200,
+          "path": [
+            [
+              660,
+              200
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "TSH",
+          "x": 265,
+          "y": 300,
+          "path": [
+            [
+              320,
+              300
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "TIC",
+          "x": 358,
+          "y": 455,
+          "path": [
+            [
+              400,
+              455
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "TR",
+          "x": 935,
+          "y": 505,
+          "path": [
+            [
+              880,
+              505
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "TE",
+          "title": "Control thermocouples",
+          "note": "One per zone, type and sheath chosen for the range and atmosphere, checked against a reference and replaced on a schedule."
+        },
+        {
+          "tag": "TJ",
+          "title": "Uniformity survey",
+          "note": "A grid of test thermocouples through the working volume, showing where work can actually be placed."
+        },
+        {
+          "tag": "TSH",
+          "title": "Over-temperature protection",
+          "note": "An independent circuit with its own sensor, not a software limit inside the controller that is doing the heating."
+        },
+        {
+          "tag": "TIC",
+          "title": "Multi-zone controller",
+          "note": "One loop per zone, tuned together so zones do not fight, running ramps and soaks as stored profiles."
+        },
+        {
+          "tag": "TR",
+          "title": "Recorded chart per batch",
+          "note": "What the work actually saw, produced automatically and kept for a customer, an auditor or an investigation."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

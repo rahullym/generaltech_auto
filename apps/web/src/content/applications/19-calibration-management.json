@@ -83,6 +83,424 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "Across the plant",
+      "heading": "One loop, *from the sensor to the record*",
+      "intro": "The instruments themselves are left in place. What changes is that each one is known, checked across its whole loop, and recorded where anyone can find it.",
+      "title": "Calibration — one process loop, from sensor to record",
+      "width": 1000,
+      "height": 680,
+      "equipment": [
+        {
+          "kind": "tank",
+          "top": "dome",
+          "bottom": "dish",
+          "x": 100,
+          "y": 100,
+          "w": 110,
+          "h": 240,
+          "fill": 0.6,
+          "medium": "product",
+          "label": "Process tank",
+          "labelAt": [
+            280,
+            150
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 240,
+          "y": 380,
+          "w": 110,
+          "h": 70,
+          "label": "Pump",
+          "labelAt": [
+            295,
+            480
+          ]
+        },
+        {
+          "kind": "hx",
+          "x": 720,
+          "y": 230,
+          "w": 150,
+          "h": 60,
+          "label": "Heater",
+          "labelAt": [
+            795,
+            332
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 340,
+          "y": 470,
+          "w": 150,
+          "h": 110,
+          "label": "Control system I/O",
+          "labelAt": [
+            415,
+            612
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 530,
+          "y": 510,
+          "w": 140,
+          "h": 100,
+          "label": "Control room display",
+          "labelAt": [
+            600,
+            640
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "screen",
+          "x": 610,
+          "y": 320,
+          "w": 90,
+          "h": 80,
+          "fitted": true,
+          "label": "Documenting calibrator",
+          "labelAt": [
+            655,
+            434
+          ]
+        },
+        {
+          "kind": "screen",
+          "x": 810,
+          "y": 500,
+          "w": 140,
+          "h": 100,
+          "fitted": true,
+          "label": "Calibration register",
+          "labelAt": [
+            880,
+            630
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "product",
+          "points": [
+            [
+              30,
+              70
+            ],
+            [
+              155,
+              70
+            ],
+            [
+              155,
+              102
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              155,
+              338
+            ],
+            [
+              155,
+              416
+            ],
+            [
+              242,
+              416
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              268,
+              380
+            ],
+            [
+              268,
+              260
+            ],
+            [
+              720,
+              260
+            ]
+          ]
+        },
+        {
+          "medium": "product",
+          "points": [
+            [
+              870,
+              260
+            ],
+            [
+              980,
+              260
+            ]
+          ]
+        },
+        {
+          "medium": "steam",
+          "points": [
+            [
+              762,
+              40
+            ],
+            [
+              762,
+              218
+            ]
+          ]
+        },
+        {
+          "medium": "condensate",
+          "points": [
+            [
+              828,
+              218
+            ],
+            [
+              828,
+              40
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              50,
+              245
+            ],
+            [
+              50,
+              520
+            ],
+            [
+              340,
+              520
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              410,
+              365
+            ],
+            [
+              410,
+              470
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              540,
+              365
+            ],
+            [
+              540,
+              420
+            ],
+            [
+              450,
+              420
+            ],
+            [
+              450,
+              470
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              490,
+              545
+            ],
+            [
+              530,
+              545
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              565,
+              340
+            ],
+            [
+              610,
+              340
+            ]
+          ],
+          "arrow": "none"
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              700,
+              360
+            ],
+            [
+              880,
+              360
+            ],
+            [
+              880,
+              500
+            ]
+          ],
+          "arrow": "none"
+        }
+      ],
+      "labels": [
+        {
+          "x": 40,
+          "y": 56,
+          "text": "Feed",
+          "strong": true
+        },
+        {
+          "x": 750,
+          "y": 56,
+          "text": "Steam",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 840,
+          "y": 56,
+          "text": "Condensate",
+          "strong": true
+        },
+        {
+          "x": 975,
+          "y": 292,
+          "text": "To process",
+          "anchor": "end",
+          "strong": true
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "L",
+          "x": 50,
+          "y": 220,
+          "path": [
+            [
+              100,
+              220
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "P",
+          "x": 540,
+          "y": 340,
+          "path": [
+            [
+              540,
+              260
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "F",
+          "x": 410,
+          "y": 340,
+          "path": [
+            [
+              410,
+              260
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "T",
+          "x": 920,
+          "y": 180,
+          "path": [
+            [
+              920,
+              260
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "K",
+          "x": 745,
+          "y": 545,
+          "path": [
+            [
+              810,
+              545
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "L",
+          "title": "Walk-down against P&IDs",
+          "note": "Every instrument located and confirmed on the process, so the register lists what is really installed."
+        },
+        {
+          "tag": "P",
+          "title": "As-found, then as-left",
+          "note": "Several points across the range with a traceable documenting calibrator, recording as-found before any adjustment."
+        },
+        {
+          "tag": "F",
+          "title": "Loop check to the display",
+          "note": "From sensor to what the control room sees, catching scaling and configuration errors a bench check never will."
+        },
+        {
+          "tag": "T",
+          "title": "Intervals set by consequence",
+          "note": "A measurement that matters is checked more often than one that does not, and the interval moves with the drift found."
+        },
+        {
+          "tag": "K",
+          "title": "Records and due dates",
+          "note": "Results taken straight from the calibrator into one register, with due dates raising work orders in the system already used."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "chain",
       "eyebrow": "How it works",

@@ -81,6 +81,305 @@
       }
     },
     {
+      "type": "schematic",
+      "eyebrow": "At the pump or fan",
+      "heading": "An electrical job, *with the pump left alone*",
+      "intro": "The pump, impeller and pipework stay as they are. The work is in the motor circuit, plus one signal from the process for the drive to follow, and the same measurements are taken before and after so the saving is shown rather than claimed.",
+      "title": "Pump set — process above, motor circuit below",
+      "width": 1000,
+      "height": 680,
+      "equipment": [
+        {
+          "kind": "tank",
+          "top": "dome",
+          "bottom": "flat",
+          "x": 60,
+          "y": 120,
+          "w": 130,
+          "h": 190,
+          "fill": 0.6,
+          "medium": "water",
+          "label": "Suction tank",
+          "labelAt": [
+            125,
+            100
+          ]
+        },
+        {
+          "kind": "pump",
+          "x": 300,
+          "y": 250,
+          "w": 170,
+          "h": 90,
+          "label": "Pump and motor",
+          "labelAt": [
+            385,
+            372
+          ]
+        },
+        {
+          "kind": "valve",
+          "x": 560,
+          "y": 115,
+          "w": 40,
+          "h": 50,
+          "label": "Throttling valve",
+          "labelAt": [
+            580,
+            196
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "fins",
+          "x": 60,
+          "y": 500,
+          "w": 110,
+          "h": 100,
+          "label": "Transformer",
+          "labelAt": [
+            115,
+            634
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "doors",
+          "x": 240,
+          "y": 480,
+          "w": 170,
+          "h": 130,
+          "label": "Motor control centre",
+          "labelAt": [
+            325,
+            462
+          ]
+        },
+        {
+          "kind": "box",
+          "detail": "keypad",
+          "x": 500,
+          "y": 480,
+          "w": 90,
+          "h": 130,
+          "fitted": true,
+          "label": "Variable speed drive",
+          "labelAt": [
+            545,
+            642
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "medium": "water",
+          "points": [
+            [
+              190,
+              294
+            ],
+            [
+              302,
+              294
+            ]
+          ]
+        },
+        {
+          "medium": "water",
+          "points": [
+            [
+              340,
+              252
+            ],
+            [
+              340,
+              150
+            ],
+            [
+              980,
+              150
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              170,
+              550
+            ],
+            [
+              240,
+              550
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              410,
+              550
+            ],
+            [
+              500,
+              550
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              545,
+              480
+            ],
+            [
+              545,
+              294
+            ],
+            [
+              472,
+              294
+            ]
+          ]
+        },
+        {
+          "kind": "signal",
+          "medium": "signal",
+          "points": [
+            [
+              780,
+              255
+            ],
+            [
+              780,
+              545
+            ],
+            [
+              590,
+              545
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "x": 975,
+          "y": 134,
+          "text": "To process",
+          "anchor": "end",
+          "strong": true
+        },
+        {
+          "x": 558,
+          "y": 440,
+          "text": "Screened motor cable"
+        },
+        {
+          "x": 792,
+          "y": 420,
+          "text": "Pressure signal"
+        }
+      ],
+      "instruments": [
+        {
+          "tag": "F",
+          "x": 450,
+          "y": 80,
+          "path": [
+            [
+              450,
+              150
+            ]
+          ],
+          "key": 1
+        },
+        {
+          "tag": "Z",
+          "x": 660,
+          "y": 80,
+          "path": [
+            [
+              580,
+              80
+            ],
+            [
+              580,
+              114
+            ]
+          ],
+          "key": 2
+        },
+        {
+          "tag": "P",
+          "x": 780,
+          "y": 230,
+          "path": [
+            [
+              780,
+              150
+            ]
+          ],
+          "key": 3
+        },
+        {
+          "tag": "I",
+          "x": 620,
+          "y": 350,
+          "path": [
+            [
+              545,
+              350
+            ]
+          ],
+          "key": 4
+        },
+        {
+          "tag": "J",
+          "x": 455,
+          "y": 488,
+          "path": [
+            [
+              455,
+              550
+            ]
+          ],
+          "key": 5
+        }
+      ],
+      "key": [
+        {
+          "tag": "F",
+          "title": "Flow, logged first",
+          "note": "Logged over a normal operating period before anything is sold, to show how much of its life the pump spends throttled."
+        },
+        {
+          "tag": "Z",
+          "title": "Valve opened fully",
+          "note": "It stays fitted for isolation but stops setting the flow, and its position becomes a diagnostic."
+        },
+        {
+          "tag": "P",
+          "title": "The signal the drive follows",
+          "note": "Discharge pressure wired back to the drive, so the speed matches what the process needs rather than the worst case."
+        },
+        {
+          "tag": "I",
+          "title": "Motor current and hours",
+          "note": "Current, torque and running hours from the drive, which is condition monitoring you have already paid for."
+        },
+        {
+          "tag": "J",
+          "title": "Power, before and after",
+          "note": "Logged in the survey and again after commissioning, so the saving is a measured difference rather than an estimate."
+        }
+      ]
+    },
+    {
       "type": "diagram",
       "variant": "groups",
       "eyebrow": "What changes",
