@@ -21,7 +21,9 @@ set -e
 
 # Where Vercel will look for the output: the directory it invoked us in.
 TARGET="$(pwd)/.vercel/output"
-ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+# This script lives in <repo>/scripts, so the repo root is its parent. Not
+# `git rev-parse`: Vercel's copy of the repository has no .git directory.
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 echo "root directory: $(pwd)"
 echo "repository root: $ROOT"
