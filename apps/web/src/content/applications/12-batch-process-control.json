@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Batch Process Control *and Recipe Management*",
       "subheading": "Recipes • Phases & Interlocks • Electronic Batch Records • Dubai • Sharjah • Abu Dhabi",
-      "image": "operator-control-panel.jpg",
       "actions": [
         {
           "label": "Book a free process review",
@@ -39,12 +38,44 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "DeltaV.jpg",
       "mediaPosition": "left",
       "body": [
         "A batch process run from a laminated sheet is a process that varies with whoever is running it. The night shift adds the acid a little faster, one operator holds the mix two minutes longer than the sheet says because it has always come out better that way, and the record of what actually happened is a clipboard filled in from memory at the end of the shift. When a batch fails, there is nothing to investigate.",
         "**Batch control** puts the recipe in the controller. Set points, sequences, ramp rates and hold times are parameters of a named recipe rather than instructions to a person, the equipment executes them the same way every time, and the record is generated as the batch runs rather than written up afterwards. What the operator does becomes selecting the right recipe and responding to what the process asks for."
-      ]
+      ],
+      "footprint": {
+        "label": "In the process area",
+        "rows": [
+          {
+            "have": "Laminated recipe sheet",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Approved recipes",
+            "addIcon": "clipboard"
+          },
+          {
+            "have": "Vessels, valves and instruments",
+            "haveIcon": "valve",
+            "how": "wired to",
+            "add": "Batch controller",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Operator at the vessel",
+            "haveIcon": "screen",
+            "how": "guided by",
+            "add": "Phase screen",
+            "addIcon": "screen"
+          },
+          {
+            "have": "Clipboard filled in later",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Electronic batch record",
+            "addIcon": "database"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

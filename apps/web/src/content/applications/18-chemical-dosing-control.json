@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Automatic *Chemical Dosing Control*",
       "subheading": "Residual & pH Analysers • Flow Pacing • Feedback Control • Dose Verification • UAE",
-      "image": "DeltaV.jpg",
       "actions": [
         {
           "label": "Book a free dosing survey",
@@ -39,12 +38,44 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "oil-refinery.jpg",
       "mediaPosition": "left",
       "body": [
         "Manual dosing is dosing for the worst case. Somebody sets the pump at a stroke rate that will keep the residual in specification even when the flow is highest and the demand greatest, and it stays there — which means that for most of the week the plant is overdosing, and on the day conditions change unexpectedly it is underdosing without anyone knowing until a sample comes back.",
         "**Automatic dosing** ties the pump to a measurement. Flow pacing scales the dose to the volume being treated, feedback from an analyser trims it to hold the actual residual or pH at set point, and a verification check confirms that chemical is genuinely being delivered. The chemical bill falls, the specification is held more tightly, and a failed dose becomes an alarm rather than a laboratory result three days later."
-      ]
+      ],
+      "footprint": {
+        "label": "On the dosing point",
+        "rows": [
+          {
+            "have": "Main treated line",
+            "haveIcon": "pipe",
+            "how": "fitted inline",
+            "add": "Flow meter",
+            "addIcon": "flow"
+          },
+          {
+            "have": "Downstream sample point",
+            "haveIcon": "valve",
+            "how": "fed from",
+            "add": "Analyser",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Dosing pump at a fixed rate",
+            "haveIcon": "pump",
+            "how": "driven by",
+            "add": "Dosing controller",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Chemical tank",
+            "haveIcon": "tank",
+            "how": "watched by",
+            "add": "Level and loss-of-flow alarms",
+            "addIcon": "alert"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

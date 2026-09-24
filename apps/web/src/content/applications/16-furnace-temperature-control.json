@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Furnace and Oven *Temperature Control and Profiling*",
       "subheading": "Thermocouples • Multi-Zone Tuning • Uniformity Surveys • Recorded Profiles • UAE",
-      "image": "7_1.jpg",
       "actions": [
         {
           "label": "Book a free furnace assessment",
@@ -39,12 +38,49 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "factory-about.jpg",
       "mediaPosition": "left",
       "body": [
         "A furnace controller displays a number with great confidence, and that number is only as good as the thermocouple behind it. Thermocouples drift, particularly the base-metal types working near the top of their range, and they drift in one direction: reading low. The controller compensates by putting in more heat, the display still says eight hundred and fifty, and the work is being processed somewhere else entirely.",
         "**Getting furnace control right** is mostly about trusting the measurement and then knowing what the space inside actually does. Sound thermocouples in the right positions, zones tuned so they cooperate rather than fight, a uniformity survey that establishes what the working volume is really doing, and a recorded profile per batch so the process can be shown as well as claimed."
-      ]
+      ],
+      "footprint": {
+        "label": "On the furnace",
+        "rows": [
+          {
+            "have": "Drifting thermocouples",
+            "haveIcon": "thermometer",
+            "how": "replaced by",
+            "add": "Correct type, on schedule",
+            "addIcon": "thermometer"
+          },
+          {
+            "have": "Single-loop controller",
+            "haveIcon": "cpu",
+            "how": "replaced by",
+            "add": "Multi-zone controller",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Setpoints changed by hand",
+            "haveIcon": "wrench",
+            "how": "replaced by",
+            "add": "Stored profiles",
+            "addIcon": "screen"
+          },
+          {
+            "have": "Paper chart",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Recorded chart per batch",
+            "addIcon": "database"
+          },
+          {
+            "have": "Furnace, burners, elements",
+            "haveIcon": "building",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

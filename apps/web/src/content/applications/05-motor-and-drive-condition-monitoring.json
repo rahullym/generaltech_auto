@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Condition Monitoring *on Motors, Pumps and Drives*",
       "subheading": "Vibration • Temperature • Drive Data • Alarm Thresholds • Dubai • Sharjah • Abu Dhabi",
-      "image": "board-repair.jpg",
       "actions": [
         {
           "label": "Book a free site assessment",
@@ -39,12 +38,49 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "engineer-tablet-plant.jpg",
       "mediaPosition": "right",
       "body": [
         "Rotating equipment rarely fails without warning. A bearing that is going to seize has usually been telling anyone who was listening for weeks — a rise in high-frequency vibration, then a temperature that runs a few degrees warmer than its neighbours, then a noise somebody mentions but nobody logs. The failure that stops the plant at two in the morning is almost always the end of a long, quiet, ignored conversation.",
         "**Condition monitoring** is the practice of listening on purpose. Sensors on the machines that matter, readings taken continuously rather than on a quarterly route, thresholds set so that a change raises an alert, and a history to compare against. The point is not to predict the exact hour of failure; it is to convert an unplanned stoppage into a repair that happens on a Tuesday with the part already on the shelf."
-      ]
+      ],
+      "footprint": {
+        "label": "On the rotating equipment",
+        "rows": [
+          {
+            "have": "Motor and pump bearings",
+            "haveIcon": "motor",
+            "how": "stud-mounted",
+            "add": "Vibration and temp sensors",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Drives already on site",
+            "haveIcon": "cpu",
+            "how": "read by",
+            "add": "Wireless gateway",
+            "addIcon": "gateway"
+          },
+          {
+            "have": "Shared maintenance inbox",
+            "haveIcon": "alert",
+            "how": "replaced by",
+            "add": "Alert to a named engineer",
+            "addIcon": "alert"
+          },
+          {
+            "have": "Maintenance system",
+            "haveIcon": "clipboard",
+            "how": "fed with",
+            "add": "Planned jobs",
+            "addIcon": "clipboard"
+          },
+          {
+            "have": "Motors, pumps and fans",
+            "haveIcon": "pump",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

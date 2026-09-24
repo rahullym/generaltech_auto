@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Fixed Gas Detection *and Area Monitoring*",
       "subheading": "Detector Placement • Certified Controllers • Alarm & Shutdown Logic • Calibration Records • UAE",
-      "image": "oil-refinery.jpg",
       "actions": [
         {
           "label": "Book a free detection survey",
@@ -39,12 +38,44 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "industrial-slider.jpg",
       "mediaPosition": "right",
       "body": [
         "Gas detection has a particular failure mode: it looks fine. The detectors are on the wall, the panel has green lights, and nothing about the installation announces that a sensor reached the end of its life eighteen months ago, or that the detector protecting a compressor was mounted at head height when the gas it detects is heavier than air and pools at the floor.",
         "**A system worth relying on** is one where placement follows the gas, the detectors are within their working life, the alarm goes somewhere a person is, and the calibration record is current. None of that is exotic. It is ordinary discipline applied to equipment that gives no feedback when it is quietly failing to do its job."
-      ]
+      ],
+      "footprint": {
+        "label": "In the protected area",
+        "rows": [
+          {
+            "have": "Detectors at head height",
+            "haveIcon": "sensor",
+            "how": "moved to",
+            "add": "Placed by gas density",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Old control panel",
+            "haveIcon": "cabinet",
+            "how": "replaced by",
+            "add": "Certified controller",
+            "addIcon": "shield"
+          },
+          {
+            "have": "Ventilation and isolation",
+            "haveIcon": "valve",
+            "how": "tied into",
+            "add": "Automatic shutdown",
+            "addIcon": "valve"
+          },
+          {
+            "have": "Paper bump-test log",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Calibration record",
+            "addIcon": "clipboard"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

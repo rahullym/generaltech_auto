@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "SCADA and Telemetry *for Unmanned Pump Stations*",
       "subheading": "RTUs • Cellular & Radio Telemetry • Alarm Escalation • Dubai • Sharjah • Abu Dhabi",
-      "image": "industrial-slider.jpg",
       "actions": [
         {
           "label": "Book a free network survey",
@@ -39,12 +38,49 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "digital-bg.jpg",
       "mediaPosition": "left",
       "body": [
         "A network of pump stations is a network of places nobody is standing. Each one has a local panel, a set of float switches and a pump that either runs or does not, and the way anyone finds out that it does not is that something downstream stopped happening. Then a van is despatched, and the first thing the fitter does on arrival is read a panel that could have told him the same thing an hour earlier from anywhere.",
         "**Telemetry** puts every station on one screen. An RTU at each site reads what the local panel already knows — pump status, levels, flows, power, intruder and flood — and sends it over the mobile network or a licensed radio link to a central SCADA. The stations stay unmanned; what changes is that they stop being unwatched."
-      ]
+      ],
+      "footprint": {
+        "label": "At each station and at the centre",
+        "rows": [
+          {
+            "have": "Station control panel",
+            "haveIcon": "cabinet",
+            "how": "wired into",
+            "add": "RTU",
+            "addIcon": "gateway"
+          },
+          {
+            "have": "No link off site",
+            "haveIcon": "signal",
+            "how": "connected by",
+            "add": "Cellular or radio",
+            "addIcon": "signal"
+          },
+          {
+            "have": "Control room",
+            "haveIcon": "building",
+            "how": "installed in",
+            "add": "Central SCADA",
+            "addIcon": "screen"
+          },
+          {
+            "have": "Standby engineer's phone",
+            "haveIcon": "phone",
+            "how": "receives",
+            "add": "Escalating call-out",
+            "addIcon": "alert"
+          },
+          {
+            "have": "Pumps and floats",
+            "haveIcon": "pump",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

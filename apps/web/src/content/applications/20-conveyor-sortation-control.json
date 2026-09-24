@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Conveyor and Sortation Control *in a Warehouse*",
       "subheading": "Zoned Accumulation • Scanning & Divert Logic • Drive Control • Zone Safety • UAE",
-      "image": "automation-machine.jpg",
       "actions": [
         {
           "label": "Book a free flow survey",
@@ -39,12 +38,49 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "operator-control-panel.jpg",
       "mediaPosition": "left",
       "body": [
         "A conveyor system that was extended one section at a time behaves like several conveyors that happen to touch. Each length runs when it is switched on, regardless of whether the next one can take what it is delivering, so product backs up at every junction and a single jam propagates until somebody hits a stop button and the whole hall goes quiet. Clearing it is manual, and restarting is a sequence somebody has learned by heart.",
         "**Zoned control** makes it one system. Each zone knows whether the one downstream can accept, and stops accumulating rather than pushing; scanning decides where each item goes and the diverts act on that decision; and a fault stops the zones it affects instead of the building. The hall keeps running around a problem while it is dealt with."
-      ]
+      ],
+      "footprint": {
+        "label": "In the warehouse",
+        "rows": [
+          {
+            "have": "Merge points",
+            "haveIcon": "conveyor",
+            "how": "fitted with",
+            "add": "Singulation and gapping",
+            "addIcon": "conveyor"
+          },
+          {
+            "have": "Induction point",
+            "haveIcon": "conveyor",
+            "how": "fitted with",
+            "add": "Scanner or vision",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Separate section switches",
+            "haveIcon": "cabinet",
+            "how": "replaced by",
+            "add": "Tracking controller",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Diverts and chutes",
+            "haveIcon": "machine",
+            "how": "fired by",
+            "add": "Item tracking",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Conveyor frames and rollers",
+            "haveIcon": "conveyor",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

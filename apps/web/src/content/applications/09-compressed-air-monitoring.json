@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Compressed Air Monitoring *and Leak Detection*",
       "subheading": "Flow & Pressure Metering • Leak Surveys • Out-of-Hours Logging • Dubai • Sharjah • Abu Dhabi",
-      "image": "factory-about.jpg",
       "actions": [
         {
           "label": "Book a free air survey",
@@ -39,12 +38,42 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "7_1.jpg",
       "mediaPosition": "right",
       "body": [
         "Compressed air costs several times more per unit of energy than the electricity that makes it, and almost nobody meters it. The compressor house is treated as a fixed overhead, the ring main is assumed to be sound because it was when it went in, and the only signal that anything is wrong is a second compressor cutting in more often than it used to.",
         "**Metering the air** turns that overhead into a set of numbers. Flow and pressure at the compressor outlet, and on the branches feeding each area, logged continuously. The most useful reading is the one taken at three on a Sunday morning, when the plant is empty and nothing should be moving — whatever the meter shows then is leaking, and it is usually a larger number than anyone expects."
-      ]
+      ],
+      "footprint": {
+        "label": "On the air system",
+        "rows": [
+          {
+            "have": "Ring main and branches",
+            "haveIcon": "pipe",
+            "how": "inserted into",
+            "add": "Thermal mass flow probes",
+            "addIcon": "gauge"
+          },
+          {
+            "have": "Existing tapping points",
+            "haveIcon": "valve",
+            "how": "fitted at",
+            "add": "Pressure and dew point",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Compressor house wall",
+            "haveIcon": "building",
+            "how": "mounted on",
+            "add": "Datalogger",
+            "addIcon": "logger"
+          },
+          {
+            "have": "Compressors and dryers",
+            "haveIcon": "cog",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "A Control Panel and HMI *for a Packaging Line*",
       "subheading": "Panel Design & Build • PLC & HMI • Line Sequencing • Dubai • Sharjah • Abu Dhabi",
-      "image": "panel-inspection.jpg",
       "actions": [
         {
           "label": "Book a free line assessment",
@@ -39,12 +38,42 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "operator-control-panel.jpg",
       "mediaPosition": "left",
       "body": [
         "Packaging lines are rarely bought as lines. A filler is ordered one year, a capper the next, a labeller and a case packer after that, and each arrives with its own controller, its own operator panel and its own idea of what a start button means. They are connected by conveyor and by an operator who has learned in what order to press things. When something jams, every machine keeps doing what it was doing, and the pile-up is cleared by hand.",
         "**One panel over the line** makes the machines into a line. A single controller sequences them, holds the interlocks between them, and presents one screen an operator actually runs the line from. The machines keep their own internal controls; what changes is that they now stop for each other."
-      ]
+      ],
+      "footprint": {
+        "label": "On the line",
+        "rows": [
+          {
+            "have": "Four separate machines",
+            "haveIcon": "machine",
+            "how": "interlocked by",
+            "add": "Line controller",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Fixed-speed conveyors",
+            "haveIcon": "conveyor",
+            "how": "driven by",
+            "add": "Accumulation drives",
+            "addIcon": "motor"
+          },
+          {
+            "have": "Four operator panels",
+            "haveIcon": "screen",
+            "how": "joined into",
+            "add": "One line HMI",
+            "addIcon": "screen"
+          },
+          {
+            "have": "Each machine's own controls",
+            "haveIcon": "cog",
+            "how": "kept for local mode"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

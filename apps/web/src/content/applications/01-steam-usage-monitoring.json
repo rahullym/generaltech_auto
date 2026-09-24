@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Steam Usage Monitoring *on a Factory Boiler*",
       "subheading": "Vortex Flow Metering • Datalogging • Cloud Dashboards • Dubai • Sharjah • Abu Dhabi",
-      "image": "factory-about.jpg",
       "actions": [
         {
           "label": "Book a free site assessment",
@@ -39,12 +38,49 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "engineer-tablet-plant.jpg",
       "mediaPosition": "right",
       "body": [
         "Most factories that run a steam boiler know exactly what they pay for gas and almost nothing about where the steam goes. The boiler is metered on its fuel side, if at all, and everything downstream — the jacketed vessels, the sterilisers, the washdown lines, the heat exchangers — draws from a common header with no measurement on it. When the energy bill climbs, there is no data to argue with, only a guess about which department is responsible.",
         "**Steam usage monitoring** closes that gap. Flowmeters go on the header and on the branches that matter, their readings are logged continuously, and the result appears as a trend rather than a monthly total. A leaking trap, a valve someone left cracked open over a weekend, a batch process that costs twice what the next one does — all of these are invisible in a bill and obvious in a trend line."
-      ]
+      ],
+      "footprint": {
+        "label": "On the boiler house",
+        "rows": [
+          {
+            "have": "Main steam header",
+            "haveIcon": "pipe",
+            "how": "fitted inline",
+            "add": "Vortex flowmeter",
+            "addIcon": "flow"
+          },
+          {
+            "have": "Branches to each line",
+            "haveIcon": "pipe",
+            "how": "fitted inline",
+            "add": "Branch flowmeters",
+            "addIcon": "flow"
+          },
+          {
+            "have": "Hot pipe under insulation",
+            "haveIcon": "thermometer",
+            "how": "moved to working height",
+            "add": "Remote transmitter",
+            "addIcon": "transmitter"
+          },
+          {
+            "have": "Boiler house wall",
+            "haveIcon": "building",
+            "how": "mounted on",
+            "add": "Datalogger",
+            "addIcon": "logger"
+          },
+          {
+            "have": "Boilers and burners",
+            "haveIcon": "cog",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

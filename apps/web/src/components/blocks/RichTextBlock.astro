@@ -1,5 +1,6 @@
 ---
 import Picture from '../Picture.astro'
+import PlantFootprint, { type FootprintRow } from '../PlantFootprint.astro'
 import ReadMore from '../ReadMore.astro'
 import RichText from '../RichText.astro'
 import { splitAccent } from '@/lib/accent'
@@ -17,6 +18,8 @@ interface Props {
   lede?: boolean
   /** Clamp the copy and reveal the rest behind a Read more toggle. */
   collapsible?: boolean
+  /** A diagram of what the work fits to the plant, drawn in place of imagery. */
+  footprint?: { label: string; rows: FootprintRow[] } | null
   content: RichTextValue
 }
 
@@ -30,6 +33,7 @@ const {
   mediaPosition = 'left',
   lede = false,
   collapsible = false,
+  footprint,
   content,
 } = Astro.props
 
@@ -38,6 +42,7 @@ const images = media
   .filter((image): image is Media => Boolean(image) && typeof image === 'object')
 
 const editorial = layout === 'editorial'
+const hasFootprint = Boolean(footprint?.rows.length)
 const imageFirst = mediaPosition === 'left'
 const { lead, accent } = splitAccent(heading)
 
@@ -70,7 +75,7 @@ const [standfirst, ...points] = paragraphs
  * column beside the copy, rather than stacking it over a measure that leaves
  * most of the row blank.
  */
-const titleColumn = editorial && images.length === 0 && Boolean(heading)
+const titleColumn = editorial && images.length === 0 && !hasFootprint && Boolean(heading)
 
 // A single trailing paragraph is a continuation, not point one of a list, so it
 // is ruled off like the others but carries no numeral.
@@ -175,7 +180,15 @@ const numberPoints = points.length > 1
             pinned the second one into the gutter with absolute positioning,
             which left a large dead corner and floated a red outline behind
             nothing. */}
-        {images.length > 0 && (
+        {/* A diagram of the work takes the image column when there is one: it
+            says what happens to the reader's plant, which a photograph of
+            someone else's cannot. It gets a column wider than a photo would,
+            because its rows have to hold two labels and a connector. */}
+        {hasFootprint ? (
+          <div class:list={['reveal-item translate-y-8 opacity-0 lg:col-span-6', imageFirst ? 'lg:order-1' : 'lg:order-2']}>
+            <PlantFootprint label={footprint!.label} rows={footprint!.rows} />
+          </div>
+        ) : images.length > 0 && (
           <div class:list={['lg:col-span-5', imageFirst ? 'lg:order-1' : 'lg:order-2']}>
             <div class="reveal-item relative translate-y-8 opacity-0">
               {/* Red plate anchored to the corner of the primary image, touching
@@ -217,7 +230,7 @@ const numberPoints = points.length > 1
         {/* Copy */}
         <div
           class:list={[
-            images.length > 0 ? 'lg:col-span-7' : 'lg:col-span-12',
+            hasFootprint ? 'lg:col-span-6' : images.length > 0 ? 'lg:col-span-7' : 'lg:col-span-12',
             imageFirst ? 'lg:order-2' : 'lg:order-1',
           ]}
         >

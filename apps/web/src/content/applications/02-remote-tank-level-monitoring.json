@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Remote Tank *Level Monitoring*",
       "subheading": "Radar & Hydrostatic Level • Telemetry • Threshold Alarms • Dubai • Sharjah • Abu Dhabi",
-      "image": "oil-refinery.jpg",
       "actions": [
         {
           "label": "Book a free site assessment",
@@ -39,12 +38,42 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "digital-bg.jpg",
       "mediaPosition": "left",
       "body": [
         "A tank that is read by hand is a tank that is read late. Someone walks out to it, climbs it, dips it, writes the number on a sheet, and by the time that sheet reaches anyone who orders stock the level has moved again. On a remote site — a pumping station, a bulk depot, a yard on the far side of an industrial area — the walk is long enough that the reading happens once a day, or once a week, or when somebody remembers.",
         "**Remote tank level monitoring** replaces the walk with a transmitter and a signal. The level is measured continuously, sent out over the mobile network or the site's own connection, and presented as a live figure with a history behind it. The reorder point stops being a judgement call made from a stale number, and a run-out stops being something you find out about from the process that just stopped."
-      ]
+      ],
+      "footprint": {
+        "label": "At the tank",
+        "rows": [
+          {
+            "have": "Roof nozzle",
+            "haveIcon": "tank",
+            "how": "mounted on",
+            "add": "Radar level transmitter",
+            "addIcon": "transmitter"
+          },
+          {
+            "have": "No power at the tank",
+            "haveIcon": "battery",
+            "how": "runs on",
+            "add": "Solar and battery RTU",
+            "addIcon": "gateway"
+          },
+          {
+            "have": "Dip tape and log sheet",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Dashboard and alarms",
+            "addIcon": "alert"
+          },
+          {
+            "have": "Tank and pipework",
+            "haveIcon": "valve",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

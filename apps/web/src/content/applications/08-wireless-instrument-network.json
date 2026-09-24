@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "A Wireless Instrument Network *Across a Tank Farm*",
       "subheading": "WirelessHART • Site Surveys • Mesh Design • Gateway Integration • Dubai • Sharjah • Abu Dhabi",
-      "image": "industrial-slider.jpg",
       "actions": [
         {
           "label": "Book a free site survey",
@@ -39,12 +38,40 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "DeltaV.jpg",
       "mediaPosition": "left",
       "body": [
         "On a spread-out site, the instrument is cheap and the cable is not. A pressure transmitter costs a few thousand dirhams; getting a signal from it back to a marshalling cabinet four hundred metres away, across a bund, under a road and through a hazardous area classification, can cost many times that before anyone has measured anything. This is why so many useful measurements on tank farms, well pads and outlying pump stations simply never get made — not because nobody wanted the data, but because the trench was never going to be approved.",
         "**A wireless instrument network** removes the trench from the equation. Battery-powered field devices form a self-organising mesh, each one relaying for its neighbours, back to a gateway that presents everything to the control system as though it were wired. The instruments are the same instruments; what changes is how their readings get home."
-      ]
+      ],
+      "footprint": {
+        "label": "Across the tank farm",
+        "rows": [
+          {
+            "have": "Points never measured",
+            "haveIcon": "tank",
+            "how": "fitted with",
+            "add": "Wireless transmitters",
+            "addIcon": "transmitter"
+          },
+          {
+            "have": "Control room DCS or PLC",
+            "haveIcon": "screen",
+            "how": "wired into",
+            "add": "Wireless gateway",
+            "addIcon": "gateway"
+          },
+          {
+            "have": "Bunds, roads and trenches",
+            "haveIcon": "pipe",
+            "how": "no new cable"
+          },
+          {
+            "have": "Existing wired instruments",
+            "haveIcon": "cable",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Migrating a Line *off an Obsolete PLC*",
       "subheading": "Logic Recovery • Hardware Replacement • Tested Cutover • Dubai • Sharjah • Abu Dhabi",
-      "image": "operator-control-panel.jpg",
       "actions": [
         {
           "label": "Book a free site assessment",
@@ -39,12 +38,47 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "panel-inspection.jpg",
       "mediaPosition": "right",
       "body": [
         "An obsolete PLC does not announce itself. The line runs perfectly well, the logic has not been touched in a decade, and the risk is entirely invisible until the day a card fails. Then it becomes very visible: the part is out of production, the broker wants a great deal of money for a used one with no warranty, the programming software will not run on anything newer than Windows XP, and the only person who understood the program left in 2014.",
         "**Migrating to a current platform** is the work of removing that risk before it collects. Done properly it is not a rebuild — the field devices, the wiring and the machine itself stay exactly as they are. What changes is the controller, the software it runs, and the fact that spares and support exist for it again."
-      ]
+      ],
+      "footprint": {
+        "label": "In the control panel",
+        "rows": [
+          {
+            "have": "Obsolete PLC and I/O",
+            "haveIcon": "cpu",
+            "how": "replaced by",
+            "add": "Current PLC and I/O",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Old operator panel",
+            "haveIcon": "screen",
+            "how": "replaced by",
+            "add": "New HMI",
+            "addIcon": "screen"
+          },
+          {
+            "have": "Software that needs XP",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Current software",
+            "addIcon": "clipboard"
+          },
+          {
+            "have": "Field devices and wiring",
+            "haveIcon": "cable",
+            "how": "reconnected as is"
+          },
+          {
+            "have": "The machine itself",
+            "haveIcon": "machine",
+            "how": "left as it is"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

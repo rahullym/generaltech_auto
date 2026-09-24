@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Fitting Variable Speed Drives *to Fixed-Speed Pumps and Fans*",
       "subheading": "Duty Surveys • Drive Sizing • Harmonics & Cabling • Proven Savings • UAE",
-      "image": "board-repair.jpg",
       "actions": [
         {
           "label": "Book a free duty survey",
@@ -39,12 +38,47 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "automation-machine.jpg",
       "mediaPosition": "right",
       "body": [
         "A great deal of industrial plant runs at one speed: full. The pump was sized for the worst case that might occur on the hottest day with the dirtiest filter, that case happens rarely or never, and the surplus is thrown away across a throttling valve or a damper. The motor draws what it draws, the valve gets hot, and the energy difference is simply lost.",
         "**A variable speed drive** lets the machine run at the speed the process actually needs. On a centrifugal pump or fan the relationship between speed and power is steep, so a modest reduction in speed is a disproportionate reduction in energy — which is why this is one of the few efficiency measures where the physics does most of the arguing for you."
-      ]
+      ],
+      "footprint": {
+        "label": "At the pump or fan",
+        "rows": [
+          {
+            "have": "Direct-on-line starter",
+            "haveIcon": "cabinet",
+            "how": "replaced by",
+            "add": "Variable speed drive",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Motor cable",
+            "haveIcon": "cable",
+            "how": "replaced by",
+            "add": "Screened motor cable",
+            "addIcon": "cable"
+          },
+          {
+            "have": "The process",
+            "haveIcon": "pipe",
+            "how": "measured by",
+            "add": "Pressure or flow signal",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Throttling valve or damper",
+            "haveIcon": "valve",
+            "how": "opened fully"
+          },
+          {
+            "have": "Pump, fan and motor",
+            "haveIcon": "pump",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

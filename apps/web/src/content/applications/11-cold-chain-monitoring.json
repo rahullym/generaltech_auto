@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Temperature Monitoring *for Cold Stores and Cold Chain*",
       "subheading": "Calibrated Probes • Continuous Logging • Escalating Alarms • Audit Records • UAE",
-      "image": "panel-inspection.jpg",
       "actions": [
         {
           "label": "Book a free store assessment",
@@ -39,12 +38,42 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "engineer-tablet-plant.jpg",
       "mediaPosition": "right",
       "body": [
         "Cold storage fails quietly and at the worst possible time. A condenser fan seizes on a Thursday evening, the store climbs slowly over the long weekend, and the first person to know is whoever opens the door on Sunday. The chart recorder on the wall has faithfully recorded the whole thing, which is useful for the insurance claim and useless for preventing it.",
         "**Continuous monitoring with alarms** changes what the record is for. Calibrated probes in the positions that actually matter, readings logged every few minutes, and a threshold that raises an alarm to a named person while there is still time to act. The audit trail comes free — it is the same data — but the point of the system is the phone ringing on Thursday evening."
-      ]
+      ],
+      "footprint": {
+        "label": "In the cold store",
+        "rows": [
+          {
+            "have": "Warmest spots found by mapping",
+            "haveIcon": "thermometer",
+            "how": "fitted at",
+            "add": "Calibrated wireless probes",
+            "addIcon": "thermometer"
+          },
+          {
+            "have": "Chart recorder on the wall",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Logging platform",
+            "addIcon": "cloud"
+          },
+          {
+            "have": "Whoever opens the door",
+            "haveIcon": "phone",
+            "how": "replaced by",
+            "add": "Escalating alarms",
+            "addIcon": "alert"
+          },
+          {
+            "have": "Walls, doors and refrigeration",
+            "haveIcon": "building",
+            "how": "no new holes"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

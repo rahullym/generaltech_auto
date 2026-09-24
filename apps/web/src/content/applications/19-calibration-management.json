@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Instrument Calibration Management *Across a Plant*",
       "subheading": "Instrument Register • Risk-Based Intervals • Traceable Certificates • Audit Records • UAE",
-      "image": "engineer-tablet-plant.jpg",
       "actions": [
         {
           "label": "Book a free instrument audit",
@@ -39,12 +38,49 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "board-repair.jpg",
       "mediaPosition": "right",
       "body": [
         "Calibration tends to be managed by the person who has always managed it. They know which transmitters matter, roughly when each was last done, and where the certificates are — and the whole system works well right up until they are on leave, or they retire, or an auditor asks for evidence rather than assurance. Then it becomes apparent that the register is a spreadsheet with three versions and the certificates are in a file that stops in 2022.",
         "**Calibration management** turns that into something the plant owns rather than a person. A verified register of what is actually installed, intervals set by what an instrument does rather than by habit, calibration performed traceably in the field, and results recorded where anyone can find them — including the ones that failed, which are the entries that matter most."
-      ]
+      ],
+      "footprint": {
+        "label": "Across the plant",
+        "rows": [
+          {
+            "have": "Instruments in the field",
+            "haveIcon": "gauge",
+            "how": "walked down into",
+            "add": "Verified register",
+            "addIcon": "database"
+          },
+          {
+            "have": "Spreadsheet in three versions",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "One register",
+            "addIcon": "database"
+          },
+          {
+            "have": "Blanket annual interval",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Risk-based intervals",
+            "addIcon": "clipboard"
+          },
+          {
+            "have": "Readings in a notebook",
+            "haveIcon": "wrench",
+            "how": "replaced by",
+            "add": "Documenting calibrator",
+            "addIcon": "screen"
+          },
+          {
+            "have": "The instruments themselves",
+            "haveIcon": "transmitter",
+            "how": "left in place"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

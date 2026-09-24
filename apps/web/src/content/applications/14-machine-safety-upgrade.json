@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Bringing an Older Machine *up to a Current Safety Standard*",
       "subheading": "Risk Assessment • Safety Relays & Controllers • Interlocks & Light Curtains • Validation • UAE",
-      "image": "automation-machine.jpg",
       "actions": [
         {
           "label": "Book a free machine assessment",
@@ -39,12 +38,49 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "panel-inspection.jpg",
       "mediaPosition": "left",
       "body": [
         "Safety on an older machine tends to fail in a particular direction. A guard interlock nuisance-trips, so somebody defeats it. A light curtain is mounted where it can be stepped around. An emergency stop drops out a single contactor whose welded contact nobody would ever detect. The machine looks protected, everyone believes it is protected, and the protection would not survive the first fault it was there to catch.",
         "**A safety upgrade** starts by deciding, in writing, what each hazard actually requires — and then builds protection that meets it and that people will not work around. The second half of that sentence matters as much as the first: a guard that stops the operator doing their job is a guard that will be defeated, and a defeated guard is worse than an honest absence of one."
-      ]
+      ],
+      "footprint": {
+        "label": "On the machine",
+        "rows": [
+          {
+            "have": "Guard doors",
+            "haveIcon": "shield",
+            "how": "fitted with",
+            "add": "Coded interlock switches",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Open access points",
+            "haveIcon": "alert",
+            "how": "covered by",
+            "add": "Light curtains or scanners",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Single e-stop contactor",
+            "haveIcon": "cabinet",
+            "how": "replaced by",
+            "add": "Safety relay, dual contactors",
+            "addIcon": "shield"
+          },
+          {
+            "have": "Machine HMI",
+            "haveIcon": "screen",
+            "how": "shows",
+            "add": "Which device tripped",
+            "addIcon": "screen"
+          },
+          {
+            "have": "The machine itself",
+            "haveIcon": "machine",
+            "how": "left as it is"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

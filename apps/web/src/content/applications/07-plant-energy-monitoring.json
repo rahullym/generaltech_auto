@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "Plant-Wide Energy *and Power Monitoring*",
       "subheading": "Sub-Metering • Power Quality • Consumption per Product • Dubai • Sharjah • Abu Dhabi",
-      "image": "digital-bg.jpg",
       "actions": [
         {
           "label": "Book a free site assessment",
@@ -39,12 +38,42 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "7_1.jpg",
       "mediaPosition": "right",
       "body": [
         "Most plants meter electricity once, at the incomer, because that is where the utility meters it. Everything downstream is an estimate: the production hall is assumed to be most of it, the chillers are assumed to be a lot, and the compressed air system is assumed to be efficient because it was when it was installed. When the bill goes up, the conversation is about tariffs, because nobody has a number to point at.",
         "**Sub-metering** replaces the estimate with measurement. Meters go on the distribution boards and on the large individual loads, readings are logged continuously, and consumption is broken down by area, by asset and by time. The first month of data almost always contains at least one genuine surprise — a load running through the night that nobody thought was on, or a machine drawing far more than its rating suggests it should."
-      ]
+      ],
+      "footprint": {
+        "label": "In the switchroom",
+        "rows": [
+          {
+            "have": "Existing cables",
+            "haveIcon": "cable",
+            "how": "clipped around",
+            "add": "Split-core CTs",
+            "addIcon": "cable"
+          },
+          {
+            "have": "Distribution boards",
+            "haveIcon": "cabinet",
+            "how": "fitted in",
+            "add": "Power meters",
+            "addIcon": "meter"
+          },
+          {
+            "have": "Site network",
+            "haveIcon": "network",
+            "how": "connected to",
+            "add": "Gateway and dashboards",
+            "addIcon": "dashboard"
+          },
+          {
+            "have": "Utility meter at incomer",
+            "haveIcon": "meter",
+            "how": "left as it is"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",

@@ -43,6 +43,20 @@ export type AuthoredBlock =
       image?: string
       images?: string[]
       mediaPosition?: 'left' | 'right'
+      /**
+       * Drawn in the image column instead of a photograph: what is already on
+       * the plant, and what the work fits to it. See PlantFootprint.
+       */
+      footprint?: {
+        label: string
+        rows: {
+          have: string
+          haveIcon?: string
+          add?: string
+          addIcon?: string
+          how: string
+        }[]
+      }
       body: string[]
     }
   | {
@@ -307,6 +321,12 @@ const expand = (block: AuthoredBlock, slug: string, index: number): Block => {
         media: images
           .map((name, i) => ({ id: key(slug, index, `-m${i}`), image: media(name) }))
           .filter((entry): entry is { id: string; image: Media } => Boolean(entry.image)),
+        footprint: block.footprint
+          ? {
+              label: block.footprint.label,
+              rows: block.footprint.rows.map((row, i) => ({ id: key(slug, index, `-f${i}`), ...row })),
+            }
+          : null,
         content: richText(block.body),
       }
     }

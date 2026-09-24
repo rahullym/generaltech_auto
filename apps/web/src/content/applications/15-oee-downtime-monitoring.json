@@ -21,7 +21,6 @@
       "eyebrow": "Application example",
       "heading": "OEE and Downtime Monitoring *on a Production Line*",
       "subheading": "Automatic Counting • Stop Reasons • Loss Analysis • Shift Reporting • UAE",
-      "image": "digital-bg.jpg",
       "actions": [
         {
           "label": "Book a free line survey",
@@ -39,12 +38,42 @@
       "type": "prose",
       "layout": "editorial",
       "lede": true,
-      "image": "engineer-tablet-plant.jpg",
       "mediaPosition": "right",
       "body": [
         "Every plant has a line everybody knows is underperforming, and every plant has three confident and incompatible explanations for why. Maintenance says it is the operators, operations says it is breakdowns, and planning says it is changeovers. The shift report records total output and a hand-written note about the afternoon, which is enough to sustain all three theories indefinitely.",
         "**Downtime monitoring** replaces the theories with a record. The line counts itself, every stop longer than a few seconds is captured automatically, and the operator attributes a reason to it from a short list. Within a couple of weeks the losses are ranked by the hours they actually cost, and the argument is over — usually with an answer nobody had put first."
-      ]
+      ],
+      "footprint": {
+        "label": "On the line",
+        "rows": [
+          {
+            "have": "Machine PLCs",
+            "haveIcon": "cpu",
+            "how": "read by",
+            "add": "Edge device",
+            "addIcon": "cpu"
+          },
+          {
+            "have": "Machines with no PLC signal",
+            "haveIcon": "machine",
+            "how": "fitted with",
+            "add": "Photocell and run contact",
+            "addIcon": "sensor"
+          },
+          {
+            "have": "Handwritten shift note",
+            "haveIcon": "clipboard",
+            "how": "replaced by",
+            "add": "Stop-reason terminal",
+            "addIcon": "screen"
+          },
+          {
+            "have": "Machines and settings",
+            "haveIcon": "cog",
+            "how": "left as they are"
+          }
+        ]
+      }
     },
     {
       "type": "diagram",
