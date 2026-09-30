@@ -51,9 +51,26 @@ export default defineConfig({
         access: 'public',
         default: 'http://localhost:4331',
       }),
-      // Where a contact-form submission is delivered. Anything that accepts a
-      // JSON POST works; with this unset the form falls back to composing the
+      // How a contact-form submission is delivered. With RESEND_API_KEY set it
+      // is emailed through Resend; otherwise it is POSTed to
+      // CONTACT_WEBHOOK_URL; with neither, the form falls back to composing the
       // enquiry in the sender's own mail client. See pages/api/contact.ts.
+      RESEND_API_KEY: envField.string({
+        context: 'server',
+        access: 'secret',
+        optional: true,
+      }),
+      // Sender on a domain verified in Resend, and the inbox enquiries go to.
+      CONTACT_FROM_EMAIL: envField.string({
+        context: 'server',
+        access: 'secret',
+        default: 'General Tech Automation <website@generaltechautomation.ae>',
+      }),
+      CONTACT_TO_EMAIL: envField.string({
+        context: 'server',
+        access: 'secret',
+        default: 'mathews@generaltechuae.com',
+      }),
       CONTACT_WEBHOOK_URL: envField.string({
         context: 'server',
         access: 'secret',
