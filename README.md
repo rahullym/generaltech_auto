@@ -105,17 +105,16 @@ their underscores because the live navigation points at them.
 
 ## Contact form
 
-The contact page posts to `/api/contact` (`apps/web/src/pages/api/contact.ts`).
-There is no mail server in this project, so delivery is one pluggable step:
+The contact page posts straight from the browser to
+[Web3Forms](https://web3forms.com), which emails each enquiry to the inbox its
+access key was created for. The key is public by design and lives in
+`PUBLIC_WEB3FORMS_ACCESS_KEY` (default in `apps/web/astro.config.mjs`); to send
+enquiries somewhere else, change the address in the Web3Forms dashboard or use
+a key made for the new inbox.
 
-- Set `CONTACT_WEBHOOK_URL` to anything that accepts a JSON POST — a form
-  service, an automation hook, an inbox relay — and submissions are forwarded to
-  it as `{ name, company, email, phone, message, source, receivedAt }`.
-- With it unset, the route answers 501 and the page composes the enquiry into
-  the sender's own mail client instead, so the form is never a dead end.
-
-Submissions are validated server-side and carry a honeypot field; a filled
-honeypot is answered 200 and discarded.
+The form carries Web3Forms' `botcheck` honeypot. If Web3Forms cannot be reached,
+the page composes the enquiry into the sender's own mail client instead, so the
+form is never a dead end.
 
 ## Common tasks
 

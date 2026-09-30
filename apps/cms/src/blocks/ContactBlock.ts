@@ -6,8 +6,8 @@ import type { Block } from 'payload'
  * single run, and splitting them into separate blocks would put a section
  * break between the phone number and the form that asks for it.
  *
- * The form posts to the Astro route at `/api/contact`; see that file for how a
- * submission is delivered.
+ * The form posts to Web3Forms from the browser; see the web app's
+ * `components/blocks/Contact.astro` for how a submission is delivered.
  */
 export const ContactBlock: Block = {
   slug: 'contact',

@@ -51,30 +51,14 @@ export default defineConfig({
         access: 'public',
         default: 'http://localhost:4331',
       }),
-      // How a contact-form submission is delivered. With RESEND_API_KEY set it
-      // is emailed through Resend; otherwise it is POSTed to
-      // CONTACT_WEBHOOK_URL; with neither, the form falls back to composing the
-      // enquiry in the sender's own mail client. See pages/api/contact.ts.
-      RESEND_API_KEY: envField.string({
-        context: 'server',
-        access: 'secret',
-        optional: true,
-      }),
-      // Sender on a domain verified in Resend, and the inbox enquiries go to.
-      CONTACT_FROM_EMAIL: envField.string({
-        context: 'server',
-        access: 'secret',
-        default: 'General Tech Automation <website@generaltechautomation.ae>',
-      }),
-      CONTACT_TO_EMAIL: envField.string({
-        context: 'server',
-        access: 'secret',
-        default: 'mathews@generaltechuae.com',
-      }),
-      CONTACT_WEBHOOK_URL: envField.string({
-        context: 'server',
-        access: 'secret',
-        optional: true,
+      // Web3Forms access key for the contact form. The browser posts enquiries
+      // straight to Web3Forms, which emails them to the address the key was
+      // created for. The key is public by design: it ships in the page and
+      // can only submit to that inbox. See components/blocks/Contact.astro.
+      PUBLIC_WEB3FORMS_ACCESS_KEY: envField.string({
+        context: 'client',
+        access: 'public',
+        default: 'f3f5e52e-292b-49e9-a334-20c4af081586',
       }),
     },
   },

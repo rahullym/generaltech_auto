@@ -1,6 +1,7 @@
 ---
 import SectionHeader from '../SectionHeader.astro'
 import { splitAccent } from '@/lib/accent'
+import { PUBLIC_WEB3FORMS_ACCESS_KEY } from 'astro:env/client'
 
 interface Props {
   eyebrow?: string
@@ -190,18 +191,24 @@ const labelClass =
             <form
               class="mt-10"
               method="post"
-              action="/api/contact"
+              action="https://api.web3forms.com/submit"
               data-contact-form
               data-mailto={mailTo}
             >
-              {/* Spam trap: a real person never sees it, so anything that fills
-                  it in is discarded server-side. */}
+              {/* Web3Forms emails the enquiry to the inbox this key was made
+                  for; the name and email fields become the reply-to. */}
+              <input type="hidden" name="access_key" value={PUBLIC_WEB3FORMS_ACCESS_KEY} />
+              <input type="hidden" name="subject" value="Website enquiry — General Tech Automation" />
+              <input type="hidden" name="from_name" value="generaltechautomation.ae" />
+
+              {/* Spam trap: a real person never sees it, so Web3Forms discards
+                  anything that ticks it. */}
               <div class="absolute left-[-9999px] top-0" aria-hidden="true">
-                <label for="contact-website">Leave this field empty</label>
+                <label for="contact-botcheck">Leave this unticked</label>
                 <input
-                  id="contact-website"
-                  type="text"
-                  name="website"
+                  id="contact-botcheck"
+                  type="checkbox"
+                  name="botcheck"
                   tabindex="-1"
                   autocomplete="off"
                 />
@@ -382,10 +389,9 @@ const labelClass =
 
 <script>
   /**
-   * Submits the enquiry without leaving the page. `/api/contact` delivers the
-   * message when a channel is configured for it; when none is, it answers with
-   * a `mailto` fallback and the browser's own mail client finishes the job, so
-   * the form is never a dead end.
+   * Submits the enquiry to Web3Forms without leaving the page. If it cannot be
+   * delivered, the browser's own mail client finishes the job, so the form is
+   * never a dead end.
    */
   function initContactForm() {
     document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach((form) => {
@@ -440,23 +446,18 @@ const labelClass =
             headers: { Accept: 'application/json' },
             body: data,
           })
-          const body = (await res.json().catch(() => ({}))) as {
-            message?: string
-            fallback?: 'mailto'
-          }
+          const body = (await res.json().catch(() => ({}))) as { success?: boolean }
 
-          if (res.ok) {
+          if (res.ok && body.success) {
             form.reset()
-            say(body.message ?? 'Thank you — your enquiry has been sent.')
-          } else if (body.fallback === 'mailto' && openMailClient(data)) {
+            say('Thank you — your enquiry has been sent. We reply within one business day.')
+          } else if (openMailClient(data)) {
             say(
-              body.message ??
-                'Opening your email app with the message ready to send. If nothing happens, email or call us directly.',
+              'We could not send that automatically. Opening your email app instead — or call us and we will pick it up.',
             )
           } else {
             say(
-              body.message ??
-                'Something went wrong sending that. Please call or email us directly and we will pick it up.',
+              'Something went wrong sending that. Please call or email us directly and we will pick it up.',
               'error',
             )
           }
