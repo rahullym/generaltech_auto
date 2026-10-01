@@ -431,8 +431,7 @@ const run = async () => {
     payload.logger.info('Created the home page with the approved automation copy')
   }
 
-  // The header strip, the WhatsApp button and the footer all read the phone
-  // number from Site Settings. Merge so the rest of the global is untouched.
+  // The header strip and the footer read the phone number from Site Settings. Merge so the rest of the global is untouched.
   const settings = await payload.findGlobal({ slug: 'site-settings' })
 
   await payload.updateGlobal({
