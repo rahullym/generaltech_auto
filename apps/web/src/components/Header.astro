@@ -81,14 +81,14 @@ const telHref = phone ? `tel:${phone.replace(/\s+/g, '')}` : null
       class="max-w-7xl 2xl:max-w-[86rem] mx-auto transition-all duration-500 px-4 md:px-6 2xl:px-12 flex items-center justify-between gap-2 md:gap-4 h-[84px]"
       id="header-inner"
     >
-      <a href="/" class="min-w-0 max-w-[44vw] sm:max-w-none" aria-label={settings.siteName}>
+      <a href="/" class="min-w-0" aria-label={settings.siteName}>
         {
           settings.logo && typeof settings.logo === 'object' ? (
             <Picture
               media={settings.logo}
               raw
               loading="eager"
-              class="transition-all duration-500 w-auto h-[60px]"
+              class="transition-all duration-500 w-auto max-w-full h-[60px] object-contain object-left"
               id="header-logo"
             />
           ) : (
@@ -306,7 +306,7 @@ const telHref = phone ? `tel:${phone.replace(/\s+/g, '')}` : null
             <a
               href={resolveHref(cta.link)}
               {...cta.link?.newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
-              class="flex items-center gap-2 bg-general-red hover:bg-[#D90000] text-white rounded-xl font-bold tracking-tight shadow-[0_4px_14px_rgba(255,0,0,0.25)] hover:shadow-[0_6px_24px_rgba(255,0,0,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 whitespace-nowrap px-3.5 py-2 text-[12.5px] sm:px-6 sm:py-2.5 sm:text-[14.5px]"
+              class="flex items-center gap-2 bg-general-red hover:bg-[#D90000] text-white rounded-xl font-bold tracking-tight shadow-[0_4px_14px_rgba(255,0,0,0.25)] hover:shadow-[0_6px_24px_rgba(255,0,0,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 whitespace-nowrap px-3 py-2 text-[12px] min-[400px]:px-3.5 min-[400px]:text-[12.5px] sm:px-6 sm:py-2.5 sm:text-[14.5px]"
             >
               {cta.link?.label}
             </a>
@@ -315,7 +315,7 @@ const telHref = phone ? `tel:${phone.replace(/\s+/g, '')}` : null
 
         <button
           type="button"
-          class="p-2 xl:hidden text-general-black hover:text-black transition-colors"
+          class="p-2 max-sm:-mr-1.5 xl:hidden text-general-black hover:text-black transition-colors"
           id="mobile-menu-open"
           aria-label="Open menu"
           aria-expanded="false"
@@ -454,11 +454,14 @@ const telHref = phone ? `tel:${phone.replace(/\s+/g, '')}` : null
 </div>
 
 <style>
-  /* Keep the logo compact on phones so the CTA button never overflows. The id
-     selector outranks the scroll script's height classes. */
+  /* Keep the logo compact on phones so the CTA button never overflows, growing
+     with the screen until it reaches its full height. The id selector outranks
+     the scroll script's height classes. Global, because the image is rendered
+     by Picture and a scoped rule never reaches it — which left the logo 60px
+     tall and squeezed sideways to fit. */
   @media (max-width: 639px) {
-    img#header-logo {
-      height: 40px;
+    :global(img#header-logo) {
+      height: clamp(40px, 11vw, 60px);
     }
   }
 </style>

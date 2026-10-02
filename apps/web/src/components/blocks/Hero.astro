@@ -288,7 +288,7 @@ const marquee = logos.length ? [...logos, ...logos, ...logos] : []
           {actions.length > 0 && (
             <div class="hero-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-700 mt-16 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
               {actions.map((action) => (
-                <Button link={action.link} tone="dark" />
+                <Button link={action.link} tone="dark" class="w-full sm:w-auto" />
               ))}
             </div>
           )}

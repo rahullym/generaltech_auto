@@ -41,7 +41,7 @@ const pad = (value: number) => String(value).padStart(2, '0')
         heading && (
           <h2
             data-reveal="mask"
-            class="text-[2.75rem] font-extrabold leading-[1.05] tracking-[-0.035em] text-general-black lg:text-[3.5rem]"
+            class="text-[clamp(2rem,10vw,2.75rem)] font-extrabold leading-[1.05] tracking-[-0.035em] text-general-black lg:text-[3.5rem]"
           >
             {lead}
             {accent && <span class="font-medium italic text-general-red"> {accent}</span>}

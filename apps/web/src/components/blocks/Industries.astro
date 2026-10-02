@@ -157,7 +157,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
             sectors.map((sector, index) => (
               <article
                 class:list={[
-                  'industry-card group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-10 opacity-0 reveal-item md:p-12',
+                  'industry-card group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-8 opacity-0 reveal-item sm:p-10 md:p-12',
                   track
                     ? 'w-[80vw] max-w-[380px] shrink-0 snap-start lg:h-[380px] lg:w-[400px]'
                     : 'h-full',
@@ -195,7 +195,7 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
 
                 <CaptionHeading
                   text={sector.name}
-                  class="mt-10 text-[26px] font-bold leading-[1.15] tracking-tight text-general-black"
+                  class="mt-10 text-[23px] font-bold leading-[1.15] tracking-tight text-general-black min-[380px]:text-[26px]"
                 />
 
                 {sector.description && (

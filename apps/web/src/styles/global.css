@@ -27,6 +27,15 @@
     overflow-anchor: none;
   }
 
+  /* A heading is CMS copy at display size, so one long word ("Instrumentation")
+     can be wider than a phone. Break it rather than let it run off the edge. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    overflow-wrap: break-word;
+  }
+
   /* Improve default contrast for light text */
   .text-gray-400 {
     @apply text-gray-500;
@@ -100,6 +109,25 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
+    animation: none;
+  }
+}
+
+/* The WhatsApp button's pulse. Tailwind's ping doubles in size, which carried
+   the ring past the 20px the button sits in from the screen edge and made
+   every page a few pixels wider than a phone. This one stops inside it. */
+@keyframes ping-contained {
+  75%,
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+.animate-ping-contained {
+  animation: ping-contained 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-ping-contained {
     animation: none;
   }
 }
