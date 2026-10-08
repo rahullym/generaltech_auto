@@ -1,0 +1,13 @@
+---
+/**
+ * The admin panel lives with the CMS, on its own host. Anyone who types
+ * `/admin` on the website is looking for it, so send them there.
+ */
+import { PAYLOAD_URL } from 'astro:env/server'
+
+export const prerender = false
+
+const { path } = Astro.params
+
+return Astro.redirect(`${PAYLOAD_URL}/admin${path ? `/${path}` : ''}`, 302)
+---
