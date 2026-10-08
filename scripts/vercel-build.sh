@@ -41,6 +41,9 @@ if [ -z "$SOURCE" ] || [ ! -d "$SOURCE" ]; then
   exit 1
 fi
 
+# /admin on the website is the CMS's admin panel; see the script.
+node "$ROOT/scripts/proxy-cms.mjs" "$SOURCE/config.json"
+
 if [ "$SOURCE" != "$TARGET" ]; then
   rm -rf "$TARGET"
   mkdir -p "$(dirname "$TARGET")"

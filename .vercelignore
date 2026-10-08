@@ -12,3 +12,4 @@ build
 !.env.example
 .vercel
 apps/cms/media
+apps/web/src/pages/style-lab.astro
