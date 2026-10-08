@@ -118,7 +118,7 @@ Services menu from the header's dropdown items.
 | | |
 |---|---|
 | Website | Vercel project `generaltech-auto-cms` (the name predates the split) — deploys from `main` |
-| CMS | Vercel project `generaltech-auto-admin` — https://generaltech-auto-admin.vercel.app/admin |
+| CMS | Vercel project `generaltech-auto-admin` — the admin panel is at https://www.generaltechautomation.ae/admin |
 | Database | Neon Postgres `generaltech-auto-cms-db`, Frankfurt, connected to the CMS project |
 | Uploads | Vercel Blob store `generaltech-auto-cms-media`, connected to the CMS project |
 
@@ -131,6 +131,13 @@ pnpm deploy:cms       # payload migrate && next build, on Vercel
 
 It only needs redeploying when `apps/cms` changes; content edits need nothing.
 
+The website proxies `/admin`, `/api` and `/_next` to the CMS deployment
+(`scripts/proxy-cms.mjs`, run by the website's build), which is why the panel
+sits on the site's own domain. The website itself reaches the CMS at
+`https://generaltech-auto-admin-origin.vercel.app` — that is its `PAYLOAD_URL` —
+and the CMS's other hostname, `generaltech-auto-admin.vercel.app`, redirects
+`/admin` to the site.
+
 The website reads the CMS named by `PAYLOAD_URL` on every render and the CDN
 holds each page for a minute, so a published edit is live about a minute later.
 If the CMS cannot be reached, or takes longer than eight seconds, the site
@@ -138,7 +145,7 @@ answers from `apps/web/src/data/snapshot.json` instead. Refresh that fallback
 from the hosted CMS now and then:
 
 ```bash
-PAYLOAD_URL=https://generaltech-auto-admin.vercel.app pnpm --filter web snapshot
+PAYLOAD_URL=https://generaltech-auto-admin-origin.vercel.app pnpm --filter web snapshot
 ```
 
 ## Contact form
