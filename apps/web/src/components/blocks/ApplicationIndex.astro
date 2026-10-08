@@ -2,16 +2,15 @@
 /**
  * The application example grid.
  *
- * Unlike the service index, the entries are not restated in the CMS: an example
- * is a page in `src/content/applications/`, and this block draws whatever is
- * there. An editor places the block and writes its heading; adding an example
- * is adding a content file, and it appears here on the next build.
+ * Unlike the service index, the entries are not restated in the block: an
+ * example is a Page whose type is "Application example", and this draws every
+ * published one. An editor places the block and writes its heading; publishing
+ * an example is what adds its card.
  */
 import CaptionHeading from '../CaptionHeading.astro'
 import Picture from '../Picture.astro'
 import SectionHeader from '../SectionHeader.astro'
-import { applicationSummaries } from '@/lib/application-pages'
-import { authoredMedia } from '@/lib/authored-content'
+import { listApplications } from '@/lib/application-pages'
 
 interface Props {
   eyebrow?: string
@@ -22,7 +21,7 @@ interface Props {
 
 const { eyebrow, heading, intro, footnote } = Astro.props
 
-const items = applicationSummaries
+const items = await listApplications()
 const pad = (value: number) => String(value).padStart(2, '0')
 ---
 
@@ -56,7 +55,7 @@ const pad = (value: number) => String(value).padStart(2, '0')
               <span class="relative block aspect-[16/10] overflow-hidden bg-gray-100">
                 {item.image && (
                   <Picture
-                    media={authoredMedia(item.image)}
+                    media={item.image}
                     sizes="(min-width: 1024px) 25rem, (min-width: 640px) 45vw, 90vw"
                     class="h-full w-full object-cover transition-transform duration-[900ms] group-hover/card:scale-[1.06]"
                   />

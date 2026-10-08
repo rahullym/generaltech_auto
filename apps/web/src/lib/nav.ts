@@ -17,10 +17,24 @@
  * back to untitled columns of roughly equal length, so a mega menu built from
  * links that are not services still reads as a panel.
  */
-import { SERVICE_MENU_GROUPS, serviceMenuMeta } from './service-pages'
 import { isActive, resolveHref } from './urls'
 
 import type { Header, NavItem, SiteSettings } from './types'
+
+/**
+ * The Services menu's columns, in the order they read across the panel.
+ *
+ * Sixteen services in one alphabetical run gives a visitor no way to guess
+ * where the one they want sits, so each row names the group it belongs under
+ * and the menu becomes three short, headed columns. The order is editorial —
+ * build, then keep running, then get data out. A group a row names but this
+ * list omits still renders; it simply sorts last.
+ */
+export const SERVICE_MENU_GROUPS = [
+  'Engineering & Build',
+  'Maintenance & Repair',
+  'Digital & Data',
+] as const
 
 /** Line icons on the same 24px grid the service and industry blocks use. */
 export const NAV_ICONS: Record<string, string> = {
@@ -146,20 +160,16 @@ export const buildMegaMenu = (
   const parentHref = resolveHref(item.link)
   const children = item.children ?? []
 
-  // Rows keep the registry's short label — the CMS label is the full page
-  // title, which is a paragraph in a grid cell — but a description or a group
-  // written in the CMS always outranks the registry's.
   const entries = children.map((child) => {
     const href = resolveHref(child.link)
-    const meta = serviceMenuMeta(href)
 
     return {
-      group: child.groupName || meta?.group || null,
+      group: child.groupName || null,
       tile: {
         href,
-        label: meta?.label ?? child.link?.label ?? '',
-        blurb: child.description ?? meta?.blurb ?? undefined,
-        icon: child.iconName ?? meta?.icon ?? 'cog',
+        label: child.link?.label ?? '',
+        blurb: child.description ?? undefined,
+        icon: child.iconName ?? 'cog',
         active: isActive(href, pathname),
       },
     }

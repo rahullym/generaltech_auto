@@ -1,9 +1,9 @@
 /**
  * Reads content out of the committed CMS snapshot.
  *
- * `lib/payload.ts` uses this whenever the CMS cannot be reached — which is the
- * normal state of a deployed site until the CMS and its database are hosted.
- * The snapshot is written by `scripts/snapshot.mjs`; see the note there.
+ * `lib/payload.ts` uses this whenever the CMS cannot be reached, so an outage
+ * there costs freshness rather than the site. The snapshot is written by
+ * `scripts/snapshot.mjs`; see the note there.
  *
  * Only the query surface the site actually uses is implemented: field equality
  * (including through arrays and relationships), sorting on one field, and

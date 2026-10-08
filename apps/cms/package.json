@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev --port 3010",
     "build": "next build",
+    "build:vercel": "payload migrate && next build",
     "start": "next start --port 3010",
     "typecheck": "tsc --noEmit",
     "generate:types": "payload generate:types",
@@ -16,6 +17,7 @@
     "seed": "NODE_ENV=development payload run src/seed.ts",
     "seed:home": "NODE_ENV=development payload run src/scripts/seed-homepage.ts",
     "seed:pages": "NODE_ENV=development payload run src/scripts/seed-pages.ts",
+    "seed:inner": "NODE_ENV=development payload run src/scripts/seed-inner-pages.ts",
     "seed:chrome": "NODE_ENV=development payload run src/scripts/seed-chrome.ts",
     "deploy": "payload migrate && next start --port 3010"
   },
@@ -24,6 +26,7 @@
     "@payloadcms/next": "3.88.0",
     "@payloadcms/plugin-seo": "3.88.0",
     "@payloadcms/richtext-lexical": "3.88.0",
+    "@payloadcms/storage-vercel-blob": "3.88.0",
     "@payloadcms/ui": "3.88.0",
     "graphql": "16.14.2",
     "next": "16.3.1",

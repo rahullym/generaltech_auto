@@ -57,15 +57,14 @@ const whatsapp = '971501082323'
 
 // SSR: let the CDN serve published pages while keeping drafts private.
 //
-// A published page is identical between deploys — its content comes from the
-// snapshot committed with the build — and Vercel keys its cache per deployment,
-// so a deploy publishes immediately rather than waiting out the TTL. An hour on
-// the CDN with a day of stale-while-revalidate therefore costs nothing in
-// freshness and takes the render off the path for repeat visitors and for a
-// crawler walking all twenty-nine URLs in the sitemap.
+// Content is read from the CMS on each render, so the CDN's copy is what keeps
+// a visitor from waiting on it. A minute on the CDN with a day of
+// stale-while-revalidate means an edit is live about a minute after it is
+// published, and every request in between is answered without a render —
+// including a crawler walking every URL in the sitemap.
 Astro.response.headers.set(
   'Cache-Control',
-  isDraft ? 'private, no-store' : 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
+  isDraft ? 'private, no-store' : 'public, max-age=0, s-maxage=60, stale-while-revalidate=86400',
 )
 
 /** One place for the font request, used by both the async link and the noscript fallback. */

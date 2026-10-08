@@ -35,5 +35,7 @@ export const GET: APIRoute = ({ url, cookies, redirect }) => {
     maxAge: 60 * 60,
   })
 
-  return redirect(path, 307)
+  // The CDN keys on the URL, not the cookie, so the marker is what keeps it
+  // from answering with its public copy of the page.
+  return redirect(`${path}${path.includes('?') ? '&' : '?'}preview`, 307)
 }

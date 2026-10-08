@@ -25,6 +25,15 @@ const columns =
   logos.length <= 6
     ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'
     : 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8'
+
+/**
+ * The alt comes from the name written beside the mark, where there is one: the
+ * media library spells some brands the way their filenames do ("Seimens").
+ */
+const mark = (logo: Props['logos'][number]) =>
+  logo.name && typeof logo.image === 'object'
+    ? { ...logo.image, alt: `${logo.name} logo` }
+    : logo.image
 ---
 
 <section class="border-t border-gray-100 bg-white px-6 py-28 md:px-12 lg:py-40">
@@ -56,7 +65,7 @@ const columns =
                 style={`transition-delay: ${Math.min(index, 24) * 25}ms`}
               >
                 <Picture
-                  media={logo.image}
+                  media={mark(logo)}
                   raw
                   class="max-h-10 w-auto max-w-full object-contain opacity-60 grayscale transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0"
                 />
@@ -103,7 +112,7 @@ const columns =
                       class="group flex h-24 w-[168px] shrink-0 items-center justify-center px-6 md:w-[200px]"
                     >
                       <Picture
-                        media={logo.image}
+                        media={mark(logo)}
                         raw
                         class="max-h-11 w-auto max-w-full object-contain opacity-55 grayscale transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0"
                       />

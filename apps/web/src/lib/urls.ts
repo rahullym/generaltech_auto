@@ -79,8 +79,8 @@ export const buildDocsTree = (docs: Doc[]): DocNode[] => {
     if (!node) continue
 
     const parentId =
-      typeof doc.parent === 'string'
-        ? doc.parent
+      typeof doc.parent === 'string' || typeof doc.parent === 'number'
+        ? String(doc.parent)
         : doc.parent && typeof doc.parent === 'object'
           ? String(doc.parent.id)
           : null

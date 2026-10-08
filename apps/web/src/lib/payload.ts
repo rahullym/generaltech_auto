@@ -10,6 +10,8 @@ export type FindArgs = {
   limit?: number
   page?: number
   depth?: number
+  /** Return only these top-level fields. The snapshot ignores it and returns all. */
+  select?: string[]
   /**
    * Include unpublished documents. Authenticates with PAYLOAD_API_KEY,
    * since Payload only returns drafts to a signed-in user.
@@ -53,7 +55,7 @@ const serialiseWhere = (
   }
 }
 
-const buildQuery = ({ where, sort, limit, page, depth, draft }: FindArgs): string => {
+const buildQuery = ({ where, sort, limit, page, depth, select, draft }: FindArgs): string => {
   const params = new URLSearchParams()
 
   if (where) serialiseWhere(where, params)
@@ -61,11 +63,14 @@ const buildQuery = ({ where, sort, limit, page, depth, draft }: FindArgs): strin
   if (limit !== undefined) params.set('limit', String(limit))
   if (page !== undefined) params.set('page', String(page))
   if (depth !== undefined) params.set('depth', String(depth))
+  for (const field of select ?? []) params.set(`select[${field}]`, 'true')
   if (draft) params.set('draft', 'true')
 
   const qs = params.toString()
   return qs ? `?${qs}` : ''
 }
+
+const TIMEOUT_MS = 8000
 
 const request = async <T>(path: string, draft = false): Promise<T> => {
   const url = `${PAYLOAD_URL}/api${path}`
@@ -81,6 +86,9 @@ const request = async <T>(path: string, draft = false): Promise<T> => {
     },
     // Drafts change constantly and must never be shared between viewers.
     cache: draft ? 'no-store' : 'default',
+    // A CMS that is waking up should not hold a visitor's page; past this the
+    // request counts as unreachable and the snapshot answers instead.
+    signal: AbortSignal.timeout(TIMEOUT_MS),
   })
 
   if (!res.ok) {
@@ -94,8 +102,8 @@ const request = async <T>(path: string, draft = false): Promise<T> => {
  * True when the CMS could not be reached at all, or answered with a server
  * error — as opposed to answering "no such document", which is a real answer.
  *
- * A deployed site has no CMS to reach until one is hosted, so this is the
- * normal path in production rather than an exceptional one.
+ * The site then answers from the committed snapshot, so an outage of the CMS
+ * shows visitors slightly old content rather than an error page.
  */
 const unreachable = (error: unknown): boolean =>
   error instanceof PayloadError ? error.status >= 500 : true

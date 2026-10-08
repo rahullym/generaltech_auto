@@ -103,6 +103,44 @@ any plumbing. Re-run `pnpm --filter cms seed:pages` after editing one, then
 Slugs are not normalised beyond a tidy-up: `about_us` and `contact_us` keep
 their underscores because the live navigation points at them.
 
+The 16 service pages and 20 application examples are Pages too, with their
+**Page type** set to *Service* or *Application example*. Their copy was imported
+from `apps/cms/src/content/services/*.json` and
+`apps/cms/src/content/applications/*.json` by `pnpm --filter cms seed:inner`,
+which replaces each page it loads — so it is for rebuilding a database, not for
+editing; edits belong in the admin panel. An application example's card on
+`/applications` comes from the **Card** tab on its page, a service's old paths
+(which redirect to it) from its **Service** tab, and the short labels in the
+Services menu from the header's dropdown items.
+
+## Hosting
+
+| | |
+|---|---|
+| Website | Vercel project `generaltech-auto-cms` (the name predates the split) — deploys from `main` |
+| CMS | Vercel project `generaltech-auto-admin` — https://generaltech-auto-admin.vercel.app/admin |
+| Database | Neon Postgres `generaltech-auto-cms-db`, Frankfurt, connected to the CMS project |
+| Uploads | Vercel Blob store `generaltech-auto-cms-media`, connected to the CMS project |
+
+The CMS is deployed from a working tree, not from git, because both projects
+build from this repo and the root `vercel.json` belongs to the website:
+
+```bash
+pnpm deploy:cms       # payload migrate && next build, on Vercel
+```
+
+It only needs redeploying when `apps/cms` changes; content edits need nothing.
+
+The website reads the CMS named by `PAYLOAD_URL` on every render and the CDN
+holds each page for a minute, so a published edit is live about a minute later.
+If the CMS cannot be reached, or takes longer than eight seconds, the site
+answers from `apps/web/src/data/snapshot.json` instead. Refresh that fallback
+from the hosted CMS now and then:
+
+```bash
+PAYLOAD_URL=https://generaltech-auto-admin.vercel.app pnpm --filter web snapshot
+```
+
 ## Contact form
 
 The contact page posts straight from the browser to
@@ -129,6 +167,7 @@ pnpm generate:types   # regenerate payload-types.ts after schema changes
 pnpm --filter cms seed        # re-seed demo content (idempotent)
 pnpm --filter cms seed:home   # reload the approved homepage copy (idempotent)
 pnpm --filter cms seed:pages  # reload About/Products/Brands/Services/Applications/Contact (idempotent)
+pnpm --filter cms seed:inner  # reload the 16 service pages and 20 application examples (idempotent)
 pnpm --filter cms seed:chrome # reload logo, photography, brand wall, nav + footer
 pnpm --filter cms migrate     # apply pending migrations
 pnpm --filter cms migrate:fresh --force-accept-warning   # drop + rebuild
@@ -327,5 +366,5 @@ An unregistered `blockType` renders nothing and warns in dev.
   templates readable. Payload's exhaustive generated types are in
   `apps/cms/src/payload-types.ts` and can be imported as `@cms/payload-types`.
 - `graphql` is pinned to 16.x — Payload's peer range excludes 17.
-- Media uploads are written to `apps/cms/media/` and are gitignored. Swap in
-  `@payloadcms/storage-s3` before deploying to an ephemeral filesystem.
+- Media uploads are written to `apps/cms/media/` locally and are gitignored.
+  Wherever `BLOB_READ_WRITE_TOKEN` is set they go to Vercel Blob instead.

@@ -1,5 +1,7 @@
 import type { Block } from 'payload'
 
+import { diagramIcon } from '../fields/diagramIcon'
+
 export const RichTextBlock: Block = {
   slug: 'richText',
   interfaceName: 'RichTextBlock',
@@ -67,6 +69,31 @@ export const RichTextBlock: Block = {
         { label: 'Imagery on the right', value: 'right' },
       ],
       admin: { condition: (_, siblingData) => siblingData?.layout === 'editorial' },
+    },
+    {
+      name: 'footprint',
+      type: 'group',
+      label: 'Plant footprint',
+      admin: {
+        description:
+          'Drawn in the image column instead of a photograph: what is already on the plant, and what the work fits to it. Leave the rows empty to show the imagery.',
+        condition: (_, siblingData) => siblingData?.layout === 'editorial',
+      },
+      fields: [
+        { name: 'label', type: 'text' },
+        {
+          name: 'rows',
+          type: 'array',
+          labels: { singular: 'Row', plural: 'Rows' },
+          fields: [
+            { name: 'have', type: 'text', required: true, label: 'Already on the plant' },
+            diagramIcon('haveIcon'),
+            { name: 'add', type: 'text', label: 'What is fitted' },
+            diagramIcon('addIcon'),
+            { name: 'how', type: 'text', required: true, label: 'How it is fitted' },
+          ],
+        },
+      ],
     },
     {
       name: 'lede',

@@ -1,12 +1,12 @@
 /**
  * Snapshots the CMS into the repo so the site can be deployed on its own.
  *
- * The Astro app reads everything from Payload at request time. Until the CMS
- * and its database are hosted somewhere, a deployed site has nothing to read —
- * so this walks the API with the local CMS running, writes the responses to
- * `src/data/snapshot.json`, and copies every image the content references into
- * `public/cms/`. `lib/payload.ts` falls back to that file whenever the CMS
- * cannot be reached, which on Vercel is always.
+ * The Astro app reads everything from Payload at request time, so a CMS that is
+ * down would take the site with it. This walks the API, writes the responses to
+ * `src/data/snapshot.json`, and copies every image the content references from
+ * a local CMS into `public/cms/` — images already on the Blob CDN keep their
+ * own URLs. `lib/payload.ts` falls back to that file whenever the CMS cannot be
+ * reached.
  *
  * Run with the CMS up:  pnpm --filter web snapshot
  * Re-run after any content edit — the snapshot is a point in time, not a feed.

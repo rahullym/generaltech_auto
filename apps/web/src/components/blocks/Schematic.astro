@@ -71,15 +71,18 @@ interface Props {
   heading?: string
   intro?: string
   title?: string
-  width?: number
-  height?: number
-  equipment?: SchematicEquipment[]
-  lines?: SchematicLine[]
-  instruments?: SchematicInstrument[]
-  labels?: SchematicLabel[]
   key?: SchematicKey[]
-  /** Names for the pipe legend, where the default name for a medium is wrong. */
-  mediaNames?: Record<string, string>
+  /** The geometry, held by the CMS as one JSON document. */
+  drawing?: {
+    width?: number
+    height?: number
+    equipment?: SchematicEquipment[]
+    lines?: SchematicLine[]
+    instruments?: SchematicInstrument[]
+    labels?: SchematicLabel[]
+    /** Names for the pipe legend, where the default name for a medium is wrong. */
+    mediaNames?: Record<string, string>
+  } | null
   footnote?: string
 }
 
@@ -89,16 +92,20 @@ const {
   heading,
   intro,
   title,
+  key = [],
+  drawing,
+  footnote,
+} = Astro.props
+
+const {
   width = 1000,
   height = 720,
   equipment = [],
   lines = [],
   instruments = [],
   labels = [],
-  key = [],
   mediaNames = {},
-  footnote,
-} = Astro.props
+} = drawing ?? {}
 
 // Gradient ids are per drawing, so two on one page cannot share a definition.
 const uid = `sx-${id.replace(/[^a-z0-9]/gi, '').slice(-10)}`

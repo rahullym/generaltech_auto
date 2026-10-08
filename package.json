@@ -15,7 +15,8 @@
     "generate:types": "pnpm --filter cms generate:types",
     "db:up": "docker compose up -d",
     "db:down": "docker compose down",
-    "migrate": "pnpm --filter cms migrate"
+    "migrate": "pnpm --filter cms migrate",
+    "deploy:cms": "VERCEL_ORG_ID=team_NblgrT9Hpdqt75iQZyeNBdtG VERCEL_PROJECT_ID=prj_bfIW889aGcWsvAj17YSdsH70UKtv vercel deploy --prod --local-config apps/cms/vercel.admin.json"
   },
   "devDependencies": {
     "typescript": "5.9.3"

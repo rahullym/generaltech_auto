@@ -1,0 +1,14 @@
+# `vercel deploy` uploads the working tree, and does not consult .gitignore for
+# it — without this, local secrets and the CMS's uploads go up with the source.
+node_modules
+.pnpm-store
+.next
+.astro
+dist
+build
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.vercel
+apps/cms/media

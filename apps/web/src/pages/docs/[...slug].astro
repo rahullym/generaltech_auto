@@ -34,7 +34,7 @@ const byId = new Map(all.docs.map((entry) => [String(entry.id), entry]))
 const breadcrumbs: { title: string; slug: string }[] = []
 let cursor = doc.parent
 while (cursor) {
-  const parentId = typeof cursor === 'string' ? cursor : String(cursor.id)
+  const parentId = typeof cursor === 'object' ? String(cursor.id) : String(cursor)
   const parent = byId.get(parentId)
   if (!parent) break
   breadcrumbs.unshift({ title: parent.title, slug: parent.slug })

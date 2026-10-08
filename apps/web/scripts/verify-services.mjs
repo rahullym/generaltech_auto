@@ -12,7 +12,7 @@ import { readdir, readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
 const BASE = process.argv[2] ?? 'http://localhost:4399'
-const DIR = new URL('../src/content/services/', import.meta.url).pathname
+const DIR = new URL('../../cms/src/content/services/', import.meta.url).pathname
 
 /** Every string on the page that must survive to the rendered HTML. */
 const strings = (service) => {

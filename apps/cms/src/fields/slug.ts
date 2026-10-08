@@ -26,10 +26,18 @@ const fromInput = (value: string): string =>
     .replace(/^[-_]+|[-_]+$/g, '')
 
 /**
+ * The same tidy-up, one path segment at a time. The service and application
+ * pages live at `service/<name>` and `applications/<name>`, so a page's slug
+ * may be a path; a post's or a doc's may not.
+ */
+const fromPath = (value: string): string =>
+  value.split('/').map(fromInput).filter(Boolean).join('/')
+
+/**
  * URL slug, auto-derived from `trackedField` when left blank.
  * Indexed because every frontend lookup queries by it.
  */
-export const slugField = (trackedField = 'title'): Field => ({
+export const slugField = (trackedField = 'title', { nested = false } = {}): Field => ({
   name: 'slug',
   type: 'text',
   index: true,
@@ -37,12 +45,16 @@ export const slugField = (trackedField = 'title'): Field => ({
   required: true,
   admin: {
     position: 'sidebar',
-    description: 'Leave blank to generate from the title.',
+    description: nested
+      ? 'Leave blank to generate from the title. May be a path, e.g. applications/steam-usage-monitoring.'
+      : 'Leave blank to generate from the title.',
   },
   hooks: {
     beforeValidate: [
       ({ data, value }) => {
-        if (typeof value === 'string' && value.length > 0) return fromInput(value)
+        if (typeof value === 'string' && value.length > 0) {
+          return nested ? fromPath(value) : fromInput(value)
+        }
 
         const tracked = data?.[trackedField]
         if (typeof tracked === 'string' && tracked.length > 0) return fromTitle(tracked)

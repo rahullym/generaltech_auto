@@ -141,15 +141,22 @@ export interface Page {
   id: number;
   title: string;
   /**
-   * Leave blank to generate from the title.
+   * Leave blank to generate from the title. May be a path, e.g. applications/steam-usage-monitoring.
    */
   slug: string;
+  /**
+   * A service publishes Service structured data and may redirect its old paths. An application example appears as a card on the Applications page.
+   */
+  kind?: ('page' | 'service' | 'application') | null;
   layout: (
     | HeroBlock
     | RichTextBlock
     | MediaBlock
     | FeatureGridBlock
     | ServiceIndexBlock
+    | ApplicationIndexBlock
+    | DiagramBlock
+    | SchematicBlock
     | IndustriesBlock
     | ProcessStepsBlock
     | StatsBlock
@@ -160,6 +167,49 @@ export interface Page {
     | ContactBlock
     | FaqBlock
   )[];
+  service?: {
+    /**
+     * Position among the services, lowest first.
+     */
+    order?: number | null;
+    /**
+     * What the service is, for search engines — e.g. "CNC machine repair". Defaults to the page title.
+     */
+    serviceType?: string | null;
+    /**
+     * Paths this page used to live at, without the leading slash. Each one redirects here permanently.
+     */
+    aliases?:
+      | {
+          path: string;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  application?: {
+    /**
+     * Position on the Applications grid, lowest first.
+     */
+    order?: number | null;
+    /**
+     * The card heading. Defaults to the page title, which is written for search and is longer.
+     */
+    cardTitle?: string | null;
+    /**
+     * The line under the card heading: the problem, in a visitor’s words.
+     */
+    cardBlurb?: string | null;
+    cardImage?: (number | null) | Media;
+    /**
+     * The chips under the card.
+     */
+    sectors?:
+      | {
+          name: string;
+          id?: string | null;
+        }[]
+      | null;
+  };
   meta?: {
     title?: string | null;
     description?: string | null;
@@ -454,6 +504,94 @@ export interface RichTextBlock {
     | null;
   mediaPosition?: ('left' | 'right') | null;
   /**
+   * Drawn in the image column instead of a photograph: what is already on the plant, and what the work fits to it. Leave the rows empty to show the imagery.
+   */
+  footprint?: {
+    label?: string | null;
+    rows?:
+      | {
+          have: string;
+          haveIcon?:
+            | (
+                | 'gauge'
+                | 'meter'
+                | 'flow'
+                | 'valve'
+                | 'tank'
+                | 'transmitter'
+                | 'cabinet'
+                | 'cpu'
+                | 'logger'
+                | 'network'
+                | 'gateway'
+                | 'signal'
+                | 'cloud'
+                | 'phone'
+                | 'screen'
+                | 'dashboard'
+                | 'motor'
+                | 'pump'
+                | 'machine'
+                | 'robot'
+                | 'conveyor'
+                | 'sensor'
+                | 'thermometer'
+                | 'battery'
+                | 'shield'
+                | 'alert'
+                | 'wrench'
+                | 'cable'
+                | 'database'
+                | 'clipboard'
+                | 'pipe'
+                | 'building'
+                | 'cog'
+              )
+            | null;
+          add?: string | null;
+          addIcon?:
+            | (
+                | 'gauge'
+                | 'meter'
+                | 'flow'
+                | 'valve'
+                | 'tank'
+                | 'transmitter'
+                | 'cabinet'
+                | 'cpu'
+                | 'logger'
+                | 'network'
+                | 'gateway'
+                | 'signal'
+                | 'cloud'
+                | 'phone'
+                | 'screen'
+                | 'dashboard'
+                | 'motor'
+                | 'pump'
+                | 'machine'
+                | 'robot'
+                | 'conveyor'
+                | 'sensor'
+                | 'thermometer'
+                | 'battery'
+                | 'shield'
+                | 'alert'
+                | 'wrench'
+                | 'cable'
+                | 'database'
+                | 'clipboard'
+                | 'pipe'
+                | 'building'
+                | 'cog'
+              )
+            | null;
+          how: string;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  /**
    * Renders the opening paragraph larger and darker.
    */
   lede?: boolean | null;
@@ -588,6 +726,187 @@ export interface ServiceIndexBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'serviceIndex';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ApplicationIndexBlock".
+ */
+export interface ApplicationIndexBlock {
+  /**
+   * Introduces the grid of application examples. The examples are not listed here — every published page whose type is "Application example" appears in the grid automatically.
+   */
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  intro?: string | null;
+  /**
+   * Small print under the grid.
+   */
+  footnote?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'applicationIndex';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "DiagramBlock".
+ */
+export interface DiagramBlock {
+  variant?: ('chain' | 'groups') | null;
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  intro?: string | null;
+  nodes?:
+    | {
+        icon?:
+          | (
+              | 'gauge'
+              | 'meter'
+              | 'flow'
+              | 'valve'
+              | 'tank'
+              | 'transmitter'
+              | 'cabinet'
+              | 'cpu'
+              | 'logger'
+              | 'network'
+              | 'gateway'
+              | 'signal'
+              | 'cloud'
+              | 'phone'
+              | 'screen'
+              | 'dashboard'
+              | 'motor'
+              | 'pump'
+              | 'machine'
+              | 'robot'
+              | 'conveyor'
+              | 'sensor'
+              | 'thermometer'
+              | 'battery'
+              | 'shield'
+              | 'alert'
+              | 'wrench'
+              | 'cable'
+              | 'database'
+              | 'clipboard'
+              | 'pipe'
+              | 'building'
+              | 'cog'
+            )
+          | null;
+        title: string;
+        note?: string | null;
+        /**
+         * Written on the connector into this stage — e.g. "4–20 mA" or "Modbus RTU".
+         */
+        via?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  groups?:
+    | {
+        title: string;
+        note?: string | null;
+        tone?: ('accent' | 'neutral') | null;
+        items: {
+          icon?:
+            | (
+                | 'gauge'
+                | 'meter'
+                | 'flow'
+                | 'valve'
+                | 'tank'
+                | 'transmitter'
+                | 'cabinet'
+                | 'cpu'
+                | 'logger'
+                | 'network'
+                | 'gateway'
+                | 'signal'
+                | 'cloud'
+                | 'phone'
+                | 'screen'
+                | 'dashboard'
+                | 'motor'
+                | 'pump'
+                | 'machine'
+                | 'robot'
+                | 'conveyor'
+                | 'sensor'
+                | 'thermometer'
+                | 'battery'
+                | 'shield'
+                | 'alert'
+                | 'wrench'
+                | 'cable'
+                | 'database'
+                | 'clipboard'
+                | 'pipe'
+                | 'building'
+                | 'cog'
+              )
+            | null;
+          title: string;
+          note?: string | null;
+          id?: string | null;
+        }[];
+        id?: string | null;
+      }[]
+    | null;
+  footnote?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'diagram';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "SchematicBlock".
+ */
+export interface SchematicBlock {
+  eyebrow?: string | null;
+  /**
+   * Wrap the closing words in *asterisks* to set them in the red italic accent.
+   */
+  heading?: string | null;
+  intro?: string | null;
+  title?: string | null;
+  /**
+   * The list under the drawing. A bubble in the drawing points at an entry by its position here, counting from 1, so reordering this list means renumbering the bubbles.
+   */
+  key?:
+    | {
+        /**
+         * F, T, P, L…
+         */
+        tag: string;
+        sub?: string | null;
+        title: string;
+        note?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * The geometry: width, height, equipment, lines, instruments, labels and mediaNames, in the drawing’s own units (1000 wide by default). Text inside the drawing — equipment and pipe labels — is edited here.
+   */
+  drawing:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  footnote?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'schematic';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1022,6 +1341,7 @@ export interface PayloadMigration {
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
+  kind?: T;
   layout?:
     | T
     | {
@@ -1030,6 +1350,9 @@ export interface PagesSelect<T extends boolean = true> {
         media?: T | MediaBlockSelect<T>;
         featureGrid?: T | FeatureGridBlockSelect<T>;
         serviceIndex?: T | ServiceIndexBlockSelect<T>;
+        applicationIndex?: T | ApplicationIndexBlockSelect<T>;
+        diagram?: T | DiagramBlockSelect<T>;
+        schematic?: T | SchematicBlockSelect<T>;
         industries?: T | IndustriesBlockSelect<T>;
         processSteps?: T | ProcessStepsBlockSelect<T>;
         stats?: T | StatsBlockSelect<T>;
@@ -1039,6 +1362,32 @@ export interface PagesSelect<T extends boolean = true> {
         cta?: T | CallToActionBlockSelect<T>;
         contact?: T | ContactBlockSelect<T>;
         faq?: T | FaqBlockSelect<T>;
+      };
+  service?:
+    | T
+    | {
+        order?: T;
+        serviceType?: T;
+        aliases?:
+          | T
+          | {
+              path?: T;
+              id?: T;
+            };
+      };
+  application?:
+    | T
+    | {
+        order?: T;
+        cardTitle?: T;
+        cardBlurb?: T;
+        cardImage?: T;
+        sectors?:
+          | T
+          | {
+              name?: T;
+              id?: T;
+            };
       };
   meta?:
     | T
@@ -1108,6 +1457,21 @@ export interface RichTextBlockSelect<T extends boolean = true> {
         id?: T;
       };
   mediaPosition?: T;
+  footprint?:
+    | T
+    | {
+        label?: T;
+        rows?:
+          | T
+          | {
+              have?: T;
+              haveIcon?: T;
+              add?: T;
+              addIcon?: T;
+              how?: T;
+              id?: T;
+            };
+      };
   lede?: T;
   collapsible?: T;
   content?: T;
@@ -1188,6 +1552,79 @@ export interface ServiceIndexBlockSelect<T extends boolean = true> {
             };
         id?: T;
       };
+  footnote?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ApplicationIndexBlock_select".
+ */
+export interface ApplicationIndexBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  footnote?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "DiagramBlock_select".
+ */
+export interface DiagramBlockSelect<T extends boolean = true> {
+  variant?: T;
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  nodes?:
+    | T
+    | {
+        icon?: T;
+        title?: T;
+        note?: T;
+        via?: T;
+        id?: T;
+      };
+  groups?:
+    | T
+    | {
+        title?: T;
+        note?: T;
+        tone?: T;
+        items?:
+          | T
+          | {
+              icon?: T;
+              title?: T;
+              note?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  footnote?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "SchematicBlock_select".
+ */
+export interface SchematicBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  intro?: T;
+  title?: T;
+  key?:
+    | T
+    | {
+        tag?: T;
+        sub?: T;
+        title?: T;
+        note?: T;
+        id?: T;
+      };
+  drawing?: T;
   footnote?: T;
   id?: T;
   blockName?: T;
@@ -1627,10 +2064,57 @@ export interface Header {
                 url?: string | null;
                 newTab?: boolean | null;
               };
+              /**
+               * The line under the label in the menu.
+               */
               description?: string | null;
+              /**
+               * Icon for the row in an expanded menu.
+               */
+              iconName?:
+                | (
+                    | 'cpu'
+                    | 'network'
+                    | 'signal'
+                    | 'cabinet'
+                    | 'cog'
+                    | 'refresh'
+                    | 'shield'
+                    | 'gauge'
+                    | 'database'
+                    | 'clipboard'
+                    | 'chart'
+                    | 'package'
+                    | 'wrench'
+                    | 'code'
+                    | 'board'
+                    | 'upgrade'
+                  )
+                | null;
+              /**
+               * The heading this item sits under in an expanded menu. Items sharing a name share a column. Left empty, a service page uses the group it names itself.
+               */
+              groupName?: string | null;
               id?: string | null;
             }[]
           | null;
+        /**
+         * A menu with more than six children opens as a panel, laid out as headed columns — set each item's "Menu column" above. Every field here is optional — left empty, the panel names itself after this item and takes its quote card from the header button and the site contact details.
+         */
+        megaMenu?: {
+          /**
+           * Leave unchecked to decide by the number of children.
+           */
+          enabled?: boolean | null;
+          /**
+           * Only shown when no item in the menu names a column.
+           */
+          eyebrow?: string | null;
+          viewAllLabel?: string | null;
+          promoTitle?: string | null;
+          promoBody?: string | null;
+          stripLabel?: string | null;
+        };
         id?: string | null;
       }[]
     | null;
@@ -1766,7 +2250,19 @@ export interface HeaderSelect<T extends boolean = true> {
                     newTab?: T;
                   };
               description?: T;
+              iconName?: T;
+              groupName?: T;
               id?: T;
+            };
+        megaMenu?:
+          | T
+          | {
+              enabled?: T;
+              eyebrow?: T;
+              viewAllLabel?: T;
+              promoTitle?: T;
+              promoBody?: T;
+              stripLabel?: T;
             };
         id?: T;
       };

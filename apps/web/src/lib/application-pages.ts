@@ -14,60 +14,41 @@
  * stated as a result of a real project belongs in a real project's own page,
  * written from that project's numbers.
  *
- * Authoring is the services' own: a file in `src/content/applications/*.json`
- * per example, expanded by `authored-content.ts` into the blocks the CMS pages
- * already render. Adding an example is adding a file.
+ * An example is a Page whose type is "Application example" in the CMS. Its
+ * card on the index grid is drawn from the Card fields on that page, so
+ * publishing one is all it takes to list it.
  */
-import { toPage, type AuthoredBlock, type AuthoredPage } from './authored-content'
+import { find } from './payload'
 
-import type { Page } from './types'
-
-export type AuthoredApplication = AuthoredPage & {
-  /** Position on the index grid. */
-  order: number
-  /** The card's heading — the page title is written for search, and is longer. */
-  cardTitle: string
-  /** The line under the card's heading: the problem, in a visitor's words. */
-  cardBlurb: string
-  /** A filename from the committed media, drawn as the card's image. */
-  cardImage?: string
-  /** The chips under the card. Sectors, not services — this is the "is this me?" cue. */
-  sectors: string[]
-  layout: AuthoredBlock[]
-}
-
-const modules = import.meta.glob<{ default: AuthoredApplication }>(
-  '../content/applications/*.json',
-  { eager: true },
-)
-
-const authored: AuthoredApplication[] = Object.values(modules)
-  .map((module) => module.default)
-  .sort((a, b) => a.order - b.order)
-
-/** Slug -> expanded page, built once per process rather than per request. */
-const pages = new Map<string, Page>(
-  authored.map((application) => [application.slug, toPage(application, 'application')]),
-)
+import type { Media, Page } from './types'
 
 export type ApplicationSummary = {
   title: string
   href: string
-  blurb: string
-  image?: string
+  blurb?: string
+  image?: Media
   sectors: string[]
 }
 
-/** What the index grid draws, in authoring order. */
-export const applicationSummaries: ApplicationSummary[] = authored.map((application) => ({
-  title: application.cardTitle,
-  href: `/${application.slug}`,
-  blurb: application.cardBlurb,
-  image: application.cardImage,
-  sectors: application.sectors,
-}))
+/** What the index grid draws, in the order the pages give themselves. */
+export const listApplications = async (): Promise<ApplicationSummary[]> => {
+  const result = await find<Page>('pages', {
+    where: { kind: { equals: 'application' } },
+    select: ['title', 'slug', 'application'],
+    sort: 'application.order',
+    limit: 200,
+    depth: 1,
+  })
 
-export const getApplicationPage = (slug: string): Page | null => pages.get(slug) ?? null
+  return result.docs.map((page) => {
+    const card = page.application ?? {}
 
-/** True when the slug is served from this registry rather than from the CMS. */
-export const isApplicationSlug = (slug: string): boolean => pages.has(slug)
+    return {
+      title: card.cardTitle || page.title,
+      href: `/${page.slug}`,
+      blurb: card.cardBlurb ?? undefined,
+      image: card.cardImage && typeof card.cardImage === 'object' ? card.cardImage : undefined,
+      sectors: (card.sectors ?? []).map((sector) => sector.name),
+    }
+  })
+}

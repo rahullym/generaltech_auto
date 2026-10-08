@@ -66,6 +66,21 @@ export type Page = {
   slug: string
   layout: Block[]
   meta?: SeoMeta
+  kind?: 'page' | 'service' | 'application' | null
+  /** Set on a service page. */
+  service?: {
+    order?: number | null
+    serviceType?: string | null
+    aliases?: { id?: string; path: string }[] | null
+  }
+  /** Set on an application example: what its card on the index grid shows. */
+  application?: {
+    order?: number | null
+    cardTitle?: string | null
+    cardBlurb?: string | null
+    cardImage?: Media | string | number | null
+    sectors?: { id?: string; name: string }[] | null
+  }
   _status?: 'draft' | 'published'
   updatedAt: string
   createdAt: string
@@ -107,7 +122,7 @@ export type Doc = {
   slug: string
   description?: string
   content: RichTextValue
-  parent?: string | Doc | null
+  parent?: string | number | Doc | null
   order: number
   meta?: SeoMeta
   _status?: 'draft' | 'published'

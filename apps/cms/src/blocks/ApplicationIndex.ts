@@ -4,9 +4,9 @@ import type { Block } from 'payload'
  * The application example grid.
  *
  * Deliberately thin: this block says where the grid goes and what introduces
- * it, and nothing else. The examples themselves are content files in the
- * website repo (`apps/web/src/content/applications/*.json`), each expanding
- * into a full page, and the grid draws whatever is there.
+ * it, and nothing else. The examples themselves are Pages whose type is
+ * "Application example", and the grid draws every published one from the card
+ * fields on that page.
  *
  * Restating them here as an array of links — the way the service index does —
  * would mean every new example had to be written twice and kept in step, and a
@@ -23,7 +23,7 @@ export const ApplicationIndex: Block = {
       type: 'text',
       admin: {
         description:
-          'Introduces the grid of application examples. The examples are not listed here — they are content files in the website repo, and every one of them appears in the grid automatically.',
+          'Introduces the grid of application examples. The examples are not listed here — every published page whose type is "Application example" appears in the grid automatically.',
       },
     },
     {
