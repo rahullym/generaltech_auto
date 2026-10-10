@@ -61,6 +61,8 @@ const run = async () => {
   const logos = (wall?.logos ?? []).map((logo) => ({
     image: typeof logo.image === 'object' ? (logo.image as { id: number }).id : (logo.image as number),
     name: logo.name,
+    url: (logo as any).url,
+    description: (logo as any).description,
   }))
 
   if (!logos.length) {

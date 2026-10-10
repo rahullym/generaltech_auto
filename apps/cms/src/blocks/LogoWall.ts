@@ -30,6 +30,7 @@ export const LogoWall: Block = {
         { name: 'image', type: 'upload', relationTo: 'media', required: true },
         { name: 'name', type: 'text' },
         { name: 'url', type: 'text' },
+        { name: 'description', type: 'text' },
       ],
     },
   ],

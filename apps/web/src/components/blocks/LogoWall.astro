@@ -8,7 +8,13 @@ interface Props {
   heading?: string
   intro?: string
   layout?: 'grid' | 'marquee'
-  logos: { id?: string; image: Media | string; name?: string; url?: string }[]
+  logos: {
+    id?: string
+    image: Media | string
+    name?: string
+    url?: string
+    description?: string
+  }[]
 }
 
 const { eyebrow, heading, intro, layout = 'grid', logos = [] } = Astro.props
@@ -34,6 +40,9 @@ const mark = (logo: Props['logos'][number]) =>
   logo.name && typeof logo.image === 'object'
     ? { ...logo.image, alt: `${logo.name} logo` }
     : logo.image
+
+const titleText = (logo: Props['logos'][number]) =>
+  logo.description ? `${logo.name} – ${logo.description}` : logo.name
 ---
 
 <section class="border-t border-gray-100 bg-white px-6 py-28 md:px-12 lg:py-40">
@@ -60,7 +69,7 @@ const mark = (logo: Props['logos'][number]) =>
                 {...(logo.url
                   ? { href: logo.url, target: '_blank', rel: 'noopener noreferrer' }
                   : {})}
-                title={logo.name}
+                title={titleText(logo)}
                 class="reveal-item group flex aspect-[16/10] translate-y-4 items-center justify-center bg-white p-7 opacity-0 transition-colors duration-500 hover:bg-gray-50"
                 style={`transition-delay: ${Math.min(index, 24) * 25}ms`}
               >
@@ -108,7 +117,7 @@ const mark = (logo: Props['logos'][number]) =>
                         ? { href: logo.url, target: '_blank', rel: 'noopener noreferrer' }
                         : {})}
                       {...(copy === 1 ? { 'aria-hidden': 'true' } : {})}
-                      title={copy === 0 ? logo.name : undefined}
+                      title={copy === 0 ? titleText(logo) : undefined}
                       class="group flex h-24 w-[168px] shrink-0 items-center justify-center px-6 md:w-[200px]"
                     >
                       <Picture

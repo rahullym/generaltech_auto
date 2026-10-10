@@ -1071,6 +1071,7 @@ export interface LogoWallBlock {
     image: number | Media;
     name?: string | null;
     url?: string | null;
+    description?: string | null;
     id?: string | null;
   }[];
   id?: string | null;
@@ -1726,6 +1727,7 @@ export interface LogoWallBlockSelect<T extends boolean = true> {
         image?: T;
         name?: T;
         url?: T;
+        description?: T;
         id?: T;
       };
   id?: T;

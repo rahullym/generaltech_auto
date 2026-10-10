@@ -64,7 +64,13 @@ const media = (filename: string): Doc | undefined => {
  */
 const home = (snapshot.collections.pages ?? []).find((doc) => doc.slug === 'home')
 const wall = (home?.layout ?? []).find((block: Doc) => block.blockType === 'logoWall')
-const logos = (wall?.logos ?? []).map((logo: Doc) => ({ image: logo.image, name: logo.name }))
+const logos = (wall?.logos ?? []).map((logo: Doc) => ({
+  id: logo.id,
+  image: logo.image,
+  name: logo.name,
+  url: logo.url,
+  description: logo.description,
+}))
 
 if (!logos.length) {
   console.error('no logo wall on the home page — refusing to publish Brands without the roster')
