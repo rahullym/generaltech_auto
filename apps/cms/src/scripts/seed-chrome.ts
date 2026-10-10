@@ -114,16 +114,28 @@ const run = async () => {
   payload.logger.info('Uploaded logo and photography')
 
   // --- Brand wall -------------------------------------------------------
+  const BRAND_METADATA: Record<string, { url?: string; description?: string }> = {
+    'Apera Instruments': {
+      url: 'https://aperainst.com/',
+      description: 'Precision instruments and sensors for water-quality measurement.',
+    },
+    'Western Instruments': {
+      url: 'https://westerninstruments.com/our-company',
+      description: 'Inspection equipment, pit gauges, and ultrasonic testing systems.',
+    },
+  }
+
   const brandDir = `${ASSETS}/brands`
   const brandFiles = fs.existsSync(brandDir)
     ? fs.readdirSync(brandDir).filter((f) => !f.startsWith('.')).sort()
     : []
 
-  const brands: { image: number | string; name: string }[] = []
+  const brands: { image: number | string; name: string; url?: string; description?: string }[] = []
   for (const file of brandFiles) {
     const name = brandName(file)
     const media = await upload(`${brandDir}/${file}`, `${name} logo`)
-    brands.push({ image: media.id, name })
+    const meta = BRAND_METADATA[name]
+    brands.push({ image: media.id, name, url: meta?.url, description: meta?.description })
   }
 
   payload.logger.info(`Uploaded ${brands.length} brand logos`)
