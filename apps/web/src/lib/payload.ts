@@ -145,7 +145,35 @@ export const findBySlug = async <T>(
     where: { slug: { equals: slug } },
   })
 
-  return result.docs[0] ?? null
+  let doc = result.docs[0] ?? null
+
+  // If fetching a page (e.g. 'home' or 'brands') from a live CMS whose database has
+  // not yet been seeded with newly added partner logos, fall back to / supplement
+  // with the committed snapshot's logoWall block so the site is never missing brands.
+  if (collection === 'pages' && doc && !args.draft) {
+    try {
+      const snapResult = findInSnapshot<T>(collection, { where: { slug: { equals: slug } }, limit: 1 })
+      const snapDoc = snapResult.docs[0] as Page | undefined
+      if (snapDoc?.layout) {
+        const snapWall = snapDoc.layout.find((b: any) => b.blockType === 'logoWall') as any
+        const liveDoc = doc as unknown as Page
+        const liveWallIndex = liveDoc.layout?.findIndex((b: any) => b.blockType === 'logoWall') ?? -1
+        if (snapWall && liveWallIndex !== -1 && liveDoc.layout) {
+          const liveWall = liveDoc.layout[liveWallIndex] as any
+          if ((liveWall.logos?.length ?? 0) < (snapWall.logos?.length ?? 0)) {
+            liveDoc.layout[liveWallIndex] = {
+              ...liveWall,
+              logos: snapWall.logos,
+            }
+          }
+        }
+      }
+    } catch {
+      // Snapshot merge is best-effort
+    }
+  }
+
+  return doc
 }
 
 /** Fetch a global (header, footer, site settings). */
