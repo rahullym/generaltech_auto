@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { PAYLOAD_PREVIEW_SECRET } from 'astro:env/server'
+import { PAYLOAD_API_KEY, PAYLOAD_PREVIEW_SECRET } from 'astro:env/server'
 
 export const prerender = false
 
@@ -14,8 +14,13 @@ export const GET: APIRoute = ({ url, cookies, redirect }) => {
   const secret = url.searchParams.get('secret')
   const path = url.searchParams.get('path')
 
-  if (!PAYLOAD_PREVIEW_SECRET) {
-    return new Response('Preview is not configured.', { status: 501 })
+  // Without the API key every page in preview fails to read its draft, so say
+  // so here rather than sending the editor on to a server error.
+  if (!PAYLOAD_PREVIEW_SECRET || !PAYLOAD_API_KEY) {
+    return new Response(
+      'Preview is not configured: set PAYLOAD_PREVIEW_SECRET and PAYLOAD_API_KEY on the website.',
+      { status: 501 },
+    )
   }
 
   if (secret !== PAYLOAD_PREVIEW_SECRET) {

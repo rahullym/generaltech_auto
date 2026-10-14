@@ -3,6 +3,7 @@ import { ClientRouter } from 'astro:transitions'
 import Footer from '@/components/Footer.astro'
 import Header from '@/components/Header.astro'
 import SEO from '@/components/SEO.astro'
+import { isPreview } from '@/lib/preview'
 import { getSiteChrome } from '@/lib/site'
 import type { Media } from '@/lib/types'
 import '@/styles/global.css'
@@ -62,9 +63,16 @@ const whatsapp = '971501082323'
 // stale-while-revalidate means an edit is live about a minute after it is
 // published, and every request in between is answered without a render —
 // including a crawler walking every URL in the sitemap.
+//
+// Nothing rendered for a preview is shared, published or not: the CDN keys on
+// the URL alone, so a public copy of `/x?preview` — cached from an editor
+// previewing an unchanged page, or from anyone without the cookie — would be
+// handed back to every later preview of that page instead of the latest draft.
+const isPrivate = isDraft || isPreview(Astro.cookies) || Astro.url.searchParams.has('preview')
+
 Astro.response.headers.set(
   'Cache-Control',
-  isDraft ? 'private, no-store' : 'public, max-age=0, s-maxage=60, stale-while-revalidate=86400',
+  isPrivate ? 'private, no-store' : 'public, max-age=0, s-maxage=60, stale-while-revalidate=86400',
 )
 
 /** One place for the font request, used by both the async link and the noscript fallback. */
