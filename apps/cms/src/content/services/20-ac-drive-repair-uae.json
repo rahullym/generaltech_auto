@@ -1,0 +1,208 @@
+{
+  "order": 20,
+  "title": "AC Drive Repair UAE",
+  "slug": "ac-drive-repair-uae",
+  "aliases": [],
+  "navLabel": "AC Drive Repair",
+  "menu": {
+    "label": "AC Drives & VFDs",
+    "blurb": "Board-Level Diagnosis",
+    "icon": "dashboard",
+    "group": "Maintenance & Repair"
+  },
+  "summary": "AC Drive Repair UAE for all major VFD brands. Factory-trained technicians, dynamic load testing, 2-year warranty, rush service available.",
+  "meta": {
+    "title": "AC Drive Repair UAE | Factory Trained, 2-Yr Warranty",
+    "description": "AC Drive Repair UAE for all major VFD brands. Factory-trained technicians, dynamic load testing, 2-year warranty, rush service available."
+  },
+  "serviceType": "AC drive and VFD repair",
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Services",
+      "heading": "AC Drive Repair *in UAE*",
+      "subheading": "AC Drive Repair UAE for all major VFD brands. Factory-trained technicians, dynamic load testing, 2-year warranty, rush service available.",
+      "image": "panel-inspection.jpg",
+      "actions": [
+        {
+          "label": "Arrange an assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "board-repair.jpg",
+      "mediaPosition": "right",
+      "body": [
+        "AC Drive Repair UAE  from General Tech Automation means getting your variable frequency drives back into service quickly, without cutting corners on testing. Our factory-trained technical staff has logged extensive hours at manufacturer training programs to properly service VFD products, and we repair drives quickly and economically for manufacturing plants, oil and gas facilities, and process industries across the country.",
+        "A failed AC drive can bring an entire production line to a halt, and a rushed repair or an unnecessary full replacement both come with real costs. That is why more maintenance managers across Dubai, Sharjah, and Abu Dhabi are turning to a specialist offering Fast VFD Repair Services UAE backed by genuine testing rather than a guess-and-swap approach."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "What Is AC Drive and *VFD Repair*",
+      "body": [
+        "VFD Repair Services UAE and Variable Frequency Drive Repair UAE at our workshop cover the full range of AC Drive Repair Services UAE work, from board-level component replacement to complete power stage rebuilds. Industrial VFD Repair UAE clients benefit from our All Major Brands VFD Repair UAE capability, meaning a single provider can service Siemens VFD Repair UAE, ABB  AC Drive Repair UAE , Schneider VFD Repair UAE, Danfoss  AC Drive Repair UAE , and Yaskawa VFD Repair UAE units without needing to juggle multiple specialist vendors.",
+        "Every drive that comes into our workshop goes through VFD Fault Diagnosis UAE before any repair work begins, so the root cause is confirmed rather than assumed. This matters because a drive can display the same fault code for several different underlying problems, and repairing the wrong component wastes both time and money. Our diagnostic process cross-references fault history stored in the drive's own memory against known failure patterns for that specific model, narrowing the likely cause before the unit is even opened."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Why Genuine Testing and *Warranty Matter*",
+      "body": [
+        "Experience matters when production reliability depends on repair quality. General Tech Automation has been repairing AC drives and VFDs for manufacturing, oil and gas, and process clients across the region, and our cost-saving approach adds years of life to existing drives rather than forcing an expensive replacement that may also require costly re-engineering and reprogramming for your specific application.",
+        "The difference between a credible repair page and a generic one, for a person reading it or an algorithm ranking it, comes down to specificity. We do not simply replace a board and hope the fault does not return.",
+        "Every repair includes Dynamic Load Testing VFD UAE under simulated operating conditions, along with AC Drive Component Testing UAE across power stages, control boards, and cooling systems. Clients receive a written test report with every job, giving maintenance teams a clear, time-stamped record of what was found and what was repaired, and every AC Drive Repair with Warranty UAE job is backed by our 2 Year VFD Repair Warranty.",
+        "Every repair begins with an initial diagnosis, typically completed within 24 to 48 hours of receiving the drive, so clients always know the expected scope and cost before authorizing work."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How we work",
+      "heading": "Our Process and *Repair Times*",
+      "intro": "Board-level work moves fast when the fault is isolated correctly, which is why the first stage matters so much.",
+      "footnote": "This time-bound approach means most standard repairs are completed within 5 to 10 business days from the day the drive arrives at our workshop, and Rush  AC Drive Repair UAE  is available for production-critical equipment, typically cutting standard turnaround by half for an additional service fee.",
+      "steps": [
+        {
+          "title": "Initial Diagnosis",
+          "meta": "completed within 24 to 48 hours of receipt",
+          "description": "our technicians perform VFD Fault Diagnosis UAE to isolate whether the issue lies in the power stage, control board, capacitors, or cooling system."
+        },
+        {
+          "title": "Disassembly and Component Testing",
+          "meta": "completed in 1 to 2 business days",
+          "description": "the drive is opened and each board is bench-tested to confirm the exact point of failure before ordering replacement parts."
+        },
+        {
+          "title": "Board and Component Repair",
+          "meta": "typically 2 to 5 business days depending on part availability",
+          "description": "our AC Drive Board Repair UAE work covers VFD Capacitor Replacement UAE and VFD Power Module Repair UAE using OEM-matched components."
+        },
+        {
+          "title": "Firmware Restoration and Calibration",
+          "meta": "completed in 1 to 2 business days",
+          "description": "VFD Firmware Reprogramming UAE restores the drive's original parameter set and control logic where firmware was affected by the fault."
+        },
+        {
+          "title": "Final Load Testing and Dispatch",
+          "meta": "usually within 1 business day",
+          "description": "the repaired drive undergoes AC Drive Load Testing UAE under full load before it ships out with warranty documentation."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Brands *We Service*",
+      "body": [
+        "Our All Major Brands VFD Repair UAE capability means clients are not limited to a single manufacturer. We regularly service higher-power drives from established manufacturers alongside the mid-sized industrial units most commonly found across UAE facilities.",
+        "Because every manufacturer uses different firmware architecture and component layouts, our Factory Trained VFD Technicians UAE maintain manufacturer-specific documentation and calibration procedures for each brand, ensuring the final repair matches OEM specification rather than an approximation."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Cost Savings of Repair *Over Replacement*",
+      "body": [
+        "Choosing Cost Saving  AC Drive Repair UAE  over a full replacement brings measurable financial advantages. First, a repaired drive typically costs a fraction of a new unit's price, particularly for larger frame sizes or older models that are expensive to replace. Second, repair avoids the re-engineering and reprogramming costs that come with commissioning a brand-new drive into an existing control system. Third, our AC Drive Rebuild UAE service extends the working life of drives that are otherwise still well matched to their application, avoiding unnecessary capital spend on equipment that has years of useful life remaining.",
+        "A fourth benefit is documentation. Every repair we complete comes with a written test report covering diagnostic findings, components replaced, and load test results, giving maintenance teams a permanent record for audits and future troubleshooting. Finally, our 2 Year VFD Repair Warranty means clients are covered well beyond the point most defects would surface, giving genuine peace of mind rather than a token guarantee, and the warranty terms are provided in writing alongside the test report so there is no ambiguity about what is covered."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Signs Your AC Drive May *Need Repair*",
+      "body": [
+        "Several warning signs suggest a VFD needs professional attention before it fails completely. These include fault codes that reappear after a reset, unusual noise or heat from the drive enclosure, inconsistent motor speed or torque output, and intermittent tripping under normal load. If any of these apply to your equipment, a short call to our repair team, usually under fifteen minutes, is often enough to outline next steps and arrange collection."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Industries We Serve Across *the UAE*",
+      "body": [
+        "Manufacturing VFD Repair UAE is one of our most requested services, since production lines cannot tolerate extended downtime while waiting on a replacement drive. Oil and Gas  AC Drive Repair UAE  also extends to upstream and midstream facilities where VFDs control critical pumps and compressors. Process Industry VFD Repair UAE rounds out our capability for clients across water treatment, food processing, and chemical manufacturing. Factory AC Drive Repair Services extend to clients running multiple identical drives across a single production line, where staggered repair scheduling keeps at least part of the line operational throughout."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Locations *We Cover*",
+      "body": [
+        "We deliver AC Drive Repair Dubai, AC Drive Repair Sharjah, and AC Drive Repair Abu Dhabi from our Sharjah workshop, with logistics support able to arrange collection from most industrial zones within the same business day. Whether you are searching for where to repair AC drives in Dubai or need coverage across multiple emirates, our support can be scaled to match multi-site maintenance contracts."
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked *Questions*",
+      "items": [
+        {
+          "q": "Where to repair AC drives in Dubai?",
+          "a": [
+            "General Tech Automation provides AC Drive Repair Dubai from our Sharjah workshop, with same-business-day collection available across most industrial areas and an initial diagnosis issued within 24 to 48 hours."
+          ]
+        },
+        {
+          "q": "Who repairs VFDs with warranty in UAE?",
+          "a": [
+            "Our  AC Drive Repair UAE  service includes a 2 Year VFD Repair Warranty on every completed job, covering the full repair rather than just the individual parts replaced."
+          ]
+        },
+        {
+          "q": "What is the best AC drive repair company in UAE?",
+          "a": [
+            "Look for a provider offering factory-trained technicians, dynamic load testing, and a documented test report with every job, criteria General Tech Automation meets on every repair."
+          ]
+        },
+        {
+          "q": "How long does an AC drive repair take?",
+          "a": [
+            "Most standard repairs are completed within 5 to 10 business days from receipt, covering diagnosis, disassembly, board repair, firmware restoration, and final load testing, with a rush option available for urgent cases."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Local Expertise You Can *Rely On*",
+      "body": [
+        "Being headquartered in Sharjah is a logistical decision that pays off for clients: shorter collection and delivery times, a stocked inventory of common capacitors and power modules, and technicians already familiar with the servicing requirements of UAE manufacturing and process industries. Many providers claim to service all brands without the training to back it up; our Factory Trained VFD Technicians UAE hold documented manufacturer training across every brand we service, and we can produce that documentation on request for clients with strict vendor qualification requirements. This distinction matters most on larger contracts, where a client's own compliance team may ask for evidence before approving a new vendor.",
+        "The question we hear most at this stage is simply: how fast can you assess it? In most cases, the answer is 24 to 48 hours from arrival to a written diagnosis, assuming standard test access. Larger multi-drive contracts are scheduled in batches so production-critical equipment is prioritized first, keeping unplanned downtime as short as possible.",
+        "Freight logistics are handled proactively through regional partners, so drives arriving from outlying industrial areas or neighbouring emirates are not delayed by logistics once they reach our workshop. Every incoming unit is logged, tagged, and photographed on arrival, so its condition is documented before disassembly begins, and clients can request status updates at any stage of the repair without waiting for a scheduled callback.",
+        "Our engineers also coordinate with plant electricians during reinstallation, so a repaired drive is remounted and reconnected correctly the first time, avoiding a second site visit. For clients running multiple identical drives across a production line, we can pre-stage a tested spare so a failed unit can be swapped immediately while the original goes through the full repair process, keeping the line running without waiting on the entire turnaround cycle. This kind of forward planning is part of what makes our  AC Drive Repair UAE  service practical for clients who cannot absorb unplanned downtime."
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get a repair quote",
+      "heading": "Get Started With AC Drive *Repair UAE*",
+      "body": "Not every VFD fault requires board replacement, and our diagnosis will tell you which repair path actually makes sense before any parts are ordered. Contact General Tech Automation with your drive's model and fault code, and expect a written scope back within 24 to 48 hours.",
+      "actions": [
+        {
+          "label": "Call +971 6 5436933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

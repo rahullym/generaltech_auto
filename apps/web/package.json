@@ -10,7 +10,8 @@
     "start": "node ./dist/server/entry.mjs",
     "typecheck": "astro check",
     "snapshot": "node scripts/snapshot.mjs",
-    "sync:pages": "tsx scripts/sync-cms-pages.mts"
+    "sync:pages": "tsx scripts/sync-cms-pages.mts",
+    "sync:services": "node scripts/sync-services-snapshot.mjs"
   },
   "dependencies": {
     "@astrojs/node": "11.1.2",
