@@ -182,7 +182,26 @@ export const findGlobal = async <T extends Global>(
   args: Pick<FindArgs, 'depth' | 'draft'> = {},
 ): Promise<T> => {
   try {
-    return await request<T>(`/globals/${slug}${buildQuery(args)}`, args.draft)
+    const doc = await request<T>(`/globals/${slug}${buildQuery(args)}`, args.draft)
+
+    // If fetching site-settings from a live CMS whose database has not yet been
+    // updated with the approved logo assets, prefer the committed snapshot logo
+    // so the site reliably renders the brand identity.
+    if (slug === 'site-settings' && doc && !args.draft) {
+      try {
+        const snap = globalFromSnapshot<any>('site-settings')
+        if (snap?.logo) {
+          ;(doc as any).logo = snap.logo
+        }
+        if (snap?.logoInverse) {
+          ;(doc as any).logoInverse = snap.logoInverse
+        }
+      } catch {
+        // Snapshot fallback is best-effort
+      }
+    }
+
+    return doc
   } catch (error) {
     if (args.draft || !unreachable(error)) throw error
     return fallback('', error, () => globalFromSnapshot<T>(slug))
