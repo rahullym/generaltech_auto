@@ -1,0 +1,264 @@
+{
+  "order": 8,
+  "title": "Construction Industry Automation UAE",
+  "slug": "applications/construction-industry-automation-uae",
+  "navLabel": "Construction Industry Automation",
+  "meta": {
+    "title": "Construction Industry Automation UAE | Batching & Panels",
+    "description": "Construction industry automation UAE for batching plants, crushers, site distribution panels and commissioning. Site survey in 24 - 48 hours. Call GTA."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Construction Sector",
+      "heading": "Construction Industry Automation *UAE*",
+      "subheading": "Construction industry automation UAE projects keep batching plants, crushers, precast factories and site power systems running accurately and safely, often in heat, dust and vibration. General Tech Automation ( GTA ) , based in Sharjah, supports ready-mix suppliers, contractors, precast manufacturers and quarry operators with control panels, PLC programming, weighing calibration, fault diagnosis and field commissioning.",
+      "image": "engineer-tablet-plant.jpg",
+      "actions": [
+        {
+          "label": "Book a site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "heading": "What Is Construction Industry Automation?",
+      "body": [
+        "What is construction industry automation? It is the use of PLCs, weighing systems, sensors, drives and control panels to produce building materials and power construction sites with minimal manual intervention. A typical construction industry automation UAE system weighs and mixes concrete to a recipe, records every batch and controls the motors, conveyors and pumps that keep production moving. The aim is consistent quality, fewer delays and safer sites. In construction industry automation UAE projects, a batching error can mean rejected concrete on a pour, so accurate weighing and dependable control matter every day.",
+        "sensors, drives and control panels to produce building materials and power construction sites with minimal manual intervention. A typical construction industry automation UAE system weighs and mixes concrete to a recipe, records every batch and controls the motors, conveyors and pumps that keep production moving. The aim is consistent quality, fewer delays and safer sites. In construction industry automation UAE projects, a batching error can mean rejected concrete on a pour, so accurate weighing and dependable control matter every day."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Benefits of Construction Industry Automation",
+      "body": [
+        "For most plants and sites, construction industry automation UAE projects pay back through five practical gains:",
+        "Consistent mixes: recipes weigh cement, aggregates, water and admixtures the same way every batch.",
+        "Batch records: every load is printed or stored, supporting quality checks and client approvals.",
+        "Less waste: accurate dosing reduces rejected loads and excess cement use.",
+        "Fewer breakdowns: protected motors and well-built panels survive dust, heat and vibration.",
+        "Safer sites: correctly designed distribution panels and interlocks reduce electrical risk.",
+        "Where Automation Applies in Construction The table below shows where each construction industry automation UAE application usually fits.",
+        "Area Typical equipment Key automation applications Concrete production Batching plants, mixers, silos Weighing, recipe control, batch records Materials and quarrying Crushers, screens, asphalt plants Motor control, interlocks, burner and temperature control Precast and blocks Block machines, moulds, curing Machine sequencing, curing control Site power and services Distribution boards, generators, pumps Power distribution, monitoring, pump control Concrete Batching Plants Ready-mix concrete is central to construction in the Emirates. Concrete batching plant automation UAE controls aggregate feeding, cement weighing, water and admixture dosing, and mixer discharge from one screen. A batching plant control panel UAE houses the PLC, motor starters, drives and protection in a dust-resistant enclosure. Batching plant PLC programming covers recipes, sequence logic, interlocks and batch reports. Moisture sensor and admixture dosing control adjusts water to the actual moisture in the sand, keeping strength and workability consistent. Cement silo level monitoring prevents running out of cement mid-pour and alerts staff before overfilling during delivery. Batching is one of the most common construction industry automation UAE application, because every pour depends on it.",
+        "Weighing and Calibration In construction industry automation UAE projects, accurate weighing is the foundation of every batching plant. Our load cell and weighing system calibration uses certified test weights to check each scale, with results recorded on a calibration certificate. Calibration intervals follow your quality plan, and many plants check scales more often during busy periods. Concrete plant SCADA and reporting stores batch data so delivery tickets, mix designs and actual weights can be compared at any time.",
+        "Asphalt, Crushers and Aggregates Asphalt plant automation manages aggregate feeding, drum temperature, bitumen dosing and burner control. An asphalt plant control panel brings these functions into one protected cabinet. Crusher plant automation UAE controls feeders, crushers, screens and conveyors in the right start and stop order, with overload protection on every motor. An aggregate plant control panel handles motor control and interlocks for washing and screening equipment. These plants run in some of the harshest conditions any construction industry automation UAE system faces.",
+        "Precast, Blocks and Steel Processing Precast concrete plant automation sequences mould handling, concrete placing and curing. Block making machine automation controls vibration, pressing and stacking so blocks meet size and strength requirements. Rebar and steel processing machine control covers bending, cutting and feeding machines in steel yards. For these factories, construction industry automation UAE work focuses on reducing stops and keeping output consistent."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Construction Industry Automation UAE Services",
+      "body": [
+        "Site Power and Distribution Panels Construction sites depend on safe temporary power. We design and build site power distribution panels UAE and temporary power distribution boards with correct protection, earthing and rugged enclosures. Construction site generator monitoring reports fuel levels, running hours and alarms remotely, so supply problems are fixed before work stops. Dewatering pump control panel builds handle duty and standby rotation, level control and dry-run protection. Every panel built for construction industry automation UAE sites is factory-tested before dispatch. See our custom control panel design and manufacturing service.",
+        "Fault Diagnosis and Repairs Electrical fault diagnosis construction sites finds the cause of trips, failed starts and intermittent stops, from damaged cables to failed contactors. Our construction equipment VFD repair service covers drives on mixers, conveyors, pumps and hoisting equipment. In construction industry automation UAE work, quick diagnosis keeps a delayed pour from becoming a delayed project.",
+        "See our industrial repair services .",
+        "Commissioning and Building Services Field commissioning construction projects includes loop checks, motor rotation tests, panel energisation and functional testing before handover. Building services control panels cover pumps, fans, lighting and plant rooms in new buildings. MEP control panel commissioning confirms that each panel works as designed and is documented for the consultant. Clear commissioning records speed up handover on construction industry automation UAE projects.",
+        "See our commissioning and start-up service.",
+        "Upgrades and Legacy Systems Many batching and crushing plants still run old controllers with no spare parts. A batching plant control system upgrade replaces the controller, screens and software while keeping sound mechanical equipment. Our approach to construction industry automation UAE upgrades is to map existing recipes and logic first, then cut over during planned shutdowns. See our retrofit solutions ."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Timelines",
+      "heading": "Typical Project *Timelines*",
+      "intro": "These are typical ranges; a site survey confirms the actual schedule for each construction",
+      "footnote": "Lead times, permits and shutdown windows affect timelines, so we plan schedules around your access approvals.",
+      "steps": [
+        {
+          "title": "Site survey and assessment",
+          "meta": "Within 24 - 48 hours",
+          "description": "Site survey and assessment: typically completed within 24 - 48 hours."
+        },
+        {
+          "title": "Scoped proposal",
+          "meta": "2 - 5 working days after survey",
+          "description": "Scoped proposal: typically completed 2 - 5 working days after survey."
+        },
+        {
+          "title": "Weighing system calibration",
+          "meta": "1 day per plant",
+          "description": "Weighing system calibration: typically completed 1 day per plant."
+        },
+        {
+          "title": "Distribution board or dewatering panel",
+          "meta": "2 - 4 weeks",
+          "description": "Distribution board or dewatering panel: typically completed 2 - 4 weeks."
+        },
+        {
+          "title": "Batching plant control panel",
+          "meta": "4 - 8 weeks",
+          "description": "Batching plant control panel: typically completed 4 - 8 weeks."
+        },
+        {
+          "title": "Field commissioning of site panels",
+          "meta": "1 - 5 days per area",
+          "description": "Field commissioning of site panels: typically completed 1 - 5 days per area."
+        },
+        {
+          "title": "Batching plant control upgrade",
+          "meta": "1 - 3 months, phased",
+          "description": "Batching plant control upgrade: typically completed 1 - 3 months, phased."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Standards and Good Practice",
+      "body": [
+        "Low-voltage panels and distribution boards are commonly built to IEC 61439 , while machine control panels follow IEC 60204 - 1. Weighing equipment is checked with certified test weights and recorded against your quality plan. We scope every construction industry automation UAE job to the standards your consultant, client or local authority requires, and we hand over drawings, test sheets and backups."
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "Why GTA",
+      "heading": "Why Choose GTA for Construction Industry Automation UAE?",
+      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
+      "proofs": [
+        {
+          "value": "24–48h",
+          "label": "Site Assessment",
+          "sublabel": "Across all Emirates"
+        },
+        {
+          "value": "10+",
+          "label": "Years Experience",
+          "sublabel": "Multi-platform engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Tested Rigs",
+          "sublabel": "FAT before site delivery"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Rugged builds",
+          "description": "panels designed for dust, heat and vibration on real sites."
+        },
+        {
+          "title": "Batching expertise",
+          "description": "weighing, recipes and batch records handled by one team."
+        },
+        {
+          "title": "Site-ready engineers",
+          "description": "our team follows your permits, PPE and safety rules."
+        },
+        {
+          "title": "Fast assessment",
+          "description": "construction industry automation UAE site visits are typically scheduled within 24 - 48 hours."
+        },
+        {
+          "title": "Documented support",
+          "description": "every construction industry automation UAE job closes with drawings, test sheets and backups."
+        }
+      ]
+    },
+    {
+      "type": "coverage",
+      "tone": "dark",
+      "eyebrow": "UAE Coverage",
+      "heading": "Serving Dubai, Abu Dhabi, *Sharjah & Northern Emirates*",
+      "note": "Our Sharjah workshop and engineering base gives quick road access across the Emirates.",
+      "areas": [
+        {
+          "name": "Dubai",
+          "blurb": "Jebel Ali, Dubai Industrial City, Al Quoz, and logistics hubs."
+        },
+        {
+          "name": "Abu Dhabi",
+          "blurb": "ICAD, Mussafah, Kizad, and onshore process facilities."
+        },
+        {
+          "name": "Sharjah & Northern Emirates",
+          "blurb": "Hamriyah Free Zone, SAIF Zone, Sajaa, and regional plants."
+        },
+        {
+          "name": "International & EPC Partners",
+          "blurb": "In-country instrument sourcing, site acceptance testing, and lifecycle support."
+        }
+      ],
+      "body": [
+        "Our Sharjah base gives quick road access for construction industry automation UAE call-outs across the Emirates. We provide construction industry automation Dubai support for plants and sites in areas such as Jebel Ali, Al Quoz and Dubai Investments Park, and construction industry automation Abu Dhabi support for facilities in areas such as Mussafah and ICAD. Local clients use our construction industry automation Sharjah team for fast response in Sajaa, Hamriyah and Sharjah Industrial Area. International contractors working on UAE projects use us as their local construction industry automation UAE partner for panel supply, commissioning and after-sales service."
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Common questions about our construction industry automation uae capabilities in the UAE.",
+      "items": [
+        {
+          "q": "What does construction industry automation UAE work include?",
+          "a": [
+            "Construction industry automation"
+          ]
+        },
+        {
+          "q": "UAE work covers batching plant controls, weighing systems, crusher and asphalt panels, site power distribution and commissioning. Can you upgrade an old batching plant controller?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We replace obsolete controllers and software while keeping existing mixers, silos and conveyors. Do you calibrate batching plant scales?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We calibrate load cells and weighing systems with certified test weights and issue certificates. Do you build temporary site distribution boards?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "Our construction industry automation UAE team builds and tests site distribution boards and dewatering pump panels. Can you work around our pour schedule?",
+          "a": [
+            "In most cases, yes."
+          ]
+        },
+        {
+          "q": "In construction industry automation UAE projects, we plan shutdowns around pours and site access. How long does a batching plant control panel take?",
+          "a": [
+            "Most batching plant control panels take 4 - 8 weeks to design, build and test."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get in touch",
+      "heading": "Talk to a Construction Industry Automation UAE Engineer",
+      "body": "Tell us about your plant or site, your equipment and the problem you need solved. Our team will arrange a survey and return a clear scope for your construction industry automation UAE project.",
+      "actions": [
+        {
+          "label": "Call: +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

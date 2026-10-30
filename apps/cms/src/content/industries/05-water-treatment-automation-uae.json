@@ -1,0 +1,268 @@
+{
+  "order": 5,
+  "title": "Water Treatment Automation UAE",
+  "slug": "applications/water-treatment-automation-uae",
+  "navLabel": "Water Treatment Automation",
+  "meta": {
+    "title": "Water Treatment Automation UAE | RO, STP & SCADA Control",
+    "description": "Water treatment automation UAE for RO and desalination, STPs, pump stations, dosing and SCADA telemetry. Site survey in 24 - 48 hours. Call GTA today."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Water Treatment Sector",
+      "heading": "Water Treatment Automation *UAE*",
+      "subheading": "Water treatment automation UAE projects keep desalination, sewage and industrial water plants running safely around the clock, with accurate measurement, dependable control logic and clear alarms. General Tech Automation ( GTA ) , based in Sharjah, supports plant operators, facility managers, contractors and industrial sites with PLC programming, SCADA, instrumentation, control panels and telemetry.",
+      "image": "operator-control-panel.jpg",
+      "actions": [
+        {
+          "label": "Book a site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "heading": "What Is Water Treatment Automation?",
+      "body": [
+        "What is water treatment automation? It is the use of sensors, analysers, PLCs, SCADA and drives to control each treatment stage, from intake and filtration to disinfection and distribution, with minimal manual intervention. A typical water treatment automation UAE system measures flow, level, pressure and water quality, adjusts pumps and dosing automatically, and alerts operators when a value moves out of range. The aim is safe water, stable output and lower operating cost. In water treatment automation UAE plants, many sites run unmanned for long periods, so remote visibility and reliable alarms matter as much as the treatment process itself.",
+        "SCADA and drives to control each treatment stage, from intake and filtration to disinfection and distribution, with minimal manual intervention. A typical water treatment automation UAE system measures flow, level, pressure and water quality, adjusts pumps and dosing automatically, and alerts operators when a value moves out of range. The aim is safe water, stable output and lower operating cost. In water treatment automation UAE plants, many sites run unmanned for long periods, so remote visibility and reliable alarms matter as much as the treatment process itself."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Benefits of Water Treatment Automation",
+      "body": [
+        "For most sites, water treatment automation UAE projects pay back through five practical gains:",
+        "Consistent water quality: dosing and filtration respond to measurements, not fixed settings.",
+        "Lower energy use: pumps run at the speed the process needs, which is often the largest saving.",
+        "Fewer site visits: operators see every station remotely and attend only when needed.",
+        "Less chemical waste: dosing follows demand, avoiding overdosing and off-specification water.",
+        "Better records: flows, quality readings and alarms are logged automatically for reporting.",
+        "Where Automation Applies in Water Treatment Water treatment plant automation covers drinking water, wastewater and process water. The table below shows where each water treatment automation UAE application usually fits.",
+        "Plant type Typical equipment Key automation applications Desalination Intake pumps, RO trains, high-pressure pumps Membrane control, pressure monitoring, CIP Sewage and wastewater Screens, aeration blowers, clarifiers Aeration control, sludge handling, SCADA Networks Pump stations, lift stations, tanks Telemetry, level control, pump sequencing Industrial and cooling Softeners, filters, cooling towers Dosing, backwash control, water quality Desalination and Reverse Osmosis Desalinated water is central to supply across the Emirates. Desalination plant automation UAE controls intake, pretreatment, membrane trains and post-treatment as one coordinated process. A reverse osmosis plant control system manages high-pressure pump ramping, flushing and recovery rates to protect membranes. RO plant PLC programming covers start-up and shutdown sequences, trips and alarm messages. Membrane cleaning CIP automation runs cleaning cycles at the right chemical strength, temperature and time. Desalination is one of the most demanding water treatment automation UAE applications because membranes are expensive and easily damaged.",
+        "Sewage, Wastewater and Effluent Sewage treatment plant automation UAE controls screens, aeration, clarifiers and sludge handling. Aeration is usually the largest energy user, so dissolved oxygen control can cut blower power significantly. An STP control panel UAE brings motor control, interlocks and alarms into one cabinet. Wastewater treatment SCADA gives operators one view of every process unit, while effluent treatment plant automation helps industrial sites meet discharge limits. Treated water is widely reused, so TSE and irrigation water automation manages storage, filtration and distribution to irrigation networks.",
+        "Pump Stations and Networks Pump station automation UAE handles duty and standby rotation, level control and fault changeover. A lift station control panel protects pumps from dry running and high-level overflows. Remote telemetry RTU water systems send levels, flows and alarms from unmanned sites to a central screen. Water level monitoring system UAE installations cover tanks, wells and reservoirs. These networks are where water treatment automation UAE saves the most travel time for operators. See our pump station telemetry and remote tank level monitoring examples.",
+        "Industrial and District Cooling Water Factories, hotels and district cooling plants all treat water on site. District cooling water treatment automation controls cooling tower make-up, blowdown and inhibitor dosing to limit scale and corrosion. Filtration and backwash control starts backwash cycles on differential pressure or time, saving water and labour. On industrial sites, water treatment automation UAE upgrades also reduce water and chemical bills."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Water Treatment Automation UAE Services",
+      "body": [
+        "PLC Programming and SCADA Water PLC programming UAE covers new logic, modifications and fault finding on major PLC platforms. A water SCADA system UAE shows every plant and station on one screen, with trends, alarms and reports. Every change in our water treatment automation UAE work is backed up and documented before release. See our PLC programming services .",
+        "Instrumentation and Water Quality Accurate measurement is the foundation of any water treatment automation UAE system. Our flow meter commissioning UAE service verifies installation, configuration and output before a meter goes into service. Water quality analyser maintenance keeps pH, conductivity, turbidity and chlorine analysers clean, calibrated and reliable. See our measurement commissioning and start-up service.",
+        "Chemical Dosing and Disinfection A chemical dosing control system adjusts pump output to flow and measured values instead of a fixed stroke rate. Chlorine residual monitoring confirms that disinfection is effective without overdosing. In water treatment automation UAE projects, dosing control often pays for itself through lower chemical use. See our chemical dosing control example.",
+        "Drives and Energy Saving VFD pump control energy saving replaces throttled valves with variable speed, so pumps use only the energy the process needs. For many water treatment automation UAE sites, this is one of the fastest payback upgrades. See our variable speed drive retrofit example.",
+        "Upgrades and Legacy Systems Many plants still run controllers and SCADA versions that are no longer supported. A water treatment control system upgrade replaces hardware and software in phases, so treatment continues while the new system is proven. Our approach to water treatment automation UAE upgrades is to map existing functions first, then cut over during low-demand periods."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Timelines",
+      "heading": "Typical Project *Timelines*",
+      "intro": "International and regional clients often ask how long automation work takes. These are typical ranges confirmed by your site survey.",
+      "footnote": "Lead times, permits and shutdown windows affect timelines, so we plan schedules around your access approvals.",
+      "steps": [
+        {
+          "title": "Site survey and assessment",
+          "meta": "Within 24 - 48 hours",
+          "description": "Site survey and assessment: typically completed within 24 - 48 hours."
+        },
+        {
+          "title": "Scoped proposal",
+          "meta": "2 - 5 working days after survey",
+          "description": "Scoped proposal: typically completed 2 - 5 working days after survey."
+        },
+        {
+          "title": "Flow meter or analyser commissioning",
+          "meta": "1 - 2 days per site",
+          "description": "Flow meter or analyser commissioning: typically completed 1 - 2 days per site."
+        },
+        {
+          "title": "Chemical dosing control upgrade",
+          "meta": "1 - 3 weeks",
+          "description": "Chemical dosing control upgrade: typically completed 1 - 3 weeks."
+        },
+        {
+          "title": "STP or lift station control panel",
+          "meta": "3 - 6 weeks",
+          "description": "STP or lift station control panel: typically completed 3 - 6 weeks."
+        },
+        {
+          "title": "Pump station telemetry rollout",
+          "meta": "2 - 8 weeks, by station count",
+          "description": "Pump station telemetry rollout: typically completed 2 - 8 weeks, by station count."
+        },
+        {
+          "title": "SCADA system for one plant",
+          "meta": "6 - 12 weeks",
+          "description": "SCADA system for one plant: typically completed 6 - 12 weeks."
+        },
+        {
+          "title": "Control system upgrade",
+          "meta": "2 - 6 months, phased",
+          "description": "Control system upgrade: typically completed 2 - 6 months, phased."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Standards and Good Practice",
+      "body": [
+        "Drinking water projects commonly reference the World Health Organization guidelines for drinking-water quality, while control system security follows IEC 62443 . We scope every water treatment automation UAE job to the standards your utility, authority or client applies, and we hand over drawings, backups and test records."
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "Why GTA",
+      "heading": "Why Choose GTA for Water Treatment Automation UAE?",
+      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
+      "proofs": [
+        {
+          "value": "24–48h",
+          "label": "Site Assessment",
+          "sublabel": "Across all Emirates"
+        },
+        {
+          "value": "10+",
+          "label": "Years Experience",
+          "sublabel": "Multi-platform engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Tested Rigs",
+          "sublabel": "FAT before site delivery"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Measurement expertise",
+          "description": "flow, level and analyser work is done by the same team that programs the control system."
+        },
+        {
+          "title": "Remote-site experience",
+          "description": "telemetry and alarm design for unmanned stations."
+        },
+        {
+          "title": "Energy focus",
+          "description": "we look for pump and blower savings in every survey."
+        },
+        {
+          "title": "Fast assessment",
+          "description": "water treatment automation UAE site visits are typically scheduled within 24 - 48 hours."
+        },
+        {
+          "title": "Documented support",
+          "description": "every water treatment automation UAE job closes with backups and records your operators can use."
+        }
+      ]
+    },
+    {
+      "type": "coverage",
+      "tone": "dark",
+      "eyebrow": "UAE Coverage",
+      "heading": "Serving Dubai, Abu Dhabi, *Sharjah & Northern Emirates*",
+      "note": "Our Sharjah workshop and engineering base gives quick road access across the Emirates.",
+      "areas": [
+        {
+          "name": "Dubai",
+          "blurb": "Jebel Ali, Dubai Industrial City, Al Quoz, and logistics hubs."
+        },
+        {
+          "name": "Abu Dhabi",
+          "blurb": "ICAD, Mussafah, Kizad, and onshore process facilities."
+        },
+        {
+          "name": "Sharjah & Northern Emirates",
+          "blurb": "Hamriyah Free Zone, SAIF Zone, Sajaa, and regional plants."
+        },
+        {
+          "name": "International & EPC Partners",
+          "blurb": "In-country instrument sourcing, site acceptance testing, and lifecycle support."
+        }
+      ],
+      "body": [
+        "Our Sharjah base gives quick road access for water treatment automation UAE call-outs across the Emirates. We provide water treatment automation Dubai support for plants, communities and industrial sites, and water treatment automation Abu Dhabi support for facilities in areas such as KEZAD, Mussafah and ICAD. Local clients use our water treatment automation Sharjah team for fast response in Sajaa, Hamriyah and Sharjah Industrial Area. International contractors working in the UAE use us as their local water treatment automation UAE partner for commissioning support and after-sales service."
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Common questions about our water treatment automation uae capabilities in the UAE.",
+      "items": [
+        {
+          "q": "What does water treatment automation UAE work include?",
+          "a": [
+            "Water treatment automation"
+          ]
+        },
+        {
+          "q": "UAE work covers the instruments, PLCs, SCADA, panels and telemetry that control and monitor drinking water, wastewater and process water systems. Do you work on RO and desalination plants?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "Our water treatment automation UAE team supports RO control, high-pressure pump sequencing, membrane cleaning and instrumentation. Can you connect unmanned pump stations to one screen?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We install RTUs or wireless telemetry that bring levels, flows and alarms to a central SCADA. Can you reduce our pumping energy costs?",
+          "a": [
+            "Often, yes."
+          ]
+        },
+        {
+          "q": "Variable speed drives and better control logic usually cut pump energy where flow varies. Can you upgrade an old control system without stopping treatment?",
+          "a": [
+            "In most cases, yes."
+          ]
+        },
+        {
+          "q": "In water treatment automation UAE projects, we migrate in phases during low-demand periods. How long does a pump station telemetry project take?",
+          "a": [
+            "Most telemetry projects take 2 - 8 weeks, depending on the number of stations."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get in touch",
+      "heading": "Talk to a Water Treatment Automation UAE Engineer",
+      "body": "Tell us about your plant, your network and the problem you need solved. Our team will arrange a survey and return a clear scope for your water treatment automation UAE project.",
+      "actions": [
+        {
+          "label": "Call: +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

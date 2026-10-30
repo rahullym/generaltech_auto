@@ -66,61 +66,81 @@ export const applicationsPage = (media: MediaResolver): SeededPage => ({
           name: 'Oil and Gas Automation Applications UAE',
           iconName: 'oil',
           description:
-            'Oil and gas sites depend on accurate, compliant measurement and control systems, from custody transfer metering to SCADA integration. Oil and gas automation applications UAE here cover instrumentation commissioning, control panel work, and measurement accuracy — areas where a fault can shut down production for hours rather than minutes.',
+            'Oil and gas sites depend on accurate, compliant measurement and control systems, from custody transfer metering to SCADA integration. Oil and gas automation applications UAE here cover instrumentation commissioning, control panel work, and measurement accuracy.',
+          href: '/applications/oil-and-gas-automation-uae',
+          linkLabel: 'Explore oil and gas automation',
         },
         {
           name: 'Automotive Manufacturing Automation Applications',
           iconName: 'automotive',
           description:
-            'Automotive production lines run on CNC machining, servo-driven robotics, and PLC-controlled assembly stations. Automotive manufacturing automation applications supported here include CNC control repair, servo motor and drive maintenance, and panel troubleshooting to keep tight production tolerances intact.',
+            'Automotive lines run on CNC machining, servo-driven robots and PLC-controlled assembly. Supported with CNC control repair, servo motor maintenance, and panel troubleshooting.',
+          href: '/applications/automotive-manufacturing-automation-uae',
+          linkLabel: 'Explore automotive manufacturing automation',
         },
         {
           name: 'Pharmaceutical Industry Automation Applications',
           iconName: 'pharma',
           description:
-            'Pharmaceutical industry automation applications require documented, repeatable control processes. Support covers instrumentation calibration, PLC programming, and control system repair, with the fault-reporting and documentation practices pharmaceutical compliance requires.',
+            'Pharmaceutical plants need documented, repeatable control and audit-ready records. Support covers instrumentation calibration, PLC programming, and control system repair.',
+          href: '/applications/pharmaceutical-automation-uae',
+          linkLabel: 'Explore pharmaceutical automation',
         },
         {
           name: 'Food and Beverage Automation Applications UAE',
           iconName: 'beverage',
           description:
-            'Hygiene-rated equipment and continuous-run production lines define this sector. Food and beverage automation applications UAE covered here include VFD and servo drive maintenance, PLC troubleshooting, and panel design suited to washdown environments.',
+            'Hygienic, continuous-run lines need reliable drives, washdown panels and recorded temperatures. Covered with VFD and servo drive maintenance, and CIP monitoring.',
+          href: '/applications/food-and-beverage-automation-uae',
+          linkLabel: 'Explore food and beverage automation',
         },
         {
           name: 'Water Treatment Automation Applications',
           iconName: 'water',
           description:
-            'Water treatment automation applications rely on accurate flow measurement and dependable control logic. Work here includes measurement commissioning, SCADA integration, and instrumentation support for treatment plant operations.',
+            'Accurate flow measurement and dependable control logic for desalination, STPs and pump stations. Work includes measurement commissioning and SCADA integration.',
+          href: '/applications/water-treatment-automation-uae',
+          linkLabel: 'Explore water treatment automation',
         },
         {
           name: 'Power Generation Automation Applications',
           iconName: 'power',
           description:
-            'Power plants need control systems that fail safely and recover fast. Power generation automation applications supported include control panel repair, PLC maintenance, and preventive electrical maintenance to reduce unplanned outages.',
+            'Control systems that fail safely and recover fast, from generator panels to solar SCADA. Supported with control panel repair, AMF panels, and preventive maintenance.',
+          href: '/applications/power-generation-automation-uae',
+          linkLabel: 'Explore power generation automation',
         },
         {
           name: 'Logistics and Warehousing Automation Applications',
           iconName: 'logistics',
           description:
-            'Conveyor systems, sorting equipment, and automated storage rely on synchronized drives and controls. Logistics and warehousing automation applications covered include VFD repair, PLC programming, and control panel troubleshooting for continuous-run facilities.',
+            'Conveyors, sorters and storage systems that keep goods moving through every shift and peak season. Covered with VFD repair, PLC programming, and drive support.',
+          href: '/applications/logistics-and-warehouse-automation-uae',
+          linkLabel: 'Explore logistics and warehouse automation',
         },
         {
           name: 'Construction Industry Automation Applications',
           iconName: 'construction',
           description:
-            'Construction industry automation applications include automated batching plants and site power distribution panels, supported through custom panel design, electrical fault diagnosis, and field commissioning.',
+            'Automated batching plants, crusher controls and site power panels built for dust, heat and vibration. Supported through panel design, fault diagnosis, and commissioning.',
+          href: '/applications/construction-industry-automation-uae',
+          linkLabel: 'Explore construction industry automation',
         },
         {
           name: 'Petrochemical Automation Applications UAE',
           iconName: 'chemical',
           description:
-            'Petrochemical facilities combine high-precision measurement with strict safety requirements. Petrochemical automation applications UAE supported include gas measurement skid commissioning, control system repair, and instrumentation compliance checks.',
+            'High-precision measurement and strict safety control for polymer, fertilizer and chemical plants. Supported with analyser maintenance, SIS testing, and DCS migration.',
+          href: '/applications/petrochemical-automation-uae',
+          linkLabel: 'Explore petrochemical automation',
         },
         {
           name: 'Manufacturing Plant Automation Applications',
           iconName: 'factory',
           description:
-            "General manufacturing plant automation applications span CNC machine repair, PLC troubleshooting, servo and drive maintenance, and automation solutions tailored to each production line's specific machinery mix.",
+            "Automation tailored to each line's machinery mix, from PLC troubleshooting to drive maintenance. Spanning CNC repair, servo maintenance, and line upgrades.",
+          href: '/applications/manufacturing-plant-automation-uae',
+          linkLabel: 'Explore manufacturing plant automation',
         },
       ],
     },

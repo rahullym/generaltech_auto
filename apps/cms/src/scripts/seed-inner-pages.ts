@@ -292,6 +292,7 @@ const run = async () => {
   // --- The pages -----------------------------------------------------------
   const services = await readAll('services')
   const applications = await readAll('applications')
+  const industries = await readAll('industries')
 
   for (const service of services) {
     await upsert(service, {
@@ -314,6 +315,12 @@ const run = async () => {
         cardImage: await media(application.cardImage),
         sectors: (application.sectors ?? []).map((name: string) => ({ name })),
       },
+    })
+  }
+
+  for (const industry of industries) {
+    await upsert(industry, {
+      kind: 'page',
     })
   }
 

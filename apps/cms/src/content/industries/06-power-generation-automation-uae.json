@@ -1,0 +1,266 @@
+{
+  "order": 6,
+  "title": "Power Generation Automation UAE",
+  "slug": "applications/power-generation-automation-uae",
+  "navLabel": "Power Generation Automation",
+  "meta": {
+    "title": "Power Generation Automation UAE | Generator & PLC Control",
+    "description": "Power generation automation UAE for generator, AMF and synchronisation panels, PLC, SCADA and solar monitoring. Site survey in 24 - 48 hours. Call GTA."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Power Generation Sector",
+      "heading": "Power Generation Automation *UAE*",
+      "subheading": "Power generation automation UAE projects keep generators, turbines, solar plants and their control panels running safely, recovering quickly from faults and failing in a safe state when something goes wrong. General Tech Automation ( GTA ) , based in Sharjah, supports captive power plants, facility managers, contractors and industrial sites with control panel repair, PLC programming, monitoring systems and preventive maintenance.",
+      "image": "operator-control-panel.jpg",
+      "actions": [
+        {
+          "label": "Book a site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "board-repair.jpg",
+      "mediaPosition": "right",
+      "heading": "What Is Power Generation Automation?",
+      "body": [
+        "What is power generation automation? It is the use of controllers, protection devices, sensors and software to start, synchronise, load, monitor and protect generating equipment with minimal manual intervention. A typical power generation automation UAE system starts generators on demand, shares load between units, sheds non-essential loads during faults and records every event for review. The aim is reliable supply, safe operation and lower fuel cost. At power generation automation UAE sites, an outage can stop a factory, a hospital wing or a data centre within seconds, so control systems must be dependable and well maintained.",
+        "devices, sensors and software to start, synchronise, load, monitor and protect generating equipment with minimal manual intervention. A typical power generation automation UAE system starts generators on demand, shares load between units, sheds non-essential loads during faults and records every event for review. The aim is reliable supply, safe operation and lower fuel cost. At power generation automation UAE sites, an outage can stop a factory, a hospital wing or a data centre within seconds, so control systems must be dependable and well maintained."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Benefits of Power Generation Automation",
+      "body": [
+        "For most sites, power generation automation UAE projects pay back through five practical gains:",
+        "Higher availability: automatic start, changeover and restart reduce the time a site spends without power.",
+        "Safer operation: interlocks and protection prevent unsafe switching and equipment damage.",
+        "Lower fuel use: load sharing runs the right number of generators at efficient loading.",
+        "Fewer surprises: monitoring warns of rising temperatures, vibration or battery faults before they cause a trip.",
+        "Clear records: events, alarms and running hours are logged automatically for maintenance and reporting.",
+        "Where Automation Applies in Power Generation Power plant automation UAE covers conventional plants, standby systems and renewables. The table below shows where each power generation automation UAE application usually fits.",
+        "Plant type Typical equipment Key automation applications Captive and standby power Diesel and gas generator sets Synchronisation, AMF, load sharing Thermal and CHP plants Gas turbines, boilers, heat recovery Auxiliary control, instrumentation, PMS Solar and storage PV inverters, batteries, transformers SCADA, monitoring, energy management Distribution Switchgear, UPS, transformers Monitoring, protection support, maintenance Generator Sets and Synchronisation Most industrial sites and buildings rely on generator sets for backup or prime power. A generator control panel UAE handles starting, stopping, protection and alarms for each set. A generator synchronization panel UAE matches voltage, frequency and phase before closing a breaker, so several sets can run in parallel. An AMF panel UAE (automatic mains failure) starts the generator and transfers load when grid supply is lost, then returns it when supply is restored. Load sharing and load shedding control keeps units evenly loaded and drops non-essential loads to protect critical supply. A diesel generator monitoring system reports fuel level, running hours, battery condition and alarms remotely. Generator panels are a common power generation automation UAE request on industrial sites.",
+        "Captive and Thermal Power Plants Captive power plant automation serves factories, desalination sites and industrial zones that generate their own electricity. A power plant control system coordinates generators, auxiliaries and distribution, while a power management system UAE ( PMS ) controls start-up, load demand and blackout recovery. Gas turbine auxiliary control covers lube oil, fuel, cooling and ventilation systems that support the main turbine controls. Waste heat recovery boiler control manages drum level, steam pressure and dampers to turn exhaust heat into useful energy. These plants are where power generation automation UAE has the greatest effect on fuel cost.",
+        "Solar and Battery Storage The UAE has invested heavily in solar generation, from utility-scale parks to rooftop systems. A solar PV plant SCADA UAE brings inverters, weather stations, meters and alarms onto one screen, showing output and faults in real time. Battery energy storage control manages charging, discharging and protection so stored energy is available when needed. In power generation automation UAE projects that combine solar, storage and generators, control logic decides which source supplies the load at any moment."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Power Generation Automation UAE Services",
+      "body": [
+        "PLC Programming and SCADA Power plant PLC programming UAE covers new logic, modifications and fault finding for generator, auxiliary and switching systems. A power plant SCADA system shows generation, load, alarms and trends with reports for each shift. Every change in our power generation automation UAE work is backed up and documented before release. See our PLC programming services .",
+        "Control Panel Repair and Upgrades Control panel repair power plant work finds and fixes failed relays, controllers, terminals and wiring that cause trips or failed starts, a common reason for power generation automation UAE call-outs. Many sites still run panels and controllers that are no longer supported. A power plant control system upgrade replaces them in phases, so supply continues while the new system is proven. See our custom control panel design and manufacturing and retrofit solutions .",
+        "Maintenance, Testing and UPS Support Preventive electrical maintenance power plants include thermal imaging, terminal tightening, cleaning and functional tests of control circuits. Protection relay testing support checks that relays and trip circuits operate as designed, working alongside your protection engineers. UPS maintenance for power plants keeps control systems and critical loads supplied during changeover. Switchgear monitoring tracks breaker operations, temperatures and alarms. For power generation automation UAE sites, planned maintenance prevents far more outages than emergency repair. See our AMC services for panels, VFDs, UPS and servo drives .",
+        "Instrumentation and Condition Monitoring Power plant instrumentation services cover pressure, temperature, flow and level instruments on fuel, cooling and steam systems. Turbine and generator condition monitoring uses vibration and temperature sensors to warn of bearing and alignment problems weeks before failure. Power quality monitoring records voltage, harmonics and frequency events so the cause of trips can be found. Accurate data is the foundation of any power generation automation UAE system. See our condition monitoring and energy and power monitoring examples."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Timelines",
+      "heading": "Typical Project *Timelines*",
+      "intro": "International and regional clients often ask how long automation work takes. These are typical ranges confirmed by your site survey.",
+      "footnote": "Summer is peak demand for cooling and power, so we plan power generation automation UAE",
+      "steps": [
+        {
+          "title": "Site survey and assessment",
+          "meta": "Within 24 - 48 hours",
+          "description": "Site survey and assessment: typically completed within 24 - 48 hours."
+        },
+        {
+          "title": "Scoped proposal",
+          "meta": "2 - 5 working days after survey",
+          "description": "Scoped proposal: typically completed 2 - 5 working days after survey."
+        },
+        {
+          "title": "Control panel fault diagnosis",
+          "meta": "1 - 2 days on site",
+          "description": "Control panel fault diagnosis: typically completed 1 - 2 days on site."
+        },
+        {
+          "title": "Preventive maintenance visit",
+          "meta": "1 - 3 days per site",
+          "description": "Preventive maintenance visit: typically completed 1 - 3 days per site."
+        },
+        {
+          "title": "AMF or generator control panel",
+          "meta": "3 - 6 weeks",
+          "description": "AMF or generator control panel: typically completed 3 - 6 weeks."
+        },
+        {
+          "title": "Synchronisation and load sharing panel",
+          "meta": "6 - 10 weeks",
+          "description": "Synchronisation and load sharing panel: typically completed 6 - 10 weeks."
+        },
+        {
+          "title": "Solar PV or storage SCADA",
+          "meta": "4 - 10 weeks",
+          "description": "Solar PV or storage SCADA: typically completed 4 - 10 weeks."
+        },
+        {
+          "title": "Control system upgrade",
+          "meta": "2 - 6 months, phased",
+          "description": "Control system upgrade: typically completed 2 - 6 months, phased."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Standards and Good Practice",
+      "body": [
+        "Generator set performance is commonly specified to ISO 8528, while PLC software follows IEC 61131 - 3 and control system security follows IEC 62443 . Substation communication often uses IEC 61850 . We scope every power generation automation UAE job to the standards your utility, consultant or client applies, and we hand over drawings, backups and test records."
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "Why GTA",
+      "heading": "Why Choose GTA for Power Generation Automation UAE?",
+      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
+      "proofs": [
+        {
+          "value": "24–48h",
+          "label": "Site Assessment",
+          "sublabel": "Across all Emirates"
+        },
+        {
+          "value": "10+",
+          "label": "Years Experience",
+          "sublabel": "Multi-platform engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Tested Rigs",
+          "sublabel": "FAT before site delivery"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Control and electrical in one team",
+          "description": "panel, PLC and instrument faults are diagnosed together."
+        },
+        {
+          "title": "Safe working practice",
+          "description": "isolation, permits and lock-out procedures are followed on every job."
+        },
+        {
+          "title": "Repair before replace",
+          "description": "we recommend upgrades only when repair no longer makes sense."
+        },
+        {
+          "title": "Fast assessment",
+          "description": "power generation automation UAE site visits are typically scheduled within 24 - 48 hours."
+        },
+        {
+          "title": "Documented support",
+          "description": "every power generation automation UAE job closes with backups and records your engineers can use."
+        }
+      ]
+    },
+    {
+      "type": "coverage",
+      "tone": "dark",
+      "eyebrow": "UAE Coverage",
+      "heading": "Serving Dubai, Abu Dhabi, *Sharjah & Northern Emirates*",
+      "note": "Our Sharjah workshop and engineering base gives quick road access across the Emirates.",
+      "areas": [
+        {
+          "name": "Dubai",
+          "blurb": "Jebel Ali, Dubai Industrial City, Al Quoz, and logistics hubs."
+        },
+        {
+          "name": "Abu Dhabi",
+          "blurb": "ICAD, Mussafah, Kizad, and onshore process facilities."
+        },
+        {
+          "name": "Sharjah & Northern Emirates",
+          "blurb": "Hamriyah Free Zone, SAIF Zone, Sajaa, and regional plants."
+        },
+        {
+          "name": "International & EPC Partners",
+          "blurb": "In-country instrument sourcing, site acceptance testing, and lifecycle support."
+        }
+      ],
+      "body": [
+        "Our Sharjah base gives quick road access for power generation automation UAE call-outs across the Emirates. We provide power generation automation Dubai support for industrial plants, data centres and buildings, and power generation automation Abu Dhabi support for facilities in areas such as KEZAD, Mussafah and ICAD. Local clients use our power generation automation Sharjah team for fast response in Sajaa, Hamriyah and Sharjah Industrial Area. International developers and contractors working in the UAE use us as their local power generation automation UAE partner for commissioning support and after-sales service."
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Common questions about our power generation automation uae capabilities in the UAE.",
+      "items": [
+        {
+          "q": "What does power generation automation UAE work include?",
+          "a": [
+            "Power generation automation"
+          ]
+        },
+        {
+          "q": "UAE work covers the controllers, panels, instruments, SCADA and monitoring that start, protect and manage generating equipment. Do you build AMF and synchronisation panels?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We design, build and factory-test AMF, generator control and synchronisation panels for power generation automation UAE projects. Can you connect generators and solar to one SCADA screen?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We integrate generators, inverters, meters and batteries into one monitoring system. Do you offer preventive maintenance contracts?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "Our power generation automation UAE team offers planned maintenance for panels, UPS systems and drives. Can you upgrade a control system without losing supply?",
+          "a": [
+            "In most cases, yes."
+          ]
+        },
+        {
+          "q": "In power generation automation UAE projects, we migrate in phases during planned low-load periods. How long does an AMF panel take to deliver?",
+          "a": [
+            "Most AMF panels take 3 - 6 weeks to design, build and test, depending on rating and options."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get in touch",
+      "heading": "Talk to a Power Generation Automation UAE Engineer",
+      "body": "Tell us about your site, your generating equipment and the problem you need solved. Our team will arrange a survey and return a clear scope for your power generation automation UAE project.",
+      "actions": [
+        {
+          "label": "Call: +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

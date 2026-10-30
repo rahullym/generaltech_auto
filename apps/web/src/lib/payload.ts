@@ -147,6 +147,18 @@ export const findBySlug = async <T>(
 
   let doc = result.docs[0] ?? null
 
+  // If the live CMS does not have the page yet, fall back to the committed snapshot.
+  if (!doc && !args.draft) {
+    try {
+      const snapResult = findInSnapshot<T>(collection, { where: { slug: { equals: slug } }, limit: 1 })
+      if (snapResult.docs[0]) {
+        doc = snapResult.docs[0]
+      }
+    } catch {
+      // Snapshot fallback is best-effort
+    }
+  }
+
   // If fetching a page (e.g. 'home' or 'brands') from a live CMS whose database has
   // not yet been seeded with newly added partner logos, fall back to / supplement
   // with the committed snapshot's logoWall block so the site is never missing brands.

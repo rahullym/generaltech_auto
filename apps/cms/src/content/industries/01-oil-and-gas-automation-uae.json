@@ -1,0 +1,267 @@
+{
+  "order": 1,
+  "title": "Oil and Gas Automation UAE",
+  "slug": "applications/oil-and-gas-automation-uae",
+  "navLabel": "Oil and Gas Automation",
+  "meta": {
+    "title": "Oil and Gas Automation UAE | Expert Control & SCADA | GTA",
+    "description": "Oil and gas automation UAE experts for SCADA, custody transfer metering, ESD and hazardous-area panels. Get a site survey in 24 - 48 hours. Call GTA today."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Oil & Gas Sector",
+      "heading": "Oil and Gas Automation *UAE*",
+      "subheading": "Oil and gas automation UAE projects need control systems that measure accurately, shut down safely and keep running through 50 °C summers, sand and salt-laden air. General Tech Automation ( GTA ) , based in Sharjah, supports operators, EPC contractors and maintenance teams with instrumentation, metering, SCADA, safety logic and hazardous-area control panels.",
+      "image": "oil-refinery.jpg",
+      "actions": [
+        {
+          "label": "Book a site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "heading": "What Is Oil and Gas Automation?",
+      "body": [
+        "What is oil and gas automation? It is the use of field instruments, controllers and software to measure, control and protect hydrocarbon processes with minimal manual intervention. A typical oil and gas automation UAE system combines pressure, flow, level and temperature transmitters, PLC or DCS control logic, SCADA screens for remote visibility, and safety systems that bring the process to a safe state when limits are exceeded. The goal is fewer manual readings, faster fault detection and audit-ready measurement. On oil and gas automation UAE sites, accuracy and uptime carry real financial weight, because one metering error or unplanned shutdown can cost far more than the system that would have prevented it.",
+        "software to measure, control and protect hydrocarbon processes with minimal manual intervention. A typical oil and gas automation UAE system combines pressure, flow, level and temperature transmitters, PLC or DCS control logic, SCADA screens for remote visibility, and safety systems that bring the process to a safe state when limits are exceeded. The goal is fewer manual readings, faster fault detection and audit-ready measurement. On oil and gas automation UAE sites, accuracy and uptime carry real financial weight, because one metering error or unplanned shutdown can cost far more than the system that would have prevented it."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Upstream, Midstream and Downstream Automation",
+      "body": [
+        "Upstream midstream downstream automation differs in scale and focus, but the building blocks stay the same. The table below shows where each oil and gas automation UAE application usually fits.",
+        "Segment Typical sites Key automation applications Upstream Wellheads, gathering stations, offshore platforms Wellhead control panels, remote telemetry, ESD, wireless instruments Midstream Pipelines, pump stations, storage terminals Pipeline SCADA, pressure monitoring, custody transfer metering Downstream Refineries, gas processing, distribution depots DCS control, safety instrumented systems, tank farm automation Upstream: Oilfield and Wellhead Automation Oilfield automation UAE projects focus on remote sites where staff visits are costly and infrequent. For upstream oil and gas automation UAE scopes, we supply wellhead control panel UAE solutions for hydraulic and pneumatic shutdown, plus RTU telemetry that sends pressure and flow data to a central control room. Our offshore instrumentation services UAE cover installation support, loop checks and fault finding on equipment exposed to humidity and salt.",
+        "Midstream: Pipelines, Terminals and Storage Pipelines and terminals depend on continuous visibility. A pipeline SCADA system UAE connects block valve stations, pump stations and metering points onto one screen, with alarms for pressure loss or abnormal flow. Tank farm automation UAE adds level gauging, overfill protection and inventory reporting, which makes it a common midstream oil and gas automation UAE upgrade. For tank-specific needs, see our remote tank level monitoring application.",
+        "Downstream: Processing and Distribution Refineries and gas processing plants rely on DCS for oil and gas plants UAE to run continuous, tightly coupled process units. Here, oil and gas automation UAE work centres on control loop tuning, alarm management and the interfaces between the DCS, safety systems and package controllers."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Oil and Gas Automation UAE Services",
+      "body": [
+        "Instrumentation and Commissioning Our oil and gas instrumentation services UAE cover supply, installation support, calibration and troubleshooting of transmitters, analysers and control valves. Because sites contain flammable atmospheres, every device must suit its zone, so our hazardous area instrumentation UAE work checks certification, cable glands and installation practice. As an Emerson-focused supplier, we support Emerson Rosemount oil and gas UAE transmitters alongside partner brands. Oil and gas instrumentation commissioning UAE includes loop checks, function tests and start- up support, and it is often the stage where oil and gas automation UAE faults are cheapest to fix. Full details are on our measurement commissioning and start-up service page.",
+        "Custody Transfer and Fiscal Metering When oil or gas changes ownership, the measurement becomes an invoice. Custody transfer metering UAE systems must therefore be accurate, traceable and auditable. We support fiscal metering system UAE projects covering meters, provers and the flow computers that calculate corrected volumes. Our flow computer services UAE include configuration checks, audit trail reviews and fault diagnosis, while metering skid commissioning UAE verifies that a new skid measures correctly before it enters service. Few tasks in oil and gas automation UAE work carry more direct commercial impact.",
+        "Control Systems: SCADA, PLC and DCS Reliable oil and gas control systems UAE start with a clear control philosophy and well-structured logic. On oil and gas automation UAE projects, our engineers configure SCADA for oil and gas UAE sites, including HMI screens, alarm handling and historian connections. Oil and gas PLC programming UAE covers sequence logic, interlocks and communication with field devices over Modbus, HART and Ethernet. For broader platform work, see our PLC programming services .",
+        "Safety Systems: ESD and SIS In oil and gas automation UAE projects, safety logic carries the highest responsibility. An emergency shutdown system UAE isolates equipment and depressurises the process when a hazard is detected. A safety instrumented system UAE goes further, with each safety function designed to a defined reliability target. We support testing, documentation and modification of these systems under your site's management-of-change procedure. Related coverage is on our gas detection and area monitoring page.",
+        "Hazardous-Area Control Panels GTA is an oil and gas control panel manufacturer UAE clients rely on for practical, maintainable builds. We design and fabricate hazardous area control panels UAE for classified zones. Where an enclosure sits inside the hazardous zone, an explosion proof control panel UAE uses certified Ex d (flameproof) enclosures, or Ex e (increased safety) enclosures where the design allows. Every panel we build for oil and gas automation UAE projects is factory-tested before dispatch. See our custom control panel design and manufacturing service.",
+        "Upgrades and Legacy Migration Many plants still run unsupported controllers. An oil and gas control system upgrade UAE replaces obsolete hardware in phases, so production keeps running while the new platform is proven. Our approach to oil and gas automation UAE migrations is to map existing logic first, then cut over loop by loop during planned shutdown windows."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Timelines",
+      "heading": "Typical Project *Timelines*",
+      "intro": "International and regional clients often ask how long automation work takes. These are typical ranges confirmed by your site survey.",
+      "footnote": "Lead times, permits and shutdown windows affect timelines, so we plan oil and gas automation",
+      "steps": [
+        {
+          "title": "Initial response to an enquiry",
+          "meta": "Within 1 working day",
+          "description": "Initial response to an enquiry: typically completed within 1 working day."
+        },
+        {
+          "title": "Site survey and assessment",
+          "meta": "Within 24 - 48 hours",
+          "description": "Site survey and assessment: typically completed within 24 - 48 hours."
+        },
+        {
+          "title": "Scoped proposal",
+          "meta": "2 - 5 working days after survey",
+          "description": "Scoped proposal: typically completed 2 - 5 working days after survey."
+        },
+        {
+          "title": "Instrument loop checks (per unit)",
+          "meta": "1 - 3 days",
+          "description": "Instrument loop checks (per unit): typically completed 1 - 3 days."
+        },
+        {
+          "title": "Metering skid commissioning",
+          "meta": "3 - 7 days",
+          "description": "Metering skid commissioning: typically completed 3 - 7 days."
+        },
+        {
+          "title": "Control panel design and build",
+          "meta": "3 - 8 weeks",
+          "description": "Control panel design and build: typically completed 3 - 8 weeks."
+        },
+        {
+          "title": "PLC or SCADA configuration",
+          "meta": "2 - 6 weeks",
+          "description": "PLC or SCADA configuration: typically completed 2 - 6 weeks."
+        },
+        {
+          "title": "Control system migration",
+          "meta": "1 - 6 months, phased",
+          "description": "Control system migration: typically completed 1 - 6 months, phased."
+        },
+        {
+          "title": "Breakdown call-out ( UAE sites)",
+          "meta": "Within 24 - 48 hours",
+          "description": "Breakdown call-out ( UAE sites): typically completed within 24 - 48 hours."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Standards and Compliance",
+      "body": [
+        "Regional projects typically reference IEC standards such as IEC 61511 for safety instrumented systems and IEC 60079 for hazardous-area equipment, along with ATEX/IECEx certification and the API Manual of Petroleum Measurement Standards ( MPMS ) . We scope every oil and gas automation UAE job to the standards your site or operator applies, and we hand over test records, loop sheets and calibration certificates."
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "Why GTA",
+      "heading": "Why Choose GTA for Oil and Gas Automation UAE?",
+      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
+      "proofs": [
+        {
+          "value": "24–48h",
+          "label": "Site Assessment",
+          "sublabel": "Across all Emirates"
+        },
+        {
+          "value": "10+",
+          "label": "Years Experience",
+          "sublabel": "Multi-platform engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Tested Rigs",
+          "sublabel": "FAT before site delivery"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "One team, end to end",
+          "description": "the engineers who survey your site also commission it, so nothing is lost in handover."
+        },
+        {
+          "title": "Factory-trained on multiple platforms",
+          "description": "covering major DCS and PLC families."
+        },
+        {
+          "title": "Fast assessment",
+          "description": "oil and gas automation UAE site visits are typically scheduled within 24 - 48 hours of enquiry."
+        },
+        {
+          "title": "Honest scoping",
+          "description": "we recommend repair or upgrade based on the plant, not on what is easiest to sell."
+        },
+        {
+          "title": "Documentation you can audit",
+          "description": "every oil and gas automation UAE project closes with records that support your compliance and maintenance teams."
+        }
+      ]
+    },
+    {
+      "type": "coverage",
+      "tone": "dark",
+      "eyebrow": "UAE Coverage",
+      "heading": "Serving Dubai, Abu Dhabi, *Sharjah & Northern Emirates*",
+      "note": "Our Sharjah workshop and engineering base gives quick road access across the Emirates.",
+      "areas": [
+        {
+          "name": "Dubai",
+          "blurb": "Jebel Ali, Dubai Industrial City, Al Quoz, and logistics hubs."
+        },
+        {
+          "name": "Abu Dhabi",
+          "blurb": "ICAD, Mussafah, Kizad, and onshore process facilities."
+        },
+        {
+          "name": "Sharjah & Northern Emirates",
+          "blurb": "Hamriyah Free Zone, SAIF Zone, Sajaa, and regional plants."
+        },
+        {
+          "name": "International & EPC Partners",
+          "blurb": "In-country instrument sourcing, site acceptance testing, and lifecycle support."
+        }
+      ],
+      "body": [
+        "Our Sharjah base gives quick road access for oil and gas automation UAE call-outs across the Emirates. We deliver oil and gas automation Dubai support for terminals, depots and Jebel Ali facilities, and oil and gas automation Abu Dhabi support for onshore fields, gas plants and industrial zones, where most of the country's reserves are located. Local clients use our oil and gas automation Sharjah team for fast call-outs at Hamriyah and Sajaa sites. International operators and EPC contractors use us as their local oil and gas automation UAE partner for in-country instrument sourcing, site acceptance tests and after-sales support."
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Common questions about our oil and gas automation uae capabilities in the UAE.",
+      "items": [
+        {
+          "q": "What does oil and gas automation UAE work include?",
+          "a": [
+            "Oil and gas automation"
+          ]
+        },
+        {
+          "q": "UAE work covers the instruments, control systems, metering and safety logic that run and protect oil and gas facilities in the Emirates, from wellheads to distribution depots. Do you work on onshore and offshore sites?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "Our oil and gas automation UAE team supports onshore plants and offshore facilities, subject to the operator's permits and site access requirements. Can you commission custody transfer metering skids?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We commission and troubleshoot metering skids and flow computers, and provide records suitable for audit. Do you build explosion-proof control panels?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We build panels for classified areas using certified components, and factory-test each panel before delivery. Can you upgrade an obsolete control system without a full shutdown?",
+          "a": [
+            "In most cases, yes."
+          ]
+        },
+        {
+          "q": "In oil and gas automation UAE projects, we migrate in phases, with cut-overs during planned shutdowns. How quickly can an oil and gas automation UAE engineer visit our site?",
+          "a": [
+            "Site assessments are typically scheduled within 24 - 48 hours, subject to site permits."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get in touch",
+      "heading": "Talk to an Oil and Gas Automation UAE Engineer",
+      "body": "Tell us about your site and the problem you need solved. Our team will arrange a survey and return a clear scope for your oil and gas automation UAE project.",
+      "actions": [
+        {
+          "label": "Call: +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

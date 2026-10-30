@@ -1,0 +1,263 @@
+{
+  "order": 2,
+  "title": "Automotive Manufacturing Automation UAE",
+  "slug": "applications/automotive-manufacturing-automation-uae",
+  "navLabel": "Automotive Manufacturing Automation",
+  "meta": {
+    "title": "Automotive Manufacturing Automation UAE | 24 - 48 Hr Survey",
+    "description": "Automotive manufacturing automation UAE for PLC programming, CNC and servo repair, robotic cells and line safety. Site survey in 24 - 48 hours. Call GTA."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Automotive Sector",
+      "heading": "Automotive Manufacturing Automation *UAE*",
+      "subheading": "Automotive manufacturing automation UAE projects keep CNC machines, servo-driven robots and PLC-controlled assembly stations running to tight tolerances, even through hot summers and dusty workshops. General Tech Automation ( GTA ) , based in Sharjah, supports parts makers, assembly plants and vehicle workshops with control repair, PLC programming, panel building and line upgrades.",
+      "image": "automation-machine.jpg",
+      "actions": [
+        {
+          "label": "Book a site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "board-repair.jpg",
+      "mediaPosition": "right",
+      "heading": "What Is Automotive Manufacturing Automation?",
+      "body": [
+        "What is automotive manufacturing automation? It is the use of PLCs, CNC controls, servo drives, robots, sensors and software to machine, assemble, inspect and track vehicle parts with minimal manual handling. A typical automotive manufacturing automation UAE setup links machines, safety devices and HMI screens so every station runs the same sequence, every shift. The aim is repeatable quality, shorter cycle times and fewer unplanned stops. In automotive manufacturing automation UAE plants, a single failed servo drive or corrupted PLC program can stop a whole line, so fast diagnosis matters as much as good design.",
+        "servo drives, robots, sensors and software to machine, assemble, inspect and track vehicle parts with minimal manual handling. A typical automotive manufacturing automation UAE setup links machines, safety devices and HMI screens so every station runs the same sequence, every shift. The aim is repeatable quality, shorter cycle times and fewer unplanned stops. In automotive manufacturing automation UAE plants, a single failed servo drive or corrupted PLC program can stop a whole line, so fast diagnosis matters as much as good design."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Where Automation Applies on an Automotive Line",
+      "body": [
+        "The table below shows where each automotive manufacturing automation UAE application usually fits.",
+        "Area Typical equipment Key automation applications Machining CNC lathes, machining centres, grinders CNC control repair, spindle and axis drives, tool monitoring Assembly Conveyors, presses, nutrunners, robots PLC sequencing, torque monitoring, robotic cells Finishing Paint booths, ovens, dryers Temperature control, airflow, VFDs Quality Vision cameras, gauges, test rigs Inspection, traceability, data logging Machining and CNC Automation Precision parts such as brackets, shafts and housings start on CNC machines. For automotive manufacturing automation UAE plants, our CNC machining automation UAE support covers controls, drives and spindles, and our CNC control repair for automotive parts gets a stopped machine back into production without replacing it. For full details, see our CNC machine repair services . Where a machine is mechanically sound but its control is obsolete, a CNC control retrofit is often the better option.",
+        "Assembly and Production Line Automation Automotive production line automation ties conveyors, fixtures, presses and robots into one controlled sequence. For automotive assembly line automation UAE projects, we program interlocks, station handshakes and fault messages that tell operators exactly what stopped and why. Robotic cell integration UAE adds guarding, safety zones and PLC-to-robot communication, so a robot works with the line instead of beside it. Robotic cells are often where automotive manufacturing automation UAE projects gain the most cycle time.",
+        "Parts, Components and EV Manufacturing Automotive parts manufacturing automation covers smaller plants making filters, batteries, wiring, rubber and plastic components. As electric vehicle production grows, EV battery assembly automation UAE projects need exact cell handling, welding checks and traceability. We scope each automotive manufacturing automation UAE project to the product, volume and budget involved.",
+        "Paint Shop and Finishing Paint shop automation UAE depends on stable booth temperature, humidity and airflow. On automotive manufacturing automation UAE projects, we support the control panels, drives and sensors that keep paint and curing conditions inside specification."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Automotive Manufacturing Automation UAE Services",
+      "body": [
+        "PLC Programming and HMI Automotive PLC programming UAE covers new logic, modifications and fault finding on major PLC platforms. We build automotive HMI and SCADA screens that show machine status, alarms and counts in plain language. For older controllers, a legacy PLC migration for automotive lines moves logic to a current platform in stages. See our PLC programming services and the obsolete PLC migration example.",
+        "Servo, Drive and Motor Support Robots, indexing tables and presses rely on precise motion. Our automotive servo drive repair UAE service covers board-level repair, parameter backup and replacement. Planned servo motor maintenance for automotive plants checks bearings, encoders and cables before they fail. VFD repair for automotive lines keeps conveyors, fans and pumps running at the right speed. Every repair in our automotive manufacturing automation UAE work is tested before return. See our industrial repair services .",
+        "Control Panels Automotive control panel design UAE covers new panels for machines, cells and conveyors. Panels for automotive manufacturing automation UAE projects are factory-tested before dispatch. Our production line control panel troubleshooting finds loose terminations, overheating components and wiring faults that cause intermittent stops. See our custom control panel design and manufacturing service.",
+        "Machine Safety An automotive machine safety upgrade replaces bypassed guards and single-channel e-stops with properly rated safety circuits. Safety PLC and light curtain integration lets operators load parts safely without slowing the line. Safety is the area where automotive manufacturing automation UAE projects must be documented carefully, so every change is recorded and tested. Related coverage is on our machine safety upgrade page.",
+        "Quality, Traceability and Data In automotive manufacturing automation UAE projects, quality data matters as much as speed. A vision inspection system UAE checks presence, position and labels on every part. Torque and press-fit monitoring records the force or torque used at critical joints, with pass or fail results saved to the part record. An automotive traceability system UAE links serial numbers to machines, operators and results, which many OEM customers require. These signals also feed the OEE monitoring automotive plants rely on to see where time is lost; see our OEE and downtime monitoring example.",
+        "Predictive Maintenance and Industry 4.0 Predictive maintenance for automotive manufacturing uses vibration, temperature and current data to warn of failures weeks in advance. Combined with industry 4.0 automotive manufacturing UAE dashboards, managers see machine health and output in one place. Our industrial IoT services connect these sensors to the cloud or a local server."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Timelines",
+      "heading": "Typical Project *Timelines*",
+      "intro": "International and regional clients often ask how long automation work takes. These are typical ranges confirmed by your site survey.",
+      "footnote": "Lead times, permits and shutdown windows affect timelines, so we plan schedules around your access approvals.",
+      "steps": [
+        {
+          "title": "Plant survey and line assessment",
+          "meta": "Within 24 - 48 hours",
+          "description": "Plant survey and line assessment: typically completed within 24 - 48 hours."
+        },
+        {
+          "title": "Drive or board repair quote",
+          "meta": "1 - 2 working days after inspection",
+          "description": "Drive or board repair quote: typically completed 1 - 2 working days after inspection."
+        },
+        {
+          "title": "Servo drive or VFD repair",
+          "meta": "3 - 10 working days",
+          "description": "Servo drive or VFD repair: typically completed 3 - 10 working days."
+        },
+        {
+          "title": "CNC control fault diagnosis",
+          "meta": "1 - 3 days on site",
+          "description": "CNC control fault diagnosis: typically completed 1 - 3 days on site."
+        },
+        {
+          "title": "PLC program modification",
+          "meta": "2 - 10 days",
+          "description": "PLC program modification: typically completed 2 - 10 days."
+        },
+        {
+          "title": "Control panel design and build",
+          "meta": "3 - 6 weeks",
+          "description": "Control panel design and build: typically completed 3 - 6 weeks."
+        },
+        {
+          "title": "Robotic cell or safety upgrade",
+          "meta": "4 - 10 weeks",
+          "description": "Robotic cell or safety upgrade: typically completed 4 - 10 weeks."
+        },
+        {
+          "title": "Legacy PLC migration",
+          "meta": "1 - 4 months, phased",
+          "description": "Legacy PLC migration: typically completed 1 - 4 months, phased."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Standards and Good Practice",
+      "body": [
+        "Machine safety work typically references ISO 13849 and IEC 62061, while control panels follow IEC 60204 - 1 for machine electrical equipment. Many OEM supply chains also expect quality systems aligned with IATF 16949 . We scope every automotive manufacturing automation UAE job to the standards your plant or customer applies, and we hand over drawings, program backups and test records."
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "Why GTA",
+      "heading": "Why Choose GTA for Automotive Manufacturing Automation UAE?",
+      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
+      "proofs": [
+        {
+          "value": "24–48h",
+          "label": "Site Assessment",
+          "sublabel": "Across all Emirates"
+        },
+        {
+          "value": "10+",
+          "label": "Years Experience",
+          "sublabel": "Multi-platform engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Tested Rigs",
+          "sublabel": "FAT before site delivery"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Diagnosis at the machine",
+          "description": "engineers who know CNC, servo and PLC faults find the cause on the line, not over the phone."
+        },
+        {
+          "title": "Multi-brand capability",
+          "description": "covering major PLC, CNC and drive families."
+        },
+        {
+          "title": "Workshop repair and testing",
+          "description": "drives, boards and panels are repaired and tested in our Sharjah workshop."
+        },
+        {
+          "title": "Shift-aware scheduling",
+          "description": "automotive manufacturing automation UAE call-outs are planned around your production shifts."
+        },
+        {
+          "title": "Backups as standard",
+          "description": "every automotive manufacturing automation UAE job closes with PLC, HMI and drive parameter backups."
+        }
+      ]
+    },
+    {
+      "type": "coverage",
+      "tone": "dark",
+      "eyebrow": "UAE Coverage",
+      "heading": "Serving Dubai, Abu Dhabi, *Sharjah & Northern Emirates*",
+      "note": "Our Sharjah workshop and engineering base gives quick road access across the Emirates.",
+      "areas": [
+        {
+          "name": "Dubai",
+          "blurb": "Jebel Ali, Dubai Industrial City, Al Quoz, and logistics hubs."
+        },
+        {
+          "name": "Abu Dhabi",
+          "blurb": "ICAD, Mussafah, Kizad, and onshore process facilities."
+        },
+        {
+          "name": "Sharjah & Northern Emirates",
+          "blurb": "Hamriyah Free Zone, SAIF Zone, Sajaa, and regional plants."
+        },
+        {
+          "name": "International & EPC Partners",
+          "blurb": "In-country instrument sourcing, site acceptance testing, and lifecycle support."
+        }
+      ],
+      "body": [
+        "Our Sharjah workshop gives quick road access for automotive manufacturing automation UAE call-outs across the Emirates. We provide automotive manufacturing automation Dubai support for plants in areas such as Dubai Industrial City, Jebel Ali and Al Quoz, and automotive manufacturing automation Abu Dhabi support for facilities in KEZAD and Mussafah. Local clients use our automotive automation Sharjah team for fast call-outs in Sajaa, Hamriyah and Sharjah Industrial Area. International manufacturers setting up in the UAE use us as their local automotive manufacturing automation UAE partner for installation support, commissioning help and after-sales service."
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Common questions about our automotive manufacturing automation uae capabilities in the UAE.",
+      "items": [
+        {
+          "q": "What does automotive manufacturing automation UAE work include?",
+          "a": [
+            "Automotive manufacturing automation"
+          ]
+        },
+        {
+          "q": "UAE work covers the PLCs, CNC controls, drives, robots, panels and data systems that machine, assemble and inspect vehicle parts. Do you repair servo drives and CNC controls from different brands?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We repair and test drives and controls from major brands, subject to part availability. Can you integrate a robot into an existing production line?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We handle guarding, safety circuits and PLC-to-robot communication for new and existing lines. Can you upgrade an old PLC without stopping production?",
+          "a": [
+            "In most cases, yes."
+          ]
+        },
+        {
+          "q": "In automotive manufacturing automation UAE projects, we migrate in phases during planned shutdowns. Do you support EV and battery assembly lines?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "Our automotive manufacturing automation UAE team can support control, safety and traceability for battery and EV component assembly, with scope confirmed after a survey. How long does a servo drive repair take?",
+          "a": [
+            "Most drive repairs in automotive manufacturing automation UAE work take 3 - 10 working days, depending on parts availability."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get in touch",
+      "heading": "Talk to an Automotive Manufacturing Automation UAE Engineer",
+      "body": "Tell us about your line, your machines and the problem you need solved. Our team will arrange a survey and return a clear scope for your automotive manufacturing automation UAE project.",
+      "actions": [
+        {
+          "label": "Call: +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}
