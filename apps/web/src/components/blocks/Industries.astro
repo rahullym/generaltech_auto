@@ -8,7 +8,15 @@ interface Props {
   intro?: string
   /** `track` pins and walks sideways; `grid` lays the sectors out in rows. */
   display?: 'track' | 'grid'
-  sectors: { id?: string; name: string; iconName?: string; description?: string }[]
+  sectors: {
+    id?: string
+    name: string
+    iconName?: string
+    description?: string
+    href?: string
+    link?: { url?: string; label?: string }
+    linkLabel?: string
+  }[]
   footnote?: string
 }
 
@@ -154,62 +162,93 @@ const icon = (name?: string) => ICONS[name ?? ''] ?? ICONS.factory
           data-industries-track={track ? '' : undefined}
         >
           {
-            sectors.map((sector, index) => (
-              <article
-                class:list={[
-                  'industry-card group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-8 opacity-0 reveal-item sm:p-10 md:p-12',
-                  track
-                    ? 'w-[80vw] max-w-[380px] shrink-0 snap-start lg:h-[380px] lg:w-[400px]'
-                    : 'h-full',
-                ]}
-                style={`transition-delay: ${Math.min(index, 8) * 60}ms`}
-                data-industry
-                data-industry-name={sector.name}
-              >
-                <div class="flex items-center justify-between">
-                  <span
-                    class="industry-mark flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-500 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="26"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.75"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      set:html={icon(sector.iconName)}
+            sectors.map((sector, index) => {
+              const url = sector.href || sector.link?.url
+              const label = sector.linkLabel || sector.link?.label || 'Explore industry automation'
+
+              return (
+                <article
+                  class:list={[
+                    'industry-card group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-8 opacity-0 reveal-item sm:p-10 md:p-12 transition-all duration-300 hover:border-general-red/25 hover:shadow-[0_20px_50px_-20px_rgba(237,28,37,0.2)]',
+                    track
+                      ? 'w-[80vw] max-w-[380px] shrink-0 snap-start lg:h-[380px] lg:w-[400px]'
+                      : 'h-full',
+                  ]}
+                  style={`transition-delay: ${Math.min(index, 8) * 60}ms`}
+                  data-industry
+                  data-industry-name={sector.name}
+                >
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="industry-mark flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-500 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-colors duration-300 group-hover:border-general-red/30 group-hover:text-general-red"
+                      aria-hidden="true"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        set:html={icon(sector.iconName)}
+                      />
+                    </span>
+
+                    <span
+                      class="industry-index text-[13px] font-black tabular-nums tracking-[0.1em] text-gray-300 transition-colors duration-300 group-hover:text-general-red/60"
+                      aria-hidden="true"
+                    >
+                      {pad(index + 1)} / {total}
+                    </span>
+                  </div>
+
+                  <CaptionHeading
+                    text={sector.name}
+                    class="mt-10 text-[23px] font-bold leading-[1.15] tracking-tight text-general-black transition-colors duration-300 group-hover:text-general-red min-[380px]:text-[26px]"
+                  />
+
+                  {sector.description && (
+                    <p class="mt-4 text-[15px] leading-[1.8] text-general-black/85">{sector.description}</p>
+                  )}
+
+                  {url ? (
+                    <div class="mt-auto pt-8 flex items-center justify-between">
+                      <a
+                        href={url}
+                        class="group/link inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.16em] text-general-red transition-all duration-150 hover:text-general-black focus:outline-none after:absolute after:inset-0"
+                      >
+                        <span>{label}</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="transition-transform duration-300 group-hover/link:translate-x-1"
+                          aria-hidden="true"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  ) : (
+                    /* Foot tick: fallback when no inner page exists yet */
+                    <span
+                      class="industry-tick mt-auto block h-px w-10 shrink-0 bg-gray-200"
+                      aria-hidden="true"
                     />
-                  </span>
-
-                  <span
-                    class="industry-index text-[13px] font-black tabular-nums tracking-[0.1em] text-gray-300"
-                    aria-hidden="true"
-                  >
-                    {pad(index + 1)} / {total}
-                  </span>
-                </div>
-
-                <CaptionHeading
-                  text={sector.name}
-                  class="mt-10 text-[23px] font-bold leading-[1.15] tracking-tight text-general-black min-[380px]:text-[26px]"
-                />
-
-                {sector.description && (
-                  <p class="mt-4 text-[15px] leading-[1.8] text-general-black">{sector.description}</p>
-                )}
-
-                {/* Foot tick: the cards are a fixed height, so each one is
-                    given a defined end rather than trailing off. */}
-                <span
-                  class="industry-tick mt-auto block h-px w-10 shrink-0 bg-gray-200"
-                  aria-hidden="true"
-                />
-              </article>
-            ))
+                  )}
+                </article>
+              )
+            })
           }
         </div>
       </div>

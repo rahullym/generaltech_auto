@@ -1,0 +1,267 @@
+{
+  "order": 3,
+  "title": "Pharmaceutical Automation UAE",
+  "slug": "applications/pharmaceutical-automation-uae",
+  "navLabel": "Pharmaceutical Automation",
+  "meta": {
+    "title": "Pharmaceutical Automation UAE | GMP Systems & Validation",
+    "description": "Pharmaceutical automation UAE for GMP batch control, cleanroom monitoring, calibration and Part 11 data integrity. Site survey in 24 - 48 hours. Call GTA."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Pharmaceutical Sector",
+      "heading": "Pharmaceutical Automation *UAE*",
+      "subheading": "Pharmaceutical automation UAE projects must deliver consistent product quality, complete records and control systems that stand up to inspection. General Tech Automation ( GTA ) , based in Sharjah, supports drug manufacturers, contract packers and healthcare warehouses with PLC programming, instrument calibration, monitoring systems and control upgrades.",
+      "image": "engineer-tablet-plant.jpg",
+      "actions": [
+        {
+          "label": "Book a site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "panel-inspection.jpg",
+      "mediaPosition": "right",
+      "heading": "What Is Pharmaceutical Automation?",
+      "body": [
+        "What is pharmaceutical automation? It is the use of PLCs, SCADA, sensors and validated software to control, monitor and record each step of medicine production, from weighing and mixing to packing and storage. A typical pharmaceutical automation UAE system runs recipes automatically, alarms when a limit is breached and keeps a secure electronic record of every batch. The aim is right-first-time batches, fewer manual entries and records that are ready for audit. In pharmaceutical automation UAE plants, a missing record can be as costly as a failed batch, so documentation is designed in from the start.",
+        "validated software to control, monitor and record each step of medicine production, from weighing and mixing to packing and storage. A typical pharmaceutical automation UAE system runs recipes automatically, alarms when a limit is breached and keeps a secure electronic record of every batch. The aim is right-first-time batches, fewer manual entries and records that are ready for audit. In pharmaceutical automation UAE plants, a missing record can be as costly as a failed batch, so documentation is designed in from the start."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Benefits of Pharmaceutical Automation",
+      "body": [
+        "For most plants, pharmaceutical automation UAE projects pay back through five practical gains:",
+        "Consistent quality: recipes run the same way on every shift, reducing batch-to-batch variation.",
+        "Audit-ready records: electronic batch records and audit trails replace handwritten logs that are easy to lose or question.",
+        "Less manual handling: automated weighing, transfer and packing reduce contamination risk and operator error.",
+        "Faster release: when batch data is complete and reviewed electronically, products can be released sooner.",
+        "Lower running costs: utilities such as HVAC and purified water run to demand rather than at full load. Each benefit depends on good design, which is why every pharmaceutical automation UAE scope starts with a site survey.",
+        "Where Automation Applies in a Pharmaceutical Plant Pharmaceutical manufacturing automation spans production, utilities, packaging and storage. The table below shows where each pharmaceutical automation UAE application usually fits.",
+        "Area Typical equipment Key automation applications Production Mixers, granulators, tablet presses, coaters Batch control, recipe management, interlocks Utilities HVAC, purified water, clean steam Cleanroom monitoring, water system control Packaging Blister machines, cartoners, labellers Line control, vision checks, serialization Storage Cold rooms, warehouses, reefers Temperature mapping, alarms, data logging Production and Batch Control A batch control system pharmaceutical plants trust must run each recipe the same way, every time. We design ISA - 88 batch automation structures that separate recipes from equipment logic, so new products can be added without rewriting code. Tablet press automation covers speed, weight and force control, with rejects recorded automatically. CIP SIP automation sequences cleaning and sterilising steps and logs times and temperatures for each cycle. See our batch and recipe control example.",
+        "Cleanrooms, HVAC and Utilities A cleanroom monitoring system UAE tracks differential pressure, temperature, humidity and particle counts in classified areas. As part of an environmental monitoring system pharmaceutical sites depend on, alarms are time-stamped and stored for review. Pharmaceutical HVAC control keeps room pressure cascades stable as doors open and filters load. Purified water system automation controls storage, loop circulation, sanitisation and conductivity checks. These utilities are often the first pharmaceutical automation UAE systems inspectors ask to see.",
+        "Packaging, Serialization and Storage Pharmaceutical packaging automation UAE links blister machines, cartoners and checkweighers into one controlled line. Blister packaging line automation adds forming, sealing and reject control, while serialization and track and trace pharmaceutical systems print and verify a unique code on every pack. For storage, cold chain monitoring pharmaceutical UAE logs temperatures in cold rooms and vehicles, with alerts before stock goes out of range. Packaging is where many pharmaceutical automation UAE upgrades start, because errors there can reach the patient directly. See our packaging line control panel and cold chain monitoring examples."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Pharmaceutical Automation UAE Services",
+      "body": [
+        "PLC Programming and SCADA Pharma PLC programming UAE covers new logic, modifications and fault finding, written with clear structure and version control. Every change in pharmaceutical automation UAE code is backed up, compared with the previous version and documented before release. A pharmaceutical SCADA system gives operators role-based access, alarm management and batch reports. For broader platform work, see our PLC programming services .",
+        "GMP Compliance and Data Integrity GMP automation UAE means every control decision can be traced and justified. We configure 21 CFR Part 11 compliant automation features such as user log-ins, electronic signatures and a secure audit trail and electronic records . These features support pharmaceutical data integrity by making records attributable, legible, contemporaneous, original and accurate ( ALCOA ) . In pharmaceutical automation UAE projects, data integrity is planned at design stage, not added after an audit finding.",
+        "Validation Support Validation is owned by your quality team, and we provide the engineering evidence it needs. Our GAMP 5 validation support includes functional and design specifications, test scripts and traceability between requirements and tests. For computer system validation UAE projects, we can execute tests and record results under your protocols. Every pharmaceutical automation UAE handover includes IQ OQ PQ documentation inputs such as drawings, I/O lists, program backups and test records.",
+        "Calibration and Instrumentation Instrument calibration pharmaceutical UAE covers pressure, temperature, flow and conductivity instruments, with traceable certificates and as-found and as-left results. Calibration intervals are set by risk, so critical instruments are checked more often. Accurate instruments are the foundation of any pharmaceutical automation UAE system, because control and records are only as good as the measurements behind them. See our calibration management example and field instrumentation services .",
+        "Upgrades and Legacy Systems Many plants still run controllers that are no longer supported or do not meet current data integrity expectations. A legacy control system upgrade pharma project replaces hardware and software in phases, with change control and re-testing at each step. Our approach to pharmaceutical automation UAE upgrades is to map existing functions first, then migrate during planned shutdowns."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Timelines",
+      "heading": "Typical Project *Timelines*",
+      "intro": "International and regional clients often ask how long automation work takes. These are typical ranges confirmed by your site survey.",
+      "footnote": "Lead times, permits and shutdown windows affect timelines, so we plan schedules around your access approvals.",
+      "steps": [
+        {
+          "title": "Plant survey and assessment",
+          "meta": "Within 24 - 48 hours",
+          "description": "Plant survey and assessment: typically completed within 24 - 48 hours."
+        },
+        {
+          "title": "Scoped proposal with document list",
+          "meta": "3 - 5 working days after survey",
+          "description": "Scoped proposal with document list: typically completed 3 - 5 working days after survey."
+        },
+        {
+          "title": "Instrument calibration (per area)",
+          "meta": "1 - 3 days",
+          "description": "Instrument calibration (per area): typically completed 1 - 3 days."
+        },
+        {
+          "title": "Cleanroom monitoring system",
+          "meta": "3 - 6 weeks",
+          "description": "Cleanroom monitoring system: typically completed 3 - 6 weeks."
+        },
+        {
+          "title": "PLC or SCADA modification with testing",
+          "meta": "1 - 3 weeks",
+          "description": "PLC or SCADA modification with testing: typically completed 1 - 3 weeks."
+        },
+        {
+          "title": "Batch control or packaging line project",
+          "meta": "6 - 12 weeks",
+          "description": "Batch control or packaging line project: typically completed 6 - 12 weeks."
+        },
+        {
+          "title": "Validation document package",
+          "meta": "2 - 6 weeks, alongside build",
+          "description": "Validation document package: typically completed 2 - 6 weeks, alongside build."
+        },
+        {
+          "title": "Legacy system upgrade",
+          "meta": "2 - 6 months, phased",
+          "description": "Legacy system upgrade: typically completed 2 - 6 months, phased."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Standards and Guidance",
+      "body": [
+        "Pharmaceutical automation projects commonly reference EU GMP Annex 11, US FDA 21 CFR Part 11, ISPE GAMP 5 and the PIC/S GMP guide. We scope every pharmaceutical automation UAE job to the standards your quality system and local regulator require, and we work within your change control procedure."
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "Why GTA",
+      "heading": "Why Choose GTA for Pharmaceutical Automation UAE?",
+      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
+      "proofs": [
+        {
+          "value": "24–48h",
+          "label": "Site Assessment",
+          "sublabel": "Across all Emirates"
+        },
+        {
+          "value": "10+",
+          "label": "Years Experience",
+          "sublabel": "Multi-platform engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Tested Rigs",
+          "sublabel": "FAT before site delivery"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Documentation first",
+          "description": "specifications, test records and backups are part of every deliverable, not an extra."
+        },
+        {
+          "title": "Controlled changes",
+          "description": "no program change goes live without your approval and a recorded test."
+        },
+        {
+          "title": "Calibration and control in one team",
+          "description": "fewer handovers between instrument and software work."
+        },
+        {
+          "title": "Fast assessment",
+          "description": "pharmaceutical automation UAE site visits are typically scheduled within 24 - 48 hours."
+        },
+        {
+          "title": "Long-term support",
+          "description": "every pharmaceutical automation UAE system we deliver comes with backup and maintenance options."
+        }
+      ]
+    },
+    {
+      "type": "coverage",
+      "tone": "dark",
+      "eyebrow": "UAE Coverage",
+      "heading": "Serving Dubai, Abu Dhabi, *Sharjah & Northern Emirates*",
+      "note": "Our Sharjah workshop and engineering base gives quick road access across the Emirates.",
+      "areas": [
+        {
+          "name": "Dubai",
+          "blurb": "Jebel Ali, Dubai Industrial City, Al Quoz, and logistics hubs."
+        },
+        {
+          "name": "Abu Dhabi",
+          "blurb": "ICAD, Mussafah, Kizad, and onshore process facilities."
+        },
+        {
+          "name": "Sharjah & Northern Emirates",
+          "blurb": "Hamriyah Free Zone, SAIF Zone, Sajaa, and regional plants."
+        },
+        {
+          "name": "International & EPC Partners",
+          "blurb": "In-country instrument sourcing, site acceptance testing, and lifecycle support."
+        }
+      ],
+      "body": [
+        "Our Sharjah base gives quick road access for pharmaceutical automation UAE call-outs across the Emirates. We provide pharmaceutical automation Dubai support for plants and warehouses in areas such as Dubai Science Park and Dubai Industrial City, and pharmaceutical automation Abu Dhabi support for facilities in areas such as KEZAD. Local clients use our pharmaceutical automation Sharjah team for fast response across Sharjah's industrial areas. International manufacturers entering the UAE use us as their local pharmaceutical automation UAE partner for installation support, qualification testing and after-sales service."
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Common questions about our pharmaceutical automation uae capabilities in the UAE.",
+      "items": [
+        {
+          "q": "What does pharmaceutical automation UAE work include?",
+          "a": [
+            "Pharmaceutical automation"
+          ]
+        },
+        {
+          "q": "UAE work covers the control systems, instruments, monitoring and records that produce, pack and store medicines under GMP. Do you perform computer system validation?",
+          "a": [
+            "We support validation by writing specifications, executing tests and supplying records."
+          ]
+        },
+        {
+          "q": "Your quality team approves and owns the validation. Can you make an existing system 21 CFR Part 11 compliant?",
+          "a": [
+            "Often, yes."
+          ]
+        },
+        {
+          "q": "We assess the current system, then add user management, audit trails and electronic signatures, or recommend an upgrade. Do you calibrate instruments in cleanrooms?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "Our pharmaceutical automation UAE engineers follow your gowning and cleaning procedures and issue traceable certificates. Can you upgrade a control system without losing validated status?",
+          "a": [
+            "Yes, with planning."
+          ]
+        },
+        {
+          "q": "In pharmaceutical automation UAE projects, we migrate in phases under change control, with re- testing at each step. How long does a cleanroom monitoring project take?",
+          "a": [
+            "Most cleanroom monitoring projects take 3 - 6 weeks, depending on room count and sensors."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get in touch",
+      "heading": "Talk to a Pharmaceutical Automation UAE Engineer",
+      "body": "Tell us about your plant, your products and the problem you need solved. Our team will arrange a survey and return a clear, documented scope for your pharmaceutical automation UAE project.",
+      "actions": [
+        {
+          "label": "Call: +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

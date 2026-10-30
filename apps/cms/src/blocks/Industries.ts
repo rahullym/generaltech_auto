@@ -68,6 +68,16 @@ export const Industries: Block = {
           type: 'textarea',
           admin: { description: 'What the work looks like in this sector — one or two sentences.' },
         },
+        {
+          name: 'href',
+          type: 'text',
+          admin: { description: 'Optional link destination to sector inner page.' },
+        },
+        {
+          name: 'linkLabel',
+          type: 'text',
+          admin: { description: 'Optional link label, e.g. "Explore oil and gas automation".' },
+        },
       ],
     },
     {

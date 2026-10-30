@@ -1,0 +1,269 @@
+{
+  "order": 4,
+  "title": "Food and Beverage Automation UAE",
+  "slug": "applications/food-and-beverage-automation-uae",
+  "navLabel": "Food and Beverage Automation",
+  "meta": {
+    "title": "Food and Beverage Automation UAE | Hygienic Line Control",
+    "description": "Food and beverage automation UAE for PLC programming, washdown panels, bottling lines, CIP and HACCP monitoring. Site survey in 24 - 48 hours. Call GTA."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Food & Beverage Sector",
+      "heading": "Food and Beverage Automation *UAE*",
+      "subheading": "Food and beverage automation UAE projects keep production lines hygienic, consistent and running through long shifts, high summer temperatures and frequent washdowns. General Tech Automation ( GTA ) , based in Sharjah, supports food processors, bottlers, dairies, bakeries and cold stores with PLC programming, drive maintenance, control panels and monitoring systems.",
+      "image": "factory-about.jpg",
+      "actions": [
+        {
+          "label": "Book a site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "automation-machine.jpg",
+      "mediaPosition": "right",
+      "heading": "What Is Food and Beverage Automation?",
+      "body": [
+        "What is food and beverage automation? It is the use of PLCs, drives, sensors and software to process, fill, pack and track food and drink with minimal manual handling. A typical food and beverage automation UAE system links mixing, heating, filling and packing so every batch follows the same recipe and every critical temperature is recorded. The aim is safe product, steady output and less waste. In food and beverage automation UAE plants, one failed drive or a missed temperature record can stop a line or put a whole batch on hold, so reliable control matters every shift.",
+        "software to process, fill, pack and track food and drink with minimal manual handling. A typical food and beverage automation UAE system links mixing, heating, filling and packing so every batch follows the same recipe and every critical temperature is recorded. The aim is safe product, steady output and less waste. In food and beverage automation UAE plants, one failed drive or a missed temperature record can stop a line or put a whole batch on hold, so reliable control matters every shift."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Benefits of Food and Beverage Automation",
+      "body": [
+        "For most plants, food and beverage automation UAE projects pay back through five practical gains:",
+        "Consistent product: recipes and cooking profiles run the same way on every shift.",
+        "Food safety records: critical temperatures and times are logged automatically for audits.",
+        "Higher output: fewer stops and faster changeovers increase line capacity.",
+        "Less waste: accurate dosing, filling and weighing reduce giveaway and rejects.",
+        "Lower energy use: motors, compressors and steam run to demand rather than at full load.",
+        "Where Automation Applies in a Food and Beverage Plant The table below shows where each food and beverage automation UAE application usually fits.",
+        "Area Typical equipment Key automation applications Processing Mixers, cookers, pasteurisers, ovens Recipe control, temperature control, CIP Filling Fillers, cappers, labellers Speed control, level checks, reject systems Packing Cartoners, checkweighers, palletisers Line control, inspection, conveyor sequencing Storage Cold rooms, freezers, warehouses Temperature monitoring, alarms, data logging Food Processing and Cooking Food processing automation UAE covers mixing, heating, cooling and portioning. Our batch and recipe control food systems store each recipe in the controller, so operators select a product rather than setting values by hand. Pasteurization temperature control holds product at the required temperature for the required time, with diversion if it falls short. In bakeries, bakery automation control systems manage dough mixing, proofing and oven zones. See our batch and recipe control and furnace and oven control examples.",
+        "Dairy and Juice Dairy plant automation UAE controls milk reception, separation, pasteurisation and filling, where hygiene and temperature are critical. Juice processing automation manages blending, deaeration and hot filling. Both rely on CIP system automation UAE to clean tanks and pipes with the right chemical strength, temperature and time, with each cycle recorded. These lines are where food and beverage automation UAE protects both product safety and brand reputation.",
+        "Bottling and Filling Bottled water and soft drinks are major products in the region. Water bottling plant automation UAE links water treatment, blowing, filling and packing into one controlled line. Beverage bottling line automation covers conveyors, rinsers, fillers and labellers, while filling and capping machine control keeps fill levels and cap torque within limits. For many producers, filling is the first food and beverage automation UAE upgrade because it sets the speed of the whole line.",
+        "Packaging and End of Line Food packaging automation UAE connects cartoners, wrappers and case packers. Checkweigher and metal detector integration rejects underweight or contaminated packs automatically and records each event. Palletizing and conveyor automation moves finished goods to dispatch without manual lifting. Packing is often where food and beverage automation UAE upgrades save the most labour. See our packaging line control panel example."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Food and Beverage Automation UAE Services",
+      "body": [
+        "PLC Programming and SCADA Food industry PLC programming UAE covers new logic, modifications and fault finding on major platforms. A food plant SCADA system shows production, alarms and temperatures on one screen, with reports for each shift. Every change in our food and beverage automation UAE work is backed up and documented before release. See our PLC programming services .",
+        "Washdown and Hygienic Control Panels Food plants are washed down daily, so panels must keep water and chemicals out. Our washdown control panels UAE use stainless steel enclosures with suitable IP ratings, sealed glands and sloped tops. Hygienic control panel design avoids ledges and gaps where dirt can collect. Every panel built for food and beverage automation UAE sites is factory-tested before dispatch. See our custom control panel design and manufacturing service.",
+        "Drives, Maintenance and Troubleshooting Conveyors, pumps and fans depend on variable speed drives. For food and beverage automation UAE plants, our VFD maintenance food production lines service covers cleaning, parameter backup and repair before failures stop production. Food production line troubleshooting finds the root cause of repeated stops, from sensor faults to loose wiring. See our AMC services for panels, VFDs, UPS and servo drives .",
+        "Cold Storage, Food Safety and Traceability Cold storage temperature monitoring UAE logs cold room and freezer temperatures around the clock, with alerts by SMS or email. HACCP temperature monitoring records critical control points automatically, replacing paper charts. A food traceability system UAE links batch codes to ingredients, lines and times, so a recall can be limited to the affected product. In food and beverage automation UAE projects, these records support your food safety team during audits.",
+        "See our cold chain monitoring example.",
+        "Performance and Energy OEE monitoring food production records every stop with a reason, showing exactly where output is lost. Energy monitoring food plant systems measure electricity, steam and compressed air by line, so savings can be targeted. Together, these tools show whether food and beverage automation UAE investments are paying back. See our OEE and downtime monitoring example."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Timelines",
+      "heading": "Typical Project *Timelines*",
+      "intro": "International and regional clients often ask how long automation work takes. These are typical ranges confirmed by your site survey.",
+      "footnote": "Lead times, permits and shutdown windows affect timelines, so we plan schedules around your access approvals.",
+      "steps": [
+        {
+          "title": "Plant survey and line assessment",
+          "meta": "Within 24 - 48 hours",
+          "description": "Plant survey and line assessment: typically completed within 24 - 48 hours."
+        },
+        {
+          "title": "Scoped proposal",
+          "meta": "2 - 5 working days after survey",
+          "description": "Scoped proposal: typically completed 2 - 5 working days after survey."
+        },
+        {
+          "title": "VFD or drive repair",
+          "meta": "3 - 10 working days",
+          "description": "VFD or drive repair: typically completed 3 - 10 working days."
+        },
+        {
+          "title": "Cold storage monitoring system",
+          "meta": "1 - 3 weeks",
+          "description": "Cold storage monitoring system: typically completed 1 - 3 weeks."
+        },
+        {
+          "title": "PLC program modification",
+          "meta": "2 - 10 days",
+          "description": "PLC program modification: typically completed 2 - 10 days."
+        },
+        {
+          "title": "Washdown control panel design and build",
+          "meta": "3 - 6 weeks",
+          "description": "Washdown control panel design and build: typically completed 3 - 6 weeks."
+        },
+        {
+          "title": "Filling or packaging line upgrade",
+          "meta": "4 - 10 weeks",
+          "description": "Filling or packaging line upgrade: typically completed 4 - 10 weeks."
+        },
+        {
+          "title": "Full line control migration",
+          "meta": "2 - 5 months, phased",
+          "description": "Full line control migration: typically completed 2 - 5 months, phased."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Standards and Good Practice",
+      "body": [
+        "Food plant automation commonly supports HACCP plans and food safety management systems such as ISO 22000 , with hygienic design guidance from EHEDG . Electrical panels follow IEC 60204 - 1 for machinery. We scope every food and beverage automation UAE job to the standards your plant, customers and local food safety authority require, and we hand over drawings, backups and test records."
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "Why GTA",
+      "heading": "Why Choose GTA for Food and Beverage Automation UAE?",
+      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
+      "proofs": [
+        {
+          "value": "24–48h",
+          "label": "Site Assessment",
+          "sublabel": "Across all Emirates"
+        },
+        {
+          "value": "10+",
+          "label": "Years Experience",
+          "sublabel": "Multi-platform engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Tested Rigs",
+          "sublabel": "FAT before site delivery"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Hygiene-aware engineers",
+          "description": "our team follows your gowning, allergen and cleaning rules on site."
+        },
+        {
+          "title": "Work around production",
+          "description": "shutdown work is planned for weekends, night shifts or cleaning windows."
+        },
+        {
+          "title": "Repair before replace",
+          "description": "drives and panels are repaired when repair makes sense."
+        },
+        {
+          "title": "Fast assessment",
+          "description": "food and beverage automation UAE site visits are typically scheduled within 24 - 48 hours."
+        },
+        {
+          "title": "Documented support",
+          "description": "every food and beverage automation UAE job closes with backups and records your maintenance team can use."
+        }
+      ]
+    },
+    {
+      "type": "coverage",
+      "tone": "dark",
+      "eyebrow": "UAE Coverage",
+      "heading": "Serving Dubai, Abu Dhabi, *Sharjah & Northern Emirates*",
+      "note": "Our Sharjah workshop and engineering base gives quick road access across the Emirates.",
+      "areas": [
+        {
+          "name": "Dubai",
+          "blurb": "Jebel Ali, Dubai Industrial City, Al Quoz, and logistics hubs."
+        },
+        {
+          "name": "Abu Dhabi",
+          "blurb": "ICAD, Mussafah, Kizad, and onshore process facilities."
+        },
+        {
+          "name": "Sharjah & Northern Emirates",
+          "blurb": "Hamriyah Free Zone, SAIF Zone, Sajaa, and regional plants."
+        },
+        {
+          "name": "International & EPC Partners",
+          "blurb": "In-country instrument sourcing, site acceptance testing, and lifecycle support."
+        }
+      ],
+      "body": [
+        "Our Sharjah base gives quick road access for food and beverage automation UAE call-outs across the Emirates. We provide food and beverage automation Dubai support for plants in areas such as Dubai Industrial City, Jebel Ali and Al Quoz, and food and beverage automation Abu Dhabi support for facilities in areas such as KEZAD and Mussafah. Local clients use our food and beverage automation Sharjah team for fast response in Sajaa, Hamriyah and Sharjah Industrial Area. International brands setting up production in the UAE use us as their local food and beverage automation UAE partner for installation support, commissioning help and after-sales service."
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Common questions about our food and beverage automation uae capabilities in the UAE.",
+      "items": [
+        {
+          "q": "What does food and beverage automation UAE work include?",
+          "a": [
+            "Food and beverage automation"
+          ]
+        },
+        {
+          "q": "UAE work covers the controls, drives, panels, sensors and data systems that process, fill, pack and store food and drink. Can your control panels handle daily washdown?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We build stainless steel panels with suitable IP ratings and sealed entries for washdown areas. Can you automate HACCP temperature records?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "Our food and beverage automation UAE team installs sensors and loggers that record critical temperatures automatically and alert staff when limits are breached. Do you work on bottling and filling lines?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We support fillers, cappers, labellers and conveyors, including speed control and reject systems. Can you upgrade a line without long shutdowns?",
+          "a": [
+            "In most cases, yes."
+          ]
+        },
+        {
+          "q": "In food and beverage automation UAE projects, we migrate in phases during planned cleaning or shutdown windows. How long does a cold storage monitoring project take?",
+          "a": [
+            "Most cold storage monitoring projects take 1 - 3 weeks, depending on room count and alert requirements."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get in touch",
+      "heading": "Talk to a Food and Beverage Automation UAE Engineer",
+      "body": "Tell us about your plant, your products and the problem you need solved. Our team will arrange a survey and return a clear scope for your food and beverage automation UAE project.",
+      "actions": [
+        {
+          "label": "Call: +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}

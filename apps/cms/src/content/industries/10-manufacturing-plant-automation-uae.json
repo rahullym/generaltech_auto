@@ -1,0 +1,261 @@
+{
+  "order": 10,
+  "title": "Manufacturing Plant Automation UAE",
+  "slug": "applications/manufacturing-plant-automation-uae",
+  "navLabel": "Manufacturing Plant Automation",
+  "meta": {
+    "title": "Manufacturing Plant Automation UAE | PLC, Drives & Panels",
+    "description": "Manufacturing plant automation UAE for PLC troubleshooting, CNC and drive support, control panels and line upgrades. Site survey in 24 - 48 hours. Call GTA."
+  },
+  "layout": [
+    {
+      "type": "hero",
+      "variant": "centered",
+      "eyebrow": "Manufacturing Sector",
+      "heading": "Manufacturing Plant Automation *UAE*",
+      "subheading": "Manufacturing plant automation UAE projects keep machines, production lines and utilities running with fewer stops, steadier quality and lower running costs. General Tech Automation ( GTA ) , based in Sharjah, supports factories making plastics, metals, cables, packaging, building products and consumer goods with PLC troubleshooting, CNC and drive support, control panels and line upgrades.",
+      "image": "automation-machine.jpg",
+      "actions": [
+        {
+          "label": "Book a site assessment",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "lede": true,
+      "image": "factory-about.jpg",
+      "mediaPosition": "right",
+      "heading": "What Is Manufacturing Plant Automation?",
+      "body": [
+        "What is manufacturing plant automation? It is the use of PLCs, drives, sensors, HMIs and software to run machines and production lines with minimal manual intervention. A typical manufacturing plant automation UAE system controls each machine, links machines into a line and records output, faults and energy use. The aim is higher output, consistent quality and fewer unplanned stops. At manufacturing plant automation UAE sites, most plants run a mix of machines from different suppliers and eras, so the best results come from automation tailored to each line rather than a generic template.",
+        "HMIs and software to run machines and production lines with minimal manual intervention. A typical manufacturing plant automation UAE system controls each machine, links machines into a line and records output, faults and energy use. The aim is higher output, consistent quality and fewer unplanned stops. At manufacturing plant automation UAE sites, most plants run a mix of machines from different suppliers and eras, so the best results come from automation tailored to each line rather than a generic template."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Benefits of Manufacturing Plant Automation",
+      "body": [
+        "For most factories, manufacturing plant automation UAE projects pay back through five practical gains:",
+        "Higher output: faster changeovers and fewer stops increase line capacity.",
+        "Consistent quality: machines repeat the same settings on every shift.",
+        "Lower energy use: drives, compressors and utilities run to demand.",
+        "Faster fault finding: clear alarms and diagnostics shorten repair time.",
+        "Better decisions: production and downtime data show where to invest next. The national Operation 300bn industrial strategy has also encouraged factories to modernise, making automation a priority for many plant owners.",
+        "Where Automation Applies in a Manufacturing Plant Factory automation UAE covers individual machines, complete lines and plant utilities. The table below shows where each manufacturing plant automation UAE application usually fits.",
+        "Area Typical equipment Key automation applications Machines CNC, presses, moulding machines, extruders Machine control, drives, safety circuits Lines Conveyors, cutters, winders, packers Line sequencing, speed sync, HMI Utilities Compressors, chillers, boilers, power Energy monitoring, VFDs, alarms Data and quality Sensors, cameras, counters OEE, inspection, production reports Machines and Production Lines Production line automation UAE links individual machines into one controlled sequence, with speed matching, interlocks and a single operator screen. Machine automation and control covers starting, stopping, recipes and protection for each machine. A machine control panel manufacturer UAE like GTA builds panels for new machines and replacements for worn or unsafe ones. See our custom control panel design and manufacturing service. Lines are where manufacturing plant automation UAE delivers the biggest gains in output.",
+        "Plastics, Metals and Cables Injection moulding machine control manages temperatures, pressures and cycle steps, so parts stay within tolerance. Extrusion line automation synchronises extruders, pullers, cutters and winders for pipes, profiles and films. Metal fabrication machine control covers presses, shears, bending machines and welding cells. Cable and wire manufacturing automation controls drawing, stranding, insulation and coiling, where tension and speed must match exactly. Printing and paper machine control keeps registration, tension and speed stable across long runs. Each of these is a different manufacturing plant automation UAE challenge, so we scope every line individually.",
+        "CNC, Servo and Drives Our CNC control support for manufacturing plants covers controls, drives and spindles on lathes, machining centres and routers. See our CNC machine repair services . Servo and drive maintenance manufacturing covers backup, inspection and repair of the drives that power precise motion. A VFD retrofit for factory motors replaces fixed-speed starters on pumps, fans and conveyors, cutting energy use. Drive and CNC faults are a common reason for manufacturing plant automation UAE call-outs. See our variable speed drive retrofit example."
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Our Manufacturing Plant Automation UAE Services",
+      "body": [
+        "PLC Programming and Troubleshooting Manufacturing PLC programming UAE covers new logic, modifications and documentation on major PLC platforms. PLC troubleshooting manufacturing plants finds the cause of stops, from failed I/O cards to program errors, and gets the line running again. HMI and SCADA for factories give operators clear screens with alarms, counts and trends. Every change in our manufacturing plant automation UAE work is backed up and documented before release. See our PLC maintenance and troubleshooting service.",
+        "Electrical Troubleshooting and Safety Factory electrical troubleshooting traces intermittent trips, overheating and wiring faults with thermal imaging and systematic testing. Factory machine guarding and safety circuits replace bypassed interlocks and single-channel e-stops with properly rated safety systems. In manufacturing plant automation UAE projects, every safety change is tested and recorded. See our machine safety upgrade example.",
+        "Data, Quality and Smart Factory OEE and downtime tracking factory systems record every stop with a reason, so the biggest losses are fixed first. Quality inspection automation uses sensors and cameras to check dimensions, presence and labels on every part. MES and production data integration connects machines to production planning and reporting systems. Predictive maintenance for manufacturing plants uses vibration and temperature data to warn of failures early. Compressed air and energy monitoring factory systems show where utilities are wasted. Together, these form the smart factory solutions UAE manufacturers increasingly ask for, and they show whether manufacturing plant automation UAE investments are paying back. See our OEE and downtime monitoring and compressed air monitoring examples.",
+        "Upgrades and Legacy Machines Many factories still run good machines with obsolete controls. A legacy machine control upgrade replaces the controller, drives and HMI while keeping the mechanical equipment. Our approach to manufacturing plant automation UAE upgrades is to copy existing functions first, then improve them once the line is stable. See our obsolete PLC migration example."
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "Timelines",
+      "heading": "Typical Project *Timelines*",
+      "intro": "These are typical ranges; a site survey confirms the actual schedule for each manufacturing plant",
+      "footnote": "Order backlogs and production peaks affect timelines, so we plan manufacturing plant",
+      "steps": [
+        {
+          "title": "Plant survey and assessment",
+          "meta": "Within 24 - 48 hours",
+          "description": "Plant survey and assessment: typically completed within 24 - 48 hours."
+        },
+        {
+          "title": "Scoped proposal",
+          "meta": "2 - 5 working days after survey",
+          "description": "Scoped proposal: typically completed 2 - 5 working days after survey."
+        },
+        {
+          "title": "Drive or servo repair",
+          "meta": "3 - 10 working days",
+          "description": "Drive or servo repair: typically completed 3 - 10 working days."
+        },
+        {
+          "title": "PLC program modification",
+          "meta": "2 - 10 days",
+          "description": "PLC program modification: typically completed 2 - 10 days."
+        },
+        {
+          "title": "Machine control panel",
+          "meta": "3 - 6 weeks",
+          "description": "Machine control panel: typically completed 3 - 6 weeks."
+        },
+        {
+          "title": "OEE or energy monitoring rollout",
+          "meta": "2 - 6 weeks",
+          "description": "OEE or energy monitoring rollout: typically completed 2 - 6 weeks."
+        },
+        {
+          "title": "Legacy machine or line upgrade",
+          "meta": "1 - 4 months, phased",
+          "description": "Legacy machine or line upgrade: typically completed 1 - 4 months, phased."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "layout": "editorial",
+      "heading": "Standards and Good Practice",
+      "body": [
+        "Machine control panels follow IEC 60204 - 1, while safety-related controls commonly reference ISO 13849 and IEC 62061. PLC software follows IEC 61131 - 3 programming languages. We scope every manufacturing plant automation UAE job to the standards your plant, insurer or customers require, and we hand over drawings, backups and test records."
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "Why GTA",
+      "heading": "Why Choose GTA for Manufacturing Plant Automation UAE?",
+      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
+      "proofs": [
+        {
+          "value": "24–48h",
+          "label": "Site Assessment",
+          "sublabel": "Across all Emirates"
+        },
+        {
+          "value": "10+",
+          "label": "Years Experience",
+          "sublabel": "Multi-platform engineering"
+        },
+        {
+          "value": "100%",
+          "label": "Tested Rigs",
+          "sublabel": "FAT before site delivery"
+        }
+      ],
+      "pillars": [
+        {
+          "title": "Mixed-machine experience",
+          "description": "factories with machines from many brands and decades."
+        },
+        {
+          "title": "Repair before replace",
+          "description": "upgrades recommended only when repair no longer makes sense."
+        },
+        {
+          "title": "Workshop and site support",
+          "description": "drives and boards repaired in our Sharjah workshop, faults fixed on site."
+        },
+        {
+          "title": "Fast assessment",
+          "description": "manufacturing plant automation UAE site visits are typically scheduled within 24 - 48 hours."
+        },
+        {
+          "title": "Documented support",
+          "description": "every manufacturing plant automation UAE job closes with backups and records your team can use."
+        }
+      ]
+    },
+    {
+      "type": "coverage",
+      "tone": "dark",
+      "eyebrow": "UAE Coverage",
+      "heading": "Serving Dubai, Abu Dhabi, *Sharjah & Northern Emirates*",
+      "note": "Our Sharjah workshop and engineering base gives quick road access across the Emirates.",
+      "areas": [
+        {
+          "name": "Dubai",
+          "blurb": "Jebel Ali, Dubai Industrial City, Al Quoz, and logistics hubs."
+        },
+        {
+          "name": "Abu Dhabi",
+          "blurb": "ICAD, Mussafah, Kizad, and onshore process facilities."
+        },
+        {
+          "name": "Sharjah & Northern Emirates",
+          "blurb": "Hamriyah Free Zone, SAIF Zone, Sajaa, and regional plants."
+        },
+        {
+          "name": "International & EPC Partners",
+          "blurb": "In-country instrument sourcing, site acceptance testing, and lifecycle support."
+        }
+      ],
+      "body": [
+        "Our Sharjah base gives quick road access for manufacturing plant automation UAE call-outs across the Emirates. We provide manufacturing plant automation Dubai support for factories in areas such as Dubai Industrial City, Dubai Investments Park and Jebel Ali, and manufacturing plant automation Abu Dhabi support for plants in areas such as KEZAD, ICAD and Mussafah. Local clients use our manufacturing plant automation Sharjah team for fast response in Sajaa, Hamriyah and Sharjah Industrial Area. International manufacturers opening plants in the UAE use us as their local manufacturing plant automation UAE partner for installation support, commissioning help and after-sales service. For sector-specific needs, see our automotive and food and beverage pages."
+      ]
+    },
+    {
+      "type": "faq",
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked *Questions*",
+      "intro": "Common questions about our manufacturing plant automation uae capabilities in the UAE.",
+      "items": [
+        {
+          "q": "What does manufacturing plant automation UAE work include?",
+          "a": [
+            "Manufacturing plant automation"
+          ]
+        },
+        {
+          "q": "UAE work covers the PLCs, drives, panels, sensors and software that run machines, lines and plant utilities. Can you work on machines from different brands?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "Our manufacturing plant automation UAE team supports major PLC, CNC and drive brands, subject to parts and program access. Can you replace an obsolete PLC on an old machine?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "We migrate the logic to a current controller while keeping the existing mechanics. Do you repair servo drives and VFDs?",
+          "a": [
+            "Yes."
+          ]
+        },
+        {
+          "q": "As part of our manufacturing plant automation UAE support, we diagnose, repair and test drives in our workshop, with parameter backups kept on file. Can you upgrade a line without long shutdowns?",
+          "a": [
+            "In most cases, yes."
+          ]
+        },
+        {
+          "q": "In manufacturing plant automation UAE projects, we migrate in phases during weekends or planned maintenance. How long does a machine control panel take?",
+          "a": [
+            "Most machine control panels take 3 - 6 weeks to design, build and test."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "dark",
+      "eyebrow": "Get in touch",
+      "heading": "Talk to a Manufacturing Plant Automation UAE Engineer",
+      "body": "Tell us about your factory, your machines and the problem you need solved. Our team will arrange a survey and return a clear scope for your manufacturing plant automation UAE project.",
+      "actions": [
+        {
+          "label": "Call: +971 6 543 6933",
+          "url": "tel:+97165436933",
+          "appearance": "primary"
+        },
+        {
+          "label": "Email mathews@generaltechuae.com",
+          "url": "mailto:mathews@generaltechuae.com",
+          "appearance": "secondary"
+        }
+      ]
+    }
+  ]
+}
