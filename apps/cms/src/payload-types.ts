@@ -946,6 +946,14 @@ export interface IndustriesBlock {
      * What the work looks like in this sector — one or two sentences.
      */
     description?: string | null;
+    /**
+     * Optional link destination to sector inner page.
+     */
+    href?: string | null;
+    /**
+     * Optional link label, e.g. "Explore oil and gas automation".
+     */
+    linkLabel?: string | null;
     id?: string | null;
   }[];
   /**
@@ -1645,6 +1653,8 @@ export interface IndustriesBlockSelect<T extends boolean = true> {
         name?: T;
         iconName?: T;
         description?: T;
+        href?: T;
+        linkLabel?: T;
         id?: T;
       };
   footnote?: T;
