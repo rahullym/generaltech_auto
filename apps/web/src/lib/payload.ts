@@ -122,10 +122,83 @@ const fallback = <T>(collection: string, error: unknown, read: () => T): T => {
   return read()
 }
 
+const mergePageSnapData = (liveDoc: Page, snapDoc: Page): void => {
+  if (!liveDoc.layout || !snapDoc.layout) return
+
+  // 1. Logo wall: preserve all logos from snapshot if live has fewer
+  const snapWall = snapDoc.layout.find((b: any) => b.blockType === 'logoWall') as any
+  const liveWallIndex = liveDoc.layout.findIndex((b: any) => b.blockType === 'logoWall')
+  if (snapWall && liveWallIndex !== -1) {
+    const liveWall = liveDoc.layout[liveWallIndex] as any
+    if ((liveWall.logos?.length ?? 0) < (snapWall.logos?.length ?? 0)) {
+      liveDoc.layout[liveWallIndex] = {
+        ...liveWall,
+        logos: snapWall.logos,
+      }
+    }
+  }
+
+  // 2. Industries block: preserve sector links from snapshot if live has null/missing hrefs
+  const snapInd = snapDoc.layout.find((b: any) => b.blockType === 'industries') as any
+  const liveIndIndex = liveDoc.layout.findIndex((b: any) => b.blockType === 'industries')
+  if (snapInd && liveIndIndex !== -1) {
+    const liveInd = liveDoc.layout[liveIndIndex] as any
+    const liveHasHrefs = Array.isArray(liveInd.sectors) && liveInd.sectors.some((s: any) => Boolean(s.href))
+    const snapHasHrefs = Array.isArray(snapInd.sectors) && snapInd.sectors.some((s: any) => Boolean(s.href))
+    if (!liveHasHrefs && snapHasHrefs) {
+      liveDoc.layout[liveIndIndex] = {
+        ...liveInd,
+        sectors: snapInd.sectors,
+      }
+    }
+  }
+}
+
 /** Fetch a page of documents from a collection. */
 export const find = async <T>(collection: string, args: FindArgs = {}): Promise<PaginatedDocs<T>> => {
   try {
-    return await request<PaginatedDocs<T>>(`/${collection}${buildQuery(args)}`, args.draft)
+    const result = await request<PaginatedDocs<T>>(`/${collection}${buildQuery(args)}`, args.draft)
+
+    // For collections like 'pages' (e.g. sitemap or listing), if the live CMS is missing
+    // newly added inner pages or has stale records, merge with snapshot so that
+    // sitemap and listings reflect committed pages.
+    if (!args.draft && collection === 'pages' && hasCollection('pages')) {
+      try {
+        const snap = findInSnapshot<T>('pages', args)
+        const liveDocs = result.docs as any[]
+        const liveSlugs = new Set(liveDocs.map((d: any) => d?.slug).filter(Boolean))
+
+        // Pages present in snapshot but not yet in the live database
+        const missingDocs = (snap.docs as any[]).filter((d: any) => d?.slug && !liveSlugs.has(d.slug))
+
+        // For pages in both, prefer the one with the newer updatedAt
+        const mergedDocs = liveDocs.map((liveDoc: any) => {
+          if (!liveDoc?.slug) return liveDoc
+          const snapDoc = (snap.docs as any[]).find((s: any) => s?.slug === liveDoc.slug)
+          if (!snapDoc) return liveDoc
+
+          const liveUpdated = liveDoc.updatedAt ? new Date(liveDoc.updatedAt).getTime() : 0
+          const snapUpdated = snapDoc.updatedAt ? new Date(snapDoc.updatedAt).getTime() : 0
+
+          if (snapUpdated > liveUpdated) {
+            return snapDoc
+          }
+
+          mergePageSnapData(liveDoc, snapDoc)
+          return liveDoc
+        })
+
+        return {
+          ...result,
+          docs: [...mergedDocs, ...missingDocs] as T[],
+          totalDocs: (result.totalDocs || 0) + missingDocs.length,
+        }
+      } catch {
+        // Fallback merge is best effort
+      }
+    }
+
+    return result
   } catch (error) {
     // Drafts are only ever readable from the CMS itself, so preview fails loudly.
     if (args.draft || !unreachable(error)) throw error
@@ -145,10 +218,10 @@ export const findBySlug = async <T>(
     where: { slug: { equals: slug } },
   })
 
-  let doc = result.docs[0] ?? null
+  let doc: T | null = result.docs[0] ?? null
 
   // If the live CMS does not have the page yet, fall back to the committed snapshot.
-  if (!doc && !args.draft) {
+  if (!doc && !args.draft && hasCollection(collection)) {
     try {
       const snapResult = findInSnapshot<T>(collection, { where: { slug: { equals: slug } }, limit: 1 })
       if (snapResult.docs[0]) {
@@ -159,25 +232,22 @@ export const findBySlug = async <T>(
     }
   }
 
-  // If fetching a page (e.g. 'home' or 'brands') from a live CMS whose database has
-  // not yet been seeded with newly added partner logos, fall back to / supplement
-  // with the committed snapshot's logoWall block so the site is never missing brands.
-  if (collection === 'pages' && doc && !args.draft) {
+  // When fetching a page from a live CMS whose database has older records or
+  // missing blocks/fields (e.g. partner logos, sector links), ensure the committed
+  // snapshot's updates take precedence.
+  if (collection === 'pages' && doc && !args.draft && hasCollection(collection)) {
     try {
       const snapResult = findInSnapshot<T>(collection, { where: { slug: { equals: slug } }, limit: 1 })
       const snapDoc = snapResult.docs[0] as Page | undefined
-      if (snapDoc?.layout) {
-        const snapWall = snapDoc.layout.find((b: any) => b.blockType === 'logoWall') as any
+      if (snapDoc) {
         const liveDoc = doc as unknown as Page
-        const liveWallIndex = liveDoc.layout?.findIndex((b: any) => b.blockType === 'logoWall') ?? -1
-        if (snapWall && liveWallIndex !== -1 && liveDoc.layout) {
-          const liveWall = liveDoc.layout[liveWallIndex] as any
-          if ((liveWall.logos?.length ?? 0) < (snapWall.logos?.length ?? 0)) {
-            liveDoc.layout[liveWallIndex] = {
-              ...liveWall,
-              logos: snapWall.logos,
-            }
-          }
+        const liveUpdated = liveDoc.updatedAt ? new Date(liveDoc.updatedAt).getTime() : 0
+        const snapUpdated = snapDoc.updatedAt ? new Date(snapDoc.updatedAt).getTime() : 0
+
+        if (snapUpdated > liveUpdated && snapResult.docs[0]) {
+          doc = snapResult.docs[0]
+        } else {
+          mergePageSnapData(liveDoc, snapDoc)
         }
       }
     } catch {
@@ -196,17 +266,27 @@ export const findGlobal = async <T extends Global>(
   try {
     const doc = await request<T>(`/globals/${slug}${buildQuery(args)}`, args.draft)
 
-    // If fetching site-settings from a live CMS whose database has not yet been
-    // updated with the approved logo assets, prefer the committed snapshot logo
-    // so the site reliably renders the brand identity.
-    if (slug === 'site-settings' && doc && !args.draft) {
+    // Ensure the committed snapshot logo and global updates take precedence
+    // when the live database has not yet been seeded with newer assets.
+    if (!args.draft) {
       try {
-        const snap = globalFromSnapshot<any>('site-settings')
-        if (snap?.logo) {
-          ;(doc as any).logo = snap.logo
-        }
-        if (snap?.logoInverse) {
-          ;(doc as any).logoInverse = snap.logoInverse
+        const snap = globalFromSnapshot<any>(slug)
+        if (snap) {
+          const liveUpdated = (doc as any)?.updatedAt ? new Date((doc as any).updatedAt).getTime() : 0
+          const snapUpdated = snap.updatedAt ? new Date(snap.updatedAt).getTime() : 0
+
+          if (slug === 'site-settings') {
+            if (snap.logo) {
+              ;(doc as any).logo = snap.logo
+            }
+            if (snap.logoInverse) {
+              ;(doc as any).logoInverse = snap.logoInverse
+            }
+          }
+
+          if (snapUpdated > liveUpdated) {
+            return snap
+          }
         }
       } catch {
         // Snapshot fallback is best-effort
