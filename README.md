@@ -138,6 +138,15 @@ sits on the site's own domain. The website itself reaches the CMS at
 and the CMS's other hostname, `generaltech-auto-admin.vercel.app`, redirects
 `/admin` to the site.
 
+The panel's own scripts and styles do **not** go through that proxy: the CMS
+is built with Next's `assetPrefix` set to `NEXT_PUBLIC_ASSET_URL` (the origin
+hostname above, set on the CMS project), so the admin HTML links to them on
+the CMS's hostname directly. The website project hosted the CMS before the
+split, and once those deployments expired Vercel answered 410 Gone on the
+site's domain for every `/_next/static` path they had contained — chunk names
+are content hashes, so that was most of each new build, and the panel came up
+blank. See the comment in `apps/cms/next.config.mjs`.
+
 The website reads the CMS named by `PAYLOAD_URL` on every render and the CDN
 holds each page for a minute, so a published edit is live about a minute later.
 If the CMS cannot be reached, or takes longer than eight seconds, the site
