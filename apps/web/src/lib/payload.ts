@@ -72,6 +72,17 @@ const buildQuery = ({ where, sort, limit, page, depth, select, draft }: FindArgs
 
 const TIMEOUT_MS = 8000
 
+// Once one request has found the CMS unreachable — a timeout or a refused
+// connection, not an HTTP error — the rest of the render would find the same,
+// and a page is several requests deep: the page itself, then the header,
+// footer and settings, then any block that lists other pages. Each waiting its
+// full 8 seconds in turn is how a service page took 40 seconds to stream while
+// the CMS was waking up. So for a short while after a failure, requests give
+// up at once and the snapshot answers immediately. Drafts never take the
+// shortcut: previews must fail loudly rather than quietly show stale content.
+const BREAK_MS = 30_000
+let brokenUntil = 0
+
 const request = async <T>(path: string, draft = false): Promise<T> => {
   const url = `${PAYLOAD_URL}/api${path}`
 
@@ -79,17 +90,27 @@ const request = async <T>(path: string, draft = false): Promise<T> => {
     throw new Error('PAYLOAD_API_KEY must be set to read draft content.')
   }
 
-  const res = await fetch(url, {
-    headers: {
-      'Content-Type': 'application/json',
-      ...(draft ? { Authorization: `users API-Key ${PAYLOAD_API_KEY}` } : {}),
-    },
-    // Drafts change constantly and must never be shared between viewers.
-    cache: draft ? 'no-store' : 'default',
-    // A CMS that is waking up should not hold a visitor's page; past this the
-    // request counts as unreachable and the snapshot answers instead.
-    signal: AbortSignal.timeout(TIMEOUT_MS),
-  })
+  if (!draft && Date.now() < brokenUntil) {
+    throw new PayloadError(`Payload at ${PAYLOAD_URL} was unreachable moments ago; skipping ${path}`, 503, url)
+  }
+
+  let res: Response
+  try {
+    res = await fetch(url, {
+      headers: {
+        'Content-Type': 'application/json',
+        ...(draft ? { Authorization: `users API-Key ${PAYLOAD_API_KEY}` } : {}),
+      },
+      // Drafts change constantly and must never be shared between viewers.
+      cache: draft ? 'no-store' : 'default',
+      // A CMS that is waking up should not hold a visitor's page; past this the
+      // request counts as unreachable and the snapshot answers instead.
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+    })
+  } catch (error) {
+    if (!draft) brokenUntil = Date.now() + BREAK_MS
+    throw error
+  }
 
   if (!res.ok) {
     throw new PayloadError(`Payload responded ${res.status} for ${path}`, res.status, url)
