@@ -7,22 +7,55 @@ interface Props {
   title: string
   description?: string
   image?: Media | string | null
+  imageAlt?: string
   type?: 'website' | 'article'
   publishedAt?: string
   noindex?: boolean
 }
 
-const { title, description, image, type = 'website', publishedAt, noindex } = Astro.props
+const {
+  title,
+  description,
+  image,
+  imageAlt: customAlt,
+  type = 'website',
+  publishedAt,
+  noindex,
+} = Astro.props
 
-const origin = publicOrigin(Astro.site, Astro.url)
+const DEFAULT_IMAGE_PATH = '/og-image.png'
+const DEFAULT_IMAGE_ALT = 'General Tech Automation UAE'
+const CANONICAL_ORIGIN = 'https://www.generaltechautomation.ae'
+
+const siteOrigin = publicOrigin(Astro.site, Astro.url)
+const origin = siteOrigin && !/^https?:\/\/(localhost|127\.0\.0\.1)/.test(siteOrigin)
+  ? siteOrigin
+  : CANONICAL_ORIGIN
 
 const canonical = new URL(Astro.url.pathname, origin).toString()
 
-// Media may arrive as a bare id when the query used depth 0.
-const imageUrl =
-  image && typeof image === 'object' && image.url
-    ? new URL(image.url, origin).toString()
-    : undefined
+// Resolve absolute image URL and alt text
+let imagePath = DEFAULT_IMAGE_PATH
+let imageAlt = customAlt || DEFAULT_IMAGE_ALT
+
+if (image) {
+  if (typeof image === 'object' && image.url) {
+    imagePath = image.url
+    if (image.alt) imageAlt = image.alt
+  } else if (typeof image === 'string' && image.trim() !== '') {
+    imagePath = image.trim()
+  }
+}
+
+const imageUrl = imagePath.startsWith('http://') || imagePath.startsWith('https://')
+  ? imagePath
+  : new URL(imagePath, origin).toString()
+
+const imageType = imageUrl.endsWith('.jpg') || imageUrl.endsWith('.jpeg')
+  ? 'image/jpeg'
+  : imageUrl.endsWith('.webp')
+    ? 'image/webp'
+    : 'image/png'
 ---
 
 <title>{title}</title>
@@ -34,10 +67,16 @@ const imageUrl =
 <meta property="og:title" content={title} />
 <meta property="og:url" content={canonical} />
 {description && <meta property="og:description" content={description} />}
-{imageUrl && <meta property="og:image" content={imageUrl} />}
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:secure_url" content={imageUrl} />
+<meta property="og:image:type" content={imageType} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content={imageAlt} />
 {publishedAt && <meta property="article:published_time" content={publishedAt} />}
 
-<meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 {description && <meta name="twitter:description" content={description} />}
-{imageUrl && <meta name="twitter:image" content={imageUrl} />}
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:image:alt" content={imageAlt} />

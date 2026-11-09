@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T10:21:04.652Z",
+  "generatedAt": "2026-11-09T05:00:00.000Z",
   "collections": {
     "pages": [
       {
@@ -47917,9 +47917,50 @@
         "meta": {
           "title": "Industrial Automation Engineering Company in UAE",
           "description": "General Tech Automation delivers PLC logic design, control architecture, HMI development and Industry 4.0 engineering across the UAE. Call +971 6 543 6933.",
-          "image": null
+          "image": {
+            "id": 9999,
+            "alt": "General Tech Automation UAE",
+            "caption": null,
+            "updatedAt": "2026-11-09T05:00:00.000Z",
+            "createdAt": "2026-11-09T05:00:00.000Z",
+            "url": "/cms/og-image.png",
+            "thumbnailURL": null,
+            "filename": "og-image.png",
+            "mimeType": "image/png",
+            "filesize": 32995,
+            "width": 1200,
+            "height": 1200,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              },
+              "card": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              },
+              "wide": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              }
+            }
+          }
         },
-        "updatedAt": "2026-09-05T09:44:48.713Z",
+        "updatedAt": "2026-11-09T05:00:00.000Z",
         "createdAt": "2026-08-18T08:53:50.868Z",
         "_status": "published"
       },
@@ -64505,7 +64546,48 @@
       "defaultSeo": {
         "title": null,
         "description": "We design and build automation for operations-heavy businesses.",
-        "image": null
+        "image": {
+          "id": 9999,
+          "alt": "General Tech Automation UAE",
+          "caption": null,
+          "updatedAt": "2026-11-09T05:00:00.000Z",
+          "createdAt": "2026-11-09T05:00:00.000Z",
+          "url": "/cms/og-image.png",
+          "thumbnailURL": null,
+          "filename": "og-image.png",
+          "mimeType": "image/png",
+          "filesize": 32995,
+          "width": 1200,
+          "height": 1200,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "card": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "wide": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            }
+          }
+        }
       },
       "logo": {
         "id": 1,
@@ -64597,7 +64679,7 @@
         "phone": "+971 6 543 6933",
         "address": "P.O. Box: 25898\nSharjah, U A E"
       },
-      "updatedAt": "2026-09-05T09:44:48.622Z",
+      "updatedAt": "2026-11-09T05:00:00.000Z",
       "createdAt": "2026-08-18T08:53:51.023Z",
       "globalType": "site-settings"
     }

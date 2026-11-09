@@ -303,6 +303,10 @@ export const findGlobal = async <T extends Global>(
             if (snap.logoInverse) {
               ;(doc as any).logoInverse = snap.logoInverse
             }
+            if (snap.defaultSeo?.image) {
+              if (!(doc as any).defaultSeo) (doc as any).defaultSeo = {}
+              ;(doc as any).defaultSeo.image = snap.defaultSeo.image
+            }
           }
 
           if (snapUpdated > liveUpdated) {

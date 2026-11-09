@@ -50,7 +50,7 @@ const pageTitle = title
     : `${title} | ${settings.siteName}`
   : settings.siteName
 const pageDescription = description || settings.defaultSeo?.description || settings.tagline
-const pageImage = image ?? settings.defaultSeo?.image ?? null
+const pageImage = image ?? settings.defaultSeo?.image ?? '/og-image.png'
 
 // The office line in Site Settings is a landline, so WhatsApp goes to the
 // mobile. wa.me needs a bare international number — no plus or spaces.
