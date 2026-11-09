@@ -53,18 +53,101 @@ const paragraph = (...children) => ({
   children: children.map((c) => (typeof c === 'string' || !c.type ? textNode(c) : c)),
 })
 
-const richText = (paragraphs) => ({
-  root: {
-    type: 'root',
-    format: '',
-    indent: 0,
-    version: 1,
-    direction: 'ltr',
-    children: (Array.isArray(paragraphs) ? paragraphs : [paragraphs]).map((p) =>
-      paragraph(...runs(p)),
-    ),
-  },
+const heading = (text, tag = 'h3') => ({
+  type: 'heading',
+  tag,
+  format: '',
+  indent: 0,
+  version: 1,
+  direction: 'ltr',
+  children: [textNode(text)],
 })
+
+const table = (headers, rows) => ({
+  type: 'table',
+  format: '',
+  indent: 0,
+  version: 1,
+  direction: 'ltr',
+  children: [
+    {
+      type: 'tablerow',
+      children: headers.map((h) => ({
+        type: 'tablecell',
+        headerState: 1,
+        children: [
+          {
+            type: 'paragraph',
+            format: '',
+            indent: 0,
+            version: 1,
+            direction: 'ltr',
+            children: [{ type: 'text', text: h, format: 1, style: '', detail: 0, mode: 'normal', version: 1 }],
+          },
+        ],
+      })),
+    },
+    ...rows.map((row) => ({
+      type: 'tablerow',
+      children: row.map((cell) => ({
+        type: 'tablecell',
+        headerState: 0,
+        children: [
+          {
+            type: 'paragraph',
+            format: '',
+            indent: 0,
+            version: 1,
+            direction: 'ltr',
+            children: runs(cell).map(textNode),
+          },
+        ],
+      })),
+    })),
+  ],
+})
+
+const buildProseChildren = (block) => {
+  const children = []
+
+  if (block.intro) {
+    children.push(paragraph(...runs(block.intro)))
+  }
+
+  if (block.table) {
+    children.push(table(block.table.headers, block.table.rows))
+  }
+
+  for (const item of block.body ?? []) {
+    if (typeof item === 'string') {
+      if (item.startsWith('### ')) {
+        children.push(heading(item.slice(4).trim(), 'h3'))
+      } else if (item.startsWith('## ')) {
+        children.push(heading(item.slice(3).trim(), 'h2'))
+      } else if (item.startsWith('- ')) {
+        const bullets = item.split('\n').filter((l) => l.trim().startsWith('- '))
+        children.push({
+          type: 'list',
+          listType: 'bullet',
+          format: '',
+          indent: 0,
+          version: 1,
+          direction: 'ltr',
+          children: bullets.map((b) => ({
+            type: 'listitem',
+            version: 1,
+            direction: 'ltr',
+            children: runs(b.replace(/^-\s*/, '').trim()).map(textNode),
+          })),
+        })
+      } else {
+        children.push(paragraph(...runs(item)))
+      }
+    }
+  }
+
+  return children
+}
 
 const expand = (block) => {
   switch (block.type) {
@@ -101,11 +184,20 @@ const expand = (block) => {
         heading: block.heading,
         numbered: block.numbered ?? false,
         lede: block.lede ?? false,
-        collapsible: block.collapsible ?? false,
+        collapsible: false, // keep copy fully readable
         mediaPosition: block.mediaPosition ?? 'left',
         media: mediaList,
         footprint: block.footprint,
-        content: richText(block.body),
+        content: {
+          root: {
+            type: 'root',
+            format: '',
+            indent: 0,
+            version: 1,
+            direction: 'ltr',
+            children: buildProseChildren(block),
+          },
+        },
       }
     }
 
@@ -170,7 +262,20 @@ const expand = (block) => {
         tone: block.tone ?? 'dark',
         note: block.note,
         areas: block.areas,
-        content: block.body ? richText(block.body) : undefined,
+        content: block.body
+          ? {
+              root: {
+                type: 'root',
+                format: '',
+                indent: 0,
+                version: 1,
+                direction: 'ltr',
+                children: (Array.isArray(block.body) ? block.body : [block.body]).map((p) =>
+                  paragraph(...runs(p)),
+                ),
+              },
+            }
+          : undefined,
       }
 
     case 'faq':
@@ -181,7 +286,18 @@ const expand = (block) => {
         intro: block.intro,
         items: block.items.map((item) => ({
           question: item.q,
-          answer: richText(item.a),
+          answer: {
+            root: {
+              type: 'root',
+              format: '',
+              indent: 0,
+              version: 1,
+              direction: 'ltr',
+              children: (Array.isArray(item.a) ? item.a : [item.a]).map((p) =>
+                paragraph(...runs(p)),
+              ),
+            },
+          },
         })),
       }
 
@@ -214,6 +330,16 @@ const pages = snapshot.collections.pages ?? []
 let maxId = Math.max(...pages.map((p) => (typeof p.id === 'number' ? p.id : 0)))
 const now = new Date().toISOString()
 
+const ogFallback = uploads.get('og-image.png') || {
+  id: 'og-image-default',
+  url: '/cms/og-image.png',
+  alt: 'General Tech Automation UAE',
+  width: 1200,
+  height: 1200,
+  mimeType: 'image/png',
+  filename: 'og-image.png',
+}
+
 for (const file of files) {
   const industry = JSON.parse(await readFile(path.join(INDUSTRIES_DIR, file), 'utf8'))
   const layout = industry.layout.map(expand)
@@ -228,7 +354,10 @@ for (const file of files) {
     layout,
     service: null,
     application: null,
-    meta: industry.meta,
+    meta: {
+      ...industry.meta,
+      image: industry.meta?.image ?? ogFallback,
+    },
     updatedAt: now,
     createdAt: pageIndex !== -1 ? pages[pageIndex].createdAt ?? now : now,
     _status: 'published',

@@ -19,7 +19,7 @@ import { fileURLToPath } from 'node:url'
 import config from '@payload-config'
 import { getPayload } from 'payload'
 
-import { doc, paragraph, type TextRun } from '../content/lexical'
+import { doc, heading, list, listItem, paragraph, table, type TextRun } from '../content/lexical'
 import type { Page } from '../payload-types'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
@@ -56,6 +56,40 @@ const runs = (value: string): (string | TextRun)[] =>
     )
 
 const richText = (paragraphs: string[]) => doc(...paragraphs.map((text) => paragraph(...runs(text))))
+
+const buildProseContent = (block: Authored) => {
+  const children: unknown[] = []
+
+  if (block.intro) {
+    children.push(paragraph(...runs(block.intro)))
+  }
+
+  if (block.table) {
+    children.push(table(block.table.headers, block.table.rows))
+  }
+
+  for (const item of block.body ?? []) {
+    if (typeof item === 'string') {
+      if (item.startsWith('### ')) {
+        children.push(heading(item.slice(4).trim(), 'h3'))
+      } else if (item.startsWith('## ')) {
+        children.push(heading(item.slice(3).trim(), 'h2'))
+      } else if (item.startsWith('- ')) {
+        const bullets = item.split('\n').filter((l: string) => l.trim().startsWith('- '))
+        children.push(
+          list(
+            'bullet',
+            bullets.map((b: string) => listItem(...runs(b.replace(/^-\s*/, '').trim()))),
+          ),
+        )
+      } else {
+        children.push(paragraph(...runs(item)))
+      }
+    }
+  }
+
+  return doc(...children)
+}
 
 const action = ({ label, url, appearance = 'primary' }: Action) => ({
   link: { type: 'custom', label, url, appearance },
@@ -133,7 +167,7 @@ const run = async () => {
           mediaPosition: block.mediaPosition ?? 'left',
           media: ids.filter(Boolean).map((image) => ({ image })),
           footprint: block.footprint,
-          content: richText(block.body),
+          content: buildProseContent(block),
         }
       }
 

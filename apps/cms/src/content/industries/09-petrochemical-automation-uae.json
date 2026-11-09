@@ -5,7 +5,7 @@
   "navLabel": "Petrochemical Automation",
   "meta": {
     "title": "Petrochemical Automation UAE | Analysers, SIS & DCS Support",
-    "description": "Petrochemical automation UAE for analysers, SIS proof testing, DCS migration, calibration and skid commissioning. Site survey in 24 - 48 hours. Call GTA."
+    "description": "Petrochemical automation UAE for analysers, SIS proof testing, DCS migration, calibration and skid commissioning. Site survey in 24–48 hours. Call GTA."
   },
   "layout": [
     {
@@ -13,7 +13,7 @@
       "variant": "centered",
       "eyebrow": "Petrochemical Sector",
       "heading": "Petrochemical Automation *UAE*",
-      "subheading": "Petrochemical automation UAE projects combine high-precision measurement with strict safety requirements, so polymer, fertilizer and chemical plants can run continuously without putting people or equipment at risk. General Tech Automation ( GTA ) , based in Sharjah, supports plant operators, maintenance contractors and EPC teams with instrumentation, analyser support, PLC and DCS work, safety system testing and commissioning.",
+      "subheading": "Petrochemical automation UAE projects combine high-precision measurement with strict safety requirements, so polymer, fertilizer and chemical plants can run continuously without putting people or equipment at risk. General Tech Automation (GTA), based in Sharjah, supports plant operators, maintenance contractors and EPC teams with instrumentation, analyser support, PLC and DCS work, safety system testing and commissioning. This page explains what petrochemical automation UAE work covers, where it applies, and how long each stage typically takes, for local operators and international contractors alike.",
       "image": "oil-refinery.jpg",
       "actions": [
         {
@@ -36,26 +36,56 @@
       "mediaPosition": "right",
       "heading": "What Is Petrochemical Automation?",
       "body": [
-        "What is petrochemical automation? It is the use of instruments, analysers, control systems and safety systems to convert hydrocarbons into chemicals, polymers and fertilizers under tight control of temperature, pressure, flow and composition. A typical petrochemical automation UAE system runs continuous or batch reactions automatically, alarms when a value drifts and trips the process to a safe state if limits are exceeded. The aim is stable product quality, safe operation and high plant availability. In petrochemical automation UAE facilities, a single faulty transmitter or analyser can push product out of specification or trigger an unplanned shutdown, so measurement accuracy matters as much as control logic. For upstream fields, pipelines and refineries, see our oil and gas automation UAE page.",
-        "systems and safety systems to convert hydrocarbons into chemicals, polymers and fertilizers under tight control of temperature, pressure, flow and composition. A typical petrochemical automation UAE system runs continuous or batch reactions automatically, alarms when a value drifts and trips the process to a safe state if limits are exceeded. The aim is stable product quality, safe operation and high plant availability. In petrochemical automation UAE facilities, a single faulty transmitter or analyser can push product out of specification or trigger an unplanned shutdown, so measurement accuracy matters as much as control logic. For upstream fields, pipelines and refineries, see our oil and gas automation UAE page."
+        "Direct answer: What is petrochemical automation? It is the use of instruments, analysers, control systems and safety systems to convert hydrocarbons into chemicals, polymers and fertilizers under tight control of temperature, pressure, flow and composition. A typical petrochemical automation UAE system runs continuous or batch reactions automatically, alarms when a value drifts and trips the process to a safe state if limits are exceeded.",
+        "The aim is stable product quality, safe operation and high plant availability. In petrochemical automation UAE facilities, a single faulty transmitter or analyser can push product out of specification or trigger an unplanned shutdown, so measurement accuracy matters as much as control logic.",
+        "For upstream fields, pipelines and refineries, see our oil and gas automation UAE page.",
+        "For most plants, petrochemical automation UAE projects pay back through five practical gains:",
+        "- **Consistent product:** reactors and blending run to the same conditions on every shift.\n- **Safer operation:** interlocks, alarms and safety functions act faster than any operator.\n- **Higher availability:** early warning from instruments and analysers prevents unplanned trips.\n- **Lower energy and feedstock use:** tighter control reduces off-specification product and rework.\n- **Audit-ready records:** test results, calibrations and alarm history are stored for review."
       ]
     },
     {
       "type": "prose",
       "layout": "editorial",
-      "heading": "Benefits of Petrochemical Automation",
+      "heading": "Where Automation Applies in Petrochemical Plants",
+      "intro": "Chemical plant automation UAE covers continuous processes, batch reactions, utilities and storage. The table below shows where each petrochemical automation UAE application usually fits.",
+      "table": {
+        "headers": [
+          "Area",
+          "Typical equipment",
+          "Key automation applications"
+        ],
+        "rows": [
+          [
+            "Reaction and processing",
+            "Reactors, columns, heat exchangers",
+            "Temperature and pressure control, interlocks"
+          ],
+          [
+            "Analysis and quality",
+            "Gas chromatographs, analyser shelters",
+            "Analyser maintenance, sample systems"
+          ],
+          [
+            "Utilities and rotating equipment",
+            "Compressors, pumps, cooling water",
+            "Machine control, protection, monitoring"
+          ],
+          [
+            "Storage and blending",
+            "Tanks, dosing skids, loading bays",
+            "Level monitoring, blending, metering"
+          ]
+        ]
+      },
       "body": [
-        "For most plants, petrochemical automation UAE projects pay back through five practical gains:",
-        "Consistent product: reactors and blending run to the same conditions on every shift.",
-        "Safer operation: interlocks, alarms and safety functions act faster than any operator.",
-        "Higher availability: early warning from instruments and analysers prevents unplanned trips.",
-        "Lower energy and feedstock use: tighter control reduces off-specification product and rework.",
-        "Audit-ready records: test results, calibrations and alarm history are stored for review.",
-        "Where Automation Applies in Petrochemical Plants Chemical plant automation UAE covers continuous processes, batch reactions, utilities and storage. The table below shows where each petrochemical automation UAE application usually fits.",
-        "Area Typical equipment Key automation applications Reaction and processing Reactors, columns, heat exchangers Temperature and pressure control, interlocks Analysis and quality Gas chromatographs, analyser shelters Analyser maintenance, sample systems Utilities and rotating equipment Compressors, pumps, cooling water Machine control, protection, monitoring Storage and blending Tanks, dosing skids, loading bays Level monitoring, blending, metering Process Control and Reactors Petrochemical process control systems coordinate feed, reaction, separation and product handling. Reactor temperature and pressure control keeps exothermic reactions inside safe limits, using cascade and override strategies where needed. Chemical batch reactor control runs charging, heating, holding and discharge steps to a recipe, recording every phase. Loop tuning and control optimisation reduces oscillation and keeps key variables closer to target. Reactors are where petrochemical automation UAE has the greatest effect on yield and safety.",
-        "Polymers and Fertilizers Polymer plant automation controls catalyst feed, reactor conditions, extrusion and pelletising, where small deviations change product grade. Fertilizer plant automation covers synthesis loops, granulation, drying and bagging. Both depend on reliable instruments and fast response to alarms. In petrochemical automation UAE projects for these plants, grade changes and start-ups need the most careful control. See our batch and recipe control example.",
-        "Analysers and Gas Measurement Composition measurement decides product quality. Our process analyser system maintenance covers sample conditioning, calibration gases and fault finding. Gas chromatograph and analyser shelters need stable temperature, ventilation and gas detection, which we check as part of routine support. Gas measurement skid commissioning verifies meters, transmitters and flow computers before a skid enters service. For petrochemical automation UAE sites, analysers are often the instruments most in need of regular care. See our measurement commissioning and start-up service.",
-        "Storage, Dosing and Blending Chemical storage tank monitoring tracks level, temperature and high-level alarms to prevent overfills, a core safety layer in any petrochemical automation UAE storage area. Chemical dosing and blending automation meters additives and components in the right ratio, with each batch recorded. See our chemical dosing control and remote tank level monitoring examples."
+        "### Process Control and Reactors",
+        "Petrochemical process control systems coordinate feed, reaction, separation and product handling. Reactor temperature and pressure control keeps exothermic reactions inside safe limits, using cascade and override strategies where needed. Chemical batch reactor control runs charging, heating, holding and discharge steps to a recipe, recording every phase. Loop tuning and control optimisation reduces oscillation and keeps key variables closer to target. Reactors are where petrochemical automation UAE has the greatest effect on yield and safety.",
+        "### Polymers and Fertilizers",
+        "Polymer plant automation controls catalyst feed, reactor conditions, extrusion and pelletising, where small deviations change product grade. Fertilizer plant automation covers synthesis loops, granulation, drying and bagging. Both depend on reliable instruments and fast response to alarms. In petrochemical automation UAE projects for these plants, grade changes and start-ups need the most careful control. See our batch and recipe control example.",
+        "### Analysers and Gas Measurement",
+        "Composition measurement decides product quality. Our process analyser system maintenance covers sample conditioning, calibration gases and fault finding. Gas chromatograph and analyser shelters need stable temperature, ventilation and gas detection, which we check as part of routine support. Gas measurement skid commissioning verifies meters, transmitters and flow computers before a skid enters service. For petrochemical automation UAE sites, analysers are often the instruments most in need of regular care. See our measurement commissioning and start-up service.",
+        "### Storage, Dosing and Blending",
+        "Chemical storage tank monitoring tracks level, temperature and high-level alarms to prevent overfills, a core safety layer in any petrochemical automation UAE storage area. Chemical dosing and blending automation meters additives and components in the right ratio, with each batch recorded. See our chemical dosing control and remote tank level monitoring examples."
       ]
     },
     {
@@ -63,58 +93,62 @@
       "layout": "editorial",
       "heading": "Our Petrochemical Automation UAE Services",
       "body": [
-        "PLC, DCS and Alarm Management Petrochemical PLC programming UAE covers package controls, interlocks and fault finding on major platforms. DCS migration petrochemical plant projects move ageing systems to current platforms in phases, with logic mapped and tested before cut-over. Alarm management petrochemical plants reduces nuisance alarms so operators see what matters during upsets. Every change in our petrochemical automation UAE work is backed up and documented under your management-of-change procedure. See our PLC programming services .",
-        "Safety Systems and Ex Equipment Our SIS proof testing petrochemical support helps confirm that safety functions still trip as designed, with results recorded against the safety requirements specification. Our Ex-certified control panels for chemical plants use certified enclosures and components suited to the area classification. Gas detection is often part of the same scope; see our gas detection and area monitoring example. Safety work is where petrochemical automation UAE projects must be documented most carefully.",
-        "Instrumentation, Valves and Rotating Equipment Petrochemical instrumentation calibration covers pressure, temperature, flow and level instruments with traceable certificates. Reliable instruments are the foundation of every control loop and safety function. Control valve diagnostics uses smart positioner data to find sticking, wear and air leaks before they affect control. Compressor and pump control petrochemical covers start permissives, protection and monitoring for critical rotating equipment. WirelessHART instrumentation petrochemical adds measurements in hard-to-reach areas without new cable runs. See our field instrumentation services and wireless plant network support .",
-        "Turnarounds, Data and Security Turnaround and shutdown instrumentation support provides engineers for calibration, loop checks and safety system testing during planned shutdowns. Petrochemical plant asset data management keeps instrument records, tag history and calibration data in one place. OT cybersecurity for petrochemical control systems covers user access, backups and network separation. In petrochemical automation UAE projects, good records make the next turnaround faster. See our asset data management services ."
+        "### PLC, DCS and Alarm Management",
+        "Petrochemical PLC programming UAE covers package controls, interlocks and fault finding on major platforms. DCS migration petrochemical plant projects move ageing systems to current platforms in phases, with logic mapped and tested before cut-over. Alarm management petrochemical plants reduces nuisance alarms so operators see what matters during upsets. Every change in our petrochemical automation UAE work is backed up and documented under your management-of-change procedure. See our PLC programming services.",
+        "### Safety Systems and Ex Equipment",
+        "Our SIS proof testing petrochemical support helps confirm that safety functions still trip as designed, with results recorded against the safety requirements specification. Our Ex-certified control panels for chemical plants use certified enclosures and components suited to the area classification. Gas detection is often part of the same scope; see our gas detection and area monitoring example. Safety work is where petrochemical automation UAE projects must be documented most carefully.",
+        "### Instrumentation, Valves and Rotating Equipment",
+        "Petrochemical instrumentation calibration covers pressure, temperature, flow and level instruments with traceable certificates. Reliable instruments are the foundation of every control loop and safety function. Control valve diagnostics uses smart positioner data to find sticking, wear and air leaks before they affect control. Compressor and pump control petrochemical covers start permissives, protection and monitoring for critical rotating equipment. WirelessHART instrumentation petrochemical adds measurements in hard-to-reach areas without new cable runs. See our field instrumentation services and wireless plant network support.",
+        "### Turnarounds, Data and Security",
+        "Turnaround and shutdown instrumentation support provides engineers for calibration, loop checks and safety system testing during planned shutdowns. Petrochemical plant asset data management keeps instrument records, tag history and calibration data in one place. OT cybersecurity for petrochemical control systems covers user access, backups and network separation. In petrochemical automation UAE projects, good records make the next turnaround faster. See our asset data management services."
       ]
     },
     {
       "type": "process",
       "eyebrow": "Timelines",
       "heading": "Typical Project *Timelines*",
-      "intro": "International and regional clients often ask how long automation work takes. These are typical ranges confirmed by your site survey.",
-      "footnote": "Lead times, permits and shutdown windows affect timelines, so we plan schedules around your access approvals.",
+      "intro": "International contractors often ask how long petrochemical automation UAE work takes. These are typical ranges; a site survey confirms the actual schedule for each petrochemical automation UAE scope.",
+      "footnote": "Site permits, gas-free certificates and turnaround windows affect timelines, so we plan petrochemical automation UAE work around your shutdown calendar from the start.",
       "steps": [
         {
           "title": "Site survey and assessment",
-          "meta": "Within 24 - 48 hours",
-          "description": "Site survey and assessment: typically completed within 24 - 48 hours."
+          "meta": "Within 24–48 hours",
+          "description": "Site survey and assessment: typically completed within 24–48 hours."
         },
         {
           "title": "Scoped proposal",
-          "meta": "3 - 5 working days after survey",
-          "description": "Scoped proposal: typically completed 3 - 5 working days after survey."
+          "meta": "3–5 working days after survey",
+          "description": "Scoped proposal: typically completed 3–5 working days after survey."
         },
         {
           "title": "Analyser fault diagnosis",
-          "meta": "1 - 2 days on site",
-          "description": "Analyser fault diagnosis: typically completed 1 - 2 days on site."
+          "meta": "1–2 days on site",
+          "description": "Analyser fault diagnosis: typically completed 1–2 days on site."
         },
         {
           "title": "Instrument calibration campaign",
-          "meta": "1 - 3 weeks, by tag count",
-          "description": "Instrument calibration campaign: typically completed 1 - 3 weeks, by tag count."
+          "meta": "1–3 weeks, by tag count",
+          "description": "Instrument calibration campaign: typically completed 1–3 weeks, by tag count."
         },
         {
           "title": "Gas measurement skid commissioning",
-          "meta": "3 - 7 days",
-          "description": "Gas measurement skid commissioning: typically completed 3 - 7 days."
+          "meta": "3–7 days",
+          "description": "Gas measurement skid commissioning: typically completed 3–7 days."
         },
         {
           "title": "SIS proof testing",
-          "meta": "1 - 3 weeks, by function count",
-          "description": "SIS proof testing: typically completed 1 - 3 weeks, by function count."
+          "meta": "1–3 weeks, by function count",
+          "description": "SIS proof testing: typically completed 1–3 weeks, by function count."
         },
         {
           "title": "Ex-certified control panel",
-          "meta": "4 - 8 weeks",
-          "description": "Ex-certified control panel: typically completed 4 - 8 weeks."
+          "meta": "4–8 weeks",
+          "description": "Ex-certified control panel: typically completed 4–8 weeks."
         },
         {
           "title": "DCS or PLC migration",
-          "meta": "3 - 9 months, phased",
-          "description": "DCS or PLC migration: typically completed 3 - 9 months, phased."
+          "meta": "3–9 months, phased",
+          "description": "DCS or PLC migration: typically completed 3–9 months, phased."
         }
       ]
     },
@@ -123,14 +157,14 @@
       "layout": "editorial",
       "heading": "Standards and Good Practice",
       "body": [
-        "Petrochemical projects commonly reference IEC 61511 for safety instrumented systems, ISA - 18.2 for alarm management, IEC 60079 for hazardous-area equipment and IEC 62443 for control system security. We scope every petrochemical automation UAE job to the standards your operator or licensor applies, and we hand over test records, loop sheets and calibration certificates."
+        "Petrochemical projects commonly reference IEC 61511 for safety instrumented systems, ISA-18.2 for alarm management, IEC 60079 for hazardous-area equipment and IEC 62443 for control system security. We scope every petrochemical automation UAE job to the standards your operator or licensor applies, and we hand over test records, loop sheets and calibration certificates."
       ]
     },
     {
       "type": "why",
       "eyebrow": "Why GTA",
       "heading": "Why Choose GTA for Petrochemical Automation UAE?",
-      "intro": "One engineering team across survey, build, commissioning and after-sales support.",
+      "intro": "One engineering team handles survey, calibration, programming and commissioning.",
       "footnote": "Continuity of engineering keeps response times fast and execution reliable.",
       "proofs": [
         {
@@ -164,7 +198,7 @@
         },
         {
           "title": "Fast assessment",
-          "description": "petrochemical automation UAE site visits are typically scheduled within 24 - 48 hours."
+          "description": "petrochemical automation UAE site visits are typically scheduled within 24–48 hours."
         },
         {
           "title": "Documented support",
@@ -197,7 +231,8 @@
         }
       ],
       "body": [
-        "Our Sharjah base gives quick road access for petrochemical automation UAE call-outs across the Emirates. We provide petrochemical automation Abu Dhabi support for industrial areas such as Ruwais, ICAD and KEZAD, and petrochemical automation Dubai support for chemical plants and terminals in areas such as Jebel Ali. Local clients use our petrochemical automation Sharjah team for fast response in Hamriyah and Sharjah's industrial areas. International EPC contractors and licensors working in the UAE use us as their local petrochemical automation UAE partner for commissioning support and after-sales service."
+        "Our Sharjah base gives quick road access for petrochemical automation UAE call-outs across the Emirates. We provide petrochemical automation Abu Dhabi support for industrial areas such as Ruwais, ICAD and KEZAD, and petrochemical automation Dubai support for chemical plants and terminals in areas such as Jebel Ali. Local clients use our petrochemical automation Sharjah team for fast response in Hamriyah and Sharjah's industrial areas.",
+        "International EPC contractors and licensors working in the UAE use us as their local petrochemical automation UAE partner for commissioning support and after-sales service."
       ]
     },
     {
@@ -209,37 +244,37 @@
         {
           "q": "What does petrochemical automation UAE work include?",
           "a": [
-            "Petrochemical automation"
+            "Petrochemical automation UAE work covers the instruments, analysers, control systems and safety systems that run polymer, fertilizer and chemical plants."
           ]
         },
         {
-          "q": "UAE work covers the instruments, analysers, control systems and safety systems that run polymer, fertilizer and chemical plants. Do you maintain process analysers?",
+          "q": "Do you maintain process analysers?",
           "a": [
-            "Yes."
+            "Yes. Our petrochemical automation UAE engineers support sample systems, calibration and fault finding on common process analysers."
           ]
         },
         {
-          "q": "Our petrochemical automation UAE engineers support sample systems, calibration and fault finding on common process analysers. Can you carry out SIS proof testing?",
+          "q": "Can you carry out SIS proof testing?",
           "a": [
-            "Yes."
+            "Yes. We can support proof testing against your safety requirements specification and record every result."
           ]
         },
         {
-          "q": "We can support proof testing against your safety requirements specification and record every result. Do you support plant turnarounds?",
+          "q": "Do you support plant turnarounds?",
           "a": [
-            "Yes."
+            "Yes. Our petrochemical automation UAE team provides engineers for calibration, loop checks and testing during shutdowns."
           ]
         },
         {
-          "q": "Our petrochemical automation UAE team provides engineers for calibration, loop checks and testing during shutdowns. Can you migrate an old DCS without a full plant shutdown?",
+          "q": "Can you migrate an old DCS without a full plant shutdown?",
           "a": [
-            "In most cases, yes."
+            "In most cases, yes. In petrochemical automation UAE projects, we migrate in phases during planned outages."
           ]
         },
         {
-          "q": "In petrochemical automation UAE projects, we migrate in phases during planned outages. How long does gas measurement skid commissioning take?",
+          "q": "How long does gas measurement skid commissioning take?",
           "a": [
-            "Most skids take 3 - 7 days to commission, depending on size and instrument count."
+            "Most skids take 3–7 days to commission, depending on size and instrument count."
           ]
         }
       ]

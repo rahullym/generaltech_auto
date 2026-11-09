@@ -87,6 +87,32 @@ export const list = (
   children: items.map((item, index) => ({ ...item, value: index + 1 })),
 })
 
+export const table = (headers: string[], rows: string[][]) => ({
+  type: 'table',
+  format: '',
+  indent: 0,
+  version: 1,
+  direction: 'ltr' as const,
+  children: [
+    {
+      type: 'tablerow',
+      children: headers.map((h) => ({
+        type: 'tablecell',
+        headerState: 1,
+        children: [paragraph({ text: h, bold: true })],
+      })),
+    },
+    ...rows.map((row) => ({
+      type: 'tablerow',
+      children: row.map((cell) => ({
+        type: 'tablecell',
+        headerState: 0,
+        children: [paragraph(cell)],
+      })),
+    })),
+  ],
+})
+
 export const doc = (...children: unknown[]) => ({
   root: {
     type: 'root',

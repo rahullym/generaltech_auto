@@ -96,6 +96,21 @@ const renderNode = (node: LexicalNode): string => {
     case 'horizontalrule':
       return '<hr />'
 
+    case 'table':
+      return `<div class="overflow-x-auto my-8 rounded-xl border border-gray-200 shadow-sm"><table class="min-w-full divide-y divide-gray-200 text-left border-collapse">${renderChildren(node)}</table></div>`
+
+    case 'tablerow':
+      return `<tr class="border-b border-gray-100 last:border-b-0 even:bg-gray-50/50 hover:bg-gray-50/80 transition-colors">${renderChildren(node)}</tr>`
+
+    case 'tablecell': {
+      const isHeader = Boolean(node.headerState)
+      const tag = isHeader ? 'th' : 'td'
+      const cls = isHeader
+        ? 'py-3.5 px-4 font-bold text-gray-900 bg-gray-100/90 border-b border-gray-200 text-sm tracking-wider uppercase'
+        : 'py-3.5 px-4 text-gray-700 text-sm leading-relaxed align-top'
+      return `<${tag} class="${cls}">${renderChildren(node)}</${tag}>`
+    }
+
     case 'link':
     case 'autolink': {
       const fields = (node.fields ?? {}) as Record<string, unknown>
