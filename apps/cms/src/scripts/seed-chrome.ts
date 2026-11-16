@@ -119,6 +119,10 @@ const run = async () => {
       url: 'https://aperainst.com/',
       description: 'Precision instruments and sensors for water-quality measurement.',
     },
+    'Sensitron': {
+      url: 'https://www.sensitron.it/en/',
+      description: 'Sensitron manufactures gas detection systems, detectors, and control panels for industrial and commercial safety applications.',
+    },
     'Western Instruments': {
       url: 'https://westerninstruments.com/our-company',
       description: 'Inspection equipment, pit gauges, and ultrasonic testing systems.',

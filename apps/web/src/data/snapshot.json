@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T05:00:00.000Z",
+  "generatedAt": "2026-11-16T10:00:00.000Z",
   "collections": {
     "pages": [
       {
@@ -41795,6 +41795,54 @@
                 "url": null
               },
               {
+                "id": "6d8f1e2a3b4c5d6e7f8a9b03",
+                "image": {
+                  "id": 87,
+                  "alt": "Sensitron logo",
+                  "caption": null,
+                  "updatedAt": "2026-11-16T10:00:00.000Z",
+                  "createdAt": "2026-11-16T10:00:00.000Z",
+                  "url": "/cms/SENSITRON.avif",
+                  "thumbnailURL": null,
+                  "filename": "SENSITRON.avif",
+                  "mimeType": "image/avif",
+                  "filesize": 5091,
+                  "width": 275,
+                  "height": 88,
+                  "focalX": 50,
+                  "focalY": 50,
+                  "sizes": {
+                    "thumbnail": {
+                      "url": null,
+                      "width": null,
+                      "height": null,
+                      "mimeType": null,
+                      "filesize": null,
+                      "filename": null
+                    },
+                    "card": {
+                      "url": null,
+                      "width": null,
+                      "height": null,
+                      "mimeType": null,
+                      "filesize": null,
+                      "filename": null
+                    },
+                    "wide": {
+                      "url": null,
+                      "width": null,
+                      "height": null,
+                      "mimeType": null,
+                      "filesize": null,
+                      "filename": null
+                    }
+                  }
+                },
+                "name": "Sensitron",
+                "url": "https://www.sensitron.it/en/",
+                "description": "Sensitron manufactures gas detection systems, detectors, and control panels for industrial and commercial safety applications."
+              },
+              {
                 "id": "6a869a2ad7c4b97b5b968d70",
                 "image": {
                   "id": 57,
@@ -42748,7 +42796,7 @@
           "description": "Industrial automation brands we service in UAE across drives, control panels, sensors, and safety systems — repair, parts and integration from our Sharjah facility.",
           "image": null
         },
-        "updatedAt": "2026-10-30T07:17:09.255Z",
+        "updatedAt": "2026-11-16T10:00:00.000Z",
         "createdAt": "2026-09-05T07:21:52.249Z",
         "_status": "published"
       },
@@ -46912,6 +46960,54 @@
                 "url": null
               },
               {
+                "id": "6d8f1e2a3b4c5d6e7f8a9b03",
+                "image": {
+                  "id": 87,
+                  "alt": "Sensitron logo",
+                  "caption": null,
+                  "updatedAt": "2026-11-16T10:00:00.000Z",
+                  "createdAt": "2026-11-16T10:00:00.000Z",
+                  "url": "/cms/SENSITRON.avif",
+                  "thumbnailURL": null,
+                  "filename": "SENSITRON.avif",
+                  "mimeType": "image/avif",
+                  "filesize": 5091,
+                  "width": 275,
+                  "height": 88,
+                  "focalX": 50,
+                  "focalY": 50,
+                  "sizes": {
+                    "thumbnail": {
+                      "url": null,
+                      "width": null,
+                      "height": null,
+                      "mimeType": null,
+                      "filesize": null,
+                      "filename": null
+                    },
+                    "card": {
+                      "url": null,
+                      "width": null,
+                      "height": null,
+                      "mimeType": null,
+                      "filesize": null,
+                      "filename": null
+                    },
+                    "wide": {
+                      "url": null,
+                      "width": null,
+                      "height": null,
+                      "mimeType": null,
+                      "filesize": null,
+                      "filename": null
+                    }
+                  }
+                },
+                "name": "Sensitron",
+                "url": "https://www.sensitron.it/en/",
+                "description": "Sensitron manufactures gas detection systems, detectors, and control panels for industrial and commercial safety applications."
+              },
+              {
                 "id": "6a869a2ad7c4b97b5b968d70",
                 "image": {
                   "id": 57,
@@ -47960,7 +48056,7 @@
             }
           }
         },
-        "updatedAt": "2026-11-09T05:00:00.000Z",
+        "updatedAt": "2026-11-16T10:00:00.000Z",
         "createdAt": "2026-08-18T08:53:50.868Z",
         "_status": "published"
       },
